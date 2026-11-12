@@ -20,12 +20,13 @@ enum Persistence {
     /// `-SeedDemo`: sample data for screenshots and visual checks.
     @MainActor
     static func seedDemo(_ context: ModelContext) {
-        let sweater = Project(name: "Raglan Sweater", rows: 42, createdAt: .now)
+        let sweater = Project(name: "Raglan Sweater", rows: 44, color: .madder, createdAt: .now)
+        sweater.repeatLength = 6
         sweater.yarn = "Merino Worsted, Oatmeal"
         sweater.needles = "US 7 circular"
-        sweater.patternFile = samplePattern()
-        let beanie = Project(name: "Ribbed Beanie", rows: 18, createdAt: .now.addingTimeInterval(-86_400))
-        let blanket = Project(name: "Baby Blanket", rows: 240, createdAt: .now.addingTimeInterval(-30 * 86_400))
+        if !ProcessInfo.processInfo.arguments.contains("-NoPattern") { sweater.patternFile = samplePattern() }
+        let beanie = Project(name: "Ribbed Beanie", rows: 18, color: .spruce, createdAt: .now.addingTimeInterval(-86_400))
+        let blanket = Project(name: "Baby Blanket", rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
         blanket.finishedAt = .now.addingTimeInterval(-2 * 86_400)
         [sweater, beanie, blanket].forEach(context.insert)
         context.insert(Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6))

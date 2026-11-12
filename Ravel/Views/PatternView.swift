@@ -1,52 +1,102 @@
 import PDFKit
 import SwiftUI
 
-/// The pattern PDF. Reopens on the page the knitter left off at.
+/// The pattern PDF. Reopens on the page the knitter left off at, and a tap lays
+/// a band across the row being worked, like the ruler on a chart keeper.
 struct PatternView: UIViewRepresentable {
     let url: URL
-    @Binding var page: Int
+    @Bindable var project: Project
 
-    func makeCoordinator() -> Coordinator { Coordinator(page: $page) }
+    func makeCoordinator() -> Coordinator { Coordinator(project: project) }
 
     func makeUIView(context: Context) -> PDFView {
         let view = PDFView()
         view.autoScales = true
         view.displayMode = .singlePageContinuous
         view.displayDirection = .vertical
-        view.backgroundColor = .systemGroupedBackground
-        load(url, into: view, coordinator: context.coordinator)
+        view.backgroundColor = UIColor(Theme.paper)
+        view.pageShadowsEnabled = false
+        let tap = UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.tapped(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
         NotificationCenter.default.addObserver(context.coordinator, selector: #selector(Coordinator.pageChanged(_:)), name: .PDFViewPageChanged, object: view)
+        context.coordinator.load(url, into: view)
         return view
     }
 
     func updateUIView(_ view: PDFView, context: Context) {
-        context.coordinator.page = $page
-        if view.document?.documentURL != url { load(url, into: view, coordinator: context.coordinator) }
-    }
-
-    private func load(_ url: URL, into view: PDFView, coordinator: Coordinator) {
-        let document = PDFDocument(url: url)
-        let start = page
-        coordinator.restoring = true
-        view.document = document
-        // Jump after layout, or PDFKit snaps back to the first page.
-        DispatchQueue.main.async {
-            if let document, start > 0, start < document.pageCount, let target = document.page(at: start) { view.go(to: target) }
-            coordinator.restoring = false
-        }
+        context.coordinator.project = project
+        if view.document?.documentURL != url { context.coordinator.load(url, into: view) }
+        context.coordinator.recolor()
     }
 
     @MainActor
     final class Coordinator: NSObject {
-        var page: Binding<Int>
+        var project: Project
         /// True while the document is loading, so its first-page notification does not overwrite the saved page.
-        var restoring = false
+        private var restoring = false
+        private var band: PDFAnnotation?
 
-        init(page: Binding<Int>) { self.page = page }
+        init(project: Project) { self.project = project }
+
+        func load(_ url: URL, into view: PDFView) {
+            let document = PDFDocument(url: url)
+            let start = project.patternPage
+            restoring = true
+            band = nil
+            view.document = document
+            if let document, project.markPage >= 0, project.markPage < document.pageCount, let page = document.page(at: project.markPage) {
+                place(on: page, y: project.markY, height: project.markHeight)
+            }
+            // Jump after layout, or PDFKit snaps back to the first page.
+            DispatchQueue.main.async { [self] in
+                if let document, start > 0, start < document.pageCount, let target = document.page(at: start) { view.go(to: target) }
+                restoring = false
+            }
+        }
 
         @objc func pageChanged(_ note: Notification) {
             guard !restoring, let view = note.object as? PDFView, let current = view.currentPage, let index = view.document?.index(for: current) else { return }
-            if page.wrappedValue != index { page.wrappedValue = index }
+            if project.patternPage != index { project.patternPage = index }
+        }
+
+        @objc func tapped(_ gesture: UITapGestureRecognizer) {
+            guard let view = gesture.view as? PDFView, let page = view.page(for: gesture.location(in: view), nearest: false), let index = view.document?.index(for: page) else { return }
+            let point = view.convert(gesture.location(in: view), to: page)
+            // Snap to the line of text under the finger; on a chart, mark where the finger landed.
+            let line = page.selectionForLine(at: point)?.bounds(for: page)
+            let height = max((line?.height ?? 12) + 8, 18)
+            let y = (line?.midY ?? point.y) - height / 2
+            if project.markPage == index, abs(project.markY - y) < 1 {
+                clear()
+                return
+            }
+            place(on: page, y: y, height: height)
+            project.markPage = index
+            project.markY = y
+            project.markHeight = height
+        }
+
+        private func place(on page: PDFPage, y: Double, height: Double) {
+            band?.page?.removeAnnotation(band!)
+            let box = page.bounds(for: .cropBox)
+            let annotation = PDFAnnotation(bounds: CGRect(x: box.minX, y: y, width: box.width, height: height), forType: .square, withProperties: nil)
+            annotation.color = .clear
+            annotation.border = PDFBorder()
+            annotation.border?.lineWidth = 0
+            annotation.interiorColor = project.color.uiColor.withAlphaComponent(0.26)
+            page.addAnnotation(annotation)
+            band = annotation
+        }
+
+        private func clear() {
+            if let band { band.page?.removeAnnotation(band) }
+            band = nil
+            project.markPage = -1
+        }
+
+        func recolor() {
+            band?.interiorColor = project.color.uiColor.withAlphaComponent(0.26)
         }
     }
 }

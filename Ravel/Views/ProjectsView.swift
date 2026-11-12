@@ -18,20 +18,17 @@ struct ProjectsView: View {
                     Section { rows(active) }
                 }
                 if !finished.isEmpty {
-                    Section("Finished") { rows(finished) }
-                }
-            }
-            .overlay {
-                if projects.isEmpty {
-                    ContentUnavailableView {
-                        Label("No Projects", systemImage: "square.stack")
-                    } actions: {
-                        Button("New Project") { naming = true }
-                            .buttonStyle(.borderedProminent)
-                            .foregroundStyle(Theme.onAccent)
+                    Section {
+                        rows(finished)
+                    } header: {
+                        Text("Finished").font(.subheadline.weight(.semibold)).foregroundStyle(.secondary).textCase(nil)
                     }
                 }
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(Theme.paper)
+            .overlay { if projects.isEmpty { empty } }
             .navigationTitle("Projects")
             .navigationDestination(for: Project.self) { ProjectView(project: $0) }
             .toolbar {
@@ -43,22 +40,45 @@ struct ProjectsView: View {
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name)
                 Button("Cancel", role: .cancel) { name = "" }
-                Button("Create", action: create)
+                Button("Cast On", action: create)
             }
+        }
+    }
+
+    /// Bare needle, stitches cast on, one way forward.
+    private var empty: some View {
+        VStack(spacing: 28) {
+            Fabric(rows: 0, yarn: .madder, markEvery: 0)
+                .frame(width: 240, height: 40)
+            Button("Cast On") { naming = true }
+                .font(.headline)
+                .foregroundStyle(Theme.onAccent)
+                .padding(.horizontal, 28)
+                .frame(minHeight: 50)
+                .background(Color.accentColor, in: Capsule())
+                .accessibilityIdentifier("projects.castOn")
         }
     }
 
     private func rows(_ list: [Project]) -> some View {
         ForEach(list) { project in
             NavigationLink(value: project) {
-                HStack {
+                HStack(spacing: 16) {
+                    Swatch(yarn: project.color)
                     Text(project.name)
-                    Spacer()
+                        .font(Theme.display(20))
+                        .lineLimit(2)
+                    Spacer(minLength: 8)
                     Text(project.rows, format: .number)
+                        .font(Theme.display(20, weight: .regular))
                         .monospacedDigit()
                         .foregroundStyle(.secondary)
+                        .accessibilityLabel("Row \(project.rows)")
                 }
+                .padding(.vertical, 6)
             }
+            .listRowBackground(Theme.paper)
+            .listRowSeparator(.hidden)
         }
         .onDelete { offsets in
             for project in offsets.map({ list[$0] }) {
@@ -70,7 +90,9 @@ struct ProjectsView: View {
 
     private func create() {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
-        let project = Project(name: trimmed.isEmpty ? "Untitled" : trimmed)
+        // Each new project takes the next yarn so the list reads at a glance.
+        let color = YarnColor.allCases[projects.count % YarnColor.allCases.count]
+        let project = Project(name: trimmed.isEmpty ? "Untitled" : trimmed, color: color)
         context.insert(project)
         name = ""
         path = [project]

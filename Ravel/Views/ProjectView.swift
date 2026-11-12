@@ -2,37 +2,47 @@ import SwiftData
 import SwiftUI
 import UniformTypeIdentifiers
 
+/// One project. The screen knits with you: tap anywhere on the work and a row
+/// comes off the needle. With a pattern attached, the pattern takes the top and
+/// the work becomes a strip along the bottom.
 struct ProjectView: View {
     @Bindable var project: Project
     @State private var importing = false
     @State private var editing = false
     @State private var confirmingReset = false
     @State private var importFailed = false
+    @State private var settingRepeat = false
+    @State private var repeatText = ""
 
     private var patternURL: URL? { project.patternFile.map(PatternStore.url(for:)) }
 
     var body: some View {
         Group {
             if let patternURL {
-                PatternView(url: patternURL, page: $project.patternPage)
-                    .ignoresSafeArea(edges: .bottom)
-                    .safeAreaInset(edge: .bottom) {
-                        controls(showsCount: true)
-                            .padding(.horizontal)
-                            .padding(.vertical, 10)
-                            .background(.bar)
-                    }
+                VStack(spacing: 0) {
+                    PatternView(url: patternURL, project: project)
+                    work(height: 112)
+                        .overlay(alignment: .trailing) { countPill.padding(.trailing, 20).padding(.top, 22) }
+                }
+                .ignoresSafeArea(edges: .bottom)
             } else {
                 VStack(spacing: 0) {
-                    Spacer()
-                    count(size: 132)
-                    Spacer()
-                    controls(showsCount: false)
-                        .padding(.horizontal)
-                        .padding(.bottom, 20)
+                    VStack(spacing: 18) {
+                        Spacer(minLength: 0)
+                        count(size: 128)
+                        repeatDots
+                        Spacer(minLength: 0)
+                    }
+                    .containerRelativeFrame(.vertical) { length, _ in length * 0.4 }
+                    work(height: nil)
                 }
+                .ignoresSafeArea(edges: .bottom)
+                .contentShape(Rectangle())
+                .onTapGesture(perform: knit)
             }
         }
+        .background(Theme.paper)
+        .overlay(alignment: .bottomLeading) { undo }
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
@@ -43,15 +53,37 @@ struct ProjectView: View {
         .confirmationDialog("Reset the count to 0?", isPresented: $confirmingReset, titleVisibility: .visible) {
             Button("Reset Count", role: .destructive) { project.rows = 0 }
         }
+        .alert("Rows in One Repeat", isPresented: $settingRepeat) {
+            TextField("Rows", text: $repeatText).keyboardType(.numberPad)
+            Button("Cancel", role: .cancel) {}
+            Button("Set") { project.repeatLength = min(max(Int(repeatText) ?? 0, 0), 200) }
+        }
         .alert("That PDF could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
     }
 
+    private func knit() { project.increment() }
+
+    /// The needle and the fabric hanging from it. Tapping it knits a row.
+    private func work(height: CGFloat?) -> some View {
+        Fabric(rows: Double(project.rows), yarn: project.color, markEvery: project.repeatLength > 0 ? project.repeatLength : 10)
+            .animation(.smooth(duration: 0.32), value: project.rows)
+            .frame(height: height)
+            .frame(maxHeight: height == nil ? .infinity : nil)
+            .background(Theme.paper)
+            .contentShape(Rectangle())
+            .onTapGesture(perform: knit)
+            .accessibilityElement()
+            .accessibilityAddTraits(.isButton)
+            .accessibilityLabel("Add a row")
+            .accessibilityIdentifier("counter.plus")
+    }
+
     private func count(size: CGFloat) -> some View {
         Text(project.rows, format: .number)
-            .font(.system(size: size, weight: .semibold, design: .rounded))
+            .font(Theme.display(size, weight: .regular))
             .monospacedDigit()
             .minimumScaleFactor(0.4)
             .lineLimit(1)
@@ -61,20 +93,45 @@ struct ProjectView: View {
             .accessibilityIdentifier("counter.value")
     }
 
-    private func controls(showsCount: Bool) -> some View {
-        HStack(spacing: 12) {
-            Button { project.decrement() } label: { Image(systemName: "minus") }
-                .buttonStyle(CounterButtonStyle(prominent: false))
-                .disabled(project.rows == 0)
-                .accessibilityLabel("Back one row")
-                .accessibilityIdentifier("counter.minus")
-            if showsCount {
-                count(size: 44).frame(minWidth: 72)
+    private var countPill: some View {
+        count(size: 34)
+            .padding(.horizontal, 18)
+            .frame(minWidth: 64, minHeight: 52)
+            .background(.regularMaterial, in: Capsule())
+            .allowsHitTesting(false)
+    }
+
+    /// One dot per row of the repeat, filled up to the row just finished.
+    @ViewBuilder
+    private var repeatDots: some View {
+        if project.repeatLength > 1, project.repeatLength <= 24 {
+            HStack(spacing: 6) {
+                ForEach(1...project.repeatLength, id: \.self) { row in
+                    Circle()
+                        .fill(row <= project.repeatPosition ? AnyShapeStyle(project.color.color) : AnyShapeStyle(.primary.opacity(0.14)))
+                        .frame(width: 8, height: 8)
+                }
             }
-            Button { project.increment() } label: { Image(systemName: "plus") }
-                .buttonStyle(CounterButtonStyle(prominent: true))
-                .accessibilityLabel("Add a row")
-                .accessibilityIdentifier("counter.plus")
+            .animation(.snappy, value: project.repeatPosition)
+            .accessibilityElement()
+            .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
+        }
+    }
+
+    @ViewBuilder
+    private var undo: some View {
+        if project.rows > 0 {
+            Button { project.decrement() } label: {
+                Image(systemName: "arrow.uturn.backward")
+                    .font(.title3.weight(.semibold))
+                    .frame(width: 52, height: 52)
+                    .background(.regularMaterial, in: Circle())
+            }
+            .padding(.leading, 20)
+            .padding(.bottom, 8)
+            .accessibilityLabel("Back one row")
+            .accessibilityIdentifier("counter.minus")
+            .transition(.scale.combined(with: .opacity))
         }
     }
 
@@ -85,13 +142,17 @@ struct ProjectView: View {
             if project.patternFile != nil {
                 Button("Remove Pattern", systemImage: "doc.badge.minus") { setPattern(nil) }
             }
+            Button("Repeat", systemImage: "repeat") {
+                repeatText = project.repeatLength > 0 ? String(project.repeatLength) : ""
+                settingRepeat = true
+            }
             Button(project.isFinished ? "Mark Active" : "Mark Finished", systemImage: project.isFinished ? "arrow.uturn.backward" : "checkmark") {
                 project.toggleFinished()
             }
             Button("Reset Count", systemImage: "arrow.counterclockwise", role: .destructive) { confirmingReset = true }
                 .disabled(project.rows == 0)
         } label: {
-            Image(systemName: "ellipsis.circle")
+            Image(systemName: "ellipsis")
         }
         .accessibilityLabel("Project options")
         .accessibilityIdentifier("project.menu")
@@ -106,6 +167,7 @@ struct ProjectView: View {
         PatternStore.delete(project.patternFile)
         project.patternFile = file
         project.patternPage = 0
+        project.markPage = -1
     }
 }
 
@@ -118,6 +180,20 @@ struct ProjectDetailsView: View {
             Form {
                 Section {
                     TextField("Name", text: $project.name)
+                    HStack(spacing: 0) {
+                        ForEach(YarnColor.allCases) { yarn in
+                            Button { project.color = yarn } label: {
+                                Circle()
+                                    .fill(yarn.color)
+                                    .frame(width: 28, height: 28)
+                                    .overlay { Circle().strokeBorder(.primary, lineWidth: project.color == yarn ? 2.5 : 0).padding(-5) }
+                                    .frame(maxWidth: .infinity, minHeight: 44)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(yarn.label)
+                            .accessibilityAddTraits(project.color == yarn ? .isSelected : [])
+                        }
+                    }
                 }
                 Section {
                     LabeledContent("Yarn") { TextField("", text: $project.yarn).multilineTextAlignment(.trailing) }

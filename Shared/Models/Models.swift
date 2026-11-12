@@ -13,9 +13,17 @@ final class Project {
     /// File name inside `PatternStore.directory`, never a full path.
     var patternFile: String?
     var patternPage: Int
+    var colorRaw: String = YarnColor.madder.rawValue
+    /// Rows in one pattern repeat. 0 means the project has no repeat.
+    var repeatLength: Int = 0
+    /// The row band the knitter left on the pattern: page index (-1 for none), then its position on that page.
+    var markPage: Int = -1
+    var markY: Double = 0
+    var markHeight: Double = 0
 
-    init(name: String, rows: Int = 0, createdAt: Date = .now) {
+    init(name: String, rows: Int = 0, color: YarnColor = .madder, createdAt: Date = .now) {
         self.name = name
+        self.colorRaw = color.rawValue
         self.rows = rows
         self.createdAt = createdAt
         self.yarn = ""
@@ -25,6 +33,17 @@ final class Project {
     }
 
     var isFinished: Bool { finishedAt != nil }
+
+    var color: YarnColor {
+        get { YarnColor(rawValue: colorRaw) ?? .madder }
+        set { colorRaw = newValue.rawValue }
+    }
+
+    /// How far into the current repeat the last finished row is, from 1 to `repeatLength`. 0 before the first row or with no repeat.
+    var repeatPosition: Int {
+        guard repeatLength > 0, rows > 0 else { return 0 }
+        return (rows - 1) % repeatLength + 1
+    }
 
     func increment() { rows += 1 }
 

@@ -12,6 +12,7 @@ struct RavelApp: App {
         inMemory = arguments.contains("-UITesting") || arguments.contains("-SeedDemo")
         #endif
         container = Persistence.container(inMemory: inMemory)
+        Theme.applyNavigationAppearance()
         #if DEBUG
         if arguments.contains("-SeedDemo") { Persistence.seedDemo(container.mainContext) }
         #endif

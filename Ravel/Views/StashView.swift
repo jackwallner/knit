@@ -14,16 +14,20 @@ struct StashView: View {
                         .tint(.primary)
                 }
                 .onDelete { offsets in offsets.map { yarns[$0] }.forEach(context.delete) }
+                .listRowBackground(Theme.paper)
+                .listRowSeparatorTint(.primary.opacity(0.08))
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(Theme.paper)
             .overlay {
                 if yarns.isEmpty {
-                    ContentUnavailableView {
-                        Label("No Yarn", systemImage: "shippingbox")
-                    } actions: {
-                        Button("Add Yarn", action: add)
-                            .buttonStyle(.borderedProminent)
-                            .foregroundStyle(Theme.onAccent)
-                    }
+                    Button("Add Yarn", action: add)
+                        .font(.headline)
+                        .foregroundStyle(Theme.onAccent)
+                        .padding(.horizontal, 28)
+                        .frame(minHeight: 50)
+                        .background(Color.accentColor, in: Capsule())
                 }
             }
             .navigationTitle("Stash")
@@ -40,15 +44,17 @@ struct StashView: View {
     private func row(_ yarn: Yarn) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text(yarn.name)
+                Text(yarn.name).font(Theme.display(19))
                 Text(yarn.detail).font(.subheadline).foregroundStyle(.secondary)
             }
             Spacer()
             Text(yarn.skeins, format: .number)
+                .font(Theme.display(19, weight: .regular))
                 .monospacedDigit()
                 .foregroundStyle(.secondary)
                 .accessibilityLabel("\(yarn.skeins) skeins")
         }
+        .padding(.vertical, 6)
         .contentShape(Rectangle())
     }
 
