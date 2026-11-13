@@ -1,0 +1,3 @@
+app_identifier("com.jackwallner.knit")
+apple_id(ENV["FASTLANE_USER"])
+team_id("YXG4MP6W39")

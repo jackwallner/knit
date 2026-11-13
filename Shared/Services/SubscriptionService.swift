@@ -4,7 +4,7 @@ import RevenueCat
 
 enum RevenueCatConfig {
     /// Public SDK key. It is never configured on a simulator.
-    static let apiKey = "appl_REPLACE_ME"
+    static let apiKey = "appl_jiazUDjlvOWTBBUIRFJlnsorHtP"
     static let entitlement = "pro"
     static let yearly = "com.jackwallner.knit.yearly"
     static let monthly = "com.jackwallner.knit.monthly"
@@ -14,6 +14,8 @@ enum Links {
     static let privacy = URL(string: "https://jackwallner.github.io/knit/privacy-policy.html")!
     static let terms = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
     static let support = URL(string: "https://jackwallner.github.io/knit/support.html")!
+    static let writeReview = URL(string: "https://apps.apple.com/app/id6834244566?action=write-review")!
+    static let feedback = URL(string: "mailto:jackwallner@gmail.com?subject=Ravel%20feedback")!
 }
 
 /// One subscription the paywall can sell.

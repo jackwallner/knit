@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ProjectsView: View {
     @Environment(\.modelContext) private var context
+    @Environment(\.openURL) private var openURL
     @Query(sort: \Project.createdAt, order: .reverse) private var projects: [Project]
     @State private var path: [Project] = []
     @State private var naming = false
@@ -35,6 +36,20 @@ struct ProjectsView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button("New Project", systemImage: "plus") { naming = true }
                         .accessibilityIdentifier("projects.add")
+                }
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu {
+                        Button("Rate Ravel", systemImage: "star") {
+                            ReviewPrompt().markOpenedStore()
+                            openURL(Links.writeReview)
+                        }
+                        Button("Send Feedback", systemImage: "envelope") { openURL(Links.feedback) }
+                        Button("Help", systemImage: "questionmark.circle") { openURL(Links.support) }
+                    } label: {
+                        Image(systemName: "ellipsis")
+                    }
+                    .accessibilityLabel("More")
+                    .accessibilityIdentifier("projects.more")
                 }
             }
             #if DEBUG

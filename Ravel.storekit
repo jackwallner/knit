@@ -1,0 +1,80 @@
+{
+  "appPolicies": {
+    "eula": "",
+    "policies": [
+      {
+        "locale": "en_US",
+        "policyText": "",
+        "policyURL": ""
+      }
+    ]
+  },
+  "identifier": "768D962F",
+  "nonRenewingSubscriptions": [],
+  "products": [],
+  "subscriptionGroups": [
+    {
+      "id": "D1552CB1",
+      "localizations": [],
+      "name": "Ravel Patterns",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "6.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "FDDF60F2",
+          "localizations": [
+            {
+              "description": "Every pattern, written to your size.",
+              "displayName": "Patterns Monthly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.jackwallner.knit.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Ravel Patterns Monthly",
+          "subscriptionGroupID": "D1552CB1",
+          "type": "RecurringSubscription",
+          "winbackOffers": [],
+          "introductoryOffer": {
+            "internalID": "A1B2C3D2",
+            "paymentMode": "free",
+            "subscriptionPeriod": "P1W"
+          }
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "39.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "99EBAE47",
+          "localizations": [
+            {
+              "description": "Every pattern, written to your size.",
+              "displayName": "Patterns Yearly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.jackwallner.knit.yearly",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Ravel Patterns Yearly",
+          "subscriptionGroupID": "D1552CB1",
+          "type": "RecurringSubscription",
+          "winbackOffers": [],
+          "introductoryOffer": {
+            "internalID": "A1B2C3D1",
+            "paymentMode": "free",
+            "subscriptionPeriod": "P1W"
+          }
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

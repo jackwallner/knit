@@ -4,10 +4,12 @@ import SwiftUI
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
-    @State private var picked: Offer.Term = .yearly
+    @State private var picked: Offer.Term
     @State private var working = false
     @State private var message: String?
     private let subscription = SubscriptionService.shared
+
+    init(picked: Offer.Term = .yearly) { _picked = State(initialValue: picked) }
 
     private var offer: Offer? { subscription.offers.first { $0.term == picked } ?? subscription.offers.first }
 

@@ -23,6 +23,7 @@ schemes:
         RavelTests: [test]
     run:
       config: Debug
+      storeKitConfiguration: Ravel.storekit
     test:
       config: Debug
       targets:
@@ -34,6 +35,8 @@ targets:
     sources:
       - path: Ravel
       - path: Shared
+      - path: Ravel.storekit
+        buildPhase: none
     dependencies:
       - package: RevenueCat
         product: RevenueCat
