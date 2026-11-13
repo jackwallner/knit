@@ -6,3 +6,5 @@ DerivedData/
 .env*
 *.xcuserstate
 .swiftpm/
+fastlane/report.xml
+fastlane/README.md
