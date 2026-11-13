@@ -37,6 +37,10 @@ struct ProjectsView: View {
                         .accessibilityIdentifier("projects.add")
                 }
             }
+            #if DEBUG
+            // `-OpenFirst`: land on the newest project, for screenshots.
+            .task { if ProcessInfo.processInfo.arguments.contains("-OpenFirst"), path.isEmpty, let first = active.first { path = [first] } }
+            #endif
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name)
                 Button("Cancel", role: .cancel) { name = "" }

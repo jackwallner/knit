@@ -80,11 +80,8 @@ struct PatternView: UIViewRepresentable {
         private func place(on page: PDFPage, y: Double, height: Double) {
             band?.page?.removeAnnotation(band!)
             let box = page.bounds(for: .cropBox)
-            let annotation = PDFAnnotation(bounds: CGRect(x: box.minX, y: y, width: box.width, height: height), forType: .square, withProperties: nil)
-            annotation.color = .clear
-            annotation.border = PDFBorder()
-            annotation.border?.lineWidth = 0
-            annotation.interiorColor = project.color.uiColor.withAlphaComponent(0.26)
+            let annotation = PDFAnnotation(bounds: CGRect(x: box.minX, y: y, width: box.width, height: height), forType: .highlight, withProperties: nil)
+            annotation.color = project.color.uiColor.withAlphaComponent(0.3)
             page.addAnnotation(annotation)
             band = annotation
         }
@@ -96,7 +93,7 @@ struct PatternView: UIViewRepresentable {
         }
 
         func recolor() {
-            band?.interiorColor = project.color.uiColor.withAlphaComponent(0.26)
+            band?.color = project.color.uiColor.withAlphaComponent(0.3)
         }
     }
 }

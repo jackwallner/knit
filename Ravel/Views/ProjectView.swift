@@ -21,8 +21,9 @@ struct ProjectView: View {
             if let patternURL {
                 VStack(spacing: 0) {
                     PatternView(url: patternURL, project: project)
-                    work(height: 112)
+                    work(height: 112, tags: false)
                         .overlay(alignment: .trailing) { countPill.padding(.trailing, 20).padding(.top, 22) }
+                        .overlay(alignment: .leading) { undo.padding(.leading, 20).padding(.top, 22) }
                 }
                 .ignoresSafeArea(edges: .bottom)
             } else {
@@ -34,15 +35,15 @@ struct ProjectView: View {
                         Spacer(minLength: 0)
                     }
                     .containerRelativeFrame(.vertical) { length, _ in length * 0.4 }
-                    work(height: nil)
+                    work(height: nil, tags: true)
                 }
+                .overlay(alignment: .bottomLeading) { undo.padding(.leading, 20).padding(.bottom, 8) }
                 .ignoresSafeArea(edges: .bottom)
                 .contentShape(Rectangle())
                 .onTapGesture(perform: knit)
             }
         }
         .background(Theme.paper)
-        .overlay(alignment: .bottomLeading) { undo }
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
@@ -67,8 +68,8 @@ struct ProjectView: View {
     private func knit() { project.increment() }
 
     /// The needle and the fabric hanging from it. Tapping it knits a row.
-    private func work(height: CGFloat?) -> some View {
-        Fabric(rows: Double(project.rows), yarn: project.color, markEvery: project.repeatLength > 0 ? project.repeatLength : 10)
+    private func work(height: CGFloat?, tags: Bool) -> some View {
+        Fabric(rows: Double(project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10)
             .animation(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)
@@ -127,8 +128,6 @@ struct ProjectView: View {
                     .frame(width: 52, height: 52)
                     .background(.regularMaterial, in: Circle())
             }
-            .padding(.leading, 20)
-            .padding(.bottom, 8)
             .accessibilityLabel("Back one row")
             .accessibilityIdentifier("counter.minus")
             .transition(.scale.combined(with: .opacity))
