@@ -24,7 +24,10 @@ enum Persistence {
         sweater.repeatLength = 6
         sweater.yarn = "Merino Worsted, Oatmeal"
         sweater.needles = "US 7 circular"
-        if !ProcessInfo.processInfo.arguments.contains("-NoPattern") { sweater.patternFile = samplePattern() }
+        if !ProcessInfo.processInfo.arguments.contains("-NoPattern") {
+            sweater.patternFile = samplePattern()
+            markSampleRow(3, on: sweater)
+        }
         let beanie = Project(name: "Ribbed Beanie", rows: 18, color: .spruce, createdAt: .now.addingTimeInterval(-86_400))
         let hat = Design.ribbedBeanie
         beanie.follow(hat.plan(measures: hat.defaultSize.values, gauge: hat.weight.gauge), of: hat)
@@ -39,23 +42,46 @@ enum Persistence {
         context.insert(Yarn(name: "Chunky Alpaca", colorway: "Charcoal", weight: .bulky, skeins: 3, createdAt: .now.addingTimeInterval(-2 * 86_400)))
     }
 
+    private static let samplePage = CGRect(x: 0, y: 0, width: 420, height: 595)
+    private static let sampleRows = [
+        "Cast on 88 sts. Join in the round.",
+        "Rows 1-12: K2, P2 rib.",
+        "Row 13: Knit, placing 4 raglan markers.",
+        "Row 14: *Knit to 1 st before marker,",
+        "M1R, K1, SM, K1, M1L; rep from *.",
+        "Row 15: Knit.",
+        "Repeat rows 14-15 until the yoke",
+        "measures 8 in from the cast on.",
+    ]
+    private static func sampleRowTop(_ index: Int) -> CGFloat { 196 + CGFloat(index) * 32 }
+
     /// A three-page stand-in pattern so the reader can be checked without importing a file.
     private static func samplePattern() -> String? {
-        let page = CGRect(x: 0, y: 0, width: 612, height: 792)
-        let lines = ["Cast on 88 sts. Join in the round.", "Rows 1-12: K2, P2 rib.", "Row 13: Knit, placing raglan markers.", "Row 14: Knit to marker, M1R, K1, SM, K1, M1L. Repeat.", "Row 15: Knit.", "Repeat rows 14-15 until yoke measures 8 in."]
-        let data = UIGraphicsPDFRenderer(bounds: page).pdfData { context in
-            for number in 1...3 {
+        let body = UIFont.systemFont(ofSize: 17)
+        let small: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.gray]
+        let data = UIGraphicsPDFRenderer(bounds: samplePage).pdfData { context in
+            for (number, part) in ["Yoke", "Body", "Sleeves"].enumerated() {
                 context.beginPage()
-                ("Raglan Sweater" as NSString).draw(at: CGPoint(x: 56, y: 56), withAttributes: [.font: UIFont.boldSystemFont(ofSize: 28)])
-                ("Page \(number)" as NSString).draw(at: CGPoint(x: 56, y: 96), withAttributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray])
-                for (index, line) in lines.enumerated() {
-                    (line as NSString).draw(at: CGPoint(x: 56, y: 150 + CGFloat(index) * 34), withAttributes: [.font: UIFont.systemFont(ofSize: 18)])
+                ("Raglan Sweater" as NSString).draw(at: CGPoint(x: 36, y: 44), withAttributes: [.font: UIFont.boldSystemFont(ofSize: 28)])
+                ("Worsted · US 7 circular · 18 sts and 24 rows over 4 in" as NSString).draw(at: CGPoint(x: 36, y: 84), withAttributes: small)
+                (part as NSString).draw(at: CGPoint(x: 36, y: 140), withAttributes: [.font: UIFont.boldSystemFont(ofSize: 20)])
+                for (index, line) in sampleRows.enumerated() {
+                    (line as NSString).draw(at: CGPoint(x: 36, y: sampleRowTop(index)), withAttributes: [.font: body])
                 }
+                ("\(number + 1)" as NSString).draw(at: CGPoint(x: 36, y: 548), withAttributes: small)
             }
         }
         let source = FileManager.default.temporaryDirectory.appending(path: "sample-pattern.pdf")
         guard (try? data.write(to: source)) != nil else { return nil }
         return try? PatternStore.save(from: source)
+    }
+
+    /// Leaves the row band on one line of the sample pattern, the way a tap would.
+    private static func markSampleRow(_ index: Int, on project: Project) {
+        let line = UIFont.systemFont(ofSize: 17).lineHeight
+        project.markPage = 0
+        project.markHeight = line + 4
+        project.markY = samplePage.height - sampleRowTop(index) - line - 2
     }
     #endif
 }
