@@ -229,7 +229,7 @@ struct ProjectView: View {
             } else {
                 Button(project.patternFile == nil ? "Add Pattern" : "Replace Pattern", systemImage: "doc") { importing = true }
                 if project.patternFile != nil {
-                    Button("Remove Pattern", systemImage: "doc.badge.minus") { setPattern(nil) }
+                    Button("Remove Pattern", systemImage: "trash") { setPattern(nil) }
                 }
                 Button("Repeat", systemImage: "repeat") {
                     repeatText = project.repeatLength > 0 ? String(project.repeatLength) : ""

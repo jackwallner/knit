@@ -27,33 +27,22 @@ struct PaywallView: View {
             }
             .padding(.horizontal, 8)
 
-            Spacer(minLength: 0)
-            HStack(spacing: 4) {
-                Garment(silhouette: .hat, yarn: .spruce)
-                Garment(silhouette: .sweater, yarn: .madder)
-                Garment(silhouette: .shawl, yarn: .indigo)
-            }
-            .frame(minHeight: 44, maxHeight: 130)
-            .padding(.horizontal, 28)
-
-            VStack(spacing: 10) {
-                Text("Ravel Patterns")
-                    .font(Theme.display(34, weight: .semibold))
-                    .minimumScaleFactor(0.7)
-                    .lineLimit(1)
-                Text("Every pattern, written to your size and your yarn, one row at a time.")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding(.horizontal, 28)
-            .padding(.top, 20)
-            Spacer(minLength: 0)
-
-            if subscription.offers.isEmpty {
-                unavailable
-            } else {
-                plans
+            // At large text sizes the page scrolls and nothing truncates.
+            ViewThatFits(in: .vertical) {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 0)
+                    hero.frame(minHeight: 44, maxHeight: 130)
+                    pitch
+                    Spacer(minLength: 0)
+                    store
+                }
+                ScrollView {
+                    VStack(spacing: 28) {
+                        hero.frame(height: 96)
+                        pitch
+                        store
+                    }
+                }
             }
         }
         .background(Theme.paper)
@@ -62,18 +51,57 @@ struct PaywallView: View {
         .alert(message ?? "", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {}
     }
 
+    private var hero: some View {
+        HStack(spacing: 4) {
+            Garment(silhouette: .hat, yarn: .spruce)
+            Garment(silhouette: .sweater, yarn: .madder)
+            Garment(silhouette: .shawl, yarn: .indigo)
+        }
+        .padding(.horizontal, 28)
+        .accessibilityHidden(true)
+    }
+
+    private var pitch: some View {
+        VStack(spacing: 10) {
+            Text("Ravel Patterns")
+                .font(Theme.display(34, weight: .semibold))
+                .minimumScaleFactor(0.6)
+                .lineLimit(1)
+                .accessibilityAddTraits(.isHeader)
+            Text("Every pattern, written to your size and your yarn, one row at a time.")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 28)
+        .padding(.top, 20)
+    }
+
+    @ViewBuilder private var store: some View {
+        if subscription.offers.isEmpty { unavailable } else { plans }
+    }
+
     private var plans: some View {
         VStack(spacing: 10) {
             ForEach(subscription.offers) { option in
                 let isOn = option.id == offer?.id
                 Button { picked = option.term } label: {
-                    HStack {
-                        Text(option.termName).font(.headline)
-                        Spacer()
-                        Text(option.priceLine).font(.body).monospacedDigit()
+                    ViewThatFits(in: .horizontal) {
+                        HStack {
+                            Text(option.termName).font(.headline)
+                            Spacer(minLength: 12)
+                            Text(option.priceLine).font(.body).monospacedDigit()
+                        }
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(option.termName).font(.headline)
+                            Text(option.priceLine).font(.body).monospacedDigit()
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .foregroundStyle(.primary)
                     .padding(.horizontal, 20)
+                    .padding(.vertical, 8)
                     .frame(minHeight: 54)
                     .background(.primary.opacity(isOn ? 0.09 : 0.04), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .overlay { RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(.primary, lineWidth: isOn ? 2 : 0) }
@@ -89,6 +117,9 @@ struct PaywallView: View {
                         if working { ProgressView().tint(Theme.onAccent) } else { Text(offer.action) }
                     }
                     .font(.headline)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .padding(.horizontal, 16)
                     .foregroundStyle(Theme.onAccent)
                     .frame(maxWidth: .infinity, minHeight: 54)
                     .background(Color.accentColor, in: Capsule())
@@ -117,6 +148,7 @@ struct PaywallView: View {
                 Text("Plans could not load")
                     .font(.headline)
                 Button("Try Again") { Task { await subscription.loadOffers() } }
+                    .frame(minWidth: 88, minHeight: 44)
             }
             footer
         }

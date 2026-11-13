@@ -64,8 +64,14 @@ struct PatternView: UIViewRepresentable {
             guard let view = gesture.view as? PDFView, let page = view.page(for: gesture.location(in: view), nearest: false), let index = view.document?.index(for: page) else { return }
             let point = view.convert(gesture.location(in: view), to: page)
             // Snap to the line of text under the finger; on a chart, mark where the finger landed.
-            let line = page.selectionForLine(at: point)?.bounds(for: page)
-            let height = max((line?.height ?? 12) + 8, 18)
+            let selection = page.selectionForLine(at: point)
+            var line = selection?.bounds(for: page)
+            // With tight leading PDFKit merges neighbouring lines into one block. Then mark the line under the finger.
+            if let block = line, let text = selection?.attributedString, text.length > 0,
+               let size = (text.attribute(.font, at: 0, effectiveRange: nil) as? UIFont)?.pointSize, block.height > size * 1.8 {
+                line = CGRect(x: block.minX, y: point.y - size * 0.6, width: block.width, height: size * 1.2)
+            }
+            let height = max((line?.height ?? 12) + 4, 14)
             let y = (line?.midY ?? point.y) - height / 2
             if project.markPage == index, abs(project.markY - y) < 1 {
                 clear()

@@ -52,7 +52,7 @@ struct LibraryView: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .contentShape(Rectangle())
     }
 }

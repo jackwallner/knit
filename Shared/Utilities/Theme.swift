@@ -9,7 +9,10 @@ enum Theme {
 
     /// Serif for names and numerals; chrome stays in the system face.
     static func display(_ size: CGFloat, weight: Font.Weight = .medium) -> Font {
-        .system(size: size, weight: weight, design: .serif)
+        // Follows the reader's text size. Big numerals grow less, so a counter never outgrows its screen.
+        let limit: CGFloat = size >= 40 ? 1.25 : 1.8
+        let scaled = min(UIFontMetrics.default.scaledValue(for: size), size * limit)
+        return .system(size: scaled, weight: weight, design: .serif)
     }
 
     /// Serif navigation titles everywhere.
