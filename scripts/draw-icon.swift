@@ -1,46 +1,43 @@
 import AppKit
 
-// Draws the app icon: a ball of yarn on a cream field.
-let size = 1024
-let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: size, pixelsHigh: size, bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
+// Draws the app icon: a close-up of stockinette in the app's madder yarn,
+// the same stitches the counter screen knits.
+let size: CGFloat = 1024
+let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(size), pixelsHigh: Int(size), bitsPerSample: 8, samplesPerPixel: 3, hasAlpha: false, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
 NSGraphicsContext.saveGraphicsState()
 NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: bitmap)
-let cream = NSColor(calibratedRed: 0.97, green: 0.94, blue: 0.89, alpha: 1)
-let wool = NSColor(calibratedRed: 0.58, green: 0.20, blue: 0.24, alpha: 1)
-let light = NSColor(calibratedRed: 0.80, green: 0.42, blue: 0.44, alpha: 1)
-cream.setFill()
+
+func yarn(_ factor: CGFloat) -> NSColor { NSColor(srgbRed: 0.64 * factor, green: 0.23 * factor, blue: 0.24 * factor, alpha: 1) }
+yarn(0.55).setFill()
 NSBezierPath(rect: NSRect(x: 0, y: 0, width: size, height: size)).fill()
 
-let ball = NSRect(x: 232, y: 262, width: 560, height: 560)
-wool.setFill()
-NSBezierPath(ovalIn: ball).fill()
-
-NSGraphicsContext.saveGraphicsState()
-NSBezierPath(ovalIn: ball).addClip()
-light.setStroke()
-func strand(_ rect: NSRect, _ degrees: CGFloat) {
-    let path = NSBezierPath(ovalIn: rect)
-    var turn = AffineTransform(translationByX: 512, byY: 542)
-    turn.rotate(byDegrees: degrees)
-    turn.translate(x: -512, y: -542)
-    path.transform(using: turn)
-    path.lineWidth = 26
-    path.stroke()
+let columns: CGFloat = 4
+let w = size / columns
+let h = w * 0.8
+func leg(from: NSPoint, to: NSPoint, color: NSColor) {
+    for (stroke, width) in [(yarn(0.55), w * 0.43), (color, w * 0.33)] {
+        let path = NSBezierPath()
+        path.lineCapStyle = .round
+        path.lineWidth = width
+        // AppKit draws from the bottom up; the app draws from the top down.
+        path.move(to: NSPoint(x: from.x, y: size - from.y))
+        path.line(to: NSPoint(x: to.x, y: size - to.y))
+        stroke.setStroke()
+        path.stroke()
+    }
 }
-for offset in [-150, 0, 150] as [CGFloat] {
-    strand(NSRect(x: 112 + offset, y: 202, width: 800, height: 680), 0)
+var row = -1
+while CGFloat(row) * h < size {
+    let y = CGFloat(row) * h + h * 0.35
+    for column in 0..<Int(columns) {
+        let x = CGFloat(column) * w
+        leg(from: NSPoint(x: x + w * 0.15, y: y + h * 0.1), to: NSPoint(x: x + w * 0.41, y: y + h * 1.12), color: yarn(1))
+    }
+    for column in 0..<Int(columns) {
+        let x = CGFloat(column) * w
+        leg(from: NSPoint(x: x + w * 0.85, y: y + h * 0.1), to: NSPoint(x: x + w * 0.59, y: y + h * 1.12), color: yarn(0.9))
+    }
+    row += 1
 }
-for offset in [-170, -20, 130] as [CGFloat] {
-    strand(NSRect(x: 172, y: 142 + offset, width: 680, height: 800), 58)
-}
-NSGraphicsContext.restoreGraphicsState()
-
-wool.setStroke()
-let tail = NSBezierPath()
-tail.lineWidth = 30
-tail.lineCapStyle = .round
-tail.move(to: NSPoint(x: 700, y: 330))
-tail.curve(to: NSPoint(x: 900, y: 170), controlPoint1: NSPoint(x: 800, y: 250), controlPoint2: NSPoint(x: 780, y: 140))
-tail.stroke()
 NSGraphicsContext.restoreGraphicsState()
 try bitmap.representation(using: .png, properties: [:])!.write(to: URL(fileURLWithPath: "Ravel/Assets.xcassets/AppIcon.appiconset/icon.png"))

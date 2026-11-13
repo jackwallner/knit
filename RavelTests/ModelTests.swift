@@ -44,6 +44,26 @@ final class ModelTests: XCTestCase {
         XCTAssertEqual(yarn.weight, .worsted)
     }
 
+    func testRepeatPositionWrapsAtTheRepeatLength() {
+        let project = Project(name: "Lace")
+        project.repeatLength = 6
+        XCTAssertEqual(project.repeatPosition, 0)
+        project.rows = 6
+        XCTAssertEqual(project.repeatPosition, 6)
+        project.rows = 7
+        XCTAssertEqual(project.repeatPosition, 1)
+        project.repeatLength = 0
+        XCTAssertEqual(project.repeatPosition, 0)
+    }
+
+    func testNeedleSizesUseTheRightChart() {
+        XCTAssertEqual(Needle(kind: .circular, millimeters: 4.5).size.label, "US 7 · 4.5 mm")
+        XCTAssertEqual(Needle(kind: .hook, millimeters: 5.0).size.label, "US H · 5 mm")
+        XCTAssertEqual(NeedleSize.nearest(to: 12.0, hook: false).us, "17")
+        XCTAssertEqual(Needle(kind: .circular, millimeters: 4.5, lengthInches: 32).detail, "Circular · 32 in")
+        XCTAssertEqual(Needle(kind: .straight).detail, "Straight")
+    }
+
     func testPatternStoreSavesAndDeletes() throws {
         let source = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString + ".pdf")
         try Data("%PDF-1.4".utf8).write(to: source)

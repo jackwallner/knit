@@ -6,7 +6,7 @@ enum Persistence {
     /// A store that will not open falls back to memory so the app still launches.
     @MainActor
     static func container(inMemory: Bool) -> ModelContainer {
-        let schema = Schema([Project.self, Yarn.self])
+        let schema = Schema([Project.self, Yarn.self, Needle.self])
         // A fresh install has no Application Support folder; without it the first open logs a failed attempt.
         try? FileManager.default.createDirectory(at: .applicationSupportDirectory, withIntermediateDirectories: true)
         if !inMemory, let disk = try? ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema)) {
@@ -31,6 +31,9 @@ enum Persistence {
         [sweater, beanie, blanket].forEach(context.insert)
         context.insert(Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6))
         context.insert(Yarn(name: "Sock Yarn", brand: "Tidewater", colorway: "Harbor", weight: .fingering, skeins: 2, createdAt: .now.addingTimeInterval(-86_400)))
+        context.insert(Needle(kind: .circular, millimeters: 4.5, lengthInches: 32))
+        context.insert(Needle(kind: .doublePointed, millimeters: 3.25, createdAt: .now.addingTimeInterval(-86_400)))
+        context.insert(Needle(kind: .hook, millimeters: 5.0, createdAt: .now.addingTimeInterval(-2 * 86_400)))
         context.insert(Yarn(name: "Chunky Alpaca", colorway: "Charcoal", weight: .bulky, skeins: 3, createdAt: .now.addingTimeInterval(-2 * 86_400)))
     }
 

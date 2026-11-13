@@ -101,3 +101,79 @@ enum YarnWeight: String, CaseIterable, Identifiable {
         }
     }
 }
+
+/// A needle or hook in the stash.
+@Model
+final class Needle {
+    var kindRaw: String
+    var millimeters: Double
+    /// Cable or shaft length in inches. 0 when the knitter did not say.
+    var lengthInches: Int
+    var createdAt: Date
+
+    init(kind: NeedleKind = .circular, millimeters: Double = 4.5, lengthInches: Int = 0, createdAt: Date = .now) {
+        self.kindRaw = kind.rawValue
+        self.millimeters = millimeters
+        self.lengthInches = lengthInches
+        self.createdAt = createdAt
+    }
+
+    var kind: NeedleKind {
+        get { NeedleKind(rawValue: kindRaw) ?? .circular }
+        set { kindRaw = newValue.rawValue }
+    }
+
+    var size: NeedleSize { NeedleSize.nearest(to: millimeters, hook: kind == .hook) }
+
+    var detail: String {
+        lengthInches > 0 ? "\(kind.label) · \(lengthInches) in" : kind.label
+    }
+}
+
+enum NeedleKind: String, CaseIterable, Identifiable {
+    case circular, straight, doublePointed, hook
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .circular: "Circular"
+        case .straight: "Straight"
+        case .doublePointed: "Double-Pointed"
+        case .hook: "Crochet Hook"
+        }
+    }
+}
+
+/// A standard size: metric diameter plus the US name knitters and crocheters use for it.
+struct NeedleSize: Hashable, Identifiable {
+    let millimeters: Double
+    let us: String
+
+    var id: Double { millimeters }
+
+    var label: String { "US \(us) · \(millimeters.formatted(.number.precision(.fractionLength(0...2)))) mm" }
+
+    static let needles: [NeedleSize] = [
+        .init(millimeters: 2.0, us: "0"), .init(millimeters: 2.25, us: "1"), .init(millimeters: 2.75, us: "2"),
+        .init(millimeters: 3.25, us: "3"), .init(millimeters: 3.5, us: "4"), .init(millimeters: 3.75, us: "5"),
+        .init(millimeters: 4.0, us: "6"), .init(millimeters: 4.5, us: "7"), .init(millimeters: 5.0, us: "8"),
+        .init(millimeters: 5.5, us: "9"), .init(millimeters: 6.0, us: "10"), .init(millimeters: 6.5, us: "10.5"),
+        .init(millimeters: 8.0, us: "11"), .init(millimeters: 9.0, us: "13"), .init(millimeters: 10.0, us: "15"),
+        .init(millimeters: 12.75, us: "17"), .init(millimeters: 15.0, us: "19"),
+    ]
+
+    static let hooks: [NeedleSize] = [
+        .init(millimeters: 2.25, us: "B"), .init(millimeters: 2.75, us: "C"), .init(millimeters: 3.25, us: "D"),
+        .init(millimeters: 3.5, us: "E"), .init(millimeters: 3.75, us: "F"), .init(millimeters: 4.0, us: "G"),
+        .init(millimeters: 4.5, us: "7"), .init(millimeters: 5.0, us: "H"), .init(millimeters: 5.5, us: "I"),
+        .init(millimeters: 6.0, us: "J"), .init(millimeters: 6.5, us: "K"), .init(millimeters: 8.0, us: "L"),
+        .init(millimeters: 9.0, us: "M"), .init(millimeters: 10.0, us: "N"),
+    ]
+
+    static func all(hook: Bool) -> [NeedleSize] { hook ? hooks : needles }
+
+    static func nearest(to millimeters: Double, hook: Bool) -> NeedleSize {
+        all(hook: hook).min { abs($0.millimeters - millimeters) < abs($1.millimeters - millimeters) } ?? needles[7]
+    }
+}
