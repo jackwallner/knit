@@ -57,7 +57,8 @@
           "introductoryOffer": {
             "internalID": "A1B2C3D2",
             "paymentMode": "free",
-            "subscriptionPeriod": "P1W"
+            "subscriptionPeriod": "P1W",
+            "numberOfPeriods": 1
           }
         },
         {
@@ -83,7 +84,8 @@
           "introductoryOffer": {
             "internalID": "A1B2C3D1",
             "paymentMode": "free",
-            "subscriptionPeriod": "P1W"
+            "subscriptionPeriod": "P1W",
+            "numberOfPeriods": 1
           }
         }
       ]
@@ -92,5 +94,14 @@
   "version": {
     "major": 4,
     "minor": 0
+  },
+  "settings": {
+    "_applicationInternalID": "6834244566",
+    "_developerTeamID": "YXG4MP6W39",
+    "_failTransactionsEnabled": false,
+    "_lastSynchronizedDate": 0,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
   }
 }
