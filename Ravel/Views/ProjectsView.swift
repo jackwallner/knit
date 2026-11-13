@@ -38,8 +38,15 @@ struct ProjectsView: View {
                 }
             }
             #if DEBUG
-            // `-OpenFirst`: land on the newest project, for screenshots.
-            .task { if ProcessInfo.processInfo.arguments.contains("-OpenFirst"), path.isEmpty, let first = active.first { path = [first] } }
+            // `-OpenFirst` lands on the newest project and `-OpenProject <name>` on a named one, for screenshots.
+            .task {
+                guard path.isEmpty else { return }
+                if let name = UserDefaults.standard.string(forKey: "OpenProject"), let match = projects.first(where: { $0.name == name }) {
+                    path = [match]
+                } else if ProcessInfo.processInfo.arguments.contains("-OpenFirst"), let first = active.first {
+                    path = [first]
+                }
+            }
             #endif
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name)

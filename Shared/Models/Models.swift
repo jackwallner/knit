@@ -20,6 +20,10 @@ final class Project {
     var markPage: Int = -1
     var markY: Double = 0
     var markHeight: Double = 0
+    /// The library design this project was cast on from.
+    var designRaw: String?
+    /// That design sized for this knitter, frozen so the instructions never shift under them.
+    var planData: Data?
 
     init(name: String, rows: Int = 0, color: YarnColor = .madder, createdAt: Date = .now) {
         self.name = name
@@ -43,6 +47,13 @@ final class Project {
     var repeatPosition: Int {
         guard repeatLength > 0, rows > 0 else { return 0 }
         return (rows - 1) % repeatLength + 1
+    }
+
+    var plan: PatternPlan? { planData.flatMap { try? JSONDecoder().decode(PatternPlan.self, from: $0) } }
+
+    func follow(_ plan: PatternPlan, of design: Design) {
+        designRaw = design.rawValue
+        planData = try? JSONEncoder().encode(plan)
     }
 
     func increment() { rows += 1 }

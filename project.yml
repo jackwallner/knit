@@ -11,6 +11,10 @@ settings:
     CODE_SIGN_STYLE: Automatic
     MARKETING_VERSION: "1.0.0"
     CURRENT_PROJECT_VERSION: "1"
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm.git
+    from: 5.14.0
 schemes:
   Ravel:
     build:
@@ -30,6 +34,9 @@ targets:
     sources:
       - path: Ravel
       - path: Shared
+    dependencies:
+      - package: RevenueCat
+        product: RevenueCat
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.knit

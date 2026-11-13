@@ -13,6 +13,8 @@ struct RavelApp: App {
         #endif
         container = Persistence.container(inMemory: inMemory)
         Theme.applyNavigationAppearance()
+        SubscriptionService.shared.start()
+        ReviewPrompt().recordLaunch()
         #if DEBUG
         if arguments.contains("-SeedDemo") { Persistence.seedDemo(container.mainContext) }
         #endif

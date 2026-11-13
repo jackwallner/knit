@@ -26,6 +26,8 @@ enum Persistence {
         sweater.needles = "US 7 circular"
         if !ProcessInfo.processInfo.arguments.contains("-NoPattern") { sweater.patternFile = samplePattern() }
         let beanie = Project(name: "Ribbed Beanie", rows: 18, color: .spruce, createdAt: .now.addingTimeInterval(-86_400))
+        let hat = Design.ribbedBeanie
+        beanie.follow(hat.plan(measures: hat.defaultSize.values, gauge: hat.weight.gauge), of: hat)
         let blanket = Project(name: "Baby Blanket", rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
         blanket.finishedAt = .now.addingTimeInterval(-2 * 86_400)
         [sweater, beanie, blanket].forEach(context.insert)

@@ -64,6 +64,55 @@ final class ModelTests: XCTestCase {
         XCTAssertEqual(Needle(kind: .straight).detail, "Straight")
     }
 
+    func testLibraryProjectKeepsItsPlan() throws {
+        let container = Persistence.container(inMemory: true)
+        let design = Design.ribbedBeanie
+        let plan = design.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge)
+        let project = Project(name: design.name)
+        project.follow(plan, of: design)
+        container.mainContext.insert(project)
+        try container.mainContext.save()
+        let fetched = try XCTUnwrap(container.mainContext.fetch(FetchDescriptor<Project>()).first)
+        XCTAssertEqual(fetched.plan, plan)
+        XCTAssertEqual(fetched.designRaw, "ribbedBeanie")
+        XCTAssertNil(Project(name: "Own pattern").plan)
+    }
+
+    func testOnlyTheLibraryIsPaid() {
+        let subscription = SubscriptionService.shared
+        subscription.setLocalOverride(isPro: false)
+        XCTAssertTrue(subscription.canOpen(.garterScarf))
+        XCTAssertFalse(subscription.canOpen(.raglanPullover))
+        subscription.setLocalOverride(isPro: true)
+        XCTAssertTrue(Design.allCases.allSatisfy(subscription.canOpen))
+        subscription.setLocalOverride(isPro: false)
+        XCTAssertEqual(Design.allCases.filter(\.isFree).count, 2)
+    }
+
+    func testReviewAskWaitsForASecondLaunchAndAMoment() throws {
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: "review-\(UUID().uuidString)"))
+        let prompt = ReviewPrompt(defaults: defaults)
+        prompt.recordLaunch()
+        prompt.recordPositiveMoment()
+        XCTAssertFalse(prompt.shouldAsk())
+        prompt.recordLaunch()
+        XCTAssertTrue(prompt.shouldAsk())
+        prompt.markAsked(now: .now)
+        prompt.recordPositiveMoment()
+        XCTAssertFalse(prompt.shouldAsk(now: .now.addingTimeInterval(29 * 86_400)))
+        XCTAssertTrue(prompt.shouldAsk(now: .now.addingTimeInterval(31 * 86_400)))
+        prompt.markOpenedStore()
+        XCTAssertFalse(prompt.shouldAsk(now: .now.addingTimeInterval(31 * 86_400)))
+    }
+
+    func testAbbreviationsListOnlyWhatThePatternUses() {
+        let hat = Design.ribbedBeanie.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(hat.abbreviations.map(\.term), ["k2tog"])
+        let sweater = Design.raglanPullover.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(Set(sweater.abbreviations.map(\.term)), ["k2tog", "ssk", "M1L", "M1R"])
+        XCTAssertTrue(Design.garterScarf.plan(measures: [:], gauge: YarnWeight.worsted.gauge).abbreviations.isEmpty)
+    }
+
     func testPatternStoreSavesAndDeletes() throws {
         let source = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString + ".pdf")
         try Data("%PDF-1.4".utf8).write(to: source)
