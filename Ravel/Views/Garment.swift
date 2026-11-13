@@ -75,6 +75,17 @@ private struct Outline: Shape {
             path.addLine(to: p(0.96, 0.24))
             path.addLine(to: p(0.5, 0.8))
             path.closeSubpath()
+        case .hood:
+            path.move(to: p(0.2, 0.92))
+            path.addCurve(to: p(0.5, 0.06), control1: p(0.06, 0.4), control2: p(0.26, 0.06))
+            path.addCurve(to: p(0.8, 0.92), control1: p(0.74, 0.06), control2: p(0.94, 0.4))
+            path.closeSubpath()
+            path.addEllipse(in: box(0.33, 0.3, 0.34, 0.3))
+        case .kerchief:
+            path.move(to: p(0.03, 0.46))
+            path.addQuadCurve(to: p(0.97, 0.46), control: p(0.5, 0.3))
+            path.addQuadCurve(to: p(0.03, 0.46), control: p(0.5, 0.86))
+            path.closeSubpath()
         case .sweater:
             path.move(to: p(0.38, 0.12))
             path.addCurve(to: p(0.62, 0.12), control1: p(0.44, 0.2), control2: p(0.56, 0.2))

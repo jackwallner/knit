@@ -17,7 +17,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 ## Architecture
 - `Shared/Models/Models.swift`: `Project` (row count, pattern file, repeat, row band, and for library projects `designRaw` + `planData`), `Yarn`, `Needle`, the US/metric size charts.
 - `Shared/Patterns`: the library. `Design.swift` lists every design with its sizes and measurements, `Engines.swift` holds the stitch math per design, `Plan.swift` is the row-by-row output (`PatternPlan`, `Step`) plus `Sizing` helpers.
-- `Shared/Services`: `Persistence` (container, DEBUG demo seed), `PatternStore` (imported PDFs in Application Support/Patterns), `SubscriptionService` (RevenueCat, `Offer`, `Links`), `ReviewPrompt`.
+- `Shared/Services`: `Persistence` (container, DEBUG demo seed), `PatternStore` (imported PDFs in Application Support/Patterns), `SubscriptionService` (RevenueCat, `Offer`, `Links`), `ReviewPrompt`, `Trending` (the Trending shelf: a month-aware list bundled in the app, replaced by `docs/trending.json` from the site at most once a day).
 - `Ravel/Views`: `RootView` (Projects, Patterns, Stash tabs), `ProjectsView`, `ProjectView` (three modes: counter, PDF reader with a work strip, guided library pattern), `Fabric` (the knitted canvas), `Garment` (a design cut from fabric), `LibraryView` + `DesignView`, `PaywallView`, `PatternView` (PDFKit), `StashView`.
 
 ## Rules that hold everywhere
@@ -29,10 +29,12 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - Patterns carry no designer name. Never add invented people, bylines or bios to the library or the store listing.
 - `Project.patternFile` is a file name, never a full path (the container path changes between installs).
 - `Purchases.configure` never runs on a simulator. Use `-MockProducts`, `-Pro` or `SubscriptionService.shared.setLocalOverride(isPro:)`.
+- Patterns are sized in inches and yards underneath. Every length a person reads goes through `Sizing.inches`, `Sizing.cable`, `Sizing.yardage` or `Sizing.swatch`, which print centimeters and meters outside the United States (`Units.current`). Never hardcode "in" or "yd".
+- `docs/trending.json` may only name `Design` raw values. A design the installed build does not know is skipped, so add a design to the list only after the build that carries it is live. `TrendingTests.testPublishedListDecodes` reads the file.
 - No em dashes in copy, comments or commits.
 
 ## Launch arguments (DEBUG)
-- `-SeedDemo`: in-memory store with three projects (one PDF, one library pattern), yarns and needles. `-NoPattern` drops the PDF.
+- `-SeedDemo`: in-memory store with three projects (one PDF, one library pattern), yarns and needles. `-NoPattern` drops the PDF. Seeded and `-UITesting` runs never fetch the trending list.
 - `-UITesting`: empty in-memory store.
 - `-OpenFirst`, `-OpenProject <name>`: land inside a project.
 - `-Tab <0|1|2>`, `-OpenDesign <Design raw value>`: land on a tab or a design page.

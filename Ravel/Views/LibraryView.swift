@@ -7,11 +7,13 @@ struct LibraryView: View {
     @State private var path: [Design] = UserDefaults.standard.string(forKey: "OpenDesign").flatMap(Design.init(rawValue:)).map { [$0] } ?? []
 
     private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
+    private let trending = Trending.shared
 
     var body: some View {
         NavigationStack(path: $path) {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 36) {
+                    if !trending.items.isEmpty { trendingShelf }
                     ForEach(Design.Shelf.allCases) { shelf in
                         VStack(alignment: .leading, spacing: 14) {
                             Text(shelf.rawValue)
@@ -19,7 +21,7 @@ struct LibraryView: View {
                                 .accessibilityAddTraits(.isHeader)
                             LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
                                 ForEach(Design.allCases.filter { $0.shelf == shelf }) { design in
-                                    NavigationLink(value: design) { tile(design) }
+                                    NavigationLink(value: design) { tile(design, note: design.isFree ? "Free" : design.level.rawValue) }
                                         .buttonStyle(.plain)
                                         .accessibilityIdentifier("design.\(design.rawValue)")
                                 }
@@ -34,10 +36,37 @@ struct LibraryView: View {
             .background(Theme.paper)
             .navigationTitle("Patterns")
             .navigationDestination(for: Design.self) { DesignView(design: $0) }
+            .task {
+                // Seeded and test runs keep the list that ships in the app, so captures do not shift.
+                let arguments = ProcessInfo.processInfo.arguments
+                guard !arguments.contains("-SeedDemo"), !arguments.contains("-UITesting") else { return }
+                await trending.refresh()
+            }
         }
     }
 
-    private func tile(_ design: Design) -> some View {
+    /// New designs and what suits the season, in a row that scrolls sideways.
+    private var trendingShelf: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text("Trending")
+                .font(Theme.display(22, weight: .semibold))
+                .accessibilityAddTraits(.isHeader)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(alignment: .top, spacing: 16) {
+                    ForEach(trending.items) { trend in
+                        NavigationLink(value: trend.design) { tile(trend.design, note: trend.tag) }
+                            .buttonStyle(.plain)
+                            .containerRelativeFrame(.horizontal) { width, _ in (width - 40 - 32) / 2.3 }
+                            .accessibilityIdentifier("trending.\(trend.design.rawValue)")
+                    }
+                }
+                .padding(.horizontal, 20)
+            }
+            .padding(.horizontal, -20)
+        }
+    }
+
+    private func tile(_ design: Design, note: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Garment(silhouette: design.silhouette, yarn: design.yarn)
                 .padding(14)
@@ -47,7 +76,7 @@ struct LibraryView: View {
                     .font(Theme.display(18))
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
-                Text(design.isFree ? "Free" : design.level.rawValue)
+                Text(note)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
@@ -82,7 +111,7 @@ struct DesignView: View {
                 VStack(spacing: 14) {
                     Garment(silhouette: design.silhouette, yarn: design.yarn)
                         .frame(height: 210)
-                    Text("\(design.level.rawValue) · \(plan.yards.formatted()) yd")
+                    Text("\(design.level.rawValue) · \(Sizing.yardage(plan.yards))")
                         .font(.subheadline)
                         .monospacedDigit()
                         .foregroundStyle(.secondary)
@@ -96,7 +125,7 @@ struct DesignView: View {
                         if let size = design.sizes.first(where: { $0.name == name }) { values = size.values }
                     }
                     ForEach(design.measures) { measure in
-                        adjuster(measure.label, value: Binding(get: { values[measure.key] ?? measure.range.lowerBound }, set: { values[measure.key] = $0 }), range: measure.range, step: measure.step, unit: " in")
+                        adjuster(measure.label, value: Binding(get: { values[measure.key] ?? measure.range.lowerBound }, set: { values[measure.key] = $0 }), range: measure.range, step: measure.step, length: true)
                     }
                 }
 
@@ -104,8 +133,8 @@ struct DesignView: View {
                     chips(YarnWeight.allCases.map(\.label), selected: YarnWeight.allCases.first { $0.gauge == gauge }?.label) { label in
                         if let weight = YarnWeight.allCases.first(where: { $0.label == label }) { gauge = weight.gauge }
                     }
-                    adjuster("Stitches over 4 in", value: $gauge.stitches, range: 8...40, step: 0.5, unit: "")
-                    adjuster("Rows over 4 in", value: $gauge.rows, range: 10...56, step: 1, unit: "")
+                    adjuster("Stitches over \(Sizing.swatch())", value: $gauge.stitches, range: 8...40, step: 0.5)
+                    adjuster("Rows over \(Sizing.swatch())", value: $gauge.rows, range: 10...56, step: 1)
                 }
 
                 group("Materials") {
@@ -162,8 +191,7 @@ struct DesignView: View {
     }
 
     private func chips(_ names: [String], selected: String?, pick: @escaping (String) -> Void) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
+        Wrap(spacing: 8) {
                 ForEach(names, id: \.self) { name in
                     let isOn = name == selected
                     Button { pick(name) } label: {
@@ -177,14 +205,11 @@ struct DesignView: View {
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(isOn ? .isSelected : [])
                 }
-            }
-            .padding(.horizontal, 20)
         }
-        .padding(.horizontal, -20)
     }
 
-    private func adjuster(_ label: String, value: Binding<Double>, range: ClosedRange<Double>, step: Double, unit: String) -> some View {
-        let shown = value.wrappedValue.formatted(.number.precision(.fractionLength(0...2))) + unit
+    private func adjuster(_ label: String, value: Binding<Double>, range: ClosedRange<Double>, step: Double, length: Bool = false) -> some View {
+        let shown = length ? Sizing.inches(value.wrappedValue) : value.wrappedValue.formatted(.number.precision(.fractionLength(0...2)))
         func move(_ by: Double) { value.wrappedValue = min(max(value.wrappedValue + by, range.lowerBound), range.upperBound) }
         return HStack(spacing: 4) {
             Text(label)
@@ -193,7 +218,7 @@ struct DesignView: View {
             Text(shown)
                 .font(Theme.display(20))
                 .monospacedDigit()
-                .frame(minWidth: 68)
+                .frame(minWidth: 76)
                 .contentTransition(.numericText(value: value.wrappedValue))
                 .animation(.snappy, value: value.wrappedValue)
             nudge("plus") { move(step) }.disabled(value.wrappedValue >= range.upperBound)
@@ -219,5 +244,51 @@ struct DesignView: View {
         }
         .buttonStyle(.plain)
         .buttonRepeatBehavior(.enabled)
+    }
+}
+
+/// Lays chips out left to right and wraps to the next line, so none hide off the edge.
+struct Wrap: Layout {
+    var spacing: CGFloat = 8
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let width = proposal.width ?? .infinity
+        let rows = arrange(subviews, in: width)
+        return CGSize(width: proposal.width ?? rows.map(\.width).max() ?? 0, height: rows.last.map { $0.y + $0.height } ?? 0)
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        for row in arrange(subviews, in: bounds.width) {
+            var x = bounds.minX
+            for index in row.items {
+                let size = subviews[index].sizeThatFits(.unspecified)
+                subviews[index].place(at: CGPoint(x: x, y: bounds.minY + row.y), proposal: ProposedViewSize(size))
+                x += size.width + spacing
+            }
+        }
+    }
+
+    private struct Row {
+        var items: [Int] = []
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        var y: CGFloat = 0
+    }
+
+    private func arrange(_ subviews: Subviews, in width: CGFloat) -> [Row] {
+        var rows = [Row()]
+        for index in subviews.indices {
+            let size = subviews[index].sizeThatFits(.unspecified)
+            var row = rows[rows.count - 1]
+            if !row.items.isEmpty, row.width + spacing + size.width > width {
+                rows.append(Row(y: row.y + row.height + spacing))
+                row = rows[rows.count - 1]
+            }
+            row.width += (row.items.isEmpty ? 0 : spacing) + size.width
+            row.height = max(row.height, size.height)
+            row.items.append(index)
+            rows[rows.count - 1] = row
+        }
+        return rows
     }
 }

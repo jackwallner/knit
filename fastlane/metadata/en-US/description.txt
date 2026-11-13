@@ -2,9 +2,9 @@ Ravel is a knitting companion that keeps your place. Tap once for every row and 
 
 FREE, FOR GOOD
 • Projects: every piece on your needles, each in its own yarn color
-• Row counter: tap anywhere to add a row, one tap to take it back, and the count is saved the instant you tap
+• Row counter: tap anywhere to add a row, one tap to take it back, and the count is saved the instant you tap. Already mid-project? Set the row you are on
 • Repeats: set the rows in a repeat and see where you are in it
-• Your own patterns: add any PDF, tap a line to mark your place, and count rows without leaving the page
+• Your own patterns: add any PDF or photos of a printed pattern, tap a line to mark your place, and count rows without leaving the page
 • Stash: yarn by weight and skein count, plus needles and crochet hooks in US and metric sizes
 • Works offline, with no account to create
 
@@ -13,7 +13,7 @@ Choose a design, enter your measurements and your gauge, and Ravel writes the pa
 
 Then follow it one row at a time. Each tap shows the next instruction and the stitch count you should have on the needles.
 
-The library has hats, scarves, cowls, blankets, a dishcloth, handwarmers, leg warmers, a shawl and a top-down raglan pullover. The Garter Scarf and the Diagonal Dishcloth are free.
+The library has hats, a balaclava, scarves, cowls, a cabled headband, blankets, a dishcloth, handwarmers, leg warmers, a shawl and a top-down raglan pullover. The Trending shelf leads with new designs and what suits the season. Patterns read in inches or centimeters to match your iPhone. The Garter Scarf and the Diagonal Dishcloth are free.
 
 RAVEL PATTERNS
 Ravel Patterns unlocks the whole library. Subscribe monthly or yearly, each with a free trial for new subscribers, or pay once for lifetime access. The price is shown before you start, payment goes through your Apple Account, and a subscription can be cancelled any time in Settings. A pattern you have already cast on stays in your projects.
