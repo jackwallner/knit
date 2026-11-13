@@ -33,12 +33,14 @@ struct PaywallView: View {
                 Garment(silhouette: .sweater, yarn: .madder)
                 Garment(silhouette: .shawl, yarn: .indigo)
             }
-            .frame(maxHeight: 130)
+            .frame(minHeight: 44, maxHeight: 130)
             .padding(.horizontal, 28)
 
             VStack(spacing: 10) {
                 Text("Ravel Patterns")
                     .font(Theme.display(34, weight: .semibold))
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
                 Text("Every pattern, written to your size and your yarn, one row at a time.")
                     .font(.body)
                     .foregroundStyle(.secondary)
@@ -61,7 +63,7 @@ struct PaywallView: View {
     }
 
     private var plans: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 10) {
             ForEach(subscription.offers) { option in
                 let isOn = option.id == offer?.id
                 Button { picked = option.term } label: {
@@ -72,13 +74,13 @@ struct PaywallView: View {
                     }
                     .foregroundStyle(.primary)
                     .padding(.horizontal, 20)
-                    .frame(minHeight: 58)
+                    .frame(minHeight: 54)
                     .background(.primary.opacity(isOn ? 0.09 : 0.04), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .overlay { RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(.primary, lineWidth: isOn ? 2 : 0) }
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(isOn ? .isSelected : [])
-                .accessibilityIdentifier("paywall.\(option.term == .yearly ? "yearly" : "monthly")")
+                .accessibilityIdentifier("paywall.\(option.termName.lowercased())")
             }
 
             if let offer {
@@ -153,7 +155,7 @@ struct PaywallView: View {
         Task {
             let found = await subscription.restore()
             working = false
-            if found { dismiss() } else { message = "No subscription found on this Apple Account" }
+            if found { dismiss() } else { message = "No purchase found on this Apple Account" }
         }
     }
 }

@@ -25,6 +25,7 @@ BUNDLE = "com.jackwallner.knit"
 # product id suffix -> render filename
 SHOTS = {
     "monthly": "paywall-monthly.png",
+    "lifetime": "paywall-lifetime.png",
     "yearly": "paywall-yearly.png",
 }
 

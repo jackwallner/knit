@@ -18,9 +18,10 @@ struct RootView: View {
                 .tag(2)
         }
         #if DEBUG
-        // `-PaywallSnapshot yearly` or `monthly` opens the paywall on that plan, for review screenshots.
+        // `-PaywallSnapshot yearly`, `monthly` or `lifetime` opens the paywall on that plan, for review screenshots.
         .fullScreenCover(isPresented: $snapshot) {
-            PaywallView(picked: UserDefaults.standard.string(forKey: "PaywallSnapshot") == "monthly" ? .monthly : .yearly)
+            let plans: [String: Offer.Term] = ["monthly": .monthly, "lifetime": .lifetime]
+            PaywallView(picked: plans[UserDefaults.standard.string(forKey: "PaywallSnapshot") ?? ""] ?? .yearly)
         }
         #endif
     }

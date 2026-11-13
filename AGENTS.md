@@ -12,6 +12,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - `Ravel`: `com.jackwallner.knit`, App Store ID `6834244566`
 - `RavelTests`: `com.jackwallner.knit.tests`
 - Subscriptions (group "Ravel Patterns"): `com.jackwallner.knit.monthly` $6.99, `com.jackwallner.knit.yearly` $39.99, each with a 1-week free trial
+- Lifetime (non-consumable): `com.jackwallner.knit.lifetime` $79.99. All three unlock `pro`.
 
 ## Architecture
 - `Shared/Models/Models.swift`: `Project` (row count, pattern file, repeat, row band, and for library projects `designRaw` + `planData`), `Yarn`, `Needle`, the US/metric size charts.
@@ -35,12 +36,12 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - `-UITesting`: empty in-memory store.
 - `-OpenFirst`, `-OpenProject <name>`: land inside a project.
 - `-Tab <0|1|2>`, `-OpenDesign <Design raw value>`: land on a tab or a design page.
-- `-MockProducts`: sample offers on the paywall. `-Pro`: entitlement on. `-PaywallSnapshot yearly|monthly`: open the paywall on that plan.
+- `-MockProducts`: sample offers on the paywall. `-Pro`: entitlement on. `-PaywallSnapshot yearly|monthly|lifetime`: open the paywall on that plan. With none of these, a DEBUG simulator build sells the products in `Ravel.storekit` through StoreKit Testing when the scheme runs it (Xcode run or `xcodebuild test`).
 
 ## App-specific notes
 - Store name: "Ravel: Knitting Patterns". Metadata in `fastlane/metadata/en-US`. Site (GitHub Pages, `/docs`): `https://jackwallner.github.io/knit/`.
 - Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in the Projects tab's menu.
-- `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon.
+- `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py`, `asc-setup-lifetime-iap.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon.
 - Non-site docs go in `project-docs/<category>/`, because `docs/` is the published site.
 
 ---

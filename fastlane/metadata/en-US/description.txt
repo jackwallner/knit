@@ -16,7 +16,7 @@ Then follow it one row at a time. Each tap shows the next instruction and the st
 The library has hats, scarves, cowls, blankets, a dishcloth, handwarmers, leg warmers, a shawl and a top-down raglan pullover. The Garter Scarf and the Diagonal Dishcloth are free.
 
 RAVEL PATTERNS
-A subscription unlocks the whole library. Choose monthly or yearly, each with a free trial for new subscribers. The price is shown before you start, payment goes through your Apple Account, and you can cancel any time in Settings. A pattern you have already cast on stays in your projects.
+Ravel Patterns unlocks the whole library. Subscribe monthly or yearly, each with a free trial for new subscribers, or pay once for lifetime access. The price is shown before you start, payment goes through your Apple Account, and a subscription can be cancelled any time in Settings. A pattern you have already cast on stays in your projects.
 
 Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Privacy Policy: https://jackwallner.github.io/knit/privacy-policy.html

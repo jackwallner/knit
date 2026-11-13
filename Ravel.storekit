@@ -11,7 +11,23 @@
   },
   "identifier": "768D962F",
   "nonRenewingSubscriptions": [],
-  "products": [],
+  "products": [
+    {
+      "displayPrice": "79.99",
+      "familyShareable": false,
+      "internalID": "C7D8E9F0",
+      "localizations": [
+        {
+          "description": "Every pattern, for good. One payment.",
+          "displayName": "Patterns Lifetime",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.jackwallner.knit.lifetime",
+      "referenceName": "Ravel Patterns Lifetime",
+      "type": "NonConsumable"
+    }
+  ],
   "subscriptionGroups": [
     {
       "id": "D1552CB1",
