@@ -21,6 +21,7 @@ schemes:
       targets:
         Ravel: all
         RavelTests: [test]
+        RavelUITests: [test]
     run:
       config: Debug
       storeKitConfiguration: Ravel.storekit
@@ -28,6 +29,7 @@ schemes:
       config: Debug
       targets:
         - RavelTests
+        - RavelUITests
 targets:
   Ravel:
     type: application
@@ -53,9 +55,23 @@ targets:
     platform: iOS
     sources:
       - path: RavelTests
+      - path: Ravel.storekit
+        buildPhase: resources
     dependencies:
       - target: Ravel
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.knit.tests
         GENERATE_INFOPLIST_FILE: YES
+  RavelUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: RavelUITests
+    dependencies:
+      - target: Ravel
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.knit.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Ravel
