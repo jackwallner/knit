@@ -1,3 +1,4 @@
+import PhotosUI
 import StoreKit
 import SwiftData
 import SwiftUI
@@ -18,6 +19,10 @@ struct ProjectView: View {
     @State private var importFailed = false
     @State private var settingRepeat = false
     @State private var repeatText = ""
+    @State private var settingRow = false
+    @State private var rowText = ""
+    @State private var pickingPhotos = false
+    @State private var photos: [PhotosPickerItem] = []
 
     private var patternURL: URL? { project.patternFile.map(PatternStore.url(for:)) }
 
@@ -61,7 +66,9 @@ struct ProjectView: View {
         .toolbar(.hidden, for: .tabBar)
         .toolbar { ToolbarItem(placement: .primaryAction) { menu } }
         .sensoryFeedback(.impact(weight: .light), trigger: project.rows)
-        .fileImporter(isPresented: $importing, allowedContentTypes: [.pdf], onCompletion: attach)
+        .fileImporter(isPresented: $importing, allowedContentTypes: [.pdf, .image], onCompletion: attach)
+        .photosPicker(isPresented: $pickingPhotos, selection: $photos, maxSelectionCount: 20, matching: .images)
+        .onChange(of: photos) { _, picked in if !picked.isEmpty { attach(picked) } }
         .sheet(isPresented: $editing) { ProjectDetailsView(project: project) }
         .sheet(isPresented: $showingMaterials) { if let plan { MaterialsView(plan: plan) } }
         .onChange(of: project.isFinished) { _, finished in if finished { celebrate() } }
@@ -73,7 +80,12 @@ struct ProjectView: View {
             Button("Cancel", role: .cancel) {}
             Button("Set") { project.repeatLength = min(max(Int(repeatText) ?? 0, 0), 200) }
         }
-        .alert("That PDF could not be opened", isPresented: $importFailed) {}
+        .alert(plan == nil ? "Row" : "Row in This Section", isPresented: $settingRow) {
+            TextField("Row", text: $rowText).keyboardType(.numberPad)
+            Button("Cancel", role: .cancel) {}
+            Button("Set") { if let row = Int(rowText) { jump(to: row) } }
+        }
+        .alert("That pattern could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
@@ -84,6 +96,20 @@ struct ProjectView: View {
         guard project.rows < plan.totalTaps else { return }
         project.increment()
         if project.rows == plan.totalTaps, !project.isFinished { project.toggleFinished() }
+    }
+
+    /// Lands on a row without tapping up to it. In a library pattern the row is counted within the current section.
+    private func jump(to row: Int) {
+        guard let plan else { return project.setRows(row) }
+        guard let spot = plan.position(at: project.rows) else { return }
+        let start = project.rows - spot.row
+        project.setRows(start + min(max(row, 1), plan.steps[spot.step].rows) - 1)
+    }
+
+    private func back() {
+        project.decrement()
+        // Stepping back from the last row of a library pattern puts it on the needles again.
+        if let plan, project.isFinished, project.rows < plan.totalTaps { project.toggleFinished() }
     }
 
     /// A finished project is the moment to ask for a rating, once the screen has settled.
@@ -192,7 +218,15 @@ struct ProjectView: View {
     /// One dot per row of the repeat, filled up to the row just finished.
     @ViewBuilder
     private var repeatDots: some View {
-        if project.repeatLength > 1, project.repeatLength <= 24 {
+        if project.repeatLength > 24 {
+            Text("\(project.repeatPosition) of \(project.repeatLength)")
+                .font(.title3)
+                .monospacedDigit()
+                .foregroundStyle(.secondary)
+                .contentTransition(.numericText(value: Double(project.repeatPosition)))
+                .animation(.snappy, value: project.repeatPosition)
+                .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
+        } else if project.repeatLength > 1 {
             HStack(spacing: 6) {
                 ForEach(1...project.repeatLength, id: \.self) { row in
                     Circle()
@@ -209,7 +243,7 @@ struct ProjectView: View {
     @ViewBuilder
     private var undo: some View {
         if project.rows > 0 {
-            Button { project.decrement() } label: {
+            Button(action: back) {
                 Image(systemName: "arrow.uturn.backward")
                     .font(.title3.weight(.semibold))
                     .frame(width: 52, height: 52)
@@ -224,12 +258,24 @@ struct ProjectView: View {
     private var menu: some View {
         Menu {
             Button("Details", systemImage: "square.and.pencil") { editing = true }
-            if plan != nil {
+            if let plan {
                 Button("Materials", systemImage: "list.bullet") { showingMaterials = true }
+                if let spot = plan.position(at: project.rows), plan.steps[spot.step].rows > 1 {
+                    Button("Go to Row", systemImage: "number") {
+                        rowText = ""
+                        settingRow = true
+                    }
+                }
             } else {
                 Button(project.patternFile == nil ? "Add Pattern" : "Replace Pattern", systemImage: "doc") { importing = true }
-                if project.patternFile != nil {
+                if project.patternFile == nil {
+                    Button("Add Photos", systemImage: "photo") { pickingPhotos = true }
+                } else {
                     Button("Remove Pattern", systemImage: "trash") { setPattern(nil) }
+                }
+                Button("Set Row", systemImage: "number") {
+                    rowText = ""
+                    settingRow = true
                 }
                 Button("Repeat", systemImage: "repeat") {
                     repeatText = project.repeatLength > 0 ? String(project.repeatLength) : ""
@@ -251,6 +297,18 @@ struct ProjectView: View {
     private func attach(_ result: Result<URL, Error>) {
         guard case let .success(url) = result else { return }
         do { setPattern(try PatternStore.save(from: url)) } catch { importFailed = true }
+    }
+
+    /// Photos of a printed pattern become its pages, in the order they were picked.
+    private func attach(_ picked: [PhotosPickerItem]) {
+        photos = []
+        Task {
+            var pages: [UIImage] = []
+            for item in picked {
+                if let data = try? await item.loadTransferable(type: Data.self), let image = UIImage(data: data) { pages.append(image) }
+            }
+            do { setPattern(try PatternStore.save(pages: pages)) } catch { importFailed = true }
+        }
     }
 
     private func setPattern(_ file: String?) {

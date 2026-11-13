@@ -70,6 +70,7 @@ extension PatternPlan {
         ("M1", "Make 1: lift the bar between the stitches and knit it through the back"),
         ("M1L", "Make 1 left: lift the bar from the front and knit it through the back"),
         ("M1R", "Make 1 right: lift the bar from the back and knit it through the front"),
+        ("C6F", "Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle"),
     ]
 
     /// The abbreviations this pattern uses, spelled out.
@@ -123,8 +124,35 @@ enum Sizing {
         return max(10, Int((raw / 10).rounded(.up)) * 10)
     }
 
-    static func inches(_ value: Double) -> String {
+    /// A length, in the units this knitter measures in. Patterns are sized in inches underneath.
+    static func inches(_ value: Double, units: Units = .current) -> String {
+        if units == .metric {
+            let half = (value * 2.54 * 2).rounded() / 2
+            return half.formatted(.number.precision(.fractionLength(0...1))) + " cm"
+        }
         let quarter = (value * 4).rounded() / 4
         return quarter.formatted(.number.precision(.fractionLength(0...2))) + " in"
     }
+
+    /// A needle or cable length the way it is sold: 16 in, or 40 cm.
+    static func cable(_ inches: Int, units: Units = .current) -> String {
+        guard units == .metric else { return "\(inches) in" }
+        let centimeters = Double(inches) * 2.54
+        return "\(Int(inches < 12 ? centimeters.rounded() : (centimeters / 10).rounded() * 10)) cm"
+    }
+
+    static func yardage(_ yards: Int, units: Units = .current) -> String {
+        guard units == .metric else { return "\(yards.formatted()) yd" }
+        return "\((Int((Double(yards) * 0.9144 / 10).rounded(.up)) * 10).formatted()) m"
+    }
+
+    /// The span a gauge swatch is counted over.
+    static func swatch(units: Units = .current) -> String { units == .metric ? "10 cm" : "4 in" }
+}
+
+/// Inches and yards in the United States, centimeters and meters everywhere else.
+enum Units: Sendable {
+    case imperial, metric
+
+    static let current: Units = Locale.current.measurementSystem == .us ? .imperial : .metric
 }

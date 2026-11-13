@@ -60,6 +60,9 @@ final class Project {
 
     func decrement() { rows = max(0, rows - 1) }
 
+    /// Jumps straight to a row, for a project already under way when it was added.
+    func setRows(_ count: Int) { rows = min(max(count, 0), 99_999) }
+
     func toggleFinished(at date: Date = .now) { finishedAt = isFinished ? nil : date }
 }
 
@@ -137,7 +140,7 @@ final class Needle {
     var size: NeedleSize { NeedleSize.nearest(to: millimeters, hook: kind == .hook) }
 
     var detail: String {
-        lengthInches > 0 ? "\(kind.label) · \(lengthInches) in" : kind.label
+        lengthInches > 0 ? "\(kind.label) · \(Sizing.cable(lengthInches))" : kind.label
     }
 }
 

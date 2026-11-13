@@ -8,6 +8,7 @@ struct ProjectsView: View {
     @State private var path: [Project] = []
     @State private var naming = false
     @State private var name = ""
+    @State private var deleting: Project?
 
     private var active: [Project] { projects.filter { !$0.isFinished } }
     private var finished: [Project] { projects.filter(\.isFinished) }
@@ -63,6 +64,13 @@ struct ProjectsView: View {
                 }
             }
             #endif
+            .confirmationDialog(
+                "Delete \(deleting?.name ?? "")?",
+                isPresented: Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } }),
+                titleVisibility: .visible
+            ) {
+                Button("Delete Project", role: .destructive) { if let deleting { remove(deleting) } }
+            }
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name)
                 Button("Cancel", role: .cancel) { name = "" }
@@ -108,10 +116,15 @@ struct ProjectsView: View {
         }
         .onDelete { offsets in
             for project in offsets.map({ list[$0] }) {
-                PatternStore.delete(project.patternFile)
-                context.delete(project)
+                // A swipe must not throw away rows already knitted: ask first.
+                if project.rows > 0 || project.patternFile != nil { deleting = project } else { remove(project) }
             }
         }
+    }
+
+    private func remove(_ project: Project) {
+        PatternStore.delete(project.patternFile)
+        context.delete(project)
     }
 
     private func create() {

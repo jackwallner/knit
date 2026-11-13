@@ -1,4 +1,5 @@
 import SwiftData
+import PDFKit
 import XCTest
 @testable import Ravel
 
@@ -115,10 +116,33 @@ final class ModelTests: XCTestCase {
 
     func testPatternStoreSavesAndDeletes() throws {
         let source = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString + ".pdf")
-        try Data("%PDF-1.4".utf8).write(to: source)
+        try UIGraphicsPDFRenderer(bounds: CGRect(x: 0, y: 0, width: 200, height: 200)).pdfData { $0.beginPage() }.write(to: source)
         let file = try PatternStore.save(from: source)
         XCTAssertTrue(FileManager.default.fileExists(atPath: PatternStore.url(for: file).path))
         PatternStore.delete(file)
         XCTAssertFalse(FileManager.default.fileExists(atPath: PatternStore.url(for: file).path))
+    }
+
+    func testPatternStoreRefusesAFileThatIsNotAPattern() throws {
+        let source = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString + ".pdf")
+        try Data("%PDF-1.4".utf8).write(to: source)
+        XCTAssertThrowsError(try PatternStore.save(from: source))
+    }
+
+    func testPhotosBecomeOnePageEach() throws {
+        let photo = UIGraphicsImageRenderer(size: CGSize(width: 60, height: 80)).image { context in
+            UIColor.white.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 60, height: 80))
+        }
+        let file = try PatternStore.save(pages: [photo, photo, photo])
+        XCTAssertEqual(PDFDocument(url: PatternStore.url(for: file))?.pageCount, 3)
+        PatternStore.delete(file)
+
+        let picture = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString + ".png")
+        try XCTUnwrap(photo.pngData()).write(to: picture)
+        let single = try PatternStore.save(from: picture)
+        XCTAssertEqual(PDFDocument(url: PatternStore.url(for: single))?.pageCount, 1)
+        PatternStore.delete(single)
+        XCTAssertThrowsError(try PatternStore.save(pages: []))
     }
 }

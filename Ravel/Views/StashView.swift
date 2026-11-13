@@ -156,7 +156,7 @@ struct NeedleEditor: View {
                 if needle.kind == .circular {
                     Picker("Length", selection: $needle.lengthInches) {
                         Text("Any").tag(0)
-                        ForEach([9, 16, 24, 32, 40, 47, 60], id: \.self) { Text("\($0) in").tag($0) }
+                        ForEach([9, 16, 24, 32, 40, 47, 60], id: \.self) { Text(Sizing.cable($0)).tag($0) }
                     }
                 }
             }
