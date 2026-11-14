@@ -189,6 +189,20 @@ A second full review of the fixed tree at `807e184` by the same two seats, read-
 | R2-08 | P2 | `testCachedListWinsOverTheBundledOne` fails after 2026-12-15 | fixed | Gemini defect 2. The cached date is now a day before the test runs |
 | R2-09 | P3 | `StashView.draft` is written and never read | fixed | Gemini defect 3. Removed; a new yarn closed without a name is still dropped by `dropUnnamed` |
 
+## F: fleet parity pass (2026-11-14)
+
+Ravel checked against what every live fleet app carries. Found by looking at the shipped build on Jack's iPhone and by the release gate's first run, which no review round had.
+
+| ID | Sev | Title | Status | Note |
+|---|---|---|---|---|
+| F-01 | P0 | The app icon is a solid black square in builds 1 to 6 | fixed | `draw-icon.swift` drew into an alpha-less `NSBitmapImageRep`, which renders nothing. Rewritten on CoreGraphics; also writes the site icons. Build 7 |
+| F-02 | P1 | Paywall plan rows move 18 pt when Lifetime is picked | fixed | The disclosure under the button changed height. All disclosures are laid out and only the picked one shows. Gate `cta-jump`, ledger Q006 |
+| F-03 | P2 | Secondary text 3.6:1 on paper, "Finished" 1.9:1 | fixed | `Theme.secondary`, 6.3:1 light, 7.7:1 dark, darker with Increase Contrast |
+| F-04 | P2 | Restore, Terms, Privacy tap areas under 44 pt | fixed | 72 by 44 pt each |
+| F-05 | P1 | No release gate | fixed | `qa/gate.json`, `ReleaseJourneysUITests` (core loop survives relaunch, free pattern, paywall, PDF return visit, interruption, stash) |
+| F-06 | P1 | Store listing in en-US only; the fleet ships 50 locales | fixed | Native copy in 49 more, each non-English page says the app is English only. `project-docs/aso/2026-11-14-localized-listings.md`, `scripts/validate-metadata.py` |
+| F-07 | P2 | Landing page was a stub, no jackwallner.com mirror, no support alias | fixed | Fleet template page, `/ios/ravel/` mirror, `jackwallner+rv@gmail.com` |
+
 ## Judgements
 
 **G-01 (double count): refuted by SwiftUI semantics, believe Opus.** The fabric `onTapGesture` (ProjectView.swift:215) is on a descendant of the container `onTapGesture` (:64, :168). In SwiftUI the deeper view's tap takes the touch and the ancestor's does not also fire (that needs `simultaneousGesture`). Gemini's "in testing" has no evidence behind it. There is no UI test that taps the counter, so add one (tap `counter.plus` once, expect `counter.value` 1). Removing the inner gesture in counter and guided mode (Opus simplification 2) is optional hygiene.
