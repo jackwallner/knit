@@ -30,9 +30,10 @@ enum PatternStore {
 
     /// A picture at reading size and the right way up, as JPEG. A camera photo is far larger than a
     /// page needs, and twenty of them at full size would run the phone out of memory.
-    nonisolated static func page(from data: Data, longestSide: CGFloat = 2200) -> Data? {
+    /// The cut is by area, not by the long side, so a tall screenshot of a chart keeps a width that reads.
+    nonisolated static func page(from data: Data, pixels: CGFloat = 1650 * 2200) -> Data? {
         guard let image = UIImage(data: data), image.size.width > 0, image.size.height > 0 else { return nil }
-        let scale = min(1, longestSide / max(image.size.width, image.size.height))
+        let scale = min(1, (pixels / (image.size.width * image.size.height)).squareRoot())
         let size = CGSize(width: (image.size.width * scale).rounded(), height: (image.size.height * scale).rounded())
         let format = UIGraphicsImageRendererFormat()
         format.scale = 1

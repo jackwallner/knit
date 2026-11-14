@@ -33,7 +33,7 @@ final class TrendingTests: XCTestCase {
         defaults.removePersistentDomain(forName: "trending.tests")
         XCTAssertEqual(Trending(defaults: defaults, now: date(month: 11)).items, Trending.bundled(for: date(month: 11)))
         defaults.set(Data(#"{"items":[{"design":"seedCowl","tag":"Hot"}]}"#.utf8), forKey: "trending.list")
-        defaults.set(date(month: 11), forKey: "trending.fetched")
+        defaults.set(Date.now.addingTimeInterval(-86_400), forKey: "trending.fetched")
         XCTAssertEqual(Trending(defaults: defaults).items, [Trend(design: .seedCowl, tag: "Hot")])
         defaults.removePersistentDomain(forName: "trending.tests")
     }

@@ -7,8 +7,6 @@ struct StashView: View {
     @Query(sort: \Needle.millimeters) private var needles: [Needle]
     @State private var editingYarn: Yarn?
     @State private var editingNeedle: Needle?
-    /// The yarn just added, until it has a name.
-    @State private var draft: Yarn?
     /// The yarn whose editor is open and the name it had, put back if the editor closes with the name cleared.
     @State private var opened: Yarn?
     @State private var nameBefore = ""
@@ -102,7 +100,6 @@ struct StashView: View {
     private func addYarn() {
         let yarn = Yarn(name: "")
         context.insert(yarn)
-        draft = yarn
         opened = nil
         editingYarn = yarn
     }
@@ -116,7 +113,6 @@ struct StashView: View {
     /// A new yarn closed without a name was never really added. A yarn already in the stash keeps its name.
     private func dropUnnamed() {
         defer {
-            draft = nil
             opened = nil
             try? context.save()
         }

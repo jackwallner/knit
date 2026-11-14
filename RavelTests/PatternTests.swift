@@ -76,6 +76,23 @@ final class PatternTests: XCTestCase {
         }
     }
 
+    /// A hat too small for a 16 in circular is on the short needles from the cast on, so it is never told to change to them.
+    func testASmallHatIsNeverToldToChangeNeedles() {
+        var small = 0
+        for style in [Engines.HatStyle.ribbed, .slouch, .rolled] {
+            for head in stride(from: 13.0, through: 24.0, by: 1) {
+                for weight in YarnWeight.allCases {
+                    let plan = Engines.hat(style, head: head, gauge: weight.gauge)
+                    let changes = plan.steps.contains { $0.texts.contains { $0.contains("Change to double-pointed") } }
+                    let circular = plan.materials.contains { $0.contains("circular needle") }
+                    if !circular { small += 1 }
+                    XCTAssertEqual(changes, circular, "\(style) head \(head) \(weight)")
+                }
+            }
+        }
+        XCTAssertGreaterThan(small, 0)
+    }
+
     func testHatFitsTheHead() {
         let plan = Engines.hat(.ribbed, head: 22, gauge: Gauge(stitches: 18, rows: 24))
         XCTAssertEqual(plan.steps[0].stitches, 88)

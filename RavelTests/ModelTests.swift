@@ -97,6 +97,9 @@ final class ModelTests: XCTestCase {
         project.toggleFinished()
         project.knit(following: nil)
         XCTAssertEqual(project.rows, 40)
+        // Undo least of all: the count would drop a row and the counter would not give it back.
+        project.unknit(following: nil)
+        XCTAssertEqual(project.rows, 40)
         // Resetting it puts it back on the needles, so the counter is never left dead.
         project.resetCount(following: nil)
         XCTAssertFalse(project.isFinished)
@@ -177,6 +180,35 @@ final class ModelTests: XCTestCase {
         XCTAssertGreaterThan(try brightness(of: drawn, down: 0.9).green, 0.9, "the foot of the page is white")
         let banded = try brightness(of: drawn, down: 1 - 308.0 / 816)
         XCTAssertGreaterThan(banded.red - banded.green, 0.1, "the band tints the photo")
+        // Every page after the first is the right way up too.
+        let last = try XCTUnwrap(document.page(at: 2)).thumbnail(of: CGSize(width: 612, height: 816), for: .mediaBox)
+        XCTAssertLessThan(try brightness(of: last, down: 0.1).green, 0.2, "the dark head is at the top of the last page")
+        XCTAssertGreaterThan(try brightness(of: last, down: 0.9).green, 0.9)
+    }
+
+    /// A long screenshot of a chart is cut by area, so it stays wide enough to read.
+    func testATallScreenshotKeepsAReadableWidth() throws {
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        let tall = UIGraphicsImageRenderer(size: CGSize(width: 1170, height: 12_000), format: format).image { context in
+            UIColor.white.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 1170, height: 12_000))
+        }
+        let data = try XCTUnwrap(PatternStore.page(from: try XCTUnwrap(tall.jpegData(compressionQuality: 0.5))))
+        let page = try XCTUnwrap(UIImage(data: data))
+        let width = page.size.width * page.scale, height = page.size.height * page.scale
+        XCTAssertGreaterThan(width, 560)
+        XCTAssertLessThanOrEqual(width * height, 1650 * 2200 * 1.01)
+    }
+
+    /// The numbers down the fabric count from where a repeat began, as the repeat dots do.
+    func testFabricNumbersCountFromTheStartOfTheRepeat() {
+        XCTAssertTrue(Fabric.tagged(20, every: 10, from: 0))
+        XCTAssertFalse(Fabric.tagged(25, every: 10, from: 0))
+        XCTAssertTrue(Fabric.tagged(50, every: 6, from: 44))
+        XCTAssertFalse(Fabric.tagged(48, every: 6, from: 44))
+        XCTAssertFalse(Fabric.tagged(44, every: 6, from: 44))
+        XCTAssertFalse(Fabric.tagged(12, every: 0, from: 0))
     }
 
     /// The color at the middle of an image, a share of the way down from its top.

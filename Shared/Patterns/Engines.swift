@@ -67,13 +67,14 @@ enum Engines {
         if style == .slouch { b.row(spread(body - brim, over: brim), stitches: body) }
         b.work(["Knit"], rows: bodyRounds, stitches: body)
         b.section = "Crown"
-        for round in switching(crown, g) { b.row(round.text, stitches: round.stitches) }
+        // A small hat does not reach around a 16 in circular, so it is knit on the short needles throughout.
+        let small = Double(brim) / g.spi < 16
+        for round in small ? crown : switching(crown, g) { b.row(round.text, stitches: round.stitches) }
         b.section = "Finishing"
         b.action("Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.")
 
         let yards = Sizing.yards(squareInches: Double(body) / g.spi * height, spi: g.spi)
-        // A small hat does not reach around a 16 in circular, so it is knit on the short needles throughout.
-        let needles = Double(brim) / g.spi < 16
+        let needles = small
             ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop"]
             : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "Double-pointed needles in the same size for the crown"]
         return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: fits(brim, g, "head", head), gauge: g)

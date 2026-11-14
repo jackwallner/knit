@@ -8,6 +8,8 @@ struct Fabric: View, Animatable {
     var yarn: YarnColor
     /// A row number is tagged on the edge every this many rows. 0 turns tags off.
     var markEvery = 10
+    /// The row a repeat started after: the tags count from there, as the repeat dots do.
+    var markFrom = 0
     var stitch: CGFloat = 24
     var showsNeedle = true
 
@@ -17,14 +19,19 @@ struct Fabric: View, Animatable {
     }
 
     var body: some View {
-        let rows = max(0, rows), yarn = yarn, markEvery = markEvery, stitch = stitch, showsNeedle = showsNeedle
+        let rows = max(0, rows), yarn = yarn, markEvery = markEvery, markFrom = markFrom, stitch = stitch, showsNeedle = showsNeedle
         Canvas { context, size in
-            Self.draw(&context, size: size, rows: rows, yarn: yarn, markEvery: markEvery, w: stitch, needle: showsNeedle)
+            Self.draw(&context, size: size, rows: rows, yarn: yarn, markEvery: markEvery, markFrom: markFrom, w: stitch, needle: showsNeedle)
         }
         .accessibilityHidden(true)
     }
 
-    nonisolated private static func draw(_ context: inout GraphicsContext, size: CGSize, rows: Double, yarn: YarnColor, markEvery: Int, w: CGFloat, needle: Bool) {
+    /// Whether a row carries a number: every `every` rows, counted from the row a repeat started after.
+    nonisolated static func tagged(_ row: Int, every: Int, from start: Int) -> Bool {
+        every > 0 && row > start && (row - start) % every == 0
+    }
+
+    nonisolated private static func draw(_ context: inout GraphicsContext, size: CGSize, rows: Double, yarn: YarnColor, markEvery: Int, markFrom: Int, w: CGFloat, needle: Bool) {
         let h = w * 0.8
         let top: CGFloat = needle ? 26 : 0
         let columns = Int((size.width / w).rounded(.up)) + 1
@@ -64,7 +71,7 @@ struct Fabric: View, Animatable {
             cloth.stroke(right, with: .color(yarn.shade), style: edge)
             cloth.stroke(right, with: .color(yarn.lowlight), style: strand)
             let number = newest - index
-            if markEvery > 0, number % markEvery == 0 { tags.append((number, y)) }
+            if tagged(number, every: markEvery, from: markFrom) { tags.append((number, y)) }
             index += 1
         }
 

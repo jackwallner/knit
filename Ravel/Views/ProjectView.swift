@@ -195,6 +195,7 @@ struct ProjectView: View {
                     .monospacedDigit()
                     .foregroundStyle(.secondary)
                     .contentTransition(.numericText(value: Double(spot.row)))
+                    .accessibilityIdentifier("guide.detail")
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .animation(.snappy, value: project.rows)
@@ -208,7 +209,7 @@ struct ProjectView: View {
     /// The needle and the fabric hanging from it. Tapping it knits a row.
     /// `taps`: the PDF strip counts its own taps. Elsewhere the whole screen does, so the fabric must not count too.
     private func work(height: CGFloat?, tags: Bool, rows: Int? = nil, taps: Bool = false) -> some View {
-        Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10)
+        Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10, markFrom: plan == nil ? project.repeatStart : 0)
             .animation(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)
@@ -278,7 +279,7 @@ struct ProjectView: View {
             .foregroundStyle(.secondary)
     }
 
-    /// Stays in place at row 0, unseen but still a button, so a second quick tap is taken here and
+    /// Stays in place with nothing to take back, unseen but still a button, so a second quick tap is taken here and
     /// cannot fall through to the fabric and knit a row. The touch area runs past the circle for the
     /// same reason: a near miss with yarn in hand must not count.
     private var undo: some View {
@@ -288,15 +289,18 @@ struct ProjectView: View {
                 .frame(width: 52, height: 52)
                 .background(.regularMaterial, in: Circle())
                 // Faded here, inside the touch area: a view at zero opacity takes no taps, the area around it still does.
-                .opacity(project.rows == 0 ? 0 : 1)
+                .opacity(canUndo ? 1 : 0)
                 .padding(12)
                 .contentShape(Rectangle())
         }
         .accessibilityLabel("Back one row")
         .accessibilityIdentifier("counter.minus")
-        .animation(.snappy, value: project.rows == 0)
-        .accessibilityHidden(project.rows == 0)
+        .animation(.snappy, value: canUndo)
+        .accessibilityHidden(!canUndo)
     }
+
+    /// Nothing to take back at row 0, or on a finished project with no pattern, which no longer counts.
+    private var canUndo: Bool { project.rows > 0 && (plan != nil || !project.isFinished) }
 
     private var menu: some View {
         Menu {
@@ -315,12 +319,16 @@ struct ProjectView: View {
                     }
                 }
             } else {
-                Button(project.patternFile == nil ? "Add Pattern" : "Replace Pattern", systemImage: "doc") { importing = true }
-                if project.patternFile == nil {
-                    Button("Add Photos", systemImage: "photo") { pickingPhotos = true }
-                } else {
-                    Button("Remove Pattern", systemImage: "trash", role: .destructive) { confirmingRemove = true }
+                // One import at a time: a second would race the first for the project's pattern.
+                Group {
+                    Button(project.patternFile == nil ? "Add Pattern" : "Replace Pattern", systemImage: "doc") { importing = true }
+                    if project.patternFile == nil {
+                        Button("Add Photos", systemImage: "photo") { pickingPhotos = true }
+                    } else {
+                        Button("Remove Pattern", systemImage: "trash", role: .destructive) { confirmingRemove = true }
+                    }
                 }
+                .disabled(bindingPhotos)
                 Button("Set Row", systemImage: "number") {
                     rowText = ""
                     settingRow = true
@@ -348,7 +356,17 @@ struct ProjectView: View {
 
     private func attach(_ result: Result<URL, Error>) {
         guard case let .success(url) = result else { return }
-        do { setPattern(try PatternStore.save(from: url)) } catch { importFailed = true }
+        bindingPhotos = true
+        Task {
+            defer { bindingPhotos = false }
+            // A picture is cut to reading size on the way in, which is too slow for the main thread.
+            guard let file = await Task.detached(operation: { try? PatternStore.save(from: url) }).value else {
+                importFailed = true
+                return
+            }
+            guard project.modelContext != nil, !project.isDeleted else { return PatternStore.delete(file) }
+            setPattern(file)
+        }
     }
 
     /// Photos of a printed pattern become its pages, in the order they were picked.

@@ -98,7 +98,9 @@ extension Project {
     }
 
     /// Takes the last row back. Stepping back from the end of a library pattern puts it on the needles again.
+    /// A finished project with no pattern is a record, and stays as it is until it is marked active.
     func unknit(following plan: PatternPlan?) {
+        guard plan != nil || !isFinished else { return }
         decrement()
         reopenIfUnfinished(plan)
         persist()
