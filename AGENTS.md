@@ -23,9 +23,9 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 ## Rules that hold everywhere
 - The tracker stays free: projects, row counter, your own PDFs and stash never go behind the paywall, never need an account and never need a network. The closest competitor (Knit&Note) sank to 3.9 stars by paywalling exactly these.
 - Only the pattern library is paid, billed through Apple, with the price on the paywall before anything else. `Design.isFree` marks the two free designs.
-- A row count must never be lost. Counts write straight to the SwiftData model; do not add a sync layer that can drop them.
-- A library project keeps its own frozen copy of the plan (`Project.planData`), so an engine change or a lapsed subscription never alters or removes a pattern someone has cast on.
-- Every engine change must keep `PatternTests` green: they run every design at every size and yarn weight and check that stitch counts carry from step to step.
+- A row count must never be lost. Every change to a count goes through the counter rules in the `Project` extension (`knit`, `unknit`, `jump`, `resetCount`), which end in `persist()`, a save to disk; never change `rows` from a view. Do not add a sync layer that can drop counts. A store that will not open shows `StoreUnavailableView` and is left alone; never fall back to an in-memory store.
+- A library project keeps its own frozen copy of the plan (`Project.planData`), so an engine change or a lapsed subscription never alters or removes a pattern someone has cast on. A plan saved by any shipped version must keep decoding: read every key added to `Step` or `PatternPlan` after 1.0 with `decodeIfPresent` in their `init(from:)` (`testPlanSavedByVersionOneStillOpens`).
+- Every engine change must keep `PatternTests` green: they run every design at every size and yarn weight and check that stitch counts carry from step to step. Engines close with `Engines.pattern`, which never states less yarn than the written rows use plus 15 percent. Body measurements are the wearer's; the pullover adds `Design.sweaterEase`. Flat sections worked inside a piece in the round must end with the right side facing.
 - Patterns carry no designer name. Never add invented people, bylines or bios to the library or the store listing.
 - `Project.patternFile` is a file name, never a full path (the container path changes between installs).
 - `Purchases.configure` never runs on a simulator. Use `-MockProducts`, `-Pro` or `SubscriptionService.shared.setLocalOverride(isPro:)`.
@@ -42,9 +42,9 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 
 ## App-specific notes
 - Store name: "Ravel: Knitting Patterns". Metadata in `fastlane/metadata/en-US`. Site (GitHub Pages, `/docs`): `https://jackwallner.github.io/knit/`.
-- Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in the Projects tab's menu.
+- Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, or back at the project list after a visit of 20 or more rows, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in the Projects tab's menu.
 - `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py`, `asc-setup-lifetime-iap.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon.
-- Non-site docs go in `project-docs/<category>/`, because `docs/` is the published site.
+- Non-site docs go in `project-docs/<category>/`, because `docs/` is the published site. The 2026-11-13 pre-release audit and its findings ledger are in `project-docs/audit/`.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, ratings ask, gotchas):

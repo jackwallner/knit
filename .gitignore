@@ -8,3 +8,5 @@ DerivedData/
 .swiftpm/
 fastlane/report.xml
 fastlane/README.md
+# Names a handle that is not registered yet; the repo is public.
+project-docs/audit/raw/tiktok-warmup.md
