@@ -1,0 +1,27 @@
+Chạm một lần cho mỗi hàng, tấm vải đan trên màn hình sẽ lớn lên cùng tấm vải trên kim của bạn. Bộ đếm hàng, mẫu PDF của riêng bạn và kho len đều miễn phí, hoạt động ngoại tuyến và không cần tài khoản.
+
+Thêm thư viện mẫu của Ravel, mỗi thiết kế sẽ được viết theo số đo và mật độ đan của bạn, rồi đan theo từng hàng một.
+
+MIỄN PHÍ MÃI MÃI
+• Dự án: mỗi sản phẩm trên kim của bạn, mỗi sản phẩm một màu len riêng
+• Bộ đếm hàng: chạm vào bất kỳ đâu để thêm một hàng, chạm một lần nữa để hoàn tác. Số hàng được lưu ngay khi bạn chạm. Đang đan dở? Hãy đặt hàng bạn đang đan
+• Lặp mẫu: đặt số hàng trong một đoạn lặp và xem bạn đang ở đâu trong đó
+• Mẫu của riêng bạn: thêm tệp PDF hoặc ảnh chụp mẫu in, chạm vào một dòng để đánh dấu vị trí và đếm hàng mà không rời khỏi trang
+• Kho: len theo độ dày và số cuộn, cùng kim đan và kim móc theo cỡ Mỹ và hệ mét
+• Móc len: bộ đếm hàng và kho cũng dùng được cho hàng móc và kim móc. Thư viện mẫu dành cho đan len
+
+MẪU THEO SỐ ĐO CỦA BẠN
+Chọn một thiết kế, nhập số đo và mật độ đan, Ravel sẽ viết mẫu vừa với bạn. Mỗi bước lên mũi, tăng mũi và giảm mũi đều được tính từ số liệu của bạn, và mọi thiết kế được kiểm tra ở mọi cỡ để số mũi khớp nhau, từ mũ em bé đến áo chui đầu cỡ 5X.
+
+Sau đó đan theo từng hàng một. Mỗi lần chạm hiện bước tiếp theo và số mũi bạn cần có trên kim. Nhảy tới bất kỳ phần nào khi bạn quay lại với sản phẩm.
+
+Thư viện có mũ, mũ trùm đầu, khăn quàng, khăn ống, băng đô đan xoắn, chăn, khăn lau chén, đồ ủ ấm tay, đồ ủ ấm chân, khăn choàng tam giác và áo chui đầu tay raglan đan từ trên xuống. Kệ Trending mở đầu bằng các thiết kế mới và những mẫu hợp mùa. Garter Scarf (khăn quàng đan mũi cơ bản mọi hàng) và Diagonal Dishcloth (khăn lau chén đan chéo) miễn phí.
+
+NGÔN NGỮ VÀ ĐƠN VỊ
+Ứng dụng và mọi mẫu chỉ có tiếng Anh. Ngoài Hoa Kỳ, độ dài hiển thị bằng xentimét (cm) và mét (m).
+
+RAVEL PATTERNS
+Ravel Patterns mở khóa toàn bộ thư viện. Đăng ký theo tháng hoặc theo năm, cả hai đều có 7 ngày dùng thử miễn phí cho người đăng ký mới, hoặc trả một lần để dùng trọn đời. Giá tại khu vực của bạn được hiển thị trước khi bạn bắt đầu. Khoản thanh toán được tính vào tài khoản Apple của bạn khi xác nhận mua. Gói đăng ký tự động gia hạn cho đến khi bạn hủy, ít nhất 24 giờ trước khi kết thúc kỳ, trong Cài đặt. Một mẫu bạn đã bắt đầu vẫn nằm trong các dự án của bạn.
+
+Điều khoản sử dụng: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://jackwallner.github.io/knit/privacy-policy.html

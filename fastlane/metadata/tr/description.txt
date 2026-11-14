@@ -1,0 +1,27 @@
+Her sıra için bir kez dokunun, ekrandaki örgü kumaş şişlerinizdeki örgüyle birlikte büyüsün. Sıra sayacı, kendi PDF modelleriniz ve iplik stokunuz ücretsizdir, çevrimdışı çalışır ve hesap gerektirmez.
+
+Ravel model kütüphanesini ekleyin; her tasarım ölçülerinize ve örgü sıklığınıza göre yazılsın, sonra sıra sıra takip edilsin.
+
+HER ZAMAN ÜCRETSİZ
+• Projeler: şişlerinizdeki her parça, her biri kendi iplik renginde
+• Sıra sayacı: sıra eklemek için herhangi bir yere dokunun, tek dokunuşla geri alın. Sayı dokunduğunuz anda kaydedilir. İşin ortasında mısınız? Bulunduğunuz sırayı ayarlayın
+• Tekrarlar: bir tekrardaki sıra sayısını belirleyin ve tekrarın neresinde olduğunuzu görün
+• Kendi modelleriniz: basılı bir modelin PDF dosyasını veya fotoğraflarını ekleyin, yerinizi işaretlemek için bir satıra dokunun ve sayfadan çıkmadan sıraları sayın
+• Stok: kalınlığa ve yumak sayısına göre iplik, ayrıca Amerikan ve metrik ölçülerde şişler ve tığlar
+• Tığ işi: sıra sayacı ve stok, tığ işi sıraları ve tığlar için de çalışır. Model kütüphanesi örgü içindir
+
+ÖLÇÜNÜZE GÖRE MODELLER
+Bir tasarım seçin, ölçülerinizi ve örgü sıklığınızı girin; Ravel modeli size uyacak şekilde yazar. Her ilmek atma, artırma ve azaltma sayılarınızdan hesaplanır ve her tasarım her bedende kontrol edilir, böylece ilmek sayıları tutar; bebek bereden 5X kazağa kadar.
+
+Sonra sıra sıra ilerleyin. Her dokunuş bir sonraki talimatı ve şişte olması gereken ilmek sayısını gösterir. İşinize geri döndüğünüzde istediğiniz bölüme atlayın.
+
+Kütüphanede bereler, bir balaklava, atkılar, boyunluklar, örgü desenli bir saç bandı, battaniyeler, bir bulaşık bezi, el ısıtıcılar, bacak ısıtıcılar, üçgen bir şal ve yukarıdan aşağıya örülen bir reglan kazak var. Trending rafı yeni tasarımlarla ve mevsime uyanlarla başlar. Garter Scarf (düz örgü atkı) ve Diagonal Dishcloth (çapraz bulaşık bezi) ücretsizdir.
+
+DİL VE ÖLÇÜ BİRİMLERİ
+Uygulama ve tüm modeller yalnızca İngilizcedir. ABD dışında uzunluklar santimetre (cm) ve metre (m) olarak gösterilir.
+
+RAVEL PATTERNS
+Ravel Patterns tüm kütüphanenin kilidini açar. Aylık veya yıllık abone olun, ikisinde de yeni aboneler için 7 gün ücretsiz deneme vardır; ya da bir kez ödeyip ömür boyu erişin. Bölgenizdeki fiyat başlamadan önce gösterilir. Ödeme, satın alma onayında Apple Hesabınızdan tahsil edilir. Abonelik, dönem bitmeden en az 24 saat önce Ayarlar'dan iptal edene kadar yenilenir. Zaten başladığınız bir model projelerinizde kalır.
+
+Kullanım Koşulları: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://jackwallner.github.io/knit/privacy-policy.html
