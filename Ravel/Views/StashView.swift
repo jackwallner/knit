@@ -75,21 +75,21 @@ struct StashView: View {
     }
 
     private func header(_ title: String) -> some View {
-        Text(title).font(.subheadline.weight(.semibold)).foregroundStyle(.secondary).textCase(nil)
+        Text(title).font(.subheadline.weight(.semibold)).foregroundStyle(Theme.secondary).textCase(nil)
     }
 
     private func row(title: String, detail: String, count: Int?, countLabel: String) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(Theme.display(19)).foregroundStyle(.primary)
-                Text(detail).font(.subheadline).foregroundStyle(.secondary)
+                Text(detail).font(.subheadline).foregroundStyle(Theme.secondary)
             }
             Spacer()
             if let count {
                 Text(count, format: .number)
                     .font(Theme.display(19, weight: .regular))
                     .monospacedDigit()
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.secondary)
                     .accessibilityLabel(countLabel)
             }
         }

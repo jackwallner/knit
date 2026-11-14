@@ -181,7 +181,7 @@ struct ProjectView: View {
                     .font(.footnote.weight(.semibold))
                     .textCase(.uppercase)
                     .tracking(1.4)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.secondary)
                 let text = step.text(at: spot.row)
                 // A long row, such as a sweater's divide, sets smaller so it stays whole at large text sizes.
                 // The star stays on the line with "repeat from", never alone at the start of the next.
@@ -193,7 +193,7 @@ struct ProjectView: View {
                 Text(detail)
                     .font(.subheadline)
                     .monospacedDigit()
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.secondary)
                     .contentTransition(.numericText(value: Double(spot.row)))
                     .accessibilityIdentifier("guide.detail")
             }
@@ -255,7 +255,7 @@ struct ProjectView: View {
             Text("\(project.repeatPosition) of \(project.repeatLength)")
                 .font(.title3)
                 .monospacedDigit()
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.secondary)
                 .contentTransition(.numericText(value: Double(project.repeatPosition)))
                 .animation(.snappy, value: project.repeatPosition)
                 .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
@@ -276,7 +276,7 @@ struct ProjectView: View {
     private var finishedMark: some View {
         Label("Finished", systemImage: "checkmark")
             .font(.title3)
-            .foregroundStyle(.secondary)
+            .foregroundStyle(Theme.secondary)
     }
 
     /// Stays in place with nothing to take back, unseen but still a button, so a second quick tap is taken here and
@@ -459,7 +459,7 @@ struct MaterialsView: View {
                         ForEach(plan.abbreviations, id: \.term) { entry in
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(entry.term).font(.headline)
-                                Text(entry.meaning).foregroundStyle(.secondary)
+                                Text(entry.meaning).foregroundStyle(Theme.secondary)
                             }
                         }
                     }

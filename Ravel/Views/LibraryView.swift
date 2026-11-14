@@ -78,7 +78,7 @@ struct LibraryView: View {
                     .multilineTextAlignment(.leading)
                 Text(note)
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Theme.secondary)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -114,7 +114,7 @@ struct DesignView: View {
                     Text("\(design.level.rawValue) · \(Sizing.yardage(plan.yards))")
                         .font(.subheadline)
                         .monospacedDigit()
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.secondary)
                         .contentTransition(.numericText(value: Double(plan.yards)))
                         .animation(.snappy, value: plan.yards)
                 }

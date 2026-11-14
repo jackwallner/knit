@@ -1,0 +1,18 @@
+{
+  "project": "Ravel.xcodeproj",
+  "scheme": "Ravel",
+  "uitests_dir": "RavelUITests",
+  "journeys": [
+    "RavelUITests/ReleaseJourneysUITests"
+  ],
+  "personas": [
+    "newcomer",
+    "accessibility",
+    "reduce-motion",
+    "german",
+    "duo"
+  ],
+  "persona_overrides": {},
+  "slot": null,
+  "unit_scheme": "Ravel"
+}

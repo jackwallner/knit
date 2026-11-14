@@ -4,6 +4,14 @@ import UIKit
 enum Theme {
     /// Warm paper behind everything.
     static let paper = Color(uiColor: UIColor { $0.userInterfaceStyle == .dark ? UIColor(red: 0.075, green: 0.07, blue: 0.065, alpha: 1) : UIColor(red: 0.975, green: 0.96, blue: 0.935, alpha: 1) })
+    /// Quieter text that still reads at 4.5:1 or better on paper, darker again with Increase Contrast.
+    static let secondary = Color(uiColor: UIColor { traits in
+        let high = traits.accessibilityContrast == .high
+        if traits.userInterfaceStyle == .dark {
+            return high ? UIColor(red: 0.80, green: 0.78, blue: 0.75, alpha: 1) : UIColor(red: 0.67, green: 0.65, blue: 0.62, alpha: 1)
+        }
+        return high ? UIColor(red: 0.25, green: 0.23, blue: 0.21, alpha: 1) : UIColor(red: 0.37, green: 0.35, blue: 0.32, alpha: 1)
+    })
     /// Text on top of the ink-colored accent.
     static let onAccent = Color(uiColor: UIColor { $0.userInterfaceStyle == .dark ? UIColor(red: 0.075, green: 0.07, blue: 0.065, alpha: 1) : UIColor(red: 0.975, green: 0.96, blue: 0.935, alpha: 1) })
 

@@ -25,7 +25,7 @@ struct ProjectsView: View {
                     Section {
                         rows(finished)
                     } header: {
-                        Text("Finished").font(.subheadline.weight(.semibold)).foregroundStyle(.secondary).textCase(nil)
+                        Text("Finished").font(.subheadline.weight(.semibold)).foregroundStyle(Theme.secondary).textCase(nil)
                     }
                 }
             }
@@ -112,7 +112,7 @@ struct ProjectsView: View {
                     Text(project.rows, format: .number)
                         .font(Theme.display(20, weight: .regular))
                         .monospacedDigit()
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.secondary)
                         .accessibilityLabel("Row \(project.rows)")
                 }
                 .padding(.vertical, 6)

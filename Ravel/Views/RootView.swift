@@ -41,7 +41,7 @@ struct StoreUnavailableView: View {
                 .font(Theme.display(26, weight: .semibold))
                 .multilineTextAlignment(.center)
             Text("They are still on this iPhone. Restart it, then open Ravel again.")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.secondary)
                 .multilineTextAlignment(.center)
             Button("Get Help") { openURL(Links.support) }
                 .frame(minHeight: 44)

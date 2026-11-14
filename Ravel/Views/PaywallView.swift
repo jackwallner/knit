@@ -20,7 +20,7 @@ struct PaywallView: View {
                 Button { dismiss() } label: {
                     Image(systemName: "xmark")
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Theme.secondary)
                         .frame(width: 44, height: 44)
                 }
                 .accessibilityLabel("Close")
@@ -70,7 +70,7 @@ struct PaywallView: View {
                 .accessibilityAddTraits(.isHeader)
             Text("Every pattern, written to your size and your yarn, one row at a time.")
                 .font(.body)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Theme.secondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -128,11 +128,20 @@ struct PaywallView: View {
                 .padding(.top, 8)
                 .accessibilityIdentifier("paywall.buy")
 
-                Text(offer.disclosure)
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+                // Every plan's terms are laid out, so the tallest holds the space and
+                // picking a plan never moves the rows above.
+                ZStack {
+                    ForEach(subscription.offers) { option in
+                        let isOn = option.id == offer.id
+                        Text(option.disclosure)
+                            .font(.footnote)
+                            .foregroundStyle(Theme.secondary)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .opacity(isOn ? 1 : 0)
+                            .accessibilityHidden(!isOn)
+                    }
+                }
             }
             footer
         }
@@ -158,14 +167,23 @@ struct PaywallView: View {
     }
 
     private var footer: some View {
-        HStack(spacing: 20) {
-            Button("Restore") { restore() }
-            Button("Terms") { openURL(Links.terms) }
-            Button("Privacy") { openURL(Links.privacy) }
+        HStack(spacing: 8) {
+            link("Restore") { restore() }
+            link("Terms") { openURL(Links.terms) }
+            link("Privacy") { openURL(Links.privacy) }
         }
         .font(.footnote)
-        .foregroundStyle(.secondary)
+        .foregroundStyle(Theme.secondary)
         .frame(minHeight: 44)
+    }
+
+    /// A footer link whose tap area is a full 44 points tall and wide.
+    private func link(_ title: LocalizedStringKey, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(title)
+                .frame(minWidth: 72, minHeight: 44)
+                .contentShape(Rectangle())
+        }
     }
 
     private func buy(_ offer: Offer) {
