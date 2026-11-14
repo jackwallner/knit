@@ -173,6 +173,22 @@ All twelve are the owner's call (accounts, phone, filming, posting are owner-onl
 | V-10 | P3 | Go to Section lists duplicate names | fixed | Second handwarmer section is "Upper Hand" |
 | V-11 | P3 | Copy nits in gauge line and materials | fixed | "over 4 in of stockinette"; small hats list one set of needles |
 
+## R2: council round 2 (2026-11-13, fixed 2026-11-14)
+
+A second full review of the fixed tree at `807e184` by the same two seats, read-only. Scores out of 10: Opus 7 then 7, Gemini 4.5 then 8.5. Two providers (Anthropic and Google); the Codex seats were out of usage. Nothing at P0 or P1. Reports: `raw/council-opus-round2.md`, `raw/council-gemini-round2.md`. Both seats name the device sandbox purchase (C-04) as the most important thing left.
+
+| ID | Sev | Title | Status | Note |
+|---|---|---|---|---|
+| R2-01 | P2 | Undo on a finished project with no pattern drops a row the counter will not give back | fixed | `unknit` leaves a finished plain project alone and the undo button hides there (`canUndo`). `testCounterRulesForAPlainProject`. Gemini defect 1 is the same fault |
+| R2-02 | P3 | Fabric row numbers count from row 0, the repeat dots from where the repeat began | fixed | `Fabric.tagged(_:every:from:)` counts from `repeatStart`. `testFabricNumbersCountFromTheStartOfTheRepeat` |
+| R2-03 | P3 | A long screenshot is cut to 2,200 px on its long side and cannot be read | fixed | `PatternStore.page(from:pixels:)` cuts by area; a camera photo comes out the same size as before. `testATallScreenshotKeepsAReadableWidth` |
+| R2-04 | P3 | A small hat lists short needles only, then is told to change to them at the crown | fixed | The note is written only for a hat that starts on a 16 in circular. `testASmallHatIsNeverToldToChangeNeedles`, every style, head and yarn weight |
+| R2-05 | P3 | A picture from Files is shrunk on the main thread | fixed | Same path as photos: off the main actor, spinner up, and the project is checked before the pattern is attached |
+| R2-06 | P3 | A second import can start while the first is binding | fixed | Add Pattern, Add Photos, Replace and Remove are disabled while an import runs |
+| R2-07 | P3 | Counter UI test taps by share of the screen and covers one mode | fixed | Taps are in points from the window, undo is found from its own frame, and guided and PDF modes each have a one tap is one row test. The photo test checks the last page is upright |
+| R2-08 | P2 | `testCachedListWinsOverTheBundledOne` fails after 2026-12-15 | fixed | Gemini defect 2. The cached date is now a day before the test runs |
+| R2-09 | P3 | `StashView.draft` is written and never read | fixed | Gemini defect 3. Removed; a new yarn closed without a name is still dropped by `dropUnnamed` |
+
 ## Judgements
 
 **G-01 (double count): refuted by SwiftUI semantics, believe Opus.** The fabric `onTapGesture` (ProjectView.swift:215) is on a descendant of the container `onTapGesture` (:64, :168). In SwiftUI the deeper view's tap takes the touch and the ancestor's does not also fire (that needs `simultaneousGesture`). Gemini's "in testing" has no evidence behind it. There is no UI test that taps the counter, so add one (tap `counter.plus` once, expect `counter.value` 1). Removing the inner gesture in counter and guided mode (Opus simplification 2) is optional hygiene.
