@@ -1,1 +1,1 @@
-knit,yarn,crochet,sweater,hat,scarf,gauge,needle,project,tracker,pdf,stitch,beanie,shawl,blanket
+stitch,tracker,crochet,beginner,sweater,gauge,pdf,needle,project,hat,beanie,scarf,cowl,shawl,blanket
