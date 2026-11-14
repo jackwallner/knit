@@ -1,0 +1,1415 @@
+##### out/dano.txt
+DK 'strikke' -> strikkejournal | strikketæller | strikkeberegner | strikke | strikkejournalen | knitpad: strikkediagrammer | loopenzo: strikketæller | min strikkejournal | strikkezilla | strikkehjelpen
+DK 'strikkeopskrift' -> (none)
+DK 'strikkeopskrifter' -> (none)
+DK 'strikkemønster' -> (none)
+DK 'strikketæller' -> strikketæller | loopenzo: strikketæller
+DK 'pindetæller' -> garnio: pindetæller & opskrift | pelote – pindetæller
+DK 'rækketæller' -> (none)
+DK 'garn' -> garn spil | garn | garnell | garnio: pindetæller & opskrift | untangle: hyggeligt garnspil | garnly | garny: preview for instagram | garnflex | garnio: row counter & patterns | garnest: knitting row counter
+DK 'garnlager' -> (none)
+DK 'uld' -> dc uldum | uldineo games ltd | find my uld | trackonomy uld manager | unilode e-uld
+DK 'strikkepinde' -> (none)
+DK 'strikkefasthed' -> (none)
+DK 'hue' -> philips hue | hue | hue essentials | hue lights | hue garden | hue haul | hue is it? | hue lock: color logic puzzle | huedripvessel | huelane
+DK 'sweater' -> sweater | car wash | knitsthatfit sweaters | knitsthatfit sweaters premium | lucky sweater - swap closets | my ugly sweater | red sweater software
+DK 'halstørklæde' -> (none)
+DK 'hækle' -> hækle opskrifter | hækle
+DK 'strikkeapp' -> (none)
+DK 'strikkeprojekt' -> (none)
+DK 'opskrift' -> mad opskrifter | condita: opskrifter & kogebog | garnio: pindetæller & opskrift | opskrifter | mine opskrifter | mambeno | madplan & opskrifter | arla opskrifter | opskriftsbog | foodies: opskrifter & madplan | hjorth – low fodmap opskrifter
+--- DK 'strikke' (44)
+ 1 Min strikkejournal [128]
+ 2 Easy Knitty omgangstæller [15]
+ 3 StrikkeMakker: strik og garn [5]
+ 4 Hobbii [3535]
+ 5 KNIT – Strikkejournal [69]
+ 6 Strikkeopskrifter Lite [10]
+ 7 Strikkezilla [0]
+ 8 Knitandnote: Knitting App [33]
+ 9 Woolly: Organiser prosjekter [0]
+10 Simple Counter – Rækketæller [0]
+--- DK 'strikkeopskrifter' (16)
+ 1 Strikkeopskrifter Lite [10]
+ 2 Strikkeopskrifter [13]
+ 3 Knit Logic：Strikkeopskrifter [0]
+ 4 StrikkeMakker: strik og garn [5]
+ 5 LanaGrossa(New) [0]
+ 6 Nysta: Strik med dit garn [1]
+ 7 knit with me [0]
+ 8 Purl. [0]
+ 9 Garnio: Pindetæller & opskrift [0]
+10 KnitCount [0]
+--- DK 'strikkemønster' (5)
+ 1 KnitYourPhoto [0]
+ 2 YarnGrid: Strikkemønster [0]
+ 3 Woolit [0]
+ 4 Strikkejournal: Maskeoptæller [0]
+ 5 amimo - Strikke- & hækletæller [0]
+NO 'strikke' -> strikkekalkulator | strikkezilla | strikketeller | strikkehjelpen | strikke | strikkebasen | garnio: strikke & hekleteller | knitpad: strikkediagrammer | min strikkejournal
+NO 'strikkeoppskrift' -> (none)
+NO 'strikkeoppskrifter' -> (none)
+NO 'strikkemønster' -> (none)
+NO 'omgangsteller' -> loopenzo: omgangsteller | pelote – omgangsteller | omgangsteller
+NO 'radteller' -> (none)
+NO 'pinneteller' -> (none)
+NO 'garn' -> garnalternativer | garnly | garnin connect | garnin | garnell | garnio: strikke & hekleteller | flokeløs: koselig garnbrett | garny: preview for instagram | garnet education ebooks | garna
+NO 'garnlager' -> (none)
+NO 'ull' -> ullared | ullensaker kino | eidsvoll ullensaker blad | ullaredo | ullaredslistan | ullaredaren | ulla popken: plus-size fashion | ullr - mountain ops. | ullman indirect | ullala
+NO 'strikkepinner' -> (none)
+NO 'strikkefasthet' -> (none)
+NO 'lue' -> luel | lueur : routine skincare | luedu - nauči se čoveče | luekens wine & spirits | luelink app | luen fung hang insurance app | luego: read it later | lueira admin | ultimo luebeck | uni luebeck
+NO 'genser' -> (none)
+NO 'skjerf' -> (none)
+NO 'hekle' -> garnio: strikke & hekleteller | hekle | hekling | hekleapp
+NO 'strikkeapp' -> strikkeapp
+NO 'strikkeprosjekt' -> (none)
+NO 'oppskrift' -> oppskriftsbok | oppskrifter | condita: oppskrifter & kokebok | chef's assistant: oppskrifter | kokeboka – oppskrifter
+NO 'strikkedagbok' -> (none)
+--- NO 'strikke' (48)
+ 1 Knitandnote: strikkeapp [717]
+ 2 Telleapp Strikke or hekling [6]
+ 3 Strikkezilla [7]
+ 4 KNIT – Strikkejournal [532]
+ 5 Strikketeller [125]
+ 6 Min strikkejournal [18]
+ 7 Knitting Helper [5]
+ 8 StrikkeVenn: strikk og garn [1]
+ 9 Strikkehjelpen [12]
+10 Woolly: Organiser prosjekter [0]
+--- NO 'strikkeoppskrift' (18)
+ 1 Nysta: Strikking med ditt garn [0]
+ 2 Strikkezilla [7]
+ 3 Yarnly [2]
+ 4 Woolit [78]
+ 5 YarnGrid: Strikkeoppskrift [0]
+ 6 StrikkeSteg: Lær å strikke [0]
+ 7 Strikk: teller og oppskrifter [1]
+ 8 Knit&Calc [7]
+ 9 knit with me [0]
+10 Strikking: Kurs og Oppskrifter [0]
+--- NO 'radteller' (40)
+ 1 Radteller: Hekle & Strikke [0]
+ 2 Radteller - RowTally [0]
+ 3 Woolit [78]
+ 4 RowGlow: radteller [0]
+ 5 Craft MadeBy: Strikk & Hekling [0]
+ 6 Radteller Strikk [0]
+ 7 Telleapp Strikke or hekling [6]
+ 8 StrikkeVenn: strikk og garn [1]
+ 9 Purl. [9]
+10 Simple Counter – Strikketeller [0]
+--- NO 'strikkemønster' (3)
+ 1 KnitYourPhoto [0]
+ 2 Woolit [78]
+ 3 Strikketeller: Hekle & Garn [0]
+##### out/de.hints.txt
+DE 'stricken' -> stricken reihen zählen | stricken lernen | stricken kostenlos | stricken | yarnpal: häkeln & stricken | pelotte: stricken & häkeln | knitbit: häkeln & stricken | addi stricken | stricken zähler | woolsy: häkeln & stricken
+DE 'strickanleitung' -> strickanleitung | strickanleitungen | knit it: strickanleitungen | strick lehrer -strickanleitung
+DE 'strickanleitungen' -> strickanleitungen | knit it: strickanleitungen
+DE 'strickmuster' -> strickmuster | knitpad: strickmuster | strickmuster & anleitungen | knithub: strickmuster | yarngrid: strickmuster
+DE 'reihenzähler' -> reihenzähler stricken | reihenzähler | garnio: reihenzähler & muster | loopenzo: reihenzähler | patternrail: reihenzähler | pelote – reihenzähler | strick reihenzähler | reihenzähler - rowtally | reihenzähler fürs stricken | reihenzähler: häkeln stricken
+DE 'reihenzähler stricken' -> reihenzähler stricken | reihenzähler: stricken, häkeln | reihenzähler stricken häkeln | knitrow: reihenzähler stricken | purlie: reihenzähler stricken | rowglow reihenzähler stricken
+DE 'maschenprobe' -> (none)
+DE 'wolle' -> wolle spiel kostenlos | wolle spiel | wolle sortieren | wolle | wollen spiel | puzzle wolle | wolle sortieren: faden los | spiele wolle | wolle jam farbe sorting puzzle | wolle development limited
+DE 'garn' -> garn spiel | garny | garmin | garnier | garna | granny | garn | garnell | garnio: reihenzähler & muster | garny: vorschau für instagram
+DE 'wollvorrat' -> (none)
+DE 'strickapp' -> stricken
+DE 'strickzähler' -> strickzähler | carol: strickzähler & häkeln | einfacher strickzähler
+DE 'mütze stricken' -> (none)
+DE 'pullover stricken' -> (none)
+DE 'schal stricken' -> (none)
+DE 'anleitung' -> lego anleitung | dr. hahn anleitungen | anleitungen | anleitung zur ki-nutzung | anleitungsbox: geräteablage | makeup: anleitung zum trennung | zaubertricks anleitungen free | lego® builder: 3d-anleitungen | apliarte anleitungen | atmen: visuelle anleitung
+DE 'häkeln' -> häkeln kostenlos | häkeln lernen kostenlos | häkeln zähler | yarnpal – häkeln für anfänger | häkeln | knitbit: häkeln & stricken | häkeln lernen | pelotte: stricken & häkeln | woolsy: häkeln & stricken | yarnpal: häkeln & stricken
+DE 'nadelstärke' -> (none)
+DE 'stricknadeln' -> (none)
+DE 'strickschrift' -> (none)
+DE 'reihenzähler häkeln' -> reihenzähler: häkeln stricken | reihenzähler häkeln - rowpin | reihenzähler häkeln
+DE 'strickprojekt' -> strickprojekte tracker - loom
+DE 'strickrechner' -> strickrechner
+usage: hints.py [-h] [--sweep] country [terms ...]
+hints.py: error: unrecognized arguments: stricken
+##### out/de.serp.txt
+--- DE 'stricken' (46)
+ 1 LooseLoop - Handarbeitshelfer [116]
+ 2 Häkeln und Stricken leicht [1]
+ 3 Reihenzähler Stricken [65]
+ 4 Zähl Mich - Reihenzähler [376]
+ 5 addi2go [1129]
+ 6 KNIT – Strickjournal [44]
+ 7 Yarnpal: Häkeln & Stricken [1819]
+ 8 StitchReady: Stricken & Häkeln [0]
+ 9 Strick Lehrer -Strickanleitung [51]
+10 Knitting Chart [115]
+--- DE 'strickanleitung' (24)
+ 1 Strick Lehrer -Strickanleitung [51]
+ 2 KNIT – Strickjournal [44]
+ 3 StrickKonverter [1]
+ 4 Reihenzähler - RowTally [0]
+ 5 StrickKumpel: Stricken & Wolle [0]
+ 6 Nice Knits – Reihenzähler [2]
+ 7 Stricken: Anleitungen & Muster [0]
+ 8 YarnSpace: Stricken & Häkeln [3]
+ 9 Wollschmiede - Strick App [0]
+10 Purl. [0]
+--- DE 'reihenzähler' (50)
+ 1 Zähl Mich - Reihenzähler [376]
+ 2 Purlaine – Reihenzähler [10]
+ 3 Reihenzähler Stricken [65]
+ 4 addi2go [1129]
+ 5 Reihenzähler: Häkeln Stricken [1]
+ 6 Knittle - Stricktagebuch [3]
+ 7 LooseLoop - Handarbeitshelfer [116]
+ 8 Loopsy - Häkeln & Stricken [74]
+ 9 Reihenzähler - RowTally [0]
+10 Countastic | Mehrfachzähler [1]
+--- DE 'wolle verwalten' (2)
+ 1 Nebenkosten-Abrechnung [0]
+ 2 PoopDeck: Bootsverwaltung [0]
+--- DE 'strickmuster' (50)
+ 1 Knitting Chart [115]
+ 2 Patternum - Stricken & Häkeln [6]
+ 3 Cablewick: Häkeln & Stricken [0]
+ 4 Yarnpal: Häkeln & Stricken [1819]
+ 5 LooseLoop - Handarbeitshelfer [116]
+ 6 KnitYourPhoto [0]
+ 7 Stricken Häkeln Lernen Guide [78]
+ 8 StrickKonverter [1]
+ 9 KNIT – Strickjournal [44]
+10 Yarnal - Stricken & Häkeln [60]
+--- DE 'maschenprobe' (38)
+ 1 StrickKumpel: Stricken & Wolle [0]
+ 2 Yarn Squirrel: Ravelry & PDF [2]
+ 3 iStitcher [3]
+ 4 Nice Knits – Reihenzähler [2]
+ 5 Reihenzähler: Häkeln Stricken [1]
+ 6 YarnSpace: Stricken & Häkeln [3]
+ 7 Filo: Häkeln & Stricken [0]
+ 8 HäkelKumpel: Häkeln & Wolle [0]
+ 9 Sonjas Nähstübchen [0]
+10 Carol: Strickzähler & Häkeln [1]
+##### out/en.hints.txt
+GB 'knitting' -> knitting row counter | free knitting patterns | knitting game | knitting chart | knitting | knitting counter | free knitting row counter | knitting companion | mitaine: knitting row counter | knitale: knitting row counter
+GB 'knit' -> knit away | knit companion | knitting row counter | knitting game | knit counter | knit and note | knit out | knit | knitting chart | knit master 3d
+GB 'row counter' -> row counter free | row counter | garnio: row counter & patterns | loopenzo: row counter | loulaine: row counter & pdf | pelote – row counter | mitaine: knitting row counter | knitale: knitting row counter | knitbit: knitting row counter | loopmark: crochet row counter
+GB 'stitch counter' -> crochet stitch counter | crochet & knit stitch counter | stitch counter | stitch counter app | knit it: row & stitch counter | woolpip: row & stitch counter
+GB 'yarn' -> yarnpal | yarn loop | yarn fever | yarn fever! unravel puzzle | yarn game | yarn | yarn loop: knit puzzle | yarn unravel | yarn flow | yarnbie
+GB 'wool' -> wool crush | woolworths south africa | wool craze | wool game | woolworths australia | woolworths | wool puzzle 3d | woolsey | wool | woolacombe bay holiday parks
+GB 'knitting patterns' -> free knitting patterns | knitting patterns lite | knitting patterns stitch chart | knitting patterns full | knit logic: knitting patterns | mnemosina: knitting & patterns
+GB 'knitting pattern' -> free knitting patterns | knitting pattern apps like knitting chart | knitting patterns lite | knitting - pattern editor | knitting patterns stitch chart | knitting patterns full | knit logic: knitting patterns | mnemosina: knitting & patterns | skein: knitting pattern design
+GB 'jumper pattern' -> (none)
+GB 'hat pattern' -> (none)
+GB 'bobble hat' -> (none)
+GB 'tension' -> tension board | tension board 2 | tension climbing | tension | rankivo tension: tensão corda | belt tension | tennis tension | carbon drive belt tension tool | easy tension | tension studio sociedad limitada
+GB 'gauge' -> drystack gauge | packet gauge | stitch gauge tool | temperature gauge | pitch gauge | temp gauge | free temperature gauge | camber gauge | pitch gauge – roof calculator | racesense tyre gauge
+GB 'stash' -> stasher luggage | stashcook | stash | stasher | stash hub | stashbee | stashcook: recipe keeper | stasher.com | stash anything | stash diabetes
+GB 'cast on' -> cast on
+GB 'crochet counter' -> crochet counter | crochet counter: knit rows | crochet counter - knitting row | crochet counter: cozy tracker | hooklog - crochet counter | row & loop: crochet counter | rowvo: knit & crochet counter | stitchie: knit crochet counter
+GB 'beanie' -> beanie card game | beanie | beanie - grind size finder | beanie’s musical instruments – lite | beanie’s musical instruments | beanie: your coffee companion | beanie budgets | beanie: meal planner & recipes | beanieapp - card scoring | beanie grocery
+GB 'cardigan pattern' -> (none)
+GB 'sweater pattern' -> (none)
+GB 'scarf' -> scarface | red scarf | scarf art | scarfgo | scarface trivia | scarfapp lite | scarf up london | scarfapp | scarftimecard | red scarf - 英国黑五购物大全集
+GB 'knitting tracker' -> knitlog : knitting tracker | rowkeeper - knitting tracker | stitchlog - knitting tracker
+AU 'knitting' -> knitting rows counter | knitting | knitting chart | knitting game | knitting counter | loopcraft: crochet & knitting | knitale: knitting row counter | knitbit: knitting row counter | knitpad: knitting charts | pelotte: crochet & knitting
+AU 'knit' -> knit away | knit companion | knit master 3d | knitting rows counter | knitting | knit out | knit counter | knitting game | knitting chart | knit flow
+AU 'row counter' -> row counter | my row counter, knit & crochet | garnio: row counter & patterns | loopenzo: row counter | loulaine: row counter & pdf | pelote – row counter | knitale: knitting row counter | knitbit: knitting row counter | loopmark: crochet row counter | patternrail: knit row counter
+AU 'stitch counter' -> stitch counter | crochet stitch counter | crochet & knit stitch counter | stitch counter app | row & stitch counter | woolpip: row & stitch counter
+AU 'yarn' -> yarn pal | yarn fever | yarn fever! unravel puzzle | yarn loop | yarn | yarn game | yarn unravel | yarn buddy | yarn speech | yarnoal
+AU 'wool' -> woolworths app | woolworths rewards | woolworths mobile | wool crush | woolworths group visitor | woolworths group | woolies | woolworths everyday rewards | wool | woolworths rewards card
+AU 'knitting patterns' -> knitting patterns lite | knitting patterns full | mnemosina: knitting & patterns
+AU 'knitting pattern' -> knitting patterns lite | knitting - pattern editor | knitting patterns full | mnemosina: knitting & patterns | skein: knitting pattern design
+AU 'jumper pattern' -> (none)
+AU 'hat pattern' -> (none)
+AU 'bobble hat' -> (none)
+AU 'tension' -> tension board 2 | tension board | tension | tension climbing | rankivo tension: tensão corda | gates belt tension | tennis tension | tension meter companion | tension loom | tension: drum tuner
+AU 'gauge' -> gaugeart | drystack gauge | packet gauge | rain gauge | multi gauge | safe gauge | pitch gauge | rain gauge: monitor rainfall | temperature gauge free | temperature gauge
+AU 'stash' -> stasher luggage | stash | stashcook | stash hub | stashaway | stasher | stash property | stashcook: recipe keeper | stash2go | stash diabetes
+AU 'cast on' -> cast on
+AU 'crochet counter' -> crochet counter | crochet counter: knit rows | crochet counter - knitting row | crochet counter: cozy tracker | knitting & crochet counter app | row & loop: crochet counter | stitchie: knit crochet counter
+AU 'beanie' -> beanie’s musical instruments – lite | beanie - grind size finder | beanie’s musical instruments | beanie: meal planner & recipes | beanieapp - card scoring | beanie: your coffee companion | beanies.family | beanie | beanie dwss | beanies weenies
+AU 'cardigan pattern' -> (none)
+AU 'sweater pattern' -> (none)
+AU 'scarf' -> scarfall 2.0 | harris scarfe | scarf art | scarfapp lite | scarface trivia | scarfapp | scarf up london | fresh scarfs toptan | icons of scarf | red scarf - 英国黑五购物大全集
+AU 'knitting tracker' -> knitlog : knitting tracker | rowkeeper - knitting tracker | stitchlog - knitting tracker
+CA 'knitting' -> knitting row counter | knitting chart | knitting | pocket knitting | knitting game | knitting counter | knitale: knitting row counter | knitbit: knitting row counter | knitpad: knitting charts | knitso: cozy knitting game
+CA 'knit' -> knit companion | knit away | knitting row counter | knit and note | knitting game | knit out | knit | knit flow | knitting counter | knit note
+CA 'row counter' -> knitting row counter | row counter | pelote – row counter | knitale: knitting row counter | knitbit: knitting row counter | loopmark: crochet row counter | snug rows - row counter | crochet row counter | row counter for knitting | my row counter
+CA 'stitch counter' -> stitch counter | crochet & knit stitch counter | stitch counter app | knit it: row & stitch counter | row & stitch counter | woolpip: row & stitch counter
+CA 'yarn' -> yarnpal | yarn fever | yarn loop | yarn game | yarn | yarn unravel | yarn loop: knit puzzle | yarn dragon | yarn fever! unravel puzzle | yarn buddy
+CA 'wool' -> wool crush | wool craze | wool frenzy | wool sort | wool puzzle 3d | woolworths | wolseley | wool | wool saga | wool saga 3d
+CA 'knitting patterns' -> knitting patterns lite | knitting patterns stitch chart | knitting patterns full | mnemosina: knitting & patterns
+CA 'knitting pattern' -> knitting patterns lite | knitting patterns stitch chart | knitting - pattern editor | knitting patterns full | mnemosina: knitting & patterns
+CA 'jumper pattern' -> (none)
+CA 'hat pattern' -> (none)
+CA 'bobble hat' -> (none)
+CA 'tension' -> tension board | tension artérielle gratuit | tension board 2 | tension arterielle | suivi tension artérielle | rankivo tension: string meter | tensette : tension artérielle | gem + tension | carnet de tension : suivi hta | steadybp : suivi de tension
+CA 'gauge' -> drystack gauge | packet gauge | stitch gauge tool | pitch gauge | vocal gauge | rain gauge | roof pitch gauge: pitch factor | raindrop gauge | rain gauge: monitor rainfall | gauges: speedometer & sensors
+CA 'stash' -> stashcook | stash | deep stash | stasher luggage | stash hub | stasher | stashcook: recipe keeper | stash anything | stash diabetes | stash helper
+CA 'cast on' -> cast on
+CA 'crochet counter' -> crochet counter | crochet counter: knit rows | hooklog - crochet counter | row & loop: crochet counter | rowtap: knit & crochet counter | rowvo: knit & crochet counter | stitchie: knit crochet counter
+CA 'beanie' -> beanie | beanie - grind size finder | beanie’s musical instruments – lite | beanie: meal planner & recipes | beanie’s musical instruments | beanie: your coffee companion | beanieapp - card scoring | beanies weenies | beanie dwss | beanie coffee
+CA 'cardigan pattern' -> (none)
+CA 'sweater pattern' -> (none)
+CA 'scarf' -> scarfgo | scarf art | scarfapp lite | scarfapp | scarftimecard | scarf up london | scarface trivia | scarf | fresh scarfs toptan | handeli scarfs
+CA 'knitting tracker' -> knitlog : knitting tracker | rowkeeper - knitting tracker | stitchlog - knitting tracker
+##### out/en.serp.txt
+--- GB 'knitting patterns' (48)
+ 1 Loopsy - Crochet & Knitting [815]
+ 2 Knitting Genius - Knit Easy! [30]
+ 3 Knitting Patterns Lite [0]
+ 4 kntd:discover - Ravelry Aide [601]
+ 5 YarnPal - Crochet & Knitting [5237]
+ 6 Untangled Knitting [0]
+ 7 LoopCraft: Crochet & Knitting [1307]
+ 8 Simply Knitting Magazine [77]
+ 9 Knitandnote: Knitting App [40]
+10 Tin Can Knits [29]
+--- GB 'row counter' (49)
+ 1 My Row Counter, Knit & Crochet [526]
+ 2 Knit Row Counter [36]
+ 3 Vivid Counter [17]
+ 4 Easy Knitty Row Counter knit [49]
+ 5 StitchTally: Row Counter [27]
+ 6 Crochet Row Counter: Repeat [1]
+ 7 KnitCounter: Row Counter [1]
+ 8 Counter - Simply Count Things [5]
+ 9 Easy Knit Row Counter [0]
+10 Row Counter for Knitting [0]
+--- GB 'jumper knitting pattern' (47)
+ 1 LoopCraft: Crochet & Knitting [1307]
+ 2 Knitting: Tutorials & Patterns [2]
+ 3 Knitting Genius - Knit Easy! [30]
+ 4 knitCompanion knitting & more [366]
+ 5 Loopsy - Crochet & Knitting [815]
+ 6 Let's Knit [38]
+ 7 KnitsThatFit Sweaters [45]
+ 8 Tin Can Knits [29]
+ 9 The Knitter Magazine [73]
+10 Knitting Crochet Pattern Maker [5]
+--- GB 'knitting wool stash' (49)
+ 1 Wool Saga: Color Yarn Loop Jam [2376]
+ 2 Loopsy - Crochet & Knitting [815]
+ 3 Wool Craze- Color Yarn Games [1277]
+ 4 Stash2Go Lite [6]
+ 5 kntd:discover - Ravelry Aide [601]
+ 6 Knitting Genius - Knit Easy! [30]
+ 7 knitCompanion knitting & more [366]
+ 8 LoopCraft: Crochet & Knitting [1307]
+ 9 Ravelry Companion: Stashora [0]
+10 Knit Away - Yarn 3D [2500]
+--- GB 'knitting' (50)
+ 1 LooseLoop - Craft Companion [69]
+ 2 YarnPal - Crochet & Knitting [5237]
+ 3 Crochet, Knitting & Crafts [2]
+ 4 Loopsy - Crochet & Knitting [815]
+ 5 Knitting: Tutorials & Patterns [2]
+ 6 Knitandnote: Knitting App [40]
+ 7 My Row Counter, Knit & Crochet [526]
+ 8 LoopCraft: Crochet & Knitting [1307]
+ 9 Knitting Chart [201]
+10 Knitting Genius - Knit Easy! [30]
+--- AU 'knitting patterns' (49)
+ 1 YarnPal - Crochet & Knitting [3497]
+ 2 Knitting Patterns Lite [0]
+ 3 Tin Can Knits [7]
+ 4 Simply Knitting Magazine [27]
+ 5 Knitting & Quilting Patterns [1]
+ 6 Loopsy - Crochet & Knitting [425]
+ 7 LoopCraft: Crochet & Knitting [319]
+ 8 knitCompanion knitting & more [296]
+ 9 Knitting: Tutorials & Patterns [0]
+10 kntd:discover - Ravelry Aide [330]
+--- AU 'row counter' (39)
+ 1 My Row Counter, Knit & Crochet [260]
+ 2 Knit Row Counter [16]
+ 3 Vivid Counter [8]
+ 4 Easy Knitty Row Counter knit [20]
+ 5 StitchTally: Row Counter [12]
+ 6 KnitCounter: Row Counter [1]
+ 7 Loopsy - Crochet & Knitting [425]
+ 8 Alicia's Row Counter [1]
+ 9 Row Counter for Knitting [0]
+10 Counter - Simply Count Things [3]
+--- CA 'knitting patterns' (49)
+ 1 Tin Can Knits [51]
+ 2 kntd:discover - Ravelry Aide [803]
+ 3 Loopsy - Crochet & Knitting [915]
+ 4 YarnPal - Crochet & Knitting [4298]
+ 5 Knitting: Tutorials & Patterns [5]
+ 6 Knitting Patterns Lite [2]
+ 7 knitCompanion knitting & more [960]
+ 8 LoopCraft: Crochet & Knitting [1167]
+ 9 My Row Counter, Knit & Crochet [779]
+10 Knitting Genius - Knit Easy! [120]
+--- CA 'row counter' (49)
+ 1 My Row Counter, Knit & Crochet [779]
+ 2 Vivid Counter [20]
+ 3 Knit Row Counter [31]
+ 4 Easy Knitty Row Counter knit [50]
+ 5 StitchTally: Row Counter [21]
+ 6 KnitCounter: Row Counter [0]
+ 7 Row Counter for Knitting [0]
+ 8 Counter - Simply Count Things [1]
+ 9 Loopsy - Crochet & Knitting [915]
+10 Crochet Patterns－Row Counter [91]
+##### out/es.txt
+ES 'tejer' -> tejer | pelotte: crochet y tejer | tejer y ganchillo | tejer: tutoriales y patrones | amiashi - asistente para tejer | contador de vueltas: tejer | crochet club: aprende a tejer | crochet contador: tejer lana | knit it: tejer y ganchillo | miraknit: aprende a tejer
+ES 'tejer a dos agujas' -> (none)
+ES 'patrones de tejido' -> patrones de tejido y punto
+ES 'patrones tricot' -> (none)
+ES 'patrones punto' -> patrones punto de cruz
+ES 'contador de vueltas' -> contador de vueltas crochet | contador de vueltas | garnio: contador de vueltas | loopenzo: contador de vueltas | pelote – contador de vueltas | contador de vueltas - rowtally | contador de vueltas para punto | contador de vueltas: tejer | contador de vueltas ganchillo | knitrow: contador de vueltas
+ES 'contador de filas' -> contador de filas de ganchillo | knitkit contador de filas
+ES 'contador de puntos' -> contador de puntos voley | contador de puntos | contador de puntos padel | contador de puntos crochet | knitbit: contador de puntos | dardos contador de puntos app | contador de puntos - skoro | contador de puntos - scory | contador de puntos flip 7 | contador de puntos: marcador
+ES 'lana' -> lanbide lanapp | juego de lana | desenreda: puzle de lana | lana | lanapp | lanars llc | lanas gayfil, s.l. | lanatomie | lanaspuntexsa | lanaco d.o.o. banja luka
+ES 'ovillos' -> ovillos
+ES 'agujas de tejer' -> (none)
+ES 'muestra tension' -> (none)
+ES 'gorro tejer' -> (none)
+ES 'jersey punto' -> (none)
+ES 'bufanda tejer' -> (none)
+ES 'ganchillo' -> ganchillo gratis | ganchillo | yarnpal – ganchillo fácil | ganchillo: patrones y contador | ganchillo fácil - yarnova | yarnpal: ganchillo y punto | cablewick: ganchillo y tejido | contador de filas de ganchillo | contador de vueltas ganchillo | crochet y ganchillo: crova
+ES 'aplicación tejer' -> (none)
+ES 'punto' -> punto correos | punto roma | punto kanguro | punto de cruz | puntos voley | puntos colombia | puntos de carga | puntos | puntos mus | puntos padel
+ES 'tricotar' -> (none)
+ES 'tricotar patrones' -> (none)
+ES 'gorro' -> gorro navidad | mono gorro by chris haughton
+--- ES 'tejer' (50)
+ 1 Yarnpal: Ganchillo y Punto [2103]
+ 2 Punto Fácil - Aprende a tejer [17]
+ 3 Yarnbie: Crochet y Ganchillo [36]
+ 4 LooseLoop - Tu Guía Textil [33]
+ 5 Punto de cruz: Cross Stitch [150]
+ 6 Knotly: Crochet y Punto [0]
+ 7 Contador de vueltas [39]
+ 8 Cutie Marieta [3]
+ 9 kntd:discover - Ravelry Aide [90]
+10 Knit Logic: Patrones de Punto [0]
+--- ES 'patrones tejer' (50)
+ 1 Punto Fácil - Aprende a tejer [17]
+ 2 Yarnpal: Ganchillo y Punto [2103]
+ 3 Tejer: Tutoriales y Patrones [0]
+ 4 Mnemosina: tejer y patrones [1]
+ 5 Knit Logic: Patrones de Punto [0]
+ 6 Contador de vueltas [39]
+ 7 Yarnbie: Crochet y Ganchillo [36]
+ 8 LooseLoop - Tu Guía Textil [33]
+ 9 Patrones de Tejido y Punto [0]
+10 Knit It: Tejer y Ganchillo [0]
+--- ES 'contador de vueltas' (49)
+ 1 Contador de vueltas [39]
+ 2 Contador de vueltas - RowTally [0]
+ 3 Tally: Contador Simple [1]
+ 4 LooseLoop - Tu Guía Textil [33]
+ 5 Vivid Counter [0]
+ 6 Punto Fácil - Aprende a tejer [17]
+ 7 Knit Row Counter [6]
+ 8 Contador de Clics y Tally [0]
+ 9 Easy Knitty Tejido y ganchillo [3]
+10 RowNest: Contador Vueltas [0]
+--- ES 'tricotar' (7)
+ 1 Hobbii [100]
+ 2 Tejer: Tutoriales y Patrones [0]
+ 3 Carol: Knitting Row Counter [0]
+ 4 Traducir patrón de costura [0]
+ 5 Cast and Count [0]
+ 6 Row & Repeat Contador de filas [0]
+ 7 YarnTrail: Punto y Ganchillo [0]
+--- ES 'patrones de punto' (50)
+ 1 Yarnpal: Ganchillo y Punto [2103]
+ 2 Knit Logic: Patrones de Punto [0]
+ 3 Patrones de Tejido y Punto [0]
+ 4 Punto Fácil - Aprende a tejer [17]
+ 5 Magic Needle: Punto de Cruz [121]
+ 6 Punto De Cruz: Pasatiempos [6]
+ 7 Punto de Cruz: Foto a Patrón [0]
+ 8 KnitPad: Gráficos de punto [0]
+ 9 Mnemosina: tejer y patrones [1]
+10 Loopsy - Crochet y Punto [57]
+--- ES 'contador de filas' (48)
+ 1 Contador de Tejido & Puntos [1]
+ 2 TapTap++ Contador de clics [0]
+ 3 Contador de vueltas: Tejer [1]
+ 4 Tricodex - contador de vueltas [0]
+ 5 Taptic: Contador de Cuentas [0]
+ 6 Purl: Punto de Cruz y Tejido [0]
+ 7 Contador de Vueltas para Punto [0]
+ 8 Row & Repeat Contador de filas [0]
+ 9 Knit Logic: Patrones de Punto [0]
+10 Easy Knitty Tejido y ganchillo [3]
+##### out/fi.txt
+FI 'neulominen' -> neulominen
+FI 'neule' -> knitpad: neulepiirrokset
+FI 'neuleohje' -> (none)
+FI 'neuleohjeet' -> (none)
+FI 'neulontaohjeet' -> (none)
+FI 'kerroslaskuri' -> garnio: kerroslaskuri & ohjeet | loopenzo: kerroslaskuri | pelote – kerroslaskuri | kerroslaskuri
+FI 'rivilaskuri' -> (none)
+FI 'silmukkalaskuri' -> (none)
+FI 'lanka' -> secondhand lanka | pura solmut: kotoisa lanka | pickme sri lanka | lankaremit | lankapropertyweb property app | lankakonect | lankan restaurants | lanka | lanka rent app | lanka woman
+FI 'lankavarasto' -> (none)
+FI 'villa' -> villa atolye yönetim | villa royale: love & drama | villa takvimi | village legacy: town builder | village within | village – charge mentale | villagehearth | villain edit | villain pages | villaіny
+FI 'puikot' -> (none)
+FI 'silmukkatiheys' -> (none)
+FI 'pipo' -> pipo english | pipo ai: diet & workout coach | pi-poll | pipo | pipo sticker lite | pipoll: invest in humans | piponi | pipopro | piponnect | pipodialog
+FI 'huivi' -> (none)
+FI 'villapaita' -> (none)
+FI 'virkkaus' -> virkkaus
+FI 'neulesovellus' -> (none)
+FI 'neulonta' -> neulonta
+FI 'ohje' -> garnio: kerroslaskuri & ohjeet | jemma: tavarat ja ohjeet | origami - 3d-taitto-ohjeet | tv ohjelmat | tv-ohjelmat suomi | treeni ohjelma | sali ohjelma | kuntosali ohjelma | rkk-ohjelmat | tv-ohjelma suomessa
+--- FI 'neulominen' (17)
+ 1 Easy Knitty Row Counter [1]
+ 2 Knit&Calc [0]
+ 3 Kerros Laskin - Neulo, Virkkaa [8]
+ 4 Knitly - Neuloslaskuri [0]
+ 5 StashBot: Neulominen, Virkkaus [2]
+ 6 CrochetCreator [0]
+ 7 NeuleKaveri: neule ja lanka [0]
+ 8 Muotisuunnittelija ja ompelija  Peli tyttö GRATIS [0]
+ 9 Pelote – Kerroslaskuri [0]
+10 KnitPad: Neulepiirrokset [0]
+--- FI 'neuleohjeet' (1)
+ 1 Knit Logic: Neulonta Laskuri [0]
+--- FI 'rivilaskuri' (5)
+ 1 Cablewick: Virkkaus & Neulonta [0]
+ 2 Knit It: Neulonta ja Virkkaus [0]
+ 3 Loopiva: Opi Virkkaus [0]
+ 4 YarnSpace: Neulonta & Virkkaus [0]
+ 5 Knitted - Neulepäiväkirja [0]
+--- FI 'kerroslaskuri' (49)
+ 1 Easy Knitty Row Counter [1]
+ 2 Neuluri – Laskuri & Ohjelukija [5]
+ 3 Kerroslaskuri: Virkkaus, Neule [0]
+ 4 Knitly - Neuloslaskuri [0]
+ 5 Kerroslaskuri - RowTally [0]
+ 6 Pelote – Kerroslaskuri [0]
+ 7 YarnPal - Crochet & Patterns [86]
+ 8 Lens Scan: Tunnista Kaikki [226]
+ 9 Stitchory: Neulonta & Virkkaus [0]
+10 Knitting Chart [65]
+--- FI 'neulonta' (49)
+ 1 Cablewick: Virkkaus & Neulonta [0]
+ 2 KNIT – Neulepäiväkirja [13]
+ 3 Neuluri – Laskuri & Ohjelukija [5]
+ 4 Kerros Laskin - Neulo, Virkkaa [8]
+ 5 Knotly: Virkkaus & Neulonta [0]
+ 6 Knit It: Neulonta ja Virkkaus [0]
+ 7 Knit Logic: Neulonta Laskuri [0]
+ 8 YarnSpace: Neulonta & Virkkaus [0]
+ 9 KnitRow Tracker [0]
+10 MyKnitLog [0]
+##### out/fr.txt
+FR 'tricot' -> tricot gratuit | tricot compte rang | apprendre a tricoter | tricot | tricoton | tricoté serré | mitaine : tricot & crochet | tricot tuto | pelotte : crochet et tricot | knitpad : grilles de tricot
+FR 'tricoter' -> apprendre a tricoter | trier le fil à tricoter puzzle
+FR 'patron tricot' -> (none)
+FR 'modèle tricot' -> (none)
+FR 'compteur de rangs' -> compteur de rangs tricot | garnio: compteur de rangs | loopenzo: compteur de rangs | loulaine : compteur de rangs | patternrail: compteur de rangs | pelote – compteur de rangs | compteur de rangs - rowtally | compteur de rangs tricot ddak | compteur de rangs au tricot | compteur de rangs pour tricot
+FR 'compteur rangs tricot' -> compteur rangs tricot crochet | compteur rangs: tricot crochet
+FR 'laine' -> untangle: puzzle de laine | jeu de laine | jeux pelote de laine | pelote de laine | jeu laine | jeux de laine | jeux laine | pelotte de laine | lainey wilson | laine puzzle: fuite du serpent
+FR 'pelote' -> pelote de laine | choc de pelotes | pelote – compteur de rangs | jeux pelote de laine | pelote dragon | jeux de pelote | choque de pelote | trapilho et pelote | pelote basque en ligne | peloteo – tenis & padel
+FR 'stock de laine' -> (none)
+FR 'échantillon tricot' -> (none)
+FR 'aiguilles à tricoter' -> (none)
+FR 'bonnet tricot' -> (none)
+FR 'pull tricot' -> (none)
+FR 'écharpe tricot' -> (none)
+FR 'crochet' -> crochet debutant gratuit | crochet gratuit | crochet | crochet pattern | crochet chart | crochet studio | crochetou | crochet debutant | crochet counter | crochet genius
+FR 'application tricot' -> (none)
+FR 'explications tricot' -> (none)
+FR 'tuto tricot' -> (none)
+FR 'snood' -> snood, llc | snood original | snood | snood adventure | snood tournaments | snoodoku - sudoku puzzle game | snood hotels | the 11th snood
+FR 'châle' -> detecteur chaleur | chaleur chien | friterie le chalet | capteur de chaleur | detecteur de chaleur | chaleur | pompe a chaleur | chalet des neiges residences | chale island resort | chaleepa mallawa
+--- FR 'tricot' (48)
+ 1 LooseLoop - Compagnon Créatif [44]
+ 2 Knitflow — Tricot et crochet [12]
+ 3 Tricoton - Modèles & Compteur [133]
+ 4 Compte Rangs - Tricot Crochet [490]
+ 5 Yarnpal: Crochet et Tricot [3074]
+ 6 Woolio – compagnon de tricot [15]
+ 7 Marguerite Couture & Tricot [40]
+ 8 Patternum - Créez des patrons [5]
+ 9 Tricot tuto: Crochet debutant [86]
+10 Hobbii [667]
+--- FR 'patron tricot' (50)
+ 1 Mnemosina: tricot et patrons [1]
+ 2 Yarnpal: Crochet et Tricot [3074]
+ 3 Patternum - Créez des patrons [5]
+ 4 Marguerite Couture & Tricot [40]
+ 5 Knitflow — Tricot et crochet [12]
+ 6 Compte Rangs - Tricot Crochet [490]
+ 7 Yarnbie : Crochet et Tricot [69]
+ 8 Woolsy: Crochet & Tricot [17]
+ 9 Crochet & Tricot [3]
+10 KNIT – Journal de tricot [9]
+--- FR 'compteur de rangs' (49)
+ 1 Compte Rangs - Tricot Crochet [490]
+ 2 Muuch - Compteur de rangs [2]
+ 3 Compteur de rangs : Tricot [0]
+ 4 Knitflow — Tricot et crochet [12]
+ 5 Compteur de rangs - RowTally [2]
+ 6 RowBuddy: Compteur de Rangs [0]
+ 7 Simple Counter : compte-rangs [2]
+ 8 Row & Repeat Compteur de rangs [0]
+ 9 Compteur de rangs tricot DDak [0]
+10 Compteur Swipe: Rangs & Séries [10]
+--- FR 'modèle tricot' (50)
+ 1 Yarnpal: Crochet et Tricot [3074]
+ 2 Knitflow — Tricot et crochet [12]
+ 3 Tricoton - Modèles & Compteur [133]
+ 4 Tricot tuto: Crochet debutant [86]
+ 5 Cablewick: Crochet et tricot [0]
+ 6 Hooklings: Crochet & Tricot [1]
+ 7 KNIT – Journal de tricot [9]
+ 8 Yarnie: Crochet & Tricot IA [0]
+ 9 Hobbii [667]
+10 Loopsy - Crochet & Tricot [92]
+--- FR 'laine' (46)
+ 1 Knit Away: Tri de Laine 3D [1353]
+ 2 Wool Saga: Jeux de Maître Vis [868]
+ 3 Wool Sorting: Démêler la laine [8]
+ 4 Choc de Pelotes - Jeux Dragon [4766]
+ 5 Screw Sort 3D: Jeux de Couleur [3223]
+ 6 Wool Frenzy - Jeu 3D de tri [566]
+ 7 LINE [1139]
+ 8 Knit & Roll: Jeu de Laine [0]
+ 9 Yarn Scape [0]
+10 Tri Laine Univers Puzzle [0]
+##### out/itpl.txt
+IT 'maglia' -> lavoro a maglia | knitpad: schemi a maglia | pelotte: uncinetto e maglia | magliana | maglia e uncinetto | maglia: tutorial e schemi | magliano sabina mobility | magliaso | magliaamica: maglia e lana | maglia
+IT 'lavorare a maglia' -> lavorare a maglia
+IT 'schemi maglia' -> (none)
+IT 'schemi ai ferri' -> (none)
+IT 'contagiri' -> contagiri uncinetto | contagiri | garnio: contagiri e schemi | loopenzo: contagiri uncinetto | contagiri - rowtally | contagiri: maglia e uncinetto | contagiri maglia e uncinetto | contagiri maglia | garnest: contagiri uncinetto | lap tracker: contagiri
+IT 'contagiri maglia' -> contagiri: maglia e uncinetto | contagiri maglia e uncinetto | contagiri maglia | woolnote: contagiri maglia
+IT 'contarighe' -> (none)
+IT 'lana' -> gioco lana | scontro di lana | untangle: puzzle di lana relax | fili di lana | lana | gioco della lana | gomitoli lana | giochi lana | drago lana | giochi di lana
+IT 'gomitoli' -> gomitoli lana | gioco gomitoli | gomitoli | giochi gomitoli | puzzle gomitoli | gioco con gomitoli | wool sort: gomitoli di lana
+IT 'ferri da maglia' -> (none)
+IT 'campione maglia' -> (none)
+IT 'cappello maglia' -> (none)
+IT 'maglione ai ferri' -> (none)
+IT 'sciarpa maglia' -> (none)
+IT 'uncinetto' -> app uncinetto gratis | uncinetto gratis | uncinetto | pelotte: uncinetto e maglia | loopenzo: contagiri uncinetto | knitbit: conta giri uncinetto | yarnpal-uncinetto principianti | tutorial uncinetto | loopcraft: uncinetto e maglia | yarniby: uncinetto e schemi
+IT 'app maglia' -> (none)
+IT 'ai ferri' -> yarngrid: modello ai ferri
+IT 'ferri' -> ferrite recording studio | ferrite | ferries | direct ferries | pelote – conta ferri e giri | sardinia ferries | corsica-ferries | virtu ferries | corsica sardinia ferries | bc ferries
+IT 'modelli maglia' -> (none)
+IT 'tutorial maglia' -> (none)
+--- IT 'maglia' (48)
+ 1 Lavoro a Maglia [37]
+ 2 LoopCraft: Uncinetto e maglia [747]
+ 3 Maglia: Tutorial e Schemi [0]
+ 4 Uncinetto e Maglia Facili [1]
+ 5 Conta Righe - lavoro a maglia [45]
+ 6 Yarnbie: Uncinetto e Maglia [22]
+ 7 Trips2Go [0]
+ 8 Yarnpal: Uncinetto e Maglia [2346]
+ 9 Wool Frenzy: Maglia e ordina [345]
+10 Knit It: Maglia e Uncinetto [0]
+--- IT 'lavorare a maglia' (46)
+ 1 Lavoro a Maglia [37]
+ 2 Maglia: Tutorial e Schemi [0]
+ 3 LoopCraft: Uncinetto e maglia [747]
+ 4 Knit Logic: lavoro a maglia [0]
+ 5 Yarnpal: Uncinetto e Maglia [2346]
+ 6 Conta Righe: Lavoro a Maglia [0]
+ 7 Conta Righe - lavoro a maglia [45]
+ 8 Loopsy - Uncinetto e Maglia [50]
+ 9 Learn Knitting and Crocheting [23]
+10 KNIT – Diario di maglia [6]
+--- IT 'contagiri' (49)
+ 1 Video tachometer [5]
+ 2 Conta Giri: Uncinetto Maglia [0]
+ 3 Strobe tachometer (RPM meter) [6]
+ 4 Giri -The RPM Checker- [5]
+ 5 Contagiri - RowTally [0]
+ 6 RPM - Turntable Speed Accuracy [393]
+ 7 Turntable Speed [8]
+ 8 Luce stroboscopica [2]
+ 9 Uncinetto: Schemi e Contagiri [0]
+10 RPM Dot by SparkEVO [2]
+--- IT 'schemi maglia' (49)
+ 1 Yarnpal: Uncinetto e Maglia [2346]
+ 2 Yarnbie: Uncinetto e Maglia [22]
+ 3 Uncinetto e Maglia Facili [1]
+ 4 Maglia: Tutorial e Schemi [0]
+ 5 Woolsy: Uncinetto e Maglia [5]
+ 6 KNIT – Diario di maglia [6]
+ 7 Hooklings: Uncinetto e Maglia [2]
+ 8 Maglia e uncinetto [0]
+ 9 Filo: Uncinetto e Maglia [2]
+10 Conta Giri: Uncinetto Maglia [0]
+--- IT 'uncinetto' (49)
+ 1 Yarnbie: Uncinetto e Maglia [22]
+ 2 Uncinetto e Maglia Facili [1]
+ 3 Yarnpal: Uncinetto e Maglia [2346]
+ 4 LoopCraft: Uncinetto e maglia [747]
+ 5 Yarniby: uncinetto e schemi [326]
+ 6 Uncinetto: Schemi e Contagiri [0]
+ 7 Granny Square Designer [0]
+ 8 Uncinetto facile: Crova [0]
+ 9 YarnCraft: Uncinetto e maglia [0]
+10 Loopsy - Uncinetto e Maglia [50]
+PL 'dziergać' -> (none)
+PL 'szydełko' -> szydełkowanie | szydełko
+PL 'robótki' -> (none)
+PL 'druty' -> druty
+PL 'wzory na drutach' -> (none)
+PL 'wzory dziewiarskie' -> (none)
+PL 'liczba rzędów' -> (none)
+PL 'licznik rzędów' -> licznik rzędów | loopenzo: licznik rzędów | pelote – licznik rzędów
+PL 'licznik oczek' -> (none)
+PL 'włóczka' -> włóczka | gra włóczka
+PL 'zapas włóczki' -> (none)
+PL 'próbka' -> (none)
+PL 'czapka na drutach' -> (none)
+PL 'sweter na drutach' -> (none)
+PL 'szalik na drutach' -> (none)
+PL 'aplikacja do robienia na drutach' -> (none)
+PL 'robienie na drutach' -> (none)
+PL 'dzianie' -> (none)
+PL 'druty początkujący' -> (none)
+PL 'wzory' -> (none)
+--- PL 'druty' (49)
+ 1 YarnPal – Szydełko i Druty [499]
+ 2 Licznik Rzędów na Druty [0]
+ 3 Licznik Rzędów [45]
+ 4 Knitly - Licznik dziewiarski [0]
+ 5 Licznik 123: Counter i punkty [0]
+ 6 Loopsy - Szydełko i Druty [30]
+ 7 Licznik Dziergania [0]
+ 8 KNIT – Dziennik dziergania [8]
+ 9 Yarny: Szydełko i Wzory [1]
+10 Licznik rzędów - RowTally [0]
+--- PL 'wzory na drutach' (6)
+ 1 Knit Logic: wzory na drutach [0]
+ 2 Na drutach: Kursy i Wzory [0]
+ 3 Licznik Rzędów [45]
+ 4 Szydełkowanie i Dzierganie [0]
+ 5 Licznik Rzędów: Szydełko [0]
+ 6 Knitly - Licznik dziewiarski [0]
+--- PL 'licznik rzędów' (48)
+ 1 Licznik rzędów: szydełko, drut [0]
+ 2 Licznik Rzędów [45]
+ 3 Knittle - Dziennik Robótek [0]
+ 4 Nice Knits – Licznik rzędów [0]
+ 5 Licznik kliknięć i rzędów [0]
+ 6 Loopsy - Szydełko i Druty [30]
+ 7 Knitly - Licznik dziewiarski [0]
+ 8 Licznik rzędów - RowTally [0]
+ 9 Licznik ręczny i kliknięć [2]
+10 Crochetlog [5]
+--- PL 'robótki' (38)
+ 1 Szydełkujemy razem: robótki [0]
+ 2 Dziergamy razem: robótki [0]
+ 3 Crochetlog [5]
+ 4 kntd:discover - Ravelry Aide [39]
+ 5 Cross Stitch Club [26]
+ 6 KNIT – Dziennik dziergania [8]
+ 7 Licznik for Watch [0]
+ 8 PocoPoco Licznik rzędów [0]
+ 9 Knit It: Dzianie i Szydełko [2]
+10 Knittle - Dziennik Robótek [0]
+--- PL 'włóczka' (50)
+ 1 Gorączka robótek Dyskusja o so [0]
+ 2 Happy Yarn [1]
+ 3 YarnPal – Szydełko i Druty [499]
+ 4 Wool Crush™: Bus Traffic Jam [1159]
+ 5 Yarn Loop [1]
+ 6 YarnPixel [0]
+ 7 Wool Frenzy - Yarn Match 3D [116]
+ 8 Yarn Fever! Unravel Puzzle [1843]
+ 9 Screw Sort 3D: Pin Puzzle Game [491]
+10 Yarnland [2]
+##### out/ja.txt
+JP '編み物' -> 編み物 | 編み物カウンター | 編み物アプリ | 編み物 編み図 | 編み物カウンター２ | 編み物 無料 | 編み物 カウント | 編み物 ドット | 編み物計算 | 編み物ゲーム
+JP '編み図' -> 編み図 | 編み図作成 | 編み図作成 無料 | 編み物 編み図 | かぎ針編み 編み図 | かぎ針 編み図 作成 | 編み図カウンター | amu – かぎ針 編み図 作成アプリ｜編み物 図案 | amiamu | かぎ針 編み図
+JP '編み物 アプリ' -> (none)
+JP '段数カウンター' -> 段数カウンター | loopenzo: 段数カウンター | pelote – 段数カウンター | 編み物カウンター２ | 段数カウンター simple counter | 段数カウンター：編み物 | 段数カウンター - rowtally | 段数カウンター 編み図メモ | garnest: 段数カウンター | knitrow: 段数カウンター 編み物
+JP '段数 カウンター' -> (none)
+JP '編み物 カウンター' -> 編み物カウンター２ | 編みものカウンター | 編み物 カウンター
+JP '毛糸' -> 毛糸クラッシュ | 毛糸ゲーム | 毛糸 | 毛糸ゲーム 無料 | 毛糸を外すゲーム | 毛糸 パズル | 毛糸管理 | 毛糸外し | 毛糸クラッシュ無料 | 毛糸を外す
+JP '毛糸 管理' -> あみかん 毛糸・作品の管理ができる初心者向け編み物アプリ | 毛糸 管理
+JP '棒針編み' -> 棒針編み | 棒針編み辞典 160記号 | knitpad: 棒針編みの編み図 | 棒針編み図エディタ
+JP 'かぎ針' -> かぎ針編み | かぎ針 | かぎ針編み 編み図 | かぎ針編み辞典 119記号 | かぎ針編み辞典 | かぎ針 編み図 作成 | かぎ針編み カウンター | かぎ針辞典 | かぎ針 編み図 | かぎ針 カウンター
+JP 'ゲージ' -> ピッチ ゲージ – 屋根計算ツール
+JP 'セーター 編み図' -> (none)
+JP '帽子 編み図' -> (none)
+JP 'マフラー 編み方' -> (none)
+JP 'ニット' -> ニット電卓 | ニット ゲーム | ニット | ニットカウンター | ニット パズル | ニットデザイン | ニットマスター | ニットドラゴン | ニットアウト | ニットマスター3d
+JP '編み物 初心者' -> (none)
+JP '編み図 無料' -> (none)
+JP '手編み' -> 手編み
+JP '棒針' -> 棒針編み | 棒針編み辞典 160記号 | 棒針 | knitpad: 棒針編みの編み図 | 棒針編み図エディタ
+JP 'ニット帽 編み方' -> (none)
+JP '糸 在庫' -> (none)
+--- JP '編み物' (48)
+ 1 Yarnpal: かぎ針編み＆棒針編み [1446]
+ 2 編み物カウンター あみも かぎ針編みと編み図の編み物アプリ [172]
+ 3 編み物カウンター２ [907]
+ 4 かぎ針編み辞典 119記号 [25]
+ 5 Knit design - 編み物図面作成 [153]
+ 6 編みものカウンター [238]
+ 7 LoopCraft: かぎ針編み＆棒針編み初心者向け [286]
+ 8 AmiAmu [29]
+ 9 棒針編み辞典 160記号 [25]
+10 ハマナカあみものレシピ [20]
+--- JP '編み図' (45)
+ 1 AmiAmu [29]
+ 2 Knit design - 編み物図面作成 [153]
+ 3 AMUU – かぎ針編みの編み図を簡単作成 [7]
+ 4 Yarnpal: かぎ針編み＆棒針編み [1446]
+ 5 編みものノート [2]
+ 6 Sheepas - 編み図エディタ [2]
+ 7 amu – かぎ針 編み図 作成アプリ｜編み物 図案 [25]
+ 8 編み物カウンター２ [907]
+ 9 編み図ライブラリ [0]
+10 編み物カウンター あみも かぎ針編みと編み図の編み物アプリ [172]
+--- JP '段数カウンター' (49)
+ 1 編み物カウンター２ [907]
+ 2 編みものカウンター [238]
+ 3 段数カウンター Simple Counter [1]
+ 4 編み物カウンター あみも かぎ針編みと編み図の編み物アプリ [172]
+ 5 かんたん編み物カウンター - 編み図・段数・作品記録・かぎ針 [4]
+ 6 Rowvo 段数ログ：編み物・かぎ針用 [0]
+ 7 段数カウンター：編み物 [0]
+ 8 編み物 段数カウンター DDak [0]
+ 9 RowCounter: 編み物カウンター [0]
+10 編みアシ - 編み物アシスタント [10]
+--- JP '毛糸 管理' (50)
+ 1 あみかん 毛糸・作品の管理ができる初心者向け編み物アプリ [60]
+ 2 けいと管理 [49]
+ 3 ころんと、いと。 [3]
+ 4 KnitStock - 毛糸管理 [4]
+ 5 毛糸ホルダー [2]
+ 6 あみカウント - 編み図のマス目を読み取る段数カウンター [1]
+ 7 Lalithaa Jewellery [0]
+ 8 あみつむぎ - 編み物の作品記録/毛糸管理/カウンター [12]
+ 9 編み物カウンター あみも かぎ針編みと編み図の編み物アプリ [172]
+10 Ameily Lab [0]
+--- JP '棒針編み' (49)
+ 1 棒針編み辞典 160記号 [25]
+ 2 かぎ針編み辞典 119記号 [25]
+ 3 編み物カウンター あみも かぎ針編みと編み図の編み物アプリ [172]
+ 4 Knit design - 編み物図面作成 [153]
+ 5 編み物カウンター２ [907]
+ 6 Yarnpal: かぎ針編み＆棒針編み [1446]
+ 7 棒針編み図エディタ [0]
+ 8 LoopCraft: かぎ針編み＆棒針編み初心者向け [286]
+ 9 kntd:discover - Ravelry お供 [69]
+10 cromu: かぎ針・棒針編み [0]
+##### out/l1.txt
+MX 'tejer' -> juego de tejer | pelotte: crochet y tejer | knitpad: gráficos para tejer | aprender a tejer | tejer | tejer: tutoriales y patrones | amiashi - asistente para tejer | contador de vueltas para tejer | contador de vueltas: tejer | crochet club: aprende a tejer
+MX 'estambre' -> estambre
+MX 'patrones de tejido' -> patrones de tejido y punto
+MX 'contador de vueltas' -> contador de vueltas tejido | contador de vueltas | garnio: contador de vueltas | loopenzo: contador de vueltas | pelote – contador de vueltas | contador de vueltas para tejer | contador de vueltas: crochet | contador de vueltas crochet | contador de vueltas: tejer | swimlap: contador de vueltas
+MX 'agujas de tejer' -> (none)
+MX 'gorro tejido' -> (none)
+MX 'tejido a dos agujas' -> (none)
+MX 'tejer para principiantes' -> (none)
+BR 'tricô' -> pelotte: crochê e tricô | knitpad: gráficos de tricô | patternrail: contador de tricô | yarnpal: crochê e tricô | tricô e crochê - criar moldes | tricô: tutoriais e receitas | cablewick: crochê e tricô | contador clique tricô estoque | contador de carreiras de tricô | contador de carreiras tricô
+BR 'tricotar' -> tricotar pixel: fluxo de cores
+BR 'receita de tricô' -> yarngrid: receita de tricô
+BR 'contador de voltas' -> contador de voltas | swimlap: contador de voltas
+BR 'contador de carreiras' -> pelote – contador de carreiras | contador de carreiras crochê | contador de carreiras tricô | contador de carreiras de tricô | contador de carreiras: tricô | crochet: contador de carreiras | garnest: contador de carreiras | knitkit contador de carreiras | rowby: contador de carreiras
+BR 'lã' -> caos de lãs | jogo de lã | lã dragao | jogo da lã | lã | desenrolar lã | caos de lãs -jogos bus traffic | lãberit | cuidat-e qwerty-lãberit | dưỡng lão bình mỹ
+BR 'agulhas de tricô' -> (none)
+BR 'crochê' -> app de crochê grátis | pelotte: crochê e tricô | app de crochê | loopenzo: contador crochê | crochê gratuito | aprender a fazer crochê | yarnpal: crochê e tricô | jogos crochê | yarnbie: crochê e tricô | crochê com adel: receitas
+PT 'tricot' -> tricot | tricoté serré | mitaine : tricot & crochet | knitpad: gráficos de tricot | gina tricot | tricotar pixel: fluxo de cores | tricot: tutoriais e padrões | tricotilomania ttm : calm hair | tricotonic | febre tricot classificação fio
+PT 'malha' -> malhada: learn k-drama korean | malhaface club | malhaebwa show travel | exercicios em casa :zux malhar | garota malhação – a treinadora | musicas para malhar | rowglow: croché e malha | silkscreen gradiente de malha
+PT 'padrões de malha' -> (none)
+PT 'contador de carreiras' -> pelote – contador de carreiras | contador de carreiras: croché | contador de carreiras de tricô | contador de carreiras—rowtally | contador de carreiras tricô | contador de carreiras: tricô | crochet: contador de carreiras | rowby: contador de carreiras
+PT 'lã' -> desata: quebra-cabeças de lã | jogo lã | caos de lãs | caos de lã | caos de lãs -jogos bus traffic | cuidat-e qwerty-lãberit | fuga de carros: lã sort | mestre da seleção de lãs | mundo da lã puzzle zen | ordenação de flechas de lã
+PT 'novelos' -> (none)
+PT 'agulhas' -> (none)
+PT 'tricô' -> patternrail: contador de tricô | tricô para iniciantes app | contador carreiras tricô | contador de carreiras de tricô | contador de carreiras tricô | contador de carreiras: tricô | contador de tricô | contador de tricô fácil | croché & tricô - amimo | croché e tricô fácil
+RU 'вязание' -> вязание крючком | вязание спицами | вязание легко | вязание схемы | вязание крючком бесплатно | вязание игра | вязание | ии вязание: схемы вязания | игры вязание | счетчик вязание
+RU 'вязание спицами' -> вязание спицами | knit logic: вязание спицами
+RU 'схемы вязания' -> схемы вязания | схемы вязания крючком | knitpad: схемы вязания спицами | ии вязание: схемы вязания | схемы вязания крючком, счётчик | схемы вязания спицами | yarngrid: схемы вязания
+RU 'счетчик рядов' -> счетчик рядов вязание | счётчик рядов для вязания | счетчик рядов | knitme — счётчик рядов | счётчик рядов вязания | счётчик рядов: вязание | счётчик рядов - rowtally | счётчик рядов вязание крючком | pocopoco счётчи�
+RU 'пряжа' -> пряжа удар | игра пряжа | пряжа дракон | пряжа по цветам | пряжа | пряжа удар игра | пряжа ужар | пряжа удар: 3d парковки игра | пряжа удар: спасение игра | пряжа удар: 3d спасение игра
+RU 'спицы' -> hooked: крючок и спицы | yarnpal – крючок и спицы
+RU 'шапка спицами' -> (none)
+RU 'свитер спицами' -> (none)
+TR 'örgü' -> örgü öğren | örgü modelleri | örgü oyunu | örgü örme | örgü oyunları | örgü çözme oyunu | örgü | örgü sökme | örgü çözme | knitale: örgü sıra sayacı
+TR 'örgü modelleri' -> örgü modelleri
+TR 'sıra sayacı' -> pelote – sıra sayacı | knitale: örgü sıra sayacı | patternrail: örgü sıra sayacı
+TR 'örgü sayacı' -> örgü sayacı | tığcı: tığ i̇şi ve örgü sayacı
+TR 'yün' -> yün oyunu | yün sıralama | yün | düğüm çöz: yün ip bulmacası
+TR 'şiş' -> şişe doldurma | şişe çevirmece | şişe oyunu | şişe doldurma oyunu | şişe vurmaca | şişe | şişe çevirme | şişe oyunları | şişe çevirme oyunu | şişe doldurmaca
+TR 'bere örgü' -> (none)
+TR 'örgü kazak' -> (none)
+UA "в'язання" -> (none)
+UA "схеми в'язання" -> (none)
+UA 'лічильник рядів' -> лічильник рядів | pelote – лічильник рядів
+UA 'пряжа' -> пряжа удар | пряжа | розплутай: пряжа та затишок | sarlag - пряжа из монголии
+UA 'спиці' -> (none)
+UA "в'язання спицями" -> (none)
+UA "в'язання гачком" -> (none)
+UA 'лічильник рядків' -> (none)
+##### out/l2serp.txt
+--- CZ 'pletení' (50)
+ 1 Mistr třídění vlny: Pletení a [0]
+ 2 Třídění Vlny: Rozmotat Nit [1]
+ 3 Knitly - Pocitadlo pleteni [0]
+ 4 amimo - Počítadlo pletení [0]
+ 5 Softly: Pletení a háčkování [0]
+ 6 Cloud Yarn: Háčkování, Pletení [0]
+--- CZ 'počítadlo řádků' (2)
+ 1 LoopPal: Háčkování, počítadlo [0]
+ 2 Cablewick: Háčkování a pletení [0]
+--- SK 'pletenie' (49)
+ 1 Knit It: Pletenie a Háčkovanie [1]
+ 2 Hackovanie a pletenie [0]
+ 3 Knotly: Pletenie a háčkovanie [0]
+ 4 Yarnie - Crochet Patterns [1]
+ 5 KnitPad: Schémy na pletenie [0]
+ 6 Stitchory: Pletenie a háčik [0]
+--- SK 'počítadlo radov' (12)
+ 1 Počítadlo radov háčkovanie [0]
+ 2 Knitly - Pocitadlo Pletenia [0]
+ 3 RowGlow: počítadlo radov [0]
+ 4 Garnest: Počítadlo radov [0]
+ 5 LoopPal: Háčkovanie, počítadlo [0]
+ 6 Knit It: Pletenie a Háčkovanie [1]
+--- HU 'kötés' (49)
+ 1 Knit It: Kötés és Horgolás [0]
+ 2 Knotly: Horgolás és Kötés [0]
+ 3 Horgolás és kötés fonal [1]
+ 4 Cablewick: Horgolás és kötés [0]
+ 5 Knit Logic: Kötés minták Tűvel [0]
+ 6 Stitchory: Kötés és Horgolás [0]
+--- HU 'sorszámláló' (28)
+ 1 Sorszámláló horgoláshoz [0]
+ 2 Sorszámláló horgolás kötés [0]
+ 3 RowGlow: sorszámláló [0]
+ 4 Sorszámláló - RowTally [0]
+ 5 Rowsy: Crochet Sorszámláló [0]
+ 6 Pelote – Sorszámláló [0]
+--- RO 'tricotat' (50)
+ 1 Knit Logic: Modele Tricotat [0]
+ 2 Knotly: Croșetat & Tricotat [0]
+ 3 Knit It: Tricotat și Croșetat [1]
+ 4 Knitted - Jurnal tricotat [0]
+ 5 KnitPad: Scheme de tricotat [0]
+ 6 Cablewick: tricotat [0]
+--- RO 'contor rânduri' (34)
+ 1 Contor rânduri - RowTally [0]
+ 2 LoopPal: Contor rânduri croșet [0]
+ 3 RowGlow: contor rânduri [0]
+ 4 Croșetat: Modele și Contor [0]
+ 5 Rows & Stitches: Rânduri [0]
+ 6 CroșetAmic: croșetat și lână [0]
+--- HR 'pletenje' (50)
+ 1 Pletenje: Upute i Uzorci [0]
+ 2 Knit It: Pletenje i Heklanje [0]
+ 3 Knotly: Heklanje i pletenje [0]
+ 4 Pletenje groznice Zastoj sorti [0]
+ 5 Heklanje i pletenje vune [0]
+ 6 KnitPad: Sheme za pletenje [0]
+--- HR 'brojač redova' (24)
+ 1 Brojač redova [0]
+ 2 Garnest: Brojač Redova [0]
+ 3 Row & Repeat Brojač redova [0]
+ 4 RowGlow: brojač redova [0]
+ 5 Brojač redova za heklanje [0]
+ 6 PocoPoco Brojač redova [0]
+--- SI 'pletenje' (0)
+--- SI 'števec vrstic' (0)
+--- GR 'πλέξιμο' (49)
+ 1 Yarnie - Crochet Patterns [0]
+ 2 Knotly: Πλέξιμο & Βελονάκι [0]
+ 3 amimo - Μετρητής πλεξίματος [0]
+ 4 Ταξινόμηση Μαλλιού: Ξεμπέρδεμα [0]
+ 5 Knit It: Πλέξιμο & Βελονάκι [0]
+ 6 Πλέξιμο: Οδηγοί & Σχέδια [0]
+--- GR 'μετρητής σειρών' (25)
+ 1 KnitNote: Μετρητής σειρών [0]
+ 2 Pelote – Μετρητής σειρών [0]
+ 3 Row & Repeat Μετρητής σειρών [0]
+ 4 PocoPoco Μετρητής σειρών [0]
+ 5 Garnest: Μετρητής Σειρών [0]
+ 6 Μετρητής σειρών για βελονάκι [0]
+##### out/l2.txt
+CZ 'pletení' -> knitpad: schémata na pletení
+CZ 'návody na pletení' -> (none)
+CZ 'počítadlo řádků' -> (none)
+CZ 'příze' -> (none)
+CZ 'jehlice' -> (none)
+CZ 'háčkování' -> háčkování
+CZ 'pletení svetru' -> (none)
+CZ 'čepice' -> (none)
+SK 'pletenie' -> knitpad: schémy na pletenie
+SK 'návody na pletenie' -> (none)
+SK 'počítadlo radov' -> (none)
+SK 'priadza' -> (none)
+SK 'ihlice' -> (none)
+SK 'háčkovanie' -> háčkovanie
+SK 'pletený sveter' -> (none)
+HU 'kötés' -> knitpad: mintarajzok kötéshez
+HU 'kötésminták' -> (none)
+HU 'sorszámláló' -> pelote – sorszámláló
+HU 'fonal' -> fonal jatek | fonal | untangle: fonal fejtörő
+HU 'kötőtű' -> (none)
+HU 'horgolás' -> horgolás
+HU 'kötés minták' -> (none)
+HU 'kötés kezdőknek' -> (none)
+RO 'tricotat' -> knitpad: scheme de tricotat
+RO 'modele tricotat' -> (none)
+RO 'contor rânduri' -> (none)
+RO 'lână' -> (none)
+RO 'ace de tricotat' -> (none)
+RO 'croșetat' -> (none)
+RO 'tricotaj' -> (none)
+RO 'contor de rânduri' -> (none)
+HR 'pletenje' -> knitpad: sheme za pletenje
+HR 'uzorci za pletenje' -> (none)
+HR 'brojač redova' -> (none)
+HR 'vuna' -> (none)
+HR 'pređa' -> (none)
+HR 'kukičanje' -> (none)
+HR 'pletenje kapa' -> (none)
+SI 'pletenje' -> (none)
+SI 'vzorci za pletenje' -> (none)
+SI 'števec vrstic' -> (none)
+SI 'volna' -> volnalink | volnastretch растяжка и фитнес | volnau | olempic by volna
+SI 'preja' -> prejane's succulents
+SI 'kvačkanje' -> (none)
+SI 'pletenje kapa' -> (none)
+GR 'πλέξιμο' -> (none)
+GR 'πλεκτά' -> (none)
+GR 'μοτίβα πλεξίματος' -> (none)
+GR 'μετρητής σειρών' -> pelote – μετρητής σειρών
+GR 'μαλλί' -> (none)
+GR 'βελόνες πλεξίματος' -> (none)
+GR 'βελονάκι' -> (none)
+GR 'πλέξιμο για αρχάριους' -> (none)
+##### out/l3serp.txt
+--- KR '뜨개질' (49)
+ 1 Knitflow 니트플로우: 뜨개 기록 & 도구 [90]
+ 2 함께 떠요 [116]
+ 3 YarnPal - 코바늘 & 대바늘 [214]
+ 4 Crochet Pattern Maker App [0]
+ 5 amimo - 뜨개질 카운터 코바늘 대바늘 [7]
+ 6 한코친구 [5]
+--- KR '뜨개질 도안' (48)
+ 1 amu – 코바늘 도안 제작 앱｜뜨개질 도안 [2]
+ 2 뜨개질 단수 카운터·코수 기록 [0]
+ 3 Yarnbie: 코바늘 뜨개질 [5]
+ 4 쓔쓔닛츠 - 뜨개질의 모든 것을 한 번에 [5]
+ 5 YarnGrid: 뜨개 도안 [0]
+ 6 YarnFit: 뜨개 도안 만들기 [0]
+--- CN '编织' (47)
+ 1 编织助手 [66]
+ 2 编织计数器 — 棒针&钩针 [151]
+ 3 编织人生论坛 [130]
+ 4 线岛 - 织女从毛线到编织、钩织的记录管理 [26]
+ 5 织团团 [9]
+ 6 Vintage Charts：编织与刺绣 [0]
+--- CN '毛衣编织' (44)
+ 1 编织助手 [66]
+ 2 线岛 - 织女从毛线到编织、钩织的记录管理 [26]
+ 3 编织人生论坛 [130]
+ 4 kntd:discover - Ravelry Aide [149]
+ 5 手工客-让天下没有难学的手艺 [531]
+ 6 毛线小事 - 疯狂毛线消除游戏 [2]
+--- TW '編織' (50)
+ 1 YarnPal：鉤針與編織 [1734]
+ 2 amu – 鉤針 織圖 製作 App｜編織 圖案 [0]
+ 3 鉤針與棒針編織計數器 - amimo [13]
+ 4 編織計數器 — 棒針&鉤針 [28]
+ 5 鉤織好夥伴: 鉤針編織與毛線 [0]
+ 6 Yarny: 鉤織圖解與編織 [3]
+--- TW '棒針' (47)
+ 1 鉤針與棒針編織計數器 - amimo [13]
+ 2 LoopCraft：鉤針&棒針零基礎入門教學 [447]
+ 3 織女日記 | Vega Knit [9]
+ 4 棒針編み辞典 160記号 [2]
+ 5 knit with me [2]
+ 6 編織計數器 — 棒針&鉤針 [28]
+--- TH 'ถักไหมพรม' (48)
+ 1 Yarny: ลายถักโครเชต์ [1]
+ 2 Knitly - ตัวนับการถัก [0]
+ 3 เยิร์นนี่: ถักโครเชต์และนิตติ้ [1]
+ 4 ถักไหมพรมแบบเรียงด้าย [0]
+ 5 คัดขนแกะ: แกะปมไหม [2]
+ 6 Yarnie - Crochet Patterns [0]
+--- TH 'ไหมพรม' (50)
+ 1 Yarn Fever! Unravel Puzzle [5820]
+ 2 Wool Sort - เกมสกรู [1563]
+ 3 Wool Frenzy: เกมเรียงไหม 3D [299]
+ 4 ถักไหมพรมแบบเรียงด้าย [0]
+ 5 Wool Crush™-Bus Traffic Escape [11699]
+ 6 Wool Craze - เกมคลายเครียด [1184]
+--- VN 'đan len' (44)
+ 1 Xếp Len 3D (Wool Sorting) [8]
+ 2 Wool Escape 3D [259]
+ 3 Yarny: Móc Len & Đan Len [2]
+ 4 Renkli İp Bulmacası [0]
+ 5 Knit Logic：Đan Len Đan Kim Mẫu [0]
+ 6 iStitcher [2]
+--- VN 'len' (34)
+ 1 Lens - Quét và Chỉnh Sửa PDF [1249]
+ 2 Xếp Len 3D (Wool Sorting) [8]
+ 3 Lens - PDF Editor, WORD maker [6]
+ 4 Lens Dịch Hình ảnh Bằng Camera [1845]
+ 5 Lens: PDF Scanner & Editor [2]
+ 6 Yarny: Móc Len & Đan Len [2]
+--- ID 'rajut' (48)
+ 1 Yarny: Pola Rajut & Crochet [0]
+ 2 Benang Rajut Demam Sortir Mace [0]
+ 3 Yarn Out 3D [13]
+ 4 Wool Escape 3D [206]
+ 5 Wool Sort: Puzzle Benang [0]
+ 6 Yarnie: Rajut & Pola Amigurumi [0]
+--- ID 'merajut' (35)
+ 1 Yarny: Pola Rajut & Crochet [0]
+ 2 Yarn Pull 3D [6]
+ 3 Aplikasi belajar merajut [4]
+ 4 Merajut: Tutorial & Pola [0]
+ 5 Mobil Kabur: Sortir Benang [0]
+ 6 Yarnie - Crochet Patterns [1]
+--- MY 'knitting' (50)
+ 1 Ramatex Knitting [1]
+ 2 YarnPal - Crochet & Patterns [386]
+ 3 Loopsy - Crochet & Knitting [18]
+ 4 Knit Away - Yarn 3D [200]
+ 5 LoopCraft: Crochet & Knitting [60]
+ 6 Knitting Chart [2]
+--- MY 'rajut' (18)
+ 1 Yarn Out 3D [55]
+ 2 Susun Bulu: Urai Benang [0]
+ 3 YarnGrid: Corak Rajut [0]
+ 4 Ulin Rajut [0]
+ 5 Kawan Rajut: rajutan & benang [0]
+ 6 Yarny: Mengait & Crochet [0]
+--- SA 'حياكة' (46)
+ 1 حياكة [3]
+ 2 Knotly: حياكة وكروشيه [0]
+ 3 Yarnal - الحياكة والكروشيه [1]
+ 4 حمى الحياكة - فرز الخيوط [0]
+ 5 Hikaya - حكاية [9]
+ 6 Loopiva: تعلم الكروشيه [1]
+--- SA 'كروشيه' (49)
+ 1 YarnPal - كروشيه وتريكو [596]
+ 2 Woolsy - كروشيه وتريكو [272]
+ 3 Cloud Yarn: كروشيه وتريكو [0]
+ 4 Loopiva: تعلم الكروشيه [1]
+ 5 Yarnbie: كروشيه وتريكو [15]
+ 6 YarnCraft: Crochet & Knitting [0]
+IL סריגה ERR HTTP Error 400: Bad Request
+IL מונה שורות ERR HTTP Error 400: Bad Request
+--- RU 'вязание' (48)
+ 1 WoolBox - всё для вязания [141]
+ 2 Yarnbie: Вязание Крючком [30]
+ 3 Вязание легко [135]
+ 4 Вязание: Уроки и Схемы [0]
+ 5 Knittle - Дневник вязания [0]
+ 6 Mnemosina: вязание и выкройки [46]
+--- RU 'счетчик рядов' (40)
+ 1 Счетчиком Рядов [83]
+ 2 KnitMe — Счётчик рядов [15]
+ 3 Тасбих Счетчик Pro: Зикр [7976]
+ 4 Tally: Простой счётчик [8]
+ 5 Счётчик рядов: вязание [1]
+ 6 Счётчик рядов - RowTally [0]
+--- TR 'örgü' (46)
+ 1 Yarnbie: Örgü ve Tığ İşi [45]
+ 2 YarnPal – Tığ ve Örgü [1504]
+ 3 Stitchsong: Tığ ve Şiş Örgüsü [0]
+ 4 Örgü: Dersler ve Modeller [0]
+ 5 El İşi Dünyası [26]
+ 6 Örgüye Dair Herşey [4]
+--- TR 'sıra sayacı' (49)
+ 1 Sıra Sayacı: Örgü ve Tığ [1]
+ 2 Sıra Sayacı: Örgü ve Tığ İşi [0]
+ 3 KniTale: Örgü Sıra Sayacı [0]
+ 4 LoopPal: Tığ Sıra Sayacı [0]
+ 5 Örgü ve Tığ İşi Sıra Sayacı [0]
+ 6 Tığ İşi Sıra Sayacı - RowTally [0]
+--- BR 'tricô' (49)
+ 1 Tricô e Crochê - Criar Moldes [81]
+ 2 Febre  tricô classificação fio [1]
+ 3 LoopCraft: Introdução ao tricô [1814]
+ 4 Yarnpal: Crochê e Tricô [7616]
+ 5 Loopsy - Crochê e Tricô [87]
+ 6 Love Círculo [58]
+--- BR 'contador de carreiras' (50)
+ 1 Contador de Carreiras Crochê [0]
+ 2 Easy Knitty Row Counter knit [3]
+ 3 Contador de Carreiras [0]
+ 4 Contador de Cliques Tally [0]
+ 5 Contador de Carreiras: Tricô [0]
+ 6 Contador de Carreiras de Tricô [0]
+--- MX 'tejer' (49)
+ 1 Yarnpal: Crochet y Tejido [5300]
+ 2 Cross-stitch: app para pintar [128]
+ 3 Yarnbie: Crochet y Tejido [18]
+ 4 Knotly: Crochet & Tejido [0]
+ 5 Ordena Lana: Desenreda Hilo [0]
+ 6 Punto Fácil - Aprende a tejer [1]
+--- MX 'contador de vueltas' (49)
+ 1 Contador de vueltas [27]
+ 2 Vivid Counter [1]
+ 3 Knit Row Counter [1]
+ 4 Punto Fácil - Aprende a tejer [1]
+ 5 Easy Knitty Tejido y ganchillo [6]
+ 6 LooseLoop - Craft Companion [16]
+--- UA "в'язання" (50)
+ 1 В’язання: Уроки та Схеми [0]
+ 2 Knit Logic: в’язання спицями [1]
+ 3 Yarnbie: В'язання Гачком [9]
+ 4 В’язальний ажіотаж Сортування [0]
+ 5 Knitly - Лічильник В'язання [0]
+ 6 Knotly: В'язання гачком [0]
+--- UA 'лічильник рядів' (49)
+ 1 KnitRow Tracker [1]
+ 2 Лічильник рядів - RowTally [0]
+ 3 Лічильник кліків і рядів [0]
+ 4 Stitchory: лічильник в'язання [0]
+ 5 Knitly - Лічильник В'язання [0]
+ 6 Skeinly: Crochet Row Counter [0]
+--- PT 'tricot' (49)
+ 1 Tricô para iniciantes app [17]
+ 2 Yarnpal: Crochê e Tricô [795]
+ 3 Knitting Genius - Knit Easy! [3]
+ 4 ABOUT YOU Loja de Moda Online [33071]
+ 5 Vinted: compra e vende 2ª mão [327073]
+ 6 Knitflow — Knitting & Crochet [0]
+--- PT 'contador de carreiras' (46)
+ 1 Contador de Carreiras: Croché [0]
+ 2 Easy Knitty Row Counter knit [0]
+ 3 Contador de Carreiras de Tricô [0]
+ 4 Contador de Tricô [0]
+ 5 Contador de Cliques Tally [0]
+ 6 Loopsy - Croché e Tricô [24]
+##### out/l3.txt
+IL 'סריגה' -> סריגה | knitpad: תרשימי סריגה | slav&so | סריגה
+IL 'דפוסי סריגה' -> (none)
+IL 'מונה שורות' -> (none)
+IL 'צמר' -> צמרים | התרת קשרים: פאזל צמר נעים
+IL 'חוט' -> חוטים
+IL 'מסרגות' -> (none)
+IL 'סריגה למתחילים' -> (none)
+SA 'حياكة' -> patternrail: عدّاد صفوف حياكة | حياكة
+SA 'تريكو' -> تروكولر | تريكو النول والذراع
+SA 'أنماط حياكة' -> (none)
+SA 'عداد صفوف' -> patternrail: عدّاد صفوف حياكة
+SA 'صوف' -> لعبة صوف | صوف | لعبة صوفيا | صوفيا ستور sofia store | إيكو صوفا | eco sofa | القاريء شيخ عبدالرشيد صوفي
+SA 'كروشيه' -> تعليم كروشيه | كروشيه
+SA 'حياكة الصوف' -> (none)
+SA 'عداد الغرز' -> (none)
+KR '뜨개질' -> 뜨개질 단수 카운터 | 뜨개질게임 | 뜨개질 도안 | 뜨개질퍼즐 | 뜨개질 | pelotte: 뜨개질 카운터 | minou - 미누와 뜨개질 | 뜨개질 단수 카운터·코수 기록 | 뜨개질 카운터 & 단수 트래커 | 뜨개질 도우미
+KR '뜨개 도안' -> 뜨개 도안 | knitpad: 대바늘 뜨개 도안 | rowkeeper-뜨개 도안 뷰어 | yarnfit: 뜨개 도안 만들기 | yarngrid: 뜨개 도안
+KR '단수 카운터' -> pelote – 단수 카운터 | knitbit: 뜨개 단수 카운터·계수기 | 뜨개질 단수 카운터 | 단수 카운터: 뜨개질 코바늘 | 단수 카운터: 뜨개질 | 단수 카운터: 사진 도안 ai | knitkit 뜨개질 단수 카운터 | knitnote: 단수 카운터 | pocopoco 뜨개질 단수 카운터 | row counter: 뜨개 단수 카운터
+KR '털실' -> 털실 마스터 | 털실고양이 | 털실게임 | 털실 | 용 털실 | 고양이 털실 | 털실 마스터 - 마법의 정렬 버스주차퍼즐게임 | 털실을 풀다 3d | 털실 뽑기 3d: 색깔 분류 퍼즐 | 털실 뱀 엉킴 퍼즐
+KR '대바늘' -> knitpad: 대바늘 뜨개 도안 | 대바늘 | amimo - 뜨개질 카운터 코바늘 대바늘 | knit logik: 뜨개질 대바늘 도안 무늬 니트 | purl ai: 코바늘 & 대바늘 | yarnpal - 코바늘 & 대바늘
+KR '코바늘' -> 코바늘 도안 | amu – 코바늘 도안 제작 앱｜뜨개질 도안 | 코바늘 | 코바늘 단수 카운터 - rowtally | 코바늘 단수 카운터와 메모 | 코바늘짝꿍: 코바늘뜨기와 실 | 코바늘 도안 & 단수 카운터 | yarnpal - 코바늘 & 대바늘 | amimo - 뜨개질 카운터 코바늘 대바늘 | cromu: 코바늘·대바늘 뜨개질
+KR '뜨개질 앱' -> (none)
+KR '뜨개 카운터' -> 뜨개 카운터
+KR '뜨개질 도안' -> 뜨개질 도안 | 뜨개질 도안 - 코바늘 실 | 야니: 코바늘 뜨개질 도안 생성기
+CN '编织' -> 编织计数器 | 编织人生 | 编织助手 | 编织人生论坛 | 编织教程 | 编织计数器 — 棒针&钩针 | 编织 | knitbit 编织计数器-钩织毛线助手 | pelote – 编织行数计数器 | 编织：棒针教程与图解大全
+CN '毛线' -> 毛线大师 | 毛线消不停 | 毛线消消 | 毛线解压馆 | 毛线消除 | 毛线来解压 | 毛线我最强 | 毛线球 | 毛线 | 毛线小精灵
+CN '编织图解' -> 编织图解 | yarngrid: 编织图解生成
+CN '行数计数器' -> 行数计数器：编织钩针 | 行数计数器 钩针 棒针 编织
+CN '棒针' -> 编织计数器 — 棒针&钩针 | knitpad: 棒针编织图解 | 棒针 | amimo - 编织计数器 钩针 棒针 | 编织好伙伴: 棒针编织与毛线 | 行数计数器 钩针 棒针 编织
+CN '毛衣编织' -> 毛衣编织教程 | 毛衣编织
+CN '钩针' -> 钩针图解 | yarnbie: 钩针编织指南 | 钩针 | 钩针编织教程与毛线图解 | 钩针编织：图解与行数计数器 | 钩针行数计数器 - rowtally | amimo - 编织计数器 钩针 棒针 | cablewick: 钩针编织 | cromu: 钩针和棒针编织 | hooked: 钩针与棒针编织
+CN '织毛衣' -> 织毛衣
+CN '编织计数器' -> 编织计数器 | 编织计数器 — 棒针&钩针 | knitbit 编织计数器-钩织毛线助手 | 编织计数器与进度笔记 | amimo - 编织计数器 钩针 棒针 | knitly - 编织计数器 | pocopoco 编织计数器 | rowglow 编织计数器 | rowvo 编织计数器 | slowknit 慢织 - 编织计数器与智能图解
+TW '編織' -> 編織計數器 | 編織計數器 — 棒針&鉤針 | 編織毛線 | 編織 | knitbit 編織計數器-鉤針毛線針織 | pelote – 編織段數計數器 | 編織 髮型 和 理髮 對於 女孩 | 編織助手 | 編織：棒針教學與圖解大全 | 編織狂熱 3d 紗線分類 yarn fever
+TW '毛線' -> 毛線衝擊 | 毛線遊戲 | 毛線 | 毛線衝擊 - traffic jam公車遊戲 塞車解謎 | 毛線先生 | 毛線空間 拼圖挑戰 | 毛線軸：編織顏色分類 | 毛線流動：紗線顏色匹配 | knit & roll: 毛線球益智 | knit match: 毛線拼圖
+TW '編織圖解' -> (none)
+TW '針數計數器' -> (none)
+TW '棒針' -> 編織計數器 — 棒針&鉤針 | knitpad: 棒針織圖 | 棒針 | 棒針編み辞典 160記号 | 編織好夥伴: 棒針編織與毛線
+TW '毛衣編織' -> (none)
+TW '鉤針' -> 鉤針 | knitbit 編織計數器-鉤針毛線針織 | amu – 鉤針 織圖 製作 app｜編織 圖案 | 鉤針與棒針編織計數器 - amimo | 鉤針編織教學與毛線圖解 | 鉤針編織:織圖與段數計數器 | cablewick: 鉤針編織 | hooked: 鉤針與棒針編織 | hooklings: 鉤針與棒針編織 | hookwise: 鉤針編織入門
+TW '織毛衣' -> (none)
+TW '編織計數器' -> 編織計數器 | 編織計數器 — 棒針&鉤針 | knitbit 編織計數器-鉤針毛線針織 | 編織計數器與進度筆記 | knitly - 編織計數器 | pocopoco 編織計數器 | rowglow 編織計數器 | stitchie 編織計數器
+TH 'ถักนิตติ้ง' -> (none)
+TH 'ถักไหมพรม' -> ถักไหมพรม
+TH 'แพทเทิร์นถัก' -> (none)
+TH 'ตัวนับแถว' -> (none)
+TH 'ไหมพรม' -> ไหมพรม
+TH 'ถักโครเชต์' -> (none)
+TH 'ถักเสื้อ' -> (none)
+TH 'นับแถวถัก' -> (none)
+VN 'đan len' -> game đan len | đan len
+VN 'mẫu đan len' -> (none)
+VN 'bộ đếm hàng' -> (none)
+VN 'len' -> lens | lên quân | lens scan | lens buddy | lenovo | lenyes fit | leno | lenovo headphone | lên dây đàn guitar | tiến lên miềm nam
+VN 'kim đan' -> (none)
+VN 'móc len' -> chart móc len | móc len | trò chơi móc len
+VN 'đếm hàng đan' -> (none)
+VN 'đan móc' -> (none)
+ID 'merajut' -> merajut
+ID 'pola rajut' -> (none)
+ID 'penghitung baris' -> (none)
+ID 'benang wol' -> game benang wol | benang wol
+ID 'jarum rajut' -> (none)
+ID 'rajutan' -> (none)
+ID 'pola rajutan' -> (none)
+ID 'rajut pemula' -> (none)
+MY 'merajut' -> (none)
+MY 'corak rajutan' -> (none)
+MY 'pembilang baris' -> (none)
+MY 'benang bulu' -> (none)
+MY 'mengait' -> knitpad: carta mengait
+MY 'rajut' -> rakuten
+MY 'knitting' -> knitting | knitale: knitting row counter | knitbit: knitting row counter | knitso: cozy knitting game | nextrow: crochet & knitting | pelotte: crochet & knitting | rowrest: crochet & knitting | ramatex knitting | knitting chart | knitting genius - knit easy!
+MY 'kait benang' -> (none)
+##### out/l4.txt
+IN 'बुनाई' -> knitpad: बुनाई चार्ट
+IN 'स्वेटर बुनाई' -> (none)
+IN 'ऊन' -> ऊन की डोर: शांत मस्तिष्क खेल
+IN 'बुनाई डिज़ाइन' -> (none)
+IN 'सलाई' -> (none)
+IN 'ऊन से स्वेटर' -> (none)
+IN 'knitting' -> crochet patterns & knitting | knitale: knitting row counter | knitbit: knitting row counter | knitso: cozy knitting game | nextrow: crochet & knitting | pelotte: crochet & knitting | rowrest: crochet & knitting | knitting game | knitting chart | knitting genius - knit easy!
+IN 'sweater design' -> (none)
+IN 'बुनाई पैटर्न' -> (none)
+IN 'ऊन का स्वेटर' -> (none)
+IN 'ગૂંથણ' -> (none)
+IN 'સ્વેટર ગૂંથણ' -> (none)
+IN 'ऊन बुनाई' -> (none)
+IN 'ಹೆಣಿಗೆ' -> (none)
+IN 'ಸ್ವೆಟರ್' -> (none)
+IN 'అల్లిక' -> (none)
+IN 'స్వెటర్ అల్లిక' -> (none)
+IN 'பின்னல்' -> (none)
+IN 'ஸ்வெட்டர் பின்னல்' -> (none)
+IN 'നെയ്ത്ത്' -> (none)
+IN 'സ്വെറ്റർ' -> (none)
+IN 'ଉଲ' -> (none)
+IN 'ସ୍ୱେଟର' -> (none)
+IN 'ਉੱਨ' -> (none)
+IN 'ਸਵੈਟਰ ਬੁਣਾਈ' -> (none)
+IN 'विणकाम' -> (none)
+IN 'लोकर' -> (none)
+BD 'বুনন' -> (none)
+BD 'সোয়েটার বোনা' -> (none)
+BD 'উল' -> (none)
+BD 'সোয়েটার ডিজাইন' -> (none)
+BD 'সোয়েটার' -> (none)
+PK 'بُنائی' -> (none)
+PK 'بنائی' -> (none)
+PK 'اون' -> الشورجة أونلاين | sagha online صاغة أونلاين | اونو -  x o اكس او - لعبة | alshamil online الشامل اونلاين | jorry online جوري اونلاين | onsite - اون سايت | roa’yaonline رؤيه اونلاين | splash online - سبلاش اون لاين | احجز دروس اونلاين | gaga | اخبار السعودية او�
+PK 'سویٹر بنائی' -> (none)
+PK 'سویٹر ڈیزائن' -> (none)
+PK 'سویٹر' -> (none)
+ES 'fer mitja' -> (none)
+ES 'patrons de punt' -> (none)
+ES 'comptador de voltes' -> (none)
+ES 'llana' -> la llanada | llamaya | llamadas telefonicas broma | llamadas | llamada falsa | llamada papa noel | llamadas spam | llamadas telefonicas | llamadas de broma | llamada policia
+ES 'mitja' -> mitjà de valencià | mitja marató barcelona | mitja | knitpad: gràfics de mitja | valenciano mitja | valencia mitja | mitja marató santa pola | corporacio catalana de mitjans audiovisuals, sa | valencià prova grau mitjà
+CA 'tricot' -> tricot | tricoté serré | mitaine : tricot & crochet | pelotte : crochet et tricot | tricotonic | marguerite couture & tricot | mi tricot visa | tribù monsieur tricot | trichstop trichotillomania app | trichotillomania: calm hair
+CA 'knitting' -> knitting row counter | knitting chart | knitting | pocket knitting | knitting game | knitting counter | knitale: knitting row counter | knitbit: knitting row counter | knitpad: knitting charts | knitso: cozy knitting game
+CA 'row counter' -> knitting row counter | row counter | pelote – row counter | knitale: knitting row counter | knitbit: knitting row counter | loopmark: crochet row counter | snug rows - row counter | crochet row counter | row counter for knitting | my row counter
+CA 'patrons de tricot' -> (none)
+CA 'compteur de rangs' -> garnio: compteur de rangs | loopenzo: compteur de rangs | loulaine : compteur de rangs | patternrail: compteur de rangs | muuch - compteur de rangs
+CA 'tricoter' -> tricoter
+MX 'tejer' -> juego de tejer | pelotte: crochet y tejer | knitpad: gráficos para tejer | aprender a tejer | tejer | tejer: tutoriales y patrones | amiashi - asistente para tejer | contador de vueltas para tejer | contador de vueltas: tejer | crochet club: aprende a tejer
+##### out/nl.txt
+NL 'breien' -> breien | pelotte: haken & breien | yarnpal – haken & breien | toerenteller breien app | breien: tutorials & patronen | breien haken tracker - loom | breimaatje: breien en garen | cablewick: haken en breien | cloud yarn: haken, breien | craft madeby: breien en haken
+NL 'breipatronen' -> knitpad: breipatronen
+NL 'breipatroon' -> yarngrid: breipatroon
+NL 'rijenteller' -> rijenteller voor haakwerk | row & repeat rijenteller
+NL 'rijenteller breien' -> (none)
+NL 'wol' -> wolt | wolvesville | wolt: food delivery | wolf of washington | wolf | wolfsville | wolf rijschool | wolfalert | wolow | wol
+NL 'garen' -> garena free fire | garenta | ontrafel: knusse garenpuzzel | garena international i private limited | garena international ii private limited | garenta - araç kiralama | garen malko | garena authenticator | garen slang tangle puzzel | garenne espace
+NL 'breinaalden' -> (none)
+NL 'stekenproef' -> (none)
+NL 'muts breien' -> (none)
+NL 'trui breien' -> (none)
+NL 'sjaal breien' -> (none)
+NL 'haken' -> leren haken | pelotte: haken & breien | knitbit: toerenteller haken | yarnpal – haken & breien | haken | woolsy: haken & breien | haken voor beginners: crova | haken mobile app | haken - official app | haken en breien - ribblr
+NL 'breiapp' -> (none)
+NL 'breiwerk' -> (none)
+NL 'voorraad' -> voorraad beheer | voorraad | voorraadkast | voorraad: stockroom | voorraad solvcrm+ | voorraadmaatje | envanto - voorraadbeheerder | stocky voorraad | tu tiendita: kassa en voorraad | voorraadkalender
+NL 'breien patronen gratis' -> (none)
+NL 'col' -> collage maken | collectr | color by number | color | collage maken gratis | collage | collectr pokemon | collector | color switch | colorbestie
+--- NL 'breien' (50)
+ 1 Yarnbie: Haken en Breien [4]
+ 2 YarnPal – Haken & Breien [455]
+ 3 Yarnal - Breien & Haken [86]
+ 4 Knit Logic: Breien patronen [0]
+ 5 BreiMaatje: breien en garen [0]
+ 6 Kleur op nummer: Cross-Stitch [147]
+ 7 Breikoorts Draad Sorteer Jam [0]
+ 8 Knitly - Breiteller [0]
+ 9 Loopsy - Haken & Breien [36]
+10 Stitchory: Breien & Haken [0]
+--- NL 'breipatronen' (4)
+ 1 KnitPad: Breipatronen [0]
+ 2 BreiMaatje: breien en garen [0]
+ 3 LanaGrossa(New) [0]
+ 4 Nysta: Breien met jouw garen [0]
+--- NL 'rijenteller' (23)
+ 1 Rijenteller voor haakwerk [0]
+ 2 EasyKnitty Breien Haken Teller [18]
+ 3 Rijenteller Breien [0]
+ 4 RowMate: Rijenteller breien [0]
+ 5 Haken voor beginners: Crova [0]
+ 6 BreiMaatje: breien en garen [0]
+ 7 Simple Counter – Toerenteller [0]
+ 8 Loopiva: Haken Leren [0]
+ 9 Teller: Tikteller & Tally [0]
+10 HaakMaatje: haken en garen [0]
+--- NL 'breiapp' (1)
+ 1 Knit The Chart [4]
+##### out/sv.txt
+SE 'sticka' -> stickäventyret | stickarchery master | stickah pro | stickai - photo to sticker | stickai - text to sticker | stickar: ar stickers & gifs | varvräknare - sticka & virka | craft madeby: sticka & virka | easy knitty sticka räknare | stitchory: sticka & virka
+SE 'stickning' -> stickning | stickningsfebertråd sortera sy | stickning: guider & mönster | stickningsapp | cablewick: stickning | carol: stickning och virkning | knit it: stickning & virkning | knit logic: stickning mönster | knotly: stickning & virkning | min bästa stickning
+SE 'stickmönster' -> knitpad: stickmönster | yarngrid: stickmönster
+SE 'stickrecept' -> (none)
+SE 'varvräknare' -> varvräknare | garnio: varvräknare & mönster | pelote – varvräknare | varvräknare - sticka & virka | varvräknare pro | varvräknare - rowtally | varvräknare: virka & sticka | varvräknare sticka virka | varvräknare för virkning | garnest: varvräknare
+SE 'varvräknare sticka' -> varvräknare - sticka & virka | varvräknare sticka virka
+SE 'garn' -> garn spel | garn | garmin | garnell | garnio: varvräknare & mönster | garnly | garny: preview for instagram | garnest: varvräknare | garn i 30 dagar, stretching | garna
+SE 'ull' -> gekås ullared | ullaredslistan | ullared | ulla popken: plus size fashion | ullna | ullna g&cc members | ullaredo | ullaredaren | ullna golf ab | ullna indoor
+SE 'garnlager' -> (none)
+SE 'stickor' -> stickora: character stickers
+SE 'maskprov' -> (none)
+SE 'mössa' -> (none)
+SE 'tröja sticka' -> (none)
+SE 'halsduk' -> fashion & style vägleda hur man bär en halsduk
+SE 'virka' -> virka | virka för nybörjare: crova | virka: mönster & varvräknare | craft madeby: sticka & virka | hookwise: lär dig virka | loopiva: lär dig virka | mosaic crochet: virka mönster | stitchory: sticka & virka | varvräknare - sticka & virka | varvräknare sticka virka
+SE 'stickapp' -> (none)
+SE 'stickbeskrivning' -> (none)
+SE 'stickprojekt' -> (none)
+SE 'garnförråd' -> (none)
+SE 'stickmönster gratis' -> (none)
+--- SE 'sticka' (47)
+ 1 Varvräknare - sticka & virka [64]
+ 2 YarnPal – Virkning & Stickning [548]
+ 3 Hobbii [1657]
+ 4 Crochet & Knitting Made Easy [0]
+ 5 KNIT – Stickjournal [48]
+ 6 Easy Knitty sticka räknare [7]
+ 7 Craft MadeBy: Sticka & Virka [0]
+ 8 Yarnal - Stickning & Virkning [10]
+ 9 Varvräknare: Virka & Sticka [0]
+10 Stick War: Legacy [1373]
+--- SE 'stickmönster' (18)
+ 1 Stickning: Guider & Mönster [0]
+ 2 KnitPad: Stickmönster [0]
+ 3 KnitYourPhoto [0]
+ 4 StickVän: stickning och garn [0]
+ 5 Ullie: Stickning & varvräknare [3]
+ 6 knit with me [0]
+ 7 Knit&Calc [0]
+ 8 Nysta: Stickning med ditt garn [0]
+ 9 amimo - Stick- och virkräknare [2]
+10 Lopapeysa Companion [0]
+--- SE 'varvräknare' (48)
+ 1 Varvräknare - sticka & virka [64]
+ 2 Varvräknare: Virka & Sticka [0]
+ 3 Varvräknare Pro [9]
+ 4 Knit It: Stickning & Virkning [1]
+ 5 Varvräknare - RowTally [0]
+ 6 Virka: Mönster & Varvräknare [1]
+ 7 Ullie: Stickning & varvräknare [3]
+ 8 Stickmästaren – Varvräknare [0]
+ 9 Simple Counter – Varvräknare [0]
+10 Garnest: Varvräknare [0]
+--- SE 'stickrecept' (0)
