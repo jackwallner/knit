@@ -142,7 +142,7 @@ def configure_review(client: A.ASCClient, version: dict) -> None:
         "contactFirstName": "Jack",
         "contactLastName": "Wallner",
         "contactPhone": review_phone(),
-        "contactEmail": "jackwallner@gmail.com",
+        "contactEmail": "jackwallner+rv@gmail.com",
         "demoAccountRequired": False,
         "notes": REVIEW_NOTES,
     }
