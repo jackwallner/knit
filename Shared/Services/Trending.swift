@@ -26,7 +26,10 @@ final class Trending {
 
     init(defaults: UserDefaults = .standard, now: Date = .now) {
         self.defaults = defaults
-        items = defaults.data(forKey: Self.cacheKey).map(Self.decode) ?? []
+        // A list fetched long ago is out of season: the calendar in the app knows better.
+        let fetched = defaults.object(forKey: Self.fetchedKey) as? Date
+        let isCurrent = fetched.map { now.timeIntervalSince($0) < 30 * 86_400 } ?? false
+        items = isCurrent ? defaults.data(forKey: Self.cacheKey).map(Self.decode) ?? [] : []
         if items.isEmpty { items = Self.bundled(for: now) }
     }
 

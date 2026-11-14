@@ -16,6 +16,9 @@ final class Project {
     var colorRaw: String = YarnColor.madder.rawValue
     /// Rows in one pattern repeat. 0 means the project has no repeat.
     var repeatLength: Int = 0
+    /// The row count when the repeat was set. The repeat is counted from the row after it,
+    /// so a repeat that follows a ribbed hem starts at 1 and not somewhere in the middle.
+    var repeatStart: Int = 0
     /// The row band the knitter left on the pattern: page index (-1 for none), then its position on that page.
     var markPage: Int = -1
     var markY: Double = 0
@@ -45,8 +48,8 @@ final class Project {
 
     /// How far into the current repeat the last finished row is, from 1 to `repeatLength`. 0 before the first row or with no repeat.
     var repeatPosition: Int {
-        guard repeatLength > 0, rows > 0 else { return 0 }
-        return (rows - 1) % repeatLength + 1
+        guard repeatLength > 0, rows > repeatStart else { return 0 }
+        return (rows - repeatStart - 1) % repeatLength + 1
     }
 
     var plan: PatternPlan? { planData.flatMap { try? JSONDecoder().decode(PatternPlan.self, from: $0) } }
@@ -56,14 +59,78 @@ final class Project {
         planData = try? JSONEncoder().encode(plan)
     }
 
-    func increment() { rows += 1 }
+    static let rowLimit = 99_999
+
+    func increment() { rows = min(rows + 1, Self.rowLimit) }
 
     func decrement() { rows = max(0, rows - 1) }
 
     /// Jumps straight to a row, for a project already under way when it was added.
-    func setRows(_ count: Int) { rows = min(max(count, 0), 99_999) }
+    func setRows(_ count: Int) {
+        rows = min(max(count, 0), Self.rowLimit)
+    }
+
+    /// Sets the rows in one repeat. A new repeat starts with the next row knitted.
+    func setRepeat(_ length: Int) {
+        let length = min(max(length, 0), 200)
+        if repeatLength == 0 || length == 0 { repeatStart = length == 0 ? 0 : rows }
+        repeatLength = length
+    }
 
     func toggleFinished(at date: Date = .now) { finishedAt = isFinished ? nil : date }
+
+    /// Writes the project to disk now. A row must never wait on an autosave.
+    func persist() { try? modelContext?.save() }
+}
+
+/// The counter's rules, in one place: every change to the count ends on disk.
+extension Project {
+    /// One tap: the next row. A library pattern stops at its last row and finishes itself there.
+    func knit(following plan: PatternPlan?) {
+        defer { persist() }
+        guard let plan else {
+            if !isFinished { increment() }
+            return
+        }
+        guard rows < plan.totalTaps else { return }
+        increment()
+        if rows == plan.totalTaps, !isFinished { toggleFinished() }
+    }
+
+    /// Takes the last row back. Stepping back from the end of a library pattern puts it on the needles again.
+    func unknit(following plan: PatternPlan?) {
+        decrement()
+        reopenIfUnfinished(plan)
+        persist()
+    }
+
+    /// Lands on a row without tapping up to it. In a library pattern the row is counted within the current section.
+    func jump(to row: Int, following plan: PatternPlan?) {
+        defer { persist() }
+        guard let plan else { return setRows(row) }
+        guard let spot = plan.position(at: rows) else { return }
+        let start = rows - spot.row
+        setRows(start + min(max(row, 1), plan.steps[spot.step].rows) - 1)
+    }
+
+    /// Lands on the first row of a section of a library pattern.
+    func jump(toTap tap: Int, following plan: PatternPlan) {
+        setRows(min(max(tap, 0), plan.totalTaps))
+        reopenIfUnfinished(plan)
+        persist()
+    }
+
+    /// Back to row 0, on the needles again, with any repeat counted from the first row.
+    func resetCount(following plan: PatternPlan?) {
+        setRows(0)
+        repeatStart = 0
+        if isFinished { toggleFinished() }
+        persist()
+    }
+
+    private func reopenIfUnfinished(_ plan: PatternPlan?) {
+        if let plan, isFinished, rows < plan.totalTaps { toggleFinished() }
+    }
 }
 
 @Model

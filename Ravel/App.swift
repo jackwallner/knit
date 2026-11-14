@@ -3,7 +3,7 @@ import SwiftUI
 
 @main
 struct RavelApp: App {
-    private let container: ModelContainer
+    private let container: ModelContainer?
 
     init() {
         let arguments = ProcessInfo.processInfo.arguments
@@ -16,14 +16,17 @@ struct RavelApp: App {
         SubscriptionService.shared.start()
         ReviewPrompt().recordLaunch()
         #if DEBUG
-        if arguments.contains("-SeedDemo") { Persistence.seedDemo(container.mainContext) }
+        if arguments.contains("-SeedDemo"), let container { Persistence.seedDemo(container.mainContext) }
         #endif
     }
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            if let container {
+                RootView().modelContainer(container)
+            } else {
+                StoreUnavailableView()
+            }
         }
-        .modelContainer(container)
     }
 }

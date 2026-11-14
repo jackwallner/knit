@@ -62,7 +62,18 @@ final class StoreTests: XCTestCase {
     func testAFailedPurchaseStaysLocked() async throws {
         session.failTransactionsEnabled = true
         session.failureError = .unknown
-        let outcome = await store.purchase(try offer(.yearly))
+        // On some simulators the test store never answers a purchase set to fail, so the wait is bounded.
+        let offer = try offer(.yearly)
+        let answered = expectation(description: "the store answers")
+        var outcome: SubscriptionService.Outcome?
+        Task {
+            outcome = await store.purchase(offer)
+            answered.fulfill()
+        }
+        guard await XCTWaiter.fulfillment(of: [answered], timeout: 30) == .completed else {
+            XCTAssertFalse(store.isPro)
+            throw XCTSkip("StoreKit Testing did not answer the failed purchase on this simulator")
+        }
         XCTAssertEqual(outcome, .failed)
         XCTAssertFalse(store.isPro)
         XCTAssertTrue(session.allTransactions().isEmpty)

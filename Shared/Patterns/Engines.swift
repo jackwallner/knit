@@ -10,16 +10,36 @@ enum Engines {
 
     private static func gaugeLine(_ g: Gauge) -> String {
         let format = FloatingPointFormatStyle<Double>.number.precision(.fractionLength(0...1))
-        return "Gauge: \(g.stitches.formatted(format)) stitches and \(g.rows.formatted(format)) rows over \(Sizing.swatch())"
+        return "Gauge: \(g.stitches.formatted(format)) stitches and \(g.rows.formatted(format)) rows over \(Sizing.swatch()) of stockinette, after blocking. Use the needle that gives you this gauge"
     }
 
-    private static func yarnLine(_ yards: Int) -> String { "About \(Sizing.yardage(yards)) of yarn" }
+    /// The yarn weight a knitter would shop for at this gauge.
+    private static func weight(_ g: Gauge) -> YarnWeight {
+        YarnWeight.allCases.min { abs($0.gauge.stitches - g.stitches) < abs($1.gauge.stitches - g.stitches) } ?? .worsted
+    }
+
+    private static func yarnLine(_ yards: Int, _ g: Gauge) -> String {
+        "About \(Sizing.yardage(yards)) of \(weight(g).label.lowercased()) weight yarn"
+    }
+
+    /// Closes a pattern. The yarn asked for is never less than what the written rows use, plus a reserve.
+    private static func pattern(_ b: PlanBuilder, estimate: Int, yarnNote: String = "", tools: [String], finished: String, gauge g: Gauge) -> PatternPlan {
+        let yards = max(estimate, Sizing.yards(worked: b.steps, spi: g.spi))
+        return PatternPlan(steps: b.steps, materials: [yarnLine(yards, g) + yarnNote] + tools + [gaugeLine(g)], finished: finished, yards: yards)
+    }
+
+    /// "19.5 in around, to fit a 22 in head": the number a knitter checks against the swatch, then who it fits.
+    private static func fits(_ stitches: Int, _ g: Gauge, _ part: String, _ size: Double) -> String {
+        "\(Sizing.inches(Double(stitches) / g.spi)) around, to fit a \(Sizing.inches(size)) \(part)"
+    }
 
     /// Wording for `count` increases spread evenly over `stitches` stitches.
     private static func spread(_ count: Int, over stitches: Int) -> String {
         let gap = max(1, stitches / count)
         let rest = stitches - gap * count
-        return "Work (k\(gap), M1) \(count) times" + (rest > 0 ? ", knit the last \(rest)" : "")
+        // Leftover stitches go one to a repeat, so the increases never bunch at one side.
+        guard rest > 0, rest < count else { return "Work (k\(gap), M1) \(count) times" + (rest > 0 ? ", knit the last \(rest)" : "") }
+        return "Work (k\(gap + 1), M1) \(rest) times, then (k\(gap), M1) \(count - rest) times"
     }
 
     private static func even(_ value: Double, minimum: Int = 2) -> Int { max(minimum, 2 * Int((value / 2).rounded())) }
@@ -47,17 +67,25 @@ enum Engines {
         if style == .slouch { b.row(spread(body - brim, over: brim), stitches: body) }
         b.work(["Knit"], rows: bodyRounds, stitches: body)
         b.section = "Crown"
-        for round in crown { b.row(round.text, stitches: round.stitches) }
+        for round in switching(crown, g) { b.row(round.text, stitches: round.stitches) }
         b.section = "Finishing"
         b.action("Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.")
 
         let yards = Sizing.yards(squareInches: Double(body) / g.spi * height, spi: g.spi)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) \(Sizing.cable(16)) circular needle", "Double-pointed needles in the same size for the crown", "Stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "Fits a \(Sizing.inches(head)) head",
-            yards: yards
-        )
+        // A small hat does not reach around a 16 in circular, so it is knit on the short needles throughout.
+        let needles = Double(brim) / g.spi < 16
+            ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop"]
+            : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "Double-pointed needles in the same size for the crown"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: fits(brim, g, "head", head), gauge: g)
+    }
+
+    /// Says once, on the round where a 16 in needle stops reaching, to move to the short needles.
+    private static func switching(_ rounds: [(text: String, stitches: Int)], _ g: Gauge) -> [(text: String, stitches: Int)] {
+        var rounds = rounds
+        if let index = rounds.firstIndex(where: { Double($0.stitches) / g.spi < 14 && $0.text != "Knit" }) {
+            rounds[index].text += ". Change to double-pointed needles when the stitches no longer reach around"
+        }
+        return rounds
     }
 
     /// Eight wedges, decreased every other round for the first half and every round after, down to 8 stitches.
@@ -104,12 +132,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off loosely\(texture == .garter ? "" : " in pattern"). Weave in the ends.")
         let yards = Sizing.yards(squareInches: width * length, spi: g.spi, factor: factor)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) needles", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(width)) wide, \(Sizing.inches(length)) long",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide, \(Sizing.inches(length)) long", gauge: g)
     }
 
     static func cowl(_ texture: Texture, around: Double, height: Double, gauge g: Gauge) -> PatternPlan {
@@ -117,9 +140,9 @@ enum Engines {
         b.section = "Cowl"
         let caston: Int
         if texture == .seed {
-            caston = Sizing.stitches(around, per: g.spi, multiple: 2, extra: 1)
+            caston = Sizing.stitches(around, per: g.spi, multiple: 2)
             b.action("Cast on \(caston) stitches. Join in the round without twisting and place a marker.", stitches: caston)
-            b.work(["*K1, p1; repeat from * to the last stitch, k1", "*P1, k1; repeat from * to the last stitch, p1"], rows: Sizing.rows(height, per: g.rpi * 1.1, even: true), stitches: caston)
+            b.work(["*K1, p1; repeat from * around", "*P1, k1; repeat from * around"], rows: Sizing.rows(height, per: g.rpi * 1.1, even: true), stitches: caston)
         } else if texture == .garter {
             caston = Sizing.stitches(around, per: g.spi, minimum: 20)
             b.action("Cast on \(caston) stitches. Join in the round without twisting and place a marker.", stitches: caston)
@@ -132,12 +155,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off loosely\(texture == .garter ? "" : " in pattern"). Weave in the ends.")
         let yards = Sizing.yards(squareInches: around * height, spi: g.spi, factor: texture == .seed ? 1.15 : texture == .garter ? 1.25 : 1.3)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) \(Sizing.cable(around < 30 ? 16 : 32)) circular needle", "Stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(around)) around, \(Sizing.inches(height)) tall",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(Sizing.cable(Double(caston) / g.spi < 20 ? 16 : Double(caston) / g.spi < 34 ? 24 : 32)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(around)) around, \(Sizing.inches(height)) tall", gauge: g)
     }
 
     // MARK: Blankets and home
@@ -165,12 +183,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off loosely. Weave in the ends.")
         let yards = Sizing.yards(squareInches: width * length, spi: g.spi, factor: bordered ? 1.05 : 1.25)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) circular needle, \(Sizing.cable(32)) or longer, worked flat", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(width)) wide, \(Sizing.inches(length)) long",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) circular needle, \(Sizing.cable(32)) or longer, worked flat", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide, \(Sizing.inches(length)) long", gauge: g)
     }
 
     /// Knit corner to corner: grow by a stitch a row to the diagonal, then shrink back.
@@ -186,12 +199,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off the last 4 stitches. Weave in the ends.")
         let yards = Sizing.yards(squareInches: side * side, spi: g.spi, factor: 1.25)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards) + ", cotton for a cloth that scrubs", "\(g.needle.label) needles", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(side)) square",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, yarnNote: ", cotton for a cloth that scrubs", tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(side)) square", gauge: g)
     }
 
     // MARK: Accessories
@@ -205,12 +213,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off loosely in pattern. Weave in the ends.")
         let yards = Sizing.yards(squareInches: head * width, spi: g.spi, factor: 1.3)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) \(Sizing.cable(16)) circular needle", "Stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "Fits a \(Sizing.inches(head)) head, \(Sizing.inches(width)) wide",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(fits(caston, g, "head", head)), \(Sizing.inches(width)) wide", gauge: g)
     }
 
     /// Fingerless mitts with a slit for the thumb, worked as a pair.
@@ -225,21 +228,17 @@ enum Engines {
             b.section = "\(name) · Hand"
             b.work(["Knit"], rows: Sizing.rows(hand * 0.2, per: g.rpi, minimum: 2), stitches: caston)
             b.section = "\(name) · Thumb Opening"
-            b.work(["Knit to the marker, turn", "Purl to the marker, turn"], rows: Sizing.rows(hand * 0.25, per: g.rpi, even: true, minimum: 4), stitches: caston)
-            b.section = "\(name) · Hand"
-            b.row("Knit to the marker and join in the round again", stitches: caston)
+            // Two knit stitches at each edge keep the sides of the slit from rolling.
+            b.work(["Knit to the end of the round, turn", "K2, purl to the last 2 stitches, k2, turn"], rows: Sizing.rows(hand * 0.25, per: g.rpi, even: true, minimum: 4), stitches: caston)
+            b.section = "\(name) · Upper Hand"
+            b.row("Knit to the end of the round and join in the round again", stitches: caston)
             b.work(["Knit"], rows: Sizing.rows(hand * 0.15, per: g.rpi, minimum: 2) - 1, stitches: caston)
             b.section = "\(name) · Top"
             b.work(["*K2, p2; repeat from * around"], rows: Sizing.rows(hand * 0.1, per: g.rpi, minimum: 3), stitches: caston)
             b.action("Bind off loosely in pattern. Weave in the ends.")
         }
         let yards = Sizing.yards(squareInches: hand * hand * 1.03 * 2, spi: g.spi, factor: 1.15)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "Fits a \(Sizing.inches(hand)) hand, \(Sizing.inches(hand * 1.03)) long",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle"], finished: "\(fits(caston, g, "hand", hand)), \(Sizing.inches(hand * 1.03)) long", gauge: g)
     }
 
     static func legWarmers(calf: Double, length: Double, gauge g: Gauge) -> PatternPlan {
@@ -259,17 +258,12 @@ enum Engines {
             b.action("Bind off loosely in pattern. Weave in the ends.")
         }
         let yards = Sizing.yards(squareInches: calf * length * 2, spi: g.spi, factor: 1.1)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "Fits a \(Sizing.inches(calf)) calf, \(Sizing.inches(length)) long",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle"], finished: "\(fits(caston, g, "calf", calf)), \(Sizing.inches(length)) long", gauge: g)
     }
 
     /// A garter triangle worked from the middle of the top edge down, four stitches wider every other row.
     static func shawl(wingspan: Double, gauge g: Gauge) -> PatternPlan {
-        let pairs = max(8, Int(((wingspan * g.spi * 1.13 - 5) / 4).rounded()))
+        let pairs = max(8, Int(((wingspan * g.spi * 1.3 - 5) / 4).rounded()))
         let last = 5 + pairs * 4
         var b = PlanBuilder()
         b.section = "Shawl"
@@ -279,12 +273,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off all \(last) stitches loosely. Weave in the ends and block to open up the fabric.")
         let yards = Sizing.yards(squareInches: wingspan * wingspan / 4, spi: g.spi, factor: 0.9)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) circular needle, \(Sizing.cable(32)) or longer, worked flat", "Removable stitch marker", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(wingspan)) across, \(Sizing.inches(wingspan / 2)) deep after blocking",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) circular needle, \(Sizing.cable(32)) or longer, worked flat", "Removable stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(wingspan)) across, \(Sizing.inches(wingspan / 2)) deep after blocking", gauge: g)
     }
 
     /// A garter scarf that starts at a point, widens to the middle and narrows back, to tie at the neck.
@@ -292,7 +281,7 @@ enum Engines {
         let widest = Sizing.stitches(width, per: g.spi, minimum: 8)
         let total = Sizing.rows(length, per: g.spi * 2, even: true)
         // Shape on every `interval`th row so each taper takes about two fifths of the length.
-        let interval = min(12, even(Double(total) * 0.4 / Double(widest - 3)))
+        let interval = min(12, max(2, 2 * Int(Double(total) * 0.4 / Double(widest - 3) / 2)))
         let taper = (widest - 3) * interval
         let middle = max(2, even(Double(total - taper * 2)))
         let plain = Array(repeating: "Knit", count: interval - 1)
@@ -307,23 +296,22 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off the last 3 stitches. Weave in the ends.")
         let yards = Sizing.yards(squareInches: width * length * 0.6, spi: g.spi, factor: 1.25)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) needles", "Tapestry needle", gaugeLine(g)],
-            finished: "\(Sizing.inches(Double(taper * 2 + middle) / (g.spi * 2))) long, \(Sizing.inches(width)) at the widest",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(Double(taper * 2 + middle) / (g.spi * 2))) long, \(Sizing.inches(width)) at the widest", gauge: g)
     }
 
     /// A headband of rope cables on a purl ground, knit flat and seamed at the back.
     static func cableHeadband(head: Double, width: Double, gauge g: Gauge) -> PatternPlan {
         // Cables pull the fabric in by about a fifth.
-        let cables = max(1, Int(((width * g.spi * 1.2 - 6) / 8).rounded()))
-        let caston = cables * 8 + 6
-        let rows = max(16, 8 * Int((head * 0.88 * g.rpi / 8).rounded()))
-        let right = "K2, p2, *k6, p2; repeat from * to the last 2 stitches, k2"
-        let wrong = "K4, *p6, k2; repeat from * to the last 2 stitches, k2"
-        let cross = "K2, p2, *C6F, p2; repeat from * to the last 2 stitches, k2"
+        let target = width * g.spi * 1.2
+        let cables = max(1, Int((target - 6) / 8))
+        // Up to 3 extra purl stitches a side, so the band tracks the width asked for between cable counts.
+        let side = min(3, max(0, Int(((target - Double(cables * 8 + 6)) / 2).rounded())))
+        let caston = cables * 8 + 6 + side * 2
+        let rows = max(16, 8 * Int((head * 0.92 * g.rpi / 8).rounded()))
+        let close = side > 0 ? "to the last \(side + 2) stitches, p\(side), k2" : "to the last 2 stitches, k2"
+        let right = "K2, p\(side + 2), *k6, p2; repeat from * \(close)"
+        let wrong = "K\(side + 4), *p6, k2; repeat from * to the last \(side + 2) stitches, k\(side + 2)"
+        let cross = "K2, p\(side + 2), *C6F, p2; repeat from * \(close)"
         var b = PlanBuilder()
         b.section = "Band"
         b.action("Cast on \(caston) stitches.", stitches: caston)
@@ -331,12 +319,7 @@ enum Engines {
         b.section = "Finishing"
         b.action("Bind off. Sew the cast-on edge to the bound-off edge and weave in the ends.")
         let yards = Sizing.yards(squareInches: head * Double(caston) / (g.spi * 1.2), spi: g.spi, factor: 1.4)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [yarnLine(yards), "\(g.needle.label) needles", "Cable needle", "Tapestry needle", gaugeLine(g)],
-            finished: "Fits a \(Sizing.inches(head)) head, \(Sizing.inches(Double(caston) / (g.spi * 1.2))) wide",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Cable needle", "Tapestry needle"], finished: "Fits a \(Sizing.inches(head)) head, \(Sizing.inches(Double(caston) / (g.spi * 1.2))) wide", gauge: g)
     }
 
     /// A hood worked in the round from the neck up, opened for the face and closed like a hat.
@@ -351,35 +334,28 @@ enum Engines {
 
         var b = PlanBuilder()
         b.section = "Neck"
-        b.action("Cast on \(around) stitches. Join in the round without twisting and place a marker.", stitches: around)
+        b.action("Loosely cast on \(around) stitches, so the neck stretches over the head. Join in the round without twisting and place a marker.", stitches: around)
         b.work(["*K2, p2; repeat from * around"], rows: Sizing.rows(head * 0.2, per: g.rpi, minimum: 6), stitches: around)
         b.work(["Knit"], rows: Sizing.rows(head * 0.07, per: g.rpi, minimum: 2), stitches: around)
         b.section = "Face Opening"
         b.row("Bind off \(face) stitches, knit to the end, turn", stitches: around - face)
-        b.work(["Purl, turn", "Knit, turn"], rows: faceRows, stitches: around - face)
-        b.action("Cast on \(face) stitches with the backward loop method, then join in the round again.", stitches: around)
+        // An odd count of rows here ends on a purl row, so the right side faces for the rejoin.
+        b.work(["Purl to the end, turn", "Knit to the end, turn"], rows: faceRows - 1, stitches: around - face)
+        b.row("Knit to the end. Do not turn", stitches: around - face)
+        b.action("With the right side still facing, cast on \(face) stitches with the backward loop method, then join in the round again. Move the marker here: this is the new start of the round.", stitches: around)
         b.section = "Top"
         b.work(["Knit"], rows: top, stitches: around)
         b.section = "Crown"
-        for round in crown { b.row(round.text, stitches: round.stitches) }
+        for round in switching(crown, g) { b.row(round.text, stitches: round.stitches) }
         b.action("Cut the yarn, thread it through the last 8 stitches and pull tight.")
         b.section = "Face Edging"
-        b.action("With the smaller needles, pick up and knit \(edging) stitches around the face opening. Join in the round.", stitches: edging)
+        b.action("Join new yarn at a lower corner of the face opening. With the smaller needles, pick up and knit \(edging) stitches around the face opening. Join in the round.", stitches: edging)
         b.work(["*K1, p1; repeat from * around"], rows: Sizing.rows(0.75, per: g.rpi, minimum: 3), stitches: edging)
         b.section = "Finishing"
         b.action("Bind off loosely in pattern. Weave in the ends.")
 
         let yards = Sizing.yards(squareInches: Double(around) / g.spi * head * 0.75, spi: g.spi, factor: 1.1)
-        return PatternPlan(
-            steps: b.steps,
-            materials: [
-                yarnLine(yards), "\(g.needle.label) \(Sizing.cable(16)) circular needle",
-                "Double-pointed needles in the same size for the crown",
-                "\(g.ribNeedle.label) double-pointed needles for the face edging", "Stitch marker", "Tapestry needle", gaugeLine(g),
-            ],
-            finished: "Fits a \(Sizing.inches(head)) head",
-            yards: yards
-        )
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "Double-pointed needles in the same size for the crown", "\(g.ribNeedle.label) double-pointed needles for the face edging", "Stitch marker", "Tapestry needle"], finished: fits(around, g, "head", head), gauge: g)
     }
 
     // MARK: Sweater
@@ -400,9 +376,11 @@ enum Engines {
 
     /// A crew-neck pullover knit from the neck down in one piece. The body and
     /// the sleeves grow at their own rates, so large sizes keep a neck that fits.
-    static func raglan(chest: Double, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge) -> Raglan {
+    /// `chest` is the finished chest. `wearer` is the chest it was sized from, when the knitter gave one.
+    static func raglan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge) -> Raglan {
         let body = Sizing.stitches(chest, per: g.spi, multiple: 4)
-        let arm = chest * 0.31 + 1.6
+        // Larger sizes need a little more room in the upper arm than a straight line gives.
+        let arm = max(chest * 0.31 + 1.6, chest > 48 ? chest * 0.34 : 0)
         let sleeve = even(arm * g.spi, minimum: 12)
         let underarm = min(even(Double(body) * 0.07), sleeve - 8)
         let panel = (body - 2 * underarm) / 2
@@ -421,16 +399,16 @@ enum Engines {
         let packed = max(0, 2 * total - yokeRounds)
 
         let all = "*K1, M1L, knit to 1 stitch before the marker, M1R, k1, slip marker; repeat from * 3 more times"
-        let bodyOnly = "Knit to the marker, slip marker, k1, M1L, knit to 1 stitch before the marker, M1R, k1, slip marker, knit to the marker, slip marker, k1, M1L, knit to 1 stitch before the marker, M1R, k1"
+        let bodyOnly = "Knit to the marker, slip marker, k1, M1L, knit to 1 stitch before the marker, M1R, k1, slip marker, knit to the marker, slip marker, k1, M1L, knit to 1 stitch before the marker, M1R, k1, slip marker"
         let sleevesOnly = "*K1, M1L, knit to 1 stitch before the marker, M1R, k1, slip marker, knit to the marker, slip marker; repeat from * once more"
 
         var b = PlanBuilder()
         b.section = "Neckband"
-        b.action("With the smaller \(Sizing.cable(16)) needle, cast on \(neck) stitches. Join in the round without twisting and place a marker.", stitches: neck)
+        b.action("With the smaller \(Sizing.cable(16)) needle, loosely cast on \(neck) stitches, so the neck stretches over the head. Join in the round without twisting and place a marker.", stitches: neck)
         b.work(["*K1, p1; repeat from * around"], rows: Sizing.rows(1, per: g.rpi, minimum: 4), stitches: neck)
 
         b.section = "Yoke"
-        b.row("Change to the larger needle. K\(sleeveAtNeck) for a sleeve, place marker, k\(backAtNeck) for the front, place marker, k\(sleeveAtNeck) for a sleeve, place marker, k\(backAtNeck) for the back", stitches: neck)
+        b.row("Change to the larger needle. K\(sleeveAtNeck) for a sleeve, place marker, k\(backAtNeck) for the front, place marker, k\(sleeveAtNeck) for a sleeve, place marker, k\(backAtNeck) for the back. Move to the longer needle when the stitches crowd", stitches: neck)
         var onNeedle = neck
         let cuts = Array(Set([0, packed, shared, total])).sorted()
         for (start, end) in zip(cuts, cuts.dropFirst()) {
@@ -460,12 +438,11 @@ enum Engines {
         let cuffRounds = Sizing.rows(min(2, sleeveLength * 0.2), per: g.rpi, minimum: 4)
         let straight = Sizing.rows(1.5, per: g.rpi)
         let sleeveRounds = max(straight + 2, Sizing.rows(sleeveLength, per: g.rpi) - cuffRounds)
-        var decreases = max(0, (sleeve - even(chest * 0.14 * g.spi + 3 * g.spi, minimum: 8)) / 2)
-        var spacing = decreases > 0 ? (sleeveRounds - straight) / decreases : 0
-        if decreases > 0, spacing < 1 {
-            decreases = sleeveRounds - straight
-            spacing = 1
-        }
+        // A cuff no wider than 10.5 in, reached with decreases at least 4 rounds apart: a short sleeve
+        // keeps the stitches it has no room to lose, where packing the decreases would make a funnel.
+        let wanted = max(0, (sleeve - even(min(chest * 0.14 + 3, 10.5) * g.spi, minimum: 8)) / 2)
+        let decreases = min(wanted, max(0, (sleeveRounds - straight) / 4))
+        let spacing = decreases > 0 ? (sleeveRounds - straight) / decreases : 0
         let cuff = sleeve - 2 * decreases
         for name in ["First Sleeve", "Second Sleeve"] {
             b.section = name
@@ -485,19 +462,12 @@ enum Engines {
 
         let finishedChest = Double(body) / g.spi
         let area = finishedChest * (length + depth) + (arm + Double(cuff) / g.spi) * sleeveLength + arm * depth
-        let yards = Sizing.yards(squareInches: area, spi: g.spi)
-        let plan = PatternPlan(
-            steps: b.steps,
-            materials: [
-                yarnLine(yards),
-                "\(g.needle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(32))",
-                "\(g.ribNeedle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(32)), for the ribbing",
-                "Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop",
-                "4 stitch markers, waste yarn, tapestry needle",
-                gaugeLine(g),
-            ],
-            finished: "Chest \(Sizing.inches(finishedChest)), body \(Sizing.inches(length)) from the underarm, sleeve \(Sizing.inches(sleeveLength)) from the underarm",
-            yards: yards
+        let fit = wearer.map { ", to fit a \(Sizing.inches($0)) chest with \(Sizing.inches(finishedChest - $0)) of ease" } ?? ""
+        let plan = pattern(
+            b, estimate: Sizing.yards(squareInches: area, spi: g.spi),
+            tools: ["\(g.needle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(32))", "\(g.ribNeedle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(32)), for the ribbing", "Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop", "4 stitch markers, waste yarn, tapestry needle"],
+            finished: "Finished chest \(Sizing.inches(finishedChest))\(fit). Body \(Sizing.inches(length)) and sleeve \(Sizing.inches(sleeveLength)) from the underarm",
+            gauge: g
         )
         return Raglan(plan: plan, neck: neck, body: body, sleeve: sleeve, cuff: cuff, underarm: underarm, backAtNeck: backAtNeck, sleeveAtNeck: sleeveAtNeck, bodyIncreases: bodyIncreases, sleeveIncreases: sleeveIncreases, yokeRounds: yokeRounds)
     }

@@ -1,9 +1,11 @@
+import StoreKit
 import SwiftData
 import SwiftUI
 
 struct ProjectsView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.openURL) private var openURL
+    @Environment(\.requestReview) private var requestReview
     @Query(sort: \Project.createdAt, order: .reverse) private var projects: [Project]
     @State private var path: [Project] = []
     @State private var naming = false
@@ -33,6 +35,7 @@ struct ProjectsView: View {
             .overlay { if projects.isEmpty { empty } }
             .navigationTitle("Projects")
             .navigationDestination(for: Project.self) { ProjectView(project: $0) }
+            .onChange(of: path) { _, open in if open.isEmpty { askForRatingIfDue() } }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("New Project", systemImage: "plus") { naming = true }
@@ -44,7 +47,10 @@ struct ProjectsView: View {
                             ReviewPrompt().markOpenedStore()
                             openURL(Links.writeReview)
                         }
-                        Button("Send Feedback", systemImage: "envelope") { openURL(Links.feedback) }
+                        // With no Mail account the address cannot open; the help page carries it too.
+                        Button("Send Feedback", systemImage: "envelope") {
+                            openURL(Links.feedback) { opened in if !opened { openURL(Links.support) } }
+                        }
                         Button("Help", systemImage: "questionmark.circle") { openURL(Links.support) }
                     } label: {
                         Image(systemName: "ellipsis")
@@ -122,9 +128,21 @@ struct ProjectsView: View {
         }
     }
 
+    /// Back at the list with the knitting set down: the ask comes here, never over the work itself.
+    private func askForRatingIfDue() {
+        let prompt = ReviewPrompt()
+        Task {
+            try? await Task.sleep(for: .seconds(1.5))
+            guard path.isEmpty, !naming, deleting == nil, prompt.shouldAsk() else { return }
+            prompt.markAsked()
+            requestReview()
+        }
+    }
+
     private func remove(_ project: Project) {
         PatternStore.delete(project.patternFile)
         context.delete(project)
+        try? context.save()
     }
 
     private func create() {
@@ -133,6 +151,7 @@ struct ProjectsView: View {
         let color = YarnColor.allCases[projects.count % YarnColor.allCases.count]
         let project = Project(name: trimmed.isEmpty ? "Untitled" : trimmed, color: color)
         context.insert(project)
+        try? context.save()
         name = ""
         path = [project]
     }

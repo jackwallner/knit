@@ -88,9 +88,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
 
     var level: Level {
         switch self {
-        case .garterScarf, .garterBlanket, .dishcloth, .ribbedScarf, .seedScarf: .beginner
-        case .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .borderedBlanket, .earWarmer, .legWarmers, .triangleShawl, .chunkyCowl, .neckScarf: .easy
-        case .handwarmers, .raglanPullover, .cableHeadband, .balaclava: .intermediate
+        case .garterScarf, .garterBlanket, .ribbedScarf, .seedScarf: .beginner
+        case .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .borderedBlanket, .earWarmer, .legWarmers, .triangleShawl, .chunkyCowl, .neckScarf, .dishcloth, .handwarmers: .easy
+        case .raglanPullover, .cableHeadband, .balaclava: .intermediate
         }
     }
 
@@ -174,7 +174,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .balaclava:
             [Measure(key: "head", label: "Head", range: 17...26, step: 0.5)]
         case .raglanPullover:
-            [Measure(key: "chest", label: "Chest", range: 28...66, step: 1), Measure(key: "body", label: "Body Length", range: 8...22, step: 0.5), Measure(key: "sleeve", label: "Sleeve Length", range: 10...22, step: 0.5)]
+            [Measure(key: "chest", label: "Chest", range: 26...62, step: 1), Measure(key: "body", label: "Body Length", range: 8...22, step: 0.5), Measure(key: "sleeve", label: "Sleeve Length", range: 10...22, step: 0.5)]
         }
     }
 
@@ -203,10 +203,13 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .balaclava:
             [("Child", 20), ("Small", 21), ("Medium", 22), ("Large", 23.5)].map { NamedSize(name: $0.0, values: ["head": $0.1]) }
         case .raglanPullover:
-            [("XS", 32, 14, 17), ("S", 36, 14.5, 17.5), ("M", 40, 15, 18), ("L", 44, 15.5, 18.5), ("XL", 48, 16, 19), ("2X", 52, 16.5, 19), ("3X", 56, 17, 19.5), ("4X", 60, 17, 19.5), ("5X", 64, 17.5, 20)]
+            [("XS", 30, 14, 17), ("S", 34, 14.5, 17.5), ("M", 38, 15, 18), ("L", 42, 15.5, 18.5), ("XL", 46, 16, 19), ("2X", 50, 16.5, 19), ("3X", 54, 17, 19.5), ("4X", 58, 17, 19.5), ("5X", 62, 17.5, 20)]
                 .map { NamedSize(name: $0.0, values: ["chest": $0.1, "body": $0.2, "sleeve": $0.3]) }
         }
     }
+
+    /// Inches a pullover is knit larger than the chest it is for: a classic, easy fit.
+    static let sweaterEase = 3.0
 
     /// The size a new knitter most likely wants.
     var defaultSize: NamedSize {
@@ -243,7 +246,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .neckScarf: return Engines.neckScarf(length: value("length"), width: value("width"), gauge: gauge)
         case .cableHeadband: return Engines.cableHeadband(head: value("head"), width: value("width"), gauge: gauge)
         case .balaclava: return Engines.balaclava(head: value("head"), gauge: gauge)
-        case .raglanPullover: return Engines.raglan(chest: value("chest"), body: value("body"), sleeve: value("sleeve"), gauge: gauge).plan
+        // The chest a knitter measures is the body: the sweater is knit with room to wear over it.
+        case .raglanPullover: return Engines.raglan(chest: value("chest") + Self.sweaterEase, wearer: value("chest"), body: value("body"), sleeve: value("sleeve"), gauge: gauge).plan
         }
     }
 }

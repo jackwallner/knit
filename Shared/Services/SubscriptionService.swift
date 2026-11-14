@@ -56,7 +56,7 @@ struct Offer: Identifiable, Equatable, Sendable {
 
     var disclosure: String {
         if term == .lifetime { return "One payment of \(price). Every pattern is yours for good." }
-        return (trialDays > 0 ? "\(trialDays) days free, then \(priceLine)." : "\(priceLine).") + " Renews until you cancel in Settings."
+        return (trialDays > 0 ? "\(trialDays) days free, then \(priceLine)." : "\(priceLine).") + " Renews until you cancel in Settings. A pattern you cast on is yours to keep."
     }
 
     #if DEBUG
@@ -72,7 +72,9 @@ struct Offer: Identifiable, Equatable, Sendable {
 @MainActor
 @Observable
 final class SubscriptionService {
-    enum Outcome: Equatable { case purchased, cancelled, pending, failed }
+    /// `unconfirmed`: the store took the payment but the entitlement has not arrived yet.
+    enum Outcome: Equatable { case purchased, cancelled, pending, unconfirmed, failed }
+    enum Restored: Equatable { case found, notFound, cancelled, failed }
 
     static let shared = SubscriptionService()
 
@@ -187,17 +189,23 @@ final class SubscriptionService {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return .cancelled }
             apply(result.customerInfo)
-            return isPro ? .purchased : .pending
+            // Paid, but the entitlement can trail the receipt by a moment: ask once more before saying so.
+            if !isPro, let info = try? await Purchases.shared.customerInfo(fetchPolicy: .fetchCurrent) { apply(info) }
+            return isPro ? .purchased : .unconfirmed
         } catch {
             return (error as? ErrorCode) == .paymentPendingError ? .pending : .failed
         }
     }
 
-    /// True when a subscription was found.
-    func restore() async -> Bool {
-        guard isConfigured, let info = try? await Purchases.shared.restorePurchases() else { return isPro }
-        apply(info)
-        return isPro
+    /// Looks for an earlier purchase. A failure to reach the store is not the same as finding nothing.
+    func restore() async -> Restored {
+        guard isConfigured else { return isPro ? .found : .notFound }
+        do { apply(try await Purchases.shared.restorePurchases()) } catch {
+            if isPro { return .found }
+            // Closing the Apple Account sign-in is a change of mind, not a failure.
+            return (error as? ErrorCode) == .purchaseCancelledError ? .cancelled : .failed
+        }
+        return isPro ? .found : .notFound
     }
 
     private func apply(_ info: CustomerInfo) {

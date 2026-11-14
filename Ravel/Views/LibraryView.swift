@@ -174,10 +174,13 @@ struct DesignView: View {
             showingPaywall = true
             return
         }
+        // A second quick tap must not cast on twice.
+        guard opened == nil else { return }
         let project = Project(name: design.name, color: design.yarn)
         project.follow(plan, of: design)
         project.needles = gauge.needle.label
         context.insert(project)
+        try? context.save()
         opened = project
     }
 

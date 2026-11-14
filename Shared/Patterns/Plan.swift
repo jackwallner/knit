@@ -29,6 +29,21 @@ struct Step: Codable, Equatable, Sendable {
     func stitches(after row: Int) -> Int? { stitches.map { $0 + delta * (row / texts.count) } }
 }
 
+extension Step {
+    /// A cast-on project keeps its plan for good, so a plan saved by an older version must always
+    /// open. Any key added after 1.0 has to be read with `decodeIfPresent` here.
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        section = try values.decode(String.self, forKey: .section)
+        texts = try values.decode([String].self, forKey: .texts)
+        rows = try values.decode(Int.self, forKey: .rows)
+        stitches = try values.decodeIfPresent(Int.self, forKey: .stitches)
+        delta = try values.decodeIfPresent(Int.self, forKey: .delta) ?? 0
+        isAction = try values.decodeIfPresent(Bool.self, forKey: .isAction) ?? false
+        if texts.isEmpty { texts = [""] }
+    }
+}
+
 /// A full pattern, sized: every row, in order, plus what to buy.
 struct PatternPlan: Codable, Equatable, Sendable {
     var steps: [Step]
@@ -63,6 +78,26 @@ struct PatternPlan: Codable, Equatable, Sendable {
 }
 
 extension PatternPlan {
+    /// See `Step.init(from:)`: plans saved by older versions must keep opening.
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        steps = try values.decode([Step].self, forKey: .steps)
+        materials = try values.decodeIfPresent([String].self, forKey: .materials) ?? []
+        finished = try values.decodeIfPresent(String.self, forKey: .finished) ?? ""
+        yards = try values.decodeIfPresent(Int.self, forKey: .yards) ?? 0
+    }
+
+    /// Each section with the tap it starts on, in knitting order.
+    var sections: [(name: String, tap: Int)] {
+        var found: [(name: String, tap: Int)] = []
+        var tap = 0
+        for step in steps {
+            if found.last?.name != step.section { found.append((step.section, tap)) }
+            tap += step.rows
+        }
+        return found
+    }
+
     private static let glossary: [(term: String, meaning: String)] = [
         ("k2tog", "Knit 2 stitches together"),
         ("ssk", "Slip 2 stitches knitwise one at a time, then knit them together through the back"),
@@ -71,12 +106,25 @@ extension PatternPlan {
         ("M1L", "Make 1 left: lift the bar from the front and knit it through the back"),
         ("M1R", "Make 1 right: lift the bar from the back and knit it through the front"),
         ("C6F", "Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle"),
+        ("k", "Knit. K2 is knit 2 stitches"),
+        ("p", "Purl. P2 is purl 2 stitches"),
+        ("repeat from", "Work the stitches after the * again and again, as far as the row says"),
+        ("marker", "A ring on the needle that marks a spot. Slip it from the left needle to the right when you reach it"),
+        ("turn", "Swap the needles between your hands and work back the other way"),
+        ("join in the round", "Knit the first cast-on stitch with the working yarn to close the circle, with the cast-on edge lying flat, not spiraled, around the needle"),
+        ("backward loop", "Twist a loop of the working yarn and slide it onto the right needle. Each loop is 1 stitch"),
+        ("pick up and knit", "Push the needle through the edge of the fabric, wrap the yarn and pull a loop through. Each loop is 1 stitch"),
+        ("in pattern", "Knit the knit stitches and purl the purl stitches as you bind off"),
     ]
 
     /// The abbreviations this pattern uses, spelled out.
     var abbreviations: [(term: String, meaning: String)] {
         let text = steps.flatMap(\.texts).joined(separator: " ")
-        return Self.glossary.filter { text.range(of: "\\b\($0.term)\\b", options: [.regularExpression, .caseInsensitive]) != nil }
+        return Self.glossary.filter { entry in
+            // "k" and "p" stand in front of a count: k2, p14.
+            let pattern = entry.term.count == 1 ? "\\b\(entry.term)\\d" : "\\b\(entry.term)\\b"
+            return text.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil
+        }
     }
 }
 
@@ -121,6 +169,17 @@ enum Sizing {
     /// `factor` covers stitches that eat more yarn than stockinette.
     static func yards(squareInches: Double, spi: Double, factor: Double = 1) -> Int {
         let raw = squareInches * 0.17 * spi * 1.1 * factor
+        return max(10, Int((raw / 10).rounded(.up)) * 10)
+    }
+
+    /// Yardage counted from the rows a pattern actually writes: every stitch takes about 4.3 times its
+    /// own width in yarn, and 15 percent is added for the swatch, the ends and a loose hand.
+    static func yards(worked steps: [Step], spi: Double) -> Int {
+        var stitches = 0
+        for step in steps where !step.isAction {
+            for row in 0..<step.rows { stitches += step.stitches(after: row) ?? 0 }
+        }
+        let raw = Double(stitches) * 4.3 / spi / 36 * 1.15
         return max(10, Int((raw / 10).rounded(.up)) * 10)
     }
 

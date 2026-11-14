@@ -3,17 +3,19 @@ import SwiftData
 import UIKit
 
 enum Persistence {
-    /// A store that will not open falls back to memory so the app still launches.
+    /// Opens the knitter's store. Nil when the store on disk will not open: the app then says so
+    /// and leaves the file alone, where a quiet in-memory stand-in would look like every project
+    /// was gone and would lose whatever was counted next.
     @MainActor
-    static func container(inMemory: Bool) -> ModelContainer {
+    static func container(inMemory: Bool, at url: URL? = nil) -> ModelContainer? {
         let schema = Schema([Project.self, Yarn.self, Needle.self])
+        if inMemory {
+            return try? ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
+        }
         // A fresh install has no Application Support folder; without it the first open logs a failed attempt.
         try? FileManager.default.createDirectory(at: .applicationSupportDirectory, withIntermediateDirectories: true)
-        if !inMemory, let disk = try? ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema)) {
-            return disk
-        }
-        // An in-memory store has nothing to migrate, so this cannot fail in practice.
-        return try! ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
+        let configuration = url.map { ModelConfiguration(schema: schema, url: $0) } ?? ModelConfiguration(schema: schema)
+        return try? ModelContainer(for: schema, configurations: configuration)
     }
 
     #if DEBUG

@@ -33,6 +33,7 @@ final class TrendingTests: XCTestCase {
         defaults.removePersistentDomain(forName: "trending.tests")
         XCTAssertEqual(Trending(defaults: defaults, now: date(month: 11)).items, Trending.bundled(for: date(month: 11)))
         defaults.set(Data(#"{"items":[{"design":"seedCowl","tag":"Hot"}]}"#.utf8), forKey: "trending.list")
+        defaults.set(date(month: 11), forKey: "trending.fetched")
         XCTAssertEqual(Trending(defaults: defaults).items, [Trend(design: .seedCowl, tag: "Hot")])
         defaults.removePersistentDomain(forName: "trending.tests")
     }
@@ -84,7 +85,15 @@ final class NewDesignTests: XCTestCase {
             for width in [2.5, 3.5, 5.0] {
                 let plan = Engines.cableHeadband(head: 22, width: width, gauge: gauge)
                 let caston = plan.steps[0].stitches ?? 0
-                XCTAssertEqual((caston - 6) % 8, 0)
+                // Cables of 8 stitches, 6 at the edges, and up to 3 extra purl stitches a side.
+                let side = ((caston - 6) % 8) / 2
+                XCTAssertEqual((caston - 6) % 2, 0)
+                XCTAssertLessThanOrEqual(side, 3)
+                XCTAssertTrue(plan.steps[1].texts[0].hasPrefix("K2, p\(side + 2), *k6, p2"))
+                XCTAssertTrue(plan.steps[1].texts[1].hasPrefix("K\(side + 4), *p6, k2"))
+                // One cable with its edges is 14 stitches, so thick yarn cannot go narrower than that.
+                let narrowest = 14 / (gauge.spi * 1.2)
+                XCTAssertEqual(Double(caston) / (gauge.spi * 1.2), max(width, narrowest), accuracy: max(1, 5 / gauge.spi), "the band tracks the width asked for")
                 XCTAssertEqual(plan.steps[1].rows % 8, 0, "ends on a full cable repeat")
                 XCTAssertTrue(plan.abbreviations.contains { $0.term == "C6F" })
             }
@@ -101,8 +110,8 @@ final class NewDesignTests: XCTestCase {
                 let face = around - (opening[0].stitches ?? 0)
                 XCTAssertGreaterThanOrEqual(face, 8)
                 XCTAssertLessThan(face, around / 2)
-                XCTAssertEqual(opening[1].rows % 2, 0, "flat rows end ready to rejoin")
-                XCTAssertEqual(opening[2].stitches, around, "cast on gives back what was bound off")
+                XCTAssertEqual(opening[1].rows % 2, 1, "the turned rows end on a purl row")
+                XCTAssertEqual(opening.last?.stitches, around, "cast on gives back what was bound off")
                 XCTAssertEqual(plan.steps.last { $0.section == "Crown" && $0.stitches != nil }?.stitches, 8)
                 XCTAssertEqual((plan.steps.first { $0.section == "Face Edging" }?.stitches ?? 1) % 2, 0)
             }

@@ -177,6 +177,7 @@ struct PaywallView: View {
             case .purchased: dismiss()
             case .cancelled: break
             case .pending: message = "Your purchase is waiting for approval"
+            case .unconfirmed: message = "Your purchase went through. Tap Restore if the patterns stay locked."
             case .failed: message = "The purchase did not go through"
             }
         }
@@ -185,9 +186,14 @@ struct PaywallView: View {
     private func restore() {
         working = true
         Task {
-            let found = await subscription.restore()
+            let result = await subscription.restore()
             working = false
-            if found { dismiss() } else { message = "No purchase found on this Apple Account" }
+            switch result {
+            case .found: dismiss()
+            case .cancelled: break
+            case .notFound: message = "No purchase found on this Apple Account"
+            case .failed: message = "The App Store could not be reached. Try again when you are online."
+            }
         }
     }
 }

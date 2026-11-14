@@ -7,6 +7,11 @@ struct StashView: View {
     @Query(sort: \Needle.millimeters) private var needles: [Needle]
     @State private var editingYarn: Yarn?
     @State private var editingNeedle: Needle?
+    /// The yarn just added, until it has a name.
+    @State private var draft: Yarn?
+    /// The yarn whose editor is open and the name it had, put back if the editor closes with the name cleared.
+    @State private var opened: Yarn?
+    @State private var nameBefore = ""
 
     var body: some View {
         NavigationStack {
@@ -14,7 +19,11 @@ struct StashView: View {
                 if !yarns.isEmpty {
                     Section {
                         ForEach(yarns) { yarn in
-                            Button { editingYarn = yarn } label: {
+                            Button {
+                                opened = yarn
+                                nameBefore = yarn.name
+                                editingYarn = yarn
+                            } label: {
                                 row(title: yarn.name, detail: yarn.detail, count: yarn.skeins, countLabel: "\(yarn.skeins) skeins")
                             }
                         }
@@ -93,6 +102,8 @@ struct StashView: View {
     private func addYarn() {
         let yarn = Yarn(name: "")
         context.insert(yarn)
+        draft = yarn
+        opened = nil
         editingYarn = yarn
     }
 
@@ -102,9 +113,16 @@ struct StashView: View {
         editingNeedle = needle
     }
 
-    /// A yarn closed without a name was never really added.
+    /// A new yarn closed without a name was never really added. A yarn already in the stash keeps its name.
     private func dropUnnamed() {
-        yarns.filter { $0.name.trimmingCharacters(in: .whitespaces).isEmpty }.forEach(context.delete)
+        defer {
+            draft = nil
+            opened = nil
+            try? context.save()
+        }
+        for yarn in yarns where yarn.name.trimmingCharacters(in: .whitespaces).isEmpty {
+            if yarn === opened, !nameBefore.isEmpty { yarn.name = nameBefore } else { context.delete(yarn) }
+        }
     }
 }
 

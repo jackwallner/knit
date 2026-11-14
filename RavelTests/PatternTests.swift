@@ -108,7 +108,8 @@ final class PatternTests: XCTestCase {
             XCTAssertEqual((Engines.scarf(.rib, width: 7, length: 64, gauge: gauge).steps[0].stitches ?? 0) % 4, 2)
             XCTAssertEqual((Engines.scarf(.seed, width: 7, length: 64, gauge: gauge).steps[0].stitches ?? 0) % 2, 1)
             XCTAssertEqual((Engines.cowl(.rib, around: 26, height: 10, gauge: gauge).steps[0].stitches ?? 0) % 4, 0)
-            XCTAssertEqual((Engines.cowl(.seed, around: 26, height: 10, gauge: gauge).steps[0].stitches ?? 0) % 2, 1)
+            // Seed stitch in the round needs an even count, or the pattern breaks at the marker.
+            XCTAssertEqual((Engines.cowl(.seed, around: 26, height: 10, gauge: gauge).steps[0].stitches ?? 0) % 2, 0)
             XCTAssertEqual((Engines.handwarmers(hand: 7.5, gauge: gauge).steps[0].stitches ?? 0) % 4, 0)
         }
     }
@@ -192,5 +193,85 @@ final class PatternTests: XCTestCase {
                 }
             }
         }
+    }
+
+    /// The face opening is knit flat. It has to end with the right side facing, or the top of the
+    /// hood is worked inside out.
+    func testBalaclavaRejoinsWithTheRightSideFacing() {
+        for gauge in gauges {
+            for head in stride(from: 17.0, through: 26.0, by: 1.5) {
+                let steps = Engines.balaclava(head: head, gauge: gauge).steps.filter { $0.section == "Face Opening" }
+                let flat = steps.filter { !$0.isAction }
+                let turns = flat.reduce(0) { total, step in
+                    total + (0..<step.rows).filter { step.text(at: $0).hasSuffix(", turn") }.count
+                }
+                XCTAssertEqual(turns % 2, 0, "head \(head) gauge \(gauge.stitches): an odd number of turns leaves the wrong side facing")
+                XCTAssertEqual(flat.last?.texts, ["Knit to the end. Do not turn"])
+                XCTAssertTrue(steps.last?.isAction == true)
+            }
+        }
+    }
+
+    /// Running out of yarn is the worst way for a pattern to be wrong.
+    func testYarnCoversEveryRowWritten() {
+        for design in Design.allCases {
+            for size in design.sizes {
+                for weight in YarnWeight.allCases {
+                    let plan = design.plan(measures: size.values, gauge: weight.gauge)
+                    let needed = Sizing.yards(worked: plan.steps, spi: weight.gauge.spi)
+                    XCTAssertGreaterThanOrEqual(plan.yards, needed, "\(design.rawValue) \(size.name) \(weight.rawValue)")
+                    XCTAssertTrue(plan.materials[0].contains(Sizing.yardage(plan.yards)), "\(design.rawValue): the yarn line must state the same yardage")
+                }
+            }
+        }
+        // Checked by hand: 32 stitches by 576 rows of worsted is 489 yd on the needles, before the reserve.
+        let scarf = Engines.scarf(.garter, width: 7, length: 64, gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(scarf.yards, 570)
+        // A throw in garter, aran: 2,577 to 2,770 yd on the needles.
+        XCTAssertGreaterThan(Engines.blanket(bordered: false, width: 48, length: 60, gauge: YarnWeight.aran.gauge).yards, 2_770)
+        XCTAssertGreaterThan(Engines.neckScarf(length: 42, width: 5.5, gauge: YarnWeight.dk.gauge).yards, 207)
+    }
+
+    /// A project cast on in 1.0 keeps its plan for good. This is a plan as 1.0 wrote it, with the
+    /// optional keys left out, and it must open in every later version.
+    func testPlanSavedByVersionOneStillOpens() throws {
+        let saved = """
+        {"steps":[
+          {"section":"Scarf","texts":["Cast on 32 stitches."],"rows":1,"stitches":32,"delta":0,"isAction":true},
+          {"section":"Scarf","texts":["Knit"],"rows":576,"stitches":32},
+          {"section":"Finishing","texts":["Bind off loosely. Weave in the ends."],"rows":1,"isAction":true}
+        ],"materials":["About 480 yd of yarn"],"finished":"7 in wide, 64 in long","yards":480,"somethingNewer":true}
+        """
+        let plan = try JSONDecoder().decode(PatternPlan.self, from: Data(saved.utf8))
+        XCTAssertEqual(plan.totalTaps, 578)
+        XCTAssertEqual(plan.steps[1].delta, 0)
+        XCTAssertFalse(plan.steps[1].isAction)
+        XCTAssertNil(plan.steps[2].stitches)
+        XCTAssertEqual(plan.knitRows(upTo: plan.totalTaps), 576)
+    }
+
+    func testSweaterIsKnitWithRoomOverTheChestGiven() {
+        let plan = Design.raglanPullover.plan(measures: ["chest": 38], gauge: YarnWeight.worsted.gauge)
+        XCTAssertTrue(plan.finished.contains(Sizing.inches(41)), plan.finished)
+        XCTAssertTrue(plan.finished.contains(Sizing.inches(38)), plan.finished)
+    }
+
+    func testSleeveDecreasesAreNeverPacked() {
+        for gauge in gauges {
+            for chest in [31.0, 45, 65] {
+                let plan = Engines.raglan(chest: chest, body: 15, sleeve: 10, gauge: gauge).plan
+                for step in plan.steps where step.section == "First Sleeve" && step.delta < 0 {
+                    XCTAssertGreaterThanOrEqual(step.texts.count, 4, "chest \(chest) gauge \(gauge.stitches)")
+                }
+            }
+        }
+    }
+
+    func testSectionsStartWhereTheirFirstStepDoes() {
+        let plan = Engines.hat(.ribbed, head: 22, gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(plan.sections.map(\.name), ["Brim", "Body", "Crown", "Finishing"])
+        XCTAssertEqual(plan.sections[0].tap, 0)
+        XCTAssertEqual(plan.sections[1].tap, plan.steps[0].rows + plan.steps[1].rows)
+        XCTAssertEqual(plan.position(at: plan.sections[2].tap).map { plan.steps[$0.step].section }, "Crown")
     }
 }

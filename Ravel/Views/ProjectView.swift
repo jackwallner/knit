@@ -23,6 +23,10 @@ struct ProjectView: View {
     @State private var rowText = ""
     @State private var pickingPhotos = false
     @State private var photos: [PhotosPickerItem] = []
+    @State private var bindingPhotos = false
+    @State private var confirmingRemove = false
+    /// Rows knitted since this project was opened.
+    @State private var rowsThisVisit = 0
 
     private var patternURL: URL? { project.patternFile.map(PatternStore.url(for:)) }
 
@@ -38,9 +42,9 @@ struct ProjectView: View {
             } else if let patternURL {
                 VStack(spacing: 0) {
                     PatternView(url: patternURL, project: project)
-                    work(height: 112, tags: false)
+                    work(height: 112, tags: false, taps: true)
                         .overlay(alignment: .trailing) { countPill.padding(.trailing, 20).padding(.top, 22) }
-                        .overlay(alignment: .leading) { undo.padding(.leading, 20).padding(.top, 22) }
+                        .overlay(alignment: .leading) { undo.padding(.leading, 8).padding(.top, 22) }
                 }
                 .ignoresSafeArea(edges: .bottom)
             } else {
@@ -48,19 +52,20 @@ struct ProjectView: View {
                     VStack(spacing: 18) {
                         Spacer(minLength: 0)
                         count(size: 128)
-                        repeatDots
+                        if project.isFinished { finishedMark } else { repeatDots }
                         Spacer(minLength: 0)
                     }
                     .containerRelativeFrame(.vertical) { length, _ in length * 0.4 }
                     work(height: nil, tags: true)
                 }
-                .overlay(alignment: .bottomLeading) { undo.padding(.leading, 20).padding(.bottom, 8) }
+                .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
                 .ignoresSafeArea(edges: .bottom)
                 .contentShape(Rectangle())
                 .onTapGesture(perform: knit)
             }
         }
         .background(Theme.paper)
+        .overlay { if bindingPhotos { ProgressView().controlSize(.large).padding(28).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous)) } }
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
@@ -73,43 +78,60 @@ struct ProjectView: View {
         .sheet(isPresented: $showingMaterials) { if let plan { MaterialsView(plan: plan) } }
         .onChange(of: project.isFinished) { _, finished in if finished { celebrate() } }
         .confirmationDialog("Reset the count to 0?", isPresented: $confirmingReset, titleVisibility: .visible) {
-            Button("Reset Count", role: .destructive) { project.rows = 0 }
+            Button("Reset Count", role: .destructive) { project.resetCount(following: plan) }
+        }
+        .confirmationDialog("Remove the pattern from this project?", isPresented: $confirmingRemove, titleVisibility: .visible) {
+            Button("Remove Pattern", role: .destructive) { setPattern(nil) }
         }
         .alert("Rows in One Repeat", isPresented: $settingRepeat) {
             TextField("Rows", text: $repeatText).keyboardType(.numberPad)
             Button("Cancel", role: .cancel) {}
-            Button("Set") { project.repeatLength = min(max(Int(repeatText) ?? 0, 0), 200) }
+            Button("Set") {
+                project.setRepeat(Int(repeatText) ?? 0)
+                project.persist()
+            }
+        } message: {
+            if project.rows > 0, project.repeatLength == 0 { Text("The repeat starts with your next row.") }
         }
         .alert(plan == nil ? "Row" : "Row in This Section", isPresented: $settingRow) {
             TextField("Row", text: $rowText).keyboardType(.numberPad)
             Button("Cancel", role: .cancel) {}
-            Button("Set") { if let row = Int(rowText) { jump(to: row) } }
+            Button("Set") { if let row = Int(rowText) { project.jump(to: row, following: plan) } }
         }
         .alert("That pattern could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
-        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+        .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
+            project.persist()
+            // Setting the work down after a good stretch of rows is a fair moment to ask for a rating.
+            if rowsThisVisit >= 20 { ReviewPrompt().recordPositiveMoment() }
+        }
     }
 
     private func knit() {
-        guard let plan else { return project.increment() }
-        guard project.rows < plan.totalTaps else { return }
-        project.increment()
-        if project.rows == plan.totalTaps, !project.isFinished { project.toggleFinished() }
-    }
-
-    /// Lands on a row without tapping up to it. In a library pattern the row is counted within the current section.
-    private func jump(to row: Int) {
-        guard let plan else { return project.setRows(row) }
-        guard let spot = plan.position(at: project.rows) else { return }
-        let start = project.rows - spot.row
-        project.setRows(start + min(max(row, 1), plan.steps[spot.step].rows) - 1)
+        let before = project.rows
+        project.knit(following: plan)
+        if project.rows > before { rowsThisVisit += 1 }
+        announce()
     }
 
     private func back() {
-        project.decrement()
-        // Stepping back from the last row of a library pattern puts it on the needles again.
-        if let plan, project.isFinished, project.rows < plan.totalTaps { project.toggleFinished() }
+        project.unknit(following: plan)
+        announce()
+    }
+
+    /// What the count or the pattern now says, for VoiceOver.
+    private var spoken: String {
+        guard let plan else { return "Row \(project.rows)" }
+        guard let spot = plan.position(at: project.rows) else { return "Finished" }
+        return plan.steps[spot.step].text(at: spot.row)
+    }
+
+    /// Eyes on the knitting: VoiceOver reads each new row out without the knitter hunting for it.
+    private func announce() {
+        guard UIAccessibility.isVoiceOverRunning else { return }
+        AccessibilityNotification.Announcement(spoken).post()
     }
 
     /// A finished project is the moment to ask for a rating, once the screen has settled.
@@ -140,7 +162,7 @@ struct ProjectView: View {
                 .animation(.smooth, value: project.rows)
                 .accessibilityHidden(true)
         }
-        .overlay(alignment: .bottomLeading) { undo.padding(.leading, 20).padding(.bottom, 8) }
+        .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
         .ignoresSafeArea(edges: .bottom)
         .contentShape(Rectangle())
         .onTapGesture(perform: knit)
@@ -160,8 +182,11 @@ struct ProjectView: View {
                     .textCase(.uppercase)
                     .tracking(1.4)
                     .foregroundStyle(.secondary)
-                Text(step.text(at: spot.row))
-                    .font(Theme.display(30))
+                let text = step.text(at: spot.row)
+                // A long row, such as a sweater's divide, sets smaller so it stays whole at large text sizes.
+                // The star stays on the line with "repeat from", never alone at the start of the next.
+                Text(text.replacingOccurrences(of: "from *", with: "from\u{00A0}*"))
+                    .font(Theme.display(text.count > 140 ? 20 : text.count > 70 ? 24 : 30))
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.4)
                     .accessibilityIdentifier("guide.instruction")
@@ -181,17 +206,21 @@ struct ProjectView: View {
     }
 
     /// The needle and the fabric hanging from it. Tapping it knits a row.
-    private func work(height: CGFloat?, tags: Bool, rows: Int? = nil) -> some View {
+    /// `taps`: the PDF strip counts its own taps. Elsewhere the whole screen does, so the fabric must not count too.
+    private func work(height: CGFloat?, tags: Bool, rows: Int? = nil, taps: Bool = false) -> some View {
         Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10)
             .animation(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)
             .background(Theme.paper)
             .contentShape(Rectangle())
-            .onTapGesture(perform: knit)
+            .onTapGesture { if taps { knit() } }
+            .allowsHitTesting(taps)
             .accessibilityElement()
             .accessibilityAddTraits(.isButton)
             .accessibilityLabel("Add a row")
+            .accessibilityValue(spoken)
+            .accessibilityAction(.default, knit)
             .accessibilityIdentifier("counter.plus")
     }
 
@@ -208,7 +237,10 @@ struct ProjectView: View {
     }
 
     private var countPill: some View {
-        count(size: 34)
+        HStack(spacing: 8) {
+            if project.isFinished { Image(systemName: "checkmark").font(.headline).accessibilityLabel("Finished") }
+            count(size: 34)
+        }
             .padding(.horizontal, 18)
             .frame(minWidth: 64, minHeight: 52)
             .background(.regularMaterial, in: Capsule())
@@ -240,19 +272,30 @@ struct ProjectView: View {
         }
     }
 
-    @ViewBuilder
+    private var finishedMark: some View {
+        Label("Finished", systemImage: "checkmark")
+            .font(.title3)
+            .foregroundStyle(.secondary)
+    }
+
+    /// Stays in place at row 0, unseen but still a button, so a second quick tap is taken here and
+    /// cannot fall through to the fabric and knit a row. The touch area runs past the circle for the
+    /// same reason: a near miss with yarn in hand must not count.
     private var undo: some View {
-        if project.rows > 0 {
-            Button(action: back) {
-                Image(systemName: "arrow.uturn.backward")
-                    .font(.title3.weight(.semibold))
-                    .frame(width: 52, height: 52)
-                    .background(.regularMaterial, in: Circle())
-            }
-            .accessibilityLabel("Back one row")
-            .accessibilityIdentifier("counter.minus")
-            .transition(.scale.combined(with: .opacity))
+        Button(action: back) {
+            Image(systemName: "arrow.uturn.backward")
+                .font(.title3.weight(.semibold))
+                .frame(width: 52, height: 52)
+                .background(.regularMaterial, in: Circle())
+                // Faded here, inside the touch area: a view at zero opacity takes no taps, the area around it still does.
+                .opacity(project.rows == 0 ? 0 : 1)
+                .padding(12)
+                .contentShape(Rectangle())
         }
+        .accessibilityLabel("Back one row")
+        .accessibilityIdentifier("counter.minus")
+        .animation(.snappy, value: project.rows == 0)
+        .accessibilityHidden(project.rows == 0)
     }
 
     private var menu: some View {
@@ -266,12 +309,17 @@ struct ProjectView: View {
                         settingRow = true
                     }
                 }
+                Menu("Go to Section", systemImage: "list.number") {
+                    ForEach(plan.sections, id: \.tap) { section in
+                        Button(section.name) { project.jump(toTap: section.tap, following: plan) }
+                    }
+                }
             } else {
                 Button(project.patternFile == nil ? "Add Pattern" : "Replace Pattern", systemImage: "doc") { importing = true }
                 if project.patternFile == nil {
                     Button("Add Photos", systemImage: "photo") { pickingPhotos = true }
                 } else {
-                    Button("Remove Pattern", systemImage: "trash") { setPattern(nil) }
+                    Button("Remove Pattern", systemImage: "trash", role: .destructive) { confirmingRemove = true }
                 }
                 Button("Set Row", systemImage: "number") {
                     rowText = ""
@@ -282,8 +330,12 @@ struct ProjectView: View {
                     settingRepeat = true
                 }
             }
-            Button(project.isFinished ? "Mark Active" : "Mark Finished", systemImage: project.isFinished ? "arrow.uturn.backward" : "checkmark") {
-                project.toggleFinished()
+            // A library pattern at its last row is finished; stepping back a row is how it reopens.
+            if plan.map({ project.rows < $0.totalTaps }) ?? true {
+                Button(project.isFinished ? "Mark Active" : "Mark Finished", systemImage: project.isFinished ? "arrow.uturn.backward" : "checkmark") {
+                    project.toggleFinished()
+                    project.persist()
+                }
             }
             Button("Reset Count", systemImage: "arrow.counterclockwise", role: .destructive) { confirmingReset = true }
                 .disabled(project.rows == 0)
@@ -302,12 +354,22 @@ struct ProjectView: View {
     /// Photos of a printed pattern become its pages, in the order they were picked.
     private func attach(_ picked: [PhotosPickerItem]) {
         photos = []
+        bindingPhotos = true
         Task {
-            var pages: [UIImage] = []
+            defer { bindingPhotos = false }
+            // One photo at a time, each shrunk to reading size before the next loads.
+            var pages: [Data] = []
             for item in picked {
-                if let data = try? await item.loadTransferable(type: Data.self), let image = UIImage(data: data) { pages.append(image) }
+                guard let data = try? await item.loadTransferable(type: Data.self) else { continue }
+                if let page = await Task.detached(operation: { PatternStore.page(from: data) }).value { pages.append(page) }
             }
-            do { setPattern(try PatternStore.save(pages: pages)) } catch { importFailed = true }
+            guard let file = try? PatternStore.save(pages: pages) else {
+                importFailed = true
+                return
+            }
+            // The project may have been deleted while the photos loaded.
+            guard project.modelContext != nil, !project.isDeleted else { return PatternStore.delete(file) }
+            setPattern(file)
         }
     }
 
@@ -316,6 +378,7 @@ struct ProjectView: View {
         project.patternFile = file
         project.patternPage = 0
         project.markPage = -1
+        project.persist()
     }
 }
 

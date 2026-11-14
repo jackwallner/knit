@@ -31,9 +31,9 @@ final class PaywallUITests: XCTestCase {
     func testEachPlanStatesItsPriceBeforeTheButton() {
         openPaywall()
         XCTAssertEqual(app.buttons["paywall.buy"].label, "Try Free for 7 Days")
-        XCTAssertTrue(app.staticTexts["7 days free, then $39.99 a year. Renews until you cancel in Settings."].exists)
+        XCTAssertTrue(app.staticTexts["7 days free, then $39.99 a year. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
         app.buttons["paywall.monthly"].tap()
-        XCTAssertTrue(app.staticTexts["7 days free, then $6.99 a month. Renews until you cancel in Settings."].exists)
+        XCTAssertTrue(app.staticTexts["7 days free, then $6.99 a month. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
         app.buttons["paywall.lifetime"].tap()
         XCTAssertEqual(app.buttons["paywall.buy"].label, "Buy Lifetime")
         XCTAssertTrue(app.staticTexts["One payment of $79.99. Every pattern is yours for good."].exists)
