@@ -1,22 +1,747 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ravel: Knitting Patterns</title>
-<meta name="description" content="A knitting companion: projects, a row counter, your own PDF patterns, a yarn stash and patterns written to your size." />
-<link rel="icon" type="image/png" href="icon_256.png" />
-<link rel="apple-touch-icon" href="icon_256.png" />
-<link rel="stylesheet" href="styles.css" />
-</head><body><div class="wrap">
-<nav><a class="brand" href="index.html"><img src="icon_64.png" alt="" />Ravel</a><div class="links"><a href="support.html">Support</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a></div></nav>
-<main class="legal">
-<h1>Ravel</h1>
-<p>A knitting companion for iPhone. Keep your projects, count rows with a tap, read your own PDF patterns with your place marked, and track your yarn, needles and hooks.</p>
-<h2>Free, for good</h2>
-<p>Projects, the row counter, your own PDFs and your stash are free. They work offline and never ask for an account.</p>
-<h2>Patterns written to your size</h2>
-<p>Pick a design, enter your measurements and your gauge, and Ravel writes the pattern to fit: every stitch count worked out, followed one row at a time. Two patterns are free. The rest of the library is a subscription billed through Apple, with a free trial.</p>
-</main>
-<footer>&copy; 2026 Jack Wallner. <a href="support.html">Support</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></footer>
-</div></body></html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="256x256" href="icon_256.png">
+    <link rel="apple-touch-icon" href="icon_256.png">
+    <title>Ravel: Knitting Patterns - Row Counter &amp; Patterns for iPhone</title>
+    <meta name="description" content="Ravel is a free knitting row counter for iPhone. Read your own PDF patterns, track your yarn stash, and get patterns written to your size and gauge.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://jackwallner.com/ios/ravel/">
+    <meta name="apple-itunes-app" content="app-id=6834244566">
+    <meta name="keywords" content="knitting row counter, knitting patterns, row counter app, knitting app, PDF pattern reader, yarn stash, crochet row counter, sweater pattern, gauge, iPhone, free, offline, no account">
+    <meta property="og:title" content="Ravel: Knitting Patterns - Row Counter &amp; Patterns for iPhone">
+    <meta property="og:description" content="A free knitting row counter, your own PDF patterns with your place marked, a yarn stash, and a pattern library written to your size and gauge.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jackwallner.com/ios/ravel/">
+    <meta property="og:image" content="https://jackwallner.github.io/knit/appstore-screenshot-01.png">
+    <meta property="og:site_name" content="Jack Wallner">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ravel: Knitting Patterns - Row Counter &amp; Patterns for iPhone">
+    <meta name="twitter:description" content="A free knitting row counter, your own PDF patterns with your place marked, a yarn stash, and a pattern library written to your size and gauge.">
+    <meta name="twitter:image" content="https://jackwallner.github.io/knit/appstore-screenshot-01.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "MobileApplication",
+                "dateModified": "2026-11-14",
+                "@id": "https://jackwallner.com/ios/ravel/#app",
+                "name": "Ravel: Knitting Patterns",
+                "alternateName": "Ravel",
+                "description": "Ravel is a knitting row counter and pattern app for iPhone. Projects, a row counter drawn as growing fabric, your own PDF patterns with your place marked, and a yarn, needle and hook stash are free, work offline and need no account. Ravel Patterns, an optional upgrade, writes a library of hats, scarves, cowls, blankets, a shawl and a raglan pullover to your measurements and gauge and follows them one row at a time.",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "iOS 17+",
+                "url": "https://jackwallner.com/ios/ravel/",
+                "downloadUrl": "https://apps.apple.com/app/id6834244566",
+                "installUrl": "https://apps.apple.com/app/id6834244566",
+                "sameAs": [
+                    "https://apps.apple.com/app/id6834244566"
+                ],
+                "screenshot": [
+                    "https://jackwallner.github.io/knit/appstore-screenshot-01.png",
+                    "https://jackwallner.github.io/knit/appstore-screenshot-02.png",
+                    "https://jackwallner.github.io/knit/appstore-screenshot-03.png",
+                    "https://jackwallner.github.io/knit/appstore-screenshot-04.png",
+                    "https://jackwallner.github.io/knit/appstore-screenshot-05.png"
+                ],
+                "featureList": [
+                    "Row counter: tap anywhere to add a row, one tap to undo, count saved on every tap",
+                    "Repeats and a set-the-row-you-are-on option for projects already underway",
+                    "Your own PDF patterns or photos of a printed pattern, with your place marked",
+                    "Yarn, needle and crochet hook stash in US and metric sizes",
+                    "Works offline with no account",
+                    "Ravel Patterns: hats, scarves, cowls, blankets, a shawl and a raglan pullover written to your measurements and gauge",
+                    "Row-by-row guided patterns with the stitch count to expect",
+                    "Sizes from a baby hat to a 5X pullover, in inches or centimeters"
+                ],
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Jack Wallner",
+                    "url": "https://jackwallner.com/"
+                },
+                "publisher": {
+                    "@type": "Person",
+                    "name": "Jack Wallner",
+                    "url": "https://jackwallner.com/"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is there a free row counter app for knitting?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The Ravel row counter is free for good: tap anywhere to add a row, tap the arrow to take one back, and the count is saved the instant you tap. It works offline and needs no account."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I read my PDF knitting patterns on iPhone?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Add a PDF or photos of a printed pattern to a project, tap a line to mark your place, and count rows without leaving the page. Your files stay on your iPhone."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I adjust a knitting pattern to my gauge?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Choose a design in Ravel Patterns, enter your measurements and your gauge, and the pattern is written to fit. Every cast on, increase and decrease is calculated from your numbers, in sizes from a baby hat to a 5X pullover."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Ravel work for crochet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Partly. The row counter and the stash work for crochet rows and hooks. The pattern library is for knitting."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Ravel need an account or internet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Projects, the row counter, your own PDFs and your stash work offline and never ask for an account."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What does Ravel Patterns cost?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The price is shown in the app before you buy and varies by region. Ravel Patterns is monthly or yearly with a 7-day free trial for new subscribers, or a one-time lifetime purchase, and the Garter Scarf and Diagonal Dishcloth are free."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I lose a pattern if I stop subscribing?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. A pattern you have already cast on stays in your projects with its own copy of the rows, so later updates never change it."
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Jack Wallner",
+                        "item": "https://jackwallner.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "iOS apps",
+                        "item": "https://jackwallner.com/ios/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Ravel",
+                        "item": "https://jackwallner.com/ios/ravel/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+            color: #1d1d1f;
+            background: #fafafa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Nav */
+        nav {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            background: rgba(250,250,250,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #1d1d1f;
+        }
+
+        .nav-brand img {
+            width: 32px;
+            height: 32px;
+            border-radius: 7px;
+        }
+
+        .nav-brand span {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            text-decoration: none;
+            background: #1d1d1f;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 980px;
+            font-weight: 500;
+            transition: opacity 0.15s;
+        }
+
+        .nav-link:hover { opacity: 0.85; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 100px 24px 64px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.08;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: #a33b3d;
+        }
+
+        .hero .tagline {
+            font-size: 19px;
+            color: #6e6e73;
+            line-height: 1.5;
+            max-width: 440px;
+            margin: 0 auto 12px;
+        }
+
+        .hero .platforms {
+            font-size: 13px;
+            color: #6e6e73;
+            letter-spacing: 0.3px;
+            margin-bottom: 36px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #1d1d1f;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 14px 36px;
+            border-radius: 980px;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+
+        .download-btn:hover { opacity: 0.85; }
+
+        /* Screenshot showcase */
+        .showcase {
+            padding: 0 0 80px;
+        }
+
+        .showcase-scroll {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            scrollbar-width: none;
+        }
+
+        .showcase-scroll::-webkit-scrollbar { display: none; }
+
+        .showcase-card {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 16px 48px rgba(0,0,0,0.08);
+        }
+
+        .showcase-card img {
+            width: auto;
+            height: 540px;
+            display: block;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .features-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .features-header p {
+            font-size: 17px;
+            color: #6e6e73;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(0,0,0,0.06);
+            border-top: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 36px 32px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.55;
+        }
+
+        /* Privacy */
+        .privacy {
+            padding: 80px 0;
+        }
+
+        .privacy .container {
+            max-width: 640px;
+            text-align: center;
+        }
+
+        .privacy .lockup {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #f5f5f7;
+            margin-bottom: 20px;
+        }
+
+        .privacy .lockup svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: #1d1d1f;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .privacy h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .privacy p {
+            font-size: 17px;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .privacy a {
+            font-size: 15px;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .privacy a:hover { text-decoration: underline; }
+
+        /* More Info */
+        .more-info {
+            padding: 64px 24px;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .more-info-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .more-info-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .more-info-header p {
+            font-size: 17px;
+            color: #6e6e73;
+        }
+
+        .more-info-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .more-info-section {
+            margin-bottom: 40px;
+        }
+
+        .more-info-section h3 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #6e6e73;
+            margin-bottom: 12px;
+        }
+
+        .more-info-section p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+
+        .more-info-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .more-info-section strong {
+            font-weight: 600;
+        }
+
+        .specs-table {
+            width: 100%;
+            font-size: 14px;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .specs-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .specs-table td:first-child {
+            color: #6e6e73;
+            width: 140px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* FAQ */
+        .faq-list { margin-top: 4px; }
+        .faq-list details { border-bottom: 1px solid rgba(0,0,0,0.06); padding: 14px 0; }
+        .faq-list summary { font-size: 15px; font-weight: 600; color: #1d1d1f; cursor: pointer; list-style: none; line-height: 1.4; }
+        .faq-list summary::-webkit-details-marker { display: none; }
+        .faq-list summary::after { content: "+"; float: right; color: #6e6e73; font-weight: 400; margin-left: 12px; }
+        .faq-list details[open] summary::after { content: "\2212"; }
+        .faq-list details p { font-size: 15px; line-height: 1.6; color: #6e6e73; margin: 10px 0 0; }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 64px 24px 80px;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .cta p {
+            font-size: 15px;
+            color: #6e6e73;
+            margin-bottom: 28px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 24px;
+            font-size: 12px;
+            color: #6e6e73;
+        }
+
+        footer a { display: inline-block; padding: 6px 0;
+            color: #6e6e73;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover { color: #1d1d1f; }
+
+        footer .divider { margin: 4px 0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 72px 20px 48px; }
+            .hero h1 { font-size: 36px; letter-spacing: -1px; }
+            .hero .tagline { font-size: 17px; }
+
+            .showcase-card img { height: 400px; }
+
+            .features-grid { grid-template-columns: 1fr; }
+
+            .features-header h2 { font-size: 28px; }
+            .privacy h2, .cta h2 { font-size: 26px; }
+        }
+
+        @media (max-width: 480px) {
+            .showcase-card img { height: 360px; }
+        }
+        .feature-card .tier {
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #a33b3d;
+        }
+
+.nav-actions { display: flex; align-items: center; gap: 8px; }
+.nav-actions .nav-link, .nav-brand span { white-space: nowrap; }
+nav .container { gap: 12px; }
+@media (max-width: 480px) { .nav-brand { gap: 8px; } .nav-brand span { font-size: 14px; } .nav-actions { gap: 6px; } .nav-actions .nav-link { padding: 7px 12px; font-size: 13px; } }
+.store-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; }
+        summary > h2.faq-q { display: inline; margin: 0; font: inherit; letter-spacing: inherit; color: inherit; }
+
+</style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a class="nav-brand" href="./" aria-label="Ravel: Knitting Patterns">
+                <img src="icon_64.png" alt="" width="32" height="32">
+                <span>Ravel: Knitting Patterns</span>
+            </a>
+            <span class="nav-actions"><a class="nav-link" href="https://apps.apple.com/app/id6834244566">Download</a></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Ravel: <span>Knitting Patterns</span></h1>
+        <p class="tagline">A free row counter that grows as knitted fabric, your own PDF patterns with your place marked, and a yarn stash. Add patterns written to your size and gauge.</p>
+        <p class="platforms">iPhone &middot; Works offline &middot; No account</p>
+        <div class="store-row"><a class="download-btn" href="https://apps.apple.com/app/id6834244566">Download for free</a></div>
+    </section>
+
+    <section class="showcase">
+        <div class="showcase-scroll">
+            <div class="showcase-card">
+                <img src="appstore-screenshot-01.png" alt="Count rows and watch the fabric grow. A row counter drawn as knitted fabric that grows as you tap" fetchpriority="high" decoding="async" width="1320" height="2868">
+            </div>
+            <div class="showcase-card">
+                <img src="appstore-screenshot-02.png" alt="Keep your place in any PDF pattern. A line of the pattern is marked while the row count sits below it" loading="lazy" decoding="async" width="1320" height="2868">
+            </div>
+            <div class="showcase-card">
+                <img src="appstore-screenshot-03.png" alt="Follow your pattern one row at a time. Each step shows the instruction and the stitch count to expect" loading="lazy" decoding="async" width="1320" height="2868">
+            </div>
+            <div class="showcase-card">
+                <img src="appstore-screenshot-04.png" alt="Knitting patterns written to your size. Pick a size, set your measurements and gauge, then cast on" loading="lazy" decoding="async" width="1320" height="2868">
+            </div>
+            <div class="showcase-card">
+                <img src="appstore-screenshot-05.png" alt="Pick a hat, sweater or shawl to knit. The Patterns tab with trending and hat designs" loading="lazy" decoding="async" width="1320" height="2868">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2>What does Ravel do?</h2>
+                <p>It counts your rows, keeps your place in the pattern you already own, and tracks your stash, all free with no account. Ravel Patterns writes a library of designs to your size.</p>
+            </div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Tap to count rows</h3>
+                <p>Tap anywhere to add a row and tap the arrow to take one back. The fabric on screen grows with the piece on your needles.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Saved on every tap</h3>
+                <p>The count is written to disk the moment you tap. Already mid-project? Set the row you are on.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Repeats</h3>
+                <p>Set the rows in a repeat and see where you are in it.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Your own patterns</h3>
+                <p>Add a PDF or photos of a printed pattern, tap a line to mark your place, and count rows without leaving the page.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Yarn, needle and hook stash</h3>
+                <p>Yarn by weight and skein count, plus needles and crochet hooks in US and metric sizes.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Crochet rows too</h3>
+                <p>The row counter and the stash work for crochet rows and hooks. The pattern library is for knitting.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Written to your size</h3>
+                <p>Enter your measurements and gauge and every cast on, increase and decrease is worked out, from a baby hat to a 5X pullover.</p>
+                <p class="tier">Included with Ravel Patterns</p>
+            </div>
+            <div class="feature-card">
+                <h3>One row at a time</h3>
+                <p>Each tap shows the next instruction and the stitch count you should have on the needles. Jump to any section when you pick the work back up.</p>
+                <p class="tier">Included with Ravel Patterns</p>
+            </div>
+            <div class="feature-card">
+                <h3>The whole library</h3>
+                <p>Hats, a balaclava, scarves, cowls, a cabled headband, blankets, a dishcloth, handwarmers, leg warmers, a shawl and a top-down raglan pullover. Inches or centimeters to match your region.</p>
+                <p class="tier">Included with Ravel Patterns</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy">
+        <div class="container">
+            <div class="lockup">
+                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h2>Is Ravel private?</h2>
+            <p>Yes. Your projects, row counts, notes, yarn, needles, hooks and pattern files stay on your iPhone. There is no account, and there are no advertising or analytics trackers. Purchases go through Apple, and RevenueCat confirms them using an anonymous app user identifier and purchase records. It never receives your projects, measurements or files.</p>
+            <a href="privacy-policy.html">Privacy Policy &rarr;</a>
+        </div>
+    </section>
+
+    <section class="more-info">
+        <div class="container">
+            <div class="more-info-header">
+                <h2>More info</h2>
+                <p>How it's built.</p>
+            </div>
+            <div class="more-info-content">
+                <div class="more-info-section">
+                    <h3>The Pitch</h3>
+                    <p>Knitting takes a lot of counting, and a phone should do that part. Ravel keeps the everyday tools free: your projects, a row counter, the PDF patterns you already own and your stash. They work offline and never ask for an account.</p>
+                    <p>The row counter is drawn as the fabric itself, so the piece on screen grows with the one on your needles. When you want a pattern written to fit, the library does the stitch math from your measurements and gauge.</p>
+                </div>
+
+                <div class="more-info-section">
+                    <h3>Ravel Patterns</h3>
+                    <p>An optional upgrade that unlocks the whole pattern library. Monthly or yearly, each with a 7-day free trial for new subscribers, or lifetime. Prices are shown in the app before you buy and vary by region. The Garter Scarf and the Diagonal Dishcloth are free.</p>
+                    <p><strong>Your measurements.</strong> Choose a design, enter your measurements and gauge, and every cast on, increase and decrease is calculated from your numbers. Sizes run from a baby hat to a 5X pullover.</p>
+                    <p><strong>One row at a time.</strong> Each tap shows the next instruction and the stitch count to expect. Jump to any section when you pick the work back up.</p>
+                    <p><strong>The library.</strong> Hats, a balaclava, scarves, cowls, a cabled headband, blankets, a dishcloth, handwarmers, leg warmers, a shawl and a top-down raglan pullover. The Trending shelf leads with new designs and what suits the season.</p>
+                    <p><strong>A pattern you cast on stays.</strong> It remains in your projects if you stop subscribing.</p>
+                </div>
+
+                <div class="more-info-section faq-list" id="faq">
+                    <h3>Frequently asked questions</h3>
+                    <details open><summary><h2 class="faq-q">Is there a free row counter app for knitting?</h2></summary><p>Yes. The Ravel row counter is free for good: tap anywhere to add a row, tap the arrow to take one back, and the count is saved the instant you tap. It works offline and needs no account.</p></details>
+                    <details open><summary><h2 class="faq-q">Can I read my PDF knitting patterns on iPhone?</h2></summary><p>Yes. Add a PDF or photos of a printed pattern to a project, tap a line to mark your place, and count rows without leaving the page. Your files stay on your iPhone.</p></details>
+                    <details open><summary><h2 class="faq-q">How do I adjust a knitting pattern to my gauge?</h2></summary><p>Choose a design in Ravel Patterns, enter your measurements and your gauge, and the pattern is written to fit. Every cast on, increase and decrease is calculated from your numbers, in sizes from a baby hat to a 5X pullover.</p></details>
+                    <details open><summary><h2 class="faq-q">Does Ravel work for crochet?</h2></summary><p>Partly. The row counter and the stash work for crochet rows and hooks. The pattern library is for knitting.</p></details>
+                    <details open><summary><h2 class="faq-q">Does Ravel need an account or internet?</h2></summary><p>No. Projects, the row counter, your own PDFs and your stash work offline and never ask for an account.</p></details>
+                    <details open><summary><h2 class="faq-q">What does Ravel Patterns cost?</h2></summary><p>The price is shown in the app before you buy and varies by region. Ravel Patterns is monthly or yearly with a 7-day free trial for new subscribers, or a one-time lifetime purchase, and the Garter Scarf and Diagonal Dishcloth are free.</p></details>
+                    <details open><summary><h2 class="faq-q">Do I lose a pattern if I stop subscribing?</h2></summary><p>No. A pattern you have already cast on stays in your projects with its own copy of the rows, so later updates never change it.</p></details>
+                </div>
+
+                <div class="more-info-section">
+                    <h3>Specs</h3>
+                    <table class="specs-table">
+                        <tr><td>Platform</td><td>iPhone (iOS 17+)</td></tr>
+                        <tr><td>Language</td><td>English</td></tr>
+                        <tr><td>Framework</td><td>SwiftUI</td></tr>
+                        <tr><td>Data</td><td>SwiftData on device</td></tr>
+                        <tr><td>Storage</td><td>On device</td></tr>
+                        <tr><td>Patterns</td><td>PDFKit reader for your own PDFs</td></tr>
+                    </table>
+                </div>
+
+                <div class="more-info-section">
+                    <h3>What Mattered</h3>
+                    <p><strong>A row count is never lost.</strong> Every change to the count is saved to disk the moment it happens. There is no sync layer that could drop a count.</p>
+                    <p><strong>A cast-on pattern stays put.</strong> Each library project keeps its own frozen copy of the pattern, so an app update or a lapsed subscription never alters or removes it.</p>
+                    <p><strong>The stitch counts add up.</strong> Every design is tested at every size and yarn weight, and the stitch count carries from step to step.</p>
+                    <p><strong>The tracker stays free.</strong> Projects, the row counter, your own PDFs and your stash never go behind a paywall and never need a network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Cast on your next project</h2>
+        <p>Free on the App Store. No account required. Add Ravel Patterns anytime.</p>
+        <div class="store-row"><a class="download-btn" href="https://apps.apple.com/app/id6834244566">Download for free</a></div>
+    </section>
+
+    <footer>
+        <div class="divider">&copy; 2026 Jack Wallner · Last updated <time datetime="2026-11-14" data-updated>November 14, 2026</time></div>
+        <div>
+            <a href="support.html">Support</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="https://jackwallner.com/ios/">More apps by Jack Wallner</a>
+        </div>
+    </footer>
+
+</body>
+</html>
