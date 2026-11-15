@@ -54,9 +54,17 @@ final class Project {
 
     var plan: PatternPlan? { planData.flatMap { try? JSONDecoder().decode(PatternPlan.self, from: $0) } }
 
-    func follow(_ plan: PatternPlan, of design: Design) {
-        designRaw = design.rawValue
+    func follow(_ plan: PatternPlan, of design: Design) { follow(plan, as: design.rawValue) }
+
+    /// `design` is a built-in design's raw value or a topical design's `topical.` id.
+    func follow(_ plan: PatternPlan, as design: String) {
+        designRaw = design
         planData = try? JSONEncoder().encode(plan)
+    }
+
+    /// The shape the project draws as: its design's, or for a topical design the one kept in its own plan.
+    func silhouette(_ plan: PatternPlan?) -> Design.Silhouette? {
+        designRaw.flatMap(Design.init(rawValue:))?.silhouette ?? plan?.silhouette.flatMap(Design.Silhouette.init(rawValue:))
     }
 
     static let rowLimit = 99_999

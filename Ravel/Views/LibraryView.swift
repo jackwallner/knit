@@ -3,11 +3,14 @@ import SwiftUI
 
 /// The pattern library: every design drawn as the finished thing.
 struct LibraryView: View {
-    // `-OpenDesign raglanPullover` lands on a design, for screenshots.
-    @State private var path: [Design] = UserDefaults.standard.string(forKey: "OpenDesign").flatMap(Design.init(rawValue:)).map { [$0] } ?? []
+    // `-OpenDesign raglanPullover` lands on a design, for screenshots. A topical id works too.
+    @State private var path: [LibraryItem] = UserDefaults.standard.string(forKey: "OpenDesign").flatMap { raw in
+        Design(rawValue: raw).map(LibraryItem.builtIn) ?? TopicalStore.shared.item(raw).map(LibraryItem.topical)
+    }.map { [$0] } ?? []
 
     @Environment(\.dynamicTypeSize) private var typeSize
     private let trending = Trending.shared
+    private let topical = TopicalStore.shared
 
     /// Two tiles a row, one at the accessibility text sizes so names never get cut.
     private var columns: [GridItem] {
@@ -18,17 +21,17 @@ struct LibraryView: View {
         NavigationStack(path: $path) {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 36) {
-                    if !trending.items.isEmpty { trendingShelf }
+                    if !trending.items.isEmpty || !topical.items.isEmpty { trendingShelf }
                     ForEach(Design.Shelf.allCases) { shelf in
                         VStack(alignment: .leading, spacing: 14) {
                             Text(shelf.rawValue)
                                 .font(Theme.display(22, weight: .semibold))
                                 .accessibilityAddTraits(.isHeader)
                             LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
-                                ForEach(Design.allCases.filter { $0.shelf == shelf }) { design in
-                                    NavigationLink(value: design) { tile(design, note: design.isFree ? "Free" : design.level.rawValue) }
+                                ForEach(items(on: shelf)) { item in
+                                    NavigationLink(value: item) { tile(item, note: item.isFree ? "Free" : item.level.rawValue) }
                                         .buttonStyle(.plain)
-                                        .accessibilityIdentifier("design.\(design.rawValue)")
+                                        .accessibilityIdentifier("design.\(item.designRaw)")
                                 }
                             }
                         }
@@ -40,12 +43,14 @@ struct LibraryView: View {
             }
             .background(Theme.paper)
             .navigationTitle("Patterns")
-            .navigationDestination(for: Design.self) { DesignView(design: $0) }
+            .navigationDestination(for: LibraryItem.self) { DesignView(item: $0) }
             .task {
                 // Seeded and test runs keep the list that ships in the app, so captures do not shift.
                 let arguments = ProcessInfo.processInfo.arguments
                 guard !arguments.contains("-SeedDemo"), !arguments.contains("-UITesting") else { return }
+                async let designs: Void = topical.refresh()
                 await trending.refresh()
+                await designs
             }
         }
     }
@@ -58,11 +63,11 @@ struct LibraryView: View {
                 .accessibilityAddTraits(.isHeader)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
-                    ForEach(trending.items) { trend in
-                        NavigationLink(value: trend.design) { tile(trend.design, note: trend.tag) }
+                    ForEach(shelved) { entry in
+                        NavigationLink(value: entry.item) { tile(entry.item, note: entry.tag) }
                             .buttonStyle(.plain)
                             .containerRelativeFrame(.horizontal) { width, _ in (width - 40 - 32) / (typeSize.isAccessibilitySize ? 1.3 : 2.3) }
-                            .accessibilityIdentifier("trending.\(trend.design.rawValue)")
+                            .accessibilityIdentifier("trending.\(entry.item.designRaw)")
                     }
                 }
                 .padding(.horizontal, 20)
@@ -71,13 +76,29 @@ struct LibraryView: View {
         }
     }
 
-    private func tile(_ design: Design, note: String) -> some View {
+    /// Topical designs lead the shelf, each with its own tag, then the list from the site.
+    private var shelved: [Shelved] {
+        topical.items.map { Shelved(item: .topical($0), tag: $0.tag) } + trending.items.map { Shelved(item: .builtIn($0.design), tag: $0.tag) }
+    }
+
+    private struct Shelved: Identifiable {
+        var item: LibraryItem
+        var tag: String
+        var id: String { item.id }
+    }
+
+    /// A shelf's designs: the topical ones on its shapes first, then the library's own.
+    private func items(on shelf: Design.Shelf) -> [LibraryItem] {
+        topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical) + Design.allCases.filter { $0.shelf == shelf }.map(LibraryItem.builtIn)
+    }
+
+    private func tile(_ item: LibraryItem, note: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Garment(silhouette: design.silhouette, yarn: design.yarn)
+            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
                 .padding(14)
                 .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
             VStack(alignment: .leading, spacing: 2) {
-                Text(design.name)
+                Text(item.name)
                     .font(Theme.display(18))
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)
@@ -94,7 +115,7 @@ struct LibraryView: View {
 
 /// One design. Pick a size and a yarn and the pattern rewrites itself to fit.
 struct DesignView: View {
-    let design: Design
+    let item: LibraryItem
     @Environment(\.modelContext) private var context
     @State private var values: [String: Double]
     @State private var gauge: Gauge
@@ -102,22 +123,24 @@ struct DesignView: View {
     @State private var showingPaywall = false
     private let subscription = SubscriptionService.shared
 
-    init(design: Design) {
-        self.design = design
-        _values = State(initialValue: design.defaultSize.values)
-        _gauge = State(initialValue: design.weight.gauge)
+    init(item: LibraryItem) {
+        self.item = item
+        _values = State(initialValue: item.base.defaultSize.values)
+        _gauge = State(initialValue: item.defaultGauge)
     }
 
-    private var plan: PatternPlan { design.plan(measures: values, gauge: gauge) }
+    private var design: Design { item.base }
+
+    private var plan: PatternPlan { item.plan(measures: values, gauge: gauge) }
 
     var body: some View {
         let plan = plan
         ScrollView {
             VStack(alignment: .leading, spacing: 32) {
                 VStack(spacing: 14) {
-                    Garment(silhouette: design.silhouette, yarn: design.yarn)
+                    Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
                         .frame(height: 210)
-                    Text("\(design.level.rawValue) · \(Sizing.yardage(plan.yards))")
+                    Text("\(item.level.rawValue) · \(Sizing.yardage(plan.yards))")
                         .font(.subheadline)
                         .monospacedDigit()
                         .foregroundStyle(Theme.secondary)
@@ -136,11 +159,11 @@ struct DesignView: View {
                 }
 
                 group("Gauge") {
-                    chips(YarnWeight.allCases.map(\.label), selected: YarnWeight.allCases.first { $0.gauge == gauge }?.label) { label in
-                        if let weight = YarnWeight.allCases.first(where: { $0.label == label }) { gauge = weight.gauge }
+                    chips(item.weights.map(\.label), selected: item.weights.first { $0.gauge == gauge }?.label) { label in
+                        if let weight = item.weights.first(where: { $0.label == label }) { gauge = weight.gauge }
                     }
-                    adjuster("Stitches over \(Sizing.swatch())", value: $gauge.stitches, range: 8...40, step: 0.5)
-                    adjuster("Rows over \(Sizing.swatch())", value: $gauge.rows, range: 10...56, step: 1)
+                    adjuster("Stitches over \(Sizing.swatch())", value: $gauge.stitches, range: item.stitchRange, step: 0.5)
+                    adjuster("Rows over \(Sizing.swatch())", value: $gauge.rows, range: item.rowRange, step: 1)
                 }
 
                 group("Materials") {
@@ -155,12 +178,12 @@ struct DesignView: View {
             .padding(.bottom, 24)
         }
         .background(Theme.paper)
-        .navigationTitle(design.name)
+        .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
         .safeAreaInset(edge: .bottom) {
             Button(action: castOn) {
-                Text(subscription.canOpen(design) ? "Cast On" : "Unlock Patterns")
+                Text(subscription.canOpen(item) ? "Cast On" : "Unlock Patterns")
                     .font(.headline)
                     .foregroundStyle(Theme.onAccent)
                     .frame(maxWidth: .infinity, minHeight: 54)
@@ -176,14 +199,14 @@ struct DesignView: View {
     }
 
     private func castOn() {
-        guard subscription.canOpen(design) else {
+        guard subscription.canOpen(item) else {
             showingPaywall = true
             return
         }
         // A second quick tap must not cast on twice.
         guard opened == nil else { return }
-        let project = Project(name: design.name, color: design.yarn)
-        project.follow(plan, of: design)
+        let project = Project(name: item.name, color: item.yarn)
+        project.follow(plan, as: item.designRaw)
         project.needles = gauge.needle.label
         context.insert(project)
         try? context.save()

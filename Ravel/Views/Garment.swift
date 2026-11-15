@@ -7,6 +7,8 @@ struct Garment: View {
     /// Set while it is being knitted: the outline shows faintly and fills with fabric as the rows go on,
     /// from the edge the pattern starts at.
     var progress: Double?
+    /// A colorwork pattern draws as its own rows, stripes and motif in place, instead of plain fabric.
+    var colorwork: PatternPlan?
     @Environment(\.colorScheme) private var scheme
 
     var body: some View {
@@ -19,7 +21,7 @@ struct Garment: View {
                             // Stronger on a dark screen, so a piece not yet started still shows its shape.
                             Outline(silhouette: silhouette).fill(.primary.opacity(scheme == .dark ? 0.18 : 0.08), style: FillStyle(eoFill: true))
                         }
-                        Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, proxy.size.width / 11), showsNeedle: false)
+                        cloth(in: proxy.size)
                             .mask { Outline(silhouette: silhouette).fill(style: FillStyle(eoFill: true)) }
                             .mask(alignment: silhouette.knitsDown ? .top : .bottom) {
                                 Rectangle().frame(height: filled(in: proxy.size))
@@ -28,6 +30,33 @@ struct Garment: View {
                 }
             }
             .accessibilityHidden(true)
+    }
+
+    @ViewBuilder
+    private func cloth(in size: CGSize) -> some View {
+        if let colorwork, let palette = colorwork.palette, let picture = Picture(colorwork, silhouette: silhouette) {
+            let frame = CGRect(origin: .zero, size: size)
+            let body = Path(GarmentShape.body(silhouette, in: frame))
+            let piece = body.boundingRect
+            let tints = palette.map(\.tint)
+            ZStack {
+                if silhouette == .ears, let ear = picture.ear, ear < tints.count {
+                    let rim = picture.rim.map { tints.indices.contains($0) ? $0 : ear } ?? ear
+                    Canvas { context, _ in
+                        for box in GarmentShape.ears(in: frame) {
+                            context.fill(Path(ellipseIn: box), with: .color(tints[rim].color))
+                            context.fill(Path(ellipseIn: GarmentShape.earInside(box)), with: .color(tints[ear].color))
+                        }
+                    }
+                }
+                Knitwork(picture: picture, tints: tints)
+                    .frame(width: piece.width, height: piece.height)
+                    .position(x: piece.midX, y: piece.midY)
+                    .mask { body }
+            }
+        } else {
+            Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, size.width / 11), showsNeedle: false)
+        }
     }
 
     /// How much of the frame, from the starting edge, shows fabric: measured over the piece itself,
@@ -40,93 +69,36 @@ struct Garment: View {
     }
 }
 
-extension Design.Silhouette {
-    /// A raglan is worked from the neck down; everything else here starts at its lower edge.
-    var knitsDown: Bool { self == .sweater }
-}
-
 private struct Outline: Shape {
     var silhouette: Design.Silhouette
 
-    func path(in rect: CGRect) -> Path {
-        func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * rect.width, y: rect.minY + y * rect.height) }
-        func box(_ x: CGFloat, _ y: CGFloat, _ w: CGFloat, _ h: CGFloat) -> CGRect {
-            CGRect(x: rect.minX + x * rect.width, y: rect.minY + y * rect.height, width: w * rect.width, height: h * rect.height)
-        }
-        let unit = rect.width
-        var path = Path()
-        switch silhouette {
-        case .hat:
-            path.move(to: p(0.16, 0.74))
-            path.addCurve(to: p(0.5, 0.1), control1: p(0.14, 0.34), control2: p(0.3, 0.1))
-            path.addCurve(to: p(0.84, 0.74), control1: p(0.7, 0.1), control2: p(0.86, 0.34))
-            path.closeSubpath()
-            path.addRoundedRect(in: box(0.1, 0.7, 0.8, 0.2), cornerSize: CGSize(width: unit * 0.06, height: unit * 0.06))
-        case .slouch:
-            path.move(to: p(0.18, 0.76))
-            path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))
-            path.addCurve(to: p(0.84, 0.76), control1: p(0.98, 0.14), control2: p(0.94, 0.5))
-            path.closeSubpath()
-            path.addRoundedRect(in: box(0.14, 0.74, 0.72, 0.15), cornerSize: CGSize(width: unit * 0.05, height: unit * 0.05))
-        case .scarf:
-            // A long strip with fringe at both ends. The strands meet the strip edge to edge, never overlapping,
-            // so the even-odd fill leaves no gaps.
-            path.addRoundedRect(in: box(0.33, 0.13, 0.34, 0.72), cornerSize: CGSize(width: unit * 0.02, height: unit * 0.02))
-            for index in 0..<5 {
-                let x = 0.355 + CGFloat(index) * 0.065
-                path.addRect(box(x, 0.04, 0.03, 0.09))
-                path.addRect(box(x, 0.85, 0.03, 0.09))
+    func path(in rect: CGRect) -> Path { Path(GarmentShape.path(silhouette, in: rect)) }
+}
+
+/// Colorwork fabric, one small stitch per cell of the picture, laid over the whole piece.
+private struct Knitwork: View {
+    var picture: Picture
+    var tints: [Tint]
+
+    var body: some View {
+        let picture = picture, tints = tints
+        Canvas { context, size in
+            let w = size.width / CGFloat(picture.columns), h = size.height / CGFloat(max(1, picture.lines.count))
+            var fills = Array(repeating: Path(), count: tints.count)
+            var legs = Path()
+            for (r, line) in picture.lines.enumerated() {
+                let y = CGFloat(r) * h
+                for (c, cell) in line.enumerated() where cell < tints.count {
+                    let x = CGFloat(c) * w
+                    fills[cell].addRect(CGRect(x: x, y: y, width: w + 0.4, height: h + 0.4))
+                    legs.move(to: CGPoint(x: x + w * 0.2, y: y + h * 0.15))
+                    legs.addLine(to: CGPoint(x: x + w * 0.5, y: y + h * 0.9))
+                    legs.addLine(to: CGPoint(x: x + w * 0.8, y: y + h * 0.15))
+                }
             }
-        case .cowl:
-            path.addEllipse(in: box(0.08, 0.2, 0.84, 0.62))
-            path.addEllipse(in: box(0.26, 0.26, 0.48, 0.2))
-        case .band:
-            path.addEllipse(in: box(0.06, 0.3, 0.88, 0.42))
-            path.addEllipse(in: box(0.2, 0.35, 0.6, 0.12))
-        case .blanket:
-            path.addRoundedRect(in: box(0.1, 0.16, 0.8, 0.68), cornerSize: CGSize(width: unit * 0.04, height: unit * 0.04))
-        case .cloth:
-            path.addRoundedRect(in: box(0.2, 0.2, 0.6, 0.6), cornerSize: CGSize(width: unit * 0.04, height: unit * 0.04))
-        case .tubes:
-            path.addRoundedRect(in: box(0.18, 0.1, 0.26, 0.8), cornerSize: CGSize(width: unit * 0.06, height: unit * 0.06))
-            path.addRoundedRect(in: box(0.56, 0.1, 0.26, 0.8), cornerSize: CGSize(width: unit * 0.06, height: unit * 0.06))
-        case .mitts:
-            for (x, thumb) in [(CGFloat(0.14), CGFloat(1)), (0.58, -1)] {
-                path.addRoundedRect(in: box(x, 0.16, 0.28, 0.7), cornerSize: CGSize(width: unit * 0.07, height: unit * 0.07))
-                let side = thumb > 0 ? x + 0.24 : x - 0.08
-                path.addRoundedRect(in: box(side, 0.36, 0.12, 0.2), cornerSize: CGSize(width: unit * 0.05, height: unit * 0.05))
-            }
-        case .shawl:
-            path.move(to: p(0.04, 0.24))
-            path.addLine(to: p(0.96, 0.24))
-            path.addLine(to: p(0.5, 0.8))
-            path.closeSubpath()
-        case .hood:
-            path.move(to: p(0.2, 0.92))
-            path.addCurve(to: p(0.5, 0.06), control1: p(0.06, 0.4), control2: p(0.26, 0.06))
-            path.addCurve(to: p(0.8, 0.92), control1: p(0.74, 0.06), control2: p(0.94, 0.4))
-            path.closeSubpath()
-            path.addEllipse(in: box(0.33, 0.3, 0.34, 0.3))
-        case .kerchief:
-            path.move(to: p(0.03, 0.46))
-            path.addQuadCurve(to: p(0.97, 0.46), control: p(0.5, 0.3))
-            path.addQuadCurve(to: p(0.03, 0.46), control: p(0.5, 0.86))
-            path.closeSubpath()
-        case .sweater:
-            path.move(to: p(0.38, 0.12))
-            path.addCurve(to: p(0.62, 0.12), control1: p(0.44, 0.2), control2: p(0.56, 0.2))
-            path.addLine(to: p(0.76, 0.17))
-            path.addLine(to: p(0.98, 0.62))
-            path.addLine(to: p(0.86, 0.69))
-            path.addLine(to: p(0.74, 0.44))
-            path.addLine(to: p(0.74, 0.9))
-            path.addLine(to: p(0.26, 0.9))
-            path.addLine(to: p(0.26, 0.44))
-            path.addLine(to: p(0.14, 0.69))
-            path.addLine(to: p(0.02, 0.62))
-            path.addLine(to: p(0.24, 0.17))
-            path.closeSubpath()
+            for (index, path) in fills.enumerated() { context.fill(path, with: .color(tints[index].color)) }
+            // The V of each stitch, so it reads as knitting and not as pixels.
+            context.stroke(legs, with: .color(.black.opacity(0.14)), lineWidth: max(0.5, w * 0.12))
         }
-        return path
     }
 }

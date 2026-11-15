@@ -45,8 +45,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case intermediate = "Intermediate"
     }
 
-    enum Silhouette: Sendable {
-        case hat, slouch, scarf, cowl, blanket, cloth, band, mitts, tubes, shawl, sweater, hood, kerchief
+    /// Raw values are stored in a cast-on plan, so they never change.
+    enum Silhouette: String, Sendable {
+        case hat, slouch, scarf, cowl, blanket, cloth, band, mitts, tubes, shawl, sweater, hood, kerchief, ears
     }
 
     var id: String { rawValue }
@@ -220,29 +221,40 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         }
     }
 
-    func plan(measures: [String: Double], gauge: Gauge) -> PatternPlan {
+    /// Rows to the inch of the design's main fabric: garter packs two rows into each ridge.
+    func rowsPerInch(_ g: Gauge) -> Double {
+        switch self {
+        case .garterScarf, .garterBlanket, .chunkyCowl: g.spi * 2
+        case .seedScarf, .seedCowl: g.rpi * 1.1
+        default: g.rpi
+        }
+    }
+
+    var isGarter: Bool { self == .garterScarf || self == .garterBlanket || self == .chunkyCowl }
+
+    func plan(measures: [String: Double], gauge: Gauge, fit: Engines.Fit = .plain) -> PatternPlan {
         var values = defaultSize.values
         for measure in self.measures {
             if let given = measures[measure.key] { values[measure.key] = min(max(given, measure.range.lowerBound), measure.range.upperBound) }
         }
         func value(_ key: String) -> Double { values[key] ?? 0 }
         switch self {
-        case .ribbedBeanie: return Engines.hat(.ribbed, head: value("head"), gauge: gauge)
-        case .slouchHat: return Engines.hat(.slouch, head: value("head"), gauge: gauge)
-        case .rolledBrimHat: return Engines.hat(.rolled, head: value("head"), gauge: gauge)
-        case .garterScarf: return Engines.scarf(.garter, width: value("width"), length: value("length"), gauge: gauge)
-        case .ribbedScarf: return Engines.scarf(.rib, width: value("width"), length: value("length"), gauge: gauge)
-        case .seedScarf: return Engines.scarf(.seed, width: value("width"), length: value("length"), gauge: gauge)
-        case .ribbedCowl: return Engines.cowl(.rib, around: value("around"), height: value("height"), gauge: gauge)
-        case .seedCowl: return Engines.cowl(.seed, around: value("around"), height: value("height"), gauge: gauge)
-        case .borderedBlanket: return Engines.blanket(bordered: true, width: value("width"), length: value("length"), gauge: gauge)
-        case .garterBlanket: return Engines.blanket(bordered: false, width: value("width"), length: value("length"), gauge: gauge)
+        case .ribbedBeanie: return Engines.hat(.ribbed, head: value("head"), gauge: gauge, fit: fit)
+        case .slouchHat: return Engines.hat(.slouch, head: value("head"), gauge: gauge, fit: fit)
+        case .rolledBrimHat: return Engines.hat(.rolled, head: value("head"), gauge: gauge, fit: fit)
+        case .garterScarf: return Engines.scarf(.garter, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
+        case .ribbedScarf: return Engines.scarf(.rib, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
+        case .seedScarf: return Engines.scarf(.seed, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
+        case .ribbedCowl: return Engines.cowl(.rib, around: value("around"), height: value("height"), gauge: gauge, fit: fit)
+        case .seedCowl: return Engines.cowl(.seed, around: value("around"), height: value("height"), gauge: gauge, fit: fit)
+        case .borderedBlanket: return Engines.blanket(bordered: true, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
+        case .garterBlanket: return Engines.blanket(bordered: false, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
         case .dishcloth: return Engines.dishcloth(side: value("side"), gauge: gauge)
-        case .earWarmer: return Engines.earWarmer(head: value("head"), width: value("width"), gauge: gauge)
-        case .handwarmers: return Engines.handwarmers(hand: value("hand"), gauge: gauge)
+        case .earWarmer: return Engines.earWarmer(head: value("head"), width: value("width"), gauge: gauge, fit: fit)
+        case .handwarmers: return Engines.handwarmers(hand: value("hand"), gauge: gauge, fit: fit)
         case .legWarmers: return Engines.legWarmers(calf: value("calf"), length: value("length"), gauge: gauge)
         case .triangleShawl: return Engines.shawl(wingspan: value("wingspan"), gauge: gauge)
-        case .chunkyCowl: return Engines.cowl(.garter, around: value("around"), height: value("height"), gauge: gauge)
+        case .chunkyCowl: return Engines.cowl(.garter, around: value("around"), height: value("height"), gauge: gauge, fit: fit)
         case .neckScarf: return Engines.neckScarf(length: value("length"), width: value("width"), gauge: gauge)
         case .cableHeadband: return Engines.cableHeadband(head: value("head"), width: value("width"), gauge: gauge)
         case .balaclava: return Engines.balaclava(head: value("head"), gauge: gauge)

@@ -16,6 +16,11 @@ struct Fabric: View, Animatable {
     /// Rules the paper the work will grow into, like a knitting chart: a line where the edge will
     /// sit after each row, with the next tagged rows outlined.
     var chart = false
+    /// Colorwork: each knitted row's palette letters, oldest first, and the yarns they name. A row of one
+    /// letter is all that color; a longer row is shown around `focus`, the part of the row that faces front.
+    var paints: [String] = []
+    var palette: [Shade] = []
+    var focus = 0.5
 
     nonisolated var animatableData: Double {
         get { rows }
@@ -24,10 +29,11 @@ struct Fabric: View, Animatable {
 
     var body: some View {
         let rows = max(0, rows), yarn = yarn, markEvery = markEvery, markFrom = markFrom, stitch = stitch, showsNeedle = showsNeedle, chart = chart
+        let colors = FabricColors(paints: paints, tints: palette.map(\.tint), yarn: yarn.tint, focus: focus)
         Canvas { context, size in
             let w = stitch > 0 ? stitch : max(24, size.width / 9)
             if chart { Self.chart(&context, size: size, rows: rows, w: w, markEvery: markEvery, markFrom: markFrom) }
-            Self.draw(&context, size: size, rows: rows, yarn: yarn, markEvery: markEvery, markFrom: markFrom, w: w, needle: showsNeedle)
+            Self.draw(&context, size: size, rows: rows, colors: colors, markEvery: markEvery, markFrom: markFrom, w: w, needle: showsNeedle)
         }
         .accessibilityHidden(true)
     }
@@ -64,7 +70,7 @@ struct Fabric: View, Animatable {
         }
     }
 
-    nonisolated private static func draw(_ context: inout GraphicsContext, size: CGSize, rows: Double, yarn: YarnColor, markEvery: Int, markFrom: Int, w: CGFloat, needle: Bool) {
+    nonisolated private static func draw(_ context: inout GraphicsContext, size: CGSize, rows: Double, colors: FabricColors, markEvery: Int, markFrom: Int, w: CGFloat, needle: Bool) {
         let h = w * 0.8
         let top: CGFloat = needle ? 26 : 0
         let columns = Int((size.width / w).rounded(.up)) + 1
@@ -77,6 +83,7 @@ struct Fabric: View, Animatable {
         var cloth = context
         cloth.clip(to: Path(CGRect(x: 0, y: top - 1, width: size.width, height: size.height)))
         let depth = min(size.height - top, CGFloat(rows) * h)
+        let yarn = colors.newest(newest)
         if depth > 0 {
             cloth.fill(Path(CGRect(x: 0, y: top, width: size.width, height: depth)), with: .color(yarn.shade))
         }
@@ -90,20 +97,30 @@ struct Fabric: View, Animatable {
         while newest - index >= 1 {
             let y = top + CGFloat(index) * h + slide
             if y > size.height { break }
-            var left = Path()
-            var right = Path()
+            let number = newest - index
+            // Stitches are drawn in batches of one yarn: a row in one color is a single batch.
+            let tints = colors.row(number, columns: columns)
+            var batches: [(tint: Tint, left: Path, right: Path)] = []
+            var batchOf: [Int: Int] = [:]
             for column in 0..<columns {
                 let x = x0 + CGFloat(column) * w
-                left.move(to: CGPoint(x: x + w * 0.15, y: y + h * 0.1))
-                left.addLine(to: CGPoint(x: x + w * 0.41, y: y + h * 1.12))
-                right.move(to: CGPoint(x: x + w * 0.85, y: y + h * 0.1))
-                right.addLine(to: CGPoint(x: x + w * 0.59, y: y + h * 1.12))
+                let key = Int(tints[column].red * 255) << 16 | Int(tints[column].green * 255) << 8 | Int(tints[column].blue * 255)
+                let batch = batchOf[key] ?? {
+                    batches.append((tints[column], Path(), Path()))
+                    batchOf[key] = batches.count - 1
+                    return batches.count - 1
+                }()
+                batches[batch].left.move(to: CGPoint(x: x + w * 0.15, y: y + h * 0.1))
+                batches[batch].left.addLine(to: CGPoint(x: x + w * 0.41, y: y + h * 1.12))
+                batches[batch].right.move(to: CGPoint(x: x + w * 0.85, y: y + h * 0.1))
+                batches[batch].right.addLine(to: CGPoint(x: x + w * 0.59, y: y + h * 1.12))
             }
-            cloth.stroke(left, with: .color(yarn.shade), style: edge)
-            cloth.stroke(left, with: .color(yarn.color), style: strand)
-            cloth.stroke(right, with: .color(yarn.shade), style: edge)
-            cloth.stroke(right, with: .color(yarn.lowlight), style: strand)
-            let number = newest - index
+            for batch in batches {
+                cloth.stroke(batch.left, with: .color(batch.tint.shade), style: edge)
+                cloth.stroke(batch.left, with: .color(batch.tint.color), style: strand)
+                cloth.stroke(batch.right, with: .color(batch.tint.shade), style: edge)
+                cloth.stroke(batch.right, with: .color(batch.tint.lowlight), style: strand)
+            }
             if tagged(number, every: markEvery, from: markFrom) { tags.append((number, y)) }
             index += 1
         }
@@ -152,4 +169,25 @@ struct Swatch: View {
             .frame(width: size, height: size)
             .clipShape(RoundedRectangle(cornerRadius: size * 0.27, style: .continuous))
     }
+}
+
+/// Which yarn each stitch is drawn in.
+struct FabricColors: Sendable {
+    var paints: [String]
+    var tints: [Tint]
+    var yarn: Tint
+    var focus: Double
+
+    /// The tints of row `number` (from 1), one per column on screen.
+    func row(_ number: Int, columns: Int) -> [Tint] {
+        guard number >= 1, number <= paints.count, !tints.isEmpty else { return Array(repeating: yarn, count: columns) }
+        let letters = Array(paints[number - 1])
+        func tint(_ letter: Character) -> Tint { Colorwork.index(letter).flatMap { $0 < tints.count ? tints[$0] : nil } ?? tints[0] }
+        guard letters.count > 1 else { return Array(repeating: tint(letters.first ?? "A"), count: columns) }
+        let start = Int(Double(letters.count) * focus) - columns / 2
+        return (0..<columns).map { tint(letters[((start + $0) % letters.count + letters.count) % letters.count]) }
+    }
+
+    /// The yarn on the needle: the newest row's main color.
+    func newest(_ number: Int) -> Tint { row(number, columns: 1)[0] }
 }
