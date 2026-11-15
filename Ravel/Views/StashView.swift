@@ -47,14 +47,7 @@ struct StashView: View {
             .scrollContentBackground(.hidden)
             .background(Theme.paper)
             .overlay {
-                if yarns.isEmpty && needles.isEmpty {
-                    Button("Add Yarn", action: addYarn)
-                        .font(.headline)
-                        .foregroundStyle(Theme.onAccent)
-                        .padding(.horizontal, 28)
-                        .frame(minHeight: 50)
-                        .background(Color.accentColor, in: Capsule())
-                }
+                if yarns.isEmpty && needles.isEmpty { empty }
             }
             .navigationTitle("Stash")
             .toolbar {
@@ -71,6 +64,27 @@ struct StashView: View {
             }
             .sheet(item: $editingYarn, onDismiss: dropUnnamed) { YarnEditor(yarn: $0) }
             .sheet(item: $editingNeedle) { NeedleEditor(needle: $0) }
+        }
+    }
+
+    /// A few swatches of the yarn colors, and both things a stash holds.
+    private var empty: some View {
+        VStack(spacing: 28) {
+            HStack(spacing: 12) {
+                ForEach([YarnColor.spruce, .madder, .indigo], id: \.self) { Swatch(yarn: $0, size: 64) }
+            }
+            .accessibilityHidden(true)
+            VStack(spacing: 12) {
+                Button("Add Yarn", action: addYarn)
+                    .font(.headline)
+                    .foregroundStyle(Theme.onAccent)
+                    .padding(.horizontal, 28)
+                    .frame(minHeight: 50)
+                    .background(Color.accentColor, in: Capsule())
+                Button("Add Needles", action: addNeedle)
+                    .font(.headline)
+                    .frame(minHeight: 44)
+            }
         }
     }
 

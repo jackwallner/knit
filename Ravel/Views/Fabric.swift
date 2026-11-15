@@ -10,8 +10,12 @@ struct Fabric: View, Animatable {
     var markEvery = 10
     /// The row a repeat started after: the tags count from there, as the repeat dots do.
     var markFrom = 0
+    /// Stitch width. 0 sizes the stitches to the space, about nine across.
     var stitch: CGFloat = 24
     var showsNeedle = true
+    /// Rules the paper the work will grow into, like a knitting chart: a line where the edge will
+    /// sit after each row, with the next tagged rows outlined.
+    var chart = false
 
     nonisolated var animatableData: Double {
         get { rows }
@@ -19,9 +23,11 @@ struct Fabric: View, Animatable {
     }
 
     var body: some View {
-        let rows = max(0, rows), yarn = yarn, markEvery = markEvery, markFrom = markFrom, stitch = stitch, showsNeedle = showsNeedle
+        let rows = max(0, rows), yarn = yarn, markEvery = markEvery, markFrom = markFrom, stitch = stitch, showsNeedle = showsNeedle, chart = chart
         Canvas { context, size in
-            Self.draw(&context, size: size, rows: rows, yarn: yarn, markEvery: markEvery, markFrom: markFrom, w: stitch, needle: showsNeedle)
+            let w = stitch > 0 ? stitch : max(24, size.width / 9)
+            if chart { Self.chart(&context, size: size, rows: rows, w: w, markEvery: markEvery, markFrom: markFrom) }
+            Self.draw(&context, size: size, rows: rows, yarn: yarn, markEvery: markEvery, markFrom: markFrom, w: w, needle: showsNeedle)
         }
         .accessibilityHidden(true)
     }
@@ -29,6 +35,33 @@ struct Fabric: View, Animatable {
     /// Whether a row carries a number: every `every` rows, counted from the row a repeat started after.
     nonisolated static func tagged(_ row: Int, every: Int, from start: Int) -> Bool {
         every > 0 && row > start && (row - start) % every == 0
+    }
+
+    /// Faint rules on the paper below the work, one where the fabric's edge will sit after each coming row.
+    /// The next tagged rows get an outlined tag, so the knitter sees how far it is to the next ten or the
+    /// end of the repeat. Drawn first, so the fabric covers the rules as it grows.
+    nonisolated private static func chart(_ context: inout GraphicsContext, size: CGSize, rows: Double, w: CGFloat, markEvery: Int, markFrom: Int) {
+        let h = w * 0.8
+        let top: CGFloat = 26
+        var lines = Path()
+        var tags: [(number: Int, y: CGFloat)] = []
+        var row = Int(rows.rounded(.down)) + 1
+        while top + CGFloat(row) * h <= size.height + h {
+            let y = top + CGFloat(row) * h
+            lines.move(to: CGPoint(x: 0, y: y))
+            lines.addLine(to: CGPoint(x: size.width, y: y))
+            if tagged(row, every: markEvery, from: markFrom) { tags.append((row, y - h)) }
+            row += 1
+        }
+        context.stroke(lines, with: .color(.primary.opacity(0.07)), lineWidth: 1)
+        for tag in tags {
+            let text = context.resolve(Text(tag.number, format: .number).font(.system(size: 11, weight: .semibold, design: .rounded)).foregroundStyle(.primary.opacity(0.4)))
+            let textSize = text.measure(in: size)
+            let pill = CGRect(x: size.width - textSize.width - 22, y: tag.y + (h - textSize.height) / 2 - 2, width: textSize.width + 12, height: textSize.height + 4)
+            context.fill(Path(roundedRect: pill, cornerRadius: pill.height / 2), with: .color(Theme.paper))
+            context.stroke(Path(roundedRect: pill, cornerRadius: pill.height / 2), with: .color(.primary.opacity(0.2)), lineWidth: 1)
+            context.draw(text, at: CGPoint(x: pill.midX, y: pill.midY))
+        }
     }
 
     nonisolated private static func draw(_ context: inout GraphicsContext, size: CGSize, rows: Double, yarn: YarnColor, markEvery: Int, markFrom: Int, w: CGFloat, needle: Bool) {

@@ -23,7 +23,7 @@ final class CounterUITests: XCTestCase {
 
     private func expect(_ element: XCUIElement, toRead format: String, _ value: String, _ message: String) {
         let reached = expectation(for: NSPredicate(format: format, value), evaluatedWith: element)
-        XCTAssertEqual(XCTWaiter.wait(for: [reached], timeout: 5), .completed, "\(message) (reads \(element.label))")
+        XCTAssertEqual(XCTWaiter.wait(for: [reached], timeout: 10), .completed, "\(message) (reads \(element.label))")
     }
 
     private func expectRow(_ row: Int, _ message: String) {

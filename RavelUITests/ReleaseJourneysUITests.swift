@@ -162,9 +162,10 @@ final class ReleaseJourneysUITests: XCTestCase {
     }
 
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
-        XCTAssertTrue(element.waitForExistence(timeout: 15))
+        // The library is lazy: a tile further down is not built until it is near the screen.
         // Large text puts one tile a row, so the library runs long.
-        for _ in 0..<24 where !element.isHittable {
+        _ = element.waitForExistence(timeout: 15)
+        for _ in 0..<24 where !(element.exists && element.isHittable) {
             QA.swipe(app.windows.firstMatch, .up)
         }
         XCTAssertTrue(element.isHittable)

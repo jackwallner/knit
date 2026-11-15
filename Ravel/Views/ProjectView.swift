@@ -149,18 +149,20 @@ struct ProjectView: View {
     /// A library pattern: the instruction for this row on top, the work below. Tap anywhere for the next row.
     private func guided(_ plan: PatternPlan) -> some View {
         VStack(spacing: 0) {
-            instruction(plan)
-                .padding(.horizontal, 24)
-                .containerRelativeFrame(.vertical) { length, _ in length * 0.46 }
+            VStack(spacing: 12) {
+                // The piece itself, filling with fabric as the pattern goes on: where the knitter is in the whole.
+                if let design = project.designRaw.flatMap(Design.init(rawValue:)) {
+                    Garment(silhouette: design.silhouette, yarn: project.color,
+                            progress: plan.totalTaps > 0 ? Double(project.rows) / Double(plan.totalTaps) : 0)
+                        .frame(width: 120, height: 120)
+                        .motion(.smooth, value: project.rows)
+                }
+                instruction(plan).layoutPriority(1)
+            }
+            .padding(.horizontal, 24)
+            .padding(.top, 8)
+            .containerRelativeFrame(.vertical) { length, _ in length * 0.46 }
             work(height: nil, tags: true, rows: plan.knitRows(upTo: project.rows))
-        }
-        .overlay(alignment: .top) {
-            Rectangle()
-                .fill(project.color.color)
-                .frame(height: 3)
-                .scaleEffect(x: plan.totalTaps > 0 ? CGFloat(project.rows) / CGFloat(plan.totalTaps) : 0, anchor: .leading)
-                .motion(.smooth, value: project.rows)
-                .accessibilityHidden(true)
         }
         .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
         .ignoresSafeArea(edges: .bottom)
@@ -172,9 +174,11 @@ struct ProjectView: View {
     private func instruction(_ plan: PatternPlan) -> some View {
         if let spot = plan.position(at: project.rows) {
             let step = plan.steps[spot.step]
+            let said = step.text(at: spot.row)
             let detail = [
                 step.rows > 1 ? "\(spot.row + 1) of \(step.rows)" : nil,
-                step.stitches(after: spot.row).map { "\($0) stitches" },
+                // Not repeated when the instruction already says it ("Cast on 32 stitches.").
+                step.stitches(after: spot.row).flatMap { said.contains("\($0) st") ? nil : "\($0) stitches" },
             ].compactMap { $0 }.joined(separator: " · ")
             VStack(spacing: 16) {
                 Text(step.section)
@@ -209,7 +213,9 @@ struct ProjectView: View {
     /// The needle and the fabric hanging from it. Tapping it knits a row.
     /// `taps`: the PDF strip counts its own taps. Elsewhere the whole screen does, so the fabric must not count too.
     private func work(height: CGFloat?, tags: Bool, rows: Int? = nil, taps: Bool = false) -> some View {
-        Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10, markFrom: plan == nil ? project.repeatStart : 0)
+        // The full-screen work knits in big stitches over a ruled chart; the PDF strip stays small and plain.
+        Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10,
+               markFrom: plan == nil ? project.repeatStart : 0, stitch: height == nil ? 0 : 24, chart: height == nil)
             .motion(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)

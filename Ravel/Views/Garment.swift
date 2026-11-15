@@ -4,18 +4,34 @@ import SwiftUI
 struct Garment: View {
     var silhouette: Design.Silhouette
     var yarn: YarnColor
+    /// Set while it is being knitted: the outline shows faintly and fills with fabric as the rows go on,
+    /// from the edge the pattern starts at.
+    var progress: Double?
 
     var body: some View {
         Color.clear
             .aspectRatio(1, contentMode: .fit)
             .overlay {
                 GeometryReader { proxy in
-                    Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, proxy.size.width / 11), showsNeedle: false)
-                        .mask { Outline(silhouette: silhouette).fill(style: FillStyle(eoFill: true)) }
+                    ZStack {
+                        if progress != nil {
+                            Outline(silhouette: silhouette).fill(.primary.opacity(0.08), style: FillStyle(eoFill: true))
+                        }
+                        Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, proxy.size.width / 11), showsNeedle: false)
+                            .mask { Outline(silhouette: silhouette).fill(style: FillStyle(eoFill: true)) }
+                            .mask(alignment: silhouette.knitsDown ? .top : .bottom) {
+                                Rectangle().frame(height: proxy.size.height * min(1, max(0, progress ?? 1)))
+                            }
+                    }
                 }
             }
             .accessibilityHidden(true)
     }
+}
+
+extension Design.Silhouette {
+    /// A raglan is worked from the neck down; everything else here starts at its lower edge.
+    var knitsDown: Bool { self == .sweater }
 }
 
 private struct Outline: Shape {
@@ -42,15 +58,14 @@ private struct Outline: Shape {
             path.closeSubpath()
             path.addRoundedRect(in: box(0.14, 0.74, 0.72, 0.15), cornerSize: CGSize(width: unit * 0.05, height: unit * 0.05))
         case .scarf:
-            path.move(to: p(0.18, 0.94))
-            path.addLine(to: p(0.18, 0.38))
-            path.addCurve(to: p(0.82, 0.38), control1: p(0.18, -0.04), control2: p(0.82, -0.04))
-            path.addLine(to: p(0.82, 0.72))
-            path.addLine(to: p(0.56, 0.72))
-            path.addLine(to: p(0.56, 0.4))
-            path.addCurve(to: p(0.44, 0.4), control1: p(0.56, 0.3), control2: p(0.44, 0.3))
-            path.addLine(to: p(0.44, 0.94))
-            path.closeSubpath()
+            // A long strip with fringe at both ends. The strands meet the strip edge to edge, never overlapping,
+            // so the even-odd fill leaves no gaps.
+            path.addRoundedRect(in: box(0.33, 0.13, 0.34, 0.72), cornerSize: CGSize(width: unit * 0.02, height: unit * 0.02))
+            for index in 0..<5 {
+                let x = 0.355 + CGFloat(index) * 0.065
+                path.addRect(box(x, 0.04, 0.03, 0.09))
+                path.addRect(box(x, 0.85, 0.03, 0.09))
+            }
         case .cowl:
             path.addEllipse(in: box(0.08, 0.2, 0.84, 0.62))
             path.addEllipse(in: box(0.26, 0.26, 0.48, 0.2))

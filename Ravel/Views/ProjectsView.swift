@@ -104,18 +104,18 @@ struct ProjectsView: View {
         ForEach(list) { project in
             NavigationLink(value: project) {
                 HStack(spacing: 16) {
-                    Swatch(yarn: project.color)
+                    thumbnail(project)
                     Text(project.name)
-                        .font(Theme.display(20))
+                        .font(Theme.display(22))
                         .lineLimit(2)
                     Spacer(minLength: 8)
                     Text(project.rows, format: .number)
-                        .font(Theme.display(20, weight: .regular))
+                        .font(Theme.display(22, weight: .regular))
                         .monospacedDigit()
                         .foregroundStyle(Theme.secondary)
                         .accessibilityLabel("Row \(project.rows)")
                 }
-                .padding(.vertical, 6)
+                .padding(.vertical, 8)
             }
             .listRowBackground(Theme.paper)
             .listRowSeparator(.hidden)
@@ -125,6 +125,20 @@ struct ProjectsView: View {
                 // A swipe must not throw away rows already knitted: ask first.
                 if project.rows > 0 || project.patternFile != nil { deleting = project } else { remove(project) }
             }
+        }
+    }
+
+    /// A library project shows the piece, filled as far as it is knitted; any other shows its fabric.
+    @ViewBuilder
+    private func thumbnail(_ project: Project) -> some View {
+        let side: CGFloat = 64
+        if let design = project.designRaw.flatMap(Design.init(rawValue:)), let total = project.plan?.totalTaps, total > 0 {
+            Garment(silhouette: design.silhouette, yarn: project.color, progress: Double(project.rows) / Double(total))
+                .padding(6)
+                .frame(width: side, height: side)
+                .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: side * 0.27, style: .continuous))
+        } else {
+            Swatch(yarn: project.color, size: side)
         }
     }
 

@@ -30,8 +30,7 @@ struct PaywallView: View {
             // At large text sizes the page scrolls and nothing truncates.
             ViewThatFits(in: .vertical) {
                 VStack(spacing: 0) {
-                    Spacer(minLength: 0)
-                    hero.frame(minHeight: 44, maxHeight: 130)
+                    hero.frame(minHeight: 44, maxHeight: 200)
                     pitch
                     Spacer(minLength: 0)
                     store
@@ -57,7 +56,7 @@ struct PaywallView: View {
             Garment(silhouette: .sweater, yarn: .madder)
             Garment(silhouette: .shawl, yarn: .indigo)
         }
-        .padding(.horizontal, 28)
+        .padding(.horizontal, 12)
         .accessibilityHidden(true)
     }
 
@@ -68,11 +67,6 @@ struct PaywallView: View {
                 .minimumScaleFactor(0.6)
                 .lineLimit(1)
                 .accessibilityAddTraits(.isHeader)
-            Text("Every pattern, written to your size and your yarn, one row at a time.")
-                .font(.body)
-                .foregroundStyle(Theme.secondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 28)
         .padding(.top, 20)
