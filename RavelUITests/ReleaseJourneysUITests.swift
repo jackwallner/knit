@@ -126,7 +126,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         tap(app.buttons["Add Yarn"], "Add Yarn")
         XCTAssertTrue(app.navigationBars["Yarn"].waitForExistence(timeout: 10))
         QA.checkpoint(app, "yarn-editor")
-        // The field focuses itself, but the keyboard may still be rising; a tap makes the typing land.
+        // A knitter who pauses before naming must not lose the yarn: autosave runs in the pause
+        // and once closed the editor and deleted the unnamed yarn.
+        sleep(15)
         tap(app.textFields["Name"], "Name field")
         app.textFields["Name"].typeText("Merino")
         tap(app.buttons["Done"], "Done")
@@ -161,7 +163,8 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
         XCTAssertTrue(element.waitForExistence(timeout: 15))
-        for _ in 0..<8 where !element.isHittable {
+        // Large text puts one tile a row, so the library runs long.
+        for _ in 0..<24 where !element.isHittable {
             QA.swipe(app.windows.firstMatch, .up)
         }
         XCTAssertTrue(element.isHittable)

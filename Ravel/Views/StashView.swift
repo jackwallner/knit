@@ -100,6 +100,9 @@ struct StashView: View {
     private func addYarn() {
         let yarn = Yarn(name: "")
         context.insert(yarn)
+        // Saved before the sheet opens: a first save swaps the yarn's ID, which would
+        // close and reopen the editor and drop the yarn while it is still unnamed.
+        try? context.save()
         opened = nil
         editingYarn = yarn
     }
@@ -107,6 +110,7 @@ struct StashView: View {
     private func addNeedle() {
         let needle = Needle()
         context.insert(needle)
+        try? context.save()
         editingNeedle = needle
     }
 
@@ -131,9 +135,9 @@ struct YarnEditor: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Name", text: $yarn.name).focused($nameFocused)
-                    TextField("Brand", text: $yarn.brand)
-                    TextField("Color", text: $yarn.colorway)
+                    TextField("Name", text: $yarn.name).focused($nameFocused).accessibilityLabel("Name")
+                    TextField("Brand", text: $yarn.brand).accessibilityLabel("Brand")
+                    TextField("Color", text: $yarn.colorway).accessibilityLabel("Color")
                 }
                 Section {
                     Picker("Weight", selection: $yarn.weight) {
