@@ -69,3 +69,20 @@ enum YarnColor: String, CaseIterable, Identifiable, Sendable {
 
     var uiColor: UIColor { UIColor(red: rgb.0, green: rgb.1, blue: rgb.2, alpha: 1) }
 }
+
+extension View {
+    /// `.animation(_:value:)` that stands still when the reader has Reduce Motion on.
+    func motion<V: Equatable>(_ animation: Animation, value: V) -> some View {
+        modifier(Motion(animation: animation, value: value))
+    }
+}
+
+private struct Motion<V: Equatable>: ViewModifier {
+    let animation: Animation
+    let value: V
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content.animation(reduceMotion ? nil : animation, value: value)
+    }
+}

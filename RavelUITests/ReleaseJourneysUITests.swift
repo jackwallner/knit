@@ -126,7 +126,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         tap(app.buttons["Add Yarn"], "Add Yarn")
         XCTAssertTrue(app.navigationBars["Yarn"].waitForExistence(timeout: 10))
         QA.checkpoint(app, "yarn-editor")
-        app.typeText("Merino")
+        // The field focuses itself, but the keyboard may still be rising; a tap makes the typing land.
+        tap(app.textFields["Name"], "Name field")
+        app.textFields["Name"].typeText("Merino")
         tap(app.buttons["Done"], "Done")
         XCTAssertTrue(app.staticTexts["Merino"].firstMatch.waitForExistence(timeout: 10))
         QA.checkpoint(app, "stash-one-yarn")

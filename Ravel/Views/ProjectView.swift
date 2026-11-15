@@ -159,7 +159,7 @@ struct ProjectView: View {
                 .fill(project.color.color)
                 .frame(height: 3)
                 .scaleEffect(x: plan.totalTaps > 0 ? CGFloat(project.rows) / CGFloat(plan.totalTaps) : 0, anchor: .leading)
-                .animation(.smooth, value: project.rows)
+                .motion(.smooth, value: project.rows)
                 .accessibilityHidden(true)
         }
         .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
@@ -198,7 +198,7 @@ struct ProjectView: View {
                     .accessibilityIdentifier("guide.detail")
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .animation(.snappy, value: project.rows)
+            .motion(.snappy, value: project.rows)
         } else {
             Text("Finished")
                 .font(Theme.display(44))
@@ -210,7 +210,7 @@ struct ProjectView: View {
     /// `taps`: the PDF strip counts its own taps. Elsewhere the whole screen does, so the fabric must not count too.
     private func work(height: CGFloat?, tags: Bool, rows: Int? = nil, taps: Bool = false) -> some View {
         Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10, markFrom: plan == nil ? project.repeatStart : 0)
-            .animation(.smooth(duration: 0.32), value: project.rows)
+            .motion(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)
             .background(Theme.paper)
@@ -232,7 +232,7 @@ struct ProjectView: View {
             .minimumScaleFactor(0.4)
             .lineLimit(1)
             .contentTransition(.numericText(value: Double(project.rows)))
-            .animation(.snappy, value: project.rows)
+            .motion(.snappy, value: project.rows)
             .accessibilityLabel("Row \(project.rows)")
             .accessibilityIdentifier("counter.value")
     }
@@ -257,7 +257,7 @@ struct ProjectView: View {
                 .monospacedDigit()
                 .foregroundStyle(Theme.secondary)
                 .contentTransition(.numericText(value: Double(project.repeatPosition)))
-                .animation(.snappy, value: project.repeatPosition)
+                .motion(.snappy, value: project.repeatPosition)
                 .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
         } else if project.repeatLength > 1 {
             HStack(spacing: 6) {
@@ -267,7 +267,7 @@ struct ProjectView: View {
                         .frame(width: 8, height: 8)
                 }
             }
-            .animation(.snappy, value: project.repeatPosition)
+            .motion(.snappy, value: project.repeatPosition)
             .accessibilityElement()
             .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
         }
@@ -295,7 +295,7 @@ struct ProjectView: View {
         }
         .accessibilityLabel("Back one row")
         .accessibilityIdentifier("counter.minus")
-        .animation(.snappy, value: canUndo)
+        .motion(.snappy, value: canUndo)
         .accessibilityHidden(!canUndo)
     }
 

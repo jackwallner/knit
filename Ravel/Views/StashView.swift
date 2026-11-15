@@ -132,8 +132,8 @@ struct YarnEditor: View {
             Form {
                 Section {
                     TextField("Name", text: $yarn.name).focused($nameFocused)
-                    LabeledContent("Brand") { TextField("", text: $yarn.brand).multilineTextAlignment(.trailing) }
-                    LabeledContent("Color") { TextField("", text: $yarn.colorway).multilineTextAlignment(.trailing) }
+                    TextField("Brand", text: $yarn.brand)
+                    TextField("Color", text: $yarn.colorway)
                 }
                 Section {
                     Picker("Weight", selection: $yarn.weight) {

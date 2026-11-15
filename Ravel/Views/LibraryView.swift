@@ -6,8 +6,13 @@ struct LibraryView: View {
     // `-OpenDesign raglanPullover` lands on a design, for screenshots.
     @State private var path: [Design] = UserDefaults.standard.string(forKey: "OpenDesign").flatMap(Design.init(rawValue:)).map { [$0] } ?? []
 
-    private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
+    @Environment(\.dynamicTypeSize) private var typeSize
     private let trending = Trending.shared
+
+    /// Two tiles a row, one at the accessibility text sizes so names never get cut.
+    private var columns: [GridItem] {
+        Array(repeating: GridItem(.flexible(), spacing: 16), count: typeSize.isAccessibilitySize ? 1 : 2)
+    }
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -56,7 +61,7 @@ struct LibraryView: View {
                     ForEach(trending.items) { trend in
                         NavigationLink(value: trend.design) { tile(trend.design, note: trend.tag) }
                             .buttonStyle(.plain)
-                            .containerRelativeFrame(.horizontal) { width, _ in (width - 40 - 32) / 2.3 }
+                            .containerRelativeFrame(.horizontal) { width, _ in (width - 40 - 32) / (typeSize.isAccessibilitySize ? 1.3 : 2.3) }
                             .accessibilityIdentifier("trending.\(trend.design.rawValue)")
                     }
                 }
@@ -74,8 +79,9 @@ struct LibraryView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(design.name)
                     .font(Theme.display(18))
-                    .lineLimit(2)
+                    .lineLimit(3)
                     .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text(note)
                     .font(.subheadline)
                     .foregroundStyle(Theme.secondary)
@@ -116,7 +122,7 @@ struct DesignView: View {
                         .monospacedDigit()
                         .foregroundStyle(Theme.secondary)
                         .contentTransition(.numericText(value: Double(plan.yards)))
-                        .animation(.snappy, value: plan.yards)
+                        .motion(.snappy, value: plan.yards)
                 }
                 .frame(maxWidth: .infinity)
 
@@ -223,7 +229,7 @@ struct DesignView: View {
                 .monospacedDigit()
                 .frame(minWidth: 76)
                 .contentTransition(.numericText(value: value.wrappedValue))
-                .animation(.snappy, value: value.wrappedValue)
+                .motion(.snappy, value: value.wrappedValue)
             nudge("plus") { move(step) }.disabled(value.wrappedValue >= range.upperBound)
         }
         .accessibilityElement(children: .ignore)
