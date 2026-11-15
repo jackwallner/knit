@@ -149,7 +149,8 @@ struct ProjectView: View {
     /// A library pattern: the instruction for this row on top, the work below. Tap anywhere for the next row.
     private func guided(_ plan: PatternPlan) -> some View {
         VStack(spacing: 0) {
-            VStack(spacing: 12) {
+            // The piece and its instruction sit together as one group, centered in the space above the work.
+            VStack(spacing: 20) {
                 // The piece itself, filling with fabric as the pattern goes on: where the knitter is in the whole.
                 if let design = project.designRaw.flatMap(Design.init(rawValue:)) {
                     Garment(silhouette: design.silhouette, yarn: project.color,
@@ -159,6 +160,7 @@ struct ProjectView: View {
                 }
                 instruction(plan).layoutPriority(1)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 24)
             .padding(.top, 8)
             .containerRelativeFrame(.vertical) { length, _ in length * 0.46 }
@@ -201,12 +203,12 @@ struct ProjectView: View {
                     .contentTransition(.numericText(value: Double(spot.row)))
                     .accessibilityIdentifier("guide.detail")
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: .infinity)
             .motion(.snappy, value: project.rows)
         } else {
             Text("Finished")
                 .font(Theme.display(44))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(maxWidth: .infinity)
         }
     }
 

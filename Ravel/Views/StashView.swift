@@ -67,28 +67,18 @@ struct StashView: View {
         }
     }
 
-    /// Empty places for yarn, and both things a stash holds.
+    /// Both things a stash holds.
     private var empty: some View {
-        VStack(spacing: 28) {
-            HStack(spacing: 12) {
-                ForEach(0..<3, id: \.self) { _ in
-                    RoundedRectangle(cornerRadius: 64 * 0.27, style: .continuous)
-                        .strokeBorder(.primary.opacity(0.2), style: StrokeStyle(lineWidth: 1.5, dash: [5, 4]))
-                        .frame(width: 64, height: 64)
-                }
-            }
-            .accessibilityHidden(true)
-            VStack(spacing: 12) {
-                Button("Add Yarn", action: addYarn)
-                    .font(.headline)
-                    .foregroundStyle(Theme.onAccent)
-                    .padding(.horizontal, 28)
-                    .frame(minHeight: 50)
-                    .background(Color.accentColor, in: Capsule())
-                Button("Add Needles", action: addNeedle)
-                    .font(.headline)
-                    .frame(minHeight: 44)
-            }
+        VStack(spacing: 12) {
+            Button("Add Yarn", action: addYarn)
+                .font(.headline)
+                .foregroundStyle(Theme.onAccent)
+                .padding(.horizontal, 28)
+                .frame(minHeight: 50)
+                .background(Color.accentColor, in: Capsule())
+            Button("Add Needles", action: addNeedle)
+                .font(.headline)
+                .frame(minHeight: 44)
         }
     }
 
