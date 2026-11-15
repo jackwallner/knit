@@ -1,0 +1,40 @@
+name: Topical designs
+
+# Every topical design record, published or draft, must pass the same checks the app's tests run, at
+# every size and allowed yarn weight. The previews are uploaded so a draft can be judged by eye.
+
+on:
+  pull_request:
+    paths:
+      - 'docs/designs.json'
+      - 'project-docs/topical/**'
+      - 'Shared/Patterns/**'
+      - 'Shared/Models/**'
+      - 'scripts/topical-check.sh'
+      - 'scripts/topical-check/**'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/designs.json'
+      - 'project-docs/topical/**'
+      - 'Shared/Patterns/**'
+      - 'Shared/Models/**'
+      - 'scripts/topical-check.sh'
+      - 'scripts/topical-check/**'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every record and draw previews
+        run: PREVIEWS=previews scripts/topical-check.sh
+      - name: Upload previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topical-previews
+          path: previews/
+          if-no-files-found: ignore

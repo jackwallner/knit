@@ -1,0 +1,7 @@
+[Unit]
+Description=Ravel topical scout: draft this week's topical design records as a draft PR
+
+[Service]
+Type=oneshot
+ExecStart=%h/knit-scout-runner/scout.sh
+TimeoutStartSec=1h

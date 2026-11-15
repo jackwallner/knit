@@ -152,9 +152,10 @@ struct ProjectView: View {
             // The piece and its instruction sit together as one group, centered in the space above the work.
             VStack(spacing: 20) {
                 // The piece itself, filling with fabric as the pattern goes on: where the knitter is in the whole.
-                if let design = project.designRaw.flatMap(Design.init(rawValue:)) {
-                    Garment(silhouette: design.silhouette, yarn: project.color,
-                            progress: plan.totalTaps > 0 ? Double(project.rows) / Double(plan.totalTaps) : 0)
+                if let silhouette = project.silhouette(plan) {
+                    Garment(silhouette: silhouette, yarn: project.color,
+                            progress: plan.totalTaps > 0 ? Double(project.rows) / Double(plan.totalTaps) : 0,
+                            colorwork: plan.palette == nil ? nil : plan)
                         .frame(width: 120, height: 120)
                         .motion(.smooth, value: project.rows)
                 }
@@ -217,7 +218,8 @@ struct ProjectView: View {
     private func work(height: CGFloat?, tags: Bool, rows: Int? = nil, taps: Bool = false) -> some View {
         // The full-screen work knits in big stitches over a ruled chart; the PDF strip stays small and plain.
         Fabric(rows: Double(rows ?? project.rows), yarn: project.color, markEvery: !tags ? 0 : project.repeatLength > 0 ? project.repeatLength : 10,
-               markFrom: plan == nil ? project.repeatStart : 0, stitch: height == nil ? 0 : 24, chart: height == nil)
+               markFrom: plan == nil ? project.repeatStart : 0, stitch: height == nil ? 0 : 24, chart: height == nil,
+               paints: plan?.paints() ?? [], palette: plan?.palette ?? [], focus: plan?.front ?? 0.5)
             .motion(.smooth(duration: 0.32), value: project.rows)
             .frame(height: height)
             .frame(maxHeight: height == nil ? .infinity : nil)

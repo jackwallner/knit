@@ -1,0 +1,35 @@
+{
+  "designs": [
+    {
+      "id": "round-raccoon-beanie",
+      "title": "Round Raccoon Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "crown": "ears",
+      "palette": [
+        { "name": "gray", "hex": "#8C8984" },
+        { "name": "black", "hex": "#2B2927" },
+        { "name": "cream", "hex": "#EEE7DA" }
+      ],
+      "stripes": [
+        { "color": "A", "inches": 3 },
+        { "color": "C", "inches": 0.5 },
+        { "color": "B", "inches": 1.5 },
+        { "color": "C", "inches": 0.5 }
+      ],
+      "chart": {
+        "placement": "motif",
+        "stripe": 2,
+        "rows": [
+          ".CCC...CCC.",
+          "CC.CC.CC.CC",
+          ".CCC...CCC."
+        ]
+      },
+      "weights": ["dk", "worsted", "aran", "bulky"],
+      "tag": "Viral",
+      "starts": "2026-11-20",
+      "ends": "2027-03-01"
+    }
+  ]
+}

@@ -57,15 +57,13 @@ enum YarnColor: String, CaseIterable, Identifiable, Sendable {
         }
     }
 
-    private func scaled(_ factor: Double) -> Color {
-        Color(red: rgb.0 * factor, green: rgb.1 * factor, blue: rgb.2 * factor)
-    }
+    var tint: Tint { Tint(red: rgb.0, green: rgb.1, blue: rgb.2) }
 
-    var color: Color { scaled(1) }
+    var color: Color { tint.color }
     /// The leg of each stitch that sits away from the light.
-    var lowlight: Color { scaled(0.9) }
+    var lowlight: Color { tint.lowlight }
     /// The gap between stitches.
-    var shade: Color { scaled(0.55) }
+    var shade: Color { tint.shade }
 
     var uiColor: UIColor { UIColor(red: rgb.0, green: rgb.1, blue: rgb.2, alpha: 1) }
 }
@@ -84,5 +82,33 @@ private struct Motion<V: Equatable>: ViewModifier {
 
     func body(content: Content) -> some View {
         content.animation(reduceMotion ? nil : animation, value: value)
+    }
+}
+
+/// A yarn's color with the darker tones a stitch is drawn in.
+struct Tint: Sendable {
+    var red: Double
+    var green: Double
+    var blue: Double
+
+    private func scaled(_ factor: Double) -> Color { Color(red: red * factor, green: green * factor, blue: blue * factor) }
+
+    var color: Color { scaled(1) }
+    var lowlight: Color { scaled(0.9) }
+    var shade: Color { scaled(0.55) }
+}
+
+extension Shade {
+    var tint: Tint { rgb.map { Tint(red: $0.red, green: $0.green, blue: $0.blue) } ?? YarnColor.oat.tint }
+}
+
+extension YarnColor {
+    /// The library color closest to a colorwork yarn, for the places a project shows one color.
+    static func nearest(to shade: Shade?) -> YarnColor {
+        guard let rgb = shade?.rgb else { return .oat }
+        return allCases.min { a, b in
+            func distance(_ c: YarnColor) -> Double { pow(c.rgb.0 - rgb.red, 2) + pow(c.rgb.1 - rgb.green, 2) + pow(c.rgb.2 - rgb.blue, 2) }
+            return distance(a) < distance(b)
+        } ?? .oat
     }
 }

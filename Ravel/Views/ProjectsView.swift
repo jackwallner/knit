@@ -132,8 +132,8 @@ struct ProjectsView: View {
     @ViewBuilder
     private func thumbnail(_ project: Project) -> some View {
         let side: CGFloat = 64
-        if let design = project.designRaw.flatMap(Design.init(rawValue:)), let total = project.plan?.totalTaps, total > 0 {
-            Garment(silhouette: design.silhouette, yarn: project.color, progress: Double(project.rows) / Double(total))
+        if let plan = project.plan, let silhouette = project.silhouette(plan), plan.totalTaps > 0 {
+            Garment(silhouette: silhouette, yarn: project.color, progress: Double(project.rows) / Double(plan.totalTaps), colorwork: plan.palette == nil ? nil : plan)
                 .padding(6)
                 .frame(width: side, height: side)
                 .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: side * 0.27, style: .continuous))

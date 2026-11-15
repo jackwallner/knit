@@ -23,8 +23,13 @@ struct Step: Codable, Equatable, Sendable {
     var delta = 0
     /// True for actions that are not a knitted row, so the fabric does not grow.
     var isAction = false
+    /// The colors of each row, cycled like `texts`, as palette letters: one letter for a row in a
+    /// single color, or one letter per stitch, left to right as the right side faces. Nil is color A.
+    var paint: [String]? = nil
 
     func text(at row: Int) -> String { texts[row % texts.count] }
+
+    func paint(at row: Int) -> String? { paint.flatMap { $0.isEmpty ? nil : $0[row % $0.count] } }
 
     func stitches(after row: Int) -> Int? { stitches.map { $0 + delta * (row / texts.count) } }
 }
@@ -40,6 +45,7 @@ extension Step {
         stitches = try values.decodeIfPresent(Int.self, forKey: .stitches)
         delta = try values.decodeIfPresent(Int.self, forKey: .delta) ?? 0
         isAction = try values.decodeIfPresent(Bool.self, forKey: .isAction) ?? false
+        paint = try values.decodeIfPresent([String].self, forKey: .paint)
         if texts.isEmpty { texts = [""] }
     }
 }
@@ -50,6 +56,10 @@ struct PatternPlan: Codable, Equatable, Sendable {
     var materials: [String]
     var finished: String
     var yards: Int
+    /// The yarns of a colorwork pattern, color A first. Nil for a pattern in one color.
+    var palette: [Shade]? = nil
+    /// The shape the pattern draws as, kept with the plan so a project never needs its design to draw.
+    var silhouette: String? = nil
 
     var totalTaps: Int { steps.reduce(0) { $0 + $1.rows } }
 
@@ -85,7 +95,28 @@ extension PatternPlan {
         materials = try values.decodeIfPresent([String].self, forKey: .materials) ?? []
         finished = try values.decodeIfPresent(String.self, forKey: .finished) ?? ""
         yards = try values.decodeIfPresent(Int.self, forKey: .yards) ?? 0
+        palette = try values.decodeIfPresent([Shade].self, forKey: .palette)
+        silhouette = try values.decodeIfPresent(String.self, forKey: .silhouette)
     }
+
+    /// The palette letters of every knitted row among the first `taps` taps, oldest first. Empty for a
+    /// pattern in one color.
+    func paints(upTo taps: Int = .max) -> [String] {
+        guard palette != nil else { return [] }
+        var remaining = max(0, taps)
+        var rows: [String] = []
+        for step in steps {
+            let done = min(remaining, step.rows)
+            if !step.isAction { for row in 0..<done { rows.append(step.paint(at: row) ?? "A") } }
+            remaining -= done
+            if remaining == 0 { break }
+        }
+        return rows
+    }
+
+    /// Where the front of a row sits, as a fraction across it as the right side faces: a round's front
+    /// is its first half, which is the right-hand half; a flat piece faces front in the middle.
+    var front: Double { steps.first?.texts.first?.contains("Join in the round") == true ? 0.75 : 0.5 }
 
     /// Each section with the tap it starts on, in knitting order.
     var sections: [(name: String, tap: Int)] {

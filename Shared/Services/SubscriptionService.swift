@@ -89,6 +89,8 @@ final class SubscriptionService {
 
     func canOpen(_ design: Design) -> Bool { design.isFree || isPro }
 
+    func canOpen(_ item: LibraryItem) -> Bool { item.isFree || isPro }
+
     /// Development and tests only: grant or drop the entitlement without a purchase.
     func setLocalOverride(isPro: Bool) { self.isPro = isPro }
 

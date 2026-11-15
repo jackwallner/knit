@@ -36,6 +36,17 @@ enum Persistence {
         let blanket = Project(name: "Baby Blanket", rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
         blanket.finishedAt = .now.addingTimeInterval(-2 * 86_400)
         [sweater, beanie, blanket].forEach(context.insert)
+        // With `-TopicalFile`, a project cast on from the first draft, partway up its colorwork.
+        if let topical = TopicalStore.shared.items.first {
+            let item = LibraryItem.topical(topical)
+            let project = Project(name: item.name, rows: 0, color: item.yarn, createdAt: .now.addingTimeInterval(3600))
+            let plan = item.plan(measures: topical.base.defaultSize.values, gauge: item.defaultGauge)
+            project.follow(plan, as: item.designRaw)
+            // The tap after the first chart row, so the work shows colors.
+            let chartRow = plan.steps.firstIndex { ($0.paint?.first?.count ?? 0) > 1 } ?? 0
+            project.rows = plan.steps.prefix(chartRow + 1).reduce(0) { $0 + $1.rows } + 1
+            context.insert(project)
+        }
         context.insert(Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6))
         context.insert(Yarn(name: "Sock Yarn", brand: "Tidewater", colorway: "Harbor", weight: .fingering, skeins: 2, createdAt: .now.addingTimeInterval(-86_400)))
         context.insert(Needle(kind: .circular, millimeters: 4.5, lengthInches: 32))
