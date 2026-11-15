@@ -30,8 +30,10 @@ final class TopicalTests: XCTestCase {
         let files = try recordFiles()
         XCTAssertGreaterThanOrEqual(files.count, 2)
         for file in files {
-            let parsed = Topical.parse(try Data(contentsOf: file))
-            XCTAssertFalse(parsed.isEmpty, file.lastPathComponent)
+            let data = try Data(contentsOf: file)
+            // The published list may be empty, but it must always be a list.
+            XCTAssertNoThrow(try JSONDecoder().decode(Topical.Listing.self, from: data), file.lastPathComponent)
+            let parsed = Topical.parse(data)
             for record in parsed {
                 XCTAssertEqual(record.problems, [], "\(file.lastPathComponent) \(record.id)")
                 guard let topical = record.topical else { continue }

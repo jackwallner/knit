@@ -14,6 +14,9 @@ git clean -qfd
 branch="topical/$(date +%F)"
 git checkout -q -B "$branch" origin/main
 
+# Until the topical loop is on main there is nothing to scout for.
+[[ -f scripts/topical-scout/prompt.md ]] || { echo "No topical loop on main yet."; exit 0; }
+
 notes="$(mktemp)"
 # The model only reads, searches the web and writes draft files. Git and GitHub stay in this script.
 claude -p "$(cat scripts/topical-scout/prompt.md)" \
