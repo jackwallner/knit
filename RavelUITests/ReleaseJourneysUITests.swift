@@ -130,7 +130,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         tap(app.textFields["Name"], "Name field")
         app.textFields["Name"].typeText("Merino")
         tap(app.buttons["Done"], "Done")
-        XCTAssertTrue(app.staticTexts["Merino"].firstMatch.waitForExistence(timeout: 10))
+        // The list row is one button, so the name can arrive as text or inside the row's label.
+        let row = app.descendants(matching: .any).matching(NSPredicate(format: "label CONTAINS %@", "Merino")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 10))
         QA.checkpoint(app, "stash-one-yarn")
     }
 
@@ -161,7 +163,8 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
         XCTAssertTrue(element.waitForExistence(timeout: 15))
-        for _ in 0..<8 where !element.isHittable {
+        // Large text puts one tile a row, so the library runs long.
+        for _ in 0..<24 where !element.isHittable {
             QA.swipe(app.windows.firstMatch, .up)
         }
         XCTAssertTrue(element.isHittable)
