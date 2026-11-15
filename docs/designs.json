@@ -1,3 +1,124 @@
 {
-  "designs": []
+  "designs": [
+    {
+      "id": "round-raccoon-beanie",
+      "title": "Round Raccoon Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "crown": "ears",
+      "palette": [
+        {
+          "name": "gray",
+          "hex": "#8C8984"
+        },
+        {
+          "name": "black",
+          "hex": "#2B2927"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE7DA"
+        }
+      ],
+      "brim": "A",
+      "rim": "C",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 0.5
+        },
+        {
+          "color": "C",
+          "inches": 0.4
+        },
+        {
+          "color": "B",
+          "inches": 1.25
+        },
+        {
+          "color": "C",
+          "inches": 0.4
+        }
+      ],
+      "chart": {
+        "placement": "motif",
+        "stripe": 2,
+        "rows": [
+          "CCC....CCC",
+          "C.C....C.C",
+          "CCC....CCC"
+        ]
+      },
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Viral",
+      "starts": "2026-11-15",
+      "ends": "2027-03-01",
+      "free": true
+    },
+    {
+      "id": "fir-tree-hat",
+      "title": "Fir Tree Hat",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "green",
+          "hex": "#2F5D46"
+        },
+        {
+          "name": "red",
+          "hex": "#A33A35"
+        },
+        {
+          "name": "brown",
+          "hex": "#6B4B33"
+        }
+      ],
+      "brim": "C",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        },
+        {
+          "color": "C",
+          "inches": 0.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          ".B..",
+          ".B..",
+          "BBB.",
+          "BBB.",
+          ".B..",
+          "BBB.",
+          "BBB.",
+          ".D..",
+          ".D.."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Holiday",
+      "starts": "2026-11-15",
+      "ends": "2027-01-01"
+    }
+  ]
 }
