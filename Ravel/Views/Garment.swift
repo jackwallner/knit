@@ -7,6 +7,7 @@ struct Garment: View {
     /// Set while it is being knitted: the outline shows faintly and fills with fabric as the rows go on,
     /// from the edge the pattern starts at.
     var progress: Double?
+    @Environment(\.colorScheme) private var scheme
 
     var body: some View {
         Color.clear
@@ -15,17 +16,27 @@ struct Garment: View {
                 GeometryReader { proxy in
                     ZStack {
                         if progress != nil {
-                            Outline(silhouette: silhouette).fill(.primary.opacity(0.08), style: FillStyle(eoFill: true))
+                            // Stronger on a dark screen, so a piece not yet started still shows its shape.
+                            Outline(silhouette: silhouette).fill(.primary.opacity(scheme == .dark ? 0.18 : 0.08), style: FillStyle(eoFill: true))
                         }
                         Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, proxy.size.width / 11), showsNeedle: false)
                             .mask { Outline(silhouette: silhouette).fill(style: FillStyle(eoFill: true)) }
                             .mask(alignment: silhouette.knitsDown ? .top : .bottom) {
-                                Rectangle().frame(height: proxy.size.height * min(1, max(0, progress ?? 1)))
+                                Rectangle().frame(height: filled(in: proxy.size))
                             }
                     }
                 }
             }
             .accessibilityHidden(true)
+    }
+
+    /// How much of the frame, from the starting edge, shows fabric: measured over the piece itself,
+    /// not its square, so the first row shows at once and the last row finishes it.
+    private func filled(in size: CGSize) -> CGFloat {
+        guard let progress else { return size.height }
+        let piece = Outline(silhouette: silhouette).path(in: CGRect(origin: .zero, size: size)).boundingRect
+        let lead = silhouette.knitsDown ? piece.minY : size.height - piece.maxY
+        return lead + piece.height * min(1, max(0, progress))
     }
 }
 

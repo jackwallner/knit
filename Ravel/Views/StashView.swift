@@ -67,11 +67,15 @@ struct StashView: View {
         }
     }
 
-    /// A few swatches of the yarn colors, and both things a stash holds.
+    /// Empty places for yarn, and both things a stash holds.
     private var empty: some View {
         VStack(spacing: 28) {
             HStack(spacing: 12) {
-                ForEach([YarnColor.spruce, .madder, .indigo], id: \.self) { Swatch(yarn: $0, size: 64) }
+                ForEach(0..<3, id: \.self) { _ in
+                    RoundedRectangle(cornerRadius: 64 * 0.27, style: .continuous)
+                        .strokeBorder(.primary.opacity(0.2), style: StrokeStyle(lineWidth: 1.5, dash: [5, 4]))
+                        .frame(width: 64, height: 64)
+                }
             }
             .accessibilityHidden(true)
             VStack(spacing: 12) {

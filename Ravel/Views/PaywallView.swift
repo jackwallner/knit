@@ -30,7 +30,7 @@ struct PaywallView: View {
             // At large text sizes the page scrolls and nothing truncates.
             ViewThatFits(in: .vertical) {
                 VStack(spacing: 0) {
-                    hero.frame(minHeight: 44, maxHeight: 200)
+                    hero.frame(minHeight: 44, maxHeight: 300)
                     pitch
                     Spacer(minLength: 0)
                     store
@@ -51,10 +51,18 @@ struct PaywallView: View {
     }
 
     private var hero: some View {
-        HStack(spacing: 4) {
-            Garment(silhouette: .hat, yarn: .spruce)
-            Garment(silhouette: .sweater, yarn: .madder)
-            Garment(silhouette: .shawl, yarn: .indigo)
+        // A shelf of the library: two rows of pieces, each in a different yarn.
+        VStack(spacing: 4) {
+            HStack(spacing: 4) {
+                Garment(silhouette: .hat, yarn: .spruce)
+                Garment(silhouette: .sweater, yarn: .madder)
+                Garment(silhouette: .shawl, yarn: .indigo)
+            }
+            HStack(spacing: 4) {
+                Garment(silhouette: .mitts, yarn: .marigold)
+                Garment(silhouette: .scarf, yarn: .plum)
+                Garment(silhouette: .cowl, yarn: .moss)
+            }
         }
         .padding(.horizontal, 12)
         .accessibilityHidden(true)
