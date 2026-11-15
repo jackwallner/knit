@@ -1,1 +1,1 @@
-stricken,strickmuster,häkeln,maschenprobe,stricknadel,pullover,mütze,schal,decke,wolle,pdf,anfänger
+stricken,häkeln,maschenprobe,pullover,mütze,schal,decke,wolle,pdf,anfänger,jacquard,waschbär

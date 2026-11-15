@@ -30,6 +30,7 @@ struct PaywallView: View {
             // At large text sizes the page scrolls and nothing truncates.
             ViewThatFits(in: .vertical) {
                 VStack(spacing: 0) {
+                    Spacer(minLength: 0)
                     hero.frame(minHeight: 44, maxHeight: 300)
                     pitch
                     Spacer(minLength: 0)
@@ -54,7 +55,7 @@ struct PaywallView: View {
         // A shelf of the library: two rows of pieces, each in a different yarn.
         VStack(spacing: 4) {
             HStack(spacing: 4) {
-                Garment(silhouette: .hat, yarn: .spruce)
+                lead
                 Garment(silhouette: .sweater, yarn: .madder)
                 Garment(silhouette: .shawl, yarn: .indigo)
             }
@@ -68,6 +69,17 @@ struct PaywallView: View {
         .accessibilityHidden(true)
     }
 
+    /// The newest paid seasonal design in its own colors, or a plain hat before any has arrived.
+    @ViewBuilder
+    private var lead: some View {
+        if let topical = TopicalStore.shared.items.first(where: { !$0.isFree }) {
+            let item = LibraryItem.topical(topical)
+            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
+        } else {
+            Garment(silhouette: .hat, yarn: .spruce)
+        }
+    }
+
     private var pitch: some View {
         VStack(spacing: 10) {
             Text("Ravel Patterns")
@@ -75,6 +87,12 @@ struct PaywallView: View {
                 .minimumScaleFactor(0.6)
                 .lineLimit(1)
                 .accessibilityAddTraits(.isHeader)
+            // What the purchase buys, in one line (App Review 3.1.2).
+            Text("Every design in the library, written to your measurements and yarn")
+                .font(.body)
+                .foregroundStyle(Theme.secondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 28)
         .padding(.top, 20)

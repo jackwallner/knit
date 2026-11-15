@@ -9,7 +9,7 @@ struct RootView: View {
 
     var body: some View {
         TabView(selection: $tab) {
-            ProjectsView()
+            ProjectsView { tab = 1 }
                 .tabItem { Label("Projects", systemImage: "square.stack") }
                 .tag(0)
             LibraryView()

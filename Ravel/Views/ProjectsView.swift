@@ -6,6 +6,9 @@ struct ProjectsView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.openURL) private var openURL
     @Environment(\.requestReview) private var requestReview
+    @Environment(\.dynamicTypeSize) private var typeSize
+    /// Opens the Patterns tab.
+    var browse: () -> Void = {}
     @Query(sort: \Project.createdAt, order: .reverse) private var projects: [Project]
     @State private var path: [Project] = []
     @State private var naming = false
@@ -90,32 +93,25 @@ struct ProjectsView: View {
         VStack(spacing: 28) {
             Fabric(rows: 0, yarn: .madder, markEvery: 0)
                 .frame(width: 240, height: 40)
-            Button("Cast On") { naming = true }
+            Button("Start Row Counter") { naming = true }
                 .font(.headline)
                 .foregroundStyle(Theme.onAccent)
                 .padding(.horizontal, 28)
                 .frame(minHeight: 50)
                 .background(Color.accentColor, in: Capsule())
                 .accessibilityIdentifier("projects.castOn")
+            Button("Browse Patterns", action: browse)
+                .font(.headline)
+                .frame(minHeight: 44)
+                .padding(.top, -14)
+                .accessibilityIdentifier("projects.browse")
         }
     }
 
     private func rows(_ list: [Project]) -> some View {
         ForEach(list) { project in
             NavigationLink(value: project) {
-                HStack(spacing: 16) {
-                    thumbnail(project)
-                    Text(project.name)
-                        .font(Theme.display(22))
-                        .lineLimit(2)
-                    Spacer(minLength: 8)
-                    Text(project.rows, format: .number)
-                        .font(Theme.display(22, weight: .regular))
-                        .monospacedDigit()
-                        .foregroundStyle(Theme.secondary)
-                        .accessibilityLabel("Row \(project.rows)")
-                }
-                .padding(.vertical, 8)
+                row(project).padding(.vertical, 8)
             }
             .listRowBackground(Theme.paper)
             .listRowSeparator(.hidden)
@@ -124,6 +120,34 @@ struct ProjectsView: View {
             for project in offsets.map({ list[$0] }) {
                 // A swipe must not throw away rows already knitted: ask first.
                 if project.rows > 0 || project.patternFile != nil { deleting = project } else { remove(project) }
+            }
+        }
+    }
+
+    /// At the accessibility text sizes the name gets its own line, so it is never cut.
+    @ViewBuilder
+    private func row(_ project: Project) -> some View {
+        let name = Text(project.name).font(Theme.display(22))
+        let count = Text(project.rows, format: .number)
+            .font(Theme.display(22, weight: .regular))
+            .monospacedDigit()
+            .foregroundStyle(Theme.secondary)
+            .accessibilityLabel("Row \(project.rows)")
+        if typeSize.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                    thumbnail(project)
+                    Spacer(minLength: 8)
+                    count
+                }
+                name
+            }
+        } else {
+            HStack(spacing: 16) {
+                thumbnail(project)
+                name.lineLimit(2)
+                Spacer(minLength: 8)
+                count
             }
         }
     }

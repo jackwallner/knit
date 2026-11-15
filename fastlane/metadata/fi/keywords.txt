@@ -1,1 +1,1 @@
-neulominen,virkkaus,puikot,silmukkatiheys,pipo,huivi,villapaita,lanka,pdf,aloittelija,peitto,neule
+neulominen,virkkaus,puikot,pipo,huivi,villapaita,pdf,aloittelija,peitto,kirjoneule,pesukarhu

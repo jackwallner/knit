@@ -1,1 +1,1 @@
-omgangsteller,radteller,hekle,strikkepinner,strikkefasthet,lue,genser,skjerf,pdf,nybegynner,pledd
+radteller,hekle,strikkepinner,lue,genser,skjerf,pdf,nybegynner,pledd,fargestrikk,vaskebjørn

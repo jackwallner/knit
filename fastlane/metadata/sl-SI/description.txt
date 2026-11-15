@@ -15,7 +15,7 @@ Izberite model, vnesite svoje mere in gostoto pletenja, Ravel pa napiše vzorec,
 
 Nato sledite vzorcu vrstico za vrstico. Vsak dotik pokaže naslednje navodilo in število zank, ki jih morate imeti na igli. Skočite na kateri koli del, ko nadaljujete z delom.
 
-Knjižnica vsebuje kape, kukljo, šale, snoode, naglavni trak s kitami, odeje, krpo za posodo, grelce za zapestja, grelce za noge, trikoten šal in pulover z raglan rokavi, pleten od zgoraj navzdol. Polica Trending se začne z novimi modeli in tistim, kar ustreza sezoni. Garter Scarf (šal iz samih desnih vrstic) in Diagonal Dishcloth (diagonalna krpa za posodo) sta brezplačna.
+Knjižnica vsebuje kape, kukljo, šale, snoode, naglavni trak s kitami, odeje, krpo za posodo, grelce za zapestja, grelce za noge, trikoten šal in pulover z raglan rokavi, pleten od zgoraj navzdol. Polica Trending se začne z novimi modeli in tistim, kar ustreza sezoni. Modeli z večbarvnim pletenjem dodajo proge, motive po shemi in kape z ušesi, po vaši meri kot vse drugo, novi sezonski modeli pa prihajajo skozi vse leto brez posodobitve aplikacije. Garter Scarf (šal iz samih desnih vrstic), Diagonal Dishcloth (diagonalna krpa za posodo) in Round Raccoon Beanie (okrogla kapa z rakunom) so brezplačni.
 
 JEZIK IN ENOTE
 Aplikacija in vsi vzorci so samo v angleščini. Zunaj Združenih držav se dolžine prikazujejo v centimetrih (cm) in metrih (m).

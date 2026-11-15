@@ -16,7 +16,7 @@ paths:
 Seasonal and viral designs reach the library as data, with no App Store update: a record in
 `docs/designs.json` on the site names one of the library's shapes and adds stripes, a chart, a crown and a
 title. The app's engines still write every stitch. `TopicalStore` fetches the list once a day; live records
-lead the Trending shelf with their own tag and head their shape's shelf. A cast-on project keeps its whole
+lead the Trending shelf with their own tag and close their shape's shelf. A cast-on project keeps its whole
 plan (palette and silhouette included), so changing or removing a record never touches it.
 
 ## The loop

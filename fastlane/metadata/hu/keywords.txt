@@ -1,1 +1,1 @@
-kötés,horgolás,kötőtű,sapka,sál,pulóver,takaró,kendő,pdf,kezdő,projekt,gyapjú,csősál,minta,baba
+kötés,horgolás,kötőtű,sapka,sál,pulóver,takaró,kendő,pdf,kezdő,gyapjú,csősál,jacquard,mosómedve

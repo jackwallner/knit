@@ -7,29 +7,56 @@
       "requires": 1,
       "crown": "ears",
       "palette": [
-        { "name": "gray", "hex": "#8C8984" },
-        { "name": "black", "hex": "#2B2927" },
-        { "name": "cream", "hex": "#EEE7DA" }
+        {
+          "name": "gray",
+          "hex": "#8C8984"
+        },
+        {
+          "name": "black",
+          "hex": "#2B2927"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE7DA"
+        }
       ],
       "brim": "A",
       "rim": "C",
       "stripes": [
-        { "color": "A", "inches": 0.5 },
-        { "color": "C", "inches": 0.4 },
-        { "color": "B", "inches": 1.25 },
-        { "color": "C", "inches": 0.4 }
+        {
+          "color": "A",
+          "inches": 0.5
+        },
+        {
+          "color": "C",
+          "inches": 0.4
+        },
+        {
+          "color": "B",
+          "inches": 1.25
+        },
+        {
+          "color": "C",
+          "inches": 0.4
+        }
       ],
       "chart": {
         "placement": "motif",
         "stripe": 2,
         "rows": [
-          "CCC....CCC",
-          "C.C....C.C",
-          "CCC....CCC"
+          ".CCCC....CCCC.",
+          "CC..CC..CC..CC",
+          "CC..CC..CC..CC",
+          ".CCCC....CCCC."
         ]
       },
-      "weights": ["dk", "worsted", "aran", "bulky"],
-      "tag": "Viral",
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Free",
       "starts": "2026-11-20",
       "ends": "2027-03-01"
     }

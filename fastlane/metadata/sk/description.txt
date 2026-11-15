@@ -15,7 +15,7 @@ Vyberte model, zadajte svoje rozmery a hustotu pletenia a Ravel napíše návod 
 
 Potom pletiete rad po rade. Každé klepnutie ukáže ďalší pokyn a počet ôk, ktorý máte mať na ihlici. Preskočte na ľubovoľnú časť, keď sa k práci vrátite.
 
-Knižnica obsahuje čiapky, kuklu, šály, nákrčníky, čelenku s vrkočmi, deky, handričku na riad, návleky na ruky, návleky na nohy, trojuholníkovú šatku a sveter s raglánovými rukávmi pletený zhora. Polica Trending začína novými modelmi a tým, čo sa hodí k ročnému obdobiu. Garter Scarf (šál pletený samými hladkými radmi) a Diagonal Dishcloth (diagonálna handrička na riad) sú zadarmo.
+Knižnica obsahuje čiapky, kuklu, šály, nákrčníky, čelenku s vrkočmi, deky, handričku na riad, návleky na ruky, návleky na nohy, trojuholníkovú šatku a sveter s raglánovými rukávmi pletený zhora. Polica Trending začína novými modelmi a tým, čo sa hodí k ročnému obdobiu. Návrhy s farebným pletením pridávajú pruhy, vzory podľa schémy a čiapky s ušami, vo vašej veľkosti ako všetko ostatné, a nové sezónne návrhy prichádzajú počas roka bez aktualizácie aplikácie. Garter Scarf (šál pletený samými hladkými radmi), Diagonal Dishcloth (diagonálna handrička na riad) a Round Raccoon Beanie (okrúhla čiapka s mývalom) sú zadarmo.
 
 JAZYK A JEDNOTKY
 Aplikácia aj všetky návody sú iba v angličtine. Mimo Spojených štátov sa dĺžky zobrazujú v centimetroch (cm) a metroch (m).

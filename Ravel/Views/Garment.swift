@@ -45,6 +45,8 @@ struct Garment: View {
                     Canvas { context, _ in
                         for box in GarmentShape.ears(in: frame) {
                             context.fill(Path(ellipseIn: box), with: .color(tints[rim].color))
+                            // A pale rim would vanish into a pale tile: a hairline keeps the ear's edge.
+                            context.stroke(Path(ellipseIn: box.insetBy(dx: 0.5, dy: 0.5)), with: .color(.black.opacity(0.14)), lineWidth: 1)
                             context.fill(Path(ellipseIn: GarmentShape.earInside(box)), with: .color(tints[ear].color))
                         }
                     }

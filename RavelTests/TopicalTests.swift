@@ -125,6 +125,16 @@ final class TopicalTests: XCTestCase {
     }
 
     /// No float is longer than 5 stitches, at any weight a chart can be offered in.
+    /// A gauge the knitter types can leave too few rows for the chart: that plan is never cast on.
+    func testAChartThatDoesNotFitIsNeverCastOn() throws {
+        let item = LibraryItem.topical(try draft("fir-tree-hat"))
+        XCTAssertTrue(item.fits(measures: item.base.defaultSize.values, gauge: item.defaultGauge))
+        var small = item.base.defaultSize.values
+        small["head"] = 13
+        XCTAssertFalse(item.fits(measures: small, gauge: Gauge(stitches: 24, rows: 20)))
+        XCTAssertTrue(LibraryItem.builtIn(.ribbedBeanie).fits(measures: small, gauge: Gauge(stitches: 24, rows: 20)))
+    }
+
     func testFloatsStayShort() {
         for weight in YarnWeight.allCases { XCTAssertLessThanOrEqual(Topical.longestFloat(weight.gauge), 5, "\(weight)") }
         let chart = Colorwork.Chart(placement: .repeating, rows: [[1] + Array(repeating: -1, count: 7)], stripe: nil)

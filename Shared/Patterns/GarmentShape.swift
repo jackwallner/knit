@@ -13,9 +13,9 @@ enum GarmentShape {
         let path = CGMutablePath()
         switch silhouette {
         case .hat:
-            path.move(to: p(0.16, 0.74))
+            path.move(to: p(0.16, 0.712))
             path.addCurve(to: p(0.5, 0.1), control1: p(0.14, 0.34), control2: p(0.3, 0.1))
-            path.addCurve(to: p(0.84, 0.74), control1: p(0.7, 0.1), control2: p(0.86, 0.34))
+            path.addCurve(to: p(0.84, 0.712), control1: p(0.7, 0.1), control2: p(0.86, 0.34))
             path.closeSubpath()
             path.addRoundedRect(in: box(0.1, 0.7, 0.8, 0.2), cornerWidth: unit * 0.06, cornerHeight: unit * 0.06)
         case .slouch:
@@ -105,9 +105,9 @@ enum GarmentShape {
     private static func dome(in rect: CGRect) -> CGPath {
         func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * rect.width, y: rect.minY + y * rect.height) }
         let dome = CGMutablePath()
-        dome.move(to: p(0.16, 0.74))
+        dome.move(to: p(0.16, 0.712))
         dome.addCurve(to: p(0.5, 0.16), control1: p(0.14, 0.36), control2: p(0.3, 0.16))
-        dome.addCurve(to: p(0.84, 0.74), control1: p(0.7, 0.16), control2: p(0.86, 0.36))
+        dome.addCurve(to: p(0.84, 0.712), control1: p(0.7, 0.16), control2: p(0.86, 0.36))
         dome.closeSubpath()
         return dome
     }

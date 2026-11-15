@@ -12,9 +12,11 @@ struct LibraryView: View {
     private let trending = Trending.shared
     private let topical = TopicalStore.shared
 
-    /// Two tiles a row, one at the accessibility text sizes so names never get cut.
+    /// Two tiles a row on a phone, more on a wide screen, one at the accessibility text sizes so names never get cut.
     private var columns: [GridItem] {
-        Array(repeating: GridItem(.flexible(), spacing: 16), count: typeSize.isAccessibilitySize ? 1 : 2)
+        typeSize.isAccessibilitySize
+            ? [GridItem(.flexible())]
+            : [GridItem(.adaptive(minimum: 150, maximum: 240), spacing: 16)]
     }
 
     var body: some View {
@@ -66,7 +68,9 @@ struct LibraryView: View {
                     ForEach(shelved) { entry in
                         NavigationLink(value: entry.item) { tile(entry.item, note: entry.tag) }
                             .buttonStyle(.plain)
-                            .containerRelativeFrame(.horizontal) { width, _ in (width - 40 - 32) / (typeSize.isAccessibilitySize ? 1.3 : 2.3) }
+                            .containerRelativeFrame(.horizontal) { width, _ in
+                                typeSize.isAccessibilitySize ? (width - 72) / 1.3 : min((width - 72) / 2.3, 220)
+                            }
                             .accessibilityIdentifier("trending.\(entry.item.designRaw)")
                     }
                 }
@@ -87,9 +91,9 @@ struct LibraryView: View {
         var id: String { item.id }
     }
 
-    /// A shelf's designs: the topical ones on its shapes first, then the library's own.
+    /// A shelf's designs: the library's own, then the topical ones on its shapes, which already lead Trending.
     private func items(on shelf: Design.Shelf) -> [LibraryItem] {
-        topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical) + Design.allCases.filter { $0.shelf == shelf }.map(LibraryItem.builtIn)
+        Design.allCases.filter { $0.shelf == shelf }.map(LibraryItem.builtIn) + topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
     }
 
     private func tile(_ item: LibraryItem, note: String) -> some View {
@@ -182,16 +186,25 @@ struct DesignView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
         .safeAreaInset(edge: .bottom) {
+            let fits = !subscription.canOpen(item) || item.fits(measures: values, gauge: gauge)
             Button(action: castOn) {
-                Text(subscription.canOpen(item) ? "Cast On" : "Unlock Patterns")
+                Text(!subscription.canOpen(item) ? "Unlock Patterns" : fits ? "Cast On" : "Chart Does Not Fit This Gauge")
                     .font(.headline)
                     .foregroundStyle(Theme.onAccent)
                     .frame(maxWidth: .infinity, minHeight: 54)
-                    .background(Color.accentColor, in: Capsule())
+                    .background(Color.accentColor.opacity(fits ? 1 : 0.35), in: Capsule())
             }
+            .disabled(!fits)
             .accessibilityIdentifier("design.castOn")
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
+            // The page fades into the button instead of being cut off by it.
+            .background(alignment: .top) {
+                LinearGradient(colors: [Theme.paper.opacity(0), Theme.paper], startPoint: .top, endPoint: .bottom)
+                    .frame(height: 28)
+                    .offset(y: -28)
+                    .allowsHitTesting(false)
+            }
             .background(Theme.paper)
         }
         .navigationDestination(item: $opened) { ProjectView(project: $0) }

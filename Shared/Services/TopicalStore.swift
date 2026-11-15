@@ -145,6 +145,13 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         }
     }
 
+    /// False when a topical chart cannot be worked at these numbers (too few rows for the chart, floats too long):
+    /// such a plan would drop the colorwork, so it is never cast on.
+    func fits(measures: [String: Double], gauge: Gauge) -> Bool {
+        guard case .topical(let topical) = self else { return true }
+        return topical.painted(measures: measures, gauge: gauge).issues.isEmpty
+    }
+
     /// The pattern at its default size, for drawing a colorwork design before it is sized. Nil in one color.
     var preview: PatternPlan? {
         guard case .topical = self else { return nil }

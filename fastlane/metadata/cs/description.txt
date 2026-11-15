@@ -15,7 +15,7 @@ Vyberte model, zadejte své rozměry a hustotu pletení a Ravel napíše návod,
 
 Potom pletete řádek po řádku. Každé klepnutí ukáže další pokyn a počet ok, který máte mít na jehlici. Přeskočte na libovolnou část, když se k práci vrátíte.
 
-Knihovna obsahuje čepice, kuklu, šály, nákrčníky, čelenku s copánky, deky, hadřík na nádobí, návleky na ruce, návleky na nohy, trojúhelníkový šátek a svetr s raglánovými rukávy pletený odshora. Police Trending začíná novými modely a tím, co se hodí k ročnímu období. Garter Scarf (šála pletená samými hladkými řadami) a Diagonal Dishcloth (diagonální hadřík na nádobí) jsou zdarma.
+Knihovna obsahuje čepice, kuklu, šály, nákrčníky, čelenku s copánky, deky, hadřík na nádobí, návleky na ruce, návleky na nohy, trojúhelníkový šátek a svetr s raglánovými rukávy pletený odshora. Police Trending začíná novými modely a tím, co se hodí k ročnímu období. Návrhy s barevným vzorováním přidávají pruhy, motivy podle schématu a čepice s oušky, ušité na vaši velikost jako všechno ostatní, a nové sezonní návrhy přibývají během roku bez aktualizace aplikace. Garter Scarf (šála pletená samými hladkými řadami), Diagonal Dishcloth (diagonální hadřík na nádobí) a Round Raccoon Beanie (kulatá čepice s mývalem) jsou zdarma.
 
 JAZYK A JEDNOTKY
 Aplikace i všechny návody jsou pouze v angličtině. Mimo Spojené státy se délky zobrazují v centimetrech (cm) a metrech (m).

@@ -168,6 +168,13 @@ final class ReleaseJourneysUITests: XCTestCase {
         for _ in 0..<24 where !(element.exists && element.isHittable) {
             QA.swipe(app.windows.firstMatch, .up)
         }
+        // A swipe keeps scrolling after the finger lifts: tap only once the tile has stopped moving.
+        var frame = element.frame
+        for _ in 0..<10 {
+            Thread.sleep(forTimeInterval: 0.4)
+            if element.frame == frame { break }
+            frame = element.frame
+        }
         XCTAssertTrue(element.isHittable)
     }
 

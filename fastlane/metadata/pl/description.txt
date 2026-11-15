@@ -15,7 +15,7 @@ Wybierz projekt, wpisz swoje wymiary i próbkę, a Ravel napisze wzór, który p
 
 Potem prowadź robótkę rząd po rzędzie. Każde dotknięcie pokazuje następną instrukcję i liczbę oczek, która powinna być na drucie. Przejdź do dowolnej części, gdy wracasz do pracy.
 
-Biblioteka zawiera czapki, kominiarkę, szaliki, kominy, opaskę z warkoczami, koce, ściereczkę, mitenki, getry, trójkątny szal i sweter z raglanowymi rękawami robiony od góry. Półka Trending zaczyna się od nowych projektów i tego, co pasuje do pory roku. Garter Scarf (szalik ściegiem francuskim) i Diagonal Dishcloth (ukośna ściereczka) są darmowe.
+Biblioteka zawiera czapki, kominiarkę, szaliki, kominy, opaskę z warkoczami, koce, ściereczkę, mitenki, getry, trójkątny szal i sweter z raglanowymi rękawami robiony od góry. Półka Trending zaczyna się od nowych projektów i tego, co pasuje do pory roku. Wzory żakardowe dodają paski, motywy z wykresu i czapki z uszkami, rozmiarowane jak wszystko inne, a nowe wzory sezonowe pojawiają się przez cały rok bez aktualizacji aplikacji. Garter Scarf (szalik ściegiem francuskim), Diagonal Dishcloth (ukośna ściereczka) i Round Raccoon Beanie (okrągła czapka z szopem praczem) są darmowe.
 
 JĘZYK I MIARY
 Aplikacja i wszystkie wzory są tylko po angielsku. Poza Stanami Zjednoczonymi długości są pokazywane w centymetrach (cm) i metrach (m).
