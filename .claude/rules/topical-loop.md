@@ -67,7 +67,8 @@ plan (palette and silhouette included), so changing or removing a record never t
   5 stitches (4 at bulky). Every run of a color, the ground's included, must be 5 or fewer, so a repeat 8 wide
   cannot have a 1-stitch point or a tier wider than 5: use a 4-wide repeat for small pointed motifs. Every plan
   with chart rows says how to carry and catch the floats.
-- `free`: off unless Jack asks (a free week as a TikTok hook). Everything else is behind the subscription.
+- `free`: off unless Jack asks. The Round Raccoon Beanie is free as the standing TikTok hook (Jack, 2026-11-15:
+  "everything at launch, be smart"). Everything else is behind the subscription.
 - `requires`: bump `Topical.featureLevel` and the record's `requires` together when a field changes meaning,
   so older apps skip what they cannot draw instead of misreading it.
 
