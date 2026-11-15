@@ -21,7 +21,7 @@ Engine rules:
 - Flat shapes (scarf, blanket): stripes on any texture. Charts only on a stockinette panel inside a garter frame (the bordered blanket's body already is one; a scarf with a chart gets 3 garter edge stitches each side). RS rows read right to left, WS rows left to right, and the band ends with the right side facing.
 - A chart that does not fit the rows available (a tall motif on a super bulky baby hat) is a validation failure for that yarn weight, and the record lists the weights it allows. The design page offers only those weights; the custom gauge adjusters clamp to the allowed range.
 - Floats: no run of one color longer than 5 stitches in a stranded row (7 at bulky and super bulky). Longer runs fail validation.
-- A new flat-top hat crown (`crown: "ears"`): no decreases, finish with a three-needle bind-off across the top, and the corners stand up as ears. This is what the raccoon beanie needs, and it is a stock beginner technique.
+- A hat with ears (`crown: "ears"`): an ordinary crown, plus two small rounded ears knit flat, rimmed in garter (in a `rim` color of their own) and sewn on. This is what the raccoon beanie needs. (The first draft joined a flat top with a three-needle bind-off, but its pointed corners read as a cat.)
 
 Instructions: every round or row that changes color says it ("Round 5, with B: knit"). Chart rows are written out in words as well as charted ("*K2 A, k3 B, k1 A; repeat from * around"), so the guided view works for someone who cannot read charts.
 

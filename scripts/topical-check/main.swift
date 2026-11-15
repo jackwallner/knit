@@ -100,8 +100,16 @@ func render(_ topical: Topical, to directory: URL) {
     context.saveGState()
     context.translateBy(x: 0, y: CGFloat(height))
     context.scaleBy(x: 1, y: -1)
-    let outline = GarmentShape.path(topical.silhouette, in: frame)
+    let outline = GarmentShape.body(topical.silhouette, in: frame)
     if let picture = Picture(plan, silhouette: topical.silhouette) {
+        if topical.silhouette == .ears, let ear = picture.ear, ear < palette.count {
+            for box in GarmentShape.ears(in: frame) {
+                context.setFillColor(cgColor(palette[picture.rim ?? ear]))
+                context.fillEllipse(in: box)
+                context.setFillColor(cgColor(palette[ear]))
+                context.fillEllipse(in: GarmentShape.earInside(box))
+            }
+        }
         context.addPath(outline)
         context.clip(using: .evenOdd)
         let box = outline.boundingBoxOfPath
@@ -138,7 +146,7 @@ func render(_ topical: Topical, to directory: URL) {
         context.fill(CGRect(x: 840, y: y - 6, width: 26, height: 26))
         context.setStrokeColor(CGColor(gray: 0, alpha: 0.2))
         context.stroke(CGRect(x: 840, y: y - 6, width: 26, height: 26))
-        text(line.replacingOccurrences(of: " of \(Engines.weight(gauge).label.lowercased()) weight yarn", with: ""), size: 17, at: CGPoint(x: 878, y: y), in: context)
+        text(line.replacingOccurrences(of: " of \(Engines.weightName(gauge)) weight yarn", with: ""), size: 17, at: CGPoint(x: 878, y: y), in: context)
         y -= 40
     }
 

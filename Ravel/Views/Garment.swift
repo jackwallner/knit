@@ -35,10 +35,25 @@ struct Garment: View {
     @ViewBuilder
     private func cloth(in size: CGSize) -> some View {
         if let colorwork, let palette = colorwork.palette, let picture = Picture(colorwork, silhouette: silhouette) {
-            let piece = Outline(silhouette: silhouette).path(in: CGRect(origin: .zero, size: size)).boundingRect
-            Knitwork(picture: picture, tints: palette.map(\.tint))
-                .frame(width: piece.width, height: piece.height)
-                .position(x: piece.midX, y: piece.midY)
+            let frame = CGRect(origin: .zero, size: size)
+            let body = Path(GarmentShape.body(silhouette, in: frame))
+            let piece = body.boundingRect
+            let tints = palette.map(\.tint)
+            ZStack {
+                if silhouette == .ears, let ear = picture.ear, ear < tints.count {
+                    let rim = picture.rim.map { tints.indices.contains($0) ? $0 : ear } ?? ear
+                    Canvas { context, _ in
+                        for box in GarmentShape.ears(in: frame) {
+                            context.fill(Path(ellipseIn: box), with: .color(tints[rim].color))
+                            context.fill(Path(ellipseIn: GarmentShape.earInside(box)), with: .color(tints[ear].color))
+                        }
+                    }
+                }
+                Knitwork(picture: picture, tints: tints)
+                    .frame(width: piece.width, height: piece.height)
+                    .position(x: piece.midX, y: piece.midY)
+                    .mask { body }
+            }
         } else {
             Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, size.width / 11), showsNeedle: false)
         }

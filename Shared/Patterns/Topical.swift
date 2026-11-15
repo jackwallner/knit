@@ -45,7 +45,8 @@ struct Topical: Identifiable, Hashable, Sendable {
     }
 
     /// The longest strand a chart may carry behind the work: an inch and a quarter, so it does not snag.
-    static func longestFloat(_ g: Gauge) -> Int { max(3, Int((g.spi * 1.25).rounded())) }
+    /// Never more than 5 stitches, however fine the yarn.
+    static func longestFloat(_ g: Gauge) -> Int { min(5, max(3, Int((g.spi * 1.25).rounded()))) }
 
     func painted(measures: [String: Double], gauge: Gauge) -> Painter.Result {
         let plain = base.plan(measures: measures, gauge: gauge, fit: fit)
@@ -92,6 +93,7 @@ extension Topical {
         var crown: String?
         var palette: [Shade]
         var brim: String?
+        var rim: String?
         var stripes: [Stripe]?
         var repeatStripes: Bool?
         var chart: Chart?
@@ -208,6 +210,9 @@ extension Topical {
             check(base == .ribbedBeanie || base == .rolledBrimHat, "Only a beanie can have the ear crown")
         default: problems.append("Crown \(r.crown!) is not one this build knows")
         }
+        let rim = r.rim.flatMap(color)
+        check(r.rim == nil || rim != nil, "Rim color \(r.rim ?? "") is not in the palette")
+        check(r.rim == nil || ears, "A rim needs the ear crown")
 
         let weights = r.weights.compactMap(YarnWeight.init(rawValue:))
         check(!weights.isEmpty && weights.count == r.weights.count, "Weights must name yarn weights: \(r.weights.joined(separator: ", "))")
@@ -216,7 +221,7 @@ extension Topical {
         if let s = starts ?? nil, let e = ends ?? nil { check(s < e, "The design ends before it starts") }
 
         guard problems.isEmpty, let base else { return Parsed(id: r.id, topical: nil, problems: problems) }
-        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears)
+        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, rim: rim)
         let order = YarnWeight.allCases
         let topical = Topical(
             id: r.id, title: title, base: base, work: work,

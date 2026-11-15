@@ -6,47 +6,32 @@
       "base": "ribbedBeanie",
       "requires": 1,
       "palette": [
-        {
-          "name": "cream",
-          "hex": "#EEE6D6"
-        },
-        {
-          "name": "green",
-          "hex": "#2F5D46"
-        },
-        {
-          "name": "red",
-          "hex": "#A33A35"
-        }
+        { "name": "cream", "hex": "#EEE6D6" },
+        { "name": "green", "hex": "#2F5D46" },
+        { "name": "red", "hex": "#A33A35" },
+        { "name": "brown", "hex": "#6B4B33" }
       ],
       "brim": "C",
       "stripes": [
-        {
-          "color": "A",
-          "inches": 2
-        },
-        {
-          "color": "C",
-          "inches": 0.5
-        }
+        { "color": "A", "inches": 2.25 },
+        { "color": "C", "inches": 0.5 }
       ],
       "chart": {
         "placement": "repeat",
         "stripe": 0,
         "rows": [
-          "...BB...",
-          "..BBBB..",
-          ".BBBBBB.",
-          "..BBBB..",
-          ".BBBBBB.",
-          "...BB..."
+          ".B..",
+          ".B..",
+          "BBB.",
+          "BBB.",
+          ".B..",
+          "BBB.",
+          "BBB.",
+          ".D..",
+          ".D.."
         ]
       },
-      "weights": [
-        "sport",
-        "dk",
-        "worsted"
-      ],
+      "weights": ["sport", "dk", "worsted", "aran", "bulky"],
       "tag": "Holiday",
       "starts": "2026-11-20",
       "ends": "2027-01-01"

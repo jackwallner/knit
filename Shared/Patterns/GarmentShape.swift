@@ -83,18 +83,42 @@ enum GarmentShape {
             path.addLine(to: p(0.24, 0.17))
             path.closeSubpath()
         case .ears:
-            // A flat-topped beanie whose two top corners stand up as ears.
-            path.move(to: p(0.18, 0.74))
-            path.addLine(to: p(0.17, 0.14))
-            path.addQuadCurve(to: p(0.36, 0.28), control: p(0.24, 0.17))
-            path.addQuadCurve(to: p(0.64, 0.28), control: p(0.5, 0.25))
-            path.addQuadCurve(to: p(0.83, 0.14), control: p(0.76, 0.17))
-            path.addLine(to: p(0.82, 0.74))
-            path.closeSubpath()
-            path.addRoundedRect(in: box(0.12, 0.7, 0.76, 0.2), cornerWidth: unit * 0.06, cornerHeight: unit * 0.06)
+            // A beanie with two round ears on its crown: the ears merge into the dome, the brim sits apart.
+            var top = dome(in: rect)
+            for ear in ears(in: rect) { top = top.union(CGPath(ellipseIn: ear, transform: nil)) }
+            path.addPath(top)
+            path.addRoundedRect(in: box(0.1, 0.7, 0.8, 0.2), cornerWidth: unit * 0.06, cornerHeight: unit * 0.06)
         }
         return path
     }
+
+    /// The piece the main fabric fills: the whole outline, less anything sewn on.
+    static func body(_ silhouette: Design.Silhouette, in rect: CGRect) -> CGPath {
+        guard silhouette == .ears else { return path(silhouette, in: rect) }
+        let body = CGMutablePath()
+        body.addPath(dome(in: rect))
+        let brim = CGRect(x: rect.minX + 0.1 * rect.width, y: rect.minY + 0.7 * rect.height, width: 0.8 * rect.width, height: 0.2 * rect.height)
+        body.addRoundedRect(in: brim, cornerWidth: rect.width * 0.06, cornerHeight: rect.width * 0.06)
+        return body
+    }
+
+    private static func dome(in rect: CGRect) -> CGPath {
+        func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * rect.width, y: rect.minY + y * rect.height) }
+        let dome = CGMutablePath()
+        dome.move(to: p(0.16, 0.74))
+        dome.addCurve(to: p(0.5, 0.16), control1: p(0.14, 0.36), control2: p(0.3, 0.16))
+        dome.addCurve(to: p(0.84, 0.74), control1: p(0.7, 0.16), control2: p(0.86, 0.36))
+        dome.closeSubpath()
+        return dome
+    }
+
+    /// The two ears of the `.ears` outline, as the squares their circles sit in.
+    static func ears(in rect: CGRect) -> [CGRect] {
+        [0.15, 0.65].map { CGRect(x: rect.minX + $0 * rect.width, y: rect.minY + 0.11 * rect.height, width: 0.2 * rect.width, height: 0.2 * rect.height) }
+    }
+
+    /// The ear's own color inside its rim.
+    static func earInside(_ ear: CGRect) -> CGRect { ear.insetBy(dx: ear.width * 0.17, dy: ear.height * 0.17) }
 }
 
 extension Design.Silhouette {
@@ -108,12 +132,23 @@ struct Picture: Equatable, Sendable {
     var columns: Int
     /// Top line first.
     var lines: [[Int]]
+    /// Pieces sewn on: the color of an ear and of its rim.
+    var ear: Int?
+    var rim: Int?
 
     init?(_ plan: PatternPlan, silhouette: Design.Silhouette) {
         guard plan.palette != nil else { return nil }
         var rows: [(paint: String, stitches: Int, round: Bool)] = []
-        var round = false, pieces = 0, last = 0
+        var round = false, pieces = 0, last = 0, pickedUp = false
         for step in plan.steps {
+            if step.section.hasSuffix(" Ear") {
+                if step.isAction {
+                    if step.texts[0].range(of: "pick up", options: .caseInsensitive) != nil { pickedUp = true }
+                } else if let paint = step.paint(at: 0), paint.count == 1 {
+                    if pickedUp { rim = rim ?? Colorwork.index(Character(paint)) } else { ear = ear ?? Colorwork.index(Character(paint)) }
+                }
+                continue
+            }
             if step.isAction {
                 if step.texts[0].range(of: "^(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil {
                     pieces += 1
@@ -123,7 +158,7 @@ struct Picture: Equatable, Sendable {
                 continue
             }
             // Pairs are knit alike: the first piece stands for both.
-            guard pieces <= 1 else { break }
+            guard pieces <= 1 else { continue }
             for row in 0..<step.rows {
                 let stitches = step.stitches(after: row) ?? last
                 rows.append((step.paint(at: row) ?? "A", stitches, round))

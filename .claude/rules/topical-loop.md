@@ -43,7 +43,7 @@ plan (palette and silhouette included), so changing or removing a record never t
 ```json
 { "id": "fir-tree-hat", "title": "Fir Tree Hat", "base": "ribbedBeanie", "requires": 1,
   "palette": [{ "name": "cream", "hex": "#EEE6D6" }, { "name": "green", "hex": "#2F5D46" }],
-  "brim": "B", "stripes": [{ "color": "A", "inches": 2 }], "repeatStripes": false,
+  "brim": "B", "rim": "A", "stripes": [{ "color": "A", "inches": 2 }], "repeatStripes": false,
   "chart": { "placement": "repeat", "stripe": 0, "rows": ["...BB...", "..BBBB.."] },
   "crown": "ears", "weights": ["dk", "worsted"], "tag": "Holiday",
   "starts": "2026-11-20", "ends": "2027-01-01", "free": false }
@@ -54,15 +54,19 @@ plan (palette and silhouette included), so changing or removing a record never t
 - `brim`: color of the shape's edging (its first stretch of texture: brim, cuff, lower border). Stripes then
   count from above it; without it they count from the cast on.
 - `stripes`: heights in inches, so they keep proportion at every gauge. Flat pieces and garter round them to an
-  even number of rows, so every color change falls on a right-side or knit round.
+  even number of rows, so every color change falls on a right-side or knit round. Unless they repeat, they must
+  leave at least 3/4 in of color A at the top at the smallest size, or the check fails.
 - `chart`: rows top first as the right side shows them, letters A to D, `.` for the stripe underneath.
   `repeat` runs around (the stitch count rounds to a multiple of its width: keep hats to 8 or 4 wide, or the
   fit check fails); `motif` is one centered on the front. `stripe` centers it on that stripe; without it, on
   the longest stretch of stockinette. Charts go on stockinette only: cowls, ear warmers and mitts get a
   stockinette band for them; flat charts need the bordered blanket.
-- `crown: "ears"`: flat top joined with a three-needle bind-off, corners as ears. Beanies only.
-- `weights`: only the weights the check passes at. Floats are capped at about 1.25 in (6 stitches at worsted,
-  5 at aran, 4 at bulky), so wide shapes need finer yarn.
+- `crown: "ears"`: two small rounded ears, knit flat in color A, rimmed in garter and sewn to an ordinary
+  crown. Beanies only. `rim` colors the rim (the pale edge that makes a raccoon or bear read at a glance).
+- `weights`: only the weights the check passes at. Floats are capped at about 1.25 in and never more than
+  5 stitches (4 at bulky). Every run of a color, the ground's included, must be 5 or fewer, so a repeat 8 wide
+  cannot have a 1-stitch point or a tier wider than 5: use a 4-wide repeat for small pointed motifs. Every plan
+  with chart rows says how to carry and catch the floats.
 - `free`: off unless Jack asks (a free week as a TikTok hook). Everything else is behind the subscription.
 - `requires`: bump `Topical.featureLevel` and the record's `requires` together when a field changes meaning,
   so older apps skip what they cannot draw instead of misreading it.

@@ -97,7 +97,13 @@ final class TopicalTests: XCTestCase {
         let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
         let names = topical.work.palette.map(\.name)
         var previous: String?
-        for step in plan.steps where !step.isAction {
+        for step in plan.steps {
+            if step.isAction {
+                // A cast on starts a piece; a pick-up names the yarn its rows are worked in.
+                if step.texts[0].hasPrefix("Cast on") { previous = nil }
+                if let name = names.first(where: { step.texts[0].hasPrefix("With \($0), pick up") }) { previous = Colorwork.letter(names.firstIndex(of: name)!) }
+                continue
+            }
             for row in 0..<step.rows {
                 let paint = try XCTUnwrap(step.paint(at: row))
                 let text = step.text(at: row)
@@ -105,14 +111,33 @@ final class TopicalTests: XCTestCase {
                     for letter in Set(paint) { XCTAssertTrue(text.contains(names[Colorwork.index(letter)!]), text) }
                     previous = nil
                 } else {
-                    if let previous, previous != paint { XCTAssertTrue(text.hasPrefix("With \(names[Colorwork.index(Character(paint))!])"), text) }
+                    if let previous, previous != paint { XCTAssertTrue(text.hasPrefix("With \(names[Colorwork.index(Character(paint))!])"), "\(step.section): \(text)") }
                     previous = paint
                 }
             }
         }
         XCTAssertTrue(plan.steps[0].texts[0].hasPrefix("Cast on 88 stitches in gray"))
         XCTAssertEqual(plan.materials.prefix(3).map { $0.components(separatedBy: ",")[0] }, ["Gray", "Black", "Cream"])
+        XCTAssertEqual(plan.materials.last, Painter.carrying)
         XCTAssertEqual(plan.silhouette, "ears")
+        // The rim is picked up in its own color.
+        XCTAssertEqual(plan.steps.filter { $0.texts[0].hasPrefix("With cream, pick up and knit") }.count, 2)
+    }
+
+    /// No float is longer than 5 stitches, at any weight a chart can be offered in.
+    func testFloatsStayShort() {
+        for weight in YarnWeight.allCases { XCTAssertLessThanOrEqual(Topical.longestFloat(weight.gauge), 5, "\(weight)") }
+        let chart = Colorwork.Chart(placement: .repeating, rows: [[1] + Array(repeating: -1, count: 7)], stripe: nil)
+        let work = Colorwork(palette: [Shade(name: "oat", hex: "#CCBB99"), Shade(name: "plum", hex: "#663366")], chart: chart)
+        let topical = Topical(id: "test-hat", title: "Test Hat", base: .ribbedBeanie, work: work, weights: [.fingering], tag: "New", starts: nil, ends: nil, isFree: false)
+        XCTAssertTrue(TopicalCheck.problems(topical).contains { $0.contains("A float of 7") })
+    }
+
+    /// Stripes that cover the whole hat at its smallest size leave no main color at the top, and fail.
+    func testStripesLeaveTheMainColorAtTheTop() {
+        let work = Colorwork(palette: [Shade(name: "oat", hex: "#CCBB99"), Shade(name: "plum", hex: "#663366")], stripes: [Colorwork.Stripe(color: 1, inches: 9)])
+        let topical = Topical(id: "test-hat", title: "Test Hat", base: .ribbedBeanie, work: work, weights: [.worsted], tag: "New", starts: nil, ends: nil, isFree: false)
+        XCTAssertTrue(TopicalCheck.problems(topical).contains { $0.contains("rows of oat at the top") })
     }
 
     func testRepeatingChartSetsTheStitchCount() {
@@ -126,11 +151,21 @@ final class TopicalTests: XCTestCase {
         }
     }
 
-    func testEarCrownJoinsTheTopFlat() {
-        let plan = Engines.hat(.ribbed, head: 22, gauge: YarnWeight.worsted.gauge, fit: Engines.Fit(ears: true))
-        XCTAssertFalse(plan.steps.contains { $0.section == "Crown" })
-        XCTAssertTrue(plan.steps.contains { $0.texts[0].contains("three-needle bind-off") })
-        XCTAssertEqual(PlanCheck.problems(plan), [])
+    /// Ears are knit apart, rimmed and sewn to a crown that closes like any hat's.
+    func testEarsAreKnitAndSewnOn() {
+        for weight in YarnWeight.allCases {
+            let plan = Engines.hat(.ribbed, head: 22, gauge: weight.gauge, fit: Engines.Fit(ears: true))
+            XCTAssertTrue(plan.steps.contains { $0.section == "Crown" })
+            for ear in ["First Ear", "Second Ear"] {
+                let steps = plan.steps.filter { $0.section == ear }
+                XCTAssertTrue(steps.first?.texts[0].hasPrefix("Cast on") == true, ear)
+                XCTAssertTrue(steps.contains { $0.texts[0].hasPrefix("Pick up and knit") }, ear)
+                XCTAssertEqual(steps.compactMap { $0.stitches(after: $0.rows - 1) }.min(), 4, ear)
+            }
+            XCTAssertTrue(plan.steps.last?.texts[0].hasPrefix("Sew the cast-on edge of each ear") == true)
+            XCTAssertFalse(plan.steps.contains { $0.texts.contains { $0.contains("three-needle") } })
+            XCTAssertEqual(PlanCheck.problems(plan), [], "\(weight)")
+        }
     }
 
     // MARK: Saved plans
@@ -140,7 +175,7 @@ final class TopicalTests: XCTestCase {
         let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
         let decoded = try JSONDecoder().decode(PatternPlan.self, from: JSONEncoder().encode(plan))
         XCTAssertEqual(decoded, plan)
-        XCTAssertEqual(decoded.palette?.count, 3)
+        XCTAssertEqual(decoded.palette?.count, 4)
     }
 
     /// A project cast on from a topical design draws from its own plan, so it outlives the record.

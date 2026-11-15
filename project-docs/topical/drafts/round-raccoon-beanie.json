@@ -11,19 +11,21 @@
         { "name": "black", "hex": "#2B2927" },
         { "name": "cream", "hex": "#EEE7DA" }
       ],
+      "brim": "A",
+      "rim": "C",
       "stripes": [
-        { "color": "A", "inches": 3 },
-        { "color": "C", "inches": 0.5 },
-        { "color": "B", "inches": 1.5 },
-        { "color": "C", "inches": 0.5 }
+        { "color": "A", "inches": 0.5 },
+        { "color": "C", "inches": 0.4 },
+        { "color": "B", "inches": 1.25 },
+        { "color": "C", "inches": 0.4 }
       ],
       "chart": {
         "placement": "motif",
         "stripe": 2,
         "rows": [
-          ".CCC...CCC.",
-          "CC.CC.CC.CC",
-          ".CCC...CCC."
+          "CCC....CCC",
+          "C.C....C.C",
+          "CCC....CCC"
         ]
       },
       "weights": ["dk", "worsted", "aran", "bulky"],

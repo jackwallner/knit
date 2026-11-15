@@ -51,6 +51,8 @@ struct Colorwork: Equatable, Hashable, Sendable {
     var repeatsStripes = false
     var chart: Chart?
     var ears = false
+    /// The color of the rim picked up around each ear. Nil works it in the main color.
+    var rim: Int?
 
     static func letter(_ index: Int) -> String { String(UnicodeScalar(UInt8(65 + index))) }
 
@@ -84,7 +86,15 @@ enum Painter {
         var border: Int
         /// Part of the edging the piece starts with: its first stretch of texture, below the main fabric.
         var brim = false
+        var trim = Trim.none
     }
+
+    /// Small pieces knit apart and sewn on (a section named "... Ear"): the main color, with the rim
+    /// picked up around them in a color of its own. Stripes and charts are for the main piece.
+    private enum Trim { case none, ear, rim }
+
+    /// The words that tell a knitter to strand: said once on any plan with a chart row.
+    static let carrying = "Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs"
 
     /// `rate` is rows to the inch of the shape's own fabric, so stripes come out the height they say.
     /// `float` is the longest run a yarn may be carried behind the work.
@@ -100,6 +110,11 @@ enum Painter {
         var lift: [Int: Int] = [:]
         if work.brim != nil { for row in rows where row.brim { lift[row.piece, default: 0] += 1 } }
         let color = rows.map { row in
+            switch row.trim {
+            case .ear: return 0
+            case .rim: return work.rim ?? 0
+            case .none: break
+            }
             if let brim = work.brim, row.brim { return brim }
             return stripeColor(at: row.index - (lift[row.piece] ?? 0), even: even[row.piece] ?? false, work: work, rate: rate)
         }
@@ -107,6 +122,7 @@ enum Painter {
         if let chart = work.chart, chart.width > 0, chart.height > 0 {
             for piece in Set(rows.map(\.piece)).sorted() {
                 let mine = rows.indices.filter { rows[$0].piece == piece }
+                guard mine.contains(where: { rows[$0].trim == .none }) else { continue }
                 guard let start = place(chart, rows: rows, indices: mine, lift: lift[piece] ?? 0, work: work, rate: rate, even: even[piece] ?? false, issues: &issues) else { continue }
                 for (offset, line) in chart.rows.reversed().enumerated() {
                     let at = mine[start + offset]
@@ -121,6 +137,14 @@ enum Painter {
             }
         }
 
+        // Stripes that run out before the top leave the main color showing there, as the design intends.
+        if !work.repeatsStripes, !work.stripes.isEmpty {
+            let main = rows.filter { $0.piece == 0 && $0.trim == .none }.count
+            let top = main - (lift[0] ?? 0) - stripeRows(work, rate: rate, even: even[0] ?? false).reduce(0, +)
+            let least = max(2, Int((0.75 * rate).rounded()))
+            if top < least { issues.append("The stripes leave \(max(0, top)) rows of \(names[0]) at the top, fewer than \(least)") }
+        }
+
         // Instructions: a row that starts a new yarn says so, and a chart row spells out every color.
         var texts: [String?] = Array(repeating: nil, count: rows.count)
         var previous: Int?
@@ -132,6 +156,11 @@ enum Painter {
                 continue
             }
             guard color[at] != previous else { continue }
+            if row.trim == .rim, work.rim != nil {
+                // The pick-up that starts the rim names its yarn.
+                previous = color[at]
+                continue
+            }
             let name = names[color[at]]
             if !row.flat, row.text.range(of: "\\bp\\d|^\\*?P", options: [.regularExpression, .caseInsensitive]) != nil {
                 // A purl stitch in a new color shows the old one through it: the first round is knit.
@@ -150,7 +179,7 @@ enum Painter {
         }
 
         var painted = plan
-        painted.steps = regroup(plan.steps, rows: rows, colors: color, cells: cells, texts: texts, names: names)
+        painted.steps = regroup(plan.steps, rows: rows, colors: color, cells: cells, texts: texts, names: names, rim: work.rim)
         painted.palette = work.palette
 
         // Yarn per color, from the rows as written: worked stitches, plus the strands carried behind them.
@@ -173,7 +202,7 @@ enum Painter {
         let lines = work.palette.indices.map { index in
             "\(names[index].capitalized), color \(Colorwork.letter(index)): " + lowerFirst(Engines.yarnLine(yards[index], g))
         }
-        painted.materials = lines + plan.materials.dropFirst()
+        painted.materials = lines + plan.materials.dropFirst() + (cells.isEmpty ? [] : [carrying])
         painted.yards = yards.reduce(0, +)
         return Result(plan: painted, issues: issues)
     }
@@ -183,7 +212,7 @@ enum Painter {
     private static func flatten(_ plan: PatternPlan) -> [Row] {
         var rows: [Row] = []
         var piece = -1, index = 0, round = false, last = 0
-        var firstKnit = true
+        var firstKnit = true, pickedUp = false
         for (s, step) in plan.steps.enumerated() {
             if step.isAction {
                 let text = step.texts[0]
@@ -192,19 +221,22 @@ enum Painter {
                     index = 0
                     round = text.contains("Join in the round")
                     firstKnit = true
+                    pickedUp = false
                 }
+                if text.hasPrefix("Pick up") { pickedUp = true }
                 last = step.stitches ?? last
                 continue
             }
             let border = step.texts.lazy.compactMap(borderOf).first ?? 0
-            let brim = firstKnit && step.texts != ["Knit"]
+            let trim: Trim = !step.section.hasSuffix(" Ear") ? .none : pickedUp ? .rim : .ear
+            let brim = firstKnit && step.texts != ["Knit"] && trim == .none
             firstKnit = false
             for r in 0..<step.rows {
                 let text = step.text(at: r)
                 let stitches = step.stitches(after: r) ?? last
                 let flat = !round || text.hasSuffix("turn")
                 let chartable = flat ? border > 0 : (text == "Knit" && step.delta == 0)
-                rows.append(Row(step: s, row: r, text: text, stitches: stitches, piece: max(0, piece), index: index, flat: flat, chartable: chartable, border: border, brim: brim))
+                rows.append(Row(step: s, row: r, text: text, stitches: stitches, piece: max(0, piece), index: index, flat: flat, chartable: chartable && trim == .none, border: border, brim: brim, trim: trim))
                 index += 1
                 last = stitches
             }
@@ -363,7 +395,7 @@ enum Painter {
 
     // MARK: Steps
 
-    private static func regroup(_ steps: [Step], rows: [Row], colors: [Int], cells: [Int: [Int]], texts: [String?], names: [String]) -> [Step] {
+    private static func regroup(_ steps: [Step], rows: [Row], colors: [Int], cells: [Int: [Int]], texts: [String?], names: [String], rim: Int?) -> [Step] {
         var byStep: [Int: [Int]] = [:]
         for (at, row) in rows.enumerated() { byStep[row.step, default: []].append(at) }
         var out: [Step] = []
@@ -376,6 +408,9 @@ enum Painter {
                     let first = rows.firstIndex { $0.piece == castOn && $0.index == 0 }.map { colors[$0] } ?? 0
                     if let range = action.texts[0].range(of: " stitches") { action.texts[0].replaceSubrange(range, with: " stitches in \(names[first])") }
                     castOn += 1
+                }
+                if let rim, action.isAction, action.section.hasSuffix(" Ear"), action.texts[0].hasPrefix("Pick up") {
+                    action.texts[0] = "With \(names[rim]), " + lowerFirst(action.texts[0])
                 }
                 out.append(action)
                 continue
