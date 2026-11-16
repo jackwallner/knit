@@ -1,0 +1,259 @@
+1	Projeler
+2	Modeller
+3	Stok
+4	Bitti
+5	Yeni Proje
+6	Daha Fazla
+7	Ravel'i Değerlendir
+8	Geri Bildirim Gönder
+9	Yardım
+10	%@ silinsin mi?
+11	Projeyi Sil
+12	Ad
+13	Vazgeç
+14	İlmek Dizin
+15	Sıra Sayacını Başlat
+16	Modellere Göz At
+17	Sıra %lld
+18	Adsız
+19	Ravel projelerinizi açamadı
+20	Hâlâ bu %@ cihazında duruyorlar. Yeniden başlatın ve Ravel'i tekrar açın.
+21	Yardım Al
+22	İplik
+23	Şişler ve Tığlar
+24	Stoka Ekle
+25	Şiş veya Tığ
+26	İplik Ekle
+27	Şiş Ekle
+28	one=%lld yumak|other=%lld yumak
+29	Yumak Başına Metre
+30	Yumak Başına Yarda
+31	Marka
+32	Renk
+33	Elyaf
+34	Boya Partisi
+35	Kalınlık
+36	Yumaklar
+37	Bitti
+38	Tür
+39	Beden
+40	Uzunluk
+41	Herhangi
+42	Tığ
+43	Şiş
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Misina Şiş
+53	Düz Şiş
+54	Çorap Şişi
+55	Tığ
+56	Sayaç 0'a sıfırlansın mı?
+57	Sayacı Sıfırla
+58	Model bu projeden kaldırılsın mı?
+59	Modeli Kaldır
+60	Bir Tekrardaki Sıra
+61	Sıralar
+62	Ayarla
+63	Tekrar bir sonraki sıranızla başlar.
+64	Sıra
+65	Tur
+66	Bu Bölümde Sıra
+67	Bu Bölümde Tur
+68	Sayaç Adı
+69	Yeniden Adlandır
+70	Ekle
+71	Sayaç kaldırılsın mı?
+72	Sayacı Kaldır
+73	Bu model açılamadı
+74	%lld / %lld
+75	one=%lld ilmek|other=%lld ilmek
+76	%@ sayacından bir çıkar
+77	%@ sayacına bir ekle
+78	Sıra ekle
+79	Tekrarda %2$lld sıranın %1$lld. sırası
+80	Bir sıra geri
+81	Ayrıntılar
+82	Malzemeler
+83	Sıraya Git
+84	Tura Git
+85	Bölüme Git
+86	Model Ekle
+87	Modeli Değiştir
+88	Fotoğraf Ekle
+89	Sırayı Ayarla
+90	Tekrar
+91	Sayaç
+92	0'a Sıfırla
+93	Kaldır
+94	Sayaç Ekle
+95	Etkin Olarak İşaretle
+96	Bitti Olarak İşaretle
+97	Proje seçenekleri
+98	Şişler
+99	Notlar
+100	Stoktan Değil
+101	Stoktan iplik seç
+102	Kısaltmalar
+103	Kökboya
+104	Kadife Çiçeği
+105	Yosun
+106	Ladin
+107	İndigo
+108	Erik
+109	Yulaf
+110	Antrasit
+111	Öne Çıkanlar
+112	Ücretsiz
+113	Bereler
+114	Atkılar ve Boyunluklar
+115	Battaniyeler ve Ev
+116	Aksesuarlar
+117	Kazaklar
+118	Başlangıç
+119	Kolay
+120	Orta
+121	Örgü Örneği
+122	%@ boyunca ilmek
+123	%@ boyunca sıra
+124	Modellerin Kilidini Aç
+125	Şema bu örgü örneğine uymuyor
+126	Baş
+127	Genişlik
+128	Çevre
+129	Yükseklik
+130	Kenar
+131	El
+132	Bacak
+133	Kol Açıklığı
+134	Göğüs
+135	Gövde Boyu
+136	Kol Boyu
+137	Bebek
+138	Yürümeye Başlayan
+139	Çocuk
+140	Küçük
+141	Orta
+142	Büyük
+143	Klasik
+144	Uzun
+145	Dar
+146	Sonsuz
+147	Bebek Arabası
+148	Beşik
+149	Örtü
+150	Yetişkin
+151	Geniş
+152	Küçük Şal
+153	Stola
+154	Lastik Örgülü Bere
+155	Bol Bere
+156	Kıvrık Kenarlı Bere
+157	Düz Örgü Atkı
+158	Lastik Örgülü Atkı
+159	Pirinç Örgülü Atkı
+160	Lastik Örgülü Boyunluk
+161	Pirinç Örgülü Boyunluk
+162	Kenarlıklı Battaniye
+163	Düz Örgü Battaniye
+164	Çapraz Bulaşık Bezi
+165	Kulaklık Bandı
+166	Bilek Isıtıcılar
+167	Bacak Isıtıcılar
+168	Üçgen Şal
+169	Reglan Kazak
+170	Kalın Boyunluk
+171	Boyun Atkısı
+172	Örgü Saç Bandı
+173	Balaklava
+174	Yeni
+175	Hediye zamanı
+176	Kış ortası
+177	Bahar katmanları
+178	Yaz pamuğu
+179	Seyahat örgüsü
+180	Kazak havası
+181	İlk soğuk günler
+182	Kenar
+183	Gövde
+184	Tepe
+185	Bitirme
+186	Atkı
+187	Boyunluk
+188	Alt Kenar
+189	Üst Kenar
+190	Battaniye
+191	Artırma
+192	Eksiltme
+193	Bant
+194	Şal
+195	Orta
+196	Boyun
+197	Yüz Açıklığı
+198	Üst
+199	Yüz Kenarı
+200	Yaka
+201	Arka Boyun
+202	Düşük Omuz Yoku
+203	Ayırma
+204	Birinci Kol
+205	İkinci Kol
+206	Manşet
+207	Birinci Kulak
+208	İkinci Kulak
+209	Bilek Isıtıcı %lld
+210	Bacak Isıtıcı %lld
+211	Başparmak Açıklığı
+212	El Üstü
+213	Bacak
+214	Ayak Bileği
+215	Kapat
+216	Ravel Modelleri
+217	Kütüphanedeki her tasarım, ölçülerinize ve ipliğinize göre yazılır
+218	Planlar yüklenemedi
+219	Tekrar Dene
+220	Geri Yükle
+221	Koşullar
+222	Gizlilik
+223	Yıllık
+224	Aylık
+225	Ömür Boyu
+226	Yılda %@
+227	Ayda %@
+228	Bir kez %@
+229	Ömür Boyu Satın Al
+230	one=%lld Gün Ücretsiz Dene|other=%lld Gün Ücretsiz Dene
+231	Abone Ol
+232	one=%lld gün ücretsiz.|other=%lld gün ücretsiz.
+233	Sonra %@.
+234	%@.
+235	Ayarlar'dan iptal edene kadar yenilenir. Başladığınız model sizde kalır.
+236	%@ tek seferlik ödeme. Her model sonsuza dek sizin.
+237	Satın alımınız onay bekliyor
+238	Satın alım tamamlandı. Modeller kilitli kalırsa Geri Yükle'ye dokunun.
+239	Satın alım tamamlanamadı
+240	Bu Apple Hesabında satın alım bulunamadı
+241	App Store'a ulaşılamadı. Çevrimiçi olduğunuzda tekrar deneyin.
+242	2 ilmeği birlikte ör
+243	2 ilmeği tek tek düz örer gibi kaydır, sonra arkadan birlikte ör
+244	İplik atma
+245	1 artırma: ilmekler arasındaki ipi kaldır ve arkadan ör
+246	Sola 1 artırma: ipi önden kaldır ve arkadan ör
+247	Sağa 1 artırma: ipi arkadan kaldır ve önden ör
+248	Önde 6'lı örgü: 3 ilmeği yardımcı şişe kaydır ve önde beklet, 3 ilmek ör, sonra yardımcı şişteki 3 ilmeği ör
+249	Düz. K2, 2 ilmeği düz ör demektir
+250	Ters. P2, 2 ilmeği ters ör demektir
+251	* işaretinden sonraki ilmekleri sıra söylediği kadar tekrar tekrar ör
+252	Şişte bir yeri işaretleyen halka. Ona geldiğinde sol şişten sağ şişe kaydır
+253	Şişleri ellerin arasında değiştir ve diğer yöne doğru geri ör
+254	Daireyi kapatmak için ilk dizilen ilmeği çalışma ipiyle ör; dizme kenarı şişin etrafında düz dursun, bükülmesin
+255	Çalışma ipinden bir ilik bük ve sağ şişe kaydır. Her ilik 1 ilmektir
+256	Şişi işin kenarından geçir, ipi sar ve bir ilik çek. Her ilik 1 ilmektir
+257	Bağlarken düz ilmekleri düz, ters ilmekleri ters ör
+258	K1, M1L, sonraki işaretçiden 1 ilmek önceye kadar ör, M1R, k1, işaretçiyi kaydır. 2 ilmek ekler
+259	Alman kısa sıra dönüşü: ip önde, ilk ilmeği ters örer gibi kaydır, sonra ipi şişin üzerinden yukarı çek; ilmek iki bacak göstersin. Ona döndüğünde iki bacağı tek ilmek olarak birlikte ör

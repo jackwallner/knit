@@ -1,0 +1,259 @@
+1	Proiecte
+2	Modele
+3	Stoc
+4	Terminat
+5	Proiect nou
+6	Mai mult
+7	Evaluează Ravel
+8	Trimite feedback
+9	Ajutor
+10	Ștergi %@?
+11	Șterge proiectul
+12	Nume
+13	Anulează
+14	Montează ochiurile
+15	Pornește contorul de rânduri
+16	Răsfoiește modelele
+17	Rândul %lld
+18	Fără titlu
+19	Ravel nu a putut deschide proiectele tale
+20	Sunt încă pe acest %@. Repornește-l și deschide din nou Ravel.
+21	Obține ajutor
+22	Fir
+23	Andrele și croșete
+24	Adaugă în stoc
+25	Andrea sau croșetă
+26	Adaugă fir
+27	Adaugă andrele
+28	one=%lld ghem|few=%lld ghemuri|other=%lld de ghemuri
+29	Metri pe ghem
+30	Yarzi pe ghem
+31	Marcă
+32	Culoare
+33	Fibră
+34	Lot de vopsire
+35	Grosime
+36	Ghemuri
+37	Gata
+38	Tip
+39	Mărime
+40	Lungime
+41	Oricare
+42	Croșetă
+43	Andrea
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circulară
+53	Dreaptă
+54	Cu două vârfuri
+55	Croșetă
+56	Resetezi contorul la 0?
+57	Resetează contorul
+58	Elimini modelul din acest proiect?
+59	Elimină modelul
+60	Rânduri într-un raport
+61	Rânduri
+62	Setează
+63	Raportul începe cu rândul următor.
+64	Rând
+65	Rundă
+66	Rând în această secțiune
+67	Rundă în această secțiune
+68	Numele contorului
+69	Redenumește
+70	Adaugă
+71	Elimini contorul?
+72	Elimină contorul
+73	Modelul nu a putut fi deschis
+74	%lld din %lld
+75	one=%lld ochi|few=%lld ochiuri|other=%lld de ochiuri
+76	Scade unu din %@
+77	Adaugă unu la %@
+78	Adaugă un rând
+79	Rândul %1$lld din %2$lld în raport
+80	Înapoi cu un rând
+81	Detalii
+82	Materiale
+83	Mergi la rând
+84	Mergi la rundă
+85	Mergi la secțiune
+86	Adaugă model
+87	Înlocuiește modelul
+88	Adaugă fotografii
+89	Setează rândul
+90	Raport
+91	Contor
+92	Resetează la 0
+93	Elimină
+94	Adaugă contor
+95	Marchează ca activ
+96	Marchează ca terminat
+97	Opțiunile proiectului
+98	Andrele
+99	Notițe
+100	Nu din stoc
+101	Alege firul din stoc
+102	Abrevieri
+103	Roiba
+104	Gălbenele
+105	Mușchi
+106	Brad
+107	Indigo
+108	Prună
+109	Ovăz
+110	Cărbune
+111	În tendințe
+112	Gratuit
+113	Căciuli
+114	Fulare și cozi
+115	Pături și casă
+116	Accesorii
+117	Pulovere
+118	Începător
+119	Ușor
+120	Intermediar
+121	Probă
+122	Ochiuri pe %@
+123	Rânduri pe %@
+124	Deblochează modelele
+125	Schema nu se potrivește cu această probă
+126	Cap
+127	Lățime
+128	Circumferință
+129	Înălțime
+130	Latură
+131	Mână
+132	Gambă
+133	Anvergură
+134	Piept
+135	Lungimea corpului
+136	Lungimea mânecii
+137	Bebeluș
+138	Copil mic
+139	Copil
+140	Mic
+141	Mediu
+142	Mare
+143	Clasic
+144	Lung
+145	Strâns
+146	Infinit
+147	Cărucior
+148	Pătuț
+149	Pled
+150	Adult
+151	Lat
+152	Șal mic
+153	Stolă
+154	Căciulă cu dungi elastice
+155	Căciulă lejeră
+156	Căciulă cu margine răsfrântă
+157	Fular în ochiuri de bază
+158	Fular cu dungi elastice
+159	Fular în ochiuri de orez
+160	Guler cu dungi elastice
+161	Guler în ochiuri de orez
+162	Pătură cu bordură
+163	Pătură în ochiuri de bază
+164	Cârpă în diagonală
+165	Bandă pentru urechi
+166	Mănuși fără degete
+167	Jambiere
+168	Șal triunghiular
+169	Pulover cu mâneci raglan
+170	Guler gros
+171	Eșarfă de gât
+172	Bentiță cu împletituri
+173	Cagulă
+174	Nou
+175	Vremea cadourilor
+176	Plină iarnă
+177	Straturi de primăvară
+178	Bumbac de vară
+179	Tricotat la drum
+180	Vreme de pulover
+181	Primele zile reci
+182	Margine
+183	Corp
+184	Creștet
+185	Finisare
+186	Fular
+187	Guler
+188	Bordura de jos
+189	Bordura de sus
+190	Pătură
+191	Creșteri
+192	Scăderi
+193	Bandă
+194	Șal
+195	Mijloc
+196	Gât
+197	Deschiderea pentru față
+198	Partea de sus
+199	Marginea feței
+200	Guler
+201	Spatele gâtului
+202	Bluză raglan
+203	Împărțire
+204	Prima mânecă
+205	A doua mânecă
+206	Manșetă
+207	Prima ureche
+208	A doua ureche
+209	Mănușă fără degete %lld
+210	Jambieră %lld
+211	Deschiderea pentru deget mare
+212	Partea de sus a mâinii
+213	Picior
+214	Gleznă
+215	Închide
+216	Modele Ravel
+217	Fiecare design din bibliotecă, scris după măsurile și firul tău
+218	Planurile nu au putut fi încărcate
+219	Încearcă din nou
+220	Restabilește
+221	Termeni
+222	Confidențialitate
+223	Anual
+224	Lunar
+225	Pe viață
+226	%@ pe an
+227	%@ pe lună
+228	%@ o singură dată
+229	Cumpără pe viață
+230	one=Încearcă gratuit %lld zi|few=Încearcă gratuit %lld zile|other=Încearcă gratuit %lld de zile
+231	Abonează-te
+232	one=%lld zi gratuită.|few=%lld zile gratuite.|other=%lld de zile gratuite.
+233	Apoi %@.
+234	%@.
+235	Se reînnoiește până anulezi din Setări. Un model pe care l-ai început rămâne al tău.
+236	O singură plată de %@. Fiecare model este al tău pentru totdeauna.
+237	Achiziția ta așteaptă aprobarea
+238	Achiziția a reușit. Atinge Restabilește dacă modelele rămân blocate.
+239	Achiziția nu a reușit
+240	Nu s-a găsit nicio achiziție pe acest cont Apple
+241	App Store nu a putut fi contactat. Încearcă din nou când ești online.
+242	Tricotează 2 ochiuri împreună
+243	Alunecă 2 ochiuri ca pentru tricotat, pe rând, apoi tricotează-le împreună prin spate
+244	Fir peste andrea
+245	Creștere de 1: ridică firul dintre ochiuri și tricotează-l prin spate
+246	Creștere de 1 spre stânga: ridică firul din față și tricotează-l prin spate
+247	Creștere de 1 spre dreapta: ridică firul din spate și tricotează-l prin față
+248	Împletitură de 6 în față: alunecă 3 ochiuri pe o andrea ajutătoare și ține-o în față, tricotează 3, apoi tricotează cele 3 de pe andreaua ajutătoare
+249	Ochi de față. K2 înseamnă 2 ochiuri de față
+250	Ochi de dos. P2 înseamnă 2 ochiuri de dos
+251	Lucrează ochiurile de după * iar și iar, cât spune rândul
+252	Un inel pe andrea care marchează un loc. Mută-l de pe andreaua stângă pe cea dreaptă când ajungi la el
+253	Schimbă andrelele între mâini și lucrează înapoi în cealaltă direcție
+254	Tricotează primul ochi montat cu firul de lucru pentru a închide cercul, cu marginea de montare întinsă, nu răsucită în jurul andrelei
+255	Răsucește o buclă din firul de lucru și alunecă-o pe andreaua dreaptă. Fiecare buclă este 1 ochi
+256	Treci andreaua prin marginea lucrării, înfășoară firul și trage o buclă. Fiecare buclă este 1 ochi
+257	La închidere, tricotează ochiurile de față pe față și pe cele de dos pe dos
+258	K1, M1L, tricotează până la 1 ochi înainte de următorul marcaj, M1R, k1, alunecă marcajul. Adaugă 2 ochiuri
+259	Un tur de rânduri scurte german: cu firul în față, alunecă primul ochi ca pentru dos, apoi trage firul în sus peste andrea ca ochiul să arate două picioare. Când revii la el, tricotează ambele picioare împreună ca un singur ochi
