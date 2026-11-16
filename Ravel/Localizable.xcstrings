@@ -58,6 +58,12 @@
             "value": "%@ par mois"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ mjesečno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -98,6 +104,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ mesačne"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ na mesec"
           }
         },
         "sv": {
@@ -165,6 +177,12 @@
             "value": "%@ par an"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ godišnje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -205,6 +223,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ ročne"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ na leto"
           }
         },
         "sv": {
@@ -272,6 +296,12 @@
             "value": "%@ une fois"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ jednokratno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -312,6 +342,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ jednorazovo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ enkratno"
           }
         },
         "sv": {
@@ -379,6 +415,12 @@
             "value": "%@."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -416,6 +458,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@."
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@."
@@ -678,6 +726,30 @@
             }
           }
         },
+        "hr": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dana besplatno."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dan besplatno."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dana besplatno."
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -828,6 +900,36 @@
             }
           }
         },
+        "sl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dni brezplačno."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dan brezplačno."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dni brezplačno."
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dneva brezplačno."
+                }
+              }
+            }
+          }
+        },
         "sv": {
           "variations": {
             "plural": {
@@ -905,6 +1007,12 @@
             "value": "%lld sur %lld"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld od %lld"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -945,6 +1053,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld z %lld"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld od %lld"
           }
         },
         "sv": {
@@ -1204,6 +1318,30 @@
             }
           }
         },
+        "hr": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld klupka"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld klupko"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld klupka"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -1349,6 +1487,36 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld praslenov"
+                }
+              }
+            }
+          }
+        },
+        "sl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld štrene"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld štrena"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld štren"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld štreni"
                 }
               }
             }
@@ -1623,6 +1791,30 @@
             }
           }
         },
+        "hr": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld petlje"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld petlja"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld petlji"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -1773,6 +1965,36 @@
             }
           }
         },
+        "sl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zanke"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zanka"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zank"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zanki"
+                }
+              }
+            }
+          }
+        },
         "sv": {
           "variations": {
             "plural": {
@@ -1850,6 +2072,12 @@
             "value": "Un virage de rangs raccourcis à l’allemande : le fil devant, glisser la première maille comme pour la tricoter à l’envers, puis tirer le fil par-dessus l’aiguille pour que la maille montre deux brins. Tricoter les deux brins ensemble comme une seule maille en y revenant"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Njemački skraćeni zaokret: s niti sprijeda prebaciti prvu petlju kao za lijevo, zatim povući nit gore preko igle da petlja pokaže dvije nožice. Pri povratku splesti obje nožice zajedno kao jednu petlju"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -1890,6 +2118,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nemecký skrátený obrat: s niťou vpredu prehodiť prvé očko ako na obrátené, potom niť pretiahnuť hore cez ihlicu, aby očko ukázalo dve nôžky. Pri návrate upliesť obe nôžky dohromady ako jedno očko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nemški skrajšani obrat: z nitjo spredaj prenesi prvo zanko kot za levo, nato potegni nit navzgor čez iglo, da zanka kaže dve nogici. Ko prideš nazaj, spleti obe nogici skupaj kot eno zanko"
           }
         },
         "sv": {
@@ -1957,6 +2191,12 @@
             "value": "Un anneau sur l’aiguille qui marque un endroit. Le glisser de l’aiguille gauche à la droite quand vous l’atteignez"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prsten na igli koji označava mjesto. Prebacite ga s lijeve igle na desnu kad dođete do njega"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -1997,6 +2237,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Krúžok na ihlici, ktorý značí miesto. Keď k nemu dôjdete, prehoďte ho z ľavej ihlice na pravú"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obroček na igli, ki označuje mesto. Prestavi ga z leve igle na desno, ko prideš do njega"
           }
         },
         "sv": {
@@ -2064,6 +2310,12 @@
             "value": "Abréviations"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kratice"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2104,6 +2356,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Skratky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Okrajšave"
           }
         },
         "sv": {
@@ -2171,6 +2429,12 @@
             "value": "Accessoires"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaci"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2211,6 +2475,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Doplnky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodatki"
           }
         },
         "sv": {
@@ -2278,6 +2548,12 @@
             "value": "Ajouter"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2318,6 +2594,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj"
           }
         },
         "sv": {
@@ -2385,6 +2667,12 @@
             "value": "Ajouter un compteur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj brojač"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2425,6 +2713,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať počítadlo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj števec"
           }
         },
         "sv": {
@@ -2492,6 +2786,12 @@
             "value": "Ajouter des aiguilles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj igle"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2532,6 +2832,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať ihlice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj igle"
           }
         },
         "sv": {
@@ -2599,6 +2905,12 @@
             "value": "Ajouter un modèle"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj uzorak"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2639,6 +2951,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať návod"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj vzorec"
           }
         },
         "sv": {
@@ -2706,6 +3024,12 @@
             "value": "Ajouter des photos"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj fotografije"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2746,6 +3070,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať fotky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj fotografije"
           }
         },
         "sv": {
@@ -2813,6 +3143,12 @@
             "value": "Ajouter de la laine"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj predu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2853,6 +3189,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať priadzu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj prejo"
           }
         },
         "sv": {
@@ -2920,6 +3262,12 @@
             "value": "Ajouter un rang"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj red"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -2960,6 +3308,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať rad"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj vrsto"
           }
         },
         "sv": {
@@ -3027,6 +3381,12 @@
             "value": "Ajouter un à %@"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj jedan na %@"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3067,6 +3427,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pripočítať jedno k %@"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prištej ena pri %@"
           }
         },
         "sv": {
@@ -3134,6 +3500,12 @@
             "value": "Ajouter au stock"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj u zalihu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3174,6 +3546,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať do zásob"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj v zalogo"
           }
         },
         "sv": {
@@ -3241,6 +3619,12 @@
             "value": "Adulte"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odrasli"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3281,6 +3665,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dospelý"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odrasli"
           }
         },
         "sv": {
@@ -3348,6 +3738,12 @@
             "value": "Cheville"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gležanj"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3388,6 +3784,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Členok"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gleženj"
           }
         },
         "sv": {
@@ -3455,6 +3857,12 @@
             "value": "Au choix"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bilo koja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3495,6 +3903,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ľubovoľná"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poljubna"
           }
         },
         "sv": {
@@ -3562,6 +3976,12 @@
             "value": "Aran"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aran"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3599,6 +4019,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aran"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Aran"
@@ -3669,6 +4095,12 @@
             "value": "Tour"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opseg"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3709,6 +4141,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Obvod"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obseg"
           }
         },
         "sv": {
@@ -3776,6 +4214,12 @@
             "value": "Bébé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beba"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3816,6 +4260,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bábätko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dojenček"
           }
         },
         "sv": {
@@ -3883,6 +4333,12 @@
             "value": "Dos de l’encolure"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stražnji dio vrata"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -3923,6 +4379,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zadná časť krku"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zadnji del vratu"
           }
         },
         "sv": {
@@ -3990,6 +4452,12 @@
             "value": "Revenir d’un rang"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Natrag za jedan red"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4030,6 +4498,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "O rad späť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nazaj za eno vrsto"
           }
         },
         "sv": {
@@ -4097,6 +4571,12 @@
             "value": "Cagoule"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapa za lice"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4137,6 +4617,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kukla"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balaklava"
           }
         },
         "sv": {
@@ -4204,6 +4690,12 @@
             "value": "Bandeau"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4244,6 +4736,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čelenka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trak"
           }
         },
         "sv": {
@@ -4311,6 +4809,12 @@
             "value": "Débutant"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Početnik"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4351,6 +4855,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Začiatočník"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Začetnik"
           }
         },
         "sv": {
@@ -4418,6 +4928,12 @@
             "value": "Couverture"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4458,6 +4974,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odeja"
           }
         },
         "sv": {
@@ -4525,6 +5047,12 @@
             "value": "Plaids et maison"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deke i dom"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4565,6 +5093,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deky a domov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odeje in dom"
           }
         },
         "sv": {
@@ -4632,6 +5166,12 @@
             "value": "Corps"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijelo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4669,6 +5209,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Telo"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Telo"
@@ -4739,6 +5285,12 @@
             "value": "Longueur du corps"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duljina tijela"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4779,6 +5331,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dĺžka tela"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dolžina telesa"
           }
         },
         "sv": {
@@ -4846,6 +5404,12 @@
             "value": "Couverture à bordure"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deka s rubom"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4886,6 +5450,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deka s lemom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odeja z robom"
           }
         },
         "sv": {
@@ -4953,6 +5523,12 @@
             "value": "Bordure du bas"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Donji rub"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -4993,6 +5569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Spodný lem"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spodnji rob"
           }
         },
         "sv": {
@@ -5060,6 +5642,12 @@
             "value": "Marque"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5100,6 +5688,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Značka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Znamka"
           }
         },
         "sv": {
@@ -5167,6 +5761,12 @@
             "value": "Bordure"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rub"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5207,6 +5807,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lem"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rob"
           }
         },
         "sv": {
@@ -5274,6 +5880,12 @@
             "value": "Parcourir les modèles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pregledaj uzorke"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5314,6 +5926,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prehľadávať návody"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebrskaj vzorce"
           }
         },
         "sv": {
@@ -5381,6 +5999,12 @@
             "value": "Bulky"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulky"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5418,6 +6042,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulky"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Bulky"
@@ -5488,6 +6118,12 @@
             "value": "Acheter à vie"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kupi doživotno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5528,6 +6164,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kúpiť navždy"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kupi doživljenjsko"
           }
         },
         "sv": {
@@ -5595,6 +6237,12 @@
             "value": "Torsade de 6 devant : glisser 3 mailles sur une aiguille à torsades et la laisser devant, tricoter 3 mailles, puis tricoter les 3 mailles de l’aiguille à torsades"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleter od 6 sprijeda: prebaciti 3 petlje na pomoćnu iglu i ostaviti je sprijeda, splesti 3, zatim splesti 3 petlje s pomoćne igle"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5635,6 +6283,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vrkoč 6 vpredu: prehodiť 3 očká na pomocnú ihlicu a nechať ju vpredu, upliesť 3, potom upliesť 3 očká z pomocnej ihlice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kita 6 spredaj: prenesi 3 zanke na pomožno iglo in jo pusti spredaj, spleti 3, nato spleti 3 zanke s pomožne igle"
           }
         },
         "sv": {
@@ -5702,6 +6356,12 @@
             "value": "Bandeau torsadé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traka za glavu s pleterom"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5742,6 +6402,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čelenka s vrkočmi"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naglavni trak s kitami"
           }
         },
         "sv": {
@@ -5809,6 +6475,12 @@
             "value": "Mollet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "List"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5849,6 +6521,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lýtko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meča"
           }
         },
         "sv": {
@@ -5916,6 +6594,12 @@
             "value": "Annuler"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odustani"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -5956,6 +6640,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zrušiť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prekliči"
           }
         },
         "sv": {
@@ -6023,6 +6713,12 @@
             "value": "Monter les mailles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nabaci petlje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6063,6 +6759,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nahodiť očká"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nasnuj zanke"
           }
         },
         "sv": {
@@ -6130,6 +6832,12 @@
             "value": "Charbon"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ugljen"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6170,6 +6878,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Uhoľná"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oglje"
           }
         },
         "sv": {
@@ -6237,6 +6951,12 @@
             "value": "Le diagramme ne convient pas à cet échantillon"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shema ne odgovara ovom uzorku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6277,6 +6997,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Schéma sa k tejto vzorke nehodí"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shema ne ustreza tej gostoti"
           }
         },
         "sv": {
@@ -6344,6 +7070,12 @@
             "value": "Poitrine"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prsa"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6384,6 +7116,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hruď"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prsi"
           }
         },
         "sv": {
@@ -6451,6 +7189,12 @@
             "value": "Enfant"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dijete"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6491,6 +7235,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dieťa"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otrok"
           }
         },
         "sv": {
@@ -6558,6 +7308,12 @@
             "value": "Choisir une laine du stock"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odaberi predu iz zalihe"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6598,6 +7354,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vybrať priadzu zo zásob"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izberi prejo iz zaloge"
           }
         },
         "sv": {
@@ -6665,6 +7427,12 @@
             "value": "Snood épais"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debela ogrlica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6705,6 +7473,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hrubý nákrčník"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debel ovratnik"
           }
         },
         "sv": {
@@ -6772,6 +7546,12 @@
             "value": "Circulaire"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kružna"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6812,6 +7592,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kruhová"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krožna"
           }
         },
         "sv": {
@@ -6879,6 +7665,12 @@
             "value": "Classique"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klasični"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -6919,6 +7711,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Klasický"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klasični"
           }
         },
         "sv": {
@@ -6986,6 +7784,12 @@
             "value": "Fermer"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zatvori"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7026,6 +7830,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zavrieť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapri"
           }
         },
         "sv": {
@@ -7111,6 +7921,12 @@
             "value": "Couleur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7151,6 +7967,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Farba"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Barva"
           }
         },
         "sv": {
@@ -7218,6 +8040,12 @@
             "value": "Compteur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brojač"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7258,6 +8086,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Počítadlo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Števec"
           }
         },
         "sv": {
@@ -7325,6 +8159,12 @@
             "value": "Nom du compteur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naziv brojača"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7365,6 +8205,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Názov počítadla"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ime števca"
           }
         },
         "sv": {
@@ -7432,6 +8278,12 @@
             "value": "Snood"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ogrlica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7472,6 +8324,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nákrčník"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovratnik"
           }
         },
         "sv": {
@@ -7539,6 +8397,12 @@
             "value": "Berceau"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krevetić"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7579,6 +8443,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Postieľka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posteljica"
           }
         },
         "sv": {
@@ -7646,6 +8516,12 @@
             "value": "Crochet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heklica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7686,6 +8562,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Háčik"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kvačka"
           }
         },
         "sv": {
@@ -7753,6 +8635,12 @@
             "value": "Dessus"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrh"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7793,6 +8681,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Temeno"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrh"
           }
         },
         "sv": {
@@ -7860,6 +8754,12 @@
             "value": "Poignet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manšeta"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -7900,6 +8800,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Manžeta"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manšeta"
           }
         },
         "sv": {
@@ -7967,6 +8873,12 @@
             "value": "DK"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8004,6 +8916,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "DK"
@@ -8074,6 +8992,12 @@
             "value": "Diminutions"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smanjenja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8114,6 +9038,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Uberanie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zmanjšanja"
           }
         },
         "sv": {
@@ -8181,6 +9111,12 @@
             "value": "Plein hiver"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duboka zima"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8221,6 +9157,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hlboká zima"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sredi zime"
           }
         },
         "sv": {
@@ -8288,6 +9230,12 @@
             "value": "Supprimer %@?"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izbrisati %@?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8328,6 +9276,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť %@?"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izbrišem %@?"
           }
         },
         "sv": {
@@ -8395,6 +9349,12 @@
             "value": "Supprimer le projet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izbriši projekt"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8435,6 +9395,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť projekt"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izbriši projekt"
           }
         },
         "sv": {
@@ -8502,6 +9468,12 @@
             "value": "Détails"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pojedinosti"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8539,6 +9511,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podrobnosti"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Podrobnosti"
@@ -8609,6 +9587,12 @@
             "value": "Lavette en diagonale"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dijagonalna krpa"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8649,6 +9633,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Utierka uhlopriečne"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagonalna krpa"
           }
         },
         "sv": {
@@ -8716,6 +9706,12 @@
             "value": "Séparation"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podjela"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8756,6 +9752,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rozdelenie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delitev"
           }
         },
         "sv": {
@@ -8823,6 +9825,12 @@
             "value": "OK"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotovo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8863,6 +9871,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hotovo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Končano"
           }
         },
         "sv": {
@@ -8930,6 +9944,12 @@
             "value": "Double pointe"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čarapna"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -8970,6 +9990,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ponožková"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nogavična"
           }
         },
         "sv": {
@@ -9037,6 +10063,12 @@
             "value": "Bain de teinture"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serija bojenja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9077,6 +10109,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šarža farbenia"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serija barvanja"
           }
         },
         "sv": {
@@ -9144,6 +10182,12 @@
             "value": "Bandeau chauffe-oreilles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grijač za uši"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9184,6 +10228,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čelenka na uši"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grelnik za ušesa"
           }
         },
         "sv": {
@@ -9251,6 +10301,12 @@
             "value": "Facile"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lako"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9291,6 +10347,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jednoduché"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lahko"
           }
         },
         "sv": {
@@ -9358,6 +10420,12 @@
             "value": "Tous les modèles de la bibliothèque, écrits à vos mesures et pour votre laine"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Svaki dizajn u knjižnici, napisan prema vašim mjerama i pređi"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9398,6 +10466,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Každý dizajn v knižnici, napísaný podľa vašich mier a priadze"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vsak dizajn v knjižnici, napisan po vaših merah in preji"
           }
         },
         "sv": {
@@ -9465,6 +10539,12 @@
             "value": "Bordure du visage"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rub oko lica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9505,6 +10585,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lem okolo tváre"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rob ob obrazu"
           }
         },
         "sv": {
@@ -9572,6 +10658,12 @@
             "value": "Ouverture du visage"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otvor za lice"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9612,6 +10704,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Otvor pre tvár"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odprtina za obraz"
           }
         },
         "sv": {
@@ -9679,6 +10777,12 @@
             "value": "Fibre"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vlakno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9719,6 +10823,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vlákno"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vlakno"
           }
         },
         "sv": {
@@ -9786,6 +10896,12 @@
             "value": "Fingering"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingering"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9823,6 +10939,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingering"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Fingering"
@@ -9893,6 +11015,12 @@
             "value": "Terminé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotovo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -9933,6 +11061,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hotovo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Končano"
           }
         },
         "sv": {
@@ -10000,6 +11134,12 @@
             "value": "Finitions"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Završetak"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10040,6 +11180,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dokončenie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaključek"
           }
         },
         "sv": {
@@ -10107,6 +11253,12 @@
             "value": "Première oreille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvo uho"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10147,6 +11299,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prvé ucho"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvo uho"
           }
         },
         "sv": {
@@ -10214,6 +11372,12 @@
             "value": "Première manche"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvi rukav"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10254,6 +11418,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prvý rukáv"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvi rokav"
           }
         },
         "sv": {
@@ -10321,6 +11491,12 @@
             "value": "Premiers froids"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvi hladni dani"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10361,6 +11537,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prvé chladné dni"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prvi hladni dnevi"
           }
         },
         "sv": {
@@ -10428,6 +11610,12 @@
             "value": "Gratuit"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Besplatno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10468,6 +11656,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zadarmo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brezplačno"
           }
         },
         "sv": {
@@ -10535,6 +11729,12 @@
             "value": "Couverture au point mousse"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deka u desnim petljama"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10575,6 +11775,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deka hladko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odeja v desnih petljah"
           }
         },
         "sv": {
@@ -10642,6 +11848,12 @@
             "value": "Écharpe au point mousse"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal u desnim petljama"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10682,6 +11894,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šál hladko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal v desnih petljah"
           }
         },
         "sv": {
@@ -10749,6 +11967,12 @@
             "value": "Échantillon"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uzorak"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10789,6 +12013,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vzorka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gostota"
           }
         },
         "sv": {
@@ -10856,6 +12086,12 @@
             "value": "Obtenir de l’aide"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zatraži pomoć"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -10896,6 +12132,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Získať pomoc"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poišči pomoč"
           }
         },
         "sv": {
@@ -10963,6 +12205,12 @@
             "value": "Saison des cadeaux"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrijeme darova"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11003,6 +12251,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čas darčekov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čas daril"
           }
         },
         "sv": {
@@ -11070,6 +12324,12 @@
             "value": "Aller au tour"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idi na krug"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11110,6 +12370,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prejsť na kolo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pojdi na krog"
           }
         },
         "sv": {
@@ -11177,6 +12443,12 @@
             "value": "Aller au rang"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idi na red"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11217,6 +12489,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prejsť na rad"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pojdi na vrsto"
           }
         },
         "sv": {
@@ -11284,6 +12562,12 @@
             "value": "Aller à la section"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idi na dio"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11324,6 +12608,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prejsť na časť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pojdi na del"
           }
         },
         "sv": {
@@ -11391,6 +12681,12 @@
             "value": "Main"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ruka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11431,6 +12727,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ruka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Roka"
           }
         },
         "sv": {
@@ -11498,6 +12800,12 @@
             "value": "Mitaines"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grijači za zapešća"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11538,6 +12846,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návleky na zápästie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grelniki za zapestja"
           }
         },
         "sv": {
@@ -11605,6 +12919,12 @@
             "value": "Bonnets"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kape"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11645,6 +12965,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čiapky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kape"
           }
         },
         "sv": {
@@ -11712,6 +13038,12 @@
             "value": "Tête"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glava"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11752,6 +13084,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hlava"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glava"
           }
         },
         "sv": {
@@ -11819,6 +13157,12 @@
             "value": "Hauteur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11859,6 +13203,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Výška"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Višina"
           }
         },
         "sv": {
@@ -11926,6 +13276,12 @@
             "value": "Aide"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomoć"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -11966,6 +13322,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pomocník"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomoč"
           }
         },
         "sv": {
@@ -12033,6 +13395,12 @@
             "value": "Crochet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heklica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12073,6 +13441,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Háčik"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kvačka"
           }
         },
         "sv": {
@@ -12140,6 +13514,12 @@
             "value": "Augmentations"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povećanja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12180,6 +13560,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridávanie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povečanja"
           }
         },
         "sv": {
@@ -12247,6 +13633,12 @@
             "value": "Indigo"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indigo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12284,6 +13676,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indigo"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Indigo"
@@ -12354,6 +13752,12 @@
             "value": "Infini"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beskonačni"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12394,6 +13798,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nekonečný"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neskončni"
           }
         },
         "sv": {
@@ -12461,6 +13871,12 @@
             "value": "Intermédiaire"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Srednje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12501,6 +13917,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stredne pokročilé"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Srednje"
           }
         },
         "sv": {
@@ -12568,6 +13990,12 @@
             "value": "K1, M1L, tricoter jusqu’à 1 maille avant le prochain marqueur, M1R, k1, glisser le marqueur. Cela ajoute 2 mailles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1, M1L, plesti do 1 petlje prije sljedeće oznake, M1R, k1, prebaciti oznaku. Dodaje 2 petlje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12608,6 +14036,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "K1, M1L, plesť do 1 očka pred ďalšou značkou, M1R, k1, prehodiť značku. Pridá 2 očká"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1, M1L, pleti do 1 zanke pred naslednjim označevalcem, M1R, k1, prestavi označevalec. Doda 2 zanki"
           }
         },
         "sv": {
@@ -12675,6 +14109,12 @@
             "value": "Tricoter 2 mailles ensemble"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Splesti 2 petlje zajedno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12715,6 +14155,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Upliesť 2 očká dohromady"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spleti 2 zanki skupaj"
           }
         },
         "sv": {
@@ -12782,6 +14228,12 @@
             "value": "Tricoter la première maille montée avec le fil de travail pour fermer le cercle, le bord de montage à plat, sans torsion autour de l’aiguille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Splesti prvu nabačenu petlju radnom niti da se zatvori krug, s rubom nabacivanja ravno, a ne uvrnuto oko igle"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12822,6 +14274,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Upliesť prvé nahodené očko pracovnou niťou, aby ste uzavreli kruh, s nahadzovacím okrajom rovno, nie skrúteným okolo ihlice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spleti prvo nasnuto zanko z delovno nitjo, da zaključiš krog, z robom nasnutja ravno in ne zasukano okoli igle"
           }
         },
         "sv": {
@@ -12889,6 +14347,12 @@
             "value": "Tricoter les mailles endroit à l’endroit et les mailles envers à l’envers en rabattant"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pri zatvaranju plesti desne petlje desno, a lijeve lijevo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -12929,6 +14393,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pri uzatváraní plesť hladké očká hladko a obrátené obrátene"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pri zaključevanju spleti desne zanke desno in leve zanke levo"
           }
         },
         "sv": {
@@ -12996,6 +14466,12 @@
             "value": "Endroit. K2 : tricoter 2 mailles à l’endroit"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desno. K2 je splesti 2 petlje desno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13036,6 +14512,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hladko. K2 je upliesť 2 očká hladko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desno. K2 je splesti 2 zanki desno"
           }
         },
         "sv": {
@@ -13103,6 +14585,12 @@
             "value": "Lace"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lace"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13140,6 +14628,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lace"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Lace"
@@ -13210,6 +14704,12 @@
             "value": "Grand"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velika"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13250,6 +14750,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Veľké"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velika"
           }
         },
         "sv": {
@@ -13317,6 +14823,12 @@
             "value": "Jambe"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noga"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13357,6 +14869,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Noha"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noga"
           }
         },
         "sv": {
@@ -13424,6 +14942,12 @@
             "value": "Jambière %lld"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grijač za nogu %lld"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13464,6 +14988,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návlek na nohu %lld"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grelnik za nogo %lld"
           }
         },
         "sv": {
@@ -13531,6 +15061,12 @@
             "value": "Jambières"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grijači za noge"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13571,6 +15107,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návleky na nohy"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grelniki za noge"
           }
         },
         "sv": {
@@ -13638,6 +15180,12 @@
             "value": "Longueur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duljina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13678,6 +15226,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dĺžka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dolžina"
           }
         },
         "sv": {
@@ -13745,6 +15299,12 @@
             "value": "À vie"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doživotno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13785,6 +15345,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Navždy"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doživljenjsko"
           }
         },
         "sv": {
@@ -13852,6 +15418,12 @@
             "value": "Long"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dugi"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13892,6 +15464,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dlhý"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dolgi"
           }
         },
         "sv": {
@@ -13959,6 +15537,12 @@
             "value": "Garance"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Broć"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -13999,6 +15583,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Marena"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Broč"
           }
         },
         "sv": {
@@ -14066,6 +15656,12 @@
             "value": "Augmentation de 1 à gauche : relever le fil par l’avant et le tricoter par le brin arrière"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povećanje za 1 ulijevo: podignuti nit sprijeda i splesti je straga"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14106,6 +15702,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať 1 doľava: zdvihnúť niť spredu a upliesť ju zozadu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povečaj za 1 levo: dvigni nitko od spredaj in jo spleti od zadaj"
           }
         },
         "sv": {
@@ -14173,6 +15775,12 @@
             "value": "Augmentation de 1 à droite : relever le fil par l’arrière et le tricoter par l’avant"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povećanje za 1 udesno: podignuti nit straga i splesti je sprijeda"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14213,6 +15821,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať 1 doprava: zdvihnúť niť zozadu a upliesť ju spredu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povečaj za 1 desno: dvigni nitko od zadaj in jo spleti od spredaj"
           }
         },
         "sv": {
@@ -14280,6 +15894,12 @@
             "value": "Augmentation de 1 : relever le fil entre les mailles et le tricoter par le brin arrière"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povećanje za 1: podignuti nit između petlji i splesti je straga"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14320,6 +15940,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pridať 1: zdvihnúť niť medzi očkami a upliesť ju zozadu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Povečaj za 1: dvigni nitko med zankama in jo spleti od zadaj"
           }
         },
         "sv": {
@@ -14387,6 +16013,12 @@
             "value": "Souci"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neven"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14427,6 +16059,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nechtík"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ognjič"
           }
         },
         "sv": {
@@ -14494,6 +16132,12 @@
             "value": "Marquer comme en cours"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Označi kao aktivno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14534,6 +16178,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Označiť ako rozpracované"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Označi kot aktivno"
           }
         },
         "sv": {
@@ -14601,6 +16251,12 @@
             "value": "Marquer comme terminé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Označi kao gotovo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14641,6 +16297,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Označiť ako hotové"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Označi kot končano"
           }
         },
         "sv": {
@@ -14708,6 +16370,12 @@
             "value": "Matériel"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Materijal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14748,6 +16416,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Materiál"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Material"
           }
         },
         "sv": {
@@ -14815,6 +16489,12 @@
             "value": "Moyen"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Srednja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14855,6 +16535,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stredné"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Srednja"
           }
         },
         "sv": {
@@ -14940,6 +16626,12 @@
             "value": "Mètres par pelote"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metara po klupku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -14980,6 +16672,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Metrov na praslen"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metrov na štreno"
           }
         },
         "sv": {
@@ -15047,6 +16745,12 @@
             "value": "Milieu"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sredina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15087,6 +16791,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stred"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sredina"
           }
         },
         "sv": {
@@ -15154,6 +16864,12 @@
             "value": "Mitaine %lld"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grijač za zapešće %lld"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15194,6 +16910,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návlek na zápästie %lld"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grelnik za zapestje %lld"
           }
         },
         "sv": {
@@ -15261,6 +16983,12 @@
             "value": "Mensuel"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mjesečno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15301,6 +17029,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mesačné"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mesečno"
           }
         },
         "sv": {
@@ -15368,6 +17102,12 @@
             "value": "Plus"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Više"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15408,6 +17148,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Viac"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Več"
           }
         },
         "sv": {
@@ -15475,6 +17221,12 @@
             "value": "Mousse"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mahovina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15515,6 +17267,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Machová"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mah"
           }
         },
         "sv": {
@@ -15582,6 +17340,12 @@
             "value": "Nom"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naziv"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15622,6 +17386,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Názov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ime"
           }
         },
         "sv": {
@@ -15689,6 +17459,12 @@
             "value": "Cou"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrat"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15729,6 +17505,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Krk"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrat"
           }
         },
         "sv": {
@@ -15796,6 +17578,12 @@
             "value": "Foulard"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marama za vrat"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15836,6 +17624,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šatka na krk"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ruta za vrat"
           }
         },
         "sv": {
@@ -15903,6 +17697,12 @@
             "value": "Col"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rub izreza"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -15943,6 +17743,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lem výstrihu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izrez"
           }
         },
         "sv": {
@@ -16010,6 +17816,12 @@
             "value": "Aiguille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igla"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16050,6 +17862,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ihlica"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igla"
           }
         },
         "sv": {
@@ -16117,6 +17935,12 @@
             "value": "Aiguille ou crochet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igla ili heklica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16157,6 +17981,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ihlica alebo háčik"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igla ali kvačka"
           }
         },
         "sv": {
@@ -16224,6 +18054,12 @@
             "value": "Aiguilles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igle"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16264,6 +18100,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ihlice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igle"
           }
         },
         "sv": {
@@ -16331,6 +18173,12 @@
             "value": "Aiguilles et crochets"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igle i heklice"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16371,6 +18219,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ihlice a háčiky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igle in kvačke"
           }
         },
         "sv": {
@@ -16438,6 +18292,12 @@
             "value": "Nouveau"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16478,6 +18338,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Novinka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novo"
           }
         },
         "sv": {
@@ -16545,6 +18411,12 @@
             "value": "Nouveau projet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novi projekt"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16585,6 +18457,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nový projekt"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nov projekt"
           }
         },
         "sv": {
@@ -16652,6 +18530,12 @@
             "value": "Aucun achat trouvé sur cet identifiant Apple"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nije pronađena kupnja za ovaj Apple ID"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16692,6 +18576,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pre toto Apple ID sa nenašiel žiadny nákup"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Za ta Apple ID ni bilo najdenega nakupa"
           }
         },
         "sv": {
@@ -16759,6 +18649,12 @@
             "value": "Pas du stock"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nije iz zalihe"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16799,6 +18695,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nie je zo zásob"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ni iz zaloge"
           }
         },
         "sv": {
@@ -16866,6 +18768,12 @@
             "value": "Notes"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bilješke"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -16906,6 +18814,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Poznámky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opombe"
           }
         },
         "sv": {
@@ -16973,6 +18887,12 @@
             "value": "Avoine"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zob"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17013,6 +18933,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ovos"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oves"
           }
         },
         "sv": {
@@ -17080,6 +19006,12 @@
             "value": "Un seul paiement de %@. Chaque modèle est à vous pour toujours."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jedno plaćanje od %@. Svaki uzorak je vaš zauvijek."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17120,6 +19052,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jedna platba %@. Každý návod je váš navždy."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enkratno plačilo %@. Vsak vzorec je vaš za vedno."
           }
         },
         "sv": {
@@ -17187,6 +19125,12 @@
             "value": "Modèles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uzorci"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17227,6 +19171,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návody"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vzorci"
           }
         },
         "sv": {
@@ -17294,6 +19244,12 @@
             "value": "Les offres n’ont pas pu se charger"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Planove nije bilo moguće učitati"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17334,6 +19290,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ponuky sa nepodarilo načítať"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paketov ni bilo mogoče naložiti"
           }
         },
         "sv": {
@@ -17401,6 +19363,12 @@
             "value": "Prune"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šljiva"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17441,6 +19409,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Slivka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sliva"
           }
         },
         "sv": {
@@ -17508,6 +19482,12 @@
             "value": "Confidentialité"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privatnost"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17548,6 +19528,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Súkromie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasebnost"
           }
         },
         "sv": {
@@ -17615,6 +19601,12 @@
             "value": "Options du projet"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcije projekta"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17655,6 +19647,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Možnosti projektu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Možnosti projekta"
           }
         },
         "sv": {
@@ -17722,6 +19720,12 @@
             "value": "Projets"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Projekti"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17762,6 +19766,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Projekty"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Projekti"
           }
         },
         "sv": {
@@ -17829,6 +19839,12 @@
             "value": "Envers. P2 : tricoter 2 mailles à l’envers"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lijevo. P2 je splesti 2 petlje lijevo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17869,6 +19885,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Obrátene. P2 je upliesť 2 očká obrátene"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Levo. P2 je splesti 2 zanki levo"
           }
         },
         "sv": {
@@ -17936,6 +19958,12 @@
             "value": "Passer l’aiguille dans le bord de l’ouvrage, enrouler le fil et tirer une boucle. Chaque boucle compte pour 1 maille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Provući iglu kroz rub rada, omotati nit i izvući omču. Svaka omča je 1 petlja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -17976,6 +20004,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prevliecť ihlicu okrajom práce, ovinúť niť a pretiahnuť slučku. Každá slučka je 1 očko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Potisni iglo skozi rob dela, ovij nit in potegni zanko skozi. Vsaka zanka je 1 zanka"
           }
         },
         "sv": {
@@ -18043,6 +20077,12 @@
             "value": "Pull raglan"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulover s raglan rukavima"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18083,6 +20123,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sveter s raglánom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulover z raglanom"
           }
         },
         "sv": {
@@ -18150,6 +20196,12 @@
             "value": "Évaluer Ravel"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocijeni Ravel"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18190,6 +20242,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ohodnotiť Ravel"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oceni Ravel"
           }
         },
         "sv": {
@@ -18257,6 +20315,12 @@
             "value": "Modèles Ravel"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel uzorci"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18297,6 +20361,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Návody Ravel"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vzorci Ravel"
           }
         },
         "sv": {
@@ -18364,6 +20434,12 @@
             "value": "Ravel n’a pas pu ouvrir vos projets"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel nije mogao otvoriti vaše projekte"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18404,6 +20480,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ravel nemohol otvoriť vaše projekty"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel ni mogel odpreti vaših projektov"
           }
         },
         "sv": {
@@ -18471,6 +20553,12 @@
             "value": "Retirer"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukloni"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18511,6 +20599,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odstrani"
           }
         },
         "sv": {
@@ -18578,6 +20672,12 @@
             "value": "Supprimer le compteur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukloni brojač"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18618,6 +20718,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť počítadlo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odstrani števec"
           }
         },
         "sv": {
@@ -18685,6 +20791,12 @@
             "value": "Retirer le modèle"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukloni uzorak"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18725,6 +20837,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť návod"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odstrani vzorec"
           }
         },
         "sv": {
@@ -18792,6 +20910,12 @@
             "value": "Supprimer le compteur?"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukloniti brojač?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18832,6 +20956,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť počítadlo?"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odstranim števec?"
           }
         },
         "sv": {
@@ -18899,6 +21029,12 @@
             "value": "Retirer le modèle de ce projet?"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukloniti uzorak iz ovog projekta?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -18939,6 +21075,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odstrániť návod z tohto projektu?"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odstranim vzorec iz tega projekta?"
           }
         },
         "sv": {
@@ -19006,6 +21148,12 @@
             "value": "Renommer"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preimenuj"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19046,6 +21194,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Premenovať"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preimenuj"
           }
         },
         "sv": {
@@ -19113,6 +21267,12 @@
             "value": "Se renouvelle jusqu’à ce que vous résiliez dans Réglages. Un modèle que vous avez commencé reste à vous."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obnavlja se dok ne otkažete u Postavkama. Uzorak koji ste započeli ostaje vaš."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19153,6 +21313,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Obnovuje sa, kým ho nezrušíte v Nastaveniach. Návod, ktorý ste začali plesť, vám zostane."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se obnavlja, dokler ne prekličete v Nastavitvah. Vzorec, ki ste ga začeli, ostane vaš."
           }
         },
         "sv": {
@@ -19220,6 +21386,12 @@
             "value": "Motif"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rapport"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19260,6 +21432,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rapport"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponavljanje"
           }
         },
         "sv": {
@@ -19327,6 +21505,12 @@
             "value": "Remplacer le modèle"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamijeni uzorak"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19367,6 +21551,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nahradiť návod"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamenjaj vzorec"
           }
         },
         "sv": {
@@ -19434,6 +21624,12 @@
             "value": "Remettre à 0"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrati brojač na 0"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19474,6 +21670,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vynulovať počítadlo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponastavi števec"
           }
         },
         "sv": {
@@ -19541,6 +21743,12 @@
             "value": "Remettre le compteur à 0?"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vratiti brojač na 0?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19581,6 +21789,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vynulovať počítadlo?"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponastavim števec na 0?"
           }
         },
         "sv": {
@@ -19648,6 +21862,12 @@
             "value": "Remettre à 0"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrati na 0"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19688,6 +21908,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vynulovať"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponastavi na 0"
           }
         },
         "sv": {
@@ -19755,6 +21981,12 @@
             "value": "Restaurer"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrati kupnju"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19795,6 +22027,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Obnoviť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obnovi"
           }
         },
         "sv": {
@@ -19862,6 +22100,12 @@
             "value": "Bonnet côtelé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrasta kapa"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -19902,6 +22146,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rebrovaná čiapka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrasta kapa"
           }
         },
         "sv": {
@@ -19969,6 +22219,12 @@
             "value": "Snood côtelé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrasta ogrlica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20009,6 +22265,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rebrovaný nákrčník"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrast ovratnik"
           }
         },
         "sv": {
@@ -20076,6 +22338,12 @@
             "value": "Écharpe côtelée"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrasti šal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20116,6 +22384,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rebrovaný šál"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rebrasti šal"
           }
         },
         "sv": {
@@ -20183,6 +22457,12 @@
             "value": "Bonnet à bord roulotté"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapa sa zavrnutim rubom"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20223,6 +22503,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čiapka so zvinutým okrajom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapa z zavihanim robom"
           }
         },
         "sv": {
@@ -20290,6 +22576,12 @@
             "value": "Tour"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krug"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20330,6 +22622,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kolo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krog"
           }
         },
         "sv": {
@@ -20397,6 +22695,12 @@
             "value": "Tour de cette section"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krug u ovom dijelu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20437,6 +22741,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kolo v tejto časti"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krog v tem delu"
           }
         },
         "sv": {
@@ -20504,6 +22814,12 @@
             "value": "Rang"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20544,6 +22860,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta"
           }
         },
         "sv": {
@@ -20611,6 +22933,12 @@
             "value": "Rang %lld"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red %lld"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20651,6 +22979,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad %lld"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta %lld"
           }
         },
         "sv": {
@@ -20718,6 +23052,12 @@
             "value": "Rang %1$lld sur %2$lld du motif"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red %1$lld od %2$lld u rapportu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20758,6 +23098,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad %1$lld z %2$lld v rapporte"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta %1$lld od %2$lld v ponavljanju"
           }
         },
         "sv": {
@@ -20825,6 +23171,12 @@
             "value": "Rang de cette section"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red u ovom dijelu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20865,6 +23217,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad v tejto časti"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta v tem delu"
           }
         },
         "sv": {
@@ -20932,6 +23290,12 @@
             "value": "Rangs"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redovi"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -20972,6 +23336,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rady"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrste"
           }
         },
         "sv": {
@@ -21039,6 +23409,12 @@
             "value": "Rangs par motif"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redova u jednom rapportu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21079,6 +23455,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Radov v jednom rapporte"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrst v enem ponavljanju"
           }
         },
         "sv": {
@@ -21146,6 +23528,12 @@
             "value": "Rangs sur %@"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redova na %@"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21186,6 +23574,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rady na %@"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrst na %@"
           }
         },
         "sv": {
@@ -21253,6 +23647,12 @@
             "value": "Écharpe"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21293,6 +23693,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šál"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal"
           }
         },
         "sv": {
@@ -21360,6 +23766,12 @@
             "value": "Écharpes et snoods"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šalovi i ogrlice"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21400,6 +23812,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šály a nákrčníky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šali in ovratniki"
           }
         },
         "sv": {
@@ -21467,6 +23885,12 @@
             "value": "Deuxième oreille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drugo uho"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21507,6 +23931,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Druhé ucho"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drugo uho"
           }
         },
         "sv": {
@@ -21574,6 +24004,12 @@
             "value": "Deuxième manche"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drugi rukav"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21614,6 +24050,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Druhý rukáv"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drugi rokav"
           }
         },
         "sv": {
@@ -21681,6 +24123,12 @@
             "value": "Snood au point de riz"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ogrlica u riža uzorku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21721,6 +24169,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nákrčník ryžovým vzorom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovratnik v rižastem vzorcu"
           }
         },
         "sv": {
@@ -21788,6 +24242,12 @@
             "value": "Écharpe au point de riz"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal u riža uzorku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21828,6 +24288,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šál ryžovým vzorom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal v rižastem vzorcu"
           }
         },
         "sv": {
@@ -21895,6 +24361,12 @@
             "value": "Envoyer un avis"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pošalji povratnu informaciju"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -21935,6 +24407,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Poslať spätnú väzbu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pošlji povratne informacije"
           }
         },
         "sv": {
@@ -22002,6 +24480,12 @@
             "value": "Définir"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Postavi"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22042,6 +24526,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nastaviť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nastavi"
           }
         },
         "sv": {
@@ -22109,6 +24599,12 @@
             "value": "Définir le rang"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Postavi red"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22149,6 +24645,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nastaviť rad"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nastavi vrsto"
           }
         },
         "sv": {
@@ -22216,6 +24718,12 @@
             "value": "Châle"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Šal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22256,6 +24764,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šatka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ruta"
           }
         },
         "sv": {
@@ -22323,6 +24837,12 @@
             "value": "Petit châle"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mali šal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22363,6 +24883,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Malá šatka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Majhna ruta"
           }
         },
         "sv": {
@@ -22430,6 +24956,12 @@
             "value": "Côté"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strana"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22470,6 +25002,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Strana"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stran"
           }
         },
         "sv": {
@@ -22537,6 +25075,12 @@
             "value": "Taille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veličina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22577,6 +25121,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Veľkosť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velikost"
           }
         },
         "sv": {
@@ -22644,6 +25194,12 @@
             "value": "Pelotes"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klupka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22684,6 +25240,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Praslene"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Štrene"
           }
         },
         "sv": {
@@ -22751,6 +25313,12 @@
             "value": "Longueur de manche"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duljina rukava"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22791,6 +25359,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dĺžka rukáva"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dolžina rokava"
           }
         },
         "sv": {
@@ -22858,6 +25432,12 @@
             "value": "Glisser 2 mailles comme pour les tricoter à l’endroit, une par une, puis les tricoter ensemble par le brin arrière"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebaciti 2 petlje kao za pletenje, jednu po jednu, pa ih splesti zajedno straga"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -22898,6 +25478,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prehodiť 2 očká ako na pletenie, po jednom, a upliesť ich dohromady zozadu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenesi 2 zanki kot za pletenje, eno za drugo, nato ju spleti skupaj od zadaj"
           }
         },
         "sv": {
@@ -22965,6 +25551,12 @@
             "value": "Bonnet slouchy"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opuštena kapa"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23005,6 +25597,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Voľná čiapka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ohlapna kapa"
           }
         },
         "sv": {
@@ -23072,6 +25670,12 @@
             "value": "Petit"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mala"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23112,6 +25716,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Malé"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Majhna"
           }
         },
         "sv": {
@@ -23179,6 +25789,12 @@
             "value": "Ajusté"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uski"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23219,6 +25835,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tesný"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tesni"
           }
         },
         "sv": {
@@ -23286,6 +25908,12 @@
             "value": "Sport"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23323,6 +25951,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Sport"
@@ -23393,6 +26027,12 @@
             "value": "Couches de printemps"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proljetni slojevi"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23433,6 +26073,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jarné vrstvy"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomladne plasti"
           }
         },
         "sv": {
@@ -23500,6 +26146,12 @@
             "value": "Épicéa"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smreka"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23540,6 +26192,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Smrek"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smreka"
           }
         },
         "sv": {
@@ -23607,6 +26265,12 @@
             "value": "Démarrer un compteur de rangs"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokreni brojač redova"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23647,6 +26311,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Spustiť počítadlo radov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaženi števec vrst"
           }
         },
         "sv": {
@@ -23714,6 +26384,12 @@
             "value": "Stock"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaliha"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23754,6 +26430,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zásoby"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaloga"
           }
         },
         "sv": {
@@ -23821,6 +26503,12 @@
             "value": "Mailles sur %@"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Petlji na %@"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23861,6 +26549,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Očká na %@"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zank na %@"
           }
         },
         "sv": {
@@ -23928,6 +26622,12 @@
             "value": "Droite"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravna"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -23968,6 +26668,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rovná"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravna"
           }
         },
         "sv": {
@@ -24035,6 +26741,12 @@
             "value": "Poussette"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolica"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24075,6 +26787,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kočík"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voziček"
           }
         },
         "sv": {
@@ -24142,6 +26860,12 @@
             "value": "S’abonner"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pretplati se"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24182,6 +26906,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odoberať"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naroči se"
           }
         },
         "sv": {
@@ -24249,6 +26979,12 @@
             "value": "Coton d’été"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ljetni pamuk"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24289,6 +27025,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Letná bavlna"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poletni bombaž"
           }
         },
         "sv": {
@@ -24356,6 +27098,12 @@
             "value": "Super Bulky"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super Bulky"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24393,6 +27141,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super Bulky"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Super Bulky"
@@ -24463,6 +27217,12 @@
             "value": "Changer les aiguilles de main et tricoter en sens inverse"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamijeniti igle u rukama i plesti natrag u drugom smjeru"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24503,6 +27263,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vymeniť ihlice v rukách a plesť späť opačným smerom"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamenjaj igli v rokah in pleti nazaj v nasprotno smer"
           }
         },
         "sv": {
@@ -24582,6 +27348,12 @@
             "value": "Temps de pull"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrijeme za pulover"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24622,6 +27394,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Svetrové počasie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vreme za pulover"
           }
         },
         "sv": {
@@ -24701,6 +27479,12 @@
             "value": "Pulls"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puloveri"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24741,6 +27525,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Svetre"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puloverji"
           }
         },
         "sv": {
@@ -24808,6 +27598,12 @@
             "value": "Retirer un à %@"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oduzmi jedan od %@"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24848,6 +27644,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odpočítať jedno pri %@"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odštej ena pri %@"
           }
         },
         "sv": {
@@ -24915,6 +27717,12 @@
             "value": "Conditions"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uvjeti"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -24955,6 +27763,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Podmienky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pogoji"
           }
         },
         "sv": {
@@ -25022,6 +27836,12 @@
             "value": "Ce modèle n’a pas pu être ouvert"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taj uzorak nije bilo moguće otvoriti"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25062,6 +27882,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tento návod sa nepodarilo otvoriť"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tega vzorca ni bilo mogoče odpreti"
           }
         },
         "sv": {
@@ -25129,6 +27955,12 @@
             "value": "L’App Store est inaccessible. Réessayez une fois en ligne."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Store nije dostupan. Pokušajte ponovno kad budete online."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25169,6 +28001,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "App Store nie je dostupný. Skúste to znova, keď budete online."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Store ni dosegljiv. Poskusite znova, ko boste na spletu."
           }
         },
         "sv": {
@@ -25236,6 +28074,12 @@
             "value": "L’achat n’a pas abouti"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kupnja nije uspjela"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25276,6 +28120,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nákup sa nepodaril"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nakup ni uspel"
           }
         },
         "sv": {
@@ -25343,6 +28193,12 @@
             "value": "Le motif commence à votre prochain rang."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rapport počinje sljedećim redom."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25383,6 +28239,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rapport začína ďalším radom."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponavljanje se začne z naslednjo vrsto."
           }
         },
         "sv": {
@@ -25450,6 +28312,12 @@
             "value": "Ensuite, %@."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zatim %@."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25490,6 +28358,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Potom %@."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nato %@."
           }
         },
         "sv": {
@@ -25557,6 +28431,12 @@
             "value": "Ils sont toujours sur cet %@. Redémarrez-le, puis rouvrez Ravel."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I dalje su na ovom uređaju (%@). Ponovno ga pokrenite i otvorite Ravel."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25597,6 +28477,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stále sú na tomto zariadení (%@). Reštartujte ho a znova otvorte Ravel."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Še vedno so v tej napravi (%@). Znova jo zaženite in ponovno odprite Ravel."
           }
         },
         "sv": {
@@ -25664,6 +28550,12 @@
             "value": "Plaid"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokrivač"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25704,6 +28596,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prehoz"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pregrinjalo"
           }
         },
         "sv": {
@@ -25771,6 +28669,12 @@
             "value": "Ouverture du pouce"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otvor za palac"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25811,6 +28715,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Otvor pre palec"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odprtina za palec"
           }
         },
         "sv": {
@@ -25878,6 +28788,12 @@
             "value": "Tout-petit"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Malo dijete"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -25918,6 +28834,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Batoľa"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Malček"
           }
         },
         "sv": {
@@ -25985,6 +28907,12 @@
             "value": "Haut"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gornji dio"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26025,6 +28953,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vrch"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zgornji del"
           }
         },
         "sv": {
@@ -26092,6 +29026,12 @@
             "value": "Bordure du haut"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gornji rub"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26132,6 +29072,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Horný lem"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zgornji rob"
           }
         },
         "sv": {
@@ -26199,6 +29145,12 @@
             "value": "Tricot de voyage"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pletenje za put"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26239,6 +29191,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pletenie na cesty"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pletenje za na pot"
           }
         },
         "sv": {
@@ -26306,6 +29264,12 @@
             "value": "Tendances"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "U trendu"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26346,6 +29310,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Trendy"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "V trendu"
           }
         },
         "sv": {
@@ -26413,6 +29383,12 @@
             "value": "Châle triangulaire"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trokutasti šal"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26453,6 +29429,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Trojuholníková šatka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trikotna ruta"
           }
         },
         "sv": {
@@ -26520,6 +29502,12 @@
             "value": "Réessayer"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokušaj ponovno"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -26560,6 +29548,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Skúsiť znova"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poskusi znova"
           }
         },
         "sv": {
@@ -26819,6 +29813,30 @@
             }
           }
         },
+        "hr": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Isprobaj besplatno %lld dana"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Isprobaj besplatno %lld dan"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Isprobaj besplatno %lld dana"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -26969,6 +29987,36 @@
             }
           }
         },
+        "sl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Preizkusi brezplačno za %lld dni"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Preizkusi brezplačno za %lld dan"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Preizkusi brezplačno za %lld dni"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Preizkusi brezplačno za %lld dneva"
+                }
+              }
+            }
+          }
+        },
         "sv": {
           "variations": {
             "plural": {
@@ -27046,6 +30094,12 @@
             "value": "Tordre une boucle de fil de travail et la glisser sur l’aiguille droite. Chaque boucle compte pour 1 maille"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uvrnuti omču radne niti i pomaknuti je na desnu iglu. Svaka omča je 1 petlja"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27086,6 +30140,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Skrútiť slučku z pracovnej nite a posunúť ju na pravú ihlicu. Každá slučka je 1 očko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zavij zanko iz delovne niti in jo potisni na desno iglo. Vsaka zanka je 1 zanka"
           }
         },
         "sv": {
@@ -27153,6 +30213,12 @@
             "value": "Type"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27193,6 +30259,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Typ"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrsta"
           }
         },
         "sv": {
@@ -27260,6 +30332,12 @@
             "value": "Débloquer les modèles"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otključaj uzorke"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27300,6 +30378,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Odomknúť návody"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odkleni vzorce"
           }
         },
         "sv": {
@@ -27367,6 +30451,12 @@
             "value": "Sans titre"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez naziva"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27407,6 +30497,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bez názvu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brez imena"
           }
         },
         "sv": {
@@ -27474,6 +30570,12 @@
             "value": "Haut de la main"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gornji dio ruke"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27514,6 +30616,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Horná časť ruky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zgornji del roke"
           }
         },
         "sv": {
@@ -27581,6 +30689,12 @@
             "value": "Grosseur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debljina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27621,6 +30735,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hrúbka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debelina"
           }
         },
         "sv": {
@@ -27688,6 +30808,12 @@
             "value": "Large"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Širok"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27728,6 +30854,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Široký"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Širok"
           }
         },
         "sv": {
@@ -27795,6 +30927,12 @@
             "value": "Largeur"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Širina"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27835,6 +30973,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Šírka"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Širina"
           }
         },
         "sv": {
@@ -27902,6 +31046,12 @@
             "value": "Envergure"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raspon ruku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -27942,6 +31092,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rozpätie paží"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Razpon rok"
           }
         },
         "sv": {
@@ -28009,6 +31165,12 @@
             "value": "Retricoter les mailles après le * encore et encore, aussi loin que le rang l’indique"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raditi petlje nakon * iznova i iznova, koliko red kaže"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28049,6 +31211,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Opakovať očká za * stále dokola, tak ďaleko, ako hovorí rad"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleti zanke za * znova in znova, tako daleč, kot pravi vrsta"
           }
         },
         "sv": {
@@ -28116,6 +31284,12 @@
             "value": "Worsted"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worsted"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28153,6 +31327,12 @@
           }
         },
         "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worsted"
+          }
+        },
+        "sl": {
           "stringUnit": {
             "state": "translated",
             "value": "Worsted"
@@ -28223,6 +31403,12 @@
             "value": "Étole"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Štola"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28263,6 +31449,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Štóla"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Štola"
           }
         },
         "sv": {
@@ -28330,6 +31522,12 @@
             "value": "Yards par pelote"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jardi po klupku"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28370,6 +31568,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Yardov na praslen"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jardov na štreno"
           }
         },
         "sv": {
@@ -28437,6 +31641,12 @@
             "value": "Laine"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pređa"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28477,6 +31687,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Priadza"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preja"
           }
         },
         "sv": {
@@ -28544,6 +31760,12 @@
             "value": "Jeté"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Omotač"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28584,6 +31806,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nit cez ihlicu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovoj"
           }
         },
         "sv": {
@@ -28651,6 +31879,12 @@
             "value": "Annuel"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Godišnje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28691,6 +31925,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ročné"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letno"
           }
         },
         "sv": {
@@ -28758,6 +31998,12 @@
             "value": "Empiècement"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jarmo"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28798,6 +32044,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sedlo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Okrogla pola"
           }
         },
         "sv": {
@@ -28865,6 +32117,12 @@
             "value": "Votre achat attend d’être approuvé"
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaša kupnja čeka odobrenje"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -28905,6 +32163,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Váš nákup čaká na schválenie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaš nakup čaka na odobritev"
           }
         },
         "sv": {
@@ -28972,6 +32236,12 @@
             "value": "Votre achat a abouti. Touchez Restaurer si les modèles restent verrouillés."
           }
         },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kupnja je uspjela. Dodirnite Vrati kupnju ako uzorci ostanu zaključani."
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
@@ -29012,6 +32282,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nákup prebehol. Ak návody zostanú zamknuté, ťuknite na Obnoviť."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nakup je uspel. Tapnite Obnovi, če vzorci ostanejo zaklenjeni."
           }
         },
         "sv": {
