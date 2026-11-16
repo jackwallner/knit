@@ -1,8 +1,8 @@
 # Topical patterns loop: plan
 
-Branch `claude/eager-benz-9a5378`, merges into main for 1.1 after 1.0 ships. Nothing here is released or published.
+Built on `claude/eager-benz-9a5378` and merged into main; ships in 1.0. Records publish only on Jack's yes.
 
-Success criterion: a JSON record on the site becomes a sized, colorwork pattern in the 1.1 app with no App Store update, every record is proven at every size and yarn weight by a test and a script that CI runs, and a weekly scout drafts records that wait for Jack.
+Success criterion: a JSON record on the site becomes a sized, colorwork pattern in the app with no App Store update, every record is proven at every size and yarn weight by a test and a script that CI runs, and a weekly scout drafts records that wait for Jack.
 
 ## 1. Colorwork in the engines
 
@@ -81,7 +81,7 @@ Runbook at `.claude/rules/topical-loop.md` (paths: `docs/designs.json`, `project
 3. Draft the record in `project-docs/topical/drafts/`, run `topical-check.sh`.
 4. Fix until it passes, then open a PR `topical/<date>` with the previews. The scout never edits `docs/`, never merges, never touches main.
 5. Jack approves in the PR or here.
-6. Publish (only on Jack's yes): move the record into `docs/designs.json`, add it to `trending.json` with its tag, merge. GitHub Pages serves it; 1.1 phones pick it up within a day.
+6. Publish (only on Jack's yes): move the record into `docs/designs.json`, add it to `trending.json` with its tag, merge. GitHub Pages serves it; phones pick it up within a day.
 7. Hand the design to the knit-tiktok session (SendMessage) with the preview PNG, title, tag and the one stitch fact worth a video.
 
 Rules the runbook repeats: no designer names or invented people, no characters, logos, brands or team names (team colors only, named plainly: "Navy and orange"), meme animals named by the animal ("Round Raccoon", never the meme's name), lengths through `Sizing`, no em dashes.
