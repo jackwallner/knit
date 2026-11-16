@@ -46,7 +46,7 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | G-12 | P1 | Go to Row trapped in section, gone when finished | fixed and verified | Plan.swift:91-99 `sections`, Models.swift:119-123, ProjectView.swift:303-307. Duplicate names: V-10 |
 | G-13 | P2 | No secondary counters | fixed | One optional counter per project (`tallyOn`, `tallyName`, `tallyCount`), rules in the `Project` extension, each ending in `persist()` and never touching `rows`. Bar under the title; SchemaTests `testSecondCounterNeverTouchesTheRowsAndSurvivesReopening` |
 | G-14 | P2 | Stash not linked to projects | fixed | `Project.stashYarn` (nullify on delete, inverse `Yarn.projects`); the typed `yarn` stays for old projects. Needles are still free text. SchemaTests `testLinkedYarnShowsItsNameAndDeletingItLeavesTheProjectWhole` |
-| G-15 | P2 | Portrait only | deferred | Past 1.0 |
+| G-15 | P2 | Portrait only | fixed | iPad in every orientation (Layout.swift, .claude/rules/ipad-layout.md); iPhone stays portrait |
 | G-16 | P2 | Yarn lacks yardage, fiber, dye lot | fixed | `Yarn.yardsPerSkein` (yards underneath, shown through `Sizing.yardage`), `fiber`, `dyeLot`; stash row shows the total when known |
 | G-17 | P2 | Finished plain project still counts | fixed and verified | Models.swift:93 `if !isFinished`. Side effects: V-02, V-03 |
 | G-18 | P2 | Free designs do not show fitted sizing | owner decision | Make ribbed beanie or cowl free; touches `Design.isFree` and the free/paid test (ModelTests `testOnlyTheLibraryIsPaid`) |
