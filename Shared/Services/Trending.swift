@@ -43,7 +43,7 @@ final class Trending {
         guard !fresh.isEmpty else { return }
         defaults.set(data, forKey: Self.cacheKey)
         defaults.set(now, forKey: Self.fetchedKey)
-        items = fresh
+        // Kept for the next launch: swapping the shelf under a knitter who is looking at it shifts the whole screen.
     }
 
     private struct Listing: Decodable {

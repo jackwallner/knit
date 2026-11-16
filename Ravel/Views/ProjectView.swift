@@ -410,7 +410,7 @@ struct ProjectView: View {
         }
             .padding(.horizontal, 18)
             .frame(minWidth: 64, minHeight: 52)
-            .background(.regularMaterial, in: Capsule())
+            .background(Theme.paper.opacity(0.94), in: Capsule())
             .allowsHitTesting(false)
     }
 
@@ -424,6 +424,8 @@ struct ProjectView: View {
                 .foregroundStyle(Theme.secondary)
                 .contentTransition(.numericText(value: Double(project.repeatPosition)))
                 .motion(.snappy, value: project.repeatPosition)
+                .frame(minWidth: 44, minHeight: 44)
+                .contentShape(Rectangle())
                 .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
         } else if project.repeatLength > 1 {
             HStack(spacing: 6) {
@@ -434,6 +436,8 @@ struct ProjectView: View {
                 }
             }
             .motion(.snappy, value: project.repeatPosition)
+            .frame(minWidth: 44, minHeight: 44)
+            .contentShape(Rectangle())
             .accessibilityElement()
             .accessibilityLabel("Row \(project.repeatPosition) of \(project.repeatLength) in the repeat")
         }

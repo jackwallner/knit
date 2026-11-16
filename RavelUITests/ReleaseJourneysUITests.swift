@@ -30,26 +30,26 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(field.waitForExistence(timeout: 10))
         field.typeText(name)
         QA.checkpoint(app, "new-project-name")
-        tap(app.alerts.buttons["Cast On"], "Cast On")
+        tap(app.alerts.buttons.matching(label("Cast On", "Anschlagen")).firstMatch, "Cast On")
 
         let counter = app.staticTexts["counter.value"]
         XCTAssertTrue(counter.waitForExistence(timeout: 10))
         QA.checkpoint(app, "counter-new")
         for _ in 0..<3 { tapFabric(app) }
-        expect(counter, reads: "Row 3")
+        expect(counter, reads: "Row 3", "Reihe 3")
         QA.checkpoint(app, "counter-three-rows")
 
         QA.relaunch(app)
         openProject(name, in: app)
         XCTAssertTrue(counter.waitForExistence(timeout: 10))
-        expect(counter, reads: "Row 3")
+        expect(counter, reads: "Row 3", "Reihe 3")
         QA.checkpoint(app, "counter-after-relaunch")
     }
 
     func testFirstRunToAFreePattern() {
         let app = XCUIApplication()
         QA.launch(app)
-        tab("Patterns", in: app)
+        tab("Patterns", "Muster", in: app)
         QA.checkpoint(app, "library")
         let design = app.buttons["design.garterScarf"]
         scrollTo(design, in: app)
@@ -68,7 +68,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testPaywallShownAndDismissed() {
         let app = XCUIApplication()
         QA.launch(app, arguments: ["-SeedDemo"])
-        tab("Patterns", in: app)
+        tab("Patterns", "Muster", in: app)
         let design = app.buttons["design.ribbedBeanie"]
         scrollTo(design, in: app)
         design.tap()
@@ -82,7 +82,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "paywall-monthly", paywall: true)
         tap(app.buttons["paywall.lifetime"], "Lifetime")
         QA.checkpoint(app, "paywall-lifetime", paywall: true)
-        tap(app.buttons["Close"], "Close")
+        tap(app.buttons.matching(label("Close", "Schließen")).firstMatch, "Close")
         XCTAssertTrue(unlock.waitForExistence(timeout: 10))
         QA.checkpoint(app, "design-after-paywall-dismissed")
     }
@@ -121,17 +121,17 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testStashAddYarn() {
         let app = XCUIApplication()
         QA.launch(app, arguments: ["-UITesting"])
-        tab("Stash", in: app)
+        tab("Stash", "Vorrat", in: app)
         QA.checkpoint(app, "stash-empty")
-        tap(app.buttons["Add Yarn"], "Add Yarn")
-        XCTAssertTrue(app.navigationBars["Yarn"].waitForExistence(timeout: 10))
+        tap(app.buttons.matching(label("Add Yarn", "Garn hinzufügen")).firstMatch, "Add Yarn")
+        XCTAssertTrue(app.navigationBars.matching(NSPredicate(format: "identifier IN %@", ["Yarn", "Garn"])).firstMatch.waitForExistence(timeout: 10))
         QA.checkpoint(app, "yarn-editor")
         // A knitter who pauses before naming must not lose the yarn: autosave runs in the pause
         // and once closed the editor and deleted the unnamed yarn.
         sleep(15)
         tap(app.textFields["Name"], "Name field")
         app.textFields["Name"].typeText("Merino")
-        tap(app.buttons["Done"], "Done")
+        tap(app.buttons.matching(label("Done", "Fertig")).firstMatch, "Done")
         XCTAssertTrue(app.staticTexts["Merino"].firstMatch.waitForExistence(timeout: 10))
         QA.checkpoint(app, "stash-one-yarn")
     }
@@ -144,9 +144,14 @@ final class ReleaseJourneysUITests: XCTestCase {
     }
 
     /// Tabs are matched by label on any element, so a tab bar and a sidebar both work.
-    private func tab(_ label: String, in app: XCUIApplication) {
-        let button = app.buttons.matching(NSPredicate(format: "label == %@", label)).firstMatch
+    private func tab(_ label: String, _ german: String, in app: XCUIApplication) {
+        let button = app.buttons.matching(self.label(label, german)).firstMatch
         tap(button, "\(label) tab")
+    }
+
+    /// Matches the English label or its German translation (the `german` persona).
+    private func label(_ english: String, _ german: String) -> NSPredicate {
+        NSPredicate(format: "label IN %@", [english, german])
     }
 
     /// The fabric fills the lower part of a project; one tap there is one row or one step.
@@ -178,8 +183,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(element.isHittable)
     }
 
-    private func expect(_ element: XCUIElement, reads label: String, file: StaticString = #filePath, line: UInt = #line) {
-        let reached = expectation(for: NSPredicate(format: "label == %@", label), evaluatedWith: element)
+    private func expect(_ element: XCUIElement, reads label: String, _ german: String, file: StaticString = #filePath, line: UInt = #line) {
+        let reached = expectation(for: NSPredicate(format: "label IN %@", [label, german]), evaluatedWith: element)
         XCTAssertEqual(XCTWaiter.wait(for: [reached], timeout: 8), .completed,
                        "expected \(label), reads \(element.label)", file: file, line: line)
     }

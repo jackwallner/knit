@@ -45,7 +45,7 @@ final class TopicalStore {
         guard (try? JSONDecoder().decode(Topical.Listing.self, from: data)) != nil else { return }
         defaults.set(data, forKey: Self.cacheKey)
         defaults.set(now, forKey: Self.fetchedKey)
-        items = Topical.decode(data, now: now)
+        // Kept for the next launch: swapping the shelf under a knitter who is looking at it shifts the whole screen.
     }
 
     func item(_ id: String) -> Topical? { items.first { $0.id == id || $0.designRaw == id } }

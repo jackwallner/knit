@@ -57,3 +57,21 @@ files excepted), and a rebuild. Do not edit the catalog by hand.
 other languages: `gh-sim launch --args '-SeedDemo -AppleLanguages (de) -AppleLocale de_DE'` (also ar, ja, hi),
 screens as in `ipad-layout.md`. Indic knitting terms and Hebrew, Arabic and Urdu wording should get a native
 read before the languages are promoted in the listing.
+
+## Localized App Store screenshots (2026-11-16)
+
+Every non-English ASC locale has an iPhone 6.9 inch set (`fastlane/screenshots/<locale>/`) and an iPad 13 inch
+set (`fastlane/screenshots/ipad/<locale>/`), same seven filenames as en-US. English variants (en-AU, en-CA,
+en-GB) use en-US. Tools, headers and provenance: `project-docs/asc-screenshots/l10n-20261116/`.
+
+- Headers: `copy/make_headers.py` writes `copy/headers.json` (7 per locale, no periods, two lines at the
+  renderer's 140 px minimum). `tools/fitcheck.py <headline-binary>` fails any header that needs a third line
+  or a mid-word break. ja, zh and th carry an explicit `\n` because they have no spaces.
+- Build: `swiftc -O tools/headline.swift -o <headline-binary>` (CoreText draws the header, so Arabic, Hebrew,
+  Thai and the Indic scripts shape correctly).
+- Capture: lease `agent-sim checkout knit-shots --slot 1` and `knit-shots-ipad --slot 13`, install a Debug build,
+  then `tools/capture.py <udid> <raw-dir> all` per device. It launches the seven flows of the shared
+  `configs/knit.json` with `-MockProducts`, `-AppleLanguages` and `-AppleLocale`, and waits for a stable frame.
+- Compose: `tools/compose.py iphone|ipad <raw-dir> <headline-binary> fastlane/screenshots[/ipad] all` reuses the
+  shared renderer's background and device frame; `provenance-*.json` records capture hashes and header text.
+- A new design or flow means new raw captures; a copy change means rerun `compose.py` only.
