@@ -29,6 +29,28 @@ def kinds(text):
     return sorted(re.sub(r"%\d+\$", "%", m.group(0)) for m in PLACEHOLDER.finditer(text))
 
 
+# A regional file holds only what differs from its parent; the rest is inherited.
+PARENT = {"es-MX": "es", "fr-CA": "fr", "pt-PT": "pt-BR"}
+
+
+def read(lang):
+    values = read(PARENT[lang]) if lang in PARENT else {}
+    for line in (HERE / f"{lang}.tsv").read_text().splitlines():
+        if line.strip() and not line.startswith("#"):
+            ident, _, value = line.partition("\t")
+            values[int(ident)] = value
+    return values
+
+
+def typography(lang, value):
+    """French sets a no-break space before ? ! : ;. Canadian French does so before a colon only."""
+    if lang == "fr":
+        return re.sub(r" ([?!:;])", "\u00a0\\1", value)
+    if lang == "fr-CA":
+        return re.sub(r" (:)", "\u00a0\\1", value)
+    return value
+
+
 def unit(value):
     return {"stringUnit": {"state": "translated", "value": value}}
 
@@ -40,11 +62,9 @@ def main():
     problems = []
     for lang in langs:
         seen = set()
-        for number, line in enumerate((HERE / f"{lang}.tsv").read_text().splitlines(), 1):
-            if not line.strip() or line.startswith("#"):
-                continue
-            ident, _, value = line.partition("\t")
-            index = int(ident) - 1
+        for ident, raw in read(lang).items():
+            value = typography(lang, raw)
+            index = ident - 1
             text, plural = keys[index]
             seen.add(index)
             where = f"{lang}:{ident} {text!r}"

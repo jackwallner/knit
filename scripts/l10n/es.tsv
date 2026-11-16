@@ -1,0 +1,259 @@
+1	Proyectos
+2	Patrones
+3	Reserva
+4	Terminado
+5	Nuevo proyecto
+6	Más
+7	Valorar Ravel
+8	Enviar comentarios
+9	Ayuda
+10	¿Eliminar %@?
+11	Eliminar proyecto
+12	Nombre
+13	Cancelar
+14	Montar puntos
+15	Empezar contador de hileras
+16	Explorar patrones
+17	Hilera %lld
+18	Sin título
+19	Ravel no pudo abrir tus proyectos
+20	Siguen en este %@. Reinícialo y vuelve a abrir Ravel.
+21	Obtener ayuda
+22	Lana
+23	Agujas y ganchillos
+24	Añadir a la reserva
+25	Aguja o ganchillo
+26	Añadir lana
+27	Añadir agujas
+28	one=%lld madeja|other=%lld madejas
+29	Metros por madeja
+30	Yardas por madeja
+31	Marca
+32	Color
+33	Fibra
+34	Lote de tinte
+35	Grosor
+36	Madejas
+37	Listo
+38	Tipo
+39	Talla
+40	Longitud
+41	Cualquiera
+42	Ganchillo
+43	Aguja
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circular
+53	Recta
+54	De doble punta
+55	Ganchillo
+56	¿Poner el contador a 0?
+57	Reiniciar contador
+58	¿Quitar el patrón de este proyecto?
+59	Quitar patrón
+60	Hileras por repetición
+61	Hileras
+62	Fijar
+63	La repetición empieza con tu próxima hilera.
+64	Hilera
+65	Vuelta
+66	Hilera en esta sección
+67	Vuelta en esta sección
+68	Nombre del contador
+69	Renombrar
+70	Añadir
+71	¿Quitar el contador?
+72	Quitar contador
+73	No se pudo abrir ese patrón
+74	%lld de %lld
+75	one=%lld punto|other=%lld puntos
+76	Quitar uno de %@
+77	Sumar uno a %@
+78	Añadir una hilera
+79	Hilera %1$lld de %2$lld en la repetición
+80	Retroceder una hilera
+81	Detalles
+82	Materiales
+83	Ir a la hilera
+84	Ir a la vuelta
+85	Ir a la sección
+86	Añadir patrón
+87	Sustituir patrón
+88	Añadir fotos
+89	Fijar hilera
+90	Repetición
+91	Contador
+92	Poner a 0
+93	Quitar
+94	Añadir contador
+95	Marcar como activo
+96	Marcar como terminado
+97	Opciones del proyecto
+98	Agujas
+99	Notas
+100	No es de la reserva
+101	Elegir lana de la reserva
+102	Abreviaturas
+103	Granza
+104	Caléndula
+105	Musgo
+106	Abeto
+107	Índigo
+108	Ciruela
+109	Avena
+110	Carbón
+111	Tendencias
+112	Gratis
+113	Gorros
+114	Bufandas y cuellos
+115	Mantas y hogar
+116	Accesorios
+117	Jerséis
+118	Principiante
+119	Fácil
+120	Intermedio
+121	Tensión
+122	Puntos en %@
+123	Hileras en %@
+124	Desbloquear patrones
+125	El gráfico no encaja con esta tensión
+126	Cabeza
+127	Ancho
+128	Contorno
+129	Alto
+130	Lado
+131	Mano
+132	Pantorrilla
+133	Envergadura
+134	Pecho
+135	Largo del cuerpo
+136	Largo de la manga
+137	Bebé
+138	Niño pequeño
+139	Niño
+140	Pequeño
+141	Mediano
+142	Grande
+143	Clásico
+144	Largo
+145	Ajustado
+146	Infinito
+147	Carrito
+148	Cuna
+149	Plaid
+150	Adulto
+151	Amplio
+152	Mini chal
+153	Estola
+154	Gorro de canalé
+155	Gorro slouch
+156	Gorro con borde enrollado
+157	Bufanda de punto bobo
+158	Bufanda de canalé
+159	Bufanda de punto arroz
+160	Cuello de canalé
+161	Cuello de punto arroz
+162	Manta con borde
+163	Manta de punto bobo
+164	Paño de cocina en diagonal
+165	Cubreorejas
+166	Calentadores de muñeca
+167	Calentadores de piernas
+168	Chal triangular
+169	Jersey raglán
+170	Cuello grueso
+171	Pañuelo de cuello
+172	Diadema con trenzas
+173	Pasamontañas
+174	Novedad
+175	Época de regalos
+176	Pleno invierno
+177	Capas de primavera
+178	Algodón de verano
+179	Punto para viajar
+180	Tiempo de jersey
+181	Primeros fríos
+182	Ribete
+183	Cuerpo
+184	Coronilla
+185	Acabado
+186	Bufanda
+187	Cuello
+188	Borde inferior
+189	Borde superior
+190	Manta
+191	Aumentos
+192	Disminuciones
+193	Banda
+194	Chal
+195	Centro
+196	Cuello
+197	Abertura para la cara
+198	Parte superior
+199	Ribete de la cara
+200	Cuello
+201	Parte trasera del cuello
+202	Canesú
+203	División
+204	Primera manga
+205	Segunda manga
+206	Puño
+207	Primera orejera
+208	Segunda orejera
+209	Calentador %lld
+210	Calentador de pierna %lld
+211	Abertura del pulgar
+212	Parte alta de la mano
+213	Pierna
+214	Tobillo
+215	Cerrar
+216	Patrones de Ravel
+217	Todos los diseños de la biblioteca, escritos a tus medidas y tu lana
+218	No se pudieron cargar los planes
+219	Reintentar
+220	Restaurar
+221	Condiciones
+222	Privacidad
+223	Anual
+224	Mensual
+225	De por vida
+226	%@ al año
+227	%@ al mes
+228	%@ una vez
+229	Comprar de por vida
+230	one=Prueba gratis %lld día|other=Prueba gratis %lld días
+231	Suscribirse
+232	one=%lld día gratis.|other=%lld días gratis.
+233	Después, %@.
+234	%@.
+235	Se renueva hasta que canceles en Ajustes. Un patrón que hayas empezado es tuyo para siempre.
+236	Un solo pago de %@. Todos los patrones son tuyos para siempre.
+237	Tu compra está pendiente de aprobación
+238	Tu compra se completó. Toca Restaurar si los patrones siguen bloqueados.
+239	No se pudo completar la compra
+240	No se encontró ninguna compra en este ID de Apple
+241	No se pudo conectar con la App Store. Inténtalo de nuevo cuando tengas conexión.
+242	Tejer 2 puntos juntos
+243	Pasar 2 puntos como para tejer, uno a uno, y luego tejerlos juntos por detrás
+244	Hebra sobre la aguja
+245	Aumento de 1: levantar la hebra entre los puntos y tejerla por detrás
+246	Aumento de 1 a la izquierda: levantar la hebra desde delante y tejerla por detrás
+247	Aumento de 1 a la derecha: levantar la hebra desde detrás y tejerla por delante
+248	Trenza de 6 delante: pasar 3 puntos a una aguja auxiliar y dejarla delante, tejer 3 y luego tejer los 3 de la aguja auxiliar
+249	Derecho. K2 es tejer 2 puntos del derecho
+250	Revés. P2 es tejer 2 puntos del revés
+251	Repetir los puntos después del * una y otra vez, hasta donde diga la hilera
+252	Un anillo en la aguja que marca un lugar. Pásalo de la aguja izquierda a la derecha al llegar a él
+253	Cambiar las agujas de mano y tejer de vuelta en el otro sentido
+254	Tejer el primer punto montado con la hebra de trabajo para cerrar el círculo, con el borde de montaje plano y sin torcer alrededor de la aguja
+255	Retorcer un lazo de la hebra de trabajo y deslizarlo a la aguja derecha. Cada lazo es 1 punto
+256	Pasar la aguja por el borde de la labor, rodear con la hebra y sacar un lazo. Cada lazo es 1 punto
+257	Tejer los puntos del derecho del derecho y los del revés del revés al cerrar
+258	K1, M1L, tejer hasta 1 punto antes del siguiente marcador, M1R, k1, pasar el marcador. Añade 2 puntos
+259	Un giro de hileras cortas alemán: con la hebra por delante, pasar el primer punto como para el revés, luego subir la hebra por encima de la aguja para que el punto muestre dos patas. Tejer ambas patas juntas como un solo punto al volver a él

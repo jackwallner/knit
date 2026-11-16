@@ -1,0 +1,259 @@
+1	Projets
+2	Modèles
+3	Stock
+4	Terminé
+5	Nouveau projet
+6	Plus
+7	Noter Ravel
+8	Envoyer un avis
+9	Aide
+10	Supprimer %@ ?
+11	Supprimer le projet
+12	Nom
+13	Annuler
+14	Monter les mailles
+15	Démarrer un compteur de rangs
+16	Parcourir les modèles
+17	Rang %lld
+18	Sans titre
+19	Ravel n’a pas pu ouvrir vos projets
+20	Ils sont toujours sur cet %@. Redémarrez-le, puis rouvrez Ravel.
+21	Obtenir de l’aide
+22	Laine
+23	Aiguilles et crochets
+24	Ajouter au stock
+25	Aiguille ou crochet
+26	Ajouter de la laine
+27	Ajouter des aiguilles
+28	one=%lld pelote|other=%lld pelotes
+29	Mètres par pelote
+30	Yards par pelote
+31	Marque
+32	Couleur
+33	Fibre
+34	Bain de teinture
+35	Grosseur
+36	Pelotes
+37	OK
+38	Type
+39	Taille
+40	Longueur
+41	Au choix
+42	Crochet
+43	Aiguille
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circulaire
+53	Droite
+54	Double pointe
+55	Crochet
+56	Remettre le compteur à 0 ?
+57	Remettre à 0
+58	Retirer le modèle de ce projet ?
+59	Retirer le modèle
+60	Rangs par motif
+61	Rangs
+62	Définir
+63	Le motif commence à votre prochain rang.
+64	Rang
+65	Tour
+66	Rang de cette section
+67	Tour de cette section
+68	Nom du compteur
+69	Renommer
+70	Ajouter
+71	Supprimer le compteur ?
+72	Supprimer le compteur
+73	Ce modèle n’a pas pu être ouvert
+74	%lld sur %lld
+75	one=%lld maille|other=%lld mailles
+76	Retirer un à %@
+77	Ajouter un à %@
+78	Ajouter un rang
+79	Rang %1$lld sur %2$lld du motif
+80	Revenir d’un rang
+81	Détails
+82	Matériel
+83	Aller au rang
+84	Aller au tour
+85	Aller à la section
+86	Ajouter un modèle
+87	Remplacer le modèle
+88	Ajouter des photos
+89	Définir le rang
+90	Motif
+91	Compteur
+92	Remettre à 0
+93	Retirer
+94	Ajouter un compteur
+95	Marquer comme en cours
+96	Marquer comme terminé
+97	Options du projet
+98	Aiguilles
+99	Notes
+100	Pas du stock
+101	Choisir une laine du stock
+102	Abréviations
+103	Garance
+104	Souci
+105	Mousse
+106	Épicéa
+107	Indigo
+108	Prune
+109	Avoine
+110	Charbon
+111	Tendances
+112	Gratuit
+113	Bonnets
+114	Écharpes et snoods
+115	Plaids et maison
+116	Accessoires
+117	Pulls
+118	Débutant
+119	Facile
+120	Intermédiaire
+121	Échantillon
+122	Mailles sur %@
+123	Rangs sur %@
+124	Débloquer les modèles
+125	Le diagramme ne convient pas à cet échantillon
+126	Tête
+127	Largeur
+128	Tour
+129	Hauteur
+130	Côté
+131	Main
+132	Mollet
+133	Envergure
+134	Poitrine
+135	Longueur du corps
+136	Longueur de manche
+137	Bébé
+138	Tout-petit
+139	Enfant
+140	Petit
+141	Moyen
+142	Grand
+143	Classique
+144	Long
+145	Ajusté
+146	Infini
+147	Poussette
+148	Berceau
+149	Plaid
+150	Adulte
+151	Large
+152	Petit châle
+153	Étole
+154	Bonnet côtelé
+155	Bonnet slouchy
+156	Bonnet à bord roulotté
+157	Écharpe au point mousse
+158	Écharpe côtelée
+159	Écharpe au point de riz
+160	Snood côtelé
+161	Snood au point de riz
+162	Couverture à bordure
+163	Couverture au point mousse
+164	Lavette en diagonale
+165	Bandeau chauffe-oreilles
+166	Mitaines
+167	Jambières
+168	Châle triangulaire
+169	Pull raglan
+170	Snood épais
+171	Foulard
+172	Bandeau torsadé
+173	Cagoule
+174	Nouveau
+175	Saison des cadeaux
+176	Plein hiver
+177	Couches de printemps
+178	Coton d’été
+179	Tricot de voyage
+180	Temps de pull
+181	Premiers froids
+182	Bordure
+183	Corps
+184	Dessus
+185	Finitions
+186	Écharpe
+187	Snood
+188	Bordure du bas
+189	Bordure du haut
+190	Couverture
+191	Augmentations
+192	Diminutions
+193	Bandeau
+194	Châle
+195	Milieu
+196	Cou
+197	Ouverture du visage
+198	Haut
+199	Bordure du visage
+200	Col
+201	Dos de l’encolure
+202	Empiècement
+203	Séparation
+204	Première manche
+205	Deuxième manche
+206	Poignet
+207	Première oreille
+208	Deuxième oreille
+209	Mitaine %lld
+210	Jambière %lld
+211	Ouverture du pouce
+212	Haut de la main
+213	Jambe
+214	Cheville
+215	Fermer
+216	Modèles Ravel
+217	Tous les modèles de la bibliothèque, écrits à vos mesures et pour votre laine
+218	Les offres n’ont pas pu se charger
+219	Réessayer
+220	Restaurer
+221	Conditions
+222	Confidentialité
+223	Annuel
+224	Mensuel
+225	À vie
+226	%@ par an
+227	%@ par mois
+228	%@ une fois
+229	Acheter à vie
+230	one=Essai gratuit de %lld jour|other=Essai gratuit de %lld jours
+231	S’abonner
+232	one=%lld jour gratuit.|other=%lld jours gratuits.
+233	Ensuite, %@.
+234	%@.
+235	Se renouvelle jusqu’à ce que vous résiliez dans Réglages. Un modèle que vous avez commencé reste à vous.
+236	Un seul paiement de %@. Chaque modèle est à vous pour toujours.
+237	Votre achat attend d’être approuvé
+238	Votre achat a abouti. Touchez Restaurer si les modèles restent verrouillés.
+239	L’achat n’a pas abouti
+240	Aucun achat trouvé sur cet identifiant Apple
+241	L’App Store est inaccessible. Réessayez une fois en ligne.
+242	Tricoter 2 mailles ensemble
+243	Glisser 2 mailles comme pour les tricoter à l’endroit, une par une, puis les tricoter ensemble par le brin arrière
+244	Jeté
+245	Augmentation de 1 : relever le fil entre les mailles et le tricoter par le brin arrière
+246	Augmentation de 1 à gauche : relever le fil par l’avant et le tricoter par le brin arrière
+247	Augmentation de 1 à droite : relever le fil par l’arrière et le tricoter par l’avant
+248	Torsade de 6 devant : glisser 3 mailles sur une aiguille à torsades et la laisser devant, tricoter 3 mailles, puis tricoter les 3 mailles de l’aiguille à torsades
+249	Endroit. K2 : tricoter 2 mailles à l’endroit
+250	Envers. P2 : tricoter 2 mailles à l’envers
+251	Retricoter les mailles après le * encore et encore, aussi loin que le rang l’indique
+252	Un anneau sur l’aiguille qui marque un endroit. Le glisser de l’aiguille gauche à la droite quand vous l’atteignez
+253	Changer les aiguilles de main et tricoter en sens inverse
+254	Tricoter la première maille montée avec le fil de travail pour fermer le cercle, le bord de montage à plat, sans torsion autour de l’aiguille
+255	Tordre une boucle de fil de travail et la glisser sur l’aiguille droite. Chaque boucle compte pour 1 maille
+256	Passer l’aiguille dans le bord de l’ouvrage, enrouler le fil et tirer une boucle. Chaque boucle compte pour 1 maille
+257	Tricoter les mailles endroit à l’endroit et les mailles envers à l’envers en rabattant
+258	K1, M1L, tricoter jusqu’à 1 maille avant le prochain marqueur, M1R, k1, glisser le marqueur. Cela ajoute 2 mailles
+259	Un virage de rangs raccourcis à l’allemande : le fil devant, glisser la première maille comme pour la tricoter à l’envers, puis tirer le fil par-dessus l’aiguille pour que la maille montre deux brins. Tricoter les deux brins ensemble comme une seule maille en y revenant
