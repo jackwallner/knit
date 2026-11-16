@@ -1,0 +1,259 @@
+1	Projek
+2	Corak
+3	Simpanan
+4	Siap
+5	Projek Baharu
+6	Lagi
+7	Nilaikan Ravel
+8	Hantar Maklum Balas
+9	Bantuan
+10	Padam %@?
+11	Padam Projek
+12	Nama
+13	Batal
+14	Cipta Jerat Awal
+15	Mulakan Pembilang Baris
+16	Layari Corak
+17	Baris %lld
+18	Tanpa Tajuk
+19	Ravel tidak dapat membuka projek anda
+20	Projek masih ada pada %@ ini. Mulakan semula, kemudian buka Ravel sekali lagi.
+21	Dapatkan Bantuan
+22	Benang
+23	Jarum dan Cangkuk
+24	Tambah ke Simpanan
+25	Jarum atau Cangkuk
+26	Tambah Benang
+27	Tambah Jarum
+28	other=%lld gelung
+29	Meter setiap Gelung
+30	Ela setiap Gelung
+31	Jenama
+32	Warna
+33	Serat
+34	Lot Celup
+35	Ketebalan
+36	Gelung
+37	Selesai
+38	Jenis
+39	Saiz
+40	Panjang
+41	Mana-mana
+42	Cangkuk
+43	Jarum
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Bulat
+53	Lurus
+54	Dua Hujung
+55	Cangkuk
+56	Set semula bilangan kepada 0?
+57	Set Semula Bilangan
+58	Alih keluar corak daripada projek ini?
+59	Alih Keluar Corak
+60	Baris dalam Satu Ulangan
+61	Baris
+62	Tetapkan
+63	Ulangan bermula dengan baris anda yang seterusnya.
+64	Baris
+65	Pusingan
+66	Baris dalam Bahagian Ini
+67	Pusingan dalam Bahagian Ini
+68	Nama Pembilang
+69	Namakan Semula
+70	Tambah
+71	Alih keluar pembilang?
+72	Alih Keluar Pembilang
+73	Corak itu tidak dapat dibuka
+74	%lld daripada %lld
+75	other=%lld jerat
+76	Tolak satu daripada %@
+77	Tambah satu pada %@
+78	Tambah satu baris
+79	Baris %1$lld daripada %2$lld dalam ulangan
+80	Undur satu baris
+81	Butiran
+82	Bahan
+83	Pergi ke Baris
+84	Pergi ke Pusingan
+85	Pergi ke Bahagian
+86	Tambah Corak
+87	Gantikan Corak
+88	Tambah Foto
+89	Tetapkan Baris
+90	Ulangan
+91	Pembilang
+92	Set Semula ke 0
+93	Alih Keluar
+94	Tambah Pembilang
+95	Tandakan Aktif
+96	Tandakan Siap
+97	Pilihan projek
+98	Jarum
+99	Nota
+100	Bukan dari Simpanan
+101	Pilih benang daripada simpanan
+102	Singkatan
+103	Merah Madder
+104	Kuning Marigold
+105	Hijau Lumut
+106	Hijau Cemara
+107	Indigo
+108	Ungu Plum
+109	Warna Oat
+110	Arang
+111	Sedang Tren
+112	Percuma
+113	Topi
+114	Skarf dan Pemanas Leher
+115	Selimut dan Rumah
+116	Aksesori
+117	Baju Panas
+118	Pemula
+119	Mudah
+120	Sederhana
+121	Tolok
+122	Jerat setiap %@
+123	Baris setiap %@
+124	Buka Kunci Corak
+125	Carta tidak sesuai dengan tolok ini
+126	Kepala
+127	Lebar
+128	Lilitan
+129	Tinggi
+130	Sisi
+131	Tangan
+132	Betis
+133	Rentang Lengan
+134	Dada
+135	Panjang Badan
+136	Panjang Lengan
+137	Bayi
+138	Kanak-kanak Kecil
+139	Kanak-kanak
+140	Kecil
+141	Sederhana
+142	Besar
+143	Klasik
+144	Panjang
+145	Ketat
+146	Tanpa Hujung
+147	Kereta Sorong
+148	Buaian
+149	Selimut Riba
+150	Dewasa
+151	Lebar
+152	Selendang Kecil
+153	Stola
+154	Topi Rib
+155	Topi Longgar
+156	Topi Tepi Berlipat
+157	Skarf Garter
+158	Skarf Rib
+159	Skarf Seed Stitch
+160	Pemanas Leher Rib
+161	Pemanas Leher Seed Stitch
+162	Selimut Berbingkai
+163	Selimut Garter
+164	Kain Pinggan Pepenjuru
+165	Pemanas Telinga
+166	Pemanas Pergelangan Tangan
+167	Pemanas Kaki
+168	Selendang Segi Tiga
+169	Pullover Raglan
+170	Pemanas Leher Tebal
+171	Skarf Leher
+172	Jalur Kepala Kabel
+173	Balaclava
+174	Baharu
+175	Musim hadiah
+176	Pertengahan musim sejuk
+177	Lapisan musim bunga
+178	Kapas musim panas
+179	Menyulam semasa bercuti
+180	Cuaca baju panas
+181	Hari sejuk pertama
+182	Tepi
+183	Badan
+184	Puncak
+185	Penyudah
+186	Skarf
+187	Pemanas Leher
+188	Sempadan Bawah
+189	Sempadan Atas
+190	Selimut
+191	Tambahan
+192	Kurangan
+193	Jalur
+194	Selendang
+195	Tengah
+196	Leher
+197	Bukaan Muka
+198	Bahagian Atas
+199	Tepi Muka
+200	Kolar
+201	Leher Belakang
+202	Yoke
+203	Pembahagian
+204	Lengan Pertama
+205	Lengan Kedua
+206	Kancing Lengan
+207	Telinga Pertama
+208	Telinga Kedua
+209	Pemanas Pergelangan Tangan %lld
+210	Pemanas Kaki %lld
+211	Bukaan Ibu Jari
+212	Belakang Tangan
+213	Kaki
+214	Buku Lali
+215	Tutup
+216	Corak Ravel
+217	Setiap reka bentuk dalam pustaka, ditulis mengikut ukuran dan benang anda
+218	Pelan tidak dapat dimuatkan
+219	Cuba Lagi
+220	Pulihkan
+221	Terma
+222	Privasi
+223	Tahunan
+224	Bulanan
+225	Seumur Hidup
+226	%@ setahun
+227	%@ sebulan
+228	%@ sekali
+229	Beli Seumur Hidup
+230	other=Cuba Percuma %lld Hari
+231	Langgan
+232	other=Percuma %lld hari.
+233	Selepas itu %@.
+234	%@.
+235	Diperbaharui sehingga anda membatalkan dalam Tetapan. Corak yang anda sudah mulakan kekal milik anda.
+236	Satu bayaran %@. Setiap corak milik anda selama-lamanya.
+237	Pembelian anda menunggu kelulusan
+238	Pembelian berjaya. Ketik Pulihkan jika corak kekal terkunci.
+239	Pembelian tidak berjaya
+240	Tiada pembelian ditemui pada Akaun Apple ini
+241	App Store tidak dapat dihubungi. Cuba lagi apabila anda dalam talian.
+242	Rajut 2 jerat bersama
+243	Gelongsorkan 2 jerat satu demi satu seperti merajut, kemudian rajut bersama dari belakang
+244	Lilitan benang
+245	Tambah 1: angkat benang di antara jerat dan rajut dari belakang
+246	Tambah 1 ke kiri: angkat benang dari hadapan dan rajut dari belakang
+247	Tambah 1 ke kanan: angkat benang dari belakang dan rajut dari hadapan
+248	Kabel 6 hadapan: gelongsorkan 3 jerat ke jarum bantu dan tahan di hadapan, rajut 3, kemudian rajut 3 jerat dari jarum bantu
+249	Rajut. K2 ialah rajut 2 jerat
+250	Purl. P2 ialah purl 2 jerat
+251	Kerjakan jerat selepas * berulang kali, sejauh yang dinyatakan baris
+252	Gelang pada jarum yang menandakan sesuatu tempat. Gelongsorkan dari jarum kiri ke kanan apabila anda sampai
+253	Tukar jarum antara tangan dan kerjakan semula ke arah yang lain
+254	Rajut jerat awal pertama dengan benang kerja untuk menutup bulatan, dengan tepi jerat awal rata, tidak berpintal di sekeliling jarum
+255	Pintal satu simpulan benang kerja dan gelongsorkan ke jarum kanan. Setiap simpulan ialah 1 jerat
+256	Tusuk jarum melalui tepi kain, lilit benang dan tarik satu simpulan. Setiap simpulan ialah 1 jerat
+257	Semasa menutup, rajut jerat rajut sebagai rajut dan jerat purl sebagai purl
+258	K1, M1L, rajut sehingga 1 jerat sebelum penanda seterusnya, M1R, k1, gelongsorkan penanda. Menambah 2 jerat
+259	Pusingan baris pendek gaya Jerman: dengan benang di hadapan, gelongsorkan jerat pertama seperti purl, kemudian tarik benang ke atas melepasi jarum supaya jerat menunjukkan dua kaki. Apabila kembali, rajut kedua-dua kaki bersama sebagai satu jerat

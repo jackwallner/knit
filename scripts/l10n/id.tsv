@@ -1,0 +1,259 @@
+1	Proyek
+2	Pola
+3	Stok
+4	Selesai
+5	Proyek Baru
+6	Lainnya
+7	Beri Nilai Ravel
+8	Kirim Masukan
+9	Bantuan
+10	Hapus %@?
+11	Hapus Proyek
+12	Nama
+13	Batal
+14	Buat Jerat Awal
+15	Mulai Penghitung Baris
+16	Jelajahi Pola
+17	Baris %lld
+18	Tanpa Judul
+19	Ravel tidak dapat membuka proyek Anda
+20	Proyek masih ada di %@ ini. Mulai ulang lalu buka Ravel lagi.
+21	Dapatkan Bantuan
+22	Benang
+23	Jarum dan Hakpen
+24	Tambahkan ke Stok
+25	Jarum atau Hakpen
+26	Tambah Benang
+27	Tambah Jarum
+28	other=%lld gulung
+29	Meter per Gulung
+30	Yard per Gulung
+31	Merek
+32	Warna
+33	Serat
+34	Lot Celup
+35	Ketebalan
+36	Gulung
+37	Selesai
+38	Jenis
+39	Ukuran
+40	Panjang
+41	Apa Saja
+42	Hakpen
+43	Jarum
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Sirkular
+53	Lurus
+54	Ujung Ganda
+55	Hakpen
+56	Setel ulang hitungan ke 0?
+57	Setel Ulang Hitungan
+58	Hapus pola dari proyek ini?
+59	Hapus Pola
+60	Baris dalam Satu Pengulangan
+61	Baris
+62	Setel
+63	Pengulangan dimulai dari baris berikutnya.
+64	Baris
+65	Putaran
+66	Baris di Bagian Ini
+67	Putaran di Bagian Ini
+68	Nama Penghitung
+69	Ganti Nama
+70	Tambah
+71	Hapus penghitung?
+72	Hapus Penghitung
+73	Pola itu tidak dapat dibuka
+74	%lld dari %lld
+75	other=%lld jerat
+76	Kurangi satu dari %@
+77	Tambah satu ke %@
+78	Tambah satu baris
+79	Baris %1$lld dari %2$lld dalam pengulangan
+80	Mundur satu baris
+81	Detail
+82	Bahan
+83	Ke Baris
+84	Ke Putaran
+85	Ke Bagian
+86	Tambah Pola
+87	Ganti Pola
+88	Tambah Foto
+89	Atur Baris
+90	Pengulangan
+91	Penghitung
+92	Setel ke 0
+93	Hapus
+94	Tambah Penghitung
+95	Tandai Aktif
+96	Tandai Selesai
+97	Opsi proyek
+98	Jarum
+99	Catatan
+100	Bukan dari Stok
+101	Pilih benang dari stok
+102	Singkatan
+103	Merah Madder
+104	Kuning Marigold
+105	Hijau Lumut
+106	Hijau Cemara
+107	Nila
+108	Ungu Prem
+109	Warna Gandum
+110	Arang
+111	Sedang Tren
+112	Gratis
+113	Topi
+114	Syal dan Pelindung Leher
+115	Selimut dan Rumah
+116	Aksesori
+117	Sweter
+118	Pemula
+119	Mudah
+120	Menengah
+121	Gauge
+122	Jerat per %@
+123	Baris per %@
+124	Buka Kunci Pola
+125	Bagan tidak cocok dengan gauge ini
+126	Kepala
+127	Lebar
+128	Lingkar
+129	Tinggi
+130	Sisi
+131	Tangan
+132	Betis
+133	Rentang Lengan
+134	Dada
+135	Panjang Badan
+136	Panjang Lengan
+137	Bayi
+138	Balita
+139	Anak
+140	Kecil
+141	Sedang
+142	Besar
+143	Klasik
+144	Panjang
+145	Pas Badan
+146	Tak Berujung
+147	Kereta Dorong
+148	Boks Bayi
+149	Selimut Kecil
+150	Dewasa
+151	Lebar
+152	Selendang Kecil
+153	Stola
+154	Topi Rajut Rib
+155	Topi Longgar
+156	Topi Tepi Gulung
+157	Syal Garter
+158	Syal Rib
+159	Syal Seed Stitch
+160	Pelindung Leher Rib
+161	Pelindung Leher Seed Stitch
+162	Selimut Bertepi
+163	Selimut Garter
+164	Lap Dapur Diagonal
+165	Penghangat Telinga
+166	Penghangat Pergelangan
+167	Penghangat Kaki
+168	Selendang Segitiga
+169	Pullover Raglan
+170	Pelindung Leher Tebal
+171	Syal Leher
+172	Bando Kabel
+173	Balaclava
+174	Baru
+175	Musim hadiah
+176	Puncak musim dingin
+177	Lapisan musim semi
+178	Katun musim panas
+179	Rajut untuk bepergian
+180	Cuaca sweter
+181	Hari-hari dingin pertama
+182	Tepi
+183	Badan
+184	Puncak
+185	Penyelesaian
+186	Syal
+187	Pelindung Leher
+188	Tepi Bawah
+189	Tepi Atas
+190	Selimut
+191	Penambahan
+192	Pengurangan
+193	Pita
+194	Selendang
+195	Tengah
+196	Leher
+197	Bukaan Wajah
+198	Bagian Atas
+199	Tepi Wajah
+200	Kerah
+201	Leher Belakang
+202	Yoke
+203	Pembagian
+204	Lengan Pertama
+205	Lengan Kedua
+206	Manset
+207	Telinga Pertama
+208	Telinga Kedua
+209	Penghangat Pergelangan %lld
+210	Penghangat Kaki %lld
+211	Bukaan Ibu Jari
+212	Punggung Tangan
+213	Kaki
+214	Pergelangan Kaki
+215	Tutup
+216	Pola Ravel
+217	Setiap desain di pustaka, ditulis sesuai ukuran tubuh dan benang Anda
+218	Paket tidak dapat dimuat
+219	Coba Lagi
+220	Pulihkan
+221	Ketentuan
+222	Privasi
+223	Tahunan
+224	Bulanan
+225	Seumur Hidup
+226	%@ per tahun
+227	%@ per bulan
+228	%@ sekali bayar
+229	Beli Seumur Hidup
+230	other=Coba Gratis %lld Hari
+231	Berlangganan
+232	other=Gratis %lld hari.
+233	Setelah itu %@.
+234	%@.
+235	Diperpanjang sampai Anda membatalkan di Pengaturan. Pola yang sudah Anda mulai tetap milik Anda.
+236	Satu kali pembayaran %@. Setiap pola menjadi milik Anda selamanya.
+237	Pembelian Anda menunggu persetujuan
+238	Pembelian berhasil. Ketuk Pulihkan jika pola tetap terkunci.
+239	Pembelian tidak berhasil
+240	Tidak ditemukan pembelian di Akun Apple ini
+241	App Store tidak dapat dijangkau. Coba lagi saat Anda online.
+242	Rajut 2 jerat bersama
+243	Geser 2 jerat satu per satu seperti merajut, lalu rajut bersama dari belakang
+244	Yarn over
+245	Tambah 1: angkat benang di antara jerat dan rajut dari belakang
+246	Tambah 1 ke kiri: angkat benang dari depan dan rajut dari belakang
+247	Tambah 1 ke kanan: angkat benang dari belakang dan rajut dari depan
+248	Kabel 6 depan: geser 3 jerat ke jarum bantu dan tahan di depan, rajut 3, lalu rajut 3 jerat dari jarum bantu
+249	Rajut. K2 berarti rajut 2 jerat
+250	Purl. P2 berarti purl 2 jerat
+251	Kerjakan jerat setelah * berulang kali, sejauh yang dikatakan baris
+252	Cincin di jarum yang menandai suatu tempat. Geser dari jarum kiri ke kanan saat Anda sampai
+253	Tukar jarum antar tangan dan kerjakan balik ke arah lain
+254	Rajut jerat awal pertama dengan benang kerja untuk menutup lingkaran, dengan tepi jerat awal rata, tidak terpuntir di sekeliling jarum
+255	Puntir satu simpul dari benang kerja dan geser ke jarum kanan. Setiap simpul adalah 1 jerat
+256	Tusukkan jarum melalui tepi kain, lilitkan benang, lalu tarik satu simpul. Setiap simpul adalah 1 jerat
+257	Saat menutup, rajut jerat rajut sebagai rajut dan jerat purl sebagai purl
+258	K1, M1L, rajut sampai 1 jerat sebelum penanda berikutnya, M1R, k1, geser penanda. Menambah 2 jerat
+259	Putar balik baris pendek gaya Jerman: dengan benang di depan, geser jerat pertama seperti purl, lalu tarik benang ke atas melewati jarum sehingga jerat menunjukkan dua kaki. Saat kembali, rajut kedua kaki bersama sebagai satu jerat

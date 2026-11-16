@@ -1,0 +1,259 @@
+1	Dự án
+2	Mẫu đan
+3	Kho len
+4	Hoàn thành
+5	Dự án mới
+6	Thêm
+7	Đánh giá Ravel
+8	Gửi phản hồi
+9	Trợ giúp
+10	Xóa %@?
+11	Xóa dự án
+12	Tên
+13	Hủy
+14	Khởi mũi
+15	Bắt đầu đếm hàng
+16	Xem mẫu đan
+17	Hàng %lld
+18	Chưa đặt tên
+19	Ravel không mở được các dự án của bạn
+20	Chúng vẫn nằm trên %@ này. Hãy khởi động lại rồi mở Ravel lần nữa.
+21	Nhận trợ giúp
+22	Len
+23	Kim đan và kim móc
+24	Thêm vào kho len
+25	Kim đan hoặc kim móc
+26	Thêm len
+27	Thêm kim đan
+28	other=%lld cuộn
+29	Số mét mỗi cuộn
+30	Số yard mỗi cuộn
+31	Thương hiệu
+32	Màu
+33	Sợi
+34	Lô nhuộm
+35	Độ dày
+36	Số cuộn
+37	Xong
+38	Loại
+39	Cỡ
+40	Chiều dài
+41	Bất kỳ
+42	Kim móc
+43	Kim đan
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Kim vòng
+53	Kim thẳng
+54	Kim hai đầu
+55	Kim móc
+56	Đặt bộ đếm về 0?
+57	Đặt lại bộ đếm
+58	Gỡ mẫu đan khỏi dự án này?
+59	Gỡ mẫu đan
+60	Số hàng trong một lần lặp
+61	Hàng
+62	Đặt
+63	Lần lặp bắt đầu từ hàng tiếp theo của bạn.
+64	Hàng
+65	Vòng
+66	Hàng trong phần này
+67	Vòng trong phần này
+68	Tên bộ đếm
+69	Đổi tên
+70	Thêm
+71	Gỡ bộ đếm?
+72	Gỡ bộ đếm
+73	Không mở được mẫu đan đó
+74	%lld trên %lld
+75	other=%lld mũi
+76	Bớt một ở %@
+77	Thêm một vào %@
+78	Thêm một hàng
+79	Hàng %1$lld trên %2$lld trong lần lặp
+80	Lùi một hàng
+81	Chi tiết
+82	Vật liệu
+83	Đến hàng
+84	Đến vòng
+85	Đến phần
+86	Thêm mẫu đan
+87	Thay mẫu đan
+88	Thêm ảnh
+89	Đặt hàng
+90	Lặp
+91	Bộ đếm
+92	Đặt về 0
+93	Gỡ
+94	Thêm bộ đếm
+95	Đánh dấu đang đan
+96	Đánh dấu đã xong
+97	Tùy chọn dự án
+98	Kim đan
+99	Ghi chú
+100	Không từ kho len
+101	Chọn len từ kho
+102	Viết tắt
+103	Đỏ thiến thảo
+104	Vàng cúc vạn thọ
+105	Xanh rêu
+106	Xanh thông
+107	Chàm
+108	Tím mận
+109	Màu yến mạch
+110	Xám than
+111	Đang thịnh hành
+112	Miễn phí
+113	Mũ
+114	Khăn và khăn ống
+115	Chăn và đồ gia dụng
+116	Phụ kiện
+117	Áo len
+118	Người mới
+119	Dễ
+120	Trung bình
+121	Mẫu thử
+122	Số mũi trên %@
+123	Số hàng trên %@
+124	Mở khóa mẫu đan
+125	Biểu đồ không vừa với mẫu thử này
+126	Vòng đầu
+127	Chiều rộng
+128	Chu vi
+129	Chiều cao
+130	Cạnh
+131	Bàn tay
+132	Bắp chân
+133	Sải tay
+134	Vòng ngực
+135	Dài thân
+136	Dài tay
+137	Em bé
+138	Trẻ tập đi
+139	Trẻ em
+140	Nhỏ
+141	Vừa
+142	Lớn
+143	Cổ điển
+144	Dài
+145	Ôm
+146	Vô tận
+147	Xe đẩy
+148	Nôi
+149	Chăn mỏng
+150	Người lớn
+151	Rộng
+152	Khăn choàng nhỏ
+153	Khăn choàng dài
+154	Mũ đan gân
+155	Mũ rộng
+156	Mũ viền cuộn
+157	Khăn đan mũi garter
+158	Khăn đan gân
+159	Khăn đan mũi hạt
+160	Khăn ống đan gân
+161	Khăn ống đan mũi hạt
+162	Chăn có viền
+163	Chăn đan mũi garter
+164	Khăn lau bát đan chéo
+165	Bịt tai
+166	Găng tay hở ngón
+167	Ống ủ chân
+168	Khăn choàng tam giác
+169	Áo len raglan
+170	Khăn ống dày
+171	Khăn quàng cổ nhỏ
+172	Băng đô đan bím
+173	Mũ trùm đầu
+174	Mới
+175	Mùa quà tặng
+176	Giữa mùa đông
+177	Lớp áo mùa xuân
+178	Cotton mùa hè
+179	Đan khi đi xa
+180	Thời tiết mặc áo len
+181	Những ngày lạnh đầu tiên
+182	Viền
+183	Thân áo
+184	Đỉnh
+185	Hoàn thiện
+186	Khăn
+187	Khăn ống
+188	Viền dưới
+189	Viền trên
+190	Chăn
+191	Tăng mũi
+192	Giảm mũi
+193	Dải
+194	Khăn choàng
+195	Giữa
+196	Cổ
+197	Khoảng hở khuôn mặt
+198	Phần trên
+199	Viền quanh mặt
+200	Viền cổ
+201	Cổ sau
+202	Phần yoke
+203	Chia
+204	Tay áo thứ nhất
+205	Tay áo thứ hai
+206	Cổ tay áo
+207	Tai thứ nhất
+208	Tai thứ hai
+209	Găng tay hở ngón %lld
+210	Ống ủ chân %lld
+211	Chỗ hở ngón cái
+212	Mu bàn tay
+213	Chân
+214	Mắt cá chân
+215	Đóng
+216	Mẫu đan Ravel
+217	Mọi thiết kế trong thư viện, viết theo số đo và loại len của bạn
+218	Không tải được các gói
+219	Thử lại
+220	Khôi phục
+221	Điều khoản
+222	Quyền riêng tư
+223	Hằng năm
+224	Hằng tháng
+225	Trọn đời
+226	%@ mỗi năm
+227	%@ mỗi tháng
+228	%@ một lần
+229	Mua trọn đời
+230	other=Dùng thử miễn phí %lld ngày
+231	Đăng ký
+232	other=Miễn phí %lld ngày.
+233	Sau đó %@.
+234	%@.
+235	Tự động gia hạn cho đến khi bạn hủy trong Cài đặt. Mẫu đan bạn đã bắt đầu vẫn là của bạn.
+236	Thanh toán một lần %@. Mọi mẫu đan là của bạn mãi mãi.
+237	Giao dịch mua của bạn đang chờ phê duyệt
+238	Giao dịch mua đã hoàn tất. Hãy chạm Khôi phục nếu các mẫu đan vẫn bị khóa.
+239	Giao dịch mua không thành công
+240	Không tìm thấy giao dịch mua nào trên tài khoản Apple này
+241	Không kết nối được App Store. Hãy thử lại khi có mạng.
+242	Đan 2 mũi cùng nhau
+243	Trượt từng mũi trong 2 mũi như đan mũi xuôi, rồi đan chúng cùng nhau từ phía sau
+244	Quàng sợi
+245	Tăng 1 mũi: nhấc sợi giữa các mũi lên và đan từ phía sau
+246	Tăng 1 mũi sang trái: nhấc sợi từ phía trước lên và đan từ phía sau
+247	Tăng 1 mũi sang phải: nhấc sợi từ phía sau lên và đan từ phía trước
+248	Bím 6 mũi phía trước: trượt 3 mũi sang kim phụ và giữ phía trước, đan 3 mũi, rồi đan 3 mũi từ kim phụ
+249	Mũi xuôi. K2 là đan 2 mũi xuôi
+250	Mũi ngược. P2 là đan 2 mũi ngược
+251	Đan các mũi sau dấu * lặp đi lặp lại, đến đâu hàng yêu cầu
+252	Một vòng nhỏ trên kim đánh dấu một vị trí. Khi đến nơi, trượt nó từ kim trái sang kim phải
+253	Đổi kim giữa hai tay và đan ngược lại theo hướng kia
+254	Đan mũi khởi đầu tiên bằng sợi làm việc để khép vòng, mép khởi mũi nằm phẳng, không xoắn quanh kim
+255	Xoắn một vòng từ sợi làm việc và trượt lên kim phải. Mỗi vòng là 1 mũi
+256	Đưa kim qua mép vải, quấn sợi và kéo một vòng ra. Mỗi vòng là 1 mũi
+257	Khi kết thúc, đan mũi xuôi thành mũi xuôi và mũi ngược thành mũi ngược
+258	K1, M1L, đan đến còn 1 mũi trước dấu đánh dấu tiếp theo, M1R, k1, trượt dấu đánh dấu. Tăng thêm 2 mũi
+259	Quay đầu hàng ngắn kiểu Đức: để sợi phía trước, trượt mũi đầu tiên như đan mũi ngược, rồi kéo sợi lên qua kim để mũi hiện hai chân. Khi quay lại, đan hai chân cùng nhau như một mũi
