@@ -31,3 +31,4 @@
 {"created": "2026-11-16T03:14:19+00:00", "id": "Q032", "match": "motion-jump|testCoreLoopRowsCountAndSurviveRelaunch|counter-new|", "reason": "iOS app-launch cross-fade from the home screen under Reduce Motion", "status": "accepted"}
 {"created": "2026-11-16T03:14:23+00:00", "id": "Q033", "match": "motion-jump|testFirstRunToAFreePattern|guide-first-step|", "reason": "iOS app-launch cross-fade from the home screen under Reduce Motion", "status": "accepted"}
 {"created": "2026-11-16T03:14:27+00:00", "id": "Q034", "match": "motion-jump|testInterruptedMidRowKeepsTheCount|guide-after-interruption|", "reason": "The app returning from the background after the interruption", "status": "accepted"}
+{"created": "2026-11-16T06:46:00+00:00", "id": "Q035", "match": "motion-flicker|testFirstRunToAFreePattern|design-free|", "reason": "The journey scrolling the library grid to the free scarf", "status": "accepted"}
