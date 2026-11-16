@@ -127,16 +127,18 @@ struct ProjectsView: View {
     /// At the accessibility text sizes the name gets its own line, so it is never cut.
     @ViewBuilder
     private func row(_ project: Project) -> some View {
+        let plan = project.plan
+        let rows = project.knittedRows(plan)
         let name = Text(project.name).font(Theme.display(22))
-        let count = Text(project.rows, format: .number)
+        let count = Text(rows, format: .number)
             .font(Theme.display(22, weight: .regular))
             .monospacedDigit()
             .foregroundStyle(Theme.secondary)
-            .accessibilityLabel("Row \(project.rows)")
+            .accessibilityLabel("Row \(rows)")
         if typeSize.isAccessibilitySize {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    thumbnail(project)
+                    thumbnail(project, plan)
                     Spacer(minLength: 8)
                     count
                 }
@@ -144,7 +146,7 @@ struct ProjectsView: View {
             }
         } else {
             HStack(spacing: 16) {
-                thumbnail(project)
+                thumbnail(project, plan)
                 name.lineLimit(2)
                 Spacer(minLength: 8)
                 count
@@ -154,9 +156,9 @@ struct ProjectsView: View {
 
     /// A library project shows the piece, filled as far as it is knitted; any other shows its fabric.
     @ViewBuilder
-    private func thumbnail(_ project: Project) -> some View {
+    private func thumbnail(_ project: Project, _ plan: PatternPlan?) -> some View {
         let side: CGFloat = 64
-        if let plan = project.plan, let silhouette = project.silhouette(plan), plan.totalTaps > 0 {
+        if let plan, let silhouette = project.silhouette(plan), plan.totalTaps > 0 {
             Garment(silhouette: silhouette, yarn: project.color, progress: Double(project.rows) / Double(plan.totalTaps), colorwork: plan.palette == nil ? nil : plan)
                 .padding(6)
                 .frame(width: side, height: side)

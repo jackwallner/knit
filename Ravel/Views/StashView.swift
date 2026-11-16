@@ -22,7 +22,7 @@ struct StashView: View {
                                 nameBefore = yarn.name
                                 editingYarn = yarn
                             } label: {
-                                row(title: yarn.name, detail: yarn.detail, count: yarn.skeins, countLabel: "\(yarn.skeins) skeins")
+                                row(title: yarn.name, detail: [yarn.detail, yarn.totalLength].compactMap { $0 }.joined(separator: " · "), count: yarn.skeins, countLabel: "\(yarn.skeins) skeins")
                             }
                         }
                         .onDelete { offsets in offsets.map { yarns[$0] }.forEach(context.delete) }
@@ -91,6 +91,7 @@ struct StashView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(Theme.display(19)).foregroundStyle(.primary)
                 Text(detail).font(.subheadline).foregroundStyle(Theme.secondary)
+                    .accessibilityIdentifier("stash.detail")
             }
             Spacer()
             if let count {
@@ -138,14 +139,21 @@ struct YarnEditor: View {
     @Bindable var yarn: Yarn
     @Environment(\.dismiss) private var dismiss
     @FocusState private var nameFocused: Bool
+    @State private var lengthText = ""
+    private let lengthLabel = Units.current == .metric ? "Meters per Skein" : "Yards per Skein"
 
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Name", text: $yarn.name).focused($nameFocused).accessibilityLabel("Name")
+                        .accessibilityIdentifier("yarn.name")
                     TextField("Brand", text: $yarn.brand).accessibilityLabel("Brand")
                     TextField("Color", text: $yarn.colorway).accessibilityLabel("Color")
+                    TextField("Fiber", text: $yarn.fiber).accessibilityLabel("Fiber")
+                        .accessibilityIdentifier("yarn.fiber")
+                    TextField("Dye Lot", text: $yarn.dyeLot).accessibilityLabel("Dye Lot")
+                        .accessibilityIdentifier("yarn.dyeLot")
                 }
                 Section {
                     Picker("Weight", selection: $yarn.weight) {
@@ -154,6 +162,21 @@ struct YarnEditor: View {
                     Stepper(value: $yarn.skeins, in: 0...999) {
                         LabeledContent("Skeins", value: yarn.skeins, format: .number)
                     }
+                    .accessibilityIdentifier("yarn.skeins")
+                    TextField(lengthLabel, text: $lengthText)
+                        .keyboardType(.numberPad)
+                        .accessibilityLabel(lengthLabel)
+                        .accessibilityIdentifier("yarn.length")
+                        .onChange(of: lengthText) { _, text in
+                            yarn.lengthPerSkein = min(Int(text) ?? 0, 99_999)
+                        }
+                }
+                if !yarn.projects.isEmpty {
+                    Section {
+                        ForEach(yarn.projects.sorted { $0.createdAt > $1.createdAt }) { Text($0.name) }
+                    } header: {
+                        Text("Projects").textCase(nil)
+                    }
                 }
             }
             .navigationTitle("Yarn")
@@ -161,7 +184,10 @@ struct YarnEditor: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
             }
-            .onAppear { nameFocused = yarn.name.isEmpty }
+            .onAppear {
+                nameFocused = yarn.name.isEmpty
+                lengthText = yarn.lengthPerSkein > 0 ? String(yarn.lengthPerSkein) : ""
+            }
         }
     }
 }

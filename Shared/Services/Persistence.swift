@@ -8,13 +8,19 @@ enum Persistence {
     /// was gone and would lose whatever was counted next.
     @MainActor
     static func container(inMemory: Bool, at url: URL? = nil) -> ModelContainer? {
-        let schema = Schema([Project.self, Yarn.self, Needle.self])
+        let schema = RavelSchema.current
         if inMemory {
-            return try? ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
+            return try? ModelContainer(for: schema, migrationPlan: RavelMigrationPlan.self, configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
         }
         // A fresh install has no Application Support folder; without it the first open logs a failed attempt.
         try? FileManager.default.createDirectory(at: .applicationSupportDirectory, withIntermediateDirectories: true)
         let configuration = url.map { ModelConfiguration(schema: schema, url: $0) } ?? ModelConfiguration(schema: schema)
+        if let container = try? ModelContainer(for: schema, migrationPlan: RavelMigrationPlan.self, configurations: configuration) {
+            return container
+        }
+        // A store written by a build from before the schemas were versioned matches no version in the plan.
+        // The additive changes since are all lightweight, so the store opens and migrates on its own.
+        // This is the same file, never an in-memory stand-in.
         return try? ModelContainer(for: schema, configurations: configuration)
     }
 
@@ -35,7 +41,15 @@ enum Persistence {
         beanie.follow(hat.plan(measures: hat.defaultSize.values, gauge: hat.weight.gauge), of: hat)
         let blanket = Project(name: "Baby Blanket", rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
         blanket.finishedAt = .now.addingTimeInterval(-2 * 86_400)
+        let merino = Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6, yardsPerSkein: 200)
+        merino.fiber = "100% Merino"
+        merino.dyeLot = "4471"
+        sweater.tallyOn = true
+        sweater.tallyName = "Decreases"
+        sweater.tallyCount = 7
         [sweater, beanie, blanket].forEach(context.insert)
+        context.insert(merino)
+        sweater.stashYarn = merino
         // With `-TopicalFile`, a project cast on from the first draft, partway up its colorwork.
         if let topical = TopicalStore.shared.items.first {
             let item = LibraryItem.topical(topical)
@@ -47,8 +61,7 @@ enum Persistence {
             project.rows = plan.steps.prefix(chartRow + 1).reduce(0) { $0 + $1.rows } + 1
             context.insert(project)
         }
-        context.insert(Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6))
-        context.insert(Yarn(name: "Sock Yarn", brand: "Tidewater", colorway: "Harbor", weight: .fingering, skeins: 2, createdAt: .now.addingTimeInterval(-86_400)))
+        context.insert(Yarn(name: "Sock Yarn", brand: "Tidewater", colorway: "Harbor", weight: .fingering, skeins: 2, yardsPerSkein: 425, createdAt: .now.addingTimeInterval(-86_400)))
         context.insert(Needle(kind: .circular, millimeters: 4.5, lengthInches: 32))
         context.insert(Needle(kind: .doublePointed, millimeters: 3.25, createdAt: .now.addingTimeInterval(-86_400)))
         context.insert(Needle(kind: .hook, millimeters: 5.0, createdAt: .now.addingTimeInterval(-2 * 86_400)))
