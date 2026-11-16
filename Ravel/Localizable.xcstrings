@@ -154,6 +154,12 @@
             "value": "%@ per månad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ต่อเดือน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -167,6 +173,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每月 %@"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "每月 %@"
@@ -327,6 +339,12 @@
             "value": "%@ per år"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ต่อปี"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -340,6 +358,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每年 %@"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "每年 %@"
@@ -500,6 +524,12 @@
             "value": "%@ engångs"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ครั้งเดียว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -513,6 +543,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次性 %@"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "一次性 %@"
@@ -673,6 +709,12 @@
             "value": "%@."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -686,6 +728,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@。"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "%@。"
@@ -1278,6 +1326,18 @@
             }
           }
         },
+        "th": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "ฟรี %lld วัน"
+                }
+              }
+            }
+          }
+        },
         "tr": {
           "variations": {
             "plural": {
@@ -1333,6 +1393,18 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "免费 %lld 天。"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "免費 %lld 天。"
                 }
               }
             }
@@ -1493,6 +1565,12 @@
             "value": "%lld av %lld"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld จาก %lld"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -1506,6 +1584,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld / %lld"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld / %lld"
@@ -2098,6 +2182,18 @@
             }
           }
         },
+        "th": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld ก้อน"
+                }
+              }
+            }
+          }
+        },
         "tr": {
           "variations": {
             "plural": {
@@ -2153,6 +2249,18 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld 团"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 球"
                 }
               }
             }
@@ -2745,6 +2853,18 @@
             }
           }
         },
+        "th": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld ห่วง"
+                }
+              }
+            }
+          }
+        },
         "tr": {
           "variations": {
             "plural": {
@@ -2800,6 +2920,18 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld 针"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 針"
                 }
               }
             }
@@ -2960,6 +3092,12 @@
             "value": "En tysk förkortad varvvändning: med tråden framför, lyft första maskan som om den skulle stickas avig, dra sedan tråden upp över stickan så att maskan visar två ben. Sticka båda benen ihop som en maska när du kommer tillbaka till den"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การกลับแถวสั้นแบบเยอรมัน: วางด้ายไว้ด้านหน้า เลื่อนห่วงแรกเหมือนถักห่วงกลับ แล้วดึงด้ายขึ้นข้ามไม้ถักจนห่วงเห็นเป็นสองขา เมื่อกลับมาถึงให้ถักสองขารวมเป็นหนึ่งห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -2976,6 +3114,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "德式引返编织：线放在前面，把第一针像织上针一样移过，再把线向上拉过针，使针目呈现两条腿。回到该针时，将两条腿合并作一针一起织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "德式引返編織：線放在前面，把第一針像織上針一樣移過，再把線向上拉過針，使針目呈現兩條腿。回到該針時，將兩條腿合併作一針一起織"
           }
         }
       }
@@ -3133,6 +3277,12 @@
             "value": "En ring på stickan som markerar ett ställe. Flytta den från vänster till höger sticka när du kommer till den"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วงแหวนบนไม้ถักที่ทำเครื่องหมายตำแหน่ง เมื่อถึงให้เลื่อนจากไม้ซ้ายไปไม้ขวา"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -3149,6 +3299,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "套在针上标记位置的圈。织到时将它从左针移到右针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "套在針上標記位置的圈。織到時將它從左針移到右針"
           }
         }
       }
@@ -3306,6 +3462,12 @@
             "value": "Förkortningar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวย่อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -3322,6 +3484,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "缩写"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "縮寫"
           }
         }
       }
@@ -3479,6 +3647,12 @@
             "value": "Accessoarer"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เครื่องประดับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -3495,6 +3669,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "配饰"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配件"
           }
         }
       }
@@ -3652,6 +3832,12 @@
             "value": "Lägg till"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่ม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -3668,6 +3854,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入"
           }
         }
       }
@@ -3825,6 +4017,12 @@
             "value": "Lägg till räknare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มตัวนับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -3841,6 +4039,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加计数器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入計數器"
           }
         }
       }
@@ -3998,6 +4202,12 @@
             "value": "Lägg till stickor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มไม้ถัก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4014,6 +4224,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加棒针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入棒針"
           }
         }
       }
@@ -4171,6 +4387,12 @@
             "value": "Lägg till mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มแพตเทิร์น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4187,6 +4409,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入織圖"
           }
         }
       }
@@ -4344,6 +4572,12 @@
             "value": "Lägg till foton"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มรูปภาพ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4360,6 +4594,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加照片"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入照片"
           }
         }
       }
@@ -4517,6 +4757,12 @@
             "value": "Lägg till garn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มเส้นไหม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4533,6 +4779,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加毛线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入毛線"
           }
         }
       }
@@ -4690,6 +4942,12 @@
             "value": "Lägg till en rad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มหนึ่งแถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4706,6 +4964,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "增加一行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "增加一段"
           }
         }
       }
@@ -4863,6 +5127,12 @@
             "value": "Lägg till en på %@"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มหนึ่งให้ %@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -4879,6 +5149,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将“%@”加一"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將「%@」加一"
           }
         }
       }
@@ -5036,6 +5312,12 @@
             "value": "Lägg till i förrådet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มลงสต็อก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5052,6 +5334,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加到库存"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入庫存"
           }
         }
       }
@@ -5209,6 +5497,12 @@
             "value": "Vuxen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผู้ใหญ่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5222,6 +5516,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "成人"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "成人"
@@ -5382,6 +5682,12 @@
             "value": "Ankel"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ข้อเท้า"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5398,6 +5704,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "脚踝"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腳踝"
           }
         }
       }
@@ -5555,6 +5867,12 @@
             "value": "Valfri"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใดก็ได้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5568,6 +5886,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不限"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "不限"
@@ -5728,6 +6052,12 @@
             "value": "Aran"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อารัน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5741,6 +6071,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aran"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Aran"
@@ -5901,6 +6237,12 @@
             "value": "Omkrets"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบวง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -5917,6 +6259,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "围度"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圍度"
           }
         }
       }
@@ -6074,6 +6422,12 @@
             "value": "Bebis"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เบบี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6090,6 +6444,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "婴儿"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嬰兒"
           }
         }
       }
@@ -6247,6 +6607,12 @@
             "value": "Nacke"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอด้านหลัง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6263,6 +6629,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "后领"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "後領"
           }
         }
       }
@@ -6420,6 +6792,12 @@
             "value": "En rad tillbaka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ย้อนหนึ่งแถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6436,6 +6814,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "退回一行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退回一段"
           }
         }
       }
@@ -6593,6 +6977,12 @@
             "value": "Balaklava"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวกไอ้โม่ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6609,6 +6999,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "巴拉克拉法帽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "巴拉克拉瓦帽"
           }
         }
       }
@@ -6766,6 +7162,12 @@
             "value": "Band"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถบ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6782,6 +7184,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "带子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帶子"
           }
         }
       }
@@ -6939,6 +7347,12 @@
             "value": "Nybörjare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผู้เริ่มต้น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -6955,6 +7369,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "入门"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入門"
           }
         }
       }
@@ -7112,6 +7532,12 @@
             "value": "Filt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าห่ม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7125,6 +7551,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毯子"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "毯子"
@@ -7285,6 +7717,12 @@
             "value": "Filtar och hem"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าห่มและของแต่งบ้าน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7301,6 +7739,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "毯子和家居"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毯子與居家"
           }
         }
       }
@@ -7458,6 +7902,12 @@
             "value": "Kropp"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวเสื้อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7471,6 +7921,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "衣身"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "衣身"
@@ -7631,6 +8087,12 @@
             "value": "Kroppslängd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความยาวตัว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7647,6 +8109,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "衣长"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "衣長"
           }
         }
       }
@@ -7804,6 +8272,12 @@
             "value": "Filt med kant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าห่มมีขอบ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7820,6 +8294,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "带边毯子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "附邊框毯子"
           }
         }
       }
@@ -7977,6 +8457,12 @@
             "value": "Nedre kant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอบล่าง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -7993,6 +8479,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "下边"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下緣"
           }
         }
       }
@@ -8150,6 +8642,12 @@
             "value": "Märke"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยี่ห้อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -8163,6 +8661,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "品牌"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "品牌"
@@ -8323,6 +8827,12 @@
             "value": "Kant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอบ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -8339,6 +8849,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "边缘"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邊緣"
           }
         }
       }
@@ -8496,6 +9012,12 @@
             "value": "Bläddra bland mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลือกดูแพตเทิร์น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -8512,6 +9034,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "浏览图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "瀏覽織圖"
           }
         }
       }
@@ -8669,6 +9197,12 @@
             "value": "Bulky"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บัลกี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -8682,6 +9216,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulky"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Bulky"
@@ -8842,6 +9382,12 @@
             "value": "Köp livstid"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ซื้อแบบตลอดชีพ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -8858,6 +9404,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "购买永久版"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "購買永久版"
           }
         }
       }
@@ -9015,6 +9567,12 @@
             "value": "Fläta 6 fram: lyft 3 maskor på en flätsticka och håll den framför, sticka 3, sticka sedan de 3 från flätstickan"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักเปียไขว้ด้านหน้า 6 ห่วง: เลื่อน 3 ห่วงไปที่ไม้ถักเสริมแล้วพักไว้ด้านหน้า ถัก 3 ห่วง แล้วถัก 3 ห่วงจากไม้ถักเสริม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9031,6 +9589,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "前交叉 6 针麻花：将 3 针移到麻花针上放在前面，织 3 针，再织麻花针上的 3 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前交叉 6 針麻花：將 3 針移到麻花針上放在前面，織 3 針，再織麻花針上的 3 針"
           }
         }
       }
@@ -9188,6 +9752,12 @@
             "value": "Pannband med flätor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ที่คาดผมลายถักเปีย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9204,6 +9774,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "麻花发带"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麻花髮帶"
           }
         }
       }
@@ -9361,6 +9937,12 @@
             "value": "Vad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "น่อง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9374,6 +9956,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小腿"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "小腿"
@@ -9534,6 +10122,12 @@
             "value": "Avbryt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยกเลิก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9547,6 +10141,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "取消"
@@ -9707,6 +10307,12 @@
             "value": "Lägg upp"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขึ้นต้นห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9723,6 +10329,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "起针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "起針"
           }
         }
       }
@@ -9880,6 +10492,12 @@
             "value": "Kol"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เทาถ่าน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -9893,6 +10511,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "炭灰"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "炭灰"
@@ -10053,6 +10677,12 @@
             "value": "Diagrammet passar inte det här maskprovet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แผนผังไม่พอดีกับเกจนี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10069,6 +10699,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "此密度下图表放不下"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此密度下圖表放不下"
           }
         }
       }
@@ -10226,6 +10862,12 @@
             "value": "Bröst"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบอก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10242,6 +10884,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "胸围"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸圍"
           }
         }
       }
@@ -10399,6 +11047,12 @@
             "value": "Barn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เด็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10415,6 +11069,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "儿童"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "兒童"
           }
         }
       }
@@ -10572,6 +11232,12 @@
             "value": "Välj garn från förrådet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลือกเส้นไหมจากสต็อก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10588,6 +11254,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "从库存中选择毛线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "從庫存選擇毛線"
           }
         }
       }
@@ -10745,6 +11417,12 @@
             "value": "Grov tubhals"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอวอร์มเมอร์เส้นหนา"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10761,6 +11439,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "粗围脖"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粗脖圍"
           }
         }
       }
@@ -10918,6 +11602,12 @@
             "value": "Rundsticka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถักแบบวงกลม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -10934,6 +11624,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "环形针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "環狀針"
           }
         }
       }
@@ -11091,6 +11787,12 @@
             "value": "Klassisk"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คลาสสิก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11107,6 +11809,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "经典"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "經典"
           }
         }
       }
@@ -11264,6 +11972,12 @@
             "value": "Stäng"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปิด"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11280,6 +11994,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "关闭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "關閉"
           }
         }
       }
@@ -11455,6 +12175,12 @@
             "value": "Färg"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สี"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11471,6 +12197,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "颜色"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顏色"
           }
         }
       }
@@ -11628,6 +12360,12 @@
             "value": "Räknare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวนับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11644,6 +12382,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "计数器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "計數器"
           }
         }
       }
@@ -11801,6 +12545,12 @@
             "value": "Räknarens namn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ชื่อตัวนับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11817,6 +12567,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "计数器名称"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "計數器名稱"
           }
         }
       }
@@ -11974,6 +12730,12 @@
             "value": "Tubhals"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอวอร์มเมอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -11990,6 +12752,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "围脖"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脖圍"
           }
         }
       }
@@ -12147,6 +12915,12 @@
             "value": "Spjälsäng"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลเด็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -12163,6 +12937,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "婴儿床"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嬰兒床"
           }
         }
       }
@@ -12320,6 +13100,12 @@
             "value": "Virknål"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เข็มโครเชต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -12336,6 +13122,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "钩针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鉤針"
           }
         }
       }
@@ -12493,6 +13285,12 @@
             "value": "Kråna"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กระหม่อม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -12509,6 +13307,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "帽顶"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽頂"
           }
         }
       }
@@ -12666,6 +13470,12 @@
             "value": "Muddkant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ข้อมือแขนเสื้อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -12679,6 +13489,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "袖口"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "袖口"
@@ -12839,6 +13655,12 @@
             "value": "DK"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -12852,6 +13674,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "DK"
@@ -13012,6 +13840,12 @@
             "value": "Minskningar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลดห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13028,6 +13862,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "减针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "減針"
           }
         }
       }
@@ -13185,6 +14025,12 @@
             "value": "Mitt i vintern"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กลางฤดูหนาว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13198,6 +14044,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深冬"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "深冬"
@@ -13358,6 +14210,12 @@
             "value": "Ta bort %@?"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบ %@ หรือไม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13374,6 +14232,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除“%@”？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要刪除「%@」嗎？"
           }
         }
       }
@@ -13531,6 +14395,12 @@
             "value": "Ta bort projekt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบโปรเจกต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13547,6 +14417,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除项目"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除專案"
           }
         }
       }
@@ -13704,6 +14580,12 @@
             "value": "Detaljer"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รายละเอียด"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13720,6 +14602,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "详情"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "詳細資訊"
           }
         }
       }
@@ -13877,6 +14765,12 @@
             "value": "Diagonal disktrasa"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าเช็ดจานแนวเฉียง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -13893,6 +14787,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "斜纹洗碗布"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "斜紋洗碗巾"
           }
         }
       }
@@ -14050,6 +14950,12 @@
             "value": "Delning"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การแบ่ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14063,6 +14969,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分片"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "分片"
@@ -14223,6 +15135,12 @@
             "value": "Klar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เสร็จสิ้น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14236,6 +15154,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "完成"
@@ -14396,6 +15320,12 @@
             "value": "Strumpstickor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถักปลายคู่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14412,6 +15342,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "袜针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "襪針"
           }
         }
       }
@@ -14569,6 +15505,12 @@
             "value": "Färgbad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ล็อตการย้อม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14585,6 +15527,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "染缸批次"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "染色批號"
           }
         }
       }
@@ -14742,6 +15690,12 @@
             "value": "Öronvärmare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ที่ปิดหู"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14758,6 +15712,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "护耳带"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "護耳帶"
           }
         }
       }
@@ -14915,6 +15875,12 @@
             "value": "Lätt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ง่าย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -14931,6 +15897,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "简单"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "簡單"
           }
         }
       }
@@ -15088,6 +16060,12 @@
             "value": "Varje design i biblioteket, skriven efter dina mått och ditt garn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ทุกดีไซน์ในคลัง เขียนตามขนาดตัวและเส้นไหมของคุณ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15104,6 +16082,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "图书馆里的每个设计，都按你的尺寸和毛线编写"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "資料庫中的每個設計，都依你的尺寸與毛線撰寫"
           }
         }
       }
@@ -15261,6 +16245,12 @@
             "value": "Ansiktskant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอบรอบใบหน้า"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15277,6 +16267,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "面部边缘"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "臉部邊緣"
           }
         }
       }
@@ -15434,6 +16430,12 @@
             "value": "Ansiktsöppning"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ช่องเปิดใบหน้า"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15450,6 +16452,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "面部开口"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "臉部開口"
           }
         }
       }
@@ -15607,6 +16615,12 @@
             "value": "Fiber"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เส้นใย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15623,6 +16637,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "纤维"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纖維"
           }
         }
       }
@@ -15780,6 +16800,12 @@
             "value": "Fingering"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ฟิงเกอริง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15793,6 +16819,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingering"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Fingering"
@@ -15953,6 +16985,12 @@
             "value": "Klar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เสร็จแล้ว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -15966,6 +17004,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已完成"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "已完成"
@@ -16126,6 +17170,12 @@
             "value": "Avslut"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "งานตกแต่งขั้นสุดท้าย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -16139,6 +17189,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收尾"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "收尾"
@@ -16299,6 +17355,12 @@
             "value": "Första örat"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หูข้างที่หนึ่ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -16315,6 +17377,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "第一只耳罩"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一隻耳罩"
           }
         }
       }
@@ -16472,6 +17540,12 @@
             "value": "Första ärmen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แขนข้างที่หนึ่ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -16488,6 +17562,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "第一只袖子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一隻袖子"
           }
         }
       }
@@ -16645,6 +17725,12 @@
             "value": "Första kalla dagarna"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วันแรกที่เริ่มหนาว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -16661,6 +17747,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "初寒时节"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "初寒時節"
           }
         }
       }
@@ -16818,6 +17910,12 @@
             "value": "Gratis"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ฟรี"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -16834,6 +17932,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "免费"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "免費"
           }
         }
       }
@@ -16991,6 +18095,12 @@
             "value": "Rätstickad filt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าห่มลายการ์เตอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17007,6 +18117,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "搓板针毯子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平針毯子"
           }
         }
       }
@@ -17164,6 +18280,12 @@
             "value": "Rätstickad halsduk"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอลายการ์เตอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17180,6 +18302,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "搓板针围巾"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平針圍巾"
           }
         }
       }
@@ -17337,6 +18465,12 @@
             "value": "Maskprov"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เกจ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17350,6 +18484,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密度"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "密度"
@@ -17510,6 +18650,12 @@
             "value": "Få hjälp"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอความช่วยเหลือ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17526,6 +18672,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "获取帮助"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取得協助"
           }
         }
       }
@@ -17683,6 +18835,12 @@
             "value": "Presenttider"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ฤดูกาลของขวัญ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17699,6 +18857,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "礼物季"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "送禮季"
           }
         }
       }
@@ -17856,6 +19020,12 @@
             "value": "Gå till varv"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไปที่รอบ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -17869,6 +19039,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳到圈"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "跳到圈"
@@ -18029,6 +19205,12 @@
             "value": "Gå till rad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไปที่แถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18045,6 +19227,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "跳到行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳到段"
           }
         }
       }
@@ -18202,6 +19390,12 @@
             "value": "Gå till del"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไปที่ส่วน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18215,6 +19409,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳到部分"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "跳到部分"
@@ -18375,6 +19575,12 @@
             "value": "Hand"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "มือ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18388,6 +19594,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "手"
@@ -18548,6 +19760,12 @@
             "value": "Handledsvärmare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปลอกข้อมือ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18564,6 +19782,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "护腕"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "護腕"
           }
         }
       }
@@ -18721,6 +19945,12 @@
             "value": "Mössor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18734,6 +19964,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "帽子"
@@ -18894,6 +20130,12 @@
             "value": "Huvud"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบศีรษะ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -18910,6 +20152,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "头围"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "頭圍"
           }
         }
       }
@@ -19067,6 +20315,12 @@
             "value": "Höjd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความสูง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19080,6 +20334,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高度"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "高度"
@@ -19240,6 +20500,12 @@
             "value": "Hjälp"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ช่วยเหลือ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19256,6 +20522,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "帮助"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "說明"
           }
         }
       }
@@ -19413,6 +20685,12 @@
             "value": "Virknål"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เข็มโครเชต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19429,6 +20707,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "钩针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鉤針"
           }
         }
       }
@@ -19586,6 +20870,12 @@
             "value": "Ökningar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19602,6 +20892,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "加针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加針"
           }
         }
       }
@@ -19759,6 +21055,12 @@
             "value": "Indigo"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คราม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19775,6 +21077,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "靛蓝"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靛藍"
           }
         }
       }
@@ -19932,6 +21240,12 @@
             "value": "Oändlig"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อินฟินิตี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -19948,6 +21262,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无尽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無盡"
           }
         }
       }
@@ -20105,6 +21425,12 @@
             "value": "Medel"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปานกลาง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20121,6 +21447,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "中级"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中級"
           }
         }
       }
@@ -20278,6 +21610,12 @@
             "value": "K1, M1L, sticka till 1 maska före nästa markör, M1R, k1, lyft markören. Det ökar 2 maskor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1, M1L, ถักไปจนเหลือ 1 ห่วงก่อนตัวมาร์กเกอร์ถัดไป, M1R, k1, เลื่อนมาร์กเกอร์ เพิ่ม 2 ห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20294,6 +21632,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "K1、M1L，织到下一个记号圈前 1 针，M1R、k1，移过记号圈。共加 2 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1、M1L，織到下一個記號圈前 1 針，M1R、k1，移過記號圈。共加 2 針"
           }
         }
       }
@@ -20451,6 +21795,12 @@
             "value": "Sticka 2 maskor ihop"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถัก 2 ห่วงรวมกัน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20467,6 +21817,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "2 针并为一针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 針併為一針"
           }
         }
       }
@@ -20624,6 +21980,12 @@
             "value": "Sticka den första upplagda maskan med arbetstråden för att sluta ringen, med uppläggningskanten platt och inte vriden runt stickan"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักห่วงแรกที่ขึ้นด้วยเส้นด้ายทำงานเพื่อปิดวงกลม โดยให้ขอบที่ขึ้นต้นวางเรียบ ไม่บิดรอบไม้ถัก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20640,6 +22002,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "用工作线织第一个起针，把圈接合，起针边平放，不要在针上扭转"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用工作線織第一個起針，把圈接合，起針邊平放，不要在針上扭轉"
           }
         }
       }
@@ -20797,6 +22165,12 @@
             "value": "Sticka de räta maskorna räta och de aviga aviga när du maskar av"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตอนปิดงาน ถักห่วงตรงเป็นห่วงตรงและห่วงกลับเป็นห่วงกลับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20813,6 +22187,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "收针时，下针织下针，上针织上针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收針時，下針織下針，上針織上針"
           }
         }
       }
@@ -20970,6 +22350,12 @@
             "value": "Rät. K2 är att sticka 2 maskor räta"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ห่วงตรง K2 คือถัก 2 ห่วงด้วยห่วงตรง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -20986,6 +22372,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "下针。K2 表示织 2 针下针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下針。K2 表示織 2 針下針"
           }
         }
       }
@@ -21143,6 +22535,12 @@
             "value": "Lace"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลซ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -21159,6 +22557,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "蕾丝线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蕾絲"
           }
         }
       }
@@ -21316,6 +22720,12 @@
             "value": "Stor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใหญ่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -21332,6 +22742,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "大号"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大"
           }
         }
       }
@@ -21489,6 +22905,12 @@
             "value": "Ben"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขา"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -21502,6 +22924,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腿"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "腿"
@@ -21662,6 +23090,12 @@
             "value": "Benvärmare %lld"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปลอกขา %lld"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -21675,6 +23109,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腿套 %lld"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "腿套 %lld"
@@ -21835,6 +23275,12 @@
             "value": "Benvärmare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปลอกขา"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -21848,6 +23294,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腿套"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "腿套"
@@ -22008,6 +23460,12 @@
             "value": "Längd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความยาว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22024,6 +23482,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "长度"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長度"
           }
         }
       }
@@ -22181,6 +23645,12 @@
             "value": "Livstid"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตลอดชีพ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22194,6 +23664,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "永久"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "永久"
@@ -22354,6 +23830,12 @@
             "value": "Lång"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยาว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22370,6 +23852,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "加长"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加長"
           }
         }
       }
@@ -22527,6 +24015,12 @@
             "value": "Krapp"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แดงเหง้ามะเดอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22543,6 +24037,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "茜红"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "茜紅"
           }
         }
       }
@@ -22700,6 +24200,12 @@
             "value": "Öka 1 åt vänster: lyft tråden framifrån och sticka den bakifrån"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่ม 1 ห่วงทางซ้าย: ยกเส้นด้ายจากด้านหน้าแล้วถักทางด้านหลัง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22716,6 +24222,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "向左加 1 针：从前面挑起横线，从后面织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向左加 1 針：從前面挑起橫線，從後面織"
           }
         }
       }
@@ -22873,6 +24385,12 @@
             "value": "Öka 1 åt höger: lyft tråden bakifrån och sticka den framifrån"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่ม 1 ห่วงทางขวา: ยกเส้นด้ายจากด้านหลังแล้วถักทางด้านหน้า"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -22889,6 +24407,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "向右加 1 针：从后面挑起横线，从前面织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向右加 1 針：從後面挑起橫線，從前面織"
           }
         }
       }
@@ -23046,6 +24570,12 @@
             "value": "Öka 1: lyft tråden mellan maskorna och sticka den bakifrån"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่ม 1 ห่วง: ยกเส้นด้ายระหว่างห่วงแล้วถักทางด้านหลัง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23062,6 +24592,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "加 1 针：挑起针间的横线，从后面织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加 1 針：挑起針間的橫線，從後面織"
           }
         }
       }
@@ -23219,6 +24755,12 @@
             "value": "Ringblomma"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เหลืองดาวเรือง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23235,6 +24777,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "金盏花黄"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "金盞花黃"
           }
         }
       }
@@ -23392,6 +24940,12 @@
             "value": "Markera som pågående"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ทำเครื่องหมายว่ากำลังทำ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23408,6 +24962,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "标记为进行中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "標記為進行中"
           }
         }
       }
@@ -23565,6 +25125,12 @@
             "value": "Markera som klar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ทำเครื่องหมายว่าเสร็จแล้ว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23581,6 +25147,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "标记为已完成"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "標記為已完成"
           }
         }
       }
@@ -23738,6 +25310,12 @@
             "value": "Material"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วัสดุ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23751,6 +25329,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "材料"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "材料"
@@ -23911,6 +25495,12 @@
             "value": "Medel"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กลาง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -23927,6 +25517,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "中号"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中"
           }
         }
       }
@@ -24102,6 +25698,12 @@
             "value": "Meter per docka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เมตรต่อก้อน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24118,6 +25720,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每团米数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每球公尺數"
           }
         }
       }
@@ -24275,6 +25883,12 @@
             "value": "Mitten"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตรงกลาง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24291,6 +25905,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "中间"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中間"
           }
         }
       }
@@ -24448,6 +26068,12 @@
             "value": "Handledsvärmare %lld"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปลอกข้อมือ %lld"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24464,6 +26090,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "护腕 %lld"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "護腕 %lld"
           }
         }
       }
@@ -24621,6 +26253,12 @@
             "value": "Månadsvis"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รายเดือน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24637,6 +26275,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "月付"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月費"
           }
         }
       }
@@ -24794,6 +26438,12 @@
             "value": "Mer"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มเติม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24807,6 +26457,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "更多"
@@ -24967,6 +26623,12 @@
             "value": "Mossa"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เขียวมอส"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -24983,6 +26645,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "苔绿"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苔綠"
           }
         }
       }
@@ -25140,6 +26808,12 @@
             "value": "Namn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ชื่อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -25156,6 +26830,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "名称"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名稱"
           }
         }
       }
@@ -25313,6 +26993,12 @@
             "value": "Hals"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -25329,6 +27015,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "领口"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "領口"
           }
         }
       }
@@ -25486,6 +27178,12 @@
             "value": "Halsduk i fyrkant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอผืนเล็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -25502,6 +27200,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "颈巾"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "頸巾"
           }
         }
       }
@@ -25659,6 +27363,12 @@
             "value": "Halskant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอบคอ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -25675,6 +27385,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "领边"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "領邊"
           }
         }
       }
@@ -25832,6 +27548,12 @@
             "value": "Sticka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถัก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -25848,6 +27570,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "棒针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "棒針"
           }
         }
       }
@@ -26005,6 +27733,12 @@
             "value": "Sticka eller virknål"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถักหรือเข็มโครเชต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26021,6 +27755,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "棒针或钩针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "棒針或鉤針"
           }
         }
       }
@@ -26178,6 +27918,12 @@
             "value": "Stickor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถัก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26194,6 +27940,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "棒针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "棒針"
           }
         }
       }
@@ -26351,6 +28103,12 @@
             "value": "Stickor och virknålar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถักและเข็มโครเชต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26367,6 +28125,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "棒针和钩针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "棒針與鉤針"
           }
         }
       }
@@ -26524,6 +28288,12 @@
             "value": "Nytt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ใหม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26537,6 +28307,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新品"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "新品"
@@ -26697,6 +28473,12 @@
             "value": "Nytt projekt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรเจกต์ใหม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26713,6 +28495,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "新项目"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增專案"
           }
         }
       }
@@ -26870,6 +28658,12 @@
             "value": "Inget köp hittades på det här Apple-kontot"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม่พบการซื้อใน Apple Account นี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -26886,6 +28680,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在此 Apple 账户上未找到购买记录"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此 Apple 帳號上找不到購買項目"
           }
         }
       }
@@ -27043,6 +28843,12 @@
             "value": "Inte från förrådet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม่ใช่จากสต็อก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27059,6 +28865,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "不来自库存"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不來自庫存"
           }
         }
       }
@@ -27216,6 +29028,12 @@
             "value": "Anteckningar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27232,6 +29050,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "备注"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "備註"
           }
         }
       }
@@ -27389,6 +29213,12 @@
             "value": "Havre"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สีข้าวโอ๊ต"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27405,6 +29235,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "燕麦色"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "燕麥色"
           }
         }
       }
@@ -27562,6 +29398,12 @@
             "value": "En enda betalning på %@. Varje mönster är ditt för alltid."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ชำระครั้งเดียว %@ ทุกแพตเทิร์นเป็นของคุณตลอดไป"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27578,6 +29420,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "一次性支付 %@。每个图解永远归你。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次性付款 %@。每個織圖永遠屬於你。"
           }
         }
       }
@@ -27735,6 +29583,12 @@
             "value": "Mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แพตเทิร์น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27751,6 +29605,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "織圖"
           }
         }
       }
@@ -27908,6 +29768,12 @@
             "value": "Planerna kunde inte laddas"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โหลดแพลนไม่ได้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -27924,6 +29790,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法加载方案"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法載入方案"
           }
         }
       }
@@ -28081,6 +29953,12 @@
             "value": "Plommon"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ม่วงพลัม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28094,6 +29972,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "梅紫"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "梅紫"
@@ -28254,6 +30138,12 @@
             "value": "Integritet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความเป็นส่วนตัว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28270,6 +30160,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "隐私"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隱私權"
           }
         }
       }
@@ -28427,6 +30323,12 @@
             "value": "Projektalternativ"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวเลือกโปรเจกต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28443,6 +30345,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "项目选项"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "專案選項"
           }
         }
       }
@@ -28600,6 +30508,12 @@
             "value": "Projekt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรเจกต์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28616,6 +30530,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "项目"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "專案"
           }
         }
       }
@@ -28773,6 +30693,12 @@
             "value": "Avig. P2 är att sticka 2 maskor aviga"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ห่วงกลับ P2 คือถัก 2 ห่วงด้วยห่วงกลับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28789,6 +30715,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "上针。P2 表示织 2 针上针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上針。P2 表示織 2 針上針"
           }
         }
       }
@@ -28946,6 +30878,12 @@
             "value": "För stickan genom kanten på arbetet, lägg tråden om och dra igenom en ögla. Varje ögla är 1 maska"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สอดไม้ถักผ่านขอบผ้า คล้องด้ายแล้วดึงห่วงออกมา ทุกห่วงนับเป็น 1 ห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -28962,6 +30900,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将针穿过织物边缘，绕线并拉出一个线圈。每个线圈算 1 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將針穿過織物邊緣，繞線並拉出一個線圈。每個線圈算 1 針"
           }
         }
       }
@@ -29119,6 +31063,12 @@
             "value": "Raglantröja"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เสื้อสวมหัวแขนแร็กแลน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -29135,6 +31085,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "插肩套头衫"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插肩套頭衫"
           }
         }
       }
@@ -29292,6 +31248,12 @@
             "value": "Betygsätt Ravel"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ให้คะแนน Ravel"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -29308,6 +31270,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "为 Ravel 评分"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "為 Ravel 評分"
           }
         }
       }
@@ -29465,6 +31433,12 @@
             "value": "Ravel-mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แพตเทิร์น Ravel"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -29481,6 +31455,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ravel 图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel 織圖"
           }
         }
       }
@@ -29638,6 +31618,12 @@
             "value": "Ravel kunde inte öppna dina projekt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel เปิดโปรเจกต์ของคุณไม่ได้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -29654,6 +31640,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ravel 无法打开你的项目"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel 無法開啟你的專案"
           }
         }
       }
@@ -29811,6 +31803,12 @@
             "value": "Ta bort"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "นำออก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -29824,6 +31822,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "移除"
@@ -29984,6 +31988,12 @@
             "value": "Ta bort räknare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "นำตัวนับออก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30000,6 +32010,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除计数器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除計數器"
           }
         }
       }
@@ -30157,6 +32173,12 @@
             "value": "Ta bort mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "นำแพตเทิร์นออก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30173,6 +32195,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除織圖"
           }
         }
       }
@@ -30330,6 +32358,12 @@
             "value": "Ta bort räknaren?"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "นำตัวนับออกหรือไม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30346,6 +32380,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除计数器？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要移除計數器嗎？"
           }
         }
       }
@@ -30503,6 +32543,12 @@
             "value": "Ta bort mönstret från projektet?"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "นำแพตเทิร์นออกจากโปรเจกต์นี้หรือไม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30519,6 +32565,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "从此项目中移除图解？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要從此專案移除織圖嗎？"
           }
         }
       }
@@ -30676,6 +32728,12 @@
             "value": "Byt namn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลี่ยนชื่อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30692,6 +32750,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重命名"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新命名"
           }
         }
       }
@@ -30849,6 +32913,12 @@
             "value": "Förnyas tills du avbryter i Inställningar. Ett mönster du har lagt upp är ditt att behålla."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ต่ออายุอัตโนมัติจนกว่าคุณจะยกเลิกในการตั้งค่า แพตเทิร์นที่คุณเริ่มทำแล้วยังเป็นของคุณตลอดไป"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -30865,6 +32935,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "到你在“设置”中取消前会自动续订。你已开始的图解将永远归你。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "到你在「設定」中取消前會自動續訂。你已開始的織圖將永遠屬於你。"
           }
         }
       }
@@ -31022,6 +33098,12 @@
             "value": "Rapport"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบลาย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31038,6 +33120,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "循环"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循環"
           }
         }
       }
@@ -31195,6 +33283,12 @@
             "value": "Byt ut mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลี่ยนแพตเทิร์น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31211,6 +33305,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "替换图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取代織圖"
           }
         }
       }
@@ -31368,6 +33468,12 @@
             "value": "Nollställ räknaren"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รีเซ็ตตัวนับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31384,6 +33490,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重置计数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重設計數"
           }
         }
       }
@@ -31541,6 +33653,12 @@
             "value": "Nollställa räknaren?"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รีเซ็ตตัวนับเป็น 0 หรือไม่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31557,6 +33675,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将计数重置为 0？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要將計數歸零嗎？"
           }
         }
       }
@@ -31714,6 +33838,12 @@
             "value": "Nollställ"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รีเซ็ตเป็น 0"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31730,6 +33860,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重置为 0"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "歸零"
           }
         }
       }
@@ -31887,6 +34023,12 @@
             "value": "Återställ"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กู้คืน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -31903,6 +34045,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "恢复"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回復"
           }
         }
       }
@@ -32060,6 +34208,12 @@
             "value": "Ribbad mössa"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวกถักลายร่อง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32076,6 +34230,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "罗纹帽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羅紋帽"
           }
         }
       }
@@ -32233,6 +34393,12 @@
             "value": "Ribbad tubhals"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอวอร์มเมอร์ลายร่อง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32249,6 +34415,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "罗纹围脖"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羅紋脖圍"
           }
         }
       }
@@ -32406,6 +34578,12 @@
             "value": "Ribbad halsduk"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอลายร่อง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32422,6 +34600,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "罗纹围巾"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羅紋圍巾"
           }
         }
       }
@@ -32579,6 +34763,12 @@
             "value": "Mössa med rullkant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวกขอบพับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32595,6 +34785,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "卷边帽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "捲邊帽"
           }
         }
       }
@@ -32752,6 +34948,12 @@
             "value": "Varv"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32765,6 +34967,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圈"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "圈"
@@ -32925,6 +35133,12 @@
             "value": "Varv i den här delen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบในส่วนนี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -32938,6 +35152,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此部分的圈"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "此部分的圈"
@@ -33098,6 +35318,12 @@
             "value": "Rad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33114,6 +35340,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "段"
           }
         }
       }
@@ -33271,6 +35503,12 @@
             "value": "Rad %lld"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถวที่ %lld"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33287,6 +35525,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "第 %lld 行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第 %lld 段"
           }
         }
       }
@@ -33444,6 +35688,12 @@
             "value": "Rad %1$lld av %2$lld i rapporten"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถวที่ %1$lld จาก %2$lld ในรอบลาย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33460,6 +35710,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "循环中的第 %1$lld 行（共 %2$lld 行）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循環中的第 %1$lld 段（共 %2$lld 段）"
           }
         }
       }
@@ -33617,6 +35873,12 @@
             "value": "Rad i den här delen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถวในส่วนนี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33633,6 +35895,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "此部分的行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此部分的段"
           }
         }
       }
@@ -33790,6 +36058,12 @@
             "value": "Rader"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33806,6 +36080,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "行数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "段數"
           }
         }
       }
@@ -33963,6 +36243,12 @@
             "value": "Rader per rapport"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จำนวนแถวต่อหนึ่งรอบลาย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -33979,6 +36265,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每个循环的行数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每個循環的段數"
           }
         }
       }
@@ -34136,6 +36428,12 @@
             "value": "Varv på %@"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จำนวนแถวใน %@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -34152,6 +36450,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每 %@ 行数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每 %@ 段數"
           }
         }
       }
@@ -34309,6 +36613,12 @@
             "value": "Halsduk"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -34325,6 +36635,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "围巾"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圍巾"
           }
         }
       }
@@ -34482,6 +36798,12 @@
             "value": "Halsdukar och tubhalsar"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอและคอวอร์มเมอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -34498,6 +36820,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "围巾和围脖"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圍巾與脖圍"
           }
         }
       }
@@ -34655,6 +36983,12 @@
             "value": "Andra örat"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หูข้างที่สอง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -34671,6 +37005,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "第二只耳罩"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二隻耳罩"
           }
         }
       }
@@ -34828,6 +37168,12 @@
             "value": "Andra ärmen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แขนข้างที่สอง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -34844,6 +37190,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "第二只袖子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二隻袖子"
           }
         }
       }
@@ -35001,6 +37353,12 @@
             "value": "Pärlstickad tubhals"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คอวอร์มเมอร์ลายเมล็ดข้าว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35017,6 +37375,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "米粒针围脖"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "米粒針脖圍"
           }
         }
       }
@@ -35174,6 +37538,12 @@
             "value": "Pärlstickad halsduk"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าพันคอลายเมล็ดข้าว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35190,6 +37560,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "米粒针围巾"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "米粒針圍巾"
           }
         }
       }
@@ -35347,6 +37723,12 @@
             "value": "Skicka feedback"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ส่งความคิดเห็น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35363,6 +37745,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "发送反馈"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "傳送意見回饋"
           }
         }
       }
@@ -35520,6 +37908,12 @@
             "value": "Ange"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตั้งค่า"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35536,6 +37930,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
           }
         }
       }
@@ -35693,6 +38093,12 @@
             "value": "Ange rad"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตั้งค่าแถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35709,6 +38115,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设置行数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定段數"
           }
         }
       }
@@ -35866,6 +38278,12 @@
             "value": "Sjal"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าคลุมไหล่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -35879,6 +38297,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "披肩"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "披肩"
@@ -36039,6 +38463,12 @@
             "value": "Liten sjal"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าคลุมไหล่ขนาดเล็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36052,6 +38482,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小披肩"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "小披肩"
@@ -36212,6 +38648,12 @@
             "value": "Sida"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ด้าน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36228,6 +38670,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "边长"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "邊長"
           }
         }
       }
@@ -36385,6 +38833,12 @@
             "value": "Storlek"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขนาด"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36401,6 +38855,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "尺码"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尺寸"
           }
         }
       }
@@ -36558,6 +39018,12 @@
             "value": "Dockor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จำนวนก้อน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36574,6 +39040,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "团数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "球數"
           }
         }
       }
@@ -36731,6 +39203,12 @@
             "value": "Ärmlängd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความยาวแขน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36747,6 +39225,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "袖长"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "袖長"
           }
         }
       }
@@ -36904,6 +39388,12 @@
             "value": "Lyft 2 maskor som om de skulle stickas, en i taget, och sticka ihop dem bakifrån"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลื่อน 2 ห่วงทีละห่วงเหมือนถักห่วงตรง แล้วถักรวมกันทางด้านหลัง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -36920,6 +39410,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将 2 针依次像织下针一样移过，再从后面一起织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將 2 針依序像織下針一樣移過，再從後面一起織"
           }
         }
       }
@@ -37077,6 +39573,12 @@
             "value": "Slouchmössa"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวกทรงหลวม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37093,6 +39595,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "宽松帽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "寬鬆帽"
           }
         }
       }
@@ -37250,6 +39758,12 @@
             "value": "Liten"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เล็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37266,6 +39780,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "小号"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小"
           }
         }
       }
@@ -37423,6 +39943,12 @@
             "value": "Smal"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กระชับ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37436,6 +39962,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修身"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "修身"
@@ -37596,6 +40128,12 @@
             "value": "Sport"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สปอร์ต"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37609,6 +40147,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Sport"
@@ -37769,6 +40313,12 @@
             "value": "Vårlager"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลเยอร์ฤดูใบไม้ผลิ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37785,6 +40335,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "春日叠穿"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "春季層次"
           }
         }
       }
@@ -37942,6 +40498,12 @@
             "value": "Gran"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เขียวสน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -37958,6 +40520,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "云杉绿"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "雲杉綠"
           }
         }
       }
@@ -38115,6 +40683,12 @@
             "value": "Starta radräknare"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เริ่มตัวนับแถว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38131,6 +40705,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "开始行数计数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始計算段數"
           }
         }
       }
@@ -38288,6 +40868,12 @@
             "value": "Förråd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สต็อก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38304,6 +40890,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "库存"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "庫存"
           }
         }
       }
@@ -38461,6 +41053,12 @@
             "value": "Maskor på %@"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จำนวนห่วงใน %@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38477,6 +41075,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每 %@ 针数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每 %@ 針數"
           }
         }
       }
@@ -38634,6 +41238,12 @@
             "value": "Rak sticka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม้ถักแบบตรง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38650,6 +41260,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "直针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直針"
           }
         }
       }
@@ -38807,6 +41423,12 @@
             "value": "Barnvagn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รถเข็นเด็ก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38823,6 +41445,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "婴儿车"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嬰兒車"
           }
         }
       }
@@ -38980,6 +41608,12 @@
             "value": "Prenumerera"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สมัครสมาชิก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -38996,6 +41630,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "订阅"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "訂閱"
           }
         }
       }
@@ -39153,6 +41793,12 @@
             "value": "Sommarbomull"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ฝ้ายหน้าร้อน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -39169,6 +41815,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "夏日棉线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夏季棉線"
           }
         }
       }
@@ -39326,6 +41978,12 @@
             "value": "Super Bulky"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ซูเปอร์บัลกี้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -39339,6 +41997,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super Bulky"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Super Bulky"
@@ -39499,6 +42163,12 @@
             "value": "Byt sticka mellan händerna och arbeta tillbaka åt andra hållet"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สลับไม้ถักระหว่างมือ แล้วถักกลับไปอีกทิศทาง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -39515,6 +42185,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "换手拿针，向另一个方向织回"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "換手拿針，向另一個方向織回"
           }
         }
       }
@@ -39684,6 +42360,12 @@
             "value": "Tröjväder"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อากาศเหมาะกับเสื้อสเวตเตอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -39700,6 +42382,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "毛衣天气"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛衣天氣"
           }
         }
       }
@@ -39869,6 +42557,12 @@
             "value": "Tröjor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เสื้อสเวตเตอร์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -39882,6 +42576,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛衣"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "毛衣"
@@ -40042,6 +42742,12 @@
             "value": "Ta bort en från %@"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลดหนึ่งของ %@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40058,6 +42764,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将“%@”减一"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將「%@」減一"
           }
         }
       }
@@ -40215,6 +42927,12 @@
             "value": "Villkor"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ข้อกำหนด"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40231,6 +42949,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "条款"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "條款"
           }
         }
       }
@@ -40388,6 +43112,12 @@
             "value": "Mönstret kunde inte öppnas"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปิดแพตเทิร์นนั้นไม่ได้"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40404,6 +43134,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法打开该图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法開啟該織圖"
           }
         }
       }
@@ -40561,6 +43297,12 @@
             "value": "App Store gick inte att nå. Försök igen när du är online."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เชื่อมต่อ App Store ไม่ได้ ลองใหม่เมื่อออนไลน์"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40577,6 +43319,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法连接 App Store。请在联网后重试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法連線至 App Store。請在連上網路後重試。"
           }
         }
       }
@@ -40734,6 +43482,12 @@
             "value": "Köpet gick inte igenom"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การซื้อไม่สำเร็จ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40750,6 +43504,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "购买未能完成"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "購買未能完成"
           }
         }
       }
@@ -40907,6 +43667,12 @@
             "value": "Rapporten börjar på nästa rad."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รอบลายจะเริ่มที่แถวถัดไปของคุณ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -40923,6 +43689,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "循环将从下一行开始。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循環會從下一段開始。"
           }
         }
       }
@@ -41080,6 +43852,12 @@
             "value": "Sedan %@."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จากนั้น %@"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41096,6 +43874,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "之后 %@。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "之後 %@。"
           }
         }
       }
@@ -41253,6 +44037,12 @@
             "value": "De finns kvar på den här %@. Starta om den och öppna Ravel igen."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรเจกต์ยังอยู่บน%@เครื่องนี้ รีสตาร์ตแล้วเปิด Ravel อีกครั้ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41269,6 +44059,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "它们仍在这台%@上。请重新启动后再打开 Ravel。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它們仍在這部%@上。請重新啟動後再開啟 Ravel。"
           }
         }
       }
@@ -41426,6 +44222,12 @@
             "value": "Pläd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าห่มคลุมตัก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41442,6 +44244,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "盖毯"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蓋毯"
           }
         }
       }
@@ -41599,6 +44407,12 @@
             "value": "Tumöppning"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ช่องนิ้วโป้ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41615,6 +44429,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "拇指开口"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拇指開口"
           }
         }
       }
@@ -41772,6 +44592,12 @@
             "value": "Småbarn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เด็กวัยหัดเดิน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41788,6 +44614,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "幼儿"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "幼兒"
           }
         }
       }
@@ -41945,6 +44777,12 @@
             "value": "Överdel"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ด้านบน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -41958,6 +44796,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上部"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "上部"
@@ -42118,6 +44962,12 @@
             "value": "Övre kant"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขอบบน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -42134,6 +44984,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "上边"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上緣"
           }
         }
       }
@@ -42291,6 +45147,12 @@
             "value": "Resestickning"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "งานถักสำหรับเดินทาง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -42307,6 +45169,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "旅行编织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "旅行編織"
           }
         }
       }
@@ -42464,6 +45332,12 @@
             "value": "Trendigt"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กำลังมาแรง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -42480,6 +45354,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "热门"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熱門"
           }
         }
       }
@@ -42637,6 +45517,12 @@
             "value": "Triangelsjal"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าคลุมไหล่สามเหลี่ยม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -42650,6 +45536,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三角披肩"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "三角披肩"
@@ -42810,6 +45702,12 @@
             "value": "Försök igen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลองอีกครั้ง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -42826,6 +45724,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重试"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重試"
           }
         }
       }
@@ -43415,6 +46319,18 @@
             }
           }
         },
+        "th": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "ลองฟรี %lld วัน"
+                }
+              }
+            }
+          }
+        },
         "tr": {
           "variations": {
             "plural": {
@@ -43470,6 +46386,18 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "免费试用 %lld 天"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "免費試用 %lld 天"
                 }
               }
             }
@@ -43630,6 +46558,12 @@
             "value": "Vrid en ögla av arbetstråden och skjut den på högra stickan. Varje ögla är 1 maska"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บิดเส้นด้ายทำงานเป็นห่วงแล้วสอดเข้าไม้ขวา ทุกห่วงนับเป็น 1 ห่วง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -43646,6 +46580,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "把工作线绕成圈扭一下，滑到右针上。每个线圈算 1 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把工作線繞成圈扭一下，滑到右針上。每個線圈算 1 針"
           }
         }
       }
@@ -43803,6 +46743,12 @@
             "value": "Typ"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ประเภท"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -43819,6 +46765,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "类型"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "類型"
           }
         }
       }
@@ -43976,6 +46928,12 @@
             "value": "Lås upp mönster"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปลดล็อกแพตเทิร์น"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -43992,6 +46950,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "解锁图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解鎖織圖"
           }
         }
       }
@@ -44149,6 +47113,12 @@
             "value": "Utan namn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม่มีชื่อ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -44162,6 +47132,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未命名"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "未命名"
@@ -44322,6 +47298,12 @@
             "value": "Övre handen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หลังมือ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -44335,6 +47317,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手背"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "手背"
@@ -44495,6 +47483,12 @@
             "value": "Garntjocklek"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความหนา"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -44511,6 +47505,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "粗细"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粗細"
           }
         }
       }
@@ -44668,6 +47668,12 @@
             "value": "Bred"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กว้าง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -44684,6 +47690,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "宽"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "寬版"
           }
         }
       }
@@ -44841,6 +47853,12 @@
             "value": "Bredd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความกว้าง"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -44857,6 +47875,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "宽度"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "寬度"
           }
         }
       }
@@ -45014,6 +48038,12 @@
             "value": "Spännvidd"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความกว้างช่วงแขน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45027,6 +48057,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "臂展"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "臂展"
@@ -45187,6 +48223,12 @@
             "value": "Arbeta maskorna efter * om och om igen, så långt raden säger"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักห่วงหลัง * ซ้ำไปเรื่อย ๆ ตามที่แถวบอก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45203,6 +48245,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "将 * 之后的针目重复织，按这一行的说明织到所需位置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將 * 之後的針目重複織，依這一段的說明織到所需位置"
           }
         }
       }
@@ -45360,6 +48408,12 @@
             "value": "Worsted"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วูร์สเตด"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45373,6 +48427,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worsted"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "Worsted"
@@ -45533,6 +48593,12 @@
             "value": "Stola"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ผ้าคลุมไหล่ผืนยาว"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45549,6 +48615,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "长披肩"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長披肩"
           }
         }
       }
@@ -45706,6 +48778,12 @@
             "value": "Yards per docka"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หลาต่อก้อน"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45722,6 +48800,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "每团码数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每球碼數"
           }
         }
       }
@@ -45879,6 +48963,12 @@
             "value": "Garn"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เส้นไหม"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -45895,6 +48985,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "毛线"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛線"
           }
         }
       }
@@ -46052,6 +49148,12 @@
             "value": "Omslag"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คล้องด้าย"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -46068,6 +49170,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "绕线加针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繞線加針"
           }
         }
       }
@@ -46225,6 +49333,12 @@
             "value": "Årligen"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รายปี"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -46241,6 +49355,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "年付"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "年費"
           }
         }
       }
@@ -46398,6 +49518,12 @@
             "value": "Bärstycke"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โยก"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -46411,6 +49537,12 @@
           }
         },
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "育克"
+          }
+        },
+        "zh-Hant": {
           "stringUnit": {
             "state": "translated",
             "value": "育克"
@@ -46571,6 +49703,12 @@
             "value": "Ditt köp väntar på godkännande"
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การซื้อของคุณกำลังรออนุมัติ"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -46587,6 +49725,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "你的购买正在等待批准"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的購買正在等待核准"
           }
         }
       }
@@ -46744,6 +49888,12 @@
             "value": "Ditt köp gick igenom. Tryck på Återställ om mönstren förblir låsta."
           }
         },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การซื้อสำเร็จแล้ว แตะ กู้คืน หากแพตเทิร์นยังถูกล็อกอยู่"
+          }
+        },
         "tr": {
           "stringUnit": {
             "state": "translated",
@@ -46760,6 +49910,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "购买已完成。如果图解仍处于锁定状态，请轻点“恢复”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "購買已完成。如果織圖仍處於鎖定狀態，請輕點「回復」。"
           }
         }
       }
