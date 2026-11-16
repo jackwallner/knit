@@ -1,0 +1,37 @@
+{
+  "designs": [
+    {
+      "id": "orange-tabby-beanie",
+      "title": "Orange Tabby Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "crown": "ears",
+      "palette": [
+        { "name": "orange", "hex": "#D9822B" },
+        { "name": "cream", "hex": "#F1E4CC" },
+        { "name": "rust", "hex": "#9A4E1E" }
+      ],
+      "brim": "A",
+      "rim": "B",
+      "stripes": [
+        { "color": "A", "inches": 0.5 },
+        { "color": "C", "inches": 0.4 },
+        { "color": "A", "inches": 1.25 },
+        { "color": "C", "inches": 0.4 }
+      ],
+      "chart": {
+        "placement": "motif",
+        "stripe": 2,
+        "rows": [
+          "C..C..C",
+          "C..C..C",
+          "C..C..C"
+        ]
+      },
+      "weights": ["dk", "worsted", "aran", "bulky"],
+      "tag": "Trending",
+      "starts": "2026-12-01",
+      "ends": "2027-03-01"
+    }
+  ]
+}
