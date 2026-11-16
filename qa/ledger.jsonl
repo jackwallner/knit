@@ -26,3 +26,4 @@
 {"created": "2026-11-15T19:52:10+00:00", "id": "Q027", "match": "motion-jump|testPaywallShownAndDismissed|paywall-yearly|", "reason": "System sheet dismissal of the paywall", "status": "accepted"}
 {"created": "2026-11-15T19:52:11+00:00", "id": "Q028", "match": "never-idle|testReturnVisitToAProjectWithAPDF|pdf-reader|", "reason": "PDFKit sharpening page tiles after first draw (blurry to crisp), no app animation", "status": "accepted"}
 {"created": "2026-11-15T22:31:51+00:00", "id": "Q029", "match": "motion-flicker|testPaywallShownAndDismissed|design-locked|", "reason": "Standard navigation push from the library into the design page", "status": "accepted"}
+{"created": "2026-11-16T00:01:41+00:00", "id": "Q030", "match": "motion-jump|testCoreLoopRowsCountAndSurviveRelaunch|projects-empty|", "reason": "System New Project alert appearing (cross-fade under Reduce Motion)", "status": "accepted"}
