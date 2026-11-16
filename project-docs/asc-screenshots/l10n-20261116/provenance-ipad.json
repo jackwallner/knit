@@ -1,0 +1,2992 @@
+{
+ "ar-SA": [
+  {
+   "file": "01-count-rows.png",
+   "header": "عدّ الصفوف وشاهد القماش ينمو",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "a32324a4f9f9de4a10363ecfad6af09186e6e37c1e56cad095c4c257b3b15db6",
+   "sha256": "06dee77b93b7711ec0f74932c0f5769aebe0a56967d19fd04a4408f15f704c2d"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "احتفظ بمكانك في أي نمط PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "d576d5902d27e700e1b48c03da150a441fa920bfdca51a349859078d28cfd7e9",
+   "sha256": "b0f3eb8f5e90570bf31215ca331058c7ff07dfbd7e73a6aeb0fa896514b8c452"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "اتبع نمطك صف بعد صف",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "9c0380f51645b13d823dcb4692610b450e2c2b3c6ec5ec4c1505107c4a71477e",
+   "sha256": "8a124ea002cffc8d15761339c6591b0e25e30dd1706a305ebdd9c6e90e522347"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "أنماط تريكو مكتوبة على مقاسك",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "d14bcbbbbb1a43647c1717e2d1f97cfbc86f36b32442fddd10b35f3c66ccd0fc",
+   "sha256": "3c1877c3d5b06393564ce6c05e30526dc39c6ac5d8350c4379e04ce8e858a524"
+  },
+  {
+   "file": "05-library.png",
+   "header": "اختر قبعة أو سترة أو شال لتحيكه",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "923b2c7d94b84577ac1c0d72aaa9b1adcac603dce0654d626e3285b7ad4dec57",
+   "sha256": "df9e93bc1cb883caf4a1b8a36224882c39ae53056d0656d654d5bde34ce3f4c1"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "تابع كل مشروع من حيث توقفت",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "99095808a9310db19107a3ab80e299df5870e097acf92314d8d23acb3782a944",
+   "sha256": "3dc9bc7805b20fb393142158a8da1fc6f986123bf12e2fef9d914998021ce946"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "تفقد خيوطك قبل أن تتسوق",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "0002efc523a0df8ba6118fb02c9799493a8decb36796ec0d131978131960eaa4",
+   "sha256": "5694a02f779b7e29f163318f1030c25a422f20396d20eaa65991ce8a3559b425"
+  }
+ ],
+ "bn-BD": [
+  {
+   "file": "01-count-rows.png",
+   "header": "সারি গুনুন, দেখুন কাপড় বড় হচ্ছে",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "a1f2e32dfa5dfc4e8c52ed01956fa64190c9514597f8d55acd136547249b5a76"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF প্যাটার্নে জায়গা ধরে রাখুন",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "4a532d23c176edf9b5b17712d79c501847d1018598f64e55709ce0b0c2173b26"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "প্যাটার্ন অনুসরণ করুন এক সারি করে",
+   "size": 168,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "0a286844de72f46a903c48d64a8c4c6acef0c5632b14cb6f3c1e4823cc2faa9a",
+   "sha256": "b9ea379939916cca445d61249ea3ba1948d2558988977d83b81d12233ff50b4f"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "আপনার মাপে লেখা নিটিং প্যাটার্ন",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "c4ba1a8ee58924ad927a21d85b34ee7a393b307b0d500803b400aa7a566af376",
+   "sha256": "9ebaae3af19dc4c2a612546161b70838268f4430d9c3fd48c56c54628f06eec8"
+  },
+  {
+   "file": "05-library.png",
+   "header": "বুনতে বেছে নিন টুপি, সোয়েটার বা শাল",
+   "size": 172,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "acc434ea906eb69d2117bd585d4c5eeac4f08a090564a879ae0632b30832c2bb",
+   "sha256": "8a48faeddd1ccad462755a16b065f15687b77378f5ffe2f0cae05bcc6fe72776"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "থেমে যাওয়া জায়গা থেকেই চালান",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "b454ab1b5d584694b3b42fa0736542a4924312e3aa4ac5ca6947f7f9e696f6e7",
+   "sha256": "c2ad0b70d886eb8775aed75044fb388cfe39e35a43394a212e44150f7b5e410e"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "কেনাকাটার আগে সুতা দেখে নিন",
+   "size": 176,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "4f30475b8bfed0a9f93c5145490961edeacdd08d943a5fd33d13f2da66eeca9a",
+   "sha256": "3408d7a012a5ffab0eeeadde9a9a32e24280bfb452c785ccb302297816b53855"
+  }
+ ],
+ "ca": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Compta files i veu créixer el teixit",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "c06aaa44626d0ce62418cd768a6f3646d4af3cd9677271e5ba57e6a9d9341e24"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "No perdis el punt en cap patró PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "769b56f189318cd9821eb554b1ae097a637459028b94794e14dca3d61bb6e64f"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Segueix el patró fila a fila",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "98248a47469c27263208b74c89624ccc053b28ebe9f9b8891875b480190b1332",
+   "sha256": "62050e6f1344d28cbaf5dba578a6fdf44061e5461fc5aa8efbcee60be8d16f70"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Patrons de punt escrits a la teva mida",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "beb3ea21d7cedf388b684c481c3e27470e21d97d1a8f1c4a12ef9a1dadd8cbe4",
+   "sha256": "d68f45896c7885cd88547aa788f3c25f27637a40eca400c41f3b28b6d3b42341"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Tria un barret, jersei o xal per fer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "8977133cee9fb83214684f1e5ad85346455de92cb3d7b79b57916f14d596d271",
+   "sha256": "5bf427e2d88bdffd6dbcf25edc225ab74034e793ee8718d751ba5a9734a7bd12"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Reprèn cada projecte on el vas deixar",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "36569388c0a4be1a5627be4d0fd4f5bdbb8b4e4ba697b87fc7c6a678eec4704a",
+   "sha256": "829244c16ba865c159eb57a1625c44344eaa44ad01fe61920bafed39f3455100"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Mira el teu fil abans de comprar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "6ad1d70385565fb0f693838203b1d6df7d40cabd9b99dcaf6c3a256e13d75590",
+   "sha256": "8c3134e26a77c9671dbab46f3b95d99e339dbc0cbc6214832307fe9debd61986"
+  }
+ ],
+ "cs": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Počítej řádky a sleduj, jak látka roste",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "5fa4f17a41db898644afbd03b6ca39c4ee597dd928c5d07e060574716006f568"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Neztrať místo v žádném PDF návodu",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "00d975c90ebaf5b817e543b35bb4328ca1a1caee7395cd603c919925f382fad0"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Pleť podle návodu řádek po řádku",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "4960c57f7be45c80d948f343c65bdeebd488ed3149c08468b4d77a1e196295a5",
+   "sha256": "dccba131e6a95529ee140dbb0d04117ee3f934bc2c80adfb2322cd8eee9bceef"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Pletací návody psané na tvou míru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "ea17e70b4c63b6259474928d3a3b52221d919d45017bc831d8955fed48870e42",
+   "sha256": "94dbc4cb093919105c5318b782b72264d0c690e114522c8481a63b077dbabfc5"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Vyber si čepici, svetr nebo šálu",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "a4594e65a3dc7af74bdbcb18790020c7391f5ebff2690f3db9f24d8c6dfb908e",
+   "sha256": "09416d39e358a4789e2640b83bdc2e33c308b5b4ddbea0dcf50850dd2ed23108"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Projekt se otevře, kde skončil",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "9f2ae8ee537a9f7bca7503e1736cda9e57e67e4326d5e196a5cf75bf718addf3",
+   "sha256": "4c91030e0f5df659cbb6e1091baa7935ad2c02d0ce05816630865ab9b2d41c09"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Zkontroluj přízi, než půjdeš nakupovat",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "e50ce664fde3248cbb55b9db93b656424ab1a07ba2ddbf384e646c2aaecd1fd3",
+   "sha256": "9233b0934aed47ad2a462a4b642f2dac09b5903bd6d8e6081873363bbfca3031"
+  }
+ ],
+ "da": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Tæl rækker og se strikketøjet vokse",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "5f48f5e41d0f3f174ed65841864ace656db508978844ea49253ba52e042d94a9"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Hold styr på rækken i enhver PDF-opskrift",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "6e70174a605df3faace87c335791628526ec433355a6a341fde164e81f50e3ac"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Følg opskriften én række ad gangen",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "a04abd97c204cee52b5918dfbeb84c824173ed4d38769ed90fbfe1aa9e4ebed0",
+   "sha256": "0955326072aca897ca613e1ece67ccc7566b37799e99cc3ecfe6065b22b545cd"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Strikkeopskrifter i din størrelse",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "f94bb8f5c5f55a634daaf4129a5290f387e52b78fdbca3725bb0381342e724ea",
+   "sha256": "f334af1de4c183b2ac3612a6c9709fc176891e3862850dea96c93bd86cfbd2eb"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Vælg en hue, trøje eller sjal at strikke",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "81505396702e0d76cf1ce39b6dd331c097ca09102fb862c1a365e51c830cccdf",
+   "sha256": "e405fcb016f249f99998996e33999b4c799cc4db6dff639f6395cd226b8ad9e8"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Fortsæt hvert projekt, hvor du slap",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "edf696b0b5fa68d1837f46e109c770bbd24dc135d774df9d1261dac703d97ce9",
+   "sha256": "9804d6a2cf3fdfdaff51954049fa2b0e3134d8e25b3f87ae3b1218267ed70995"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Tjek dit garn, før du handler",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "8babf7748f008d46c93ac0b351f971c63835464c1806b664f9f00b535987b1d3",
+   "sha256": "1c39076a9ae88321bb5bd8527e72fb2a04f0d475fc17e2c059765f52d75cee25"
+  }
+ ],
+ "de-DE": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Zähl Reihen und sieh es wachsen",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "d9e17edb56fee8e61cfb89f723beaf9411f8b01d009440bd144e0a1fea553228"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Dein Platz in jeder PDF-Anleitung",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "ab0e245ccffb76343f300f3b01c43ff7cfc65ec53ae980e6b4b6360756c0e186"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Strick dein Muster Reihe für Reihe",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "6b80512d7505d9c5d415f30c43dccf1b62527262f329a4aea9ce0ff7da3494ad",
+   "sha256": "e2dd69eb3f02a589e135cae8f89961aee7712623d6d3c0c0219b610a56f3b326"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Strickmuster passend zu deiner Größe",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "28b0507894b7085d2ab67f09707f705fee5643c8553b1d194c106edf3169ae49",
+   "sha256": "d077d480ee7f78e08e77351533e27b10957a50942d72eb60ceac54cd8b515407"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Mütze, Pullover oder Tuch zum Stricken",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "476ff9035ead47a893fdf65e733abe06c1354485f8ac2910c7e7a53eb33bade7",
+   "sha256": "fc57fed3c97e51b4a61396fb9f217a240c2031d41388c3073dc737758d87381a"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Mach dort weiter, wo du aufgehört hast",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "bf88648353472c9ce0c5d48cbdba99cf1e0b5375caff4fc182180311ad07419b",
+   "sha256": "9f0df9e2e0fa5e1e1e660b423d1fe30b9b8e614982374a564a133341be0cf7e1"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Prüfe dein Garn, bevor du einkaufst",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "eb9021df8686de08bf6df6502d52a294f9dc958e9f1864b75a059d94085f202e",
+   "sha256": "976ab86b5e00388774f6f637749715e5a6ef1b1cf03674cf6390fece70506512"
+  }
+ ],
+ "el": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Μέτρα σειρές, δες το να μεγαλώνει",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "2521d03b3e6b0e9ed0384ff5909d11a154ad7ffc3d9ae8d9a584c4861fef66a8"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Κράτα τη θέση σου σε κάθε PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "96f967a7e509c5b865a8a32defec704c249c2e0363a078e6730495bdea092265"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Ακολούθησε το πατρόν ανά σειρά",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "3135830daab43e5488dcb0bd100de408605c941856cd165144026d24defc965c",
+   "sha256": "e3398a93c9fe3a308f089858c089e34134bd374539d3bebfa711ebbaaed537a8"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Πλεκτά πατρόν στο μέτρο σου",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "a494a43a682c48a93a801906180b986657dd5e1cf99068876bcb957aca886c42",
+   "sha256": "c066bc02a6c7e672038c9307d6356f61e4f4b0675b5f137b6f7cd5660d6e982d"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Διάλεξε σκούφο, πουλόβερ ή σάλι",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "251f6c251aa7d6b0ac8663f04883e04dfffc93e0f1fb0decfd71c8336ef40ab0",
+   "sha256": "e26bf907164a20af83551b60178a13f59288ad20a2caf10bf48969bf9a061345"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Συνέχισε από εκεί που σταμάτησες",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "dbe4cfe905766641fcb9d4ac2fd93672eadb7259017caf68c171ad365b60a0cd",
+   "sha256": "7bcb98d164e27775a9faa24299ce2cb7b0ff96d05c0d5351eec6a5db23f62030"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Έλεγξε τα νήματα πριν αγοράσεις",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "10f842f25388e523b7c42e3734416450af721ebde8e8483816c9a5e72b9a0f48",
+   "sha256": "e79df6f3bb5bd30a9abbe739b1d00551d9eea69595dfe0016b9e08ae593001d2"
+  }
+ ],
+ "es-ES": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Cuenta filas y mira crecer la tela",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "2d729d0769b0782da34ddcaa5fbe38c80b23a26e31d862f8a4247684e7ef176f"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "No pierdas el punto en ningún PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "e912f47063233b2d7b40b88a45d52ba414416aab633247af67a32dfbb3990be9"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Sigue tu patrón fila a fila",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "79ad7d11c223fa1cb58fc2cbc2820eb2bbf6ecf9ea27519d6733ba79a2c8901f",
+   "sha256": "e488fd77bc766aa85fb285d606dc645b3f7b498781f6f8e216e22bdda75da991"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Patrones de punto escritos a tu talla",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "ea2e7e7c8038d03165915f7f9933d71a056a16df66f861833b6cc0c9aa22d0ee",
+   "sha256": "8f48486718b82c1f679846432b40d9fef889845466f61c09d5d4f7228d585758"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Elige un gorro, jersey o chal para tejer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "74fcdf11b10cb841bb14c44094a2eb36dd9d28c8fdf1e3c3b58c62c4fe8105e0",
+   "sha256": "1706fc56a5212ecc39fe86f24387b1df9e65853c3e5e8d34cf07040fd1a3e26d"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Cada proyecto, donde lo dejaste",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "35987d70b3ba9588c2c97172df8216c96ec4feb3a7f03baaa82b8b4709e0da5f",
+   "sha256": "71f0c218a43d2c0c93e72f0abd284f38e328d907191d7387da6bcb978249c381"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Revisa tu lana antes de comprar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "7f7280135f191fd75782e4bd6aaf585a03a380866f6d56c5b6b113e341e1e88d",
+   "sha256": "c50e176a4ae061861b07f6ba928d166017e0da75bc55252ecf6c47efe32718c1"
+  }
+ ],
+ "es-MX": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Cuenta filas y mira crecer la tela",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "2d729d0769b0782da34ddcaa5fbe38c80b23a26e31d862f8a4247684e7ef176f"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "No pierdas el punto en ningún PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "fa6444faf1d67520cd847528ad50f1c77f7b2165e6424e08971b65b07d61f871"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Sigue tu patrón fila a fila",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "69a9c80602c39ca48e5a4e35745812c1749360b0a8ac91e7f33f5f4ba37ee503",
+   "sha256": "fc51c77eacb449c468a31aa8411a9dac31ca9565cee267d9a7899b50427974e4"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Patrones de tejido escritos a tu talla",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "cfa889c04693e2d0d32b8ba64c864835c680f5d0f19080571e811b73d09e091a",
+   "sha256": "4a3ab89889793b9d4a1ff92d5ab51cbea4f1093284b306d5198deb7f981ea7b7"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Elige un gorro, suéter o chal para tejer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "74fcdf11b10cb841bb14c44094a2eb36dd9d28c8fdf1e3c3b58c62c4fe8105e0",
+   "sha256": "2420dac99b41c02a0f3a3f984ff258ae0e8e264095156729d2bdca8f6d3c16e3"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Cada proyecto, donde lo dejaste",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "35987d70b3ba9588c2c97172df8216c96ec4feb3a7f03baaa82b8b4709e0da5f",
+   "sha256": "71f0c218a43d2c0c93e72f0abd284f38e328d907191d7387da6bcb978249c381"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Revisa tu estambre antes de comprar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "f7862361783149bc8d6059a97ba5f464454f6f68bf5eb8f0bbd4558ecaca32d1",
+   "sha256": "ad62b85c13ff81b54b82b9ac43f0b2517ca61513364551a3e56727f0f5d93317"
+  }
+ ],
+ "fi": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Laske kerros, katso neuleen kasvua",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "9e198c3e81eb82cb8a50330b544aacaf03d96c758eadf1eee24122631c549907"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Pidä paikkasi missä tahansa PDF-ohjeessa",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "03c8ef4cdb054088ba5db25e82c4a44cf58ec183c41fc6a5dfdf40f09669327b"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Seuraa ohjetta kerros kerrokselta",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "e63eb9800a7acef4f281973922e1a2cbb0b579f2ccdb0d31758d359c914788f1",
+   "sha256": "dff8e04674edf4bf6936225b7aa7ac36f35d1ddb04d76f28477ed06efd7ada66"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Neuleohjeet sinun koollesi",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "4e11f730767dafcedee112ead25078b520a8a84d4604d2c6d99667cd80346021",
+   "sha256": "da00c61f61c486d82987a6520ad9b0fdb0251f6bcdfa8c8eab0cc9a2dc9046df"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Valitse pipo, villapaita tai huivi",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "9b48e74c296151bc41c26d388ab634ea5133f09fd3abe41d79a92a0689da291c",
+   "sha256": "3e57faf9b2b25da92e2d880ef23e3dcadd6459e83b4ad8c8061d9ca9bce8cd19"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Jatka jokaista työtä siitä, mihin jäit",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "a9237d941b1478c77d9c225d5509a9f21b1ec3be1a3a7fd83541a2120e706228",
+   "sha256": "f3283aaa82e13b5269fba932ac2de1706b4612249afe114d06e33d0b8d63c32c"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Tarkista langat ennen ostoksille lähtöä",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "4d8bf73574adcbffec7ad8923121f942fbcf1163025496d890a7e42d387d42fb",
+   "sha256": "becc78d1497856f7fad00ed314212298f8625f77c01c48a7eed97768f5a4c84f"
+  }
+ ],
+ "fr-FR": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Compte les rangs, vois-le grandir",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "11f870b3d2be383660c7bceedcfe2c5be468855215ae7c7d319372319a4183b6"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Garde ta place dans n'importe quel PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "054b8e31dd1c50cdc41bde06f49bde9ca53e5f7f878a1110a598c296bee39dca"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Suis ton modèle rang après rang",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "31e605f57170e714247acb02fd5d5fb6179ee2dddcaed526e79cc1b0c45c1dd0",
+   "sha256": "2d15cfdcf85fb7beba6c9ea1a340293700567d796c7ca94edfe7662e91cba2bc"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Des modèles de tricot à ta taille",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2eb6ad4fb7acc1ca7ee452a2114a982ad8bfb40e38ad112e808368e5035df767",
+   "sha256": "cd426f79549c71fa21d9aa657e39ecf725af058d4df504077eca3fb211bcaa2b"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Choisis un bonnet, un pull ou un châle",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "a1e7d67e1926c216492deff4169435cf454a23f24978b56629187111b769be4b",
+   "sha256": "71f02f2c168008f9ed0df4c3743c117a0231811c097d97c3543a47de474b196a"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Reprends chaque projet au bon rang",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "097205a22f3eaabe6528f95424ffdbec5f6e1690cad47c6e874f8a46b124d2ab",
+   "sha256": "3421de8cbc34c1c84795e2f5551fe7047bd22f230393ac35012d4df03ae49d78"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Vérifie ta laine avant d'acheter",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "a3aaca76f0a56293c1c1660eec66c46f52443655e28940bafba6e24b109899b6",
+   "sha256": "27d50fbcafe75c32a5e0b776a7f5283cba1526002ba520857bfb6d8fea327ef3"
+  }
+ ],
+ "fr-CA": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Compte les rangs, vois-le grandir",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "11f870b3d2be383660c7bceedcfe2c5be468855215ae7c7d319372319a4183b6"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Garde ta place dans n'importe quel PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "f005af921f264b4b5661ce1e38465b0e817356e360e635a409f6886736749b36"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Suis ton modèle rang après rang",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "31e605f57170e714247acb02fd5d5fb6179ee2dddcaed526e79cc1b0c45c1dd0",
+   "sha256": "2d15cfdcf85fb7beba6c9ea1a340293700567d796c7ca94edfe7662e91cba2bc"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Des modèles de tricot à ta taille",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2324c0e3d52bcfcfee53e5af5d686bdd81e06d2b1a172a82746c37696c8e73f6",
+   "sha256": "9775e941ab9c9091563837b711ffc80fdd9a9b0767b2e4b0f5b4706aaa21aa42"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Choisis tuque, chandail ou châle",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "a1e7d67e1926c216492deff4169435cf454a23f24978b56629187111b769be4b",
+   "sha256": "4e3a2419a33cc6de7b4f954b46e96e9c7fcde2a3c2c70312fb5ff91b55268a06"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Reprends chaque projet au bon rang",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "097205a22f3eaabe6528f95424ffdbec5f6e1690cad47c6e874f8a46b124d2ab",
+   "sha256": "3421de8cbc34c1c84795e2f5551fe7047bd22f230393ac35012d4df03ae49d78"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Vérifie ta laine avant de magasiner",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "9f93800c7628f71ffdb32ffc6bf4cbd930a1342dff41fe35d714e7a772beef33",
+   "sha256": "8840824703f998483d9badf6388042406259257847f3ae5a0d81cdfb67cd6fff"
+  }
+ ],
+ "gu-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "હરોળ ગણો અને કાપડને વધતું જુઓ",
+   "size": 176,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "35062559263667201930d6cdc4a7c359b0bb23bc7b3c972b22bf88b5993e3cde"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "દરેક PDF પેટર્નમાં જગ્યા યાદ રાખો",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "b77ed3d56e9c93960ded59bf35b561c5b751796b23e686f55eacdf294ed62c32"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "પેટર્નને એક સમયે એક હરોળ અનુસરો",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "612252e5cbfbef82644eadc5dba1469219ccba658c77b072b96f675183029d42",
+   "sha256": "57e63a0be3b75ef6c5dd25ba75b0ff0b3dc04497809a27540ce9f385c1d8acd9"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "તમારા માપ મુજબ લખાયેલી ગૂંથણ પેટર્ન",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "cfc65a1ced210eb75c381f76535bcfc2928a485323b62c8d3c13b137fcd749c8",
+   "sha256": "a18bc105bcfd8065ef64004a8e04584cfe687580b12d9dec94e2bfbdddc6d46b"
+  },
+  {
+   "file": "05-library.png",
+   "header": "ટોપી, સ્વેટર કે શાલ પસંદ કરો",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "5ce858289e7b75c7f904c531a9672bf81a76183f8497cd34a2c715009cafb348",
+   "sha256": "2a31a0e511d5fc8eafc2a3d86625107b5f37ecd8e9562ffabc1e530a77160f02"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "જ્યાં અટક્યા ત્યાંથી ફરી શરૂ કરો",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "5e92078c678d27e96aebd8d0f79345dd6be063b8c5fd19b09410f901c93e08ba",
+   "sha256": "ee5b06e8c8a12f1a55f84e059b8b1855afc19896baadb4d427d17f48c91b74ef"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "ખરીદી પહેલાં તમારો દોરો તપાસો",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "8a7f4635a2b6bc2ac9dc7e43abebbcdfaa4607f3620515f473e667875cd4c148",
+   "sha256": "a188741f3781197e6c62799fd9aaf2442baaab6dbd46ff3b2cd1943165bb7c62"
+  }
+ ],
+ "he": [
+  {
+   "file": "01-count-rows.png",
+   "header": "ספרו שורות וצפו בבד גדל",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "3f68bd9ac5090b0428c70e2a509a7686801d0c561f26958960e067d70cf3ba1f",
+   "sha256": "0052ebaddc3c7f9d459b0ec54f0f5a730c2feeb2d51b47aa329fa2a4797b215f"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "שמרו על המקום בכל תבנית PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "8ae4b92ec8d7e2c0cdf25be763756db9299aa0fcd9fd1144c932bf8e47410a54",
+   "sha256": "53720729fcb6a3de565d611ce1f77176ae53d10fd95c88176d720d677ebe2ed5"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "עקבו אחרי התבנית שורה אחר שורה",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "eaebcb50cd5119d41e54c74d37dc3840a89c83688163363879ad15938750dae7",
+   "sha256": "076d1e6f6b8ad99824a996ccef66df08c84079cd78e9de0d8f4f859635a9ca5b"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "תבניות סריגה במידה שלכם",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "9257f4bbbdc2a885c27a7e55edd5b3ac856ce2f0a6322ed8d4d9c46191ec4f3a",
+   "sha256": "483f7f568fd9c5aa752638cbe2702af2c39c85ee3265fb59ad3a798575c14d7b"
+  },
+  {
+   "file": "05-library.png",
+   "header": "בחרו כובע, סוודר או צעיף לסריגה",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "4c27ecd6c01abaffcf9a66227ba5746c0a464fb971728110f3274e667c3b9dfa",
+   "sha256": "412dd2a93481102a8e9acd5242a9bff1e3e46d8e1552c431f9d3aebcfe635690"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "המשיכו כל פרויקט מאיפה שעצרתם",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "1f175746b53c6e1a4449907326944c0fcbbd57407a38d5e5d950d9af423b665f",
+   "sha256": "4bcb34413e1661380eca418198b6bb91490e277cec200d11ea27ad0f535b5dbf"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "בדקו את החוטים לפני הקנייה",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "7d921438578e3ae5014d955139653062a30a25536e30d82d9ee5ff179f7666e3",
+   "sha256": "95f7dda22d83ea7fe3c9d95ce370c5765e1e7e07853b77e712a90f6bee18cfc2"
+  }
+ ],
+ "hi": [
+  {
+   "file": "01-count-rows.png",
+   "header": "पंक्तियाँ गिनें, बुनाई को बढ़ते देखें",
+   "size": 164,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "dda1db1106bf49cbb4b272de6808386f80b1bf8f99c40bab8411dfa645052a12",
+   "sha256": "978c8f7dd9014153321d50f52f64b6d366836eff4f6820bdac4d4460038fc7ad"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "किसी भी PDF पैटर्न में अपनी जगह रखें",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "d39604a165bed0d2d928a0e9ace233912c24f813bae79a77915cb795e4cb261f"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "पैटर्न को हर बार एक पंक्ति बुनें",
+   "size": 176,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "6c22f1ff13bfaa0e03fb1dfb86a7e70cc2eea56e941b3c9ec6aadb30dda99d54",
+   "sha256": "4d2731281ffc469eb72a9cb3e82ae533a8492bfa8e72d0dbbe33e02aea9198c6"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "आपके साइज़ के हिसाब से बुनाई पैटर्न",
+   "size": 172,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "9aad34587a6afd425f681fd7a4b2641f756393e1cee705ad1fb85d291012c481",
+   "sha256": "f7056359454655fc988315cafbad6296ee9f44911c3490685559000f8597eda9"
+  },
+  {
+   "file": "05-library.png",
+   "header": "टोपी, स्वेटर या शॉल चुनें और बुनें",
+   "size": 168,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "7446bc2c47a18eb53411312c3437a0a103fbb1bdbf22cf12a916598272ebec1c",
+   "sha256": "a799bfde6befb3e3c45d8ca76aab42f55167296d1532f3d0ac8c59e2d7004d42"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "हर प्रोजेक्ट वहीं से शुरू करें जहाँ रुके थे",
+   "size": 168,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "97b91cd3bdd8435175db9223d60bd4ca54d0f0785505231c4799cd04dec39950",
+   "sha256": "d6ff48f4a93017d68fa4b4ece784a6298199a9c10a6f7f1d67ff1f0b8e283658"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "खरीदारी से पहले अपना ऊन देखें",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "e93a57b14fb27e8fc60d9bd23b6a37bbe8eaed992aaff1b9382da333c3230f35",
+   "sha256": "ac1c20fb0eb11bbece9e6814a82576aa7e28d7edacc369fd5a4f0747079707a4"
+  }
+ ],
+ "hr": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Broji redove i gledaj kako pletivo raste",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "80cba40db61842289a78f7f71a6676d002f371ec94b7372a2c0069975b172d09"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Zadrži mjesto u svakom PDF uzorku",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "b724c74c07e0e315da2f002040e5cb7e18e41d1c03dde0236c725b6e1db1c79d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Prati uzorak red po red",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "93e23a4389b9757b61912bcdeb262fbc50730dcce946dda511bb30e1e137a3ba",
+   "sha256": "8ddad9d6b97ef05fb7f90f512c4c09887f023211e0fcf0449b5bc0c71aa02a5a"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Uzorci za pletenje pisani za tvoju mjeru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "37d4259ddc1b32ff9d2b48b55c9e0561fca17285413d2e087d5acb095b217324",
+   "sha256": "d8fdce888ede2effbbd3d4e21cbd755f2fd89328083fbad7422b09f8f68cfb53"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Odaberi kapu, džemper ili šal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "46483fcc93e4753b5b3d8d71344f8506494fb7bf37d14a1ed8216d305ca0589f",
+   "sha256": "6924f28266dbbd8067d11a1fa20a7a2ed528cf62f7ed0b5863c34d61889076fe"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Svaki projekt otvori tamo gdje je stao",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "10029ab8a9fd0a58d21dbcda4984aeb0d1b2e76d422dbb45f2b467d448dcba7b",
+   "sha256": "954640ec3b46fad20b06d63ffba487fb93fd1a0db5958c65f8a8909fadfb1048"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Provjeri svoju pređu prije kupnje",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "8bee06ba542d567eaff60d15e6b011382fed5d106a496e85d253fd7abf042d28",
+   "sha256": "42ae0368e0d02f6053b14a94ac46e4fd7e749364f8d75dfc412678431a2eb22d"
+  }
+ ],
+ "hu": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Számolj sorokat, nézd nőni a kelmét",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "1156519a58cdf99a089d263c036a9c4b9eef0d4ca931ab26e58bd9e050dee434"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Tartsd a helyed minden PDF-ben",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "1ae417096c5ef575780e4df084c459e7911ff5ebe82de990dae673d699ffd84d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Kövesd a mintát sorról sorra",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "189e8ee52cb00ffc8493bc3e85c087a70104e23fb0703141d7804eb6dc29389c",
+   "sha256": "615938f0b7d81c318b4d6f3c22db66344e85f19fd2c796e6a7ed4263090423c9"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Kötésminták a te méretedre írva",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "183adc3f6d2645983daddfaeabff92a498f41a2f80fd13dab9d476a589ae07ad",
+   "sha256": "f05df5f9b9f629d4cbf0e994aeedfdb72bc957b984e658d57f6e9d11f1c0465c"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Válassz sapkát, pulóvert vagy kendőt",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "bf1b6c6bddf2d2d9a550687712d4febc8025b39bb74f8c4f1c76c7686b1c10b9",
+   "sha256": "90931dc9606ca8e24dbe461e90ed2a8409790679c86ffd83c371db38b75ad4ee"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Folytasd ott, ahol abbahagytad",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "228bc238e6d1428ec3d884c1f64b31561ad27765c1dba71fe37a304c9f91fd7f",
+   "sha256": "0a5112d0a850da0f5a5ca40d573016022fbd9377172aa9ffefde0f6bfb93ce16"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Nézd át a fonalad vásárlás előtt",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "3c3cb7c8a9bcc6a00286e8e1ddaf646912d945c4131ced70ad05c7c5a94ddd11",
+   "sha256": "cdb3ba743c37cb671f93d04f274dc986fb2ff1e87f0bc95a8860e8046e7aa2cc"
+  }
+ ],
+ "id": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Hitung baris dan lihat kain tumbuh",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "cb6936be3272540fcc8409c2a809e3a5c77b91f3387fe8cda0043b207b7db65b"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Tandai posisimu di pola PDF mana pun",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "3a5f5495fc86d3da5fb6b6f8dede609995859b541766a60b6b3cda28de9e2673"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Ikuti pola baris demi baris",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "10d22179cd3322b6e6bfdfdfd4221f2bcf7bec5d8f8542f91578eb35dc9a8933",
+   "sha256": "ba5dc22199d007975b6160b023b2d49302172337101de06be89045d9758ec405"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Pola rajut ditulis sesuai ukuranmu",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "c233a204c42d204632357f6b2a29c58a87329f569776018db64a86e4c2d0ad20",
+   "sha256": "a7a671cc20e52db522eca8965d016f059a3f20e74841fe3f0c5545705c64032e"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Pilih topi, sweter, atau syal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "756b94957bc468bf8b18028db6bef6a387abb33e09eed5f7a9b071e7ad2523b2",
+   "sha256": "514573a820672125a31cda3d8c32c667768a919518748b8ea02dd04ed3f6f9b1"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Lanjut proyek dari tempat berhenti",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "4910896d5f7d74272464ca9e6d729a78d7561491b5f8835ca02389b2c092107d",
+   "sha256": "bfba93ddddd49e34f0d7c15a32281272f8dd979f7c08d02a80c4132b9bfa7f68"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Cek benangmu sebelum belanja",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "9a192f1e1a528b635a91c12102e2c0511ec8f0533b07aa91c3b682b5c2d9b54f",
+   "sha256": "0561bdbde7412a325bd567f8d07ff6d88d58018e09b97f324c59bfc06f77c36a"
+  }
+ ],
+ "it": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Conta i ferri e guarda il lavoro crescere",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "0ec9f773b4a2ef6fc8849c88422befc9f6a0ad95b27ede9970ae391c681f4eb3"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Non perdere il segno in nessun PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "7c1bb3f89f73a76cc06a0b2f256f1e5687dabd6f15f57eb3af1b71556d5b6a7a"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Segui lo schema un ferro alla volta",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "2e795bdb28a3d4d620691a60f535637bd4849a275f096b69800325205e3de6dc",
+   "sha256": "bb1c07d430a8bb424763ff43d7c38f89354233401cfc4539ca5130180fac3649"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Schemi a maglia scritti sulla tua taglia",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "a8fa175a4372db2e3faf15691fdf68ccb593a51f114c7ac8e94af9088c9fdda0",
+   "sha256": "f2099b2f9939938f6c314b929c473e677d913590755f2643d16e0bc8c113e44a"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Scegli cappello, maglione o scialle",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "2abeda3f73860214fda5e73d775b866a8859d65ad04f35cc4c648331e588c8b4",
+   "sha256": "0de61eab0abd6b04b7ec605d411ce731f01efc2232bdbbee8ea2d613f5ec15a2"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Riprendi da dove avevi smesso",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "f51213aa8d260ebbf5673283b43073526cb7f002ecc668d8b63c993c7f1f4e2c",
+   "sha256": "53b57b8aee903122b4aa05a135a4c5da4be54844dc94757852325a485d9422f4"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Controlla i tuoi filati prima di comprare",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "83a5ff81b9a4df031aedd2a13ca6fd0c60e23308671ee54bb5d055a06b0afc75",
+   "sha256": "9b096911298b57d4c4a20c5e8334733acc412b96628b04cf1729c8828bf4aac4"
+  }
+ ],
+ "ja": [
+  {
+   "file": "01-count-rows.png",
+   "header": "段数を数えて\n編み地が育つ",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "8f35143184e753fadbda491af220447a1fbd3f83367c3915f30a33170a7b86b6"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDFの編み図で\n現在地を記録",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "7fba1e40cf5085566264213e76ace3767a1c1300aa257a4f8c2e6dabb207aabc",
+   "sha256": "45763100bd4e664ec61f9c5fc054624bea09f6dee452a03b8cf9d45dfe0a3920"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "編み図を\n1段ずつたどれる",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "b9565f22bebdc2efe14dae803d74ec53c2042f98bba3028d329db6c28a01ec7b",
+   "sha256": "2d99569694359a5d5aed9537664f162dcae918a1d37e213835cef14c34dd11f7"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "あなたのサイズで\n書かれる編み図",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "64c71f62a60a77ab28c951a71331b3332242ddd2cf0976b5176beabedb11075d",
+   "sha256": "f767a9f42f5ed963060952409500443213e8eda50aaa0fff7575fc2b5cae2406"
+  },
+  {
+   "file": "05-library.png",
+   "header": "帽子やセーター、\nショールを選ぼう",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "aebd6981d9e89a1b3c80d934fe7688a69372e7238033f1dc4184f9793900d5b5",
+   "sha256": "74960086160522e200c9ba3ed99c004efa71a071a1a6060158a41e22bd61778d"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "各作品を\n続きの段から再開",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "0dd7a569e37a4659c736da496f20140cbd192f2467294792fc5d1208c33ee624",
+   "sha256": "0ebdd71ddbb22be0e3889f57a993b75a9f9c67b18d2361a233d373840b457b13"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "買い物の前に\n毛糸をチェック",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "644fe776713d44d6e31aba014611175f59b6082ab06a042a4b9f7143e4afa0fb",
+   "sha256": "e503d7cb7ed438e128e3111cf96be3195bbc241521c0babaedd8f6a0d67da770"
+  }
+ ],
+ "kn-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "ಸಾಲು ಎಣಿಸಿ, ಬೆಳವಣಿಗೆ ನೋಡಿ",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "7b6a93617f2e777d17233936085af427429273e2963ad4a6ba346df3ce38d3de",
+   "sha256": "f1cb3865235a649673f75bb2b89504b3ef058926517f97b61b3a9ffd7accdbb0"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF ಪ್ಯಾಟರ್ನ್‌ನಲ್ಲಿ ಸ್ಥಾನ ಉಳಿಸಿ",
+   "size": 168,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "f98d11d0c868c92e561782cf8efef1dd249ad107fe3be2e88de4f8cf72dded28",
+   "sha256": "dcb6a40b830a5fd42a64eb37c9c88d7389ffafb73c201f5e78dff8d49c303cbd"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "ಪ್ಯಾಟರ್ನ್ ಸಾಲು ಸಾಲಾಗಿ ಅನುಸರಿಸಿ",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "ad062dd95fbf571cfafdebae4103fb0dcd0dd161b4d356967eaaf6c1b198714f",
+   "sha256": "a4a1e4b18db96d7f04570bb4e3651a7690c9db86944dabaad86dd2c2dc8a87b8"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "ನಿಮ್ಮ ಅಳತೆಗೆ ಹೆಣಿಗೆ ಪ್ಯಾಟರ್ನ್‌ಗಳು",
+   "size": 168,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "6ef6d9c91ace689e6d1462b8f3c0a002fb5ffeb860c4247ff54117a41d3ebe8c",
+   "sha256": "0974bd70356be329c8ce4b27e471d3ee803792650a7520f84f8e20a0df9afa85"
+  },
+  {
+   "file": "05-library.png",
+   "header": "ಟೋಪಿ, ಸ್ವೆಟರ್ ಅಥವಾ ಶಾಲು ಆರಿಸಿ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "838037e45ecabb65ee7c42112c83997a1b011075db0cfd12e18d1bdd67400edf",
+   "sha256": "482d2609d30fee584c6e0e0ec693efc7c5892d7b2288ce16e9618300318642b9"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ನಿಲ್ಲಿಸಿದಲ್ಲಿಂದಲೇ ಮುಂದುವರಿಸಿ",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "511f65a9eb3a3d3ad639c16f431cdea0393312a90f9da92b8a71213df53a911c",
+   "sha256": "a7ccdb3eab169f69c35367be079ac22b17f082b9aaa03d5454de46bacc0b745a"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "ಖರೀದಿಗೆ ಮುನ್ನ ನಿಮ್ಮ ನೂಲು ನೋಡಿ",
+   "size": 172,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "32f9c97d90698bd6d1e7301475e2f52905cfb63803d47e987271bb1cd9ca602a",
+   "sha256": "0e4b4296d59cfca5731284561bf21bd87f57cfba65a5997bb43344fee024c018"
+  }
+ ],
+ "ko": [
+  {
+   "file": "01-count-rows.png",
+   "header": "단을 세고 뜨개가 자라는 모습 보기",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "1ded843557f18855c4770681ec30e8971a75cdb3a5f43c00e18f0ebe11085677"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "어떤 PDF 도안에서도 위치 기억",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "02a9f68fee8aa6106b2cf107494ae0316d79f91f825cec824d9aecf0b25730d0"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "도안을 한 단씩 따라 뜨세요",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "182992e3b3cfa4c2e130a29830285a23129d00f3248d89b95976276109039310",
+   "sha256": "60b8ded73b12ef39f07ef159976e51906ba6b9610871f193a8677ae061dc78bb"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "내 사이즈에 맞춰 쓰이는 뜨개 도안",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "363d56c2913c51eda82f9448814a61335f44d238f5941c0e4a8120715ee00960",
+   "sha256": "c9a5a33ead7ad9e1f04e65714c5935ac5e3126d750ebc980b27938d05d71fcd9"
+  },
+  {
+   "file": "05-library.png",
+   "header": "모자, 스웨터, 숄 중에 골라 뜨기",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "bec1f4990083a88bf6b1dbcfbb9c53c555747009f3e56057b7b4dffdd7007390",
+   "sha256": "3a7e26e643e3093fd3885ba1242ab949e6d18dd0219085070f4d4c80c706d248"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "프로젝트마다 멈춘 곳에서 이어가기",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "a064ab15e70f16e2aa0a80e45db45b4be0ed2d39c25dd6ea1fbc362b5b8e820d",
+   "sha256": "6a536400e39d407e2fd5276fc4f4cb57eb6d510db11e179bc26d57edc70cf4a6"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "사기 전에 내 털실부터 확인",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "bcf87dfe38444c7ed072f418349a8c2a7c2525c07b5b3448c33261575bfd99e1",
+   "sha256": "bbb08f3cc389fe1a9355f4bddcaef84ed70f463937cc843d7a03e82901788613"
+  }
+ ],
+ "ml-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "വരി എണ്ണൂ, തുണി വളരുന്നത് കാണൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "12c58ce80fdab0514bc849ce534b9edb753be06c80f3528c3c03bea7e984d4b6",
+   "sha256": "740ce807bb670426c3a40a7b6e0ed7be1edf9d502d0610da928402156cb686f4"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF പാറ്റേണിൽ സ്ഥാനം ഓർക്കൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "3fdc45109b33a3ddd17c3ad63d837b09a013ad9b847bc0e835715468657ebdf8",
+   "sha256": "713540cdbe692609b843e490d89e5ed687e80c7f7d14af5aff1d741a03e4cc7d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "പാറ്റേൺ ഓരോ വരിയായി പിന്തുടരൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "2ab9d430c38299c3befdff0364741011a0899a8c50cca9bf55fd0077515a55ce",
+   "sha256": "19defc1f3cfa87a7922314983c7b5175010e2d6d6f933088f5b2b86723ecca2b"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "നിങ്ങളുടെ അളവിൽ നിറ്റിങ് പാറ്റേൺ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "6ac512072e3419e5aae12bbad9dbb4be804c748a072b5233302b9a88b62ea908",
+   "sha256": "665875a41ea7f14c4f7d5f3d82368603050e0eed9371dabbec3c08428d1ffeee"
+  },
+  {
+   "file": "05-library.png",
+   "header": "തൊപ്പി, സ്വെറ്റർ, ഷാൾ എടുക്കൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "c657417a5ac19dfd0aa5e47c1eb0c2192a0f4e8ca1ee7009d172a4afc1dea438",
+   "sha256": "385ffd2c0577becb5131e2c0062e70984cca8635232f7507dc8ff4c09fa5cf91"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "നിർത്തിയിടത്ത് തുടരൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "7cefdcebd8388796fa09bcedf2e21f8bf986b9b5fd7c8e5ee87f65fd6d4c728a",
+   "sha256": "324a3dc138c886da08ac370dee03f764379dbd109aa1a533132aef7b4d1ba233"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "വാങ്ങും മുമ്പ് നൂൽ പരിശോധിക്കൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "3219fd0a0c012f08360352862da4703a861cb5a3ec2270099b8b3e1f68d791e6",
+   "sha256": "dd88ba8ba585db3976be223cf91982e92a2fed5eee53c15ec084bfdd68073692"
+  }
+ ],
+ "mr-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "ओळी मोजा आणि कापड वाढताना पाहा",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "970f6da9c1f04b114e81eab1ca98ed1724f8a28306042993681cba89cec92613"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF पॅटर्नमध्ये तुमची जागा जपा",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "62a7fa906ae2c4a786f022e49050ac78f11e573cfd977e36f6a536220aa840cc"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "पॅटर्न एकेक ओळीने पुढे नेत विणा",
+   "size": 172,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "9502d2b3661824f824f083110a67543d172e041adf4b64f82080fc5e3da056aa",
+   "sha256": "c1a6d494d683411246858447ea74231585031ae4bb6cbb5776b0b01044de2475"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "तुमच्या मापाचे विणकाम पॅटर्न",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b27952f6fcd92e69a21ee98c8d0444e08fa9629ff041e31385d75aa5965461ea",
+   "sha256": "71c766dbc66c80a902eb86d1e39879195a0c91f87b6336136e98cd5eaabf8d2b"
+  },
+  {
+   "file": "05-library.png",
+   "header": "टोपी, स्वेटर किंवा शाल निवडा",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "3101b896ba89cf493e2bf484de3a816232cc784ed55107539fca55a9114091b1",
+   "sha256": "d372292f542cbf202645c332a8ed8c129aab41e3d0b72578e24c4736e712e881"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "प्रत्येक प्रोजेक्ट जिथे थांबला तिथून सुरू करा",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "b5ee4a76103ab43add2ffc5ebe384ebb2e95205f8f59618f83bcc550313f7dba",
+   "sha256": "3754a78ecd51cf2220221624239ae50c352f945db48e4ba4512def5cda3907c3"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "खरेदीपूर्वी तुमचा धागा तपासा",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "9c7bfa9e694a5121fac8c8ce8ab89a29bb52e1463dbb52bac617328e5ea1bb0a",
+   "sha256": "0842f0be567a4879f10e426f3150b3c296692d0ad3416f0c897d872b22aac63d"
+  }
+ ],
+ "ms": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Kira baris dan lihat kain membesar",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "afbf29414d0e619efef1d4d168122599cd3c3b999fb63fd703e8e74090311d8c"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Tandai baris dalam mana-mana PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "dbaa8a4d729b3a340056eace8dd24ecec9d0be2c6d6915eb5afcacceb11b853d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Ikut corak anda baris demi baris",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "483a3e6a7947458eb5c5c3d60ae84498dbbc7410df1651f9be251e14c74fdb91",
+   "sha256": "970d8d6aa3749f87df4f351a89f98c748da5d0b9b05b378cf31c1447e3eea36b"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Corak rajutan ditulis ikut saiz anda",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "5f7897ff6a3885178f19b37eb84ed1baff014153987f58d8201ca69cb7b3371d",
+   "sha256": "8f4daae544a80222549dc93b2ff8bf10c1f2ba0d8d10f0e10a563d837ede6069"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Pilih topi, sweater atau selendang",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "80bfb4210216e89a04978d3eae6e4ee45bb435e96906d2ab7630f7872dce737c",
+   "sha256": "4204dffa81b52ab6831ad73cf25dadfd5e7c581c789dbe3448e3304c562bbc68"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Sambung projek dari tempat berhenti",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "8f8a3e62c2e99b245869b7a14b2540e2ba6c27d6b0eb4d2c2b584ac59d9de08a",
+   "sha256": "f43bd60016f19a5697460c32b09ea3f561bc9514b227adbd3ed81af76b1a4370"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Semak benang anda sebelum membeli",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "b2f67962b7bbe4a1da0e5d054722180c647ea078a9fe2c73a5a259979d875b93",
+   "sha256": "44a28c5a082668e782ba5750cb0e3d7402da55b68cb9741ff76fc1ac2cceb360"
+  }
+ ],
+ "nl-NL": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Tel rijen en zie je breiwerk groeien",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "82490781ce262f9b957b5bd48fb662f37dbc2fa1af46fc310d63c617c12793ca"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Houd je plek bij in elk pdf-patroon",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "1b3044d2e8c6fa010f9bdb8afa8bafda44d257dbb7d9a0b4b9129fe99707b0af"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Volg je patroon rij voor rij",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "e247fc40f2910a3a9bbcbf79941d86430e9e852b14b066718e3d76903a6510e5",
+   "sha256": "e59d537e7748c2b893c6a67a27a94e4ca13ba88f950264557e16baa2fd1a6947"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Breipatronen op jouw maat",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "9a63a251202f3ffc316432c851afd3da47af965c719808132ba4a977e37789b3",
+   "sha256": "0cae3415a976e68cdcf37689f4b5399bcb30b291fcb832e986c7741f9ffa3366"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Kies een muts, trui of sjaal om te breien",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "690cdecf0615d67e6145c102ca6fcb1178f917c39791a518397ea478814cc06d",
+   "sha256": "408c1fbd7e7a35bbcbde66db21715ff509e6a3cc07032b31c83c32633dcb7f2a"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Pak elk project op waar je bleef",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "636b83f19dbb141cc14feac523646829b85037c7425289857be5130baed7c33f",
+   "sha256": "aba8273a5906bf57b46a0456b36389cfa86138eb92a942ece87656af1007fa91"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Check je garen voor je shopt",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "dc0635b1b1bbd3fb9816e759ef089c0bd504f6e70e73d76767a833cdbf20c5f5",
+   "sha256": "f5b729ddd2cb9d8a5d877a0ae25f02619dd3921c937056eacfceb15cc32f58b5"
+  }
+ ],
+ "no": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Tell rader og se strikketøyet vokse",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "7185f7263dfd0dc80709efa5fee54bf1a20ec0d10a229ddc8466fca8cf2a06d7"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Behold plassen i alle PDF-oppskrifter",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "cffb84130810e2ef468122bcc2ef2e7bfc52389c32df2c6911722d96eff00b2d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Følg oppskriften én rad om gangen",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "831ec6bc8f931bab3c8dc0af5eb4804de8338455104c073d5ec2e65623ee0106",
+   "sha256": "23bf24f4eeffeab467be04d3332b8377ed32cfd5f6404e5888d48f9ee9903613"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Strikkeoppskrifter i din størrelse",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "c17cb809330128c9ef0071ad466ce883ead289d262c2562ea08318b454842abe",
+   "sha256": "9144f0a8e890fb66a195acc9655d1439e5b5dae3943787013939c0b143e1e633"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Velg lue, genser eller sjal å strikke",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "81267ce758bf91e49f94bfd71004448abf9e50492348fad0350725f6bb832f2b",
+   "sha256": "c251ed709cdc2855f2d921f4c0d1487caee0d92f43e6de56a77616ae7087cf84"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Hvert prosjekt der du sluttet",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "0c6163511de443e70b00948cf3d982c033c4a33cb76dbaa0dab7d45ad8f268c5",
+   "sha256": "02f673f2adbae4378112cfb5c34885b57f7fe4d2e008e1661318c5921b2e7e99"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Sjekk garnet før du handler",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "778fd05423c542b3dfedafab7dbb84d86d15f5d212e2f6fc8aac5d8ca7c5e146",
+   "sha256": "58302bcf01c3863cf650305b16b000e176738e1f3b592b74eb8ac9d8aa0f0768"
+  }
+ ],
+ "or-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "ଧାଡ଼ି ଗଣନ୍ତୁ, କପଡ଼ା ବଢ଼ିବା ଦେଖନ୍ତୁ",
+   "size": 156,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "f6bf9b704c51d38d203acd85301a73bf3b2afc10405b65265fd68c5ddce27ffa",
+   "sha256": "e238ef36e3bac6981b4e36ea1bb379b09c195a4de17fab5754e4df0bc97bd41e"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF ପ୍ୟାଟର୍ନରେ ଆପଣଙ୍କ ସ୍ଥାନ ରଖନ୍ତୁ",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "3fdc45109b33a3ddd17c3ad63d837b09a013ad9b847bc0e835715468657ebdf8",
+   "sha256": "7462e5873d593d9631e6cc9a44a2fb81335a8ebb91bcce4368ae972e60f6efaa"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "ପ୍ୟାଟର୍ନ ଧାଡ଼ି ଧାଡ଼ି ଅନୁସରଣ କରନ୍ତୁ",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "adbbeb2dd7a2cde208893bd27aac7ba9ede306e307771f636be2ae193723fffb",
+   "sha256": "c9ecc908ec0fa30ce1a80729e5fafefd8327925d6e3f2f8d6f84395ed84d486c"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "ଆପଣଙ୍କ ମାପର ବୁଣା ପ୍ୟାଟର୍ନ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "59a2c9802933966158bf13e0d1f3668a8370cd6623e1878a7bd9dfa74b7a0bf4",
+   "sha256": "4a07d12efb96c19ee7ed79d849acb6e73eb9cdcdd2abd4766eb751a697ee5f31"
+  },
+  {
+   "file": "05-library.png",
+   "header": "ଟୋପି, ସ୍ୱେଟର କିମ୍ବା ଶାଲ ବାଛନ୍ତୁ",
+   "size": 164,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "c18e71b7745ade103dea5bd549e01cb423984d544c29dc67ec3f99d9862f5e6b",
+   "sha256": "8b984e00168c2e6b9b1558154f300fcb1da8ccce5e29ff6d73a28c610a00240c"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ଛାଡ଼ିଥିବା ସ୍ଥାନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "7279751b3b3afddaabb2d6215bb79ed7cd61d1f2d0bc3425edb83dffb5a91ae8",
+   "sha256": "f1aa82080f8e8cfd9da95f36cf403ed53ca2b6eb91da33da0493ecd414e457da"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "କିଣିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସୂତା ଯାଞ୍ଚ କରନ୍ତୁ",
+   "size": 176,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "e3ee7d75f0209e6c707e50a0bf82deaaac5efced0e4df2326e035c3a83acb097",
+   "sha256": "9bb0c1cc1801ce91314b728e5734b349973b928af87c220c520ae365f5ef3a8f"
+  }
+ ],
+ "pa-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "ਕਤਾਰਾਂ ਗਿਣੋ, ਕੱਪੜੇ ਨੂੰ ਵਧਦਾ ਵੇਖੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "a040a0e9b37b104fc3957a68fdd6df46252467d97347872bcecec5dd9cecd61e"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "ਕਿਸੇ ਵੀ PDF ਪੈਟਰਨ ਵਿੱਚ ਆਪਣੀ ਥਾਂ ਰੱਖੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "cf5075da0f616dc6de685354293957f40fd5dd8b36bf075a9882335ae114ab35"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "ਪੈਟਰਨ ਨੂੰ ਇੱਕ ਵਾਰ ਵਿੱਚ ਇੱਕ ਕਤਾਰ ਬੁਣੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "f8af085109ecf6b251aeb959daa9893d2f03eb4d56ddc07435fbcf21529880fe",
+   "sha256": "161c116eab0f45fc5d45fa9b70b9cef8a56672133b98f7c3c3068f171d481dc9"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "ਤੁਹਾਡੇ ਸਾਈਜ਼ ਮੁਤਾਬਕ ਲਿਖੇ ਬੁਣਾਈ ਪੈਟਰਨ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "df40d4a46fa4b642a698bb88fbb197d52a016ff638ba4a106950411b29c57323",
+   "sha256": "5bc5f25eafb692989e91a14f63e66c724eeda727d674b162480f35bb7c8e5a68"
+  },
+  {
+   "file": "05-library.png",
+   "header": "ਟੋਪੀ, ਸਵੈਟਰ ਜਾਂ ਸ਼ਾਲ ਚੁਣੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "af13c8cd5ef95a8a9b9bdb23294a196d7eb88683e85660e068553c4491e916f1",
+   "sha256": "79518ddf10752e7ce255997105900531f70e1e77213663a009d2bf2ccd172107"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ਹਰ ਪ੍ਰੋਜੈਕਟ ਜਿੱਥੇ ਰੁਕੇ ਸੀ ਉੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "49e0be01bff7e6d4183d30073d8387248bacef29651e4fa7695c601f5f644adf",
+   "sha256": "2369d1568ebf368abe87aea5b471d207b5591eace0831fa36bd97169d00ced32"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "ਖਰੀਦਦਾਰੀ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣਾ ਧਾਗਾ ਵੇਖੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "eac34eeca7bfa070a97c1a1f4efece62299d672314fc00249b7819e541211a59",
+   "sha256": "a642933373a98b8488b9ea79edc1232254fdba07314f84a9120355dd3de5dfd4"
+  }
+ ],
+ "pl": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Licz rzędy i patrz, jak rośnie robótka",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "8c8c26aeefe94b10ce911a321d81bb84ab3a41023fd72d4533400e44553a52c3"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Nie gub miejsca w żadnym PDF-ie",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "74e227be2bac144d444f64d00c37e85fb1d8a7f563a0141e79d6e2956a62bdc8"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Wykonuj wzór rząd po rzędzie",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "324e974173a49039b869989e185f4faf098ee8e83a7fd6b485804db79348ac24",
+   "sha256": "da39106b117200bfd108460fd04a650e4dc7ee6ca4cf7a0b2086ff87b2d15096"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Wzory na drutach na twój rozmiar",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "16c23b9de76eb29977f1bcd5e57bd7b402b56f4b0fa4340d4ac8576835893120",
+   "sha256": "ac3d3a2754f1e2af8efeb28aee556657fe30e692d08b4949391901f9869f210a"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Wybierz czapkę, sweter lub szal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "d28e6928279f35a36c310e6caac0ce959d933e523bf4bfdef149d55a4ff11d85",
+   "sha256": "bd154df3f248c9760966e0b662a94787d9ebce63ea689153196501662a3f8dfc"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Projekt otwiera się na ostatnim rzędzie",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "fbcc8b2605b3055926a7b4b362319d560334c22af82e0a12f4fcb2bfb814496f",
+   "sha256": "041ef8adc46b0f50c37663acc962669fb24217d361f59972141442f601c87e12"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Sprawdź włóczkę przed zakupami",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "e1b5b08855640e7aa720bee74af0e29894bc0bdf9ca9a3f4fa1ac4f3a393f7db",
+   "sha256": "8042c713650bafbdb5c73471cd010cb8a9c9e2ae132619d27eae809857c54531"
+  }
+ ],
+ "pt-BR": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Conte as fileiras e veja o tecido crescer",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "e8659f69c6614f9f7091b72d871550a50e445af79de5737af09fcccc86ea0755"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Não perca o ponto em nenhum PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "16a17205c32fa7767d20c305e46c6e3d04d34fcd0caf80b1236b427c146d631d"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Siga sua receita fileira por fileira",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "9ec6ad55d75361f8c289ff6d63a3c8bb433a2923b54c73b81f973a5d7ba0e8d7",
+   "sha256": "caf0a6a543b5022552a4fa3b69a7e9a0549ee69517c698e768ee0dd1ce642831"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Receitas de tricô no seu tamanho",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "bed15e8960fd34bc52a46d474570d802ce6397d9d2b3ae39f1de5bb42668670d",
+   "sha256": "0e82fb22fcbd7ed7617c354bace60de2be4cf270d591e280762b3c62a1b440f9"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Escolha um gorro, suéter ou xale",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "f984ddddc3d711a7d5a2ab311fc38de62c89e202d525b3e0426a9d81b71ea332",
+   "sha256": "030ff38609398da33831883ebff75e0802a67206958ec1fe45f5fc5e9eb43f4c"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Retome cada projeto de onde parou",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "774eda7101a1f90ac895f8d21d38141a8ce31f2e1ef25e459446eba4c9757a2e",
+   "sha256": "d6c6bb60fdb9e330cccbdc481e5ebeb8bf83b8f5d40119ccd3cfe4f324c19d6d"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Confira sua lã antes de comprar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "a65c82e6454ad6d5b17abf9f171d1c80878860a770a922c14d07c3372777c301",
+   "sha256": "17512f5cc4280e992645c14f55375887b9bd0fae3d5c1a09d097b0ea3b02d9cf"
+  }
+ ],
+ "pt-PT": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Conta as carreiras e vê o tecido crescer",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "d7aba612f8bdd0f85ac4f1ae6247e994684c8f7f8057d3ce58ba02edd1ac273a"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Não percas o ponto em nenhum PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "d63c456e50ac863dce78395ed7e5178b3aef1e59aa5fbaa6de445297c4dc0fc9"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Segue o padrão carreira a carreira",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "a76377b85e325bdf569fc0560650dc50eef47526d09683d71c3550df276b1771",
+   "sha256": "9f6d9048689eb744ece44a3ae8ca210cd1db9e14f476d9bc342b1c0c971eca7b"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Padrões de tricô escritos à tua medida",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "4305421ffc460ace3f6491eb599a777a9461f145c560b03a425d2d376e168356",
+   "sha256": "6fb30e4580a93f8af12cc7d7059b049737d824340492139500e9addbb794feaf"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Escolhe um gorro, camisola ou xaile",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "777f3ce9ad31619bfb2dddc09ff24d0da1d5fa859910b661eea64eb8a88ebfc3",
+   "sha256": "46c09f7f5848cd1339d86c3b4af275df4f095e16d27f424548faf1bede12b86c"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Retoma cada projeto onde ficaste",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "a376d0b7e00cc87cf09496bbccf7f24a3cd1c5f6761a3d55b5ebf04dfe57085d",
+   "sha256": "5cd88432d75e00fe53a8f38b08b3738e476b989f770670686d2a8400b367b213"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Vê a tua lã antes de comprar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "d3c8a422cd6d2ffaed40f1d6da87c816efa52fb719959617c261600edf6a5fde",
+   "sha256": "3cafd9d66931eb7f88c6821b5477ffbd3344d5ee8af98f583e0c1a0e37f66b94"
+  }
+ ],
+ "ro": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Numără rânduri, vezi cum crește",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "dda1db1106bf49cbb4b272de6808386f80b1bf8f99c40bab8411dfa645052a12",
+   "sha256": "953fbc5b1e2cdb0bf33118221ad4d345abf3170692aebf8414bd0f803d46d52f"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Păstrează-ți locul în orice model PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "06bf4a77ccb5370f99a67d9a0d9301ab8c72a6d40da6536c887b6100f745d3ac"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Urmează modelul rând cu rând",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "49f1489e84dc9f742b80f221a9b529367ec37ea1d9f50381da50ffc61ff0c57f",
+   "sha256": "6804a94bfb06df87a4ca7d753fe60674ddb1fe0c51d41ec1a3a31f410764cc73"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Modele de tricotat scrise pe măsura ta",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "24c1f0ab949c1e6219f1802ef0cac45e028b13cf2393cba3bf42328389f1d4ee",
+   "sha256": "65dc9e8d60c3371a84c3d8579dd98013ec339ff39328cf301026bef79c11cf92"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Alege o căciulă, un pulover sau o șal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "5c18c7723b98f55adfae9a97ab812a8854a149b40d08b35d5c9cb1e1a6521f78",
+   "sha256": "3de8dca268445a9022e5c528bf35f16c31657dc56c41a0f103cd1b4d61a028ba"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Reia fiecare proiect de unde ai rămas",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "12a87de43a724cab9acfcd63bfc4590b88099a078d43310cd2ddce3e9264f0fe",
+   "sha256": "49b460a388581d926a9191468ad06f88938fbd599db2d8d0bddc80da435be64c"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Verifică-ți firele înainte să cumperi",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "dbe74da4fa22f439a6f9e5e0a3f4dd5a6b63d9c874a7cbbdddf296948ef00365",
+   "sha256": "54bd0c5846d671a948cb86d4f7f21d6617831ec7df62a534cb01ce988c387c67"
+  }
+ ],
+ "ru": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Считайте ряды, пока растёт полотно",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "fd81cc40189ef67e9c1e02d8877eb699fc7863781843de9c72a2cdab77be375d"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Не теряйте место в любом PDF-узоре",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "003ca0d6c10cb8f8e13e9d42b1d85db67919939be3d6c74ce8cd143879827bca"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Вяжите по схеме ряд за рядом",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "b4d104ee9030fb8e844ce3ac03329d96486c3d368226f8858c24a5967e56bce2",
+   "sha256": "81c96c2b63490a527ebd9ceb5129c0c225f0624038d3851bf87392ca211e61f7"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Схемы вязания под ваш размер",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "e477a4456ee513d3f5ad31abd006556bf32f53923a4936cb495b974d88a33f6e",
+   "sha256": "06f97c9d12a0a712ce179ea3f05ef8ac56369a84a160159fcc85ca8eb55caaa7"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Выберите шапку, свитер или шаль",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "77ddf3a9854357298aab48b3c5190dbac660f7acbbd54777d086e96d2fbaf8be",
+   "sha256": "2e96a96b892a17ccb05f544c233f6859f0e98d61606b4ab339fba9975c221af4"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Продолжайте с места остановки",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "4b7c5f49c7720d0ac6d23bac3bcf77933f71e4f7064dcee2a72cc1492ea6871b",
+   "sha256": "ed9f9ce510dedcd92d70abf329e5e01d24e94f2ab4ea1987a5bf25bb00fb1b04"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Проверьте пряжу перед покупкой",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "31cb56a40c43a3495a3d0f2b9935312f0a30b8f53fa59fdf92897d3c62620c8c",
+   "sha256": "209b707d8692bf992da119c3543f190ae06cab52080f07737932e74742cef11f"
+  }
+ ],
+ "sk": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Počítaj riadky, sleduj rast látky",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "670e6e226ad69971085cb0c744d678d03d1d5a698c667283926cacda5470becf"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Nestrať miesto v žiadnom PDF návode",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "1ffc0dd864f10ad9a5df3eea141256c01ab18e8d20c6e7c2691727ad40221232",
+   "sha256": "7818dd64897e6074e00e51007554106de74b377a36837b5845754eb4659b515f"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Pleť podľa návodu riadok po riadku",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "47c656e7ed670e6dc5341da9048e41f3a4d85a4e728bd83d6ff6687b65f0fcbc",
+   "sha256": "feea5212f7fdd9ddb5e2c8ba46309d75cf731d6c7921d0f092bf24cb31df534f"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Pletacie návody na tvoju mieru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "8d75296c3e290f780f311519caf79de3e8d46196dec34a827f557522abd9bbbb",
+   "sha256": "f5cf3a94aae70db30bdc534a644277f43be705dc0480458089dafb1cf1486795"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Vyber si čiapku, sveter alebo šál",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "9b98d4cdacee23f76b5de71d61836106ec21def1fa1ec4ca8087f4202632720f",
+   "sha256": "8a14a5c7f307f4290b777c9c3838fafb18d8ff84a1e56092159a345b70858a00"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Pokračuj tam, kde projekt skončil",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "da2cd49f490e59b45be62f912e53670dd00f6ccf4ef4c13a1773f28187daeeb4",
+   "sha256": "dde0726ee9b894bdc76f500e22214fc45112d87853c2f2f1e03ce19993aeffa2"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Skontroluj priadzu pred nákupom",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "b2954abe76927e8d76f7efad8ea0d456df31d65be3b3edcd0d97baa6e9ed77de",
+   "sha256": "bc20b59b0b86db3c9b9c8e430fbdc41127127bfbd59b261b6d38972b7d248918"
+  }
+ ],
+ "sl-SI": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Štej vrste in glej, kako pletivo raste",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "71d91378bd39b5f52b7c2fee840ff2e3f8c93e2a2d9c7dba480abdf008f9d784",
+   "sha256": "09fca2604b3c6544347ff82783a3cf026204a9c99c9cd240b272943f81ecbd15"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Ne izgubi mesta v nobenem PDF vzorcu",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "a3c25be1738339f3dc8cd3ef560398bdda444ad27189a986ecb6e04262ebaccc"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Sledi vzorcu vrsto za vrsto",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "eb8c9390f328ddce590858aad6d90611db571ed6b35ee97ca38f3a8a0d0cfdcc",
+   "sha256": "c692d4a1370732193d02a7816b15430e741db9524d7d4f7ca8e04ff3ed34e104"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Pletilni vzorci za tvojo velikost",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "fc26528b1fb559e346fb2afdebc643a6cd4888542f1ee14f2cffcd8c0b701202",
+   "sha256": "636dd69d39dff6d54dc32469593ec8c9a256646f5913c15d2cb4d4d6f442a705"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Izberi kapo, pulover ali šal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "9b576cd66ff9f63f64c0fc3c500bb08b5c7f0286782dbda684036a8cde7e10bf",
+   "sha256": "9820d43a8f7a59034a2b6749b02bc085b282193bf9b01f7001bef6b03975d2d0"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Nadaljuj vsak projekt tam, kjer je obstal",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "27f53f5d117821977669e1e5149a415e993e7af645d97c8cc72959fbfffabaac",
+   "sha256": "1d935e4992929b0e6c74970cb3d4fd4212f5c63c9a76bb3a78f773598e486ff0"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Preveri prejo, preden greš po nakupih",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "99ac4d7769eb8175409530d9c8b1cc1e40a5df31d5b420659d2a11a0398d44dd",
+   "sha256": "64e5c4111b19c36a012904c123701dd9daf7daa224f007ad96899729e7eefbe4"
+  }
+ ],
+ "sv": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Räkna varv och se arbetet växa",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "dda1db1106bf49cbb4b272de6808386f80b1bf8f99c40bab8411dfa645052a12",
+   "sha256": "a8c964747cbec9f870420af5a5e5c3da73b6de043e559ea9d65d8e0a7c1b7209"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Behåll platsen i alla PDF-mönster",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b102367edef17993a66a88064dd3d699c91267e1f76e0293a068817f969ac5ba",
+   "sha256": "a8fc7b63aa20a7c295cb2587e50e7240a77db567b6afc096c98e9779db803da9"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Följ mönstret varv för varv",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "e9b6cf0dba0d49063adab06accdbb024f78f5f658740ff1b6f57168415446b03",
+   "sha256": "f2a7725d3754a19f00fa49d526ea40ea3defe435889956b35af459bf58307115"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Stickmönster skrivna efter din storlek",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "dcaebc3f6d1f18b9f068e8970967cd63a77170681c03f96fb8822ffd81e4ee76",
+   "sha256": "05f65bd70748d11e663b2dcfb7eb78cf69f705b2337becb9b19d3d92e16ab8ca"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Välj mössa, tröja eller sjal att sticka",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "e87034d0b5b20c9bc522e013f611e23c6d8cfce2d1a4ece10c47b43fb8e242c2",
+   "sha256": "6f485b3880533b166d0ed3f5dacef24ce4b3bf2f3b026d708d511ea37d310f75"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Fortsätt varje projekt där du slutade",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "9e0d9fcb20930b650ac55c85a3187304581320d107838bfbd65dbec8188331f4",
+   "sha256": "098d0e0735185a17a9577e4953752d036b67b36eebf18f7e1a01ad10234cf7f3"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Kolla garnet innan du handlar",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "d9bbbd80fe72f03fbe20b68b580f087063a49dc12ad9d9f04e71819589076096",
+   "sha256": "46713843a9137d5877b4627cd8f164824d7735f16e455b7eaa92b68f1aba9d99"
+  }
+ ],
+ "ta-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "வரிசை எண்ணி துணி வளருங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "a0c9ee88b6d84843280501428342c22b28c7e75779ee8086c4a3ae33dd48f3db",
+   "sha256": "dc1e4bed62cc0dda41742962e6938d7ae79cb848b30d9ab878bfd06d1640daac"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF பேட்டர்னில் இடம் குறியுங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "355527f59c26f910d840e3b1858d373213064870f020ead912df2c997db77ddf",
+   "sha256": "a87328778a29a232f7f8ef0a6ddf38c8310b42b46c956426ee8519dfe4f195c0"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "பேட்டர்ன் வரிசை வரிசையாக",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "cbb6a1ac40c947574ca8f223ea454401a7ddc5bbed14f20ec1e2c7f165780678",
+   "sha256": "9bfd60c31527b2ce48319b56193f29b7914bb344942591d723b055b34abd53b4"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "உங்கள் அளவில் பின்னல் பேட்டர்ன்",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "7768b58eb6a1a49e329e50b0a0429adb892228d5256d8943725842739f8fb372",
+   "sha256": "2dcf243c448fee5eef7eff99ce93912c7dcb552a8598dd62679bf61dd926bd2a"
+  },
+  {
+   "file": "05-library.png",
+   "header": "தொப்பி, ஸ்வெட்டர், சால்வை எடுங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "5b2378ea345ff4aea077bc35e2f16633fff320622bb1dd98bd59bd9aa3f991ff",
+   "sha256": "37e3eef2c5fb806cb38a68dc9eb327d1babb404a810beea990f1cb08f796574f"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "நிறுத்திய இடத்தில் தொடருங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "ece96d45e64aed4926db913c6d015909b10048dc9dd0c7dbbf6cd4e9d2e06c68",
+   "sha256": "9c1457cc9f8aaa68c26e5cb8d55843ecf75091a4d45798e6d823256acb7c4512"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "வாங்கும் முன் நூலைப் பாருங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "9e52550fa38d06ac0d5ccd518b97857e2ef4c55c1e69eba8349ccdbe48f8192e",
+   "sha256": "b2c91db96efb9970ecf3d6d3fe0ab16230d5450f64c7b517995a8689d30701f7"
+  }
+ ],
+ "te-IN": [
+  {
+   "file": "01-count-rows.png",
+   "header": "వరుసలు లెక్కించి పెరుగుదల చూడండి",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "b62c43e4bc073c7aaaa333f1c8cd737bcf0be60776e644796a2f0d21c4819d8e",
+   "sha256": "ee169ce57372157eea37cf37b67e02b82e83d3761a704dae2aa12d05c1e0b3bb"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF లో మీ చోటు గుర్తుంచుకోండి",
+   "size": 168,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "5e72ff6fbaa1cfd60212ebb6cda85822a6d547ac9fc6d4dd99c16f8cd77862bc",
+   "sha256": "ac74891688da6bf7b725b291d2347fdfed9a96ee6c6afa569edf5a1d1e156753"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "ప్యాటర్న్ వరుస వరుసగా అల్లండి",
+   "size": 164,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "c7a1c0c5479287c0674329776edc2c2111c85990a7213bcda3e856e8d8255ef0",
+   "sha256": "bc658a827f0554d8d52acfc4535b6f583289f300a24d2492638f36a6d0ba4fc0"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "మీ సైజుకు రాసిన అల్లిక ప్యాటర్న్‌లు",
+   "size": 160,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "d1c354759189b2156780b38bb1da9c6810ae44c106232db2dc12707ed03cc0b0",
+   "sha256": "c13ef527a8e096843985d7e050df79d3a8785e8a70a3ee05816bd1b48177e413"
+  },
+  {
+   "file": "05-library.png",
+   "header": "టోపీ, స్వెటర్ లేదా శాలువా ఎంచుకోండి",
+   "size": 164,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "aa4151e0b6b45b34e8fed92d655164c845edf5c578c1746044dfbebd3437d302",
+   "sha256": "76076b97ad7de5c8d12f5cb55e945b23c87cec9f3501c64848e4b5896da25e2b"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ప్రతి ప్రాజెక్ట్‌ను ఆపిన చోటే కొనసాగించండి",
+   "size": 172,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "1d57540ab8bd48bf8c1e4cae42bd058018cdbaf586dbf73b72a7663c82f0ee08",
+   "sha256": "a4fc3f8a54dcdb0e0daa04705befd9c9be1ae193da98c7d240341fdf420fd587"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "కొనే ముందు మీ నూలు చూడండి",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "813e2492565d5cdae592726ce7737778950a053cb55eb61ec2c7a0b366c10956",
+   "sha256": "b4d96e346bbf5926221acbf37f46902ebf60ce2f82b3f7532ccd059cdc63c9cb"
+  }
+ ],
+ "th": [
+  {
+   "file": "01-count-rows.png",
+   "header": "นับแถว\nแล้วดูผ้าถักโตขึ้น",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "f57a680ba66d6df578ad90b43ce42e11d18f44d142ebe83bb421625e3872bad2"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "จำตำแหน่งในทุก\nแพตเทิร์น PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "b3c714d0b8cea8ae4510da35f4ca8708e8d550dc1987ca7839ec681e43665349",
+   "sha256": "32328e8c69d9d84e8c17ffcdd9a85cf2b86e51c36377351d8487a11f1bcfe946"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "ถักตามแบบ\nทีละแถว",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "7315ac2c98b313267c465d55311bf3dbdcaff4e5fb152522d6d56d71500fcbd9",
+   "sha256": "5fbbcfed5f703a1c3a3866ee746b0017933a0c3714cb9522e7e0de0a4eeba207"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "แบบถักเขียนให้\nพอดีไซส์คุณ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "e10a29871beaffa92f5cf6b414be3f377b3da14e66b531397dbacbbb5292f712",
+   "sha256": "ec06398834ba455e3f2e653bd8b6bfddc804e476c0806ff50ea336162ffe6c90"
+  },
+  {
+   "file": "05-library.png",
+   "header": "เลือกหมวก เสื้อถัก\nหรือผ้าคลุมไหล่",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "1dc45c34222019f8d96237db73f00078e6ff64f0c472b554c055cce8c25eb852",
+   "sha256": "bb0649c587f6c3c0ab1d882f9960f49febcd35e7cb4e58bed22043191cc998f8"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ทำแต่ละโปรเจกต์\nต่อจากที่หยุดไว้",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "03019fb830178bfc536dbd1746fb1628087a0e1386e0833697612fada31a0564",
+   "sha256": "d7507a349a7e43176cd7c9cba7866180822ac0f02f90ea01b39c3e5112ae357f"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "เช็กไหมพรม\nก่อนไปซื้อ",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "4d87d5eaa1475dd99329bdaa7764c9f976288f2d537b4c1162fd535ff9926d29",
+   "sha256": "21c03365d64ee3d0832f103eb760e8a1b4787c58779f72ef80d8a8628ff66256"
+  }
+ ],
+ "tr": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Sıraları say, örgünün büyüdüğünü izle",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "9eff80fb20865cc281570c2a33389b10a6bfa1bf0b831acf6615f3436d25a312",
+   "sha256": "f8b2ed3681798daf2f154ac60b717f8416ac42b77d5831ea01ce9243b48b9d5a"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Her PDF modelde yerini kaybetme",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "68762e137f25b79646af768c174843655a0504df41d8056661fadf3692174bac",
+   "sha256": "72ea26a9b637bc6217b68cfdaecab91e22ac00c97258bd89d5b9cacb2c22e901"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Modeli sıra sıra takip et",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "60bfe422ffd70342f3dbbfaa7c931fccef2ebebdff43da4fd3cd995697b5dfd5",
+   "sha256": "86e5f67303dedc1e2820ab8e440bb2beaacf761160615c7fcc4f23bc3424149d"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Bedenine göre örgü modelleri",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "0920e9d84e27bfa72215274f37c936cf7e82d4702251f98db0d85b0b60a0e7df",
+   "sha256": "a3af40db14ce60870d08d9dc0ea774c2986cab58d794b613006ebbc639b71b9f"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Bir bere, kazak ya da şal seç",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "d6e31d87ae115a399d4076a17a70d0c8d66acb6a2cc4a37890f88d8b3fd92e4c",
+   "sha256": "3f7705fcbc34a19fb242712c5ce78b366b0cf145e02b040e67d834e722336e0e"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Her projeye kaldığın yerden devam et",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "f07093432606efa337838730ed290a958e4056d59861d413913788fab6acf47c",
+   "sha256": "ef26835232c2ada54a593e20c8a5fa632218e81e1ad6fe07e1c514b5735fd898"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Alışverişten önce ipliklerine bak",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "243372c0a302077e78170bb687dc23b47c425eba3daf31b1f5cd2a9989f7715f",
+   "sha256": "3e840bca26c6395c0129116bafbfe87ec87bc1ef1dbc86580e78db134494e7c8"
+  }
+ ],
+ "uk": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Лічіть ряди, стежте за ростом",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "6a94225ba392de3c5dfddbae88a270f432967d68f1f1802229e5a081f62b8748"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Не губіть місце в жодному PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "23516cd3d542eb30e39701a7ecdf582aaab5359fe2ad6736f04a8b3fa512989a",
+   "sha256": "f46b4f677423f457265073ebe725befcde6a062ecf3a8d697a81394534fc2734"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "В'яжіть за схемою ряд за рядом",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "125e2d4e3eab0d82c88000cc1665e57429022993c542b3cf05b1f10748237bf1",
+   "sha256": "3cc376a118a514f1a8edc01d38e76947101d3fea375373f198af53da5811a0d6"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Схеми в'язання під ваш розмір",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "566c134cb6468e87c5c3bb0b52b159fbf45ccc3044d73f5f29e260e54dbc1941",
+   "sha256": "97816498da380b44c832270ead711ab80ddf1899dcdc9641b540cc113cd8809d"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Оберіть шапку, светр або шаль",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "dadbc5474f280cbe4e55e005c9a229b7d0fac0d45863838a9c0dde6d130acc07",
+   "sha256": "13f3204525156e3a1a7c275eaf8fff9614493de0a7cf18bb3178a42df8cf0199"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Продовжуйте з місця зупинки",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "71c7265840c4bbcf5d4efeb69ad80824e27bf5b85fdd3b00a8eb11b001cc4dcf",
+   "sha256": "93a641fb348cb767a5f25b05c473427b4180d0fd2e7cb2534a3175b3768dfe17"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Перевірте пряжу перед покупкою",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "c4d7ade0c4f82e8574a656f669833bcf71fae12d1b1f086179ec82ab352456ae",
+   "sha256": "02e0d8b64fed528b189dfd55013bef681b8b4896a0472599b5d4dc7c32af2e34"
+  }
+ ],
+ "ur-PK": [
+  {
+   "file": "01-count-rows.png",
+   "header": "قطاریں گنیں، کپڑا بڑھتا دیکھیں",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "8044da53f63187d6a71e652abc642a0fa98359dd3988c0a8c6dde364cb69aacb",
+   "sha256": "1aa076641e6795fa957d8c8207013d215eda1aea0a14c21060a14cecda251034"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "PDF پیٹرن میں اپنی جگہ رکھیں",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "5c284eace636a7f784b0afeacbbfd11f597cf61a0fd961a07787e8d842242d0a",
+   "sha256": "26e33b9abc51d5603c4187886f04070c1fdc9d74aba6d6a37715490d94b9dee3"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "پیٹرن کو ایک وقت میں ایک قطار بُنیں",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "ffbf2d5d4873eb8158d21a6b20c835929fe8748a6977e781ea7152eb27215266",
+   "sha256": "e5df61d31ae276a2495d5dc4c1dcaecd7fd2e12e7d5690379a44b292ea032110"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "آپ کے سائز کے بنائی پیٹرن",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b09dd1a8c1a7cae64eb1a4fc6ef8757a539cdaa1cbccca92dd5c45ffb9f052a6",
+   "sha256": "b9c6334a403acf617c9ab7837cbd5fdbc81c1dfba274f84bde72027b32f6f6c1"
+  },
+  {
+   "file": "05-library.png",
+   "header": "ٹوپی، سویٹر یا شال چنیں اور بُنیں",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "32655cc41464e23877532781b72f19f78a286332cf6953d77eac213018e8257c",
+   "sha256": "c83f7bcc2db20dfbf4c797235796da02dbe52954f4d82af9cb2ab2a34999e9ca"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "ہر پراجیکٹ وہیں سے جہاں چھوڑا",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "0a020454d4f250bb3b9914667c7b3874d51d9d50c8abb3b120e3f15cf2709c59",
+   "sha256": "20a5f05d2b3cb718a8534046fa1229e4e7caafd733e63d65b5d0d92be5b98d55"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "خریداری سے پہلے اپنا اون دیکھ لیں",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "122b6659a8c097a1e19972f69b75bff0b8c2b66700e029bb4082bb8cd682f78c",
+   "sha256": "9ba4e1fb31dcd64f3cdc306dcd897fb6d991658f6f99fd5df97a869908e99f90"
+  }
+ ],
+ "vi": [
+  {
+   "file": "01-count-rows.png",
+   "header": "Đếm hàng và xem tấm vải lớn dần",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "12c58ce80fdab0514bc849ce534b9edb753be06c80f3528c3c03bea7e984d4b6",
+   "sha256": "b18867baa03790642e7f7b9c74c6efb2716b929b9d049e272a029c8a33673272"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "Giữ chỗ đang đan trong mọi mẫu PDF",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "86a9ab0e1d9d5123f55bbc5090c85115b6b7d547dd2f92e567f9e361c12ab4af",
+   "sha256": "6bb036a3e116cb4663481fdf1151f1ff4d2faaf48ab850d5a8c2cab3f9681cdd"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "Đan theo mẫu từng hàng một",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "d12cae6d2ff0aa24b5bde7f28de723d9dfbe948ddfe83631b33a133b4ec0272d",
+   "sha256": "97e3ff5d397968fcf3dcec199c8cbaa0b5bf37a60551d6e94e01d57b6e1d8be6"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "Mẫu đan viết theo đúng cỡ của bạn",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "fa789b4c8c814a89825fdeebcb12ce2932ad29574a52ae3c9a086a112252a2d8",
+   "sha256": "a53c549d89ae9a467ddcdf2436eb49c977ea89619797dec2ec5b989f0a24e710"
+  },
+  {
+   "file": "05-library.png",
+   "header": "Chọn mũ, áo len hay khăn choàng để đan",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "3265cb06887ea35f812beaa0965f48a122cea6a00897a3aef5d115d162d164a0",
+   "sha256": "fde6173b88ba6e48f7d5fa11011c6556b22c61150b79ac5a618378e9786253b3"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "Tiếp tục mỗi dự án từ chỗ bạn dừng",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "2e133afe6c4ee55ff6ba1c2d02134f13fa8404e31773b46ce1542e25ae503b91",
+   "sha256": "4889d76b0daaa0ad89b248714df81924e361a3438b948d17da627b285a340c48"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "Kiểm tra len trước khi đi mua",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "54347b4a3d051248da1c934af7a16f988dbcae3d18d3476bdd8d4a043eb4b889",
+   "sha256": "5cc5df3e8f36bae5108ffa6d0a9c3fce89f9c09bdc32de8af8ea7e88e6c0c663"
+  }
+ ],
+ "zh-Hans": [
+  {
+   "file": "01-count-rows.png",
+   "header": "数着行数\n看织物长高",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "98ab6db85244c36c9c441b6516bacec9aa81842cc04e8d8036e5f86855728ff7"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "在任何PDF图解里\n记住进度",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "7ca56b699da0cc5145e1890cf386ca0896eaff9a2a1babaefd14c97afc6d47f6",
+   "sha256": "e46c0efa0e60a70dcbfb08e19ec8b3ea66c2a906f90583bd59be3dde50d26dfb"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "跟着图解\n一行一行织",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "a12c2f0b946951fe4a7eb3076b37aca93fb9acca3747e3f54e3800c366fc84b2",
+   "sha256": "cd64bee44048af20c62e232fff9824bfc95b1719a893c55015123ba746dc4e00"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "按你的尺寸\n写成的编织图解",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b154ca6e6e9b014b65607ac57aef80dba5bb8d0bd64cec9083b5501c89d9af57",
+   "sha256": "a5c7140f053173cb6b0259630a64f2e99c696bd96fd293a50c7d083ac6561c2a"
+  },
+  {
+   "file": "05-library.png",
+   "header": "选一顶帽子、毛衣\n或披肩来织",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "b91038280191d924b31855a1172ed89cfa36fdb65330b6f2e81f7a9343821738",
+   "sha256": "a540280c26d25ad886f9bce265282b638269724cc1432da7e3703f3f47382947"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "每个作品都\n从停下的地方继续",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "ccd59180171d899d8a24a08d5c32e00d06f0997aa8757b7b697c0a160f20798e",
+   "sha256": "108593e122a6911dd4b4616a9085123d77dd0dadf70872b33090b89f89e75899"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "购买前\n先看看你的毛线",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "6feaa2605bbbae15bd6058a7f751d9697f49ae9a010f8efb8ab9d43c415d3311",
+   "sha256": "9a35f526582ab4f79c1a8f5d1204576317ca5497a307211e6ec55e465626241f"
+  }
+ ],
+ "zh-Hant": [
+  {
+   "file": "01-count-rows.png",
+   "header": "數著行數\n看織物長高",
+   "size": 180,
+   "lines": 2,
+   "source": "counter.png",
+   "source_sha256": "00de32f7a58593031003578129e660db55fa83db78fd1516c1c55d2cc043e63e",
+   "sha256": "f6cb4ec69b3eda6ce0e60ab826152d6b1a61ab5815c6ec214ab862a92a51fff5"
+  },
+  {
+   "file": "02-pdf-place.png",
+   "header": "在任何PDF圖解中\n記住進度",
+   "size": 180,
+   "lines": 2,
+   "source": "pdf.png",
+   "source_sha256": "7ca56b699da0cc5145e1890cf386ca0896eaff9a2a1babaefd14c97afc6d47f6",
+   "sha256": "9e6d34778be1418a497ad25c87abc13070b4ee1835b98686b64bf4acf0527b9f"
+  },
+  {
+   "file": "03-one-row.png",
+   "header": "跟著圖解\n一行一行織",
+   "size": 180,
+   "lines": 2,
+   "source": "guided.png",
+   "source_sha256": "e2b01e056886f0a1694cb887211928ecc7d29464d56f22fe4e2627b75eef6870",
+   "sha256": "54d347ab32be2347937423b7b73f7066fe19b62483de10b97d1922fd71c52aae"
+  },
+  {
+   "file": "04-your-size.png",
+   "header": "依你的尺寸\n撰寫的編織圖解",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "26d953c32b7bda851c0cb604e452da8014b16063ea0071d83f6c297af8d26c68",
+   "sha256": "a78edefe1d270ddf8882b3b666818ec92f85416ff8e920e39fe94a37d26350b3"
+  },
+  {
+   "file": "05-library.png",
+   "header": "選一頂帽子、毛衣\n或披肩來織",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "0d06d210717e4e23639f1c07295565162ae25b0778aa1d043cf8d6b7817adc68",
+   "sha256": "423d952cf9f78022630e8f47d6b974ae5aa55d11ba05e7bbd488a4de7e7c37d4"
+  },
+  {
+   "file": "06-projects.png",
+   "header": "每個作品都\n從停下處繼續",
+   "size": 180,
+   "lines": 2,
+   "source": "projects.png",
+   "source_sha256": "887f8b6db0de8bcfbbad873a27ccc8d76d5ef44fdda66351d69668b5328e8cea",
+   "sha256": "f048cb09a3efcd267a272e8b78b6663e736a3ff31e9ffa0ca902c71c601f8005"
+  },
+  {
+   "file": "07-stash.png",
+   "header": "購買前\n先看看你的毛線",
+   "size": 180,
+   "lines": 2,
+   "source": "stash.png",
+   "source_sha256": "9628e52b92a7f9b8850872aabd3dfee3a9dbb4a348633fe55d0238e0b4aa507e",
+   "sha256": "12baa032327eddc4bc0c6a8d450b6e5e63184757ba2883090080b041f5d3edda"
+  }
+ ]
+}
