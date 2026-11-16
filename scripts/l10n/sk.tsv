@@ -1,0 +1,259 @@
+1	Projekty
+2	Návody
+3	Zásoby
+4	Hotovo
+5	Nový projekt
+6	Viac
+7	Ohodnotiť Ravel
+8	Poslať spätnú väzbu
+9	Pomocník
+10	Odstrániť %@?
+11	Odstrániť projekt
+12	Názov
+13	Zrušiť
+14	Nahodiť očká
+15	Spustiť počítadlo radov
+16	Prehľadávať návody
+17	Rad %lld
+18	Bez názvu
+19	Ravel nemohol otvoriť vaše projekty
+20	Stále sú na tomto zariadení (%@). Reštartujte ho a znova otvorte Ravel.
+21	Získať pomoc
+22	Priadza
+23	Ihlice a háčiky
+24	Pridať do zásob
+25	Ihlica alebo háčik
+26	Pridať priadzu
+27	Pridať ihlice
+28	one=%lld praslen|few=%lld praslene|many=%lld praslena|other=%lld praslenov
+29	Metrov na praslen
+30	Yardov na praslen
+31	Značka
+32	Farba
+33	Vlákno
+34	Šarža farbenia
+35	Hrúbka
+36	Praslene
+37	Hotovo
+38	Typ
+39	Veľkosť
+40	Dĺžka
+41	Ľubovoľná
+42	Háčik
+43	Ihlica
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Kruhová
+53	Rovná
+54	Ponožková
+55	Háčik
+56	Vynulovať počítadlo?
+57	Vynulovať počítadlo
+58	Odstrániť návod z tohto projektu?
+59	Odstrániť návod
+60	Radov v jednom rapporte
+61	Rady
+62	Nastaviť
+63	Rapport začína ďalším radom.
+64	Rad
+65	Kolo
+66	Rad v tejto časti
+67	Kolo v tejto časti
+68	Názov počítadla
+69	Premenovať
+70	Pridať
+71	Odstrániť počítadlo?
+72	Odstrániť počítadlo
+73	Tento návod sa nepodarilo otvoriť
+74	%lld z %lld
+75	one=%lld očko|few=%lld očká|many=%lld očka|other=%lld očiek
+76	Odpočítať jedno pri %@
+77	Pripočítať jedno k %@
+78	Pridať rad
+79	Rad %1$lld z %2$lld v rapporte
+80	O rad späť
+81	Podrobnosti
+82	Materiál
+83	Prejsť na rad
+84	Prejsť na kolo
+85	Prejsť na časť
+86	Pridať návod
+87	Nahradiť návod
+88	Pridať fotky
+89	Nastaviť rad
+90	Rapport
+91	Počítadlo
+92	Vynulovať
+93	Odstrániť
+94	Pridať počítadlo
+95	Označiť ako rozpracované
+96	Označiť ako hotové
+97	Možnosti projektu
+98	Ihlice
+99	Poznámky
+100	Nie je zo zásob
+101	Vybrať priadzu zo zásob
+102	Skratky
+103	Marena
+104	Nechtík
+105	Machová
+106	Smrek
+107	Indigo
+108	Slivka
+109	Ovos
+110	Uhoľná
+111	Trendy
+112	Zadarmo
+113	Čiapky
+114	Šály a nákrčníky
+115	Deky a domov
+116	Doplnky
+117	Svetre
+118	Začiatočník
+119	Jednoduché
+120	Stredne pokročilé
+121	Vzorka
+122	Očká na %@
+123	Rady na %@
+124	Odomknúť návody
+125	Schéma sa k tejto vzorke nehodí
+126	Hlava
+127	Šírka
+128	Obvod
+129	Výška
+130	Strana
+131	Ruka
+132	Lýtko
+133	Rozpätie paží
+134	Hruď
+135	Dĺžka tela
+136	Dĺžka rukáva
+137	Bábätko
+138	Batoľa
+139	Dieťa
+140	Malé
+141	Stredné
+142	Veľké
+143	Klasický
+144	Dlhý
+145	Tesný
+146	Nekonečný
+147	Kočík
+148	Postieľka
+149	Prehoz
+150	Dospelý
+151	Široký
+152	Malá šatka
+153	Štóla
+154	Rebrovaná čiapka
+155	Voľná čiapka
+156	Čiapka so zvinutým okrajom
+157	Šál hladko
+158	Rebrovaný šál
+159	Šál ryžovým vzorom
+160	Rebrovaný nákrčník
+161	Nákrčník ryžovým vzorom
+162	Deka s lemom
+163	Deka hladko
+164	Utierka uhlopriečne
+165	Čelenka na uši
+166	Návleky na zápästie
+167	Návleky na nohy
+168	Trojuholníková šatka
+169	Sveter s raglánom
+170	Hrubý nákrčník
+171	Šatka na krk
+172	Čelenka s vrkočmi
+173	Kukla
+174	Novinka
+175	Čas darčekov
+176	Hlboká zima
+177	Jarné vrstvy
+178	Letná bavlna
+179	Pletenie na cesty
+180	Svetrové počasie
+181	Prvé chladné dni
+182	Lem
+183	Telo
+184	Temeno
+185	Dokončenie
+186	Šál
+187	Nákrčník
+188	Spodný lem
+189	Horný lem
+190	Deka
+191	Pridávanie
+192	Uberanie
+193	Čelenka
+194	Šatka
+195	Stred
+196	Krk
+197	Otvor pre tvár
+198	Vrch
+199	Lem okolo tváre
+200	Lem výstrihu
+201	Zadná časť krku
+202	Sedlo
+203	Rozdelenie
+204	Prvý rukáv
+205	Druhý rukáv
+206	Manžeta
+207	Prvé ucho
+208	Druhé ucho
+209	Návlek na zápästie %lld
+210	Návlek na nohu %lld
+211	Otvor pre palec
+212	Horná časť ruky
+213	Noha
+214	Členok
+215	Zavrieť
+216	Návody Ravel
+217	Každý dizajn v knižnici, napísaný podľa vašich mier a priadze
+218	Ponuky sa nepodarilo načítať
+219	Skúsiť znova
+220	Obnoviť
+221	Podmienky
+222	Súkromie
+223	Ročné
+224	Mesačné
+225	Navždy
+226	%@ ročne
+227	%@ mesačne
+228	%@ jednorazovo
+229	Kúpiť navždy
+230	one=Vyskúšať zadarmo na %lld deň|few=Vyskúšať zadarmo na %lld dni|many=Vyskúšať zadarmo na %lld dňa|other=Vyskúšať zadarmo na %lld dní
+231	Odoberať
+232	one=%lld deň zadarmo.|few=%lld dni zadarmo.|many=%lld dňa zadarmo.|other=%lld dní zadarmo.
+233	Potom %@.
+234	%@.
+235	Obnovuje sa, kým ho nezrušíte v Nastaveniach. Návod, ktorý ste začali plesť, vám zostane.
+236	Jedna platba %@. Každý návod je váš navždy.
+237	Váš nákup čaká na schválenie
+238	Nákup prebehol. Ak návody zostanú zamknuté, ťuknite na Obnoviť.
+239	Nákup sa nepodaril
+240	Pre toto Apple ID sa nenašiel žiadny nákup
+241	App Store nie je dostupný. Skúste to znova, keď budete online.
+242	Upliesť 2 očká dohromady
+243	Prehodiť 2 očká ako na pletenie, po jednom, a upliesť ich dohromady zozadu
+244	Nit cez ihlicu
+245	Pridať 1: zdvihnúť niť medzi očkami a upliesť ju zozadu
+246	Pridať 1 doľava: zdvihnúť niť spredu a upliesť ju zozadu
+247	Pridať 1 doprava: zdvihnúť niť zozadu a upliesť ju spredu
+248	Vrkoč 6 vpredu: prehodiť 3 očká na pomocnú ihlicu a nechať ju vpredu, upliesť 3, potom upliesť 3 očká z pomocnej ihlice
+249	Hladko. K2 je upliesť 2 očká hladko
+250	Obrátene. P2 je upliesť 2 očká obrátene
+251	Opakovať očká za * stále dokola, tak ďaleko, ako hovorí rad
+252	Krúžok na ihlici, ktorý značí miesto. Keď k nemu dôjdete, prehoďte ho z ľavej ihlice na pravú
+253	Vymeniť ihlice v rukách a plesť späť opačným smerom
+254	Upliesť prvé nahodené očko pracovnou niťou, aby ste uzavreli kruh, s nahadzovacím okrajom rovno, nie skrúteným okolo ihlice
+255	Skrútiť slučku z pracovnej nite a posunúť ju na pravú ihlicu. Každá slučka je 1 očko
+256	Prevliecť ihlicu okrajom práce, ovinúť niť a pretiahnuť slučku. Každá slučka je 1 očko
+257	Pri uzatváraní plesť hladké očká hladko a obrátené obrátene
+258	K1, M1L, plesť do 1 očka pred ďalšou značkou, M1R, k1, prehodiť značku. Pridá 2 očká
+259	Nemecký skrátený obrat: s niťou vpredu prehodiť prvé očko ako na obrátené, potom niť pretiahnuť hore cez ihlicu, aby očko ukázalo dve nôžky. Pri návrate upliesť obe nôžky dohromady ako jedno očko

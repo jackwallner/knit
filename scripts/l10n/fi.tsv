@@ -1,0 +1,259 @@
+1	Projektit
+2	Ohjeet
+3	Varasto
+4	Valmis
+5	Uusi projekti
+6	Lisää
+7	Arvioi Ravel
+8	Lähetä palautetta
+9	Ohje
+10	Poistetaanko %@?
+11	Poista projekti
+12	Nimi
+13	Peruuta
+14	Luo silmukat
+15	Aloita rivilaskuri
+16	Selaa ohjeita
+17	Rivi %lld
+18	Nimetön
+19	Ravel ei voinut avata projektejasi
+20	Ne ovat yhä tässä laitteessa (%@). Käynnistä se uudelleen ja avaa Ravel uudestaan.
+21	Hae apua
+22	Lanka
+23	Puikot ja virkkuukoukut
+24	Lisää varastoon
+25	Puikko tai virkkuukoukku
+26	Lisää lankaa
+27	Lisää puikkoja
+28	one=%lld vyyhti|other=%lld vyyhtiä
+29	Metriä vyyhdissä
+30	Jaardia vyyhdissä
+31	Merkki
+32	Väri
+33	Kuitu
+34	Värjäyserä
+35	Langan paksuus
+36	Vyyhdit
+37	Valmis
+38	Tyyppi
+39	Koko
+40	Pituus
+41	Mikä tahansa
+42	Virkkuukoukku
+43	Puikko
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Pyöröpuikko
+53	Suora puikko
+54	Sukkapuikot
+55	Virkkuukoukku
+56	Nollataanko laskuri?
+57	Nollaa laskuri
+58	Poistetaanko ohje tästä projektista?
+59	Poista ohje
+60	Rivejä yhdessä toistossa
+61	Rivit
+62	Aseta
+63	Toisto alkaa seuraavalta riviltä.
+64	Rivi
+65	Kierros
+66	Rivi tässä osassa
+67	Kierros tässä osassa
+68	Laskurin nimi
+69	Nimeä uudelleen
+70	Lisää
+71	Poistetaanko laskuri?
+72	Poista laskuri
+73	Ohjetta ei voitu avata
+74	%lld / %lld
+75	one=%lld silmukka|other=%lld silmukkaa
+76	Vähennä yksi: %@
+77	Lisää yksi: %@
+78	Lisää rivi
+79	Rivi %1$lld / %2$lld toistossa
+80	Yksi rivi taaksepäin
+81	Tiedot
+82	Materiaalit
+83	Siirry riville
+84	Siirry kierrokselle
+85	Siirry osaan
+86	Lisää ohje
+87	Korvaa ohje
+88	Lisää kuvia
+89	Aseta rivi
+90	Toisto
+91	Laskuri
+92	Nollaa
+93	Poista
+94	Lisää laskuri
+95	Merkitse käynnissä olevaksi
+96	Merkitse valmiiksi
+97	Projektin asetukset
+98	Puikot
+99	Muistiinpanot
+100	Ei varastosta
+101	Valitse lanka varastosta
+102	Lyhenteet
+103	Mataran punainen
+104	Kehäkukka
+105	Sammal
+106	Kuusi
+107	Indigo
+108	Luumu
+109	Kaura
+110	Hiili
+111	Suosittua
+112	Ilmainen
+113	Pipot
+114	Huivit ja kaulurit
+115	Peitot ja koti
+116	Asusteet
+117	Neuleet
+118	Aloittelija
+119	Helppo
+120	Keskitaso
+121	Silmukkatiheys
+122	Silmukoita %@
+123	Rivejä %@
+124	Avaa ohjeet
+125	Kaavio ei sovi tähän silmukkatiheyteen
+126	Pää
+127	Leveys
+128	Ympärys
+129	Korkeus
+130	Sivu
+131	Käsi
+132	Pohje
+133	Käsien jänneväli
+134	Rinta
+135	Vartalon pituus
+136	Hihan pituus
+137	Vauva
+138	Taapero
+139	Lapsi
+140	Pieni
+141	Keskikokoinen
+142	Suuri
+143	Klassinen
+144	Pitkä
+145	Tiukka
+146	Päättymätön
+147	Rattaat
+148	Kehto
+149	Torkkupeitto
+150	Aikuinen
+151	Leveä
+152	Pieni huivi
+153	Stola
+154	Joustinneulepipo
+155	Slouchy-pipo
+156	Rullareunainen pipo
+157	Joustinneuleinen huivi
+158	Ribbihuivi
+159	Nurjalla ja oikealla neulottu huivi
+160	Ribbikauluri
+161	Nurjalla ja oikealla neulottu kaulus
+162	Reunallinen peitto
+163	Ainaoikeaa neulottu peitto
+164	Vinosti neulottu tiskirätti
+165	Korvalämmitin
+166	Rannelämmittimet
+167	Säärystimet
+168	Kolmiohuivi
+169	Raglanpusero
+170	Paksu kaulus
+171	Kaulaliina
+172	Palmikkopanta
+173	Kommandopipo
+174	Uusi
+175	Lahjojen aika
+176	Keskitalvi
+177	Kevätkerrokset
+178	Kesäpuuvilla
+179	Matkaneule
+180	Neuleilma
+181	Ensimmäiset kylmät päivät
+182	Reunus
+183	Vartalo
+184	Kruunu
+185	Viimeistely
+186	Huivi
+187	Kaulus
+188	Alareunus
+189	Yläreunus
+190	Peitto
+191	Lisäykset
+192	Kavennukset
+193	Panta
+194	Hartiahuivi
+195	Keskiosa
+196	Kaula
+197	Kasvoaukko
+198	Yläosa
+199	Kasvoreunus
+200	Kaulus
+201	Niska
+202	Kaarroke
+203	Jako
+204	Ensimmäinen hiha
+205	Toinen hiha
+206	Resori
+207	Ensimmäinen korva
+208	Toinen korva
+209	Rannelämmitin %lld
+210	Säärystin %lld
+211	Peukaloaukko
+212	Käden yläosa
+213	Sääri
+214	Nilkka
+215	Sulje
+216	Ravel-ohjeet
+217	Kaikki kirjaston mallit kirjoitettuna sinun mittoihisi ja lankaasi
+218	Jaksoja ei voitu ladata
+219	Yritä uudelleen
+220	Palauta
+221	Ehdot
+222	Tietosuoja
+223	Vuosittain
+224	Kuukausittain
+225	Kertamaksu
+226	%@ vuodessa
+227	%@ kuukaudessa
+228	%@ kerran
+229	Osta kertamaksulla
+230	one=Kokeile ilmaiseksi %lld päivä|other=Kokeile ilmaiseksi %lld päivää
+231	Tilaa
+232	one=%lld päivä ilmaiseksi.|other=%lld päivää ilmaiseksi.
+233	Sitten %@.
+234	%@.
+235	Uusiutuu, kunnes perut asetuksissa. Aloittamasi ohje pysyy sinulla.
+236	Yksi maksu, %@. Jokainen ohje on sinun ikuisesti.
+237	Ostoksesi odottaa hyväksyntää
+238	Ostoksesi onnistui. Napauta Palauta, jos ohjeet pysyvät lukittuina.
+239	Ostos ei onnistunut
+240	Tällä Apple-tilillä ei löytynyt ostoksia
+241	App Storeen ei saatu yhteyttä. Yritä uudelleen, kun olet verkossa.
+242	Neulo 2 silmukkaa yhteen
+243	Siirrä 2 silmukkaa oikein neuloen yksi kerrallaan, neulo ne sitten yhteen takaa
+244	Langankierto
+245	Lisää 1: nosta silmukoiden välinen lanka ja neulo se takaa
+246	Lisää 1 vasemmalle: nosta lanka edestä ja neulo se takaa
+247	Lisää 1 oikealle: nosta lanka takaa ja neulo se edestä
+248	Palmikko 6 edessä: siirrä 3 silmukkaa palmikkopuikolle ja jätä se eteen, neulo 3, neulo sitten palmikkopuikon 3 silmukkaa
+249	Oikein. K2 on 2 silmukkaa oikein
+250	Nurin. P2 on 2 silmukkaa nurin
+251	Toista *:n jälkeiset silmukat yhä uudelleen niin pitkälle kuin rivi sanoo
+252	Puikolla oleva rengas, joka merkitsee kohdan. Siirrä se vasemmalta puikolta oikealle, kun saavut siihen
+253	Vaihda puikot käsien välillä ja neulo takaisin toiseen suuntaan
+254	Neulo ensimmäinen luotu silmukka työlangalla ympyrän sulkemiseksi niin, että luomisreuna on tasaisena eikä kierteellä puikon ympärillä
+255	Kierrä työlangasta silmukka ja liu’uta se oikealle puikolle. Jokainen silmukka on 1 silmukka
+256	Pujota puikko työn reunan läpi, kierrä lanka ja vedä silmukka läpi. Jokainen silmukka on 1 silmukka
+257	Neulo oikeat silmukat oikein ja nurjat nurin päätellessäsi
+258	K1, M1L, neulo 1 silmukka ennen seuraavaa merkkiä, M1R, k1, siirrä merkki. Se lisää 2 silmukkaa
+259	Saksalainen lyhennetty kääntö: lanka edessä, siirrä ensimmäinen silmukka kuin neuloisit nurin, vedä sitten lanka ylös puikon yli niin, että silmukassa näkyy kaksi jalkaa. Neulo molemmat jalat yhteen yhtenä silmukkana, kun tulet takaisin siihen
