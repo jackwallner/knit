@@ -151,18 +151,23 @@ struct YarnEditor: View {
     @State private var lengthText = ""
     private let lengthLabel = Units.current == .metric ? "Meters per Skein" : "Yards per Skein"
 
+    /// A labeled row whose value is typed on the right, so a filled-in field still says what it is.
+    private func field(_ label: String, text: Binding<String>) -> some View {
+        LabeledContent(label) {
+            TextField("", text: text).multilineTextAlignment(.trailing).accessibilityLabel(label)
+        }
+    }
+
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Name", text: $yarn.name).focused($nameFocused).accessibilityLabel("Name")
                         .accessibilityIdentifier("yarn.name")
-                    TextField("Brand", text: $yarn.brand).accessibilityLabel("Brand")
-                    TextField("Color", text: $yarn.colorway).accessibilityLabel("Color")
-                    TextField("Fiber", text: $yarn.fiber).accessibilityLabel("Fiber")
-                        .accessibilityIdentifier("yarn.fiber")
-                    TextField("Dye Lot", text: $yarn.dyeLot).accessibilityLabel("Dye Lot")
-                        .accessibilityIdentifier("yarn.dyeLot")
+                    field("Brand", text: $yarn.brand)
+                    field("Color", text: $yarn.colorway)
+                    field("Fiber", text: $yarn.fiber).accessibilityIdentifier("yarn.fiber")
+                    field("Dye Lot", text: $yarn.dyeLot).accessibilityIdentifier("yarn.dyeLot")
                 }
                 Section {
                     Picker("Weight", selection: $yarn.weight) {
@@ -172,9 +177,8 @@ struct YarnEditor: View {
                         LabeledContent("Skeins", value: yarn.skeins, format: .number)
                     }
                     .accessibilityIdentifier("yarn.skeins")
-                    TextField(lengthLabel, text: $lengthText)
+                    field(lengthLabel, text: $lengthText)
                         .keyboardType(.numberPad)
-                        .accessibilityLabel(lengthLabel)
                         .accessibilityIdentifier("yarn.length")
                         .onChange(of: lengthText) { _, text in
                             let shown = min(Int(text) ?? 0, 99_999)
