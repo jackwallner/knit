@@ -3,7 +3,7 @@ import XCTest
 @testable import Ravel
 
 /// A store written by a build before the schemas were versioned: no `repeatStart`, no later field.
-private enum BeforeVersions {
+enum BeforeVersions {
     @Model final class Project {
         var name: String
         var rows: Int
@@ -63,8 +63,7 @@ final class SchemaTests: XCTestCase {
     }
 
     func testVersionOneNamesTheEntitiesTheFirstBuildsWrote() {
-        let names = SchemaV1.models.map { Schema.Entity(for: $0).name }
-        XCTAssertEqual(names, ["Project", "Yarn", "Needle"])
+        XCTAssertEqual(Schema(versionedSchema: SchemaV1.self).entities.map(\.name).sorted(), ["Needle", "Project", "Yarn"])
         XCTAssertEqual(RavelSchema.current.entities.map(\.name).sorted(), ["Needle", "Project", "Yarn"])
     }
 

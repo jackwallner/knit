@@ -114,7 +114,13 @@ struct ProjectView: View {
         }
         .alert("That pattern could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
-        .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+            #if DEBUG
+            // `-OpenDetails` opens the details sheet, for screenshots.
+            if ProcessInfo.processInfo.arguments.contains("-OpenDetails") { editing = true }
+            #endif
+        }
         .onDisappear {
             UIApplication.shared.isIdleTimerDisabled = false
             project.persist()

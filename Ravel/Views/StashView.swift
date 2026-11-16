@@ -62,6 +62,15 @@ struct StashView: View {
                     .accessibilityIdentifier("stash.add")
                 }
             }
+            #if DEBUG
+            // `-OpenYarn` lands in the first yarn's editor, for screenshots.
+            .task {
+                guard ProcessInfo.processInfo.arguments.contains("-OpenYarn"), editingYarn == nil, let first = yarns.first else { return }
+                opened = first
+                nameBefore = first.name
+                editingYarn = first
+            }
+            #endif
             .sheet(item: $editingYarn, onDismiss: dropUnnamed) { YarnEditor(yarn: $0) }
             .sheet(item: $editingNeedle) { NeedleEditor(needle: $0) }
         }
@@ -168,7 +177,8 @@ struct YarnEditor: View {
                         .accessibilityLabel(lengthLabel)
                         .accessibilityIdentifier("yarn.length")
                         .onChange(of: lengthText) { _, text in
-                            yarn.lengthPerSkein = min(Int(text) ?? 0, 99_999)
+                            let shown = min(Int(text) ?? 0, 99_999)
+                            if shown != yarn.lengthPerSkein { yarn.lengthPerSkein = shown }
                         }
                 }
                 if !yarn.projects.isEmpty {

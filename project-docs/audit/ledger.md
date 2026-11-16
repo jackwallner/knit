@@ -44,15 +44,15 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | G-10 | P1 | Undo hit slop falls to the counting canvas | fixed | The touch area now runs 12 pt past the circle on every side (76 pt), so a near miss lands on undo, never on the counter |
 | G-11 | P1 | Repeat position wrong after a hem | fixed and verified | Models.swift:21,51-52,76-79 `repeatStart`; ProjectView.swift:86-95 alert note. Rewind side effect: V-05 |
 | G-12 | P1 | Go to Row trapped in section, gone when finished | fixed and verified | Plan.swift:91-99 `sections`, Models.swift:119-123, ProjectView.swift:303-307. Duplicate names: V-10 |
-| G-13 | P2 | No secondary counters | deferred | Past 1.0 |
-| G-14 | P2 | Stash not linked to projects | deferred | Past 1.0 |
+| G-13 | P2 | No secondary counters | fixed | One optional counter per project (`tallyOn`, `tallyName`, `tallyCount`), rules in the `Project` extension, each ending in `persist()` and never touching `rows`. Bar under the title; SchemaTests `testSecondCounterNeverTouchesTheRowsAndSurvivesReopening` |
+| G-14 | P2 | Stash not linked to projects | fixed | `Project.stashYarn` (nullify on delete, inverse `Yarn.projects`); the typed `yarn` stays for old projects. Needles are still free text. SchemaTests `testLinkedYarnShowsItsNameAndDeletingItLeavesTheProjectWhole` |
 | G-15 | P2 | Portrait only | deferred | Past 1.0 |
-| G-16 | P2 | Yarn lacks yardage, fiber, dye lot | deferred | Past 1.0 |
+| G-16 | P2 | Yarn lacks yardage, fiber, dye lot | fixed | `Yarn.yardsPerSkein` (yards underneath, shown through `Sizing.yardage`), `fiber`, `dyeLot`; stash row shows the total when known |
 | G-17 | P2 | Finished plain project still counts | fixed and verified | Models.swift:93 `if !isFinished`. Side effects: V-02, V-03 |
 | G-18 | P2 | Free designs do not show fitted sizing | owner decision | Make ribbed beanie or cowl free; touches `Design.isFree` and the free/paid test (ModelTests `testOnlyTheLibraryIsPaid`) |
 | G-19 | P2 | Paywall silent about cast-on patterns kept | fixed and verified | SubscriptionService.swift:59 disclosure sentence; PaywallUITests.swift:34,36 updated. Lifetime line has no such sentence (it says "yours for good") |
 | G-20 | P3 | No savings badge or library size on paywall | owner decision | Paywall copy and pricing presentation |
-| G-21 | P3 | Projects list shows taps, not rows | deferred | Past 1.0 |
+| G-21 | P3 | Projects list shows taps, not rows | fixed | `Project.knittedRows(_:)` feeds the list; the thumbnail still draws from taps |
 | G-22 | P3 | Raglan body-only round lacks final slip marker | fixed and verified | Engines.swift:398; marker count checked (four slips) |
 
 ## K: tech edit
@@ -217,7 +217,7 @@ Ravel checked against what every live fleet app carries. Found by looking at the
 
 **C-02 and SwiftData migration: the reasoning holds for additive changes, with one discipline risk and one new dead end.**
 - Holds: with no `SchemaMigrationPlan`, SwiftData opens the store and Core Data infers a lightweight mapping when the model changed additively (new property with an inline default, new optional, new model, removed property, rename with `@Attribute(originalName:)`). The new `repeatStart: Int = 0` migrates builds 1 to 4 this way.
-- Risk 1: a custom migration later needs a `VersionedSchema` for the version on disk. Declaring `SchemaV1` afterwards works only if it is a verbatim copy of the models 1.0 shipped (the store is matched by model hash). If the models are edited in place first, the only source is git history. Not tested here. Wrapping the current models in `SchemaV1` before 1.0 ships costs nothing and removes that risk.
+- Risk 1 (done 2026-11-15): `SchemaV1` in Shared/Models/Schema.swift is the model as it stood before the stash, secondary counter and list work. The live models are V2 with a lightweight stage. A store from a build older than V1 matches neither version, so `Persistence.container` retries the same file without the plan (inferred migration) before giving up; never an in-memory store. Old risk text: a custom migration later needs a `VersionedSchema` for the version on disk. Declaring `SchemaV1` afterwards works only if it is a verbatim copy of the models 1.0 shipped (the store is matched by model hash). If the models are edited in place first, the only source is git history. Not tested here. Wrapping the current models in `SchemaV1` before 1.0 ships costs nothing and removes that risk.
 - Risk 2: any non-lightweight change (type change, optional to required without default, relationship change) makes `ModelContainer` throw. That used to lose data silently; it now shows StoreUnavailableView, which is correct but has no recovery path (no export, no reset). Acceptable for 1.0, plan the migration before touching the models.
 
 ## Fixes that do not hold
