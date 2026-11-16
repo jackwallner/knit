@@ -94,7 +94,7 @@ enum Persistence {
     /// A three-page stand-in pattern so the reader can be checked without importing a file.
     private static func samplePattern() -> String? {
         let body = UIFont.systemFont(ofSize: 17)
-        let small: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.gray]
+        let small: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.darkGray]
         let data = UIGraphicsPDFRenderer(bounds: samplePage).pdfData { context in
             for (number, part) in ["Yoke", "Body", "Sleeves"].enumerated() {
                 context.beginPage()
