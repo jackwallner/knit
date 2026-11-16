@@ -1,1 +1,1 @@
-stitch,tracker,crochet,beginner,sweater,colorwork,raccoon,pdf,hat,beanie,scarf,cowl,shawl,blanket
+stitch,tracker,crochet,beginner,sweater,colorwork,pdf,hat,beanie,scarf,cowl,shawl,blanket,gauge

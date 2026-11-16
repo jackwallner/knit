@@ -15,7 +15,7 @@ Chọn một thiết kế, nhập số đo và mật độ đan, Ravel sẽ vi�
 
 Sau đó đan theo từng hàng một. Mỗi lần chạm hiện bước tiếp theo và số mũi bạn cần có trên kim. Nhảy tới bất kỳ phần nào khi bạn quay lại với sản phẩm.
 
-Thư viện có mũ, mũ trùm đầu, khăn quàng, khăn ống, băng đô đan xoắn, chăn, khăn lau chén, đồ ủ ấm tay, đồ ủ ấm chân, khăn choàng tam giác và áo chui đầu tay raglan đan từ trên xuống. Kệ Trending mở đầu bằng các thiết kế mới và những mẫu hợp mùa. Các thiết kế đan nhiều màu thêm sọc, họa tiết theo biểu đồ và mũ có tai, theo số đo của bạn như mọi thiết kế khác, và các thiết kế theo mùa mới đến suốt năm mà không cần cập nhật ứng dụng. Garter Scarf (khăn quàng đan mũi cơ bản mọi hàng), Diagonal Dishcloth (khăn lau chén đan chéo) và Round Raccoon Beanie (mũ len gấu mèo tròn) miễn phí.
+Thư viện có mũ, mũ trùm đầu, khăn quàng, khăn ống, băng đô đan xoắn, chăn, khăn lau chén, đồ ủ ấm tay, đồ ủ ấm chân, khăn choàng tam giác và áo chui đầu tay raglan đan từ trên xuống. Kệ Trending mở đầu bằng các thiết kế mới và những mẫu hợp mùa. Các thiết kế đan nhiều màu thêm sọc, họa tiết theo biểu đồ và mũ có tai, theo số đo của bạn như mọi thiết kế khác, và các thiết kế theo mùa mới đến suốt năm mà không cần cập nhật ứng dụng. Garter Scarf (khăn quàng đan mũi cơ bản mọi hàng) và Diagonal Dishcloth (khăn lau chén đan chéo) miễn phí.
 
 NGÔN NGỮ VÀ ĐƠN VỊ
 Ứng dụng và mọi mẫu chỉ có tiếng Anh. Ngoài Hoa Kỳ, độ dài hiển thị bằng xentimét (cm) và mét (m).

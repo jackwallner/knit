@@ -15,7 +15,7 @@ Alege un design, introdu măsurile și proba ta, iar Ravel scrie modelul astfel 
 
 Apoi urmează-l rând cu rând. Fiecare atingere arată instrucțiunea următoare și numărul de ochiuri pe care trebuie să le ai pe andrea. Sari la orice secțiune când reiei lucrarea.
 
-Biblioteca are căciuli, o cagulă, fulare, gulere, o bentiță cu împletituri, pături, o lavetă, mănuși fără degete, jambiere, un șal triunghiular și un pulover raglan tricotat de sus în jos. Raftul Trending începe cu design-urile noi și cu ceea ce se potrivește sezonului. Modelele cu lucru în culori adaugă dungi, motive din grafic și căciuli cu urechi, în măsura ta ca toate celelalte, iar modele sezoniere noi apar pe parcursul anului fără actualizarea aplicației. Garter Scarf (fular cu toate rândurile pe față), Diagonal Dishcloth (lavetă în diagonală) și Round Raccoon Beanie (căciulă rotundă de raton) sunt gratuite.
+Biblioteca are căciuli, o cagulă, fulare, gulere, o bentiță cu împletituri, pături, o lavetă, mănuși fără degete, jambiere, un șal triunghiular și un pulover raglan tricotat de sus în jos. Raftul Trending începe cu design-urile noi și cu ceea ce se potrivește sezonului. Modelele cu lucru în culori adaugă dungi, motive din grafic și căciuli cu urechi, în măsura ta ca toate celelalte, iar modele sezoniere noi apar pe parcursul anului fără actualizarea aplicației. Garter Scarf (fular cu toate rândurile pe față) și Diagonal Dishcloth (lavetă în diagonală) sunt gratuite.
 
 LIMBĂ ȘI UNITĂȚI
 Aplicația și toate modelele sunt doar în engleză. În afara Statelor Unite, lungimile se afișează în centimetri (cm) și metri (m).

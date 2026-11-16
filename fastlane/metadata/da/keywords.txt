@@ -1,1 +1,1 @@
-strikke,rækketæller,hækle,strikkepinde,hue,sweater,halstørklæde,pdf,tæppe,farvestrikning,vaskebjørn
+strikke,rækketæller,hækle,strikkepinde,hue,sweater,halstørklæde,pdf,tæppe,farvestrikning,raglan

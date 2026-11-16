@@ -1,1 +1,1 @@
-yarn,jumper,stitch,tracker,crochet,beginner,pdf,hat,beanie,scarf,cowl,shawl,colourwork,raccoon
+yarn,jumper,stitch,tracker,crochet,beginner,pdf,hat,beanie,scarf,cowl,shawl,colourwork,gauge,raglan

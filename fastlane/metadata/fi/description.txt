@@ -15,7 +15,7 @@ Valitse malli, anna mittasi ja silmukkatiheytesi, niin Ravel kirjoittaa ohjeen s
 
 Seuraa ohjetta sitten kerros kerrokselta. Jokainen napautus näyttää seuraavan ohjeen ja silmukkamäärän, joka puikolla pitäisi olla. Hyppää mihin tahansa osioon, kun otat työn uudelleen käteen.
 
-Kirjastossa on pipoja, kommandopipo, huiveja, kaulaliinoja, kaapeleilla neulottu otsapanta, peittoja, tiskirätti, rannelämmittimet, säärystimet, kolmiohuivi ja raglanvillapaita ylhäältä alas. Trending-hyllyn kärjessä ovat uudet mallit ja vuodenaikaan sopivat ohjeet. Kirjoneulemallit tuovat mukaan raitoja, kaavioon piirrettyjä kuvioita ja korvallisia pipoja, mitoitettuina kuten kaikki muu, ja uusia kausimalleja tulee vuoden mittaan ilman sovelluspäivitystä. Garter Scarf (ainaoikeaa neulottu huivi), Diagonal Dishcloth (vinottain neulottu tiskirätti) ja Round Raccoon Beanie (pyöreä pesukarhupipo) ovat ilmaisia.
+Kirjastossa on pipoja, kommandopipo, huiveja, kaulaliinoja, kaapeleilla neulottu otsapanta, peittoja, tiskirätti, rannelämmittimet, säärystimet, kolmiohuivi ja raglanvillapaita ylhäältä alas. Trending-hyllyn kärjessä ovat uudet mallit ja vuodenaikaan sopivat ohjeet. Kirjoneulemallit tuovat mukaan raitoja, kaavioon piirrettyjä kuvioita ja korvallisia pipoja, mitoitettuina kuten kaikki muu, ja uusia kausimalleja tulee vuoden mittaan ilman sovelluspäivitystä. Garter Scarf (ainaoikeaa neulottu huivi) ja Diagonal Dishcloth (vinottain neulottu tiskirätti) ovat ilmaisia.
 
 KIELI JA MITAT
 Sovellus ja kaikki ohjeet ovat vain englanniksi. Yhdysvaltojen ulkopuolella pituudet näytetään senttimetreinä (cm) ja metreinä (m).
