@@ -100,6 +100,12 @@
             "value": "%@ por mês"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ в месяц"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -116,6 +122,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ per månad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ на місяць"
           }
         }
       }
@@ -219,6 +231,12 @@
             "value": "%@ por ano"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ в год"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -235,6 +253,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ per år"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ на рік"
           }
         }
       }
@@ -338,6 +362,12 @@
             "value": "%@ uma vez"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ один раз"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -354,6 +384,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ engångs"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ один раз"
           }
         }
       }
@@ -457,6 +493,12 @@
             "value": "%@."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -470,6 +512,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@."
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "%@."
@@ -870,6 +918,36 @@
             }
           }
         },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld дня бесплатно."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld дней бесплатно."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld день бесплатно."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld дня бесплатно."
+                }
+              }
+            }
+          }
+        },
         "sk": {
           "variations": {
             "plural": {
@@ -943,6 +1021,36 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld dagar gratis."
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld дні безкоштовно."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld днів безкоштовно."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld день безкоштовно."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld дня безкоштовно."
                 }
               }
             }
@@ -1049,6 +1157,12 @@
             "value": "%lld de %lld"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld из %lld"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -1065,6 +1179,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld av %lld"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld з %lld"
           }
         }
       }
@@ -1462,6 +1582,36 @@
             }
           }
         },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотка"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотков"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld моток"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотка"
+                }
+              }
+            }
+          }
+        },
         "sk": {
           "variations": {
             "plural": {
@@ -1535,6 +1685,36 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld dockor"
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотки"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотків"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld моток"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мотка"
                 }
               }
             }
@@ -1935,6 +2115,36 @@
             }
           }
         },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петли"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петель"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петля"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петли"
+                }
+              }
+            }
+          }
+        },
         "sk": {
           "variations": {
             "plural": {
@@ -2008,6 +2218,36 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld maskor"
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петлі"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петель"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петля"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld петлі"
                 }
               }
             }
@@ -2114,6 +2354,12 @@
             "value": "Uma virada de carreiras curtas alemã: com o fio na frente, passar o primeiro ponto como para o avesso, depois puxar o fio por cima da agulha para que o ponto mostre duas pernas. Tricotar as duas pernas juntas como um único ponto ao voltar a ele"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Немецкие укороченные ряды (разворот): нить перед работой, снять первую петлю как для изнаночной, затем протянуть нить вверх через спицу, чтобы у петли были видны две ножки. Вернувшись к ней, провязать обе ножки вместе как одну петлю"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2130,6 +2376,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "En tysk förkortad varvvändning: med tråden framför, lyft första maskan som om den skulle stickas avig, dra sedan tråden upp över stickan så att maskan visar två ben. Sticka båda benen ihop som en maska när du kommer tillbaka till den"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Німецькі вкорочені ряди (розворот): нитка перед роботою, зняти першу петлю як для виворітної, потім протягнути нитку вгору через спицю, щоб у петлі було видно дві ніжки. Повернувшись до неї, провʼязати обидві ніжки разом як одну петлю"
           }
         }
       }
@@ -2233,6 +2485,12 @@
             "value": "Um anel na agulha que marca um lugar. Passe-o da agulha esquerda para a direita quando chegar nele"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кольцо на спице, отмечающее место. Когда дойдёте до него, переложите с левой спицы на правую"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2249,6 +2507,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "En ring på stickan som markerar ett ställe. Flytta den från vänster till höger sticka när du kommer till den"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кільце на спиці, що позначає місце. Коли дійдете до нього, перекладіть з лівої спиці на праву"
           }
         }
       }
@@ -2352,6 +2616,12 @@
             "value": "Abreviações"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сокращения"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2368,6 +2638,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Förkortningar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скорочення"
           }
         }
       }
@@ -2471,6 +2747,12 @@
             "value": "Acessórios"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аксессуары"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2487,6 +2769,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Accessoarer"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аксесуари"
           }
         }
       }
@@ -2590,6 +2878,12 @@
             "value": "Adicionar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2606,6 +2900,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати"
           }
         }
       }
@@ -2709,6 +3009,12 @@
             "value": "Adicionar contador"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить счётчик"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2725,6 +3031,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till räknare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати лічильник"
           }
         }
       }
@@ -2828,6 +3140,12 @@
             "value": "Adicionar agulhas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить спицы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2844,6 +3162,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till stickor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати спиці"
           }
         }
       }
@@ -2947,6 +3271,12 @@
             "value": "Adicionar padrão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить схему"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -2963,6 +3293,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати схему"
           }
         }
       }
@@ -3066,6 +3402,12 @@
             "value": "Adicionar fotos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить фото"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3082,6 +3424,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till foton"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати фото"
           }
         }
       }
@@ -3185,6 +3533,12 @@
             "value": "Adicionar fio"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить пряжу"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3201,6 +3555,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till garn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати пряжу"
           }
         }
       }
@@ -3304,6 +3664,12 @@
             "value": "Adicionar uma carreira"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить ряд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3320,6 +3686,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till en rad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати ряд"
           }
         }
       }
@@ -3423,6 +3795,12 @@
             "value": "Somar um a %@"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плюс один: %@"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3439,6 +3817,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till en på %@"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плюс один: %@"
           }
         }
       }
@@ -3542,6 +3926,12 @@
             "value": "Adicionar à reserva"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить в запасы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3558,6 +3948,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg till i förrådet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати до запасів"
           }
         }
       }
@@ -3661,6 +4057,12 @@
             "value": "Adulto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Взрослый"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3677,6 +4079,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vuxen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дорослий"
           }
         }
       }
@@ -3780,6 +4188,12 @@
             "value": "Tornozelo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Щиколотка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3796,6 +4210,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ankel"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Щиколотка"
           }
         }
       }
@@ -3899,6 +4319,12 @@
             "value": "Qualquer"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Любая"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3915,6 +4341,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Valfri"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Будь-яка"
           }
         }
       }
@@ -4018,6 +4450,12 @@
             "value": "Aran"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aran"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4031,6 +4469,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aran"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Aran"
@@ -4137,6 +4581,12 @@
             "value": "Circunferência"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обхват"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4153,6 +4603,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Omkrets"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обхват"
           }
         }
       }
@@ -4256,6 +4712,12 @@
             "value": "Bebê"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Малыш"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4272,6 +4734,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bebis"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Немовля"
           }
         }
       }
@@ -4375,6 +4843,12 @@
             "value": "Costas do pescoço"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задняя часть горловины"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4391,6 +4865,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nacke"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задня частина горловини"
           }
         }
       }
@@ -4494,6 +4974,12 @@
             "value": "Voltar uma carreira"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назад на один ряд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4510,6 +4996,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "En rad tillbaka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назад на один ряд"
           }
         }
       }
@@ -4613,6 +5105,12 @@
             "value": "Balaclava"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Балаклава"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4629,6 +5127,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Balaklava"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Балаклава"
           }
         }
       }
@@ -4732,6 +5236,12 @@
             "value": "Faixa"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повязка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4748,6 +5258,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Band"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пов’язка"
           }
         }
       }
@@ -4851,6 +5367,12 @@
             "value": "Iniciante"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начинающий"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4867,6 +5389,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nybörjare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Початківець"
           }
         }
       }
@@ -4970,6 +5498,12 @@
             "value": "Manta"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -4986,6 +5520,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Filt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед"
           }
         }
       }
@@ -5089,6 +5629,12 @@
             "value": "Mantas e casa"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пледы и дом"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5105,6 +5651,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Filtar och hem"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пледи та дім"
           }
         }
       }
@@ -5208,6 +5760,12 @@
             "value": "Corpo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Полотно"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5224,6 +5782,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kropp"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Полотно"
           }
         }
       }
@@ -5327,6 +5891,12 @@
             "value": "Comprimento do corpo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Длина изделия"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5343,6 +5913,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kroppslängd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Довжина виробу"
           }
         }
       }
@@ -5446,6 +6022,12 @@
             "value": "Manta com borda"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед с каймой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5462,6 +6044,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Filt med kant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед із облямівкою"
           }
         }
       }
@@ -5565,6 +6153,12 @@
             "value": "Borda inferior"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нижняя кайма"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5581,6 +6175,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nedre kant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нижня облямівка"
           }
         }
       }
@@ -5684,6 +6284,12 @@
             "value": "Marca"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бренд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5700,6 +6306,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Märke"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бренд"
           }
         }
       }
@@ -5803,6 +6415,12 @@
             "value": "Barra"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кайма"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5819,6 +6437,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Облямівка"
           }
         }
       }
@@ -5922,6 +6546,12 @@
             "value": "Explorar padrões"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Смотреть схемы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -5938,6 +6568,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bläddra bland mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переглянути схеми"
           }
         }
       }
@@ -6041,6 +6677,12 @@
             "value": "Bulky"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulky"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6054,6 +6696,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulky"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Bulky"
@@ -6160,6 +6808,12 @@
             "value": "Comprar vitalício"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Купить навсегда"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6176,6 +6830,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Köp livstid"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Купити назавжди"
           }
         }
       }
@@ -6279,6 +6939,12 @@
             "value": "Trança de 6 na frente: passar 3 pontos para uma agulha de trança e deixá-la na frente, tricotar 3 e depois tricotar os 3 da agulha de trança"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коса 6 с выносом вперёд: снять 3 петли на вспомогательную спицу и оставить её перед работой, провязать 3, затем провязать 3 петли со вспомогательной спицы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6295,6 +6961,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fläta 6 fram: lyft 3 maskor på en flätsticka och håll den framför, sticka 3, sticka sedan de 3 från flätstickan"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коса 6 з винесенням уперед: зняти 3 петлі на допоміжну спицю й залишити її перед роботою, провʼязати 3, потім провʼязати 3 петлі з допоміжної спиці"
           }
         }
       }
@@ -6398,6 +7070,12 @@
             "value": "Faixa de cabelo com tranças"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повязка с косами"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6414,6 +7092,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pannband med flätor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пов’язка з косами"
           }
         }
       }
@@ -6517,6 +7201,12 @@
             "value": "Panturrilha"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Икра"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6533,6 +7223,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Литка"
           }
         }
       }
@@ -6636,6 +7332,12 @@
             "value": "Cancelar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6652,6 +7354,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Avbryt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скасувати"
           }
         }
       }
@@ -6755,6 +7463,12 @@
             "value": "Montar pontos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Набрать петли"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6771,6 +7485,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lägg upp"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Набрати петлі"
           }
         }
       }
@@ -6874,6 +7594,12 @@
             "value": "Carvão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Графит"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -6890,6 +7616,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kol"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Графіт"
           }
         }
       }
@@ -6993,6 +7725,12 @@
             "value": "O gráfico não cabe nesta amostra"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схема не подходит к этому образцу"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7009,6 +7747,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Diagrammet passar inte det här maskprovet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схема не підходить до цього зразка"
           }
         }
       }
@@ -7112,6 +7856,12 @@
             "value": "Busto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Грудь"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7128,6 +7878,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bröst"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Груди"
           }
         }
       }
@@ -7231,6 +7987,12 @@
             "value": "Criança"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ребёнок"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7247,6 +8009,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Barn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дитина"
           }
         }
       }
@@ -7350,6 +8118,12 @@
             "value": "Escolher fio da reserva"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбрать пряжу из запасов"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7366,6 +8140,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Välj garn från förrådet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вибрати пряжу із запасів"
           }
         }
       }
@@ -7469,6 +8249,12 @@
             "value": "Gola grossa"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Объёмный снуд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7485,6 +8271,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Grov tubhals"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Об’ємний сноуд"
           }
         }
       }
@@ -7588,6 +8380,12 @@
             "value": "Circular"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Круговые"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7604,6 +8402,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rundsticka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колові"
           }
         }
       }
@@ -7707,6 +8511,12 @@
             "value": "Clássico"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Классический"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7723,6 +8533,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Klassisk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Класичний"
           }
         }
       }
@@ -7826,6 +8642,12 @@
             "value": "Fechar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Закрыть"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7842,6 +8664,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stäng"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Закрити"
           }
         }
       }
@@ -7963,6 +8791,12 @@
             "value": "Cor"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цвет"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -7979,6 +8813,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Färg"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колір"
           }
         }
       }
@@ -8082,6 +8922,12 @@
             "value": "Contador"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Счётчик"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8098,6 +8944,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Räknare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лічильник"
           }
         }
       }
@@ -8201,6 +9053,12 @@
             "value": "Nome do contador"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название счётчика"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8217,6 +9075,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Räknarens namn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва лічильника"
           }
         }
       }
@@ -8320,6 +9184,12 @@
             "value": "Gola"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снуд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8336,6 +9206,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tubhals"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сноуд"
           }
         }
       }
@@ -8439,6 +9315,12 @@
             "value": "Berço"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кроватка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8455,6 +9337,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Spjälsäng"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ліжечко"
           }
         }
       }
@@ -8558,6 +9446,12 @@
             "value": "Agulha de croché"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Крючок"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8574,6 +9468,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Virknål"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гачок"
           }
         }
       }
@@ -8677,6 +9577,12 @@
             "value": "Topo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Макушка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8693,6 +9599,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kråna"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маківка"
           }
         }
       }
@@ -8796,6 +9708,12 @@
             "value": "Punho"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Манжета"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8812,6 +9730,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Muddkant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Манжета"
           }
         }
       }
@@ -8915,6 +9839,12 @@
             "value": "DK"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -8928,6 +9858,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DK"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "DK"
@@ -9034,6 +9970,12 @@
             "value": "Diminuições"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Убавки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9050,6 +9992,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Minskningar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Убавки"
           }
         }
       }
@@ -9153,6 +10101,12 @@
             "value": "Pleno inverno"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середина зимы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9169,6 +10123,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mitt i vintern"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середина зими"
           }
         }
       }
@@ -9272,6 +10232,12 @@
             "value": "Eliminar %@?"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить «%@»?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9288,6 +10254,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort %@?"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити «%@»?"
           }
         }
       }
@@ -9391,6 +10363,12 @@
             "value": "Eliminar projeto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить проект"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9407,6 +10385,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort projekt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити проєкт"
           }
         }
       }
@@ -9510,6 +10494,12 @@
             "value": "Detalhes"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сведения"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9526,6 +10516,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Detaljer"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відомості"
           }
         }
       }
@@ -9629,6 +10625,12 @@
             "value": "Pano de prato diagonal"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мочалка по диагонали"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9645,6 +10647,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Diagonal disktrasa"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мочалка по діагоналі"
           }
         }
       }
@@ -9748,6 +10756,12 @@
             "value": "Divisão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разделение"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9764,6 +10778,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Delning"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Розділення"
           }
         }
       }
@@ -9867,6 +10887,12 @@
             "value": "OK"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Готово"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -9883,6 +10909,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Klar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Готово"
           }
         }
       }
@@ -9986,6 +11018,12 @@
             "value": "De pontas duplas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Чулочные"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10002,6 +11040,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Strumpstickor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шкарпеткові"
           }
         }
       }
@@ -10105,6 +11149,12 @@
             "value": "Lote de tingimento"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Партия окраски"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10121,6 +11171,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Färgbad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Партія фарбування"
           }
         }
       }
@@ -10224,6 +11280,12 @@
             "value": "Protetor de orelhas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повязка на уши"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10240,6 +11302,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Öronvärmare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пов’язка на вуха"
           }
         }
       }
@@ -10343,6 +11411,12 @@
             "value": "Fácil"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Легко"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10359,6 +11433,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lätt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Легко"
           }
         }
       }
@@ -10462,6 +11542,12 @@
             "value": "Todos os modelos da biblioteca, escritos para as tuas medidas e o teu fio"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Все модели из библиотеки, рассчитанные по вашим меркам и пряже"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10478,6 +11564,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Varje design i biblioteket, skriven efter dina mått och ditt garn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Усі моделі з бібліотеки, розраховані за вашими мірками та пряжею"
           }
         }
       }
@@ -10581,6 +11673,12 @@
             "value": "Borda do rosto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кайма у лица"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10597,6 +11695,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ansiktskant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Облямівка біля обличчя"
           }
         }
       }
@@ -10700,6 +11804,12 @@
             "value": "Abertura do rosto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вырез для лица"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10716,6 +11826,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ansiktsöppning"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виріз для обличчя"
           }
         }
       }
@@ -10819,6 +11935,12 @@
             "value": "Fibra"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Волокно"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10835,6 +11957,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fiber"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Волокно"
           }
         }
       }
@@ -10938,6 +12066,12 @@
             "value": "Fingering"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingering"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -10951,6 +12085,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingering"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Fingering"
@@ -11057,6 +12197,12 @@
             "value": "Concluído"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Готово"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11073,6 +12219,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Klar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Готово"
           }
         }
       }
@@ -11176,6 +12328,12 @@
             "value": "Acabamento"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отделка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11192,6 +12350,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Avslut"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оздоблення"
           }
         }
       }
@@ -11295,6 +12459,12 @@
             "value": "Primeira orelha"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Первое ухо"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11311,6 +12481,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Första örat"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перше вухо"
           }
         }
       }
@@ -11414,6 +12590,12 @@
             "value": "Primeira manga"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Первый рукав"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11430,6 +12612,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Första ärmen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перший рукав"
           }
         }
       }
@@ -11533,6 +12721,12 @@
             "value": "Primeiros dias frios"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Первые холода"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11549,6 +12743,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Första kalla dagarna"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перші холоди"
           }
         }
       }
@@ -11652,6 +12852,12 @@
             "value": "Grátis"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бесплатно"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11668,6 +12874,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gratis"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Безкоштовно"
           }
         }
       }
@@ -11771,6 +12983,12 @@
             "value": "Manta em ponto tricô"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед платочной вязкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11787,6 +13005,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rätstickad filt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед платковою в’язкою"
           }
         }
       }
@@ -11890,6 +13114,12 @@
             "value": "Cachecol em ponto tricô"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф платочной вязкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -11906,6 +13136,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rätstickad halsduk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф платковою в’язкою"
           }
         }
       }
@@ -12009,6 +13245,12 @@
             "value": "Amostra"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Образец"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12025,6 +13267,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Maskprov"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зразок"
           }
         }
       }
@@ -12128,6 +13376,12 @@
             "value": "Obter ajuda"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Получить помощь"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12144,6 +13398,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Få hjälp"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отримати допомогу"
           }
         }
       }
@@ -12247,6 +13507,12 @@
             "value": "Época de presentes"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Время подарков"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12263,6 +13529,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Presenttider"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Час подарунків"
           }
         }
       }
@@ -12366,6 +13638,12 @@
             "value": "Ir para a volta"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти к кругу"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12382,6 +13660,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gå till varv"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти до кола"
           }
         }
       }
@@ -12485,6 +13769,12 @@
             "value": "Ir para a carreira"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти к ряду"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12501,6 +13791,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gå till rad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти до ряду"
           }
         }
       }
@@ -12604,6 +13900,12 @@
             "value": "Ir para a seção"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти к части"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12620,6 +13922,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gå till del"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейти до частини"
           }
         }
       }
@@ -12723,6 +14031,12 @@
             "value": "Mão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кисть"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12739,6 +14053,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hand"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кисть"
           }
         }
       }
@@ -12842,6 +14162,12 @@
             "value": "Munhequeiras"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Митенки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12858,6 +14184,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Handledsvärmare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мітенки"
           }
         }
       }
@@ -12961,6 +14293,12 @@
             "value": "Gorros"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -12977,6 +14315,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mössor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапки"
           }
         }
       }
@@ -13080,6 +14424,12 @@
             "value": "Cabeça"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Голова"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13096,6 +14446,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Huvud"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Голова"
           }
         }
       }
@@ -13199,6 +14555,12 @@
             "value": "Altura"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Высота"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13215,6 +14577,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Höjd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Висота"
           }
         }
       }
@@ -13318,6 +14686,12 @@
             "value": "Ajuda"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Справка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13334,6 +14708,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hjälp"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Довідка"
           }
         }
       }
@@ -13437,6 +14817,12 @@
             "value": "Croché"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Крючок"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13453,6 +14839,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Virknål"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гачок"
           }
         }
       }
@@ -13556,6 +14948,12 @@
             "value": "Aumentos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13572,6 +14970,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ökningar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавки"
           }
         }
       }
@@ -13675,6 +15079,12 @@
             "value": "Índigo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Индиго"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13691,6 +15101,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Indigo"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Індиго"
           }
         }
       }
@@ -13794,6 +15210,12 @@
             "value": "Infinito"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бесконечный"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13810,6 +15232,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Oändlig"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нескінченний"
           }
         }
       }
@@ -13913,6 +15341,12 @@
             "value": "Intermediário"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Средне"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -13929,6 +15363,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Medel"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середньо"
           }
         }
       }
@@ -14032,6 +15472,12 @@
             "value": "K1, M1L, tricotar até 1 ponto antes do próximo marcador, M1R, k1, passar o marcador. Aumenta 2 pontos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1, M1L, вязать до 1 петли перед следующим маркером, M1R, k1, переложить маркер. Прибавляет 2 петли"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14048,6 +15494,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "K1, M1L, sticka till 1 maska före nästa markör, M1R, k1, lyft markören. Det ökar 2 maskor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K1, M1L, в’язати до 1 петлі перед наступним маркером, M1R, k1, перекласти маркер. Додає 2 петлі"
           }
         }
       }
@@ -14151,6 +15603,12 @@
             "value": "Tricotar 2 pontos juntos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провязать 2 петли вместе"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14167,6 +15625,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sticka 2 maskor ihop"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провʼязати 2 петлі разом"
           }
         }
       }
@@ -14270,6 +15734,12 @@
             "value": "Tricotar o primeiro ponto montado com o fio de trabalho para fechar o círculo, com a borda de montagem reta, sem torcer, ao redor da agulha"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провязать первую набранную петлю рабочей нитью, чтобы замкнуть круг; край набора лежит ровно, не перекручен вокруг спицы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14286,6 +15756,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sticka den första upplagda maskan med arbetstråden för att sluta ringen, med uppläggningskanten platt och inte vriden runt stickan"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провʼязати першу набрану петлю робочою ниткою, щоб замкнути коло; край набору лежить рівно, не перекручений навколо спиці"
           }
         }
       }
@@ -14389,6 +15865,12 @@
             "value": "Tricotar os pontos lisos no liso e os avessos no avesso ao arrematar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "При закрытии провязывать лицевые петли лицевыми, а изнаночные изнаночными"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14405,6 +15887,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sticka de räta maskorna räta och de aviga aviga när du maskar av"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Під час закриття провʼязувати лицьові петлі лицьовими, а виворітні виворітними"
           }
         }
       }
@@ -14508,6 +15996,12 @@
             "value": "Ponto liso. K2 é tricotar 2 pontos no liso"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лицевая. K2 значит провязать 2 петли лицевыми"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14524,6 +16018,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rät. K2 är att sticka 2 maskor räta"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лицьова. K2 означає провʼязати 2 петлі лицьовими"
           }
         }
       }
@@ -14627,6 +16127,12 @@
             "value": "Lace"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lace"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14640,6 +16146,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lace"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Lace"
@@ -14746,6 +16258,12 @@
             "value": "Grande"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Большой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14762,6 +16280,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Великий"
           }
         }
       }
@@ -14865,6 +16389,12 @@
             "value": "Perna"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нога"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -14881,6 +16411,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ben"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нога"
           }
         }
       }
@@ -14984,6 +16520,12 @@
             "value": "Polaina %lld"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гетра %lld"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15000,6 +16542,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Benvärmare %lld"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гетра %lld"
           }
         }
       }
@@ -15103,6 +16651,12 @@
             "value": "Polainas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гетры"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15119,6 +16673,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Benvärmare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гетри"
           }
         }
       }
@@ -15222,6 +16782,12 @@
             "value": "Comprimento"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Длина"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15238,6 +16804,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Längd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Довжина"
           }
         }
       }
@@ -15341,6 +16913,12 @@
             "value": "Vitalício"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Навсегда"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15357,6 +16935,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Livstid"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назавжди"
           }
         }
       }
@@ -15460,6 +17044,12 @@
             "value": "Longo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Длинный"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15476,6 +17066,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lång"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Довгий"
           }
         }
       }
@@ -15579,6 +17175,12 @@
             "value": "Garança"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Марена"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15595,6 +17197,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Krapp"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Марена"
           }
         }
       }
@@ -15698,6 +17306,12 @@
             "value": "Aumento de 1 à esquerda: levantar o fio pela frente e tricotá-lo pela parte de trás"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1 влево: поднять протяжку спереди и провязать её за заднюю стенку"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15714,6 +17328,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Öka 1 åt vänster: lyft tråden framifrån och sticka den bakifrån"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1 вліво: підняти протяжку спереду й провʼязати її за задню стінку"
           }
         }
       }
@@ -15817,6 +17437,12 @@
             "value": "Aumento de 1 à direita: levantar o fio por trás e tricotá-lo pela frente"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1 вправо: поднять протяжку сзади и провязать её за переднюю стенку"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15833,6 +17459,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Öka 1 åt höger: lyft tråden bakifrån och sticka den framifrån"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1 вправо: підняти протяжку ззаду й провʼязати її за передню стінку"
           }
         }
       }
@@ -15936,6 +17568,12 @@
             "value": "Aumento de 1: levantar o fio entre os pontos e tricotá-lo pela parte de trás"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1: поднять протяжку между петлями и провязать её за заднюю стенку"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -15952,6 +17590,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Öka 1: lyft tråden mellan maskorna och sticka den bakifrån"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибавка 1: підняти протяжку між петлями й провʼязати її за задню стінку"
           }
         }
       }
@@ -16055,6 +17699,12 @@
             "value": "Calêndula"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Календула"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16071,6 +17721,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ringblomma"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Календула"
           }
         }
       }
@@ -16174,6 +17830,12 @@
             "value": "Marcar como ativo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отметить как текущий"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16190,6 +17852,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Markera som pågående"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Позначити як поточний"
           }
         }
       }
@@ -16293,6 +17961,12 @@
             "value": "Marcar como concluído"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отметить как готовый"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16309,6 +17983,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Markera som klar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Позначити як готовий"
           }
         }
       }
@@ -16412,6 +18092,12 @@
             "value": "Materiais"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Материалы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16428,6 +18114,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Material"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Матеріали"
           }
         }
       }
@@ -16531,6 +18223,12 @@
             "value": "Médio"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Средний"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16547,6 +18245,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Medel"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середній"
           }
         }
       }
@@ -16668,6 +18372,12 @@
             "value": "Metros por novelo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метров в мотке"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16684,6 +18394,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Meter per docka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метрів у мотку"
           }
         }
       }
@@ -16787,6 +18503,12 @@
             "value": "Meio"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середина"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16803,6 +18525,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mitten"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Середина"
           }
         }
       }
@@ -16906,6 +18634,12 @@
             "value": "Munhequeira %lld"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Митенка %lld"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -16922,6 +18656,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Handledsvärmare %lld"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мітенка %lld"
           }
         }
       }
@@ -17025,6 +18765,12 @@
             "value": "Mensal"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Месячная"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17041,6 +18787,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Månadsvis"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Місячна"
           }
         }
       }
@@ -17144,6 +18896,12 @@
             "value": "Mais"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ещё"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17160,6 +18918,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mer"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ще"
           }
         }
       }
@@ -17263,6 +19027,12 @@
             "value": "Musgo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мох"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17279,6 +19049,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mossa"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мох"
           }
         }
       }
@@ -17382,6 +19158,12 @@
             "value": "Nome"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17398,6 +19180,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Namn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва"
           }
         }
       }
@@ -17501,6 +19289,12 @@
             "value": "Pescoço"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Горловина"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17517,6 +19311,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hals"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Горловина"
           }
         }
       }
@@ -17620,6 +19420,12 @@
             "value": "Lenço de pescoço"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Платок на шею"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17636,6 +19442,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Halsduk i fyrkant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Хустка на шию"
           }
         }
       }
@@ -17739,6 +19551,12 @@
             "value": "Gola do pescoço"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Планка горловины"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17755,6 +19573,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Halskant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Планка горловини"
           }
         }
       }
@@ -17858,6 +19682,12 @@
             "value": "Agulha"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спица"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17874,6 +19704,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sticka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спиця"
           }
         }
       }
@@ -17977,6 +19813,12 @@
             "value": "Agulha ou croché"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спицы или крючок"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -17993,6 +19835,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sticka eller virknål"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спиці або гачок"
           }
         }
       }
@@ -18096,6 +19944,12 @@
             "value": "Agulhas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спицы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18112,6 +19966,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stickor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спиці"
           }
         }
       }
@@ -18215,6 +20075,12 @@
             "value": "Agulhas e croché"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спицы и крючки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18231,6 +20097,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stickor och virknålar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спиці та гачки"
           }
         }
       }
@@ -18334,6 +20206,12 @@
             "value": "Novo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новинка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18350,6 +20228,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nytt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новинка"
           }
         }
       }
@@ -18453,6 +20337,12 @@
             "value": "Novo projeto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новый проект"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18469,6 +20359,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nytt projekt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новий проєкт"
           }
         }
       }
@@ -18572,6 +20468,12 @@
             "value": "Não foi encontrada nenhuma compra neste Apple ID"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупок для этого Apple ID не найдено"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18588,6 +20490,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Inget köp hittades på det här Apple-kontot"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупок для цього Apple ID не знайдено"
           }
         }
       }
@@ -18691,6 +20599,12 @@
             "value": "Não é da reserva"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не из запасов"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18707,6 +20621,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Inte från förrådet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не із запасів"
           }
         }
       }
@@ -18810,6 +20730,12 @@
             "value": "Anotações"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заметки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18826,6 +20752,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Anteckningar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нотатки"
           }
         }
       }
@@ -18929,6 +20861,12 @@
             "value": "Aveia"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Овёс"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -18945,6 +20883,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Havre"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Овес"
           }
         }
       }
@@ -19048,6 +20992,12 @@
             "value": "Pagamento único de %@. Todos os padrões são teus para sempre."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Один платёж %@. Каждая схема ваша навсегда."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19064,6 +21014,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "En enda betalning på %@. Varje mönster är ditt för alltid."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Один платіж %@. Кожна схема ваша назавжди."
           }
         }
       }
@@ -19167,6 +21123,12 @@
             "value": "Padrões"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схемы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19183,6 +21145,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схеми"
           }
         }
       }
@@ -19286,6 +21254,12 @@
             "value": "Não foi possível carregar os planos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось загрузить тарифы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19302,6 +21276,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Planerna kunde inte laddas"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося завантажити плани"
           }
         }
       }
@@ -19405,6 +21385,12 @@
             "value": "Ameixa"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Слива"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19421,6 +21407,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Plommon"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Слива"
           }
         }
       }
@@ -19524,6 +21516,12 @@
             "value": "Privacidade"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфиденциальность"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19540,6 +21538,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Integritet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфіденційність"
           }
         }
       }
@@ -19643,6 +21647,12 @@
             "value": "Opções do projeto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Параметры проекта"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19659,6 +21669,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Projektalternativ"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Параметри проєкту"
           }
         }
       }
@@ -19762,6 +21778,12 @@
             "value": "Projetos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проекты"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19778,6 +21800,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Projekt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проєкти"
           }
         }
       }
@@ -19881,6 +21909,12 @@
             "value": "Ponto avesso. P2 é tricotar 2 pontos no avesso"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изнаночная. P2 значит провязать 2 петли изнаночными"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -19897,6 +21931,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Avig. P2 är att sticka 2 maskor aviga"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виворітна. P2 означає провʼязати 2 петлі виворітними"
           }
         }
       }
@@ -20000,6 +22040,12 @@
             "value": "Passar a agulha pela borda do tecido, envolver o fio e puxar uma laçada. Cada laçada é 1 ponto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провести спицу сквозь край полотна, обернуть нить и вытянуть петлю. Каждая петля считается за 1 петлю"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20016,6 +22062,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "För stickan genom kanten på arbetet, lägg tråden om och dra igenom en ögla. Varje ögla är 1 maska"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провести спицю крізь край полотна, обернути нитку й витягти петлю. Кожна петля вважається за 1 петлю"
           }
         }
       }
@@ -20119,6 +22171,12 @@
             "value": "Camisola raglã"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свитер с регланом"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20135,6 +22193,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Raglantröja"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Светр із реглан"
           }
         }
       }
@@ -20238,6 +22302,12 @@
             "value": "Avaliar o Ravel"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оценить Ravel"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20254,6 +22324,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Betygsätt Ravel"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оцінити Ravel"
           }
         }
       }
@@ -20357,6 +22433,12 @@
             "value": "Padrões Ravel"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схемы Ravel"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20373,6 +22455,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ravel-mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схеми Ravel"
           }
         }
       }
@@ -20476,6 +22564,12 @@
             "value": "O Ravel não conseguiu abrir os teus projetos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel не смог открыть ваши проекты"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20492,6 +22586,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ravel kunde inte öppna dina projekt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ravel не зміг відкрити ваші проєкти"
           }
         }
       }
@@ -20595,6 +22695,12 @@
             "value": "Remover"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20611,6 +22717,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити"
           }
         }
       }
@@ -20714,6 +22826,12 @@
             "value": "Remover contador"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить счётчик"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20730,6 +22848,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort räknare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити лічильник"
           }
         }
       }
@@ -20833,6 +22957,12 @@
             "value": "Remover padrão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Убрать схему"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20849,6 +22979,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибрати схему"
           }
         }
       }
@@ -20952,6 +23088,12 @@
             "value": "Remover o contador?"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить счётчик?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -20968,6 +23110,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort räknaren?"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити лічильник?"
           }
         }
       }
@@ -21071,6 +23219,12 @@
             "value": "Remover o padrão deste projeto?"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Убрать схему из этого проекта?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21087,6 +23241,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort mönstret från projektet?"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прибрати схему з цього проєкту?"
           }
         }
       }
@@ -21190,6 +23350,12 @@
             "value": "Renomear"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переименовать"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21206,6 +23372,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Byt namn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перейменувати"
           }
         }
       }
@@ -21309,6 +23481,12 @@
             "value": "Renova até cancelares em Definições. Um padrão que tenhas começado é teu para sempre."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Продлевается, пока вы не отмените в Настройках. Начатая вами схема остаётся у вас."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21325,6 +23503,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Förnyas tills du avbryter i Inställningar. Ett mönster du har lagt upp är ditt att behålla."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поновлюється, доки ви не скасуєте в Параметрах. Розпочата вами схема залишається у вас."
           }
         }
       }
@@ -21428,6 +23612,12 @@
             "value": "Repetição"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Раппорт"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21444,6 +23634,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rapport"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Раппорт"
           }
         }
       }
@@ -21547,6 +23743,12 @@
             "value": "Substituir padrão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заменить схему"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21563,6 +23765,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Byt ut mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Замінити схему"
           }
         }
       }
@@ -21666,6 +23874,12 @@
             "value": "Zerar contagem"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сбросить счётчик"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21682,6 +23896,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nollställ räknaren"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скинути лічильник"
           }
         }
       }
@@ -21785,6 +24005,12 @@
             "value": "Zerar a contagem?"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сбросить счётчик до 0?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21801,6 +24027,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nollställa räknaren?"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скинути лічильник до 0?"
           }
         }
       }
@@ -21904,6 +24136,12 @@
             "value": "Zerar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сбросить до 0"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -21920,6 +24158,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nollställ"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скинути до 0"
           }
         }
       }
@@ -22023,6 +24267,12 @@
             "value": "Restaurar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Восстановить"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22039,6 +24289,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Återställ"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відновити"
           }
         }
       }
@@ -22142,6 +24398,12 @@
             "value": "Gorro canelado"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапка резинкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22158,6 +24420,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ribbad mössa"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапка резинкою"
           }
         }
       }
@@ -22261,6 +24529,12 @@
             "value": "Gola canelada"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снуд резинкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22277,6 +24551,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ribbad tubhals"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сноуд резинкою"
           }
         }
       }
@@ -22380,6 +24660,12 @@
             "value": "Cachecol canelado"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф резинкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22396,6 +24682,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ribbad halsduk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф резинкою"
           }
         }
       }
@@ -22499,6 +24791,12 @@
             "value": "Gorro com barra enrolada"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапка с подвёрнутым краем"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22515,6 +24813,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mössa med rullkant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапка з підігнутим краєм"
           }
         }
       }
@@ -22618,6 +24922,12 @@
             "value": "Volta"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Круг"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22634,6 +24944,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Varv"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коло"
           }
         }
       }
@@ -22737,6 +25053,12 @@
             "value": "Volta nesta seção"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Круг в этой части"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22753,6 +25075,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Varv i den här delen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коло в цій частині"
           }
         }
       }
@@ -22856,6 +25184,12 @@
             "value": "Carreira"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22872,6 +25206,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд"
           }
         }
       }
@@ -22975,6 +25315,12 @@
             "value": "Carreira %lld"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд %lld"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -22991,6 +25337,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad %lld"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд %lld"
           }
         }
       }
@@ -23094,6 +25446,12 @@
             "value": "Carreira %1$lld de %2$lld na repetição"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд %1$lld из %2$lld в раппорте"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23110,6 +25468,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad %1$lld av %2$lld i rapporten"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд %1$lld з %2$lld в раппорті"
           }
         }
       }
@@ -23213,6 +25577,12 @@
             "value": "Carreira nesta seção"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд в этой части"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23229,6 +25599,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rad i den här delen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд у цій частині"
           }
         }
       }
@@ -23332,6 +25708,12 @@
             "value": "Carreiras"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряды"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23348,6 +25730,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rader"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряди"
           }
         }
       }
@@ -23451,6 +25839,12 @@
             "value": "Carreiras por repetição"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рядов в одном раппорте"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23467,6 +25861,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rader per rapport"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рядів в одному раппорті"
           }
         }
       }
@@ -23570,6 +25970,12 @@
             "value": "Carreiras em %@"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рядов на %@"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23586,6 +25992,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Varv på %@"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рядів на %@"
           }
         }
       }
@@ -23689,6 +26101,12 @@
             "value": "Cachecol"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23705,6 +26123,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Halsduk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф"
           }
         }
       }
@@ -23808,6 +26232,12 @@
             "value": "Cachecóis e golas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарфы и снуды"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23824,6 +26254,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Halsdukar och tubhalsar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарфи та сноуди"
           }
         }
       }
@@ -23927,6 +26363,12 @@
             "value": "Segunda orelha"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Второе ухо"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -23943,6 +26385,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Andra örat"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Друге вухо"
           }
         }
       }
@@ -24046,6 +26494,12 @@
             "value": "Segunda manga"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Второй рукав"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24062,6 +26516,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Andra ärmen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Другий рукав"
           }
         }
       }
@@ -24165,6 +26625,12 @@
             "value": "Gola em ponto arroz"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снуд рисовой вязкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24181,6 +26647,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pärlstickad tubhals"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сноуд рисовою в’язкою"
           }
         }
       }
@@ -24284,6 +26756,12 @@
             "value": "Cachecol em ponto arroz"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф рисовой вязкой"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24300,6 +26778,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pärlstickad halsduk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шарф рисовою в’язкою"
           }
         }
       }
@@ -24403,6 +26887,12 @@
             "value": "Enviar feedback"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отправить отзыв"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24419,6 +26909,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Skicka feedback"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Надіслати відгук"
           }
         }
       }
@@ -24522,6 +27018,12 @@
             "value": "Definir"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задать"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24538,6 +27040,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ange"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задати"
           }
         }
       }
@@ -24641,6 +27149,12 @@
             "value": "Definir carreira"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задать ряд"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24657,6 +27171,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ange rad"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Задати ряд"
           }
         }
       }
@@ -24760,6 +27280,12 @@
             "value": "Xale"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шаль"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24776,6 +27302,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sjal"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шаль"
           }
         }
       }
@@ -24879,6 +27411,12 @@
             "value": "Xale pequeno"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленькая шаль"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -24895,6 +27433,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Liten sjal"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленька шаль"
           }
         }
       }
@@ -24998,6 +27542,12 @@
             "value": "Lado"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сторона"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25014,6 +27564,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sida"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сторона"
           }
         }
       }
@@ -25117,6 +27673,12 @@
             "value": "Tamanho"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Размер"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25133,6 +27695,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Storlek"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Розмір"
           }
         }
       }
@@ -25236,6 +27804,12 @@
             "value": "Novelos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мотки"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25252,6 +27826,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dockor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мотки"
           }
         }
       }
@@ -25355,6 +27935,12 @@
             "value": "Comprimento da manga"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Длина рукава"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25371,6 +27957,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ärmlängd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Довжина рукава"
           }
         }
       }
@@ -25474,6 +28066,12 @@
             "value": "Passar 2 pontos como para tricotar, um de cada vez, e depois tricotá-los juntos pela parte de trás"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снять 2 петли по одной как для вязания лицевой, затем провязать их вместе за заднюю стенку"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25490,6 +28088,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lyft 2 maskor som om de skulle stickas, en i taget, och sticka ihop dem bakifrån"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняти 2 петлі по одній як для лицьової, потім провʼязати їх разом за задню стінку"
           }
         }
       }
@@ -25593,6 +28197,12 @@
             "value": "Gorro slouch"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапка-бини свободная"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25609,6 +28219,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Slouchmössa"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вільна шапка"
           }
         }
       }
@@ -25712,6 +28328,12 @@
             "value": "Pequeno"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленький"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25728,6 +28350,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Liten"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Малий"
           }
         }
       }
@@ -25831,6 +28459,12 @@
             "value": "Justo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Узкий"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25847,6 +28481,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Smal"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вузький"
           }
         }
       }
@@ -25950,6 +28590,12 @@
             "value": "Sport"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -25963,6 +28609,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Sport"
@@ -26069,6 +28721,12 @@
             "value": "Camadas de primavera"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Весенние слои"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26085,6 +28743,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vårlager"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Весняні шари"
           }
         }
       }
@@ -26188,6 +28852,12 @@
             "value": "Abeto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ель"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26204,6 +28874,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gran"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ялина"
           }
         }
       }
@@ -26307,6 +28983,12 @@
             "value": "Iniciar contador de carreiras"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начать счёт рядов"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26323,6 +29005,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Starta radräknare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Почати лічильник рядів"
           }
         }
       }
@@ -26426,6 +29114,12 @@
             "value": "Reserva"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запасы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26442,6 +29136,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Förråd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запаси"
           }
         }
       }
@@ -26545,6 +29245,12 @@
             "value": "Pontos em %@"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Петель на %@"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26561,6 +29267,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Maskor på %@"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Петель на %@"
           }
         }
       }
@@ -26664,6 +29376,12 @@
             "value": "Reta"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прямые"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26680,6 +29398,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rak sticka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прямі"
           }
         }
       }
@@ -26783,6 +29507,12 @@
             "value": "Carrinho"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коляска"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26799,6 +29529,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Barnvagn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Візок"
           }
         }
       }
@@ -26902,6 +29638,12 @@
             "value": "Assinar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подписаться"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -26918,6 +29660,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prenumerera"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Підписатися"
           }
         }
       }
@@ -27021,6 +29769,12 @@
             "value": "Algodão de verão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Летний хлопок"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27037,6 +29791,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sommarbomull"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Літня бавовна"
           }
         }
       }
@@ -27140,6 +29900,12 @@
             "value": "Super Bulky"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super Bulky"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27153,6 +29919,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super Bulky"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Super Bulky"
@@ -27259,6 +30031,12 @@
             "value": "Trocar as agulhas de mão e tricotar de volta no outro sentido"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поменять спицы в руках и вязать обратно в другую сторону"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27275,6 +30053,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Byt sticka mellan händerna och arbeta tillbaka åt andra hållet"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поміняти спиці в руках і в’язати назад в інший бік"
           }
         }
       }
@@ -27390,6 +30174,12 @@
             "value": "Tempo de camisola"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свитерная погода"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27406,6 +30196,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tröjväder"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Светрова погода"
           }
         }
       }
@@ -27521,6 +30317,12 @@
             "value": "Camisolas"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свитеры"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27537,6 +30339,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tröjor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Светри"
           }
         }
       }
@@ -27640,6 +30448,12 @@
             "value": "Tirar um de %@"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Минус один: %@"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27656,6 +30470,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ta bort en från %@"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мінус один: %@"
           }
         }
       }
@@ -27759,6 +30579,12 @@
             "value": "Termos"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Условия"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27775,6 +30601,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Villkor"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Умови"
           }
         }
       }
@@ -27878,6 +30710,12 @@
             "value": "Não foi possível abrir esse padrão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось открыть эту схему"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -27894,6 +30732,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mönstret kunde inte öppnas"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося відкрити цю схему"
           }
         }
       }
@@ -27997,6 +30841,12 @@
             "value": "Não foi possível ligar à App Store. Tenta novamente quando estiveres online."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось связаться с App Store. Повторите, когда будете онлайн."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28013,6 +30863,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "App Store gick inte att nå. Försök igen när du är online."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося зв’язатися з App Store. Спробуйте ще раз, коли будете онлайн."
           }
         }
       }
@@ -28116,6 +30972,12 @@
             "value": "Não foi possível concluir a compra"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупка не состоялась"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28132,6 +30994,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Köpet gick inte igenom"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупка не вдалася"
           }
         }
       }
@@ -28235,6 +31103,12 @@
             "value": "A repetição começa na tua próxima carreira."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Раппорт начнётся со следующего ряда."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28251,6 +31125,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rapporten börjar på nästa rad."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Раппорт почнеться з наступного ряду."
           }
         }
       }
@@ -28354,6 +31234,12 @@
             "value": "Depois, %@."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Затем %@."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28370,6 +31256,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sedan %@."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Потім %@."
           }
         }
       }
@@ -28473,6 +31365,12 @@
             "value": "Continuam neste %@. Reinicia-o e abre o Ravel de novo."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Они по-прежнему на этом устройстве (%@). Перезапустите его и снова откройте Ravel."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28489,6 +31387,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "De finns kvar på den här %@. Starta om den och öppna Ravel igen."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вони досі на цьому пристрої (%@). Перезапустіть його й знову відкрийте Ravel."
           }
         }
       }
@@ -28592,6 +31496,12 @@
             "value": "Manta de sofá"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28608,6 +31518,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pläd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Плед"
           }
         }
       }
@@ -28711,6 +31627,12 @@
             "value": "Abertura do polegar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вырез для большого пальца"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28727,6 +31649,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tumöppning"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виріз для великого пальця"
           }
         }
       }
@@ -28830,6 +31758,12 @@
             "value": "Criança pequena"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ребёнок до 3 лет"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28846,6 +31780,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Småbarn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дитина до 3 років"
           }
         }
       }
@@ -28949,6 +31889,12 @@
             "value": "Parte de cima"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верх"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -28965,6 +31911,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Överdel"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верх"
           }
         }
       }
@@ -29068,6 +32020,12 @@
             "value": "Borda superior"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верхняя кайма"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -29084,6 +32042,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Övre kant"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верхня облямівка"
           }
         }
       }
@@ -29187,6 +32151,12 @@
             "value": "Tricô de viagem"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вязание в дорогу"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -29203,6 +32173,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Resestickning"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В’язання в дорогу"
           }
         }
       }
@@ -29306,6 +32282,12 @@
             "value": "Em alta"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В тренде"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -29322,6 +32304,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Trendigt"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У тренді"
           }
         }
       }
@@ -29425,6 +32413,12 @@
             "value": "Xale triangular"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Треугольная шаль"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -29441,6 +32435,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Triangelsjal"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Трикутна шаль"
           }
         }
       }
@@ -29544,6 +32544,12 @@
             "value": "Tentar novamente"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повторить"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -29560,6 +32566,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Försök igen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повторити"
           }
         }
       }
@@ -29957,6 +32969,36 @@
             }
           }
         },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Попробовать бесплатно %lld дня"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Попробовать бесплатно %lld дней"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Попробовать бесплатно %lld день"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Попробовать бесплатно %lld дня"
+                }
+              }
+            }
+          }
+        },
         "sk": {
           "variations": {
             "plural": {
@@ -30030,6 +33072,36 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "Prova gratis i %lld dagar"
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Спробувати безкоштовно %lld дні"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Спробувати безкоштовно %lld днів"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Спробувати безкоштовно %lld день"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Спробувати безкоштовно %lld дня"
                 }
               }
             }
@@ -30136,6 +33208,12 @@
             "value": "Torcer uma laçada do fio de trabalho e deslizá-la para a agulha direita. Cada laçada é 1 ponto"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скрутить петлю из рабочей нити и надеть на правую спицу. Каждая петля считается за 1 петлю"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30152,6 +33230,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vrid en ögla av arbetstråden och skjut den på högra stickan. Varje ögla är 1 maska"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скрутити петлю з робочої нитки й надіти на праву спицю. Кожна петля вважається за 1 петлю"
           }
         }
       }
@@ -30255,6 +33339,12 @@
             "value": "Tipo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тип"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30271,6 +33361,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Typ"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тип"
           }
         }
       }
@@ -30374,6 +33470,12 @@
             "value": "Desbloquear padrões"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Открыть схемы"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30390,6 +33492,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lås upp mönster"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відкрити схеми"
           }
         }
       }
@@ -30493,6 +33601,12 @@
             "value": "Sem título"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Без названия"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30509,6 +33623,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Utan namn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Без назви"
           }
         }
       }
@@ -30612,6 +33732,12 @@
             "value": "Parte superior da mão"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верх кисти"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30628,6 +33754,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Övre handen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Верх кисті"
           }
         }
       }
@@ -30731,6 +33863,12 @@
             "value": "Espessura"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Толщина"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30747,6 +33885,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Garntjocklek"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Товщина"
           }
         }
       }
@@ -30850,6 +33994,12 @@
             "value": "Largo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Широкий"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30866,6 +34016,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bred"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Широкий"
           }
         }
       }
@@ -30969,6 +34125,12 @@
             "value": "Largura"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ширина"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -30985,6 +34147,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bredd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ширина"
           }
         }
       }
@@ -31088,6 +34256,12 @@
             "value": "Envergadura"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Размах рук"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31104,6 +34278,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Spännvidd"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Розмах рук"
           }
         }
       }
@@ -31207,6 +34387,12 @@
             "value": "Repetir os pontos depois do * de novo e de novo, até onde a carreira indicar"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вязать петли после * снова и снова, сколько указано в ряду"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31223,6 +34409,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Arbeta maskorna efter * om och om igen, så långt raden säger"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В’язати петлі після * знову і знову, скільки вказано в ряду"
           }
         }
       }
@@ -31326,6 +34518,12 @@
             "value": "Worsted"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worsted"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31339,6 +34537,12 @@
           }
         },
         "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worsted"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Worsted"
@@ -31445,6 +34649,12 @@
             "value": "Estola"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Палантин"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31461,6 +34671,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Stola"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Палантин"
           }
         }
       }
@@ -31564,6 +34780,12 @@
             "value": "Jardas por novelo"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ярдов в мотке"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31580,6 +34802,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Yards per docka"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ярдів у мотку"
           }
         }
       }
@@ -31683,6 +34911,12 @@
             "value": "Fio"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пряжа"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31699,6 +34933,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Garn"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пряжа"
           }
         }
       }
@@ -31802,6 +35042,12 @@
             "value": "Laçada"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Накид"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31818,6 +35064,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Omslag"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Накид"
           }
         }
       }
@@ -31921,6 +35173,12 @@
             "value": "Anual"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Годовая"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -31937,6 +35195,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Årligen"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Річна"
           }
         }
       }
@@ -32040,6 +35304,12 @@
             "value": "Gola raglã"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кокетка"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -32056,6 +35326,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bärstycke"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кокетка"
           }
         }
       }
@@ -32159,6 +35435,12 @@
             "value": "A tua compra aguarda aprovação"
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваша покупка ожидает подтверждения"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -32175,6 +35457,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ditt köp väntar på godkännande"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вашу покупку очікує схвалення"
           }
         }
       }
@@ -32278,6 +35566,12 @@
             "value": "A tua compra foi concluída. Toca em Restaurar se os padrões continuarem bloqueados."
           }
         },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупка прошла. Нажмите «Восстановить», если схемы остаются закрытыми."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -32294,6 +35588,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ditt köp gick igenom. Tryck på Återställ om mönstren förblir låsta."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Покупку виконано. Торкніться «Відновити», якщо схеми залишаються закритими."
           }
         }
       }
