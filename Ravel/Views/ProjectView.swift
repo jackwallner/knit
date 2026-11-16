@@ -34,9 +34,9 @@ struct ProjectView: View {
     @State private var size = CGSize.zero
 
     /// An iPad held sideways: the reading side (count, instruction or PDF) on the leading half, the work beside it.
-    private var sideBySide: Bool { size.width >= Layout.sideBySide && size.width > size.height }
+    private var sideBySide: Bool { size.width >= Widths.sideBySide && size.width > size.height }
     /// An iPad sits further from the eye than a phone in the hand, so the count and the instruction set larger.
-    private var far: Bool { min(size.width, size.height) >= Layout.farReading }
+    private var far: Bool { min(size.width, size.height) >= Widths.farReading }
 
     private var patternURL: URL? { project.patternFile.map(PatternStore.url(for:)) }
 

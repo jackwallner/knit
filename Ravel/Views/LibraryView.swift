@@ -166,7 +166,7 @@ struct DesignView: View {
                 .safeAreaInset(edge: .bottom) { castOnBar.frame(maxWidth: 600) }
             }
         }
-        .onGeometryChange(for: Bool.self) { $0.size.width >= Layout.sideBySide } action: { wide = $0 }
+        .onGeometryChange(for: Bool.self) { $0.size.width >= Widths.sideBySide } action: { wide = $0 }
         .background(Theme.paper)
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)

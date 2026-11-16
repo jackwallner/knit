@@ -31,13 +31,14 @@ only with a counter layout made for that height.
 No iPad-only view tree, and no `userInterfaceIdiom` checks in views. Every
 switch reads the space a view has (`Ravel/Views/Layout.swift`), so Split View
 halves and Stage Manager windows get the phone layout and a phone never reaches
-an iPad one.
+an iPad one. (The enum is `Widths`: a type named `Layout` hides SwiftUI's `Layout`
+protocol, which `Wrap` adopts.)
 
-- `Layout.sideBySide` (900 pt, and wider than tall for a project): a project
+- `Widths.sideBySide` (900 pt, and wider than tall for a project): a project
   puts its reading side (count, instruction or PDF) on the leading side and the
   work beside it. An iPad in portrait (1032 pt on the 13-inch) keeps the stacked
   phone layout for projects; a design page splits from 900 pt in any shape.
-- `Layout.farReading` (600 pt both ways): a propped-up iPad is read from further
+- `Widths.farReading` (600 pt both ways): a propped-up iPad is read from further
   away, so the count is 200 pt (128 on a phone), the garment 200 (120), and the
   instruction 1.4 times the phone size, capped at 640 pt wide.
 - `readableWidth()`: lists (Projects, Stash) and the narrow design page keep a
