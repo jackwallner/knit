@@ -121,10 +121,12 @@ final class ModelTests: XCTestCase {
         project.resetCount(following: plan)
         XCTAssertEqual(project.rows, 0)
         XCTAssertFalse(project.isFinished)
-        // Go to Row counts within the section and stays inside it.
-        project.jump(toTap: plan.sections[1].tap, following: plan)
+        // Go to Row counts within the step and stays inside it. The body's plain rounds start after
+        // the round that changes to the larger needle.
+        let plain = plan.sections[1].tap + 1
+        project.jump(toTap: plain, following: plan)
         project.jump(to: 5, following: plan)
-        XCTAssertEqual(project.rows, plan.sections[1].tap + 4)
+        XCTAssertEqual(project.rows, plain + 4)
         project.jump(to: 9_999, following: plan)
         XCTAssertEqual(plan.position(at: project.rows).map { plan.steps[$0.step].section }, "Body")
     }
@@ -274,8 +276,9 @@ final class ModelTests: XCTestCase {
         let hat = Design.ribbedBeanie.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
         XCTAssertEqual(Set(hat.abbreviations.map(\.term)), ["k2tog", "k", "p", "repeat from", "marker", "join in the round"])
         let sweater = Design.raglanPullover.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
-        XCTAssertTrue(Set(sweater.abbreviations.map(\.term)).isSuperset(of: ["k2tog", "ssk", "M1L", "M1R", "pick up and knit", "in pattern"]))
-        XCTAssertFalse(sweater.abbreviations.contains { $0.term == "yo" || $0.term == "C6F" || $0.term == "turn" })
+        // "Inc across" is spelled out with M1L and M1R, so those are listed too. The back-neck short rows turn.
+        XCTAssertTrue(Set(sweater.abbreviations.map(\.term)).isSuperset(of: ["k2tog", "ssk", "inc across", "M1L", "M1R", "double stitch", "turn", "pick up and knit", "in pattern"]))
+        XCTAssertFalse(sweater.abbreviations.contains { $0.term == "yo" || $0.term == "C6F" })
         // A plain garter scarf says "Knit" in full and needs no glossary at all.
         XCTAssertTrue(Design.garterScarf.plan(measures: [:], gauge: YarnWeight.worsted.gauge).abbreviations.isEmpty)
     }

@@ -62,8 +62,8 @@ final class PatternTests: XCTestCase {
                     let plan = Engines.hat(style, head: head, gauge: gauge)
                     let crown = plan.steps.filter { $0.section == "Crown" }
                     XCTAssertEqual(crown.last?.stitches, 8)
-                    let caston = plan.steps[0].stitches ?? 0
-                    XCTAssertEqual(caston % 8, 0)
+                    // The body reaches the crown on a multiple of 8, the crown's wedges.
+                    XCTAssertEqual((plan.steps.last { $0.section == "Body" }?.stitches ?? 0) % 8, 0)
                     // Each decrease round takes exactly 8 stitches off.
                     var previous = plan.steps.last { $0.section == "Body" }?.stitches ?? 0
                     for round in crown {
@@ -153,7 +153,7 @@ final class PatternTests: XCTestCase {
                     let yoke = r.plan.steps.filter { $0.section == "Yoke" }
                     let end = yoke.last.flatMap { $0.stitches(after: $0.rows - 1) }
                     XCTAssertEqual(end, 2 * panel + 2 * sleeveTop, label)
-                    XCTAssertEqual(yoke.dropFirst().reduce(0) { $0 + $1.rows }, r.yokeRounds, label)
+                    XCTAssertEqual(yoke.reduce(0) { $0 + $1.rows }, r.yokeRounds, label)
 
                     // Each sleeve tapers down to the cuff count.
                     let taper = r.plan.steps.last { $0.section == "First Sleeve" }
@@ -290,5 +290,205 @@ final class PatternTests: XCTestCase {
         XCTAssertEqual(plan.sections[0].tap, 0)
         XCTAssertEqual(plan.sections[1].tap, plan.steps[0].rows + plan.steps[1].rows)
         XCTAssertEqual(plan.position(at: plan.sections[2].tap).map { plan.steps[$0.step].section }, "Crown")
+    }
+
+    // MARK: Tech edit, 2026-11-15
+
+    private let hats: [Design] = [.ribbedBeanie, .slouchHat, .rolledBrimHat]
+
+    /// K-14: every hat is cast on 5 to 15 percent smaller than the head, at every head and every weight.
+    func testHatEaseStaysInTheBand() {
+        for design in hats {
+            let heads = Array(stride(from: 13.0, through: 26.0, by: 0.5)) + design.sizes.compactMap { $0.values["head"] }
+            for head in heads {
+                for weight in YarnWeight.allCases {
+                    let plan = design.plan(measures: ["head": head], gauge: weight.gauge)
+                    let around = Double(plan.steps[0].stitches ?? 0) / weight.gauge.spi
+                    let ease = around / head - 1
+                    XCTAssertTrue((-0.15...(-0.05)).contains(ease), "\(design) head \(head) \(weight): \(Int((ease * 100).rounded())) percent")
+                    // The rib's repeat divides the cast on.
+                    let rib = plan.steps[1].texts[0]
+                    if rib.hasPrefix("*K2, p2") { XCTAssertEqual((plan.steps[0].stitches ?? 0) % 4, 0) }
+                    if rib.hasPrefix("*K1, p1") { XCTAssertEqual((plan.steps[0].stitches ?? 0) % 2, 0) }
+                }
+            }
+        }
+    }
+
+    /// K-14: a body that is not a multiple of 8 is brought to one on its last round, by at most 4 stitches.
+    func testHatAdjustsToTheCrownOnTheLastBodyRound() {
+        var adjusted = 0
+        for design in hats {
+            for head in stride(from: 13.0, through: 26.0, by: 0.5) {
+                for weight in YarnWeight.allCases {
+                    let plan = design.plan(measures: ["head": head], gauge: weight.gauge)
+                    let body = plan.steps.filter { $0.section == "Body" }
+                    guard let last = body.last, last.texts[0].contains("evenly") else { continue }
+                    adjusted += 1
+                    let before = body[body.count - 2].stitches ?? 0
+                    XCTAssertLessThanOrEqual(abs((last.stitches ?? 0) - before), 4, "\(design) head \(head) \(weight)")
+                    XCTAssertTrue(last.texts[0].contains(last.stitches ?? 0 > before ? "increasing \((last.stitches ?? 0) - before)" : "decreasing \(before - (last.stitches ?? 0))"), last.texts[0])
+                }
+            }
+        }
+        XCTAssertGreaterThan(adjusted, 0)
+        XCTAssertEqual(Engines.hat(.ribbed, head: 16, gauge: YarnWeight.superBulky.gauge).steps.first { $0.texts[0].contains("evenly") }?.texts[0], "Knit, decreasing 4 evenly: work (k7, k2tog) 4 times")
+    }
+
+    /// K-21: a ribbed brim is worked on the smaller needle, and the body on the larger one.
+    func testRibbedBrimsAreOnTheSmallerNeedle() {
+        for design in [Design.ribbedBeanie, .slouchHat] {
+            for size in design.sizes {
+                for weight in YarnWeight.allCases {
+                    let gauge = weight.gauge
+                    let plan = design.plan(measures: size.values, gauge: gauge)
+                    let label = "\(design) \(size.name) \(weight)"
+                    XCTAssertTrue(plan.steps[0].texts[0].contains("with the smaller needle"), label)
+                    XCTAssertTrue(plan.materials.contains { $0.hasPrefix(gauge.ribNeedle.label) && $0.contains("for the brim") }, label)
+                    XCTAssertTrue(plan.materials.contains { $0.hasPrefix(gauge.needle.label) && $0.contains("for the body") }, label)
+                    XCTAssertTrue(plan.steps.first { $0.section == "Body" }?.texts[0].hasPrefix("Change to the larger needle") == true, label)
+                }
+            }
+        }
+        XCTAssertFalse(Design.rolledBrimHat.plan(measures: [:], gauge: YarnWeight.worsted.gauge).steps.contains { $0.texts.contains { $0.contains("larger needle") } })
+    }
+
+    /// K-29: a piece worked in the round says "rounds" in its gauge and never calls a round a row. Flat
+    /// pieces keep "rows".
+    func testRoundPiecesSayRound() {
+        everyPlan { design, input, gauge, plan in
+            let label = "\(design.rawValue) \(input) \(gauge.stitches)"
+            let round = plan.steps[0].texts[0].contains("Join in the round")
+            let gaugeLine = plan.materials.last { $0.hasPrefix("Gauge") } ?? ""
+            XCTAssertTrue(gaugeLine.contains(round ? " rounds over" : " rows over"), "\(label): \(gaugeLine)")
+            guard round else { return }
+            for (tap, text) in plan.steps.enumerated().flatMap({ index, step in (0..<step.rows).map { (index, step.text(at: $0)) } }) where !text.hasSuffix("turn") {
+                let words = text.replacingOccurrences(of: "short row", with: "", options: .caseInsensitive)
+                XCTAssertNil(words.range(of: "\\brows?\\b", options: [.regularExpression, .caseInsensitive]), "\(label) step \(tap): \(text)")
+            }
+        }
+    }
+
+    /// K-29: the counter's label can ask the plan whether a tap is a round or a row.
+    func testPlanNamesRoundsAndRows() {
+        let hat = Engines.hat(.ribbed, head: 22, gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(hat.unit(at: 1), "Round")
+        XCTAssertEqual(hat.unit(at: hat.totalTaps - 1), "Round")
+        let scarf = Engines.scarf(.garter, width: 7, length: 64, gauge: YarnWeight.worsted.gauge)
+        XCTAssertEqual(scarf.unit(at: 1), "Row")
+        let mitts = Engines.handwarmers(hand: 7.5, gauge: YarnWeight.worsted.gauge)
+        let slit = mitts.sections.first { $0.name.hasSuffix("Thumb Opening") }?.tap ?? 0
+        let upper = mitts.sections.first { $0.name.hasSuffix("Upper Hand") }?.tap ?? 0
+        XCTAssertEqual(mitts.unit(at: slit), "Row")
+        XCTAssertEqual(mitts.unit(at: upper), "Round")
+        let sweater = Design.raglanPullover.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
+        let neck = sweater.sections.first { $0.name == "Back Neck" }?.tap ?? 0
+        XCTAssertEqual(sweater.unit(at: neck), "Round")
+        XCTAssertEqual(sweater.unit(at: neck + 1), "Row")
+        let sleeve = sweater.sections.first { $0.name == "First Sleeve" }?.tap ?? 0
+        XCTAssertEqual(sweater.unit(at: sleeve + 2), "Round")
+    }
+
+    /// K-05: German short rows across the back and sleeves raise the back neck before the yoke grows.
+    /// They turn an even number of times, so the yoke starts with the right side facing.
+    func testRaglanRaisesTheBackNeck() {
+        for gauge in gauges {
+            for chest in stride(from: 29.0, through: 65.0, by: 4) {
+                let r = Engines.raglan(chest: chest, body: 15, sleeve: 18, gauge: gauge)
+                let label = "chest \(chest) gauge \(gauge.stitches)"
+                let steps = r.plan.steps.filter { $0.section == "Back Neck" }
+                let rows = steps.flatMap { step in (0..<step.rows).map { step.text(at: $0) } }
+                let turns = rows.filter { $0.hasSuffix(", turn") }.count
+                XCTAssertGreaterThanOrEqual(turns, 4, label)
+                XCTAssertEqual(turns % 2, 0, label)
+                XCTAssertTrue(rows[1].hasPrefix("Short row"), label)
+                XCTAssertEqual(rows.last, "Knit 1 round, knitting each double stitch as one stitch", label)
+                XCTAssertTrue(steps.allSatisfy { $0.stitches == r.neck && $0.delta == 0 }, label)
+                // Front and back differ: the back gets the short rows, about an inch of them.
+                let back = turns
+                XCTAssertGreaterThanOrEqual(Double(back) / gauge.rpi, 0.5, label)
+                XCTAssertLessThanOrEqual(Double(back) / gauge.rpi, 1.6, label)
+                // The turns step into the front from each side, and never meet in the middle.
+                let reach = Int(rows.first { $0.contains("as one stitch, k") }?.split(separator: "k").last?.split(separator: ",").first ?? "0") ?? 0
+                XCTAssertLessThan(reach * (turns / 2 - 1), r.backAtNeck / 2, label)
+            }
+        }
+        let plan = Design.raglanPullover.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
+        XCTAssertTrue(plan.abbreviations.contains { $0.term == "double stitch" })
+        XCTAssertTrue(plan.abbreviations.contains { $0.term == "inc across" })
+    }
+
+    /// K-16: the yoke, divide and pick-up are short sentences a knitter can keep their place in.
+    func testRaglanInstructionsAreShortSentences() {
+        for gauge in gauges {
+            for chest in [29.0, 41, 65] {
+                let plan = Engines.raglan(chest: chest, body: 15, sleeve: 18, gauge: gauge).plan
+                for text in plan.steps.flatMap(\.texts) {
+                    XCTAssertLessThanOrEqual(text.count, 160, text)
+                    for sentence in text.components(separatedBy: ". ") { XCTAssertLessThanOrEqual(sentence.count, 100, sentence) }
+                }
+                for step in plan.steps where step.section == "Yoke" { XCTAssertLessThanOrEqual(step.texts[0].count, 120, step.texts[0]) }
+                XCTAssertEqual(plan.steps.filter { $0.section == "Divide" }.count, 4)
+            }
+        }
+    }
+
+    /// K-25: sleeve increases are spread from the neck to the underarm. Only the body increases on
+    /// back-to-back rounds, and only when the yoke is too short to space its increases out.
+    func testRaglanSleevesGrowThroughTheWholeYoke() {
+        for gauge in gauges {
+            for chest in stride(from: 29.0, through: 65.0, by: 2) {
+                let r = Engines.raglan(chest: chest, body: 15, sleeve: 18, gauge: gauge)
+                let label = "chest \(chest) gauge \(gauge.stitches)"
+                let rounds = r.plan.steps.filter { $0.section == "Yoke" }.flatMap { step in (0..<step.rows).map { step.text(at: $0) } }
+                XCTAssertEqual(rounds.count, r.yokeRounds, label)
+                let sleeveAt = rounds.indices.filter { rounds[$0].hasPrefix("*Inc across") || rounds[$0].hasPrefix("Inc across the sleeve") }
+                let bodyAt = rounds.indices.filter { rounds[$0].hasPrefix("*Inc across") || rounds[$0].contains("Inc across the front") }
+                XCTAssertEqual(sleeveAt.count, r.sleeveIncreases, label)
+                XCTAssertEqual(bodyAt.count, r.bodyIncreases, label)
+                guard r.bodyIncreases >= r.sleeveIncreases, let lastBody = bodyAt.last, let lastSleeve = sleeveAt.last else { continue }
+                let spacing = Double(lastBody + 1) / Double(r.sleeveIncreases)
+                let gaps = zip(sleeveAt, sleeveAt.dropFirst()).map { $1 - $0 }
+                if 2 * r.sleeveIncreases <= r.yokeRounds { XCTAssertGreaterThanOrEqual(gaps.min() ?? 2, 2, label) }
+                XCTAssertLessThanOrEqual(Double(gaps.max() ?? 0), spacing + 2, label)
+                // The sleeves grow until close to where the body stops.
+                XCTAssertLessThanOrEqual(Double(lastBody - lastSleeve), spacing + 2, label)
+            }
+        }
+        // The 5X in worsted used to stop the sleeves 20 rounds before the underarm.
+        let large = Engines.raglan(chest: 65, body: 17.5, sleeve: 20, gauge: YarnWeight.worsted.gauge)
+        let rounds = large.plan.steps.filter { $0.section == "Yoke" }.flatMap { step in (0..<step.rows).map { step.text(at: $0) } }
+        let lastSleeve = rounds.lastIndex { $0.hasPrefix("*Inc across") || $0.hasPrefix("Inc across the sleeve") } ?? 0
+        XCTAssertGreaterThanOrEqual(lastSleeve, large.yokeRounds - 3)
+    }
+
+    /// K-19: garter in the round slips the first stitch of each purl round to hide the jog, and the
+    /// Chunky Cowl starts in chunky (bulky) yarn.
+    func testChunkyCowlHidesTheJog() {
+        XCTAssertEqual(Design.chunkyCowl.weight, .bulky)
+        for size in Design.chunkyCowl.sizes {
+            let plan = Design.chunkyCowl.plan(measures: size.values, gauge: Design.chunkyCowl.weight.gauge)
+            let rounds = plan.steps.filter { !$0.isAction }.flatMap(\.texts)
+            XCTAssertTrue(rounds.contains("Knit"))
+            XCTAssertFalse(rounds.contains("Purl"))
+            XCTAssertTrue(rounds.contains { $0.hasPrefix("Slip the first stitch purlwise, then purl") })
+        }
+    }
+
+    /// K-30: leg warmers grip with a deep rib at the top and narrow toward the ankle.
+    func testLegWarmersNarrowTowardTheAnkle() {
+        everyPlan { design, input, gauge, plan in
+            guard design == .legWarmers else { return }
+            let label = "\(input) \(gauge.stitches)"
+            let top = plan.steps.filter { $0.section == "Leg Warmer 1 · Top" && !$0.isAction }
+            let ankle = plan.steps.filter { $0.section == "Leg Warmer 1 · Ankle" && !$0.isAction }
+            let caston = plan.steps[0].stitches ?? 0
+            let narrow = ankle.first?.stitches ?? 0
+            XCTAssertGreaterThanOrEqual(top.reduce(0) { $0 + $1.rows }, ankle.reduce(0) { $0 + $1.rows }, label)
+            XCTAssertEqual(narrow % 4, 0, label)
+            let taper = 1 - Double(narrow) / Double(caston)
+            XCTAssertTrue((0.08...0.22).contains(taper), "\(label): \(taper)")
+            for step in plan.steps where step.delta < 0 { XCTAssertGreaterThanOrEqual(step.texts.count, 2, label) }
+        }
     }
 }

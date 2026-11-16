@@ -145,7 +145,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .triangleShawl, .neckScarf: .dk
         case .garterBlanket, .slouchHat, .cableHeadband: .aran
-        case .chunkyCowl: .superBulky
+        // Chunky is #5 bulky to most knitters.
+        case .chunkyCowl: .bulky
         default: .worsted
         }
     }

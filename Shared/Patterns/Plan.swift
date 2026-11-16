@@ -118,6 +118,23 @@ extension PatternPlan {
     /// is its first half, which is the right-hand half; a flat piece faces front in the middle.
     var front: Double { steps.first?.texts.first?.contains("Join in the round") == true ? 0.75 : 0.5 }
 
+    /// "Round" for a tap worked in the round, "Row" for one worked flat, so a label over the counter can
+    /// say what the knitter is working. A piece is in the round from the action that joins it until a
+    /// row turns, and again after an action that joins it back.
+    func unit(at taps: Int) -> String {
+        guard let spot = position(at: taps) else { return "Row" }
+        var round = false
+        for step in steps.prefix(spot.step) where step.isAction {
+            if step.texts[0].range(of: "^(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil || step.texts[0].hasPrefix("With") { round = false }
+            if step.texts[0].range(of: "join in the round|start of the round", options: [.regularExpression, .caseInsensitive]) != nil { round = true }
+        }
+        let step = steps[spot.step]
+        if step.isAction { return round ? "Round" : "Row" }
+        let text = step.text(at: spot.row)
+        if text.hasSuffix("turn") { return "Row" }
+        return round ? "Round" : "Row"
+    }
+
     /// Each section with the tap it starts on, in knitting order.
     var sections: [(name: String, tap: Int)] {
         var found: [(name: String, tap: Int)] = []
@@ -146,16 +163,22 @@ extension PatternPlan {
         ("backward loop", "Twist a loop of the working yarn and slide it onto the right needle. Each loop is 1 stitch"),
         ("pick up and knit", "Push the needle through the edge of the fabric, wrap the yarn and pull a loop through. Each loop is 1 stitch"),
         ("in pattern", "Knit the knit stitches and purl the purl stitches as you bind off"),
+        ("inc across", "K1, M1L, knit to 1 stitch before the next marker, M1R, k1, slip the marker. It adds 2 stitches"),
+        ("double stitch", "A German short row turn: with the yarn in front, slip the first stitch purlwise, then pull the yarn up and over the needle so the stitch shows two legs. Work both legs together as one stitch when you come back to it"),
     ]
 
     /// The abbreviations this pattern uses, spelled out.
+    /// A term a listed meaning uses is listed too: "inc across" is spelled out with M1L and M1R.
     var abbreviations: [(term: String, meaning: String)] {
-        let text = steps.flatMap(\.texts).joined(separator: " ")
-        return Self.glossary.filter { entry in
-            // "k" and "p" stand in front of a count: k2, p14.
-            let pattern = entry.term.count == 1 ? "\\b\(entry.term)\\d" : "\\b\(entry.term)\\b"
-            return text.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil
+        func used(in text: String) -> [(term: String, meaning: String)] {
+            Self.glossary.filter { entry in
+                // "k" and "p" stand in front of a count: k2, p14.
+                let pattern = entry.term.count == 1 ? "\\b\(entry.term)\\d" : "\\b\(entry.term)\\b"
+                return text.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil
+            }
         }
+        let text = steps.flatMap(\.texts).joined(separator: " ")
+        return used(in: text + " " + used(in: text).map(\.meaning).joined(separator: " "))
     }
 }
 
