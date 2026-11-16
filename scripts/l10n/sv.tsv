@@ -1,0 +1,259 @@
+1	Projekt
+2	Mönster
+3	Förråd
+4	Klar
+5	Nytt projekt
+6	Mer
+7	Betygsätt Ravel
+8	Skicka feedback
+9	Hjälp
+10	Ta bort %@?
+11	Ta bort projekt
+12	Namn
+13	Avbryt
+14	Lägg upp
+15	Starta radräknare
+16	Bläddra bland mönster
+17	Rad %lld
+18	Utan namn
+19	Ravel kunde inte öppna dina projekt
+20	De finns kvar på den här %@. Starta om den och öppna Ravel igen.
+21	Få hjälp
+22	Garn
+23	Stickor och virknålar
+24	Lägg till i förrådet
+25	Sticka eller virknål
+26	Lägg till garn
+27	Lägg till stickor
+28	one=%lld docka|other=%lld dockor
+29	Meter per docka
+30	Yards per docka
+31	Märke
+32	Färg
+33	Fiber
+34	Färgbad
+35	Garntjocklek
+36	Dockor
+37	Klar
+38	Typ
+39	Storlek
+40	Längd
+41	Valfri
+42	Virknål
+43	Sticka
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Rundsticka
+53	Rak sticka
+54	Strumpstickor
+55	Virknål
+56	Nollställa räknaren?
+57	Nollställ räknaren
+58	Ta bort mönstret från projektet?
+59	Ta bort mönster
+60	Rader per rapport
+61	Rader
+62	Ange
+63	Rapporten börjar på nästa rad.
+64	Rad
+65	Varv
+66	Rad i den här delen
+67	Varv i den här delen
+68	Räknarens namn
+69	Byt namn
+70	Lägg till
+71	Ta bort räknaren?
+72	Ta bort räknare
+73	Mönstret kunde inte öppnas
+74	%lld av %lld
+75	one=%lld maska|other=%lld maskor
+76	Ta bort en från %@
+77	Lägg till en på %@
+78	Lägg till en rad
+79	Rad %1$lld av %2$lld i rapporten
+80	En rad tillbaka
+81	Detaljer
+82	Material
+83	Gå till rad
+84	Gå till varv
+85	Gå till del
+86	Lägg till mönster
+87	Byt ut mönster
+88	Lägg till foton
+89	Ange rad
+90	Rapport
+91	Räknare
+92	Nollställ
+93	Ta bort
+94	Lägg till räknare
+95	Markera som pågående
+96	Markera som klar
+97	Projektalternativ
+98	Stickor
+99	Anteckningar
+100	Inte från förrådet
+101	Välj garn från förrådet
+102	Förkortningar
+103	Krapp
+104	Ringblomma
+105	Mossa
+106	Gran
+107	Indigo
+108	Plommon
+109	Havre
+110	Kol
+111	Trendigt
+112	Gratis
+113	Mössor
+114	Halsdukar och tubhalsar
+115	Filtar och hem
+116	Accessoarer
+117	Tröjor
+118	Nybörjare
+119	Lätt
+120	Medel
+121	Maskprov
+122	Maskor på %@
+123	Varv på %@
+124	Lås upp mönster
+125	Diagrammet passar inte det här maskprovet
+126	Huvud
+127	Bredd
+128	Omkrets
+129	Höjd
+130	Sida
+131	Hand
+132	Vad
+133	Spännvidd
+134	Bröst
+135	Kroppslängd
+136	Ärmlängd
+137	Bebis
+138	Småbarn
+139	Barn
+140	Liten
+141	Medel
+142	Stor
+143	Klassisk
+144	Lång
+145	Smal
+146	Oändlig
+147	Barnvagn
+148	Spjälsäng
+149	Pläd
+150	Vuxen
+151	Bred
+152	Liten sjal
+153	Stola
+154	Ribbad mössa
+155	Slouchmössa
+156	Mössa med rullkant
+157	Rätstickad halsduk
+158	Ribbad halsduk
+159	Pärlstickad halsduk
+160	Ribbad tubhals
+161	Pärlstickad tubhals
+162	Filt med kant
+163	Rätstickad filt
+164	Diagonal disktrasa
+165	Öronvärmare
+166	Handledsvärmare
+167	Benvärmare
+168	Triangelsjal
+169	Raglantröja
+170	Grov tubhals
+171	Halsduk i fyrkant
+172	Pannband med flätor
+173	Balaklava
+174	Nytt
+175	Presenttider
+176	Mitt i vintern
+177	Vårlager
+178	Sommarbomull
+179	Resestickning
+180	Tröjväder
+181	Första kalla dagarna
+182	Kant
+183	Kropp
+184	Kråna
+185	Avslut
+186	Halsduk
+187	Tubhals
+188	Nedre kant
+189	Övre kant
+190	Filt
+191	Ökningar
+192	Minskningar
+193	Band
+194	Sjal
+195	Mitten
+196	Hals
+197	Ansiktsöppning
+198	Överdel
+199	Ansiktskant
+200	Halskant
+201	Nacke
+202	Bärstycke
+203	Delning
+204	Första ärmen
+205	Andra ärmen
+206	Muddkant
+207	Första örat
+208	Andra örat
+209	Handledsvärmare %lld
+210	Benvärmare %lld
+211	Tumöppning
+212	Övre handen
+213	Ben
+214	Ankel
+215	Stäng
+216	Ravel-mönster
+217	Varje design i biblioteket, skriven efter dina mått och ditt garn
+218	Planerna kunde inte laddas
+219	Försök igen
+220	Återställ
+221	Villkor
+222	Integritet
+223	Årligen
+224	Månadsvis
+225	Livstid
+226	%@ per år
+227	%@ per månad
+228	%@ engångs
+229	Köp livstid
+230	one=Prova gratis i %lld dag|other=Prova gratis i %lld dagar
+231	Prenumerera
+232	one=%lld dag gratis.|other=%lld dagar gratis.
+233	Sedan %@.
+234	%@.
+235	Förnyas tills du avbryter i Inställningar. Ett mönster du har lagt upp är ditt att behålla.
+236	En enda betalning på %@. Varje mönster är ditt för alltid.
+237	Ditt köp väntar på godkännande
+238	Ditt köp gick igenom. Tryck på Återställ om mönstren förblir låsta.
+239	Köpet gick inte igenom
+240	Inget köp hittades på det här Apple-kontot
+241	App Store gick inte att nå. Försök igen när du är online.
+242	Sticka 2 maskor ihop
+243	Lyft 2 maskor som om de skulle stickas, en i taget, och sticka ihop dem bakifrån
+244	Omslag
+245	Öka 1: lyft tråden mellan maskorna och sticka den bakifrån
+246	Öka 1 åt vänster: lyft tråden framifrån och sticka den bakifrån
+247	Öka 1 åt höger: lyft tråden bakifrån och sticka den framifrån
+248	Fläta 6 fram: lyft 3 maskor på en flätsticka och håll den framför, sticka 3, sticka sedan de 3 från flätstickan
+249	Rät. K2 är att sticka 2 maskor räta
+250	Avig. P2 är att sticka 2 maskor aviga
+251	Arbeta maskorna efter * om och om igen, så långt raden säger
+252	En ring på stickan som markerar ett ställe. Flytta den från vänster till höger sticka när du kommer till den
+253	Byt sticka mellan händerna och arbeta tillbaka åt andra hållet
+254	Sticka den första upplagda maskan med arbetstråden för att sluta ringen, med uppläggningskanten platt och inte vriden runt stickan
+255	Vrid en ögla av arbetstråden och skjut den på högra stickan. Varje ögla är 1 maska
+256	För stickan genom kanten på arbetet, lägg tråden om och dra igenom en ögla. Varje ögla är 1 maska
+257	Sticka de räta maskorna räta och de aviga aviga när du maskar av
+258	K1, M1L, sticka till 1 maska före nästa markör, M1R, k1, lyft markören. Det ökar 2 maskor
+259	En tysk förkortad varvvändning: med tråden framför, lyft första maskan som om den skulle stickas avig, dra sedan tråden upp över stickan så att maskan visar två ben. Sticka båda benen ihop som en maska när du kommer tillbaka till den

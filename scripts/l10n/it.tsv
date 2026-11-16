@@ -1,0 +1,259 @@
+1	Progetti
+2	Schemi
+3	Scorta
+4	Finito
+5	Nuovo progetto
+6	Altro
+7	Valuta Ravel
+8	Invia feedback
+9	Aiuto
+10	Eliminare %@?
+11	Elimina progetto
+12	Nome
+13	Annulla
+14	Avvia le maglie
+15	Avvia contatore di ferri
+16	Sfoglia gli schemi
+17	Ferro %lld
+18	Senza titolo
+19	Ravel non è riuscita ad aprire i tuoi progetti
+20	Sono ancora su questo %@. Riavvialo, poi riapri Ravel.
+21	Ottieni aiuto
+22	Filato
+23	Ferri e uncinetti
+24	Aggiungi alla scorta
+25	Ferro o uncinetto
+26	Aggiungi filato
+27	Aggiungi ferri
+28	one=%lld matassa|other=%lld matasse
+29	Metri per matassa
+30	Iarde per matassa
+31	Marca
+32	Colore
+33	Fibra
+34	Lotto di tintura
+35	Peso
+36	Matasse
+37	Fine
+38	Tipo
+39	Taglia
+40	Lunghezza
+41	Qualsiasi
+42	Uncinetto
+43	Ferro
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circolare
+53	Dritto
+54	A doppia punta
+55	Uncinetto
+56	Azzerare il contatore?
+57	Azzera contatore
+58	Rimuovere lo schema da questo progetto?
+59	Rimuovi schema
+60	Ferri per ripetizione
+61	Ferri
+62	Imposta
+63	La ripetizione inizia dal prossimo ferro.
+64	Ferro
+65	Giro
+66	Ferro in questa sezione
+67	Giro in questa sezione
+68	Nome del contatore
+69	Rinomina
+70	Aggiungi
+71	Rimuovere il contatore?
+72	Rimuovi contatore
+73	Impossibile aprire quello schema
+74	%lld di %lld
+75	one=%lld maglia|other=%lld maglie
+76	Togli uno a %@
+77	Aggiungi uno a %@
+78	Aggiungi un ferro
+79	Ferro %1$lld di %2$lld nella ripetizione
+80	Indietro di un ferro
+81	Dettagli
+82	Materiali
+83	Vai al ferro
+84	Vai al giro
+85	Vai alla sezione
+86	Aggiungi schema
+87	Sostituisci schema
+88	Aggiungi foto
+89	Imposta ferro
+90	Ripetizione
+91	Contatore
+92	Azzera
+93	Rimuovi
+94	Aggiungi contatore
+95	Segna come attivo
+96	Segna come finito
+97	Opzioni del progetto
+98	Ferri
+99	Note
+100	Non dalla scorta
+101	Scegli il filato dalla scorta
+102	Abbreviazioni
+103	Garanza
+104	Calendula
+105	Muschio
+106	Abete
+107	Indaco
+108	Prugna
+109	Avena
+110	Carbone
+111	Di tendenza
+112	Gratis
+113	Cappelli
+114	Sciarpe e scaldacollo
+115	Coperte e casa
+116	Accessori
+117	Maglioni
+118	Principiante
+119	Facile
+120	Intermedio
+121	Campione
+122	Maglie su %@
+123	Ferri su %@
+124	Sblocca gli schemi
+125	Lo schema non si adatta a questo campione
+126	Testa
+127	Larghezza
+128	Circonferenza
+129	Altezza
+130	Lato
+131	Mano
+132	Polpaccio
+133	Apertura
+134	Torace
+135	Lunghezza del corpo
+136	Lunghezza della manica
+137	Neonato
+138	Bimbo piccolo
+139	Bambino
+140	Piccolo
+141	Medio
+142	Grande
+143	Classico
+144	Lungo
+145	Aderente
+146	Infinito
+147	Passeggino
+148	Culla
+149	Plaid
+150	Adulto
+151	Ampio
+152	Scialle piccolo
+153	Stola
+154	Cappello a coste
+155	Cappello slouch
+156	Cappello con bordo arrotolato
+157	Sciarpa a legaccio
+158	Sciarpa a coste
+159	Sciarpa a punto riso
+160	Scaldacollo a coste
+161	Scaldacollo a punto riso
+162	Coperta con bordo
+163	Coperta a legaccio
+164	Strofinaccio diagonale
+165	Paraorecchie
+166	Scaldapolsi
+167	Scaldamuscoli
+168	Scialle triangolare
+169	Maglione raglan
+170	Scaldacollo grosso
+171	Foulard
+172	Fascia con trecce
+173	Passamontagna
+174	Novità
+175	Stagione dei regali
+176	Pieno inverno
+177	Strati di primavera
+178	Cotone estivo
+179	Maglia da viaggio
+180	Tempo da maglione
+181	Primi freddi
+182	Bordo
+183	Corpo
+184	Sommità
+185	Finiture
+186	Sciarpa
+187	Scaldacollo
+188	Bordo inferiore
+189	Bordo superiore
+190	Coperta
+191	Aumenti
+192	Diminuzioni
+193	Fascia
+194	Scialle
+195	Centro
+196	Collo
+197	Apertura per il viso
+198	Parte alta
+199	Bordo del viso
+200	Colletto
+201	Dietro il collo
+202	Sprone
+203	Divisione
+204	Prima manica
+205	Seconda manica
+206	Polsino
+207	Primo paraorecchio
+208	Secondo paraorecchio
+209	Scaldapolsi %lld
+210	Scaldamuscolo %lld
+211	Apertura del pollice
+212	Parte alta della mano
+213	Gamba
+214	Caviglia
+215	Chiudi
+216	Schemi Ravel
+217	Ogni modello della libreria, scritto sulle tue misure e sul tuo filato
+218	Impossibile caricare i piani
+219	Riprova
+220	Ripristina
+221	Termini
+222	Privacy
+223	Annuale
+224	Mensile
+225	A vita
+226	%@ all’anno
+227	%@ al mese
+228	%@ una tantum
+229	Acquista a vita
+230	one=Prova gratis per %lld giorno|other=Prova gratis per %lld giorni
+231	Abbonati
+232	one=%lld giorno gratis.|other=%lld giorni gratis.
+233	Poi %@.
+234	%@.
+235	Si rinnova finché non annulli in Impostazioni. Uno schema che hai avviato resta tuo.
+236	Un unico pagamento di %@. Ogni schema è tuo per sempre.
+237	Il tuo acquisto è in attesa di approvazione
+238	Il tuo acquisto è andato a buon fine. Tocca Ripristina se gli schemi restano bloccati.
+239	L’acquisto non è andato a buon fine
+240	Nessun acquisto trovato su questo ID Apple
+241	Impossibile raggiungere l’App Store. Riprova quando sei online.
+242	Lavorare 2 maglie insieme a dritto
+243	Passare 2 maglie come per lavorarle a dritto, una alla volta, poi lavorarle insieme dietro
+244	Gettato
+245	Aumento di 1: sollevare il filo tra le maglie e lavorarlo dietro
+246	Aumento di 1 a sinistra: sollevare il filo da davanti e lavorarlo dietro
+247	Aumento di 1 a destra: sollevare il filo da dietro e lavorarlo davanti
+248	Treccia di 6 davanti: passare 3 maglie su un ferro ausiliario e tenerlo davanti, lavorare 3 a dritto, poi lavorare le 3 del ferro ausiliario
+249	Dritto. K2 significa lavorare 2 maglie a dritto
+250	Rovescio. P2 significa lavorare 2 maglie a rovescio
+251	Lavorare di nuovo le maglie dopo l’* più volte, fin dove indica il ferro
+252	Un anello sul ferro che segna un punto. Passalo dal ferro sinistro al destro quando ci arrivi
+253	Scambiare i ferri tra le mani e lavorare nell’altra direzione
+254	Lavorare la prima maglia avviata con il filo di lavoro per chiudere il cerchio, con il bordo di avvio piatto e non attorcigliato intorno al ferro
+255	Attorcigliare un anello di filo di lavoro e farlo scivolare sul ferro destro. Ogni anello è 1 maglia
+256	Infilare il ferro nel bordo del lavoro, avvolgere il filo e tirare fuori un anello. Ogni anello è 1 maglia
+257	Chiudendo, lavorare le maglie a dritto a dritto e quelle a rovescio a rovescio
+258	K1, M1L, lavorare fino a 1 maglia prima del segnapunti successivo, M1R, k1, passare il segnapunti. Aggiunge 2 maglie
+259	Un giro di ferri accorciati alla tedesca: con il filo davanti, passare la prima maglia come per il rovescio, poi tirare il filo su e sopra il ferro in modo che la maglia mostri due gambe. Lavorare insieme le due gambe come una sola maglia quando ci si torna
