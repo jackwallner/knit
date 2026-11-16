@@ -24,7 +24,8 @@ private struct ReadableWidth: ViewModifier {
     @State private var margin: CGFloat = 0
 
     func body(content: Content) -> some View {
-        content
+        let limit = limit
+        return content
             .contentMargins(.horizontal, margin, for: .scrollContent)
             .onGeometryChange(for: CGFloat.self) { max(0, (($0.size.width - limit) / 2).rounded(.down)) } action: { margin = $0 }
     }

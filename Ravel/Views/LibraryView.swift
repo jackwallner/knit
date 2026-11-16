@@ -71,7 +71,7 @@ struct LibraryView: View {
                         NavigationLink(value: entry.item) { tile(entry.item, note: entry.tag) }
                             .buttonStyle(.plain)
                             .containerRelativeFrame(.horizontal) { width, _ in
-                                typeSize.isAccessibilitySize ? (width - 72) / 1.3 : min((width - 72) / 2.3, 220)
+                                typeSize.isAccessibilitySize ? min((width - 72) / 1.3, 420) : min((width - 72) / 2.3, 220)
                             }
                             .accessibilityIdentifier("trending.\(entry.item.designRaw)")
                     }
