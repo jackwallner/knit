@@ -44,6 +44,7 @@ struct StashView: View {
                 }
             }
             .listStyle(.plain)
+            .readableWidth(leading: true)
             .scrollContentBackground(.hidden)
             .background(Theme.paper)
             .overlay {

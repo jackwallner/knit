@@ -40,13 +40,14 @@ struct StoreUnavailableView: View {
             Text("Ravel could not open your projects")
                 .font(Theme.display(26, weight: .semibold))
                 .multilineTextAlignment(.center)
-            Text("They are still on this iPhone. Restart it, then open Ravel again.")
+            Text("They are still on this \(UIDevice.current.model). Restart it, then open Ravel again.")
                 .foregroundStyle(Theme.secondary)
                 .multilineTextAlignment(.center)
             Button("Get Help") { openURL(Links.support) }
                 .frame(minHeight: 44)
         }
         .padding(32)
+        .frame(maxWidth: 520)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.paper)
     }

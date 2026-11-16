@@ -5,7 +5,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 ## Tech Stack
 - Swift 6 / SwiftUI (strict concurrency)
 - SwiftData (local only, no account, works offline), PDFKit
-- XcodeGen (`project.yml`). Targets: iOS 17+
+- XcodeGen (`project.yml`). Targets: iOS 17+, iPhone (portrait) and iPad (every orientation)
 - RevenueCat, entitlement `pro` (project `projfe8bceb8`, app `app5988b53b74`, offering `default`)
 
 ## Targets / bundle IDs
@@ -34,6 +34,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - Topical designs: records in `docs/designs.json` are published only with Jack's yes, and every record must pass `scripts/topical-check.sh`. Loop, format and rules: `.claude/rules/topical-loop.md`.
 - `docs/trending.json` may only name `Design` raw values. A design the installed build does not know is skipped, so add a design to the list only after the build that carries it is live. `TrendingTests.testPublishedListDecodes` reads the file.
 - No em dashes in copy, comments or commits.
+- iPad layouts switch on the space a view has, never on the device: `Ravel/Views/Layout.swift`. Thresholds, per-screen layouts, why iPhone stays portrait, and the capture test: `.claude/rules/ipad-layout.md`.
 
 ## Launch arguments (DEBUG)
 - `-SeedDemo`: in-memory store with three projects (one PDF, one library pattern), yarns and needles. `-NoPattern` drops the PDF. Seeded and `-UITesting` runs never fetch the trending list.

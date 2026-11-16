@@ -27,7 +27,7 @@ struct PaywallView: View {
             }
             .padding(.horizontal, 8)
 
-            // At large text sizes the page scrolls and nothing truncates.
+            // At large text sizes the page scrolls and nothing truncates. On an iPad the page keeps a phone's width.
             ViewThatFits(in: .vertical) {
                 VStack(spacing: 0) {
                     Spacer(minLength: 0)
@@ -44,6 +44,8 @@ struct PaywallView: View {
                     }
                 }
             }
+            .frame(maxWidth: 540, maxHeight: 900)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .background(Theme.paper)
         .task { await subscription.loadOffers() }

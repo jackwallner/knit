@@ -10,7 +10,7 @@ struct Fabric: View, Animatable {
     var markEvery = 10
     /// The row a repeat started after: the tags count from there, as the repeat dots do.
     var markFrom = 0
-    /// Stitch width. 0 sizes the stitches to the space, about nine across.
+    /// Stitch width. 0 sizes the stitches to the space, about nine across a phone, no larger on an iPad.
     var stitch: CGFloat = 24
     var showsNeedle = true
     /// Rules the paper the work will grow into, like a knitting chart: a line where the edge will
@@ -31,7 +31,7 @@ struct Fabric: View, Animatable {
         let rows = max(0, rows), yarn = yarn, markEvery = markEvery, markFrom = markFrom, stitch = stitch, showsNeedle = showsNeedle, chart = chart
         let colors = FabricColors(paints: paints, tints: palette.map(\.tint), yarn: yarn.tint, focus: focus)
         Canvas { context, size in
-            let w = stitch > 0 ? stitch : max(24, size.width / 9)
+            let w = stitch > 0 ? stitch : min(max(24, size.width / 9), 52)
             if chart { Self.chart(&context, size: size, rows: rows, w: w, markEvery: markEvery, markFrom: markFrom) }
             Self.draw(&context, size: size, rows: rows, colors: colors, markEvery: markEvery, markFrom: markFrom, w: w, needle: showsNeedle)
         }

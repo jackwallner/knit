@@ -33,6 +33,7 @@ struct ProjectsView: View {
                 }
             }
             .listStyle(.plain)
+            .readableWidth(leading: true)
             .scrollContentBackground(.hidden)
             .background(Theme.paper)
             .overlay { if projects.isEmpty { empty } }
