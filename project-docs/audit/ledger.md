@@ -44,15 +44,15 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | G-10 | P1 | Undo hit slop falls to the counting canvas | fixed | The touch area now runs 12 pt past the circle on every side (76 pt), so a near miss lands on undo, never on the counter |
 | G-11 | P1 | Repeat position wrong after a hem | fixed and verified | Models.swift:21,51-52,76-79 `repeatStart`; ProjectView.swift:86-95 alert note. Rewind side effect: V-05 |
 | G-12 | P1 | Go to Row trapped in section, gone when finished | fixed and verified | Plan.swift:91-99 `sections`, Models.swift:119-123, ProjectView.swift:303-307. Duplicate names: V-10 |
-| G-13 | P2 | No secondary counters | deferred | Past 1.0 |
-| G-14 | P2 | Stash not linked to projects | deferred | Past 1.0 |
+| G-13 | P2 | No secondary counters | fixed | One optional counter per project (`tallyOn`, `tallyName`, `tallyCount`), rules in the `Project` extension, each ending in `persist()` and never touching `rows`. Bar under the title; SchemaTests `testSecondCounterNeverTouchesTheRowsAndSurvivesReopening` |
+| G-14 | P2 | Stash not linked to projects | fixed | `Project.stashYarn` (nullify on delete, inverse `Yarn.projects`); the typed `yarn` stays for old projects. Needles are still free text. SchemaTests `testLinkedYarnShowsItsNameAndDeletingItLeavesTheProjectWhole` |
 | G-15 | P2 | Portrait only | deferred | Past 1.0 |
-| G-16 | P2 | Yarn lacks yardage, fiber, dye lot | deferred | Past 1.0 |
+| G-16 | P2 | Yarn lacks yardage, fiber, dye lot | fixed | `Yarn.yardsPerSkein` (yards underneath, shown through `Sizing.yardage`), `fiber`, `dyeLot`; stash row shows the total when known |
 | G-17 | P2 | Finished plain project still counts | fixed and verified | Models.swift:93 `if !isFinished`. Side effects: V-02, V-03 |
 | G-18 | P2 | Free designs do not show fitted sizing | owner decision | Make ribbed beanie or cowl free; touches `Design.isFree` and the free/paid test (ModelTests `testOnlyTheLibraryIsPaid`) |
 | G-19 | P2 | Paywall silent about cast-on patterns kept | fixed and verified | SubscriptionService.swift:59 disclosure sentence; PaywallUITests.swift:34,36 updated. Lifetime line has no such sentence (it says "yours for good") |
 | G-20 | P3 | No savings badge or library size on paywall | owner decision | Paywall copy and pricing presentation |
-| G-21 | P3 | Projects list shows taps, not rows | deferred | Past 1.0 |
+| G-21 | P3 | Projects list shows taps, not rows | fixed | `Project.knittedRows(_:)` feeds the list; the thumbnail still draws from taps |
 | G-22 | P3 | Raglan body-only round lacks final slip marker | fixed and verified | Engines.swift:398; marker count checked (four slips) |
 
 ## K: tech edit
@@ -63,7 +63,7 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | K-02 | P1 | Garter yardage has no reserve | fixed and verified | Engines.swift:26-29 `pattern()` takes the larger of the area estimate and Plan.swift:177-184 `yards(worked:)` (4.3 loop constant, plus 15 percent). All 15 return sites go through it. Test is tautological: V-09 |
 | K-03 | P1 | Neck scarf yardage short | fixed and verified | Same mechanism; Classic DK now about 250 yd against the reviewer's 193 to 207 |
 | K-04 | P1 | Chest read as finished chest, zero ease | fixed and verified | Design.swift:176-177 range 26 to 62, :206 sizes shifted to XS 30 to 5X 62, :212 ease 3 in, :250; Engines.swift:375-376,461-465 finished line states wearer, finished and ease. Test `testSweaterIsKnitWithRoomOverTheChestGiven` (rounding checked: 40.89 in prints as 41 in) |
-| K-05 | P2 | No front neck drop | deferred | Past 1.0 |
+| K-05 | P2 | No front neck drop | fixed and verified | Engines.swift:612-620 "Back Neck" section: German short rows across the back and sleeves (2 to 4 pairs, about an inch at the back), each turning a little further into the front, then a round closing the double stitches; "double stitch" in Plan.swift glossary. Test `testRaglanRaisesTheBackNeck` |
 | K-06 | P2 | Neck cast-on has no stretchy method | fixed and verified | Engines.swift:333,403 |
 | K-07 | P2 | Needle changes never instructed | fixed and verified | Hats and balaclava: Engines.swift:78-85 note on the first crown round under 14 in. Raglan: note sits on the first yoke row (:407), not on the round where stitches crowd; acceptable |
 | K-08 | P2 | Plus-size arms tight, cuffs loose | fixed and verified | Engines.swift:379 (the rule only changes results above a finished chest of 53.3 in) and :439 cuff capped at 10.5 in |
@@ -72,23 +72,23 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | K-11 | P2 | Thumb slit wording and edges | fixed and verified | Engines.swift:228-232 |
 | K-12 | P2 | Shawl size needs 25 percent stretch | fixed and verified | Engines.swift:262 factor 1.3 |
 | K-13 | P2 | Headband width stepper does nothing | fixed and verified | Engines.swift:301-310. Stitch arithmetic checked for 1 to 7 cables and 0 to 3 side stitches: all three row texts total the cast-on, and the WS row mirrors the RS row. Widths 4.0 and 4.5 at aran still both give 20 sts |
-| K-14 | P2 | Hat ease swings at heavy gauges | deferred | Past 1.0 |
+| K-14 | P2 | Hat ease swings at heavy gauges | fixed and verified | Engines.swift:81-106 `hatEase` 0.85 to 0.95, `hatCount` picks the rib multiple inside the band (ribbed beanie falls back to k1, p1 where no multiple of 4 fits), `adjusting` brings the body to a multiple of 8 on its last round. Ease now -5 to -15 percent at every head 13 to 26 and every weight. Tests `testHatEaseStaysInTheBand`, `testHatAdjustsToTheCrownOnTheLastBodyRound` |
 | K-15 | P2 | Baby hats on a 16 in circular | fixed and verified | Engines.swift:75 (materials line only) |
-| K-16 | P2 | Raglan run-on sentences | deferred | Past 1.0 |
+| K-16 | P2 | Raglan run-on sentences | fixed and verified | Engines.swift:629-632 yoke rounds as "Sleeve/front/sleeve/back" short sentences using "inc across" (Plan.swift glossary); :643-647 divide split into 4 steps; :668-669 pick-up split in two. Test `testRaglanInstructionsAreShortSentences` (no text over 160 characters, no sentence over 100) |
 | K-17 | P2 | Glossary misses beginner terms | fixed and verified | Plan.swift:109-117, :125 single-letter regex `\bk\d`. Regex checked on K2, k34, K2tog. Breaks ModelTests.swift:199 (V-01) |
 | K-18 | P3 | Seed cowl odd count | fixed and verified | Engines.swift:139-141; PatternTests.swift:112 updated |
-| K-19 | P3 | Chunky cowl jog and name | deferred | Past 1.0 |
+| K-19 | P3 | Chunky cowl jog and name | fixed and verified | Engines.swift:269 purl rounds slip the first stitch purlwise; Design.swift:149 Chunky Cowl defaults to bulky, so the name holds. Test `testChunkyCowlHidesTheJog` |
 | K-20 | P3 | Face edging yarn, partial first Top round | fixed | Join-new-yarn text, and the rejoin now says to move the marker to the new start of the round |
-| K-21 | P3 | Rib brim on body needle | deferred | Past 1.0 |
+| K-21 | P3 | Rib brim on body needle | fixed and verified | Engines.swift:139 cast on with the smaller needle, :144-146 first body round changes to the larger, :167-171 materials list the rib needle for the brim. Test `testRibbedBrimsAreOnTheSmallerNeedle` |
 | K-22 | P3 | Level labels off by one | fixed and verified | Design.swift:91-93 |
 | K-23 | P3 | No finished circumference stated | fixed and verified | `fits()` Engines.swift:32-34, used for hats, ear warmer, handwarmers, leg warmers, balaclava |
 | K-24 | P3 | Neck scarf longer than asked | fixed and verified | Engines.swift:280; within the design ranges tapers cannot exceed the length (4 x width <= 2 x length holds for 28 to 60 by 3 to 9) |
-| K-25 | P3 | Sleeve cap front-loaded | deferred | Past 1.0 |
+| K-25 | P3 | Sleeve cap front-loaded | fixed and verified | Engines.swift:524-548 `raglanSchedule`: the part with more increases takes the every-round packing, the other spreads evenly over the yoke, never on back-to-back rounds when there is room; :551 `grouped` writes them as steps. 5X worsted sleeves now increase to round 68 of 70. Test `testRaglanSleevesGrowThroughTheWholeYoke` |
 | K-26 | P3 | Cowl needle length rule coarse | fixed and verified | Engines.swift:154 |
 | K-27 | P3 | Slouch increases bunch | fixed and verified | Engines.swift:37-43; counts check (rest x (gap+1) + (count-rest) x gap = stitches) |
 | K-28 | P3 | Headband negative ease and seam | fixed and verified | Engines.swift:306 factor 0.92. Provisional cast-on suggestion not added |
-| K-29 | P3 | "Row" used for rounds | deferred | Past 1.0 |
-| K-30 | P3 | Leg warmers slide down | deferred | Past 1.0 |
+| K-29 | P3 | "Row" used for rounds | fixed and verified | Engines.swift:30-33 gauge line says "rounds" for every piece worked in the round; no round step says "row". Plan.swift:121-136 `PatternPlan.unit(at:)` returns "Round" or "Row" per tap for the views to adopt (ProjectView labels are owned by the views run). Tests `testRoundPiecesSayRound`, `testPlanNamesRoundsAndRows` |
+| K-30 | P3 | Leg warmers slide down | fixed and verified | Engines.swift:386-418 worked top down: deeper rib at the top, calf straight, then about 15 percent decreased at the back toward the ankle, at least 2 rounds apart, ankle rib on a multiple of 4. Test `testLegWarmersNarrowTowardTheAnkle` |
 
 ## A: App Store listing and ASO
 
@@ -217,7 +217,7 @@ Ravel checked against what every live fleet app carries. Found by looking at the
 
 **C-02 and SwiftData migration: the reasoning holds for additive changes, with one discipline risk and one new dead end.**
 - Holds: with no `SchemaMigrationPlan`, SwiftData opens the store and Core Data infers a lightweight mapping when the model changed additively (new property with an inline default, new optional, new model, removed property, rename with `@Attribute(originalName:)`). The new `repeatStart: Int = 0` migrates builds 1 to 4 this way.
-- Risk 1: a custom migration later needs a `VersionedSchema` for the version on disk. Declaring `SchemaV1` afterwards works only if it is a verbatim copy of the models 1.0 shipped (the store is matched by model hash). If the models are edited in place first, the only source is git history. Not tested here. Wrapping the current models in `SchemaV1` before 1.0 ships costs nothing and removes that risk.
+- Risk 1 (done 2026-11-15): `SchemaV1` in Shared/Models/Schema.swift is the model as it stood before the stash, secondary counter and list work. The live models are V2 with a lightweight stage. A store from a build older than V1 matches neither version, so `Persistence.container` retries the same file without the plan (inferred migration) before giving up; never an in-memory store. Old risk text: a custom migration later needs a `VersionedSchema` for the version on disk. Declaring `SchemaV1` afterwards works only if it is a verbatim copy of the models 1.0 shipped (the store is matched by model hash). If the models are edited in place first, the only source is git history. Not tested here. Wrapping the current models in `SchemaV1` before 1.0 ships costs nothing and removes that risk.
 - Risk 2: any non-lightweight change (type change, optional to required without default, relationship change) makes `ModelContainer` throw. That used to lose data silently; it now shows StoreUnavailableView, which is correct but has no recovery path (no export, no reset). Acceptable for 1.0, plan the migration before touching the models.
 
 ## Fixes that do not hold

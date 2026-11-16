@@ -27,6 +27,14 @@ final class Project {
     var designRaw: String?
     /// That design sized for this knitter, frozen so the instructions never shift under them.
     var planData: Data?
+    /// The yarn picked from the stash. Free text in `yarn` stays for projects that never picked one.
+    /// Deleting the yarn empties this and leaves the project as it is.
+    @Relationship(deleteRule: .nullify, inverse: \Yarn.projects) var stashYarn: Yarn?
+    /// An optional second counter beside the rows, for a repeat or a decrease interval. It has its own name and count
+    /// and shares nothing with `rows`.
+    var tallyOn: Bool = false
+    var tallyName: String = ""
+    var tallyCount: Int = 0
 
     init(name: String, rows: Int = 0, color: YarnColor = .madder, createdAt: Date = .now) {
         self.name = name
@@ -40,6 +48,13 @@ final class Project {
     }
 
     var isFinished: Bool { finishedAt != nil }
+
+    /// The yarn as the project shows it: the stash yarn when one is picked, else what was typed.
+    var yarnLabel: String { stashYarn?.label ?? yarn }
+
+    /// The row a knitter means. In a library pattern the count includes setup steps (cast on, join, divide),
+    /// so it is the rows actually knitted; elsewhere it is the count.
+    func knittedRows(_ plan: PatternPlan?) -> Int { plan?.knitRows(upTo: rows) ?? rows }
 
     var color: YarnColor {
         get { YarnColor(rawValue: colorRaw) ?? .madder }
@@ -143,6 +158,49 @@ extension Project {
     }
 }
 
+/// The second counter's rules. None of these reads or writes `rows`, and each ends on disk like the main count.
+extension Project {
+    static let tallyNameLimit = 40
+
+    func addTally(named name: String) {
+        tallyOn = true
+        tallyName = Self.tidy(name)
+        tallyCount = 0
+        persist()
+    }
+
+    func renameTally(_ name: String) {
+        tallyName = Self.tidy(name)
+        persist()
+    }
+
+    /// One step on the second counter, never below 0.
+    func tally(by step: Int) {
+        guard tallyOn else { return }
+        tallyCount = min(max(tallyCount + step, 0), Self.rowLimit)
+        persist()
+    }
+
+    func resetTally() {
+        tallyCount = 0
+        persist()
+    }
+
+    func removeTally() {
+        tallyOn = false
+        tallyName = ""
+        tallyCount = 0
+        persist()
+    }
+
+    /// What the counter is called: its name, or "Counter" when left blank.
+    var tallyTitle: String { tallyName.isEmpty ? "Counter" : tallyName }
+
+    private static func tidy(_ name: String) -> String {
+        String(name.trimmingCharacters(in: .whitespacesAndNewlines).prefix(tallyNameLimit))
+    }
+}
+
 @Model
 final class Yarn {
     var name: String
@@ -151,13 +209,20 @@ final class Yarn {
     var weightRaw: String
     var skeins: Int
     var createdAt: Date
+    /// Length of one skein in yards, whatever units it is shown in. 0 when the knitter did not say.
+    var yardsPerSkein: Int = 0
+    var fiber: String = ""
+    var dyeLot: String = ""
+    /// Projects knitted from this yarn. The link is on the project's side.
+    var projects: [Project] = []
 
-    init(name: String, brand: String = "", colorway: String = "", weight: YarnWeight = .worsted, skeins: Int = 1, createdAt: Date = .now) {
+    init(name: String, brand: String = "", colorway: String = "", weight: YarnWeight = .worsted, skeins: Int = 1, yardsPerSkein: Int = 0, createdAt: Date = .now) {
         self.name = name
         self.brand = brand
         self.colorway = colorway
         self.weightRaw = weight.rawValue
         self.skeins = skeins
+        self.yardsPerSkein = yardsPerSkein
         self.createdAt = createdAt
     }
 
@@ -171,6 +236,32 @@ final class Yarn {
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty }
             .joined(separator: " · ")
+    }
+
+    /// The name, with the color when it has one: how a project refers to this yarn.
+    var label: String {
+        let color = colorway.trimmingCharacters(in: .whitespaces)
+        return color.isEmpty ? name : "\(name), \(color)"
+    }
+
+    /// Yards in the whole lot. 0 when the length of a skein is not known.
+    var totalYards: Int { yardsPerSkein * skeins }
+
+    /// The total as a knitter reads it, nil when the length of a skein is not known.
+    var totalLength: String? { totalYards > 0 ? Sizing.yardage(totalYards) : nil }
+
+    /// A skein's length as typed or shown in the knitter's units, for the editor.
+    var lengthPerSkein: Int {
+        get { Self.shown(yards: yardsPerSkein) }
+        set { yardsPerSkein = Self.yards(shown: newValue) }
+    }
+
+    static func shown(yards: Int, units: Units = .current) -> Int {
+        units == .metric ? Int((Double(yards) * 0.9144).rounded()) : yards
+    }
+
+    static func yards(shown: Int, units: Units = .current) -> Int {
+        max(0, units == .metric ? Int((Double(shown) / 0.9144).rounded()) : shown)
     }
 }
 

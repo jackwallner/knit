@@ -25,6 +25,9 @@ struct ProjectView: View {
     @State private var photos: [PhotosPickerItem] = []
     @State private var bindingPhotos = false
     @State private var confirmingRemove = false
+    @State private var namingTally = false
+    @State private var tallyText = ""
+    @State private var confirmingTallyRemove = false
     /// Rows knitted since this project was opened.
     @State private var rowsThisVisit = 0
 
@@ -64,6 +67,7 @@ struct ProjectView: View {
                 .onTapGesture(perform: knit)
             }
         }
+        .safeAreaInset(edge: .top, spacing: 0) { if project.tallyOn { tallyBar } }
         .background(Theme.paper)
         .overlay { if bindingPhotos { ProgressView().controlSize(.large).padding(28).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous)) } }
         .navigationTitle(project.name)
@@ -93,14 +97,30 @@ struct ProjectView: View {
         } message: {
             if project.rows > 0, project.repeatLength == 0 { Text("The repeat starts with your next row.") }
         }
-        .alert(plan == nil ? "Row" : "Row in This Section", isPresented: $settingRow) {
-            TextField("Row", text: $rowText).keyboardType(.numberPad)
+        .alert(plan.map { "\($0.unit(at: project.rows)) in This Section" } ?? "Row", isPresented: $settingRow) {
+            TextField(plan?.unit(at: project.rows) ?? "Row", text: $rowText).keyboardType(.numberPad)
             Button("Cancel", role: .cancel) {}
             Button("Set") { if let row = Int(rowText) { project.jump(to: row, following: plan) } }
         }
+        .alert("Counter Name", isPresented: $namingTally) {
+            TextField("Name", text: $tallyText).accessibilityLabel("Name").accessibilityIdentifier("tally.nameField")
+            Button("Cancel", role: .cancel) {}
+            Button(project.tallyOn ? "Rename" : "Add") {
+                if project.tallyOn { project.renameTally(tallyText) } else { project.addTally(named: tallyText) }
+            }
+        }
+        .confirmationDialog("Remove the counter?", isPresented: $confirmingTallyRemove, titleVisibility: .visible) {
+            Button("Remove Counter", role: .destructive) { project.removeTally() }
+        }
         .alert("That pattern could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
-        .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+            #if DEBUG
+            // `-OpenDetails` opens the details sheet, for screenshots.
+            if ProcessInfo.processInfo.arguments.contains("-OpenDetails") { editing = true }
+            #endif
+        }
         .onDisappear {
             UIApplication.shared.isIdleTimerDisabled = false
             project.persist()
@@ -114,6 +134,12 @@ struct ProjectView: View {
         project.knit(following: plan)
         if project.rows > before { rowsThisVisit += 1 }
         announce()
+    }
+
+    private func tally(_ step: Int) {
+        project.tally(by: step)
+        guard UIAccessibility.isVoiceOverRunning else { return }
+        AccessibilityNotification.Announcement("\(project.tallyTitle) \(project.tallyCount)").post()
     }
 
     private func back() {
@@ -211,6 +237,61 @@ struct ProjectView: View {
                 .font(Theme.display(44))
                 .frame(maxWidth: .infinity)
         }
+    }
+
+    /// The second counter: a slim bar under the title with its own name, count and plus and minus.
+    /// It sits outside the tap area, so a press here never knits a row.
+    private var tallyBar: some View {
+        let title = project.tallyTitle
+        return ViewThatFits(in: .horizontal) {
+            HStack(spacing: 4) {
+                tallyButton("minus", "Take one off \(title)", id: "tally.minus", step: -1)
+                tallyReadout(title).frame(maxWidth: .infinity)
+                tallyButton("plus", "Add one to \(title)", id: "tally.plus", step: 1)
+            }
+            VStack(spacing: 4) {
+                tallyReadout(title)
+                HStack(spacing: 4) {
+                    tallyButton("minus", "Take one off \(title)", id: "tally.minus", step: -1)
+                    Spacer(minLength: 0)
+                    tallyButton("plus", "Add one to \(title)", id: "tally.plus", step: 1)
+                }
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 4)
+        .frame(maxWidth: .infinity)
+        .background(Theme.paper)
+        .sensoryFeedback(.impact(weight: .light), trigger: project.tallyCount)
+    }
+
+    private func tallyReadout(_ title: String) -> some View {
+        HStack(spacing: 10) {
+            Text(title).font(.subheadline).foregroundStyle(Theme.secondary).lineLimit(1)
+            Text(project.tallyCount, format: .number)
+                .font(Theme.display(24, weight: .regular))
+                .monospacedDigit()
+                .contentTransition(.numericText(value: Double(project.tallyCount)))
+                .motion(.snappy, value: project.tallyCount)
+                .accessibilityIdentifier("tally.value")
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(title)
+        .accessibilityValue("\(project.tallyCount)")
+    }
+
+    private func tallyButton(_ symbol: String, _ label: String, id: String, step: Int) -> some View {
+        Button { tally(step) } label: {
+            Image(systemName: symbol)
+                .font(.body.weight(.semibold))
+                .frame(width: 44, height: 44)
+                .background(.primary.opacity(0.07), in: Circle())
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(label)
+        .accessibilityIdentifier(id)
+        .disabled(step < 0 && project.tallyCount == 0)
     }
 
     /// The needle and the fabric hanging from it. Tapping it knits a row.
@@ -318,7 +399,7 @@ struct ProjectView: View {
             if let plan {
                 Button("Materials", systemImage: "list.bullet") { showingMaterials = true }
                 if let spot = plan.position(at: project.rows), plan.steps[spot.step].rows > 1 {
-                    Button("Go to Row", systemImage: "number") {
+                    Button("Go to \(plan.unit(at: project.rows))", systemImage: "number") {
                         rowText = ""
                         settingRow = true
                     }
@@ -347,6 +428,28 @@ struct ProjectView: View {
                     repeatText = project.repeatLength > 0 ? String(project.repeatLength) : ""
                     settingRepeat = true
                 }
+            }
+            if project.tallyOn {
+                Menu("Counter", systemImage: "plusminus.circle") {
+                    Button("Rename", systemImage: "pencil") {
+                        tallyText = project.tallyName
+                        namingTally = true
+                    }
+                    .accessibilityIdentifier("tally.rename")
+                    Button("Reset to 0", systemImage: "arrow.counterclockwise") { project.resetTally() }
+                        .disabled(project.tallyCount == 0)
+                        .accessibilityIdentifier("tally.reset")
+                    Button("Remove", systemImage: "trash", role: .destructive) {
+                        if project.tallyCount > 0 { confirmingTallyRemove = true } else { project.removeTally() }
+                    }
+                    .accessibilityIdentifier("tally.remove")
+                }
+            } else {
+                Button("Add Counter", systemImage: "plusminus.circle") {
+                    tallyText = ""
+                    namingTally = true
+                }
+                .accessibilityIdentifier("tally.add")
             }
             // A library pattern at its last row is finished; stepping back a row is how it reopens.
             if plan.map({ project.rows < $0.totalTaps }) ?? true {
@@ -413,6 +516,7 @@ struct ProjectView: View {
 struct ProjectDetailsView: View {
     @Bindable var project: Project
     @Environment(\.dismiss) private var dismiss
+    @Query(sort: \Yarn.name) private var stash: [Yarn]
 
     var body: some View {
         NavigationStack {
@@ -435,7 +539,17 @@ struct ProjectDetailsView: View {
                     }
                 }
                 Section {
-                    LabeledContent("Yarn") { TextField("", text: $project.yarn).multilineTextAlignment(.trailing) }
+                    LabeledContent("Yarn") {
+                        HStack(spacing: 4) {
+                            if let linked = project.stashYarn {
+                                Text(linked.label).multilineTextAlignment(.trailing).accessibilityIdentifier("project.yarnName")
+                            } else {
+                                TextField("", text: $project.yarn).multilineTextAlignment(.trailing)
+                                    .accessibilityIdentifier("project.yarnField")
+                            }
+                            if !stash.isEmpty { yarnMenu }
+                        }
+                    }
                     LabeledContent("Needles") { TextField("", text: $project.needles).multilineTextAlignment(.trailing) }
                 }
                 Section {
@@ -449,6 +563,29 @@ struct ProjectDetailsView: View {
                 ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
             }
         }
+    }
+
+    /// Picks the yarn from the stash. The typed name is kept underneath, for the day the link is taken off.
+    private var yarnMenu: some View {
+        Menu {
+            ForEach(stash) { yarn in
+                Button { link(yarn) } label: {
+                    if project.stashYarn === yarn { Label(yarn.label, systemImage: "checkmark") } else { Text(yarn.label) }
+                }
+            }
+            if project.stashYarn != nil {
+                Button("Not from Stash", systemImage: "xmark") { link(nil) }
+            }
+        } label: {
+            Image(systemName: "tray.full").frame(minWidth: 44, minHeight: 44)
+        }
+        .accessibilityLabel("Choose yarn from stash")
+        .accessibilityIdentifier("project.yarnPicker")
+    }
+
+    private func link(_ yarn: Yarn?) {
+        project.stashYarn = yarn
+        project.persist()
     }
 }
 
