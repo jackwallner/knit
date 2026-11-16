@@ -194,7 +194,7 @@ extension Project {
     }
 
     /// What the counter is called: its name, or "Counter" when left blank.
-    var tallyTitle: String { tallyName.isEmpty ? "Counter" : tallyName }
+    var tallyTitle: String { tallyName.isEmpty ? String(localized: "Counter", comment: "Name of the second counter when the knitter left it blank") : tallyName }
 
     private static func tidy(_ name: String) -> String {
         String(name.trimmingCharacters(in: .whitespacesAndNewlines).prefix(tallyNameLimit))
@@ -232,7 +232,7 @@ final class Yarn {
     }
 
     var detail: String {
-        [brand, colorway, weight.label]
+        [brand, colorway, weight.title]
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty }
             .joined(separator: " · ")
@@ -282,6 +282,9 @@ enum YarnWeight: String, CaseIterable, Identifiable {
         case .superBulky: "Super Bulky"
         }
     }
+
+    /// The label in the knitter's language. `label` stays English: the engines write it into materials lines.
+    var title: String { Loc.text(label) }
 }
 
 /// A needle or hook in the stash.
@@ -308,7 +311,7 @@ final class Needle {
     var size: NeedleSize { NeedleSize.nearest(to: millimeters, hook: kind == .hook) }
 
     var detail: String {
-        lengthInches > 0 ? "\(kind.label) · \(Sizing.cable(lengthInches))" : kind.label
+        lengthInches > 0 ? "\(kind.title) · \(Sizing.cable(lengthInches))" : kind.title
     }
 }
 
@@ -325,6 +328,8 @@ enum NeedleKind: String, CaseIterable, Identifiable {
         case .hook: "Crochet Hook"
         }
     }
+
+    var title: String { Loc.text(label) }
 }
 
 /// A standard size: metric diameter plus the US name knitters and crocheters use for it.

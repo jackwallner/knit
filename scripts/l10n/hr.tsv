@@ -1,0 +1,259 @@
+1	Projekti
+2	Uzorci
+3	Zaliha
+4	Gotovo
+5	Novi projekt
+6	Više
+7	Ocijeni Ravel
+8	Pošalji povratnu informaciju
+9	Pomoć
+10	Izbrisati %@?
+11	Izbriši projekt
+12	Naziv
+13	Odustani
+14	Nabaci petlje
+15	Pokreni brojač redova
+16	Pregledaj uzorke
+17	Red %lld
+18	Bez naziva
+19	Ravel nije mogao otvoriti vaše projekte
+20	I dalje su na ovom uređaju (%@). Ponovno ga pokrenite i otvorite Ravel.
+21	Zatraži pomoć
+22	Pređa
+23	Igle i heklice
+24	Dodaj u zalihu
+25	Igla ili heklica
+26	Dodaj predu
+27	Dodaj igle
+28	one=%lld klupko|few=%lld klupka|other=%lld klupka
+29	Metara po klupku
+30	Jardi po klupku
+31	Marka
+32	Boja
+33	Vlakno
+34	Serija bojenja
+35	Debljina
+36	Klupka
+37	Gotovo
+38	Vrsta
+39	Veličina
+40	Duljina
+41	Bilo koja
+42	Heklica
+43	Igla
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Kružna
+53	Ravna
+54	Čarapna
+55	Heklica
+56	Vratiti brojač na 0?
+57	Vrati brojač na 0
+58	Ukloniti uzorak iz ovog projekta?
+59	Ukloni uzorak
+60	Redova u jednom rapportu
+61	Redovi
+62	Postavi
+63	Rapport počinje sljedećim redom.
+64	Red
+65	Krug
+66	Red u ovom dijelu
+67	Krug u ovom dijelu
+68	Naziv brojača
+69	Preimenuj
+70	Dodaj
+71	Ukloniti brojač?
+72	Ukloni brojač
+73	Taj uzorak nije bilo moguće otvoriti
+74	%lld od %lld
+75	one=%lld petlja|few=%lld petlje|other=%lld petlji
+76	Oduzmi jedan od %@
+77	Dodaj jedan na %@
+78	Dodaj red
+79	Red %1$lld od %2$lld u rapportu
+80	Natrag za jedan red
+81	Pojedinosti
+82	Materijal
+83	Idi na red
+84	Idi na krug
+85	Idi na dio
+86	Dodaj uzorak
+87	Zamijeni uzorak
+88	Dodaj fotografije
+89	Postavi red
+90	Rapport
+91	Brojač
+92	Vrati na 0
+93	Ukloni
+94	Dodaj brojač
+95	Označi kao aktivno
+96	Označi kao gotovo
+97	Opcije projekta
+98	Igle
+99	Bilješke
+100	Nije iz zalihe
+101	Odaberi predu iz zalihe
+102	Kratice
+103	Broć
+104	Neven
+105	Mahovina
+106	Smreka
+107	Indigo
+108	Šljiva
+109	Zob
+110	Ugljen
+111	U trendu
+112	Besplatno
+113	Kape
+114	Šalovi i ogrlice
+115	Deke i dom
+116	Dodaci
+117	Puloveri
+118	Početnik
+119	Lako
+120	Srednje
+121	Uzorak
+122	Petlji na %@
+123	Redova na %@
+124	Otključaj uzorke
+125	Shema ne odgovara ovom uzorku
+126	Glava
+127	Širina
+128	Opseg
+129	Visina
+130	Strana
+131	Ruka
+132	List
+133	Raspon ruku
+134	Prsa
+135	Duljina tijela
+136	Duljina rukava
+137	Beba
+138	Malo dijete
+139	Dijete
+140	Mala
+141	Srednja
+142	Velika
+143	Klasični
+144	Dugi
+145	Uski
+146	Beskonačni
+147	Kolica
+148	Krevetić
+149	Pokrivač
+150	Odrasli
+151	Širok
+152	Mali šal
+153	Štola
+154	Rebrasta kapa
+155	Opuštena kapa
+156	Kapa sa zavrnutim rubom
+157	Šal u desnim petljama
+158	Rebrasti šal
+159	Šal u riža uzorku
+160	Rebrasta ogrlica
+161	Ogrlica u riža uzorku
+162	Deka s rubom
+163	Deka u desnim petljama
+164	Dijagonalna krpa
+165	Grijač za uši
+166	Grijači za zapešća
+167	Grijači za noge
+168	Trokutasti šal
+169	Pulover s raglan rukavima
+170	Debela ogrlica
+171	Marama za vrat
+172	Traka za glavu s pleterom
+173	Kapa za lice
+174	Novo
+175	Vrijeme darova
+176	Duboka zima
+177	Proljetni slojevi
+178	Ljetni pamuk
+179	Pletenje za put
+180	Vrijeme za pulover
+181	Prvi hladni dani
+182	Rub
+183	Tijelo
+184	Vrh
+185	Završetak
+186	Šal
+187	Ogrlica
+188	Donji rub
+189	Gornji rub
+190	Deka
+191	Povećanja
+192	Smanjenja
+193	Traka
+194	Šal
+195	Sredina
+196	Vrat
+197	Otvor za lice
+198	Gornji dio
+199	Rub oko lica
+200	Rub izreza
+201	Stražnji dio vrata
+202	Jarmo
+203	Podjela
+204	Prvi rukav
+205	Drugi rukav
+206	Manšeta
+207	Prvo uho
+208	Drugo uho
+209	Grijač za zapešće %lld
+210	Grijač za nogu %lld
+211	Otvor za palac
+212	Gornji dio ruke
+213	Noga
+214	Gležanj
+215	Zatvori
+216	Ravel uzorci
+217	Svaki dizajn u knjižnici, napisan prema vašim mjerama i pređi
+218	Planove nije bilo moguće učitati
+219	Pokušaj ponovno
+220	Vrati kupnju
+221	Uvjeti
+222	Privatnost
+223	Godišnje
+224	Mjesečno
+225	Doživotno
+226	%@ godišnje
+227	%@ mjesečno
+228	%@ jednokratno
+229	Kupi doživotno
+230	one=Isprobaj besplatno %lld dan|few=Isprobaj besplatno %lld dana|other=Isprobaj besplatno %lld dana
+231	Pretplati se
+232	one=%lld dan besplatno.|few=%lld dana besplatno.|other=%lld dana besplatno.
+233	Zatim %@.
+234	%@.
+235	Obnavlja se dok ne otkažete u Postavkama. Uzorak koji ste započeli ostaje vaš.
+236	Jedno plaćanje od %@. Svaki uzorak je vaš zauvijek.
+237	Vaša kupnja čeka odobrenje
+238	Kupnja je uspjela. Dodirnite Vrati kupnju ako uzorci ostanu zaključani.
+239	Kupnja nije uspjela
+240	Nije pronađena kupnja za ovaj Apple ID
+241	App Store nije dostupan. Pokušajte ponovno kad budete online.
+242	Splesti 2 petlje zajedno
+243	Prebaciti 2 petlje kao za pletenje, jednu po jednu, pa ih splesti zajedno straga
+244	Omotač
+245	Povećanje za 1: podignuti nit između petlji i splesti je straga
+246	Povećanje za 1 ulijevo: podignuti nit sprijeda i splesti je straga
+247	Povećanje za 1 udesno: podignuti nit straga i splesti je sprijeda
+248	Pleter od 6 sprijeda: prebaciti 3 petlje na pomoćnu iglu i ostaviti je sprijeda, splesti 3, zatim splesti 3 petlje s pomoćne igle
+249	Desno. K2 je splesti 2 petlje desno
+250	Lijevo. P2 je splesti 2 petlje lijevo
+251	Raditi petlje nakon * iznova i iznova, koliko red kaže
+252	Prsten na igli koji označava mjesto. Prebacite ga s lijeve igle na desnu kad dođete do njega
+253	Zamijeniti igle u rukama i plesti natrag u drugom smjeru
+254	Splesti prvu nabačenu petlju radnom niti da se zatvori krug, s rubom nabacivanja ravno, a ne uvrnuto oko igle
+255	Uvrnuti omču radne niti i pomaknuti je na desnu iglu. Svaka omča je 1 petlja
+256	Provući iglu kroz rub rada, omotati nit i izvući omču. Svaka omča je 1 petlja
+257	Pri zatvaranju plesti desne petlje desno, a lijeve lijevo
+258	K1, M1L, plesti do 1 petlje prije sljedeće oznake, M1R, k1, prebaciti oznaku. Dodaje 2 petlje
+259	Njemački skraćeni zaokret: s niti sprijeda prebaciti prvu petlju kao za lijevo, zatim povući nit gore preko igle da petlja pokaže dvije nožice. Pri povratku splesti obje nožice zajedno kao jednu petlju

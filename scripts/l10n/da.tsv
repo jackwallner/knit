@@ -1,0 +1,259 @@
+1	Projekter
+2	Opskrifter
+3	Lager
+4	Færdig
+5	Nyt projekt
+6	Mere
+7	Anmeld Ravel
+8	Send feedback
+9	Hjælp
+10	Slet %@?
+11	Slet projekt
+12	Navn
+13	Annuller
+14	Slå op
+15	Start rækketæller
+16	Gennemse opskrifter
+17	Række %lld
+18	Uden titel
+19	Ravel kunne ikke åbne dine projekter
+20	De findes stadig på denne %@. Genstart den, og åbn Ravel igen.
+21	Få hjælp
+22	Garn
+23	Pinde og hæklenåle
+24	Føj til lageret
+25	Pind eller hæklenål
+26	Tilføj garn
+27	Tilføj pinde
+28	one=%lld nøgle|other=%lld nøgler
+29	Meter pr. nøgle
+30	Yards pr. nøgle
+31	Mærke
+32	Farve
+33	Fiber
+34	Farvebad
+35	Garntykkelse
+36	Nøgler
+37	Færdig
+38	Type
+39	Størrelse
+40	Længde
+41	Alle
+42	Hæklenål
+43	Pind
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Rundpind
+53	Ret pind
+54	Strømpepinde
+55	Hæklenål
+56	Nulstil tælleren?
+57	Nulstil tæller
+58	Fjern opskriften fra dette projekt?
+59	Fjern opskrift
+60	Rækker pr. gentagelse
+61	Rækker
+62	Angiv
+63	Gentagelsen starter med din næste række.
+64	Række
+65	Omgang
+66	Række i denne del
+67	Omgang i denne del
+68	Tællerens navn
+69	Omdøb
+70	Tilføj
+71	Fjern tælleren?
+72	Fjern tæller
+73	Opskriften kunne ikke åbnes
+74	%lld af %lld
+75	one=%lld maske|other=%lld masker
+76	Træk én fra %@
+77	Læg én til %@
+78	Tilføj en række
+79	Række %1$lld af %2$lld i gentagelsen
+80	En række tilbage
+81	Detaljer
+82	Materialer
+83	Gå til række
+84	Gå til omgang
+85	Gå til del
+86	Tilføj opskrift
+87	Udskift opskrift
+88	Tilføj fotos
+89	Angiv række
+90	Gentagelse
+91	Tæller
+92	Nulstil
+93	Fjern
+94	Tilføj tæller
+95	Markér som aktiv
+96	Markér som færdig
+97	Projektindstillinger
+98	Pinde
+99	Noter
+100	Ikke fra lageret
+101	Vælg garn fra lageret
+102	Forkortelser
+103	Krap
+104	Morgenfrue
+105	Mos
+106	Gran
+107	Indigo
+108	Blomme
+109	Havre
+110	Kul
+111	Populært
+112	Gratis
+113	Huer
+114	Halstørklæder og halsedisser
+115	Tæpper og hjem
+116	Tilbehør
+117	Trøjer
+118	Begynder
+119	Let
+120	Mellem
+121	Strikkefasthed
+122	Masker over %@
+123	Rækker over %@
+124	Lås opskrifter op
+125	Diagrammet passer ikke til denne strikkefasthed
+126	Hoved
+127	Bredde
+128	Omkreds
+129	Højde
+130	Side
+131	Hånd
+132	Læg
+133	Spændvidde
+134	Bryst
+135	Kropslængde
+136	Ærmelængde
+137	Baby
+138	Småbarn
+139	Barn
+140	Lille
+141	Medium
+142	Stor
+143	Klassisk
+144	Lang
+145	Smal
+146	Uendelig
+147	Barnevogn
+148	Vugge
+149	Plaid
+150	Voksen
+151	Bred
+152	Lille sjal
+153	Stola
+154	Ribstrikket hue
+155	Slouchy hue
+156	Hue med rullekant
+157	Retstrikket halstørklæde
+158	Ribstrikket halstørklæde
+159	Perlestrikket halstørklæde
+160	Ribstrikket halsedisse
+161	Perlestrikket halsedisse
+162	Tæppe med kant
+163	Retstrikket tæppe
+164	Diagonal karklud
+165	Ørevarmer
+166	Håndledsvarmere
+167	Benvarmere
+168	Trekantet sjal
+169	Raglantrøje
+170	Tyk halsedisse
+171	Halstørklæde i kvadrat
+172	Pandebånd med fletninger
+173	Hjelmhue
+174	Nyt
+175	Gavetid
+176	Midt om vinteren
+177	Forårslag
+178	Sommerbomuld
+179	Rejsestrik
+180	Trøjevejr
+181	De første kolde dage
+182	Kant
+183	Krop
+184	Top
+185	Afslutning
+186	Halstørklæde
+187	Halsedisse
+188	Nederste kant
+189	Øverste kant
+190	Tæppe
+191	Tilvækst
+192	Indtagninger
+193	Bånd
+194	Sjal
+195	Midte
+196	Hals
+197	Ansigtsåbning
+198	Overdel
+199	Ansigtskant
+200	Halskant
+201	Nakke
+202	Bærestykke
+203	Deling
+204	Første ærme
+205	Andet ærme
+206	Manchet
+207	Første øre
+208	Andet øre
+209	Håndledsvarmer %lld
+210	Benvarmer %lld
+211	Tommelåbning
+212	Øvre hånd
+213	Ben
+214	Ankel
+215	Luk
+216	Ravel-opskrifter
+217	Alle designs i biblioteket, skrevet efter dine mål og dit garn
+218	Abonnementerne kunne ikke indlæses
+219	Prøv igen
+220	Gendan
+221	Vilkår
+222	Fortrolighed
+223	Årligt
+224	Månedligt
+225	Livstid
+226	%@ om året
+227	%@ om måneden
+228	%@ én gang
+229	Køb livstid
+230	one=Prøv gratis i %lld dag|other=Prøv gratis i %lld dage
+231	Abonnér
+232	one=%lld dag gratis.|other=%lld dage gratis.
+233	Derefter %@.
+234	%@.
+235	Fornyes, indtil du opsiger i Indstillinger. En opskrift, du er gået i gang med, er din at beholde.
+236	Én enkelt betaling på %@. Alle opskrifter er dine for altid.
+237	Dit køb afventer godkendelse
+238	Dit køb gik igennem. Tryk på Gendan, hvis opskrifterne forbliver låst.
+239	Købet gik ikke igennem
+240	Der blev ikke fundet noget køb på denne Apple-konto
+241	App Store kunne ikke nås. Prøv igen, når du er online.
+242	Strik 2 masker sammen
+243	Løft 2 masker som for at strikke dem, én ad gangen, og strik dem sammen bagfra
+244	Slå om
+245	Tag 1 maske op: løft tråden mellem maskerne og strik den bagfra
+246	Tag 1 maske op mod venstre: løft tråden forfra og strik den bagfra
+247	Tag 1 maske op mod højre: løft tråden bagfra og strik den forfra
+248	Fletning på 6 foran: løft 3 masker over på en flettepind og lad den ligge foran, strik 3, og strik derefter de 3 fra flettepinden
+249	Ret. K2 er at strikke 2 masker ret
+250	Vrang. P2 er at strikke 2 masker vrang
+251	Strik maskerne efter * igen og igen, så langt rækken siger
+252	En ring på pinden, der markerer et sted. Flyt den fra venstre til højre pind, når du når til den
+253	Skift pindene mellem hænderne og strik tilbage i den modsatte retning
+254	Strik den første opslåede maske med arbejdstråden for at lukke ringen, med opslagskanten flad og ikke snoet rundt om pinden
+255	Sno en løkke af arbejdstråden, og skub den over på højre pind. Hver løkke er 1 maske
+256	Stik pinden gennem kanten af arbejdet, læg tråden om, og træk en løkke igennem. Hver løkke er 1 maske
+257	Strik de rette masker ret og de vrange masker vrang, når du lukker af
+258	K1, M1L, strik til 1 maske før næste markør, M1R, k1, løft markøren. Det tager 2 masker til
+259	En tysk forkortet omgangsvending: med tråden foran, løft første maske som for at strikke den vrang, træk derefter tråden op over pinden, så masken viser to ben. Strik begge ben sammen som én maske, når du kommer tilbage til den

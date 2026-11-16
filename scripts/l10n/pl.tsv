@@ -1,0 +1,259 @@
+1	Projekty
+2	Wzory
+3	Zapasy
+4	Gotowe
+5	Nowy projekt
+6	Więcej
+7	Oceń Ravel
+8	Wyślij opinię
+9	Pomoc
+10	Usunąć %@?
+11	Usuń projekt
+12	Nazwa
+13	Anuluj
+14	Nabierz oczka
+15	Włącz licznik rzędów
+16	Przeglądaj wzory
+17	Rząd %lld
+18	Bez nazwy
+19	Ravel nie mógł otworzyć Twoich projektów
+20	Nadal są na tym urządzeniu (%@). Uruchom je ponownie i otwórz Ravel jeszcze raz.
+21	Uzyskaj pomoc
+22	Włóczka
+23	Druty i szydełka
+24	Dodaj do zapasów
+25	Drut lub szydełko
+26	Dodaj włóczkę
+27	Dodaj druty
+28	one=%lld motek|few=%lld motki|many=%lld motków|other=%lld motka
+29	Metry na motek
+30	Jardy na motek
+31	Marka
+32	Kolor
+33	Włókno
+34	Partia farbowania
+35	Grubość
+36	Motki
+37	Gotowe
+38	Rodzaj
+39	Rozmiar
+40	Długość
+41	Dowolna
+42	Szydełko
+43	Drut
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Żyłkowy
+53	Prosty
+54	Skarpetkowy
+55	Szydełko
+56	Wyzerować licznik?
+57	Zeruj licznik
+58	Usunąć wzór z tego projektu?
+59	Usuń wzór
+60	Rzędów w jednym raporcie
+61	Rzędy
+62	Ustaw
+63	Raport zaczyna się od następnego rzędu.
+64	Rząd
+65	Okrążenie
+66	Rząd w tej części
+67	Okrążenie w tej części
+68	Nazwa licznika
+69	Zmień nazwę
+70	Dodaj
+71	Usunąć licznik?
+72	Usuń licznik
+73	Nie udało się otworzyć tego wzoru
+74	%lld z %lld
+75	one=%lld oczko|few=%lld oczka|many=%lld oczek|other=%lld oczka
+76	Odejmij jeden od %@
+77	Dodaj jeden do %@
+78	Dodaj rząd
+79	Rząd %1$lld z %2$lld w raporcie
+80	Cofnij o rząd
+81	Szczegóły
+82	Materiały
+83	Idź do rzędu
+84	Idź do okrążenia
+85	Idź do części
+86	Dodaj wzór
+87	Zamień wzór
+88	Dodaj zdjęcia
+89	Ustaw rząd
+90	Raport
+91	Licznik
+92	Zeruj
+93	Usuń
+94	Dodaj licznik
+95	Oznacz jako w toku
+96	Oznacz jako gotowe
+97	Opcje projektu
+98	Druty
+99	Notatki
+100	Nie z zapasów
+101	Wybierz włóczkę z zapasów
+102	Skróty
+103	Marzanna
+104	Nagietek
+105	Mech
+106	Świerk
+107	Indygo
+108	Śliwka
+109	Owies
+110	Grafit
+111	Na topie
+112	Za darmo
+113	Czapki
+114	Szaliki i kominy
+115	Koce i dom
+116	Akcesoria
+117	Swetry
+118	Początkujący
+119	Łatwy
+120	Średni
+121	Próbka
+122	Oczka na %@
+123	Rzędy na %@
+124	Odblokuj wzory
+125	Schemat nie pasuje do tej próbki
+126	Głowa
+127	Szerokość
+128	Obwód
+129	Wysokość
+130	Bok
+131	Dłoń
+132	Łydka
+133	Rozpiętość ramion
+134	Klatka piersiowa
+135	Długość korpusu
+136	Długość rękawa
+137	Niemowlę
+138	Maluch
+139	Dziecko
+140	Mały
+141	Średni
+142	Duży
+143	Klasyczny
+144	Długi
+145	Przylegający
+146	Nieskończony
+147	Wózek
+148	Łóżeczko
+149	Pled
+150	Dorosły
+151	Szeroki
+152	Mała chusta
+153	Stuła
+154	Czapka ze ściągaczem
+155	Czapka slouchy
+156	Czapka z zawiniętym brzegiem
+157	Szalik ściegiem francuskim
+158	Szalik ze ściągaczem
+159	Szalik ściegiem ryżowym
+160	Komin ze ściągaczem
+161	Komin ściegiem ryżowym
+162	Koc z obwódką
+163	Koc ściegiem francuskim
+164	Ściereczka po przekątnej
+165	Opaska na uszy
+166	Mitenki
+167	Getry
+168	Chusta trójkątna
+169	Sweter z reglanem
+170	Gruby komin
+171	Chustka na szyję
+172	Opaska z warkoczami
+173	Kominiarka
+174	Nowość
+175	Czas prezentów
+176	Środek zimy
+177	Wiosenne warstwy
+178	Letnia bawełna
+179	Dziergane w podróży
+180	Pogoda na sweter
+181	Pierwsze chłody
+182	Brzeg
+183	Korpus
+184	Czubek
+185	Wykończenie
+186	Szalik
+187	Komin
+188	Dolna obwódka
+189	Górna obwódka
+190	Koc
+191	Dodawanie oczek
+192	Zmniejszanie oczek
+193	Opaska
+194	Chusta
+195	Środek
+196	Szyja
+197	Otwór na twarz
+198	Góra
+199	Brzeg przy twarzy
+200	Wykończenie szyi
+201	Tył szyi
+202	Karczek
+203	Podział
+204	Pierwszy rękaw
+205	Drugi rękaw
+206	Mankiet
+207	Pierwsze ucho
+208	Drugie ucho
+209	Mitenka %lld
+210	Getry %lld
+211	Otwór na kciuk
+212	Górna część dłoni
+213	Noga
+214	Kostka
+215	Zamknij
+216	Wzory Ravel
+217	Każdy wzór z biblioteki, napisany pod Twoje wymiary i włóczkę
+218	Nie udało się wczytać planów
+219	Spróbuj ponownie
+220	Przywróć
+221	Warunki
+222	Prywatność
+223	Rocznie
+224	Miesięcznie
+225	Na zawsze
+226	%@ rocznie
+227	%@ miesięcznie
+228	%@ jednorazowo
+229	Kup na zawsze
+230	one=Wypróbuj za darmo przez %lld dzień|few=Wypróbuj za darmo przez %lld dni|many=Wypróbuj za darmo przez %lld dni|other=Wypróbuj za darmo przez %lld dnia
+231	Subskrybuj
+232	one=%lld dzień za darmo.|few=%lld dni za darmo.|many=%lld dni za darmo.|other=%lld dnia za darmo.
+233	Potem %@.
+234	%@.
+235	Odnawia się, dopóki nie anulujesz w Ustawieniach. Rozpoczęty wzór zostaje Twój.
+236	Jednorazowa płatność %@. Każdy wzór jest Twój na zawsze.
+237	Twój zakup czeka na zatwierdzenie
+238	Zakup się powiódł. Stuknij Przywróć, jeśli wzory nadal są zablokowane.
+239	Zakup się nie powiódł
+240	Nie znaleziono zakupu na tym koncie Apple
+241	Nie można połączyć się z App Store. Spróbuj ponownie, gdy będziesz online.
+242	Przerobić 2 oczka razem
+243	Zdjąć 2 oczka jak do przerabiania, po jednym, a potem przerobić je razem od tyłu
+244	Narzut
+245	Dodać 1 oczko: unieść nitkę między oczkami i przerobić ją od tyłu
+246	Dodać 1 oczko w lewo: unieść nitkę od przodu i przerobić ją od tyłu
+247	Dodać 1 oczko w prawo: unieść nitkę od tyłu i przerobić ją od przodu
+248	Warkocz 6 z przodu: zdjąć 3 oczka na drut pomocniczy i zostawić go z przodu, przerobić 3, potem przerobić 3 oczka z drutu pomocniczego
+249	Prawe oczko. K2 to 2 oczka prawe
+250	Lewe oczko. P2 to 2 oczka lewe
+251	Przerabiać oczka po * wielokrotnie, tak daleko, jak mówi rząd
+252	Pierścień na drucie, który oznacza miejsce. Przełóż go z lewego drutu na prawy, gdy do niego dojdziesz
+253	Zamienić druty w rękach i przerabiać w drugą stronę
+254	Przerobić pierwsze nabrane oczko nitką roboczą, aby zamknąć koło, z brzegiem nabierania płasko, nieskręconym wokół drutu
+255	Skręcić pętlę z nitki roboczej i nasunąć ją na prawy drut. Każda pętla to 1 oczko
+256	Wsunąć drut w brzeg robótki, owinąć nitkę i przeciągnąć pętlę. Każda pętla to 1 oczko
+257	Przy zamykaniu przerabiać oczka prawe prawymi, a lewe lewymi
+258	K1, M1L, przerabiać do 1 oczka przed następnym markerem, M1R, k1, przełożyć marker. Dodaje 2 oczka
+259	Niemiecki skrócony rząd: z nitką z przodu zdjąć pierwsze oczko jak do lewego, potem przeciągnąć nitkę w górę nad drutem, tak by oczko miało dwie nóżki. Przy powrocie przerobić obie nóżki razem jako jedno oczko

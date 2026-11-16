@@ -73,6 +73,14 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         }
     }
 
+    /// The name as the library shows it: translated for a built-in design, as published for a topical one.
+    var title: String {
+        switch self {
+        case .builtIn(let design): design.title
+        case .topical(let topical): topical.title
+        }
+    }
+
     var base: Design {
         switch self {
         case .builtIn(let design): design

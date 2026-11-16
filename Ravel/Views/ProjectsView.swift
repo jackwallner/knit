@@ -96,6 +96,7 @@ struct ProjectsView: View {
                 .frame(width: 240, height: 40)
             Button("Start Row Counter") { naming = true }
                 .font(.headline)
+                .multilineTextAlignment(.center)
                 .foregroundStyle(Theme.onAccent)
                 .padding(.horizontal, 28)
                 .frame(minHeight: 50)
@@ -103,6 +104,7 @@ struct ProjectsView: View {
                 .accessibilityIdentifier("projects.castOn")
             Button("Browse Patterns", action: browse)
                 .font(.headline)
+                .multilineTextAlignment(.center)
                 .frame(minHeight: 44)
                 .padding(.top, -14)
                 .accessibilityIdentifier("projects.browse")
@@ -190,7 +192,7 @@ struct ProjectsView: View {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         // Each new project takes the next yarn so the list reads at a glance.
         let color = YarnColor.allCases[projects.count % YarnColor.allCases.count]
-        let project = Project(name: trimmed.isEmpty ? "Untitled" : trimmed, color: color)
+        let project = Project(name: trimmed.isEmpty ? String(localized: "Untitled", comment: "Name of a project the knitter did not name") : trimmed, color: color)
         context.insert(project)
         try? context.save()
         name = ""

@@ -1,0 +1,259 @@
+1	Projektek
+2	Minták
+3	Készlet
+4	Kész
+5	Új projekt
+6	Továbbiak
+7	Ravel értékelése
+8	Visszajelzés küldése
+9	Súgó
+10	Törlöd ezt: %@?
+11	Projekt törlése
+12	Név
+13	Mégse
+14	Szemfelvétel
+15	Sorszámláló indítása
+16	Minták böngészése
+17	%lld. sor
+18	Névtelen
+19	A Ravel nem tudta megnyitni a projektjeidet
+20	Még mindig ezen az eszközön vannak (%@). Indítsd újra, majd nyisd meg újra a Ravelt.
+21	Segítség kérése
+22	Fonal
+23	Tűk és horgolótűk
+24	Hozzáadás a készlethez
+25	Kötőtű vagy horgolótű
+26	Fonal hozzáadása
+27	Tűk hozzáadása
+28	one=%lld gombolyag|other=%lld gombolyag
+29	Méter gombolyagonként
+30	Yard gombolyagonként
+31	Márka
+32	Szín
+33	Szál
+34	Festési tétel
+35	Vastagság
+36	Gombolyagok
+37	Kész
+38	Típus
+39	Méret
+40	Hossz
+41	Bármelyik
+42	Horgolótű
+43	Kötőtű
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Körkötő
+53	Egyenes
+54	Zoknikötő
+55	Horgolótű
+56	Nullázod a számlálót?
+57	Számláló nullázása
+58	Eltávolítod a mintát ebből a projektből?
+59	Minta eltávolítása
+60	Sor ismétlésenként
+61	Sorok
+62	Beállítás
+63	Az ismétlés a következő sorral kezdődik.
+64	Sor
+65	Kör
+66	Sor ebben a részben
+67	Kör ebben a részben
+68	Számláló neve
+69	Átnevezés
+70	Hozzáadás
+71	Eltávolítod a számlálót?
+72	Számláló eltávolítása
+73	Ezt a mintát nem sikerült megnyitni
+74	%lld / %lld
+75	one=%lld szem|other=%lld szem
+76	Egy levonása: %@
+77	Egy hozzáadása: %@
+78	Sor hozzáadása
+79	%1$lld. sor az ismétlés %2$lld sorából
+80	Vissza egy sort
+81	Részletek
+82	Anyagok
+83	Ugrás sorra
+84	Ugrás körre
+85	Ugrás részre
+86	Minta hozzáadása
+87	Minta cseréje
+88	Fotók hozzáadása
+89	Sor beállítása
+90	Ismétlés
+91	Számláló
+92	Nullázás
+93	Eltávolítás
+94	Számláló hozzáadása
+95	Megjelölés folyamatban lévőként
+96	Megjelölés késznek
+97	Projektbeállítások
+98	Tűk
+99	Jegyzetek
+100	Nem a készletből
+101	Fonal választása a készletből
+102	Rövidítések
+103	Buzérvörös
+104	Körömvirág
+105	Moha
+106	Lucfenyő
+107	Indigó
+108	Szilva
+109	Zab
+110	Szén
+111	Népszerű
+112	Ingyenes
+113	Sapkák
+114	Sálak és nyakmelegítők
+115	Takarók és otthon
+116	Kiegészítők
+117	Pulóverek
+118	Kezdő
+119	Könnyű
+120	Közepes
+121	Kötésminta
+122	Szem %@ szélességben
+123	Sor %@ magasságban
+124	Minták feloldása
+125	A diagram nem fér el ezzel a kötésmintával
+126	Fej
+127	Szélesség
+128	Kerület
+129	Magasság
+130	Oldal
+131	Kéz
+132	Lábszár
+133	Karfesztáv
+134	Mellbőség
+135	Törzshossz
+136	Ujjhossz
+137	Baba
+138	Totyogó
+139	Gyerek
+140	Kicsi
+141	Közepes
+142	Nagy
+143	Klasszikus
+144	Hosszú
+145	Szűk
+146	Végtelen
+147	Babakocsi
+148	Kiságy
+149	Pléd
+150	Felnőtt
+151	Széles
+152	Kis kendő
+153	Stóla
+154	Bordás sapka
+155	Bő sapka
+156	Felhajtott szélű sapka
+157	Sima kötésű sál
+158	Bordás sál
+159	Rizskötéses sál
+160	Bordás nyakmelegítő
+161	Rizskötéses nyakmelegítő
+162	Szegélyes takaró
+163	Sima kötésű takaró
+164	Átlós mosogatórongy
+165	Fülmelegítő
+166	Csuklómelegítők
+167	Lábszármelegítők
+168	Háromszög kendő
+169	Raglán pulóver
+170	Vastag nyakmelegítő
+171	Nyakkendő
+172	Copfos fejpánt
+173	Símaszk
+174	Új
+175	Ajándékozás ideje
+176	Tél közepe
+177	Tavaszi rétegek
+178	Nyári pamut
+179	Kötés útra
+180	Pulóveridő
+181	Az első hideg napok
+182	Szegély
+183	Törzs
+184	Fejtető
+185	Befejezés
+186	Sál
+187	Nyakmelegítő
+188	Alsó szegély
+189	Felső szegély
+190	Takaró
+191	Szaporítás
+192	Fogyasztás
+193	Pánt
+194	Kendő
+195	Közép
+196	Nyak
+197	Arcnyílás
+198	Felső rész
+199	Arcszegély
+200	Nyakkivágás széle
+201	Hátsó nyak
+202	Karöltő
+203	Elosztás
+204	Első ujj
+205	Második ujj
+206	Mandzsetta
+207	Első fül
+208	Második fül
+209	Csuklómelegítő %lld
+210	Lábszármelegítő %lld
+211	Hüvelykujj-nyílás
+212	Kézfej
+213	Láb
+214	Boka
+215	Bezárás
+216	Ravel minták
+217	A könyvtár minden mintája, a te méreteidre és a te fonalodra írva
+218	A csomagokat nem sikerült betölteni
+219	Újra
+220	Visszaállítás
+221	Feltételek
+222	Adatvédelem
+223	Éves
+224	Havi
+225	Örökös
+226	%@ évente
+227	%@ havonta
+228	%@ egyszeri
+229	Örökös vásárlás
+230	one=Próbáld ki ingyen %lld napig|other=Próbáld ki ingyen %lld napig
+231	Előfizetés
+232	one=%lld nap ingyen.|other=%lld nap ingyen.
+233	Utána %@.
+234	%@.
+235	Megújul, amíg a Beállításokban le nem mondod. A megkezdett minta a tiéd marad.
+236	Egyszeri fizetés: %@. Minden minta örökre a tiéd.
+237	A vásárlásod jóváhagyásra vár
+238	A vásárlás sikerült. Koppints a Visszaállításra, ha a minták zárva maradnak.
+239	A vásárlás nem sikerült
+240	Ezen az Apple-fiókon nem található vásárlás
+241	Az App Store nem érhető el. Próbáld újra, ha online vagy.
+242	2 szem együtt kötése
+243	2 szem áthúzása egyenként, mintha kötnéd, majd együtt kötésük hátulról
+244	Fonalfelvetés
+245	1 szem szaporítása: a szemek közti szál felemelése és hátulról kötése
+246	1 szem szaporítása balra: a szál felemelése elölről és hátulról kötése
+247	1 szem szaporítása jobbra: a szál felemelése hátulról és elölről kötése
+248	Elöl vezetett 6 szemes csavarás: 3 szem áthúzása egy segédtűre és elöl tartása, 3 szem kötése, majd a segédtű 3 szemének kötése
+249	Sima. K2 jelentése: 2 szem simán
+250	Fordított. P2 jelentése: 2 szem fordítva
+251	A *-gal jelölt rész utáni szemek ismétlése, ameddig a sor írja
+252	A tűn lévő gyűrű jelöl egy helyet. Ha odaérsz, húzd át a bal tűről a jobbra
+253	A tűk cseréje a kezeid között és kötés visszafelé
+254	Az első felvett szem kötése a munkafonallal a kör bezárásához, a felvételi él laposan, nem csavarodva a tű körül
+255	Egy hurok megcsavarása a munkafonalból és a jobb tűre csúsztatása. Minden hurok 1 szem
+256	A tű átszúrása a munka szélén, a fonal körbetekerése és egy hurok áthúzása. Minden hurok 1 szem
+257	Lezáráskor a sima szemek simán, a fordított szemek fordítva kötése
+258	K1, M1L, kötés a következő jelölő előtti 1 szemig, M1R, k1, a jelölő áthúzása. 2 szemet szaporít
+259	Német rövidített sor fordulat: a fonallal elöl az első szem áthúzása, mintha fordítva kötnéd, majd a fonal felhúzása a tű fölött, hogy a szem két lábat mutasson. Visszatérve mindkét lábat egy szemként köss együtt

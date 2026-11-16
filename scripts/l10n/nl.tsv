@@ -1,0 +1,259 @@
+1	Projecten
+2	Patronen
+3	Voorraad
+4	Klaar
+5	Nieuw project
+6	Meer
+7	Beoordeel Ravel
+8	Feedback sturen
+9	Help
+10	%@ verwijderen?
+11	Verwijder project
+12	Naam
+13	Annuleer
+14	Opzetten
+15	Start rijenteller
+16	Bekijk patronen
+17	Rij %lld
+18	Zonder titel
+19	Ravel kon je projecten niet openen
+20	Ze staan nog op deze %@. Start hem opnieuw op en open Ravel dan opnieuw.
+21	Hulp vragen
+22	Garen
+23	Naalden en haken
+24	Toevoegen aan voorraad
+25	Naald of haak
+26	Garen toevoegen
+27	Naalden toevoegen
+28	one=%lld streng|other=%lld strengen
+29	Meter per streng
+30	Yards per streng
+31	Merk
+32	Kleur
+33	Vezel
+34	Verfpartij
+35	Dikte
+36	Strengen
+37	Klaar
+38	Type
+39	Maat
+40	Lengte
+41	Elke
+42	Haaknaald
+43	Naald
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Rondbreinaald
+53	Rechte naald
+54	Sokkennaalden
+55	Haaknaald
+56	Teller terugzetten op 0?
+57	Teller terugzetten
+58	Patroon uit dit project verwijderen?
+59	Verwijder patroon
+60	Rijen per herhaling
+61	Rijen
+62	Stel in
+63	De herhaling begint bij je volgende rij.
+64	Rij
+65	Ronde
+66	Rij in dit onderdeel
+67	Ronde in dit onderdeel
+68	Naam van teller
+69	Hernoem
+70	Voeg toe
+71	Teller verwijderen?
+72	Verwijder teller
+73	Dat patroon kon niet worden geopend
+74	%lld van %lld
+75	one=%lld steek|other=%lld steken
+76	Eén minder bij %@
+77	Eén erbij bij %@
+78	Rij toevoegen
+79	Rij %1$lld van %2$lld in de herhaling
+80	Eén rij terug
+81	Details
+82	Materialen
+83	Ga naar rij
+84	Ga naar ronde
+85	Ga naar onderdeel
+86	Patroon toevoegen
+87	Patroon vervangen
+88	Foto’s toevoegen
+89	Rij instellen
+90	Herhaling
+91	Teller
+92	Terug naar 0
+93	Verwijder
+94	Teller toevoegen
+95	Markeer als actief
+96	Markeer als klaar
+97	Projectopties
+98	Naalden
+99	Notities
+100	Niet uit voorraad
+101	Kies garen uit voorraad
+102	Afkortingen
+103	Meekrap
+104	Goudsbloem
+105	Mos
+106	Spar
+107	Indigo
+108	Pruim
+109	Haver
+110	Antraciet
+111	Trending
+112	Gratis
+113	Mutsen
+114	Sjaals en kolsjaals
+115	Dekens en wonen
+116	Accessoires
+117	Truien
+118	Beginner
+119	Makkelijk
+120	Gemiddeld
+121	Stekenproef
+122	Steken over %@
+123	Rijen over %@
+124	Patronen ontgrendelen
+125	Het diagram past niet bij deze stekenproef
+126	Hoofd
+127	Breedte
+128	Omtrek
+129	Hoogte
+130	Zijde
+131	Hand
+132	Kuit
+133	Spanwijdte
+134	Borst
+135	Lengte lijf
+136	Mouwlengte
+137	Baby
+138	Peuter
+139	Kind
+140	Klein
+141	Middel
+142	Groot
+143	Klassiek
+144	Lang
+145	Strak
+146	Eindeloos
+147	Kinderwagen
+148	Wieg
+149	Plaid
+150	Volwassene
+151	Wijd
+152	Klein sjaaltje
+153	Stola
+154	Geribde muts
+155	Slouchy muts
+156	Muts met omgeslagen rand
+157	Ribbelsjaal
+158	Geribde sjaal
+159	Parelsteeksjaal
+160	Geribde kolsjaal
+161	Parelsteekkolsjaal
+162	Deken met rand
+163	Ribbeldeken
+164	Diagonaal vaatdoekje
+165	Oorwarmer
+166	Polswarmers
+167	Beenwarmers
+168	Driehoekige omslagdoek
+169	Raglantrui
+170	Dikke kolsjaal
+171	Nekdoek
+172	Hoofdband met kabels
+173	Bivakmuts
+174	Nieuw
+175	Cadeautijd
+176	Hartje winter
+177	Lentelagen
+178	Zomerkatoen
+179	Reisbreiwerk
+180	Truiweer
+181	Eerste koude dagen
+182	Boord
+183	Lijf
+184	Kruin
+185	Afwerking
+186	Sjaal
+187	Kolsjaal
+188	Onderrand
+189	Bovenrand
+190	Deken
+191	Meerderen
+192	Minderen
+193	Band
+194	Omslagdoek
+195	Midden
+196	Hals
+197	Gezichtsopening
+198	Bovenkant
+199	Gezichtsrand
+200	Halsboord
+201	Achterhals
+202	Pas
+203	Verdeling
+204	Eerste mouw
+205	Tweede mouw
+206	Manchet
+207	Eerste oor
+208	Tweede oor
+209	Polswarmer %lld
+210	Beenwarmer %lld
+211	Duimopening
+212	Bovenkant van de hand
+213	Been
+214	Enkel
+215	Sluit
+216	Ravel-patronen
+217	Elk ontwerp in de bibliotheek, geschreven op jouw maten en garen
+218	De abonnementen konden niet worden geladen
+219	Probeer opnieuw
+220	Herstel
+221	Voorwaarden
+222	Privacy
+223	Jaarlijks
+224	Maandelijks
+225	Levenslang
+226	%@ per jaar
+227	%@ per maand
+228	%@ eenmalig
+229	Koop levenslang
+230	one=Probeer %lld dag gratis|other=Probeer %lld dagen gratis
+231	Abonneer
+232	one=%lld dag gratis.|other=%lld dagen gratis.
+233	Daarna %@.
+234	%@.
+235	Wordt verlengd tot je opzegt in Instellingen. Een patroon dat je hebt opgezet blijft van jou.
+236	Eenmalige betaling van %@. Elk patroon is voor altijd van jou.
+237	Je aankoop wacht op goedkeuring
+238	Je aankoop is gelukt. Tik op Herstel als de patronen vergrendeld blijven.
+239	De aankoop is niet gelukt
+240	Geen aankoop gevonden op deze Apple Account
+241	De App Store is niet bereikbaar. Probeer het opnieuw als je online bent.
+242	2 steken samenbreien
+243	2 steken één voor één afhalen als voor rechts, en dan achter samenbreien
+244	Omslag
+245	1 steek meerderen: haal de draad tussen de steken op en brei hem achter af
+246	1 steek meerderen naar links: haal de draad van voren op en brei hem achter af
+247	1 steek meerderen naar rechts: haal de draad van achteren op en brei hem voor af
+248	Kabel 6 voor: haal 3 steken af op een kabelnaald en laat die voor het werk hangen, brei 3 steken en brei dan de 3 van de kabelnaald
+249	Recht breien. K2 is 2 steken recht breien
+250	Averechts breien. P2 is 2 steken averechts breien
+251	Werk de steken na de * steeds opnieuw, zo ver als de rij aangeeft
+252	Een ring op de naald die een plek markeert. Haal hem van de linker- naar de rechternaald als je hem bereikt
+253	Wissel de naalden van hand en brei de andere kant op terug
+254	Brei de eerste opgezette steek met de werkdraad om de cirkel te sluiten, met de opzetrand plat en niet gedraaid om de naald
+255	Draai een lus van de werkdraad en schuif hem op de rechternaald. Elke lus is 1 steek
+256	Steek de naald door de rand van het werk, sla de draad om en trek een lus door. Elke lus is 1 steek
+257	Brei de rechte steken recht en de averechte steken averechts tijdens het afkanten
+258	K1, M1L, brei tot 1 steek voor de volgende markeerder, M1R, k1, haal de markeerder af. Het voegt 2 steken toe
+259	Een Duitse verkorte-rijkeer: met de draad voor, haal de eerste steek af als voor averechts, trek de draad dan omhoog over de naald zodat de steek twee benen toont. Brei beide benen samen als één steek als je er weer bij komt

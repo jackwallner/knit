@@ -37,12 +37,16 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case sweaters = "Sweaters"
 
         var id: String { rawValue }
+
+        var title: String { Loc.text(rawValue) }
     }
 
     enum Level: String, Sendable {
         case beginner = "Beginner"
         case easy = "Easy"
         case intermediate = "Intermediate"
+
+        var title: String { Loc.text(rawValue) }
     }
 
     /// Raw values are stored in a cast-on plan, so they never change.
@@ -76,6 +80,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .balaclava: "Balaclava"
         }
     }
+
+    /// The name in the knitter's language. `name` stays English, as the tests and saved plans know it.
+    var title: String { Loc.text(name) }
 
     var shelf: Shelf {
         switch self {

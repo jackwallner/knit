@@ -1,0 +1,259 @@
+1	Projectes
+2	Patrons
+3	Reserva
+4	Acabat
+5	Projecte nou
+6	Més
+7	Valora Ravel
+8	Envia comentaris
+9	Ajuda
+10	Vols eliminar %@?
+11	Elimina el projecte
+12	Nom
+13	Cancel·la
+14	Munta punts
+15	Inicia el comptador de rengleres
+16	Explora patrons
+17	Renglera %lld
+18	Sense títol
+19	Ravel no ha pogut obrir els teus projectes
+20	Encara són en aquest %@. Reinicia’l i torna a obrir Ravel.
+21	Obtén ajuda
+22	Llana
+23	Agulles i ganxets
+24	Afegeix a la reserva
+25	Agulla o ganxet
+26	Afegeix llana
+27	Afegeix agulles
+28	one=%lld troca|other=%lld troques
+29	Metres per troca
+30	Iardes per troca
+31	Marca
+32	Color
+33	Fibra
+34	Lot de tintura
+35	Gruix
+36	Troques
+37	Fet
+38	Tipus
+39	Talla
+40	Llargada
+41	Qualsevol
+42	Ganxet
+43	Agulla
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circular
+53	Recta
+54	De doble punta
+55	Ganxet
+56	Vols tornar el comptador a 0?
+57	Reinicia el comptador
+58	Vols treure el patró d’aquest projecte?
+59	Treu el patró
+60	Rengleres per repetició
+61	Rengleres
+62	Fixa
+63	La repetició comença amb la teva propera renglera.
+64	Renglera
+65	Volta
+66	Renglera d’aquesta secció
+67	Volta d’aquesta secció
+68	Nom del comptador
+69	Canvia el nom
+70	Afegeix
+71	Vols treure el comptador?
+72	Treu el comptador
+73	No s’ha pogut obrir aquest patró
+74	%lld de %lld
+75	one=%lld punt|other=%lld punts
+76	Treu-ne un de %@
+77	Afegeix-ne un a %@
+78	Afegeix una renglera
+79	Renglera %1$lld de %2$lld de la repetició
+80	Torna enrere una renglera
+81	Detalls
+82	Materials
+83	Ves a la renglera
+84	Ves a la volta
+85	Ves a la secció
+86	Afegeix un patró
+87	Substitueix el patró
+88	Afegeix fotos
+89	Fixa la renglera
+90	Repetició
+91	Comptador
+92	Torna a 0
+93	Treu
+94	Afegeix un comptador
+95	Marca com a actiu
+96	Marca com a acabat
+97	Opcions del projecte
+98	Agulles
+99	Notes
+100	No és de la reserva
+101	Tria la llana de la reserva
+102	Abreviatures
+103	Roja
+104	Calèndula
+105	Molsa
+106	Avet
+107	Indi
+108	Pruna
+109	Civada
+110	Carbó
+111	Tendències
+112	Gratis
+113	Gorros
+114	Bufandes i coll
+115	Mantes i llar
+116	Complements
+117	Jerseis
+118	Principiant
+119	Fàcil
+120	Intermedi
+121	Mostra
+122	Punts a %@
+123	Rengleres a %@
+124	Desbloqueja els patrons
+125	El gràfic no encaixa amb aquesta mostra
+126	Cap
+127	Amplada
+128	Contorn
+129	Alçada
+130	Costat
+131	Mà
+132	Panxell
+133	Envergadura
+134	Pit
+135	Llargada del cos
+136	Llargada de la màniga
+137	Nadó
+138	Nen petit
+139	Infant
+140	Petit
+141	Mitjà
+142	Gran
+143	Clàssic
+144	Llarg
+145	Ajustat
+146	Infinit
+147	Cotxet
+148	Bressol
+149	Manta de sofà
+150	Adult
+151	Ample
+152	Mini mantellina
+153	Estola
+154	Gorro de canalé
+155	Gorro slouch
+156	Gorro amb vora enrotllada
+157	Bufanda de punt bobo
+158	Bufanda de canalé
+159	Bufanda de punt arròs
+160	Coll de canalé
+161	Coll de punt arròs
+162	Manta amb vora
+163	Manta de punt bobo
+164	Drap de cuina en diagonal
+165	Orelleres
+166	Escalfadors de canell
+167	Escalfadors de cames
+168	Mantellina triangular
+169	Jersei ragla
+170	Coll gruixut
+171	Mocador de coll
+172	Cinta amb trenes
+173	Passamuntanyes
+174	Novetat
+175	Temps de regals
+176	Ple hivern
+177	Capes de primavera
+178	Cotó d’estiu
+179	Punt de viatge
+180	Temps de jersei
+181	Primers freds
+182	Vora
+183	Cos
+184	Coroneta
+185	Acabat final
+186	Bufanda
+187	Coll
+188	Vora inferior
+189	Vora superior
+190	Manta
+191	Augments
+192	Disminucions
+193	Cinta
+194	Mantellina
+195	Centre
+196	Coll
+197	Obertura de la cara
+198	Part superior
+199	Vora de la cara
+200	Vora del coll
+201	Darrere del coll
+202	Cós
+203	Divisió
+204	Primera màniga
+205	Segona màniga
+206	Puny
+207	Primera orella
+208	Segona orella
+209	Escalfador %lld
+210	Escalfador de cama %lld
+211	Obertura del polze
+212	Part alta de la mà
+213	Cama
+214	Turmell
+215	Tanca
+216	Patrons de Ravel
+217	Tots els dissenys de la biblioteca, escrits a la teva mida i amb la teva llana
+218	No s’han pogut carregar els plans
+219	Torna-ho a provar
+220	Restaura
+221	Condicions
+222	Privadesa
+223	Anual
+224	Mensual
+225	De per vida
+226	%@ l’any
+227	%@ al mes
+228	%@ una vegada
+229	Compra de per vida
+230	one=Prova gratis %lld dia|other=Prova gratis %lld dies
+231	Subscriu-te
+232	one=%lld dia gratis.|other=%lld dies gratis.
+233	Després, %@.
+234	%@.
+235	Es renova fins que cancel·lis a Configuració. Un patró que hagis començat és teu per sempre.
+236	Un sol pagament de %@. Tots els patrons són teus per sempre.
+237	La teva compra espera aprovació
+238	La teva compra s’ha completat. Toca Restaura si els patrons continuen bloquejats.
+239	La compra no s’ha completat
+240	No s’ha trobat cap compra amb aquest compte d’Apple
+241	No s’ha pogut accedir a l’App Store. Torna-ho a provar quan siguis en línia.
+242	Teixir 2 punts junts
+243	Passar 2 punts com per teixir-los, un a un, i després teixir-los junts per darrere
+244	Fil sobre l’agulla
+245	Augment d’1: aixecar el fil entre els punts i teixir-lo per darrere
+246	Augment d’1 a l’esquerra: aixecar el fil per davant i teixir-lo per darrere
+247	Augment d’1 a la dreta: aixecar el fil per darrere i teixir-lo per davant
+248	Trena de 6 al davant: passar 3 punts a una agulla auxiliar i deixar-la al davant, teixir 3 i després teixir els 3 de l’agulla auxiliar
+249	Dret. K2 és teixir 2 punts del dret
+250	Revés. P2 és teixir 2 punts del revés
+251	Treballar els punts després de l’* una vegada i una altra, fins on digui la renglera
+252	Un anell a l’agulla que marca un lloc. Passa’l de l’agulla esquerra a la dreta quan hi arribis
+253	Canviar les agulles de mà i treballar en sentit contrari
+254	Teixir el primer punt muntat amb el fil de treball per tancar el cercle, amb la vora de muntatge plana i sense torçar al voltant de l’agulla
+255	Torçar un llaç del fil de treball i lliscar-lo a l’agulla dreta. Cada llaç és 1 punt
+256	Passar l’agulla per la vora de la peça, envoltar el fil i treure un llaç. Cada llaç és 1 punt
+257	Teixir els punts del dret del dret i els del revés del revés en cloure
+258	K1, M1L, teixir fins a 1 punt abans del marcador següent, M1R, k1, passar el marcador. Afegeix 2 punts
+259	Un gir de rengleres curtes alemany: amb el fil al davant, passar el primer punt com per teixir-lo del revés, després estirar el fil per sobre l’agulla perquè el punt mostri dues potes. Teixir les dues potes juntes com un sol punt en tornar-hi

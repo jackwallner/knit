@@ -109,7 +109,7 @@ How to read it. One table per source: C code (Opus), G council (Gemini), K tech 
 | A-13 | P2 | Site has no screenshot, link, social tags | partly fixed | Privacy policy sentence done (docs/privacy-policy.html). Home page link, screenshot and og tags not done (reviewer said after approval) |
 | A-14 | P2 | en-GB, en-AU, en-CA | deferred | Past 1.0 |
 | A-15 | P3 | es-MX keyword locale | deferred | Past 1.0 |
-| A-16 | P3 | Translate app before listing | deferred | Past 1.0 |
+| A-16 | P3 | Translate app before listing | fixed | Interface translated into all 46 listing languages; instructions stay English (`.claude/rules/localization.md`) |
 | A-17 | P2 | Keep Ravelry and competitor names out | fixed and verified | The keyword field names no competitor or trademark (fastlane/metadata/en-US/keywords.txt) |
 | A-18 | P3 | Category and age rating | open | Not in dispositions. Confirm Lifestyle, Productivity, 4+ in ASC with A-11 |
 | A-19 | P2 | Plan keyword validation after launch | deferred | Post-launch: read search-term data in the first two weeks |

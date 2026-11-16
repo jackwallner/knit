@@ -1,0 +1,259 @@
+1	Projetos
+2	Receitas
+3	Estoque
+4	Concluído
+5	Novo projeto
+6	Mais
+7	Avaliar o Ravel
+8	Enviar feedback
+9	Ajuda
+10	Excluir %@?
+11	Excluir projeto
+12	Nome
+13	Cancelar
+14	Montar pontos
+15	Iniciar contador de carreiras
+16	Explorar receitas
+17	Carreira %lld
+18	Sem título
+19	O Ravel não conseguiu abrir seus projetos
+20	Eles continuam neste %@. Reinicie-o e abra o Ravel de novo.
+21	Obter ajuda
+22	Fio
+23	Agulhas e crochês
+24	Adicionar ao estoque
+25	Agulha ou crochê
+26	Adicionar fio
+27	Adicionar agulhas
+28	one=%lld novelo|other=%lld novelos
+29	Metros por novelo
+30	Jardas por novelo
+31	Marca
+32	Cor
+33	Fibra
+34	Lote de tingimento
+35	Espessura
+36	Novelos
+37	OK
+38	Tipo
+39	Tamanho
+40	Comprimento
+41	Qualquer
+42	Crochê
+43	Agulha
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Circular
+53	Reta
+54	De pontas duplas
+55	Agulha de crochê
+56	Zerar a contagem?
+57	Zerar contagem
+58	Remover a receita deste projeto?
+59	Remover receita
+60	Carreiras por repetição
+61	Carreiras
+62	Definir
+63	A repetição começa na sua próxima carreira.
+64	Carreira
+65	Volta
+66	Carreira nesta seção
+67	Volta nesta seção
+68	Nome do contador
+69	Renomear
+70	Adicionar
+71	Remover o contador?
+72	Remover contador
+73	Não foi possível abrir essa receita
+74	%lld de %lld
+75	one=%lld ponto|other=%lld pontos
+76	Tirar um de %@
+77	Somar um a %@
+78	Adicionar uma carreira
+79	Carreira %1$lld de %2$lld na repetição
+80	Voltar uma carreira
+81	Detalhes
+82	Materiais
+83	Ir para a carreira
+84	Ir para a volta
+85	Ir para a seção
+86	Adicionar receita
+87	Substituir receita
+88	Adicionar fotos
+89	Definir carreira
+90	Repetição
+91	Contador
+92	Zerar
+93	Remover
+94	Adicionar contador
+95	Marcar como ativo
+96	Marcar como concluído
+97	Opções do projeto
+98	Agulhas
+99	Anotações
+100	Não é do estoque
+101	Escolher fio do estoque
+102	Abreviações
+103	Garança
+104	Calêndula
+105	Musgo
+106	Abeto
+107	Índigo
+108	Ameixa
+109	Aveia
+110	Carvão
+111	Em alta
+112	Grátis
+113	Gorros
+114	Cachecóis e golas
+115	Mantas e casa
+116	Acessórios
+117	Suéteres
+118	Iniciante
+119	Fácil
+120	Intermediário
+121	Amostra
+122	Pontos em %@
+123	Carreiras em %@
+124	Desbloquear receitas
+125	O gráfico não cabe nesta amostra
+126	Cabeça
+127	Largura
+128	Circunferência
+129	Altura
+130	Lado
+131	Mão
+132	Panturrilha
+133	Envergadura
+134	Busto
+135	Comprimento do corpo
+136	Comprimento da manga
+137	Bebê
+138	Criança pequena
+139	Criança
+140	Pequeno
+141	Médio
+142	Grande
+143	Clássico
+144	Longo
+145	Justo
+146	Infinito
+147	Carrinho
+148	Berço
+149	Manta de sofá
+150	Adulto
+151	Largo
+152	Xale pequeno
+153	Estola
+154	Gorro canelado
+155	Gorro slouch
+156	Gorro com barra enrolada
+157	Cachecol em ponto tricô
+158	Cachecol canelado
+159	Cachecol em ponto arroz
+160	Gola canelada
+161	Gola em ponto arroz
+162	Manta com borda
+163	Manta em ponto tricô
+164	Pano de prato diagonal
+165	Protetor de orelhas
+166	Munhequeiras
+167	Polainas
+168	Xale triangular
+169	Suéter raglã
+170	Gola grossa
+171	Lenço de pescoço
+172	Faixa de cabelo com tranças
+173	Balaclava
+174	Novo
+175	Época de presentes
+176	Pleno inverno
+177	Camadas de primavera
+178	Algodão de verão
+179	Tricô de viagem
+180	Clima de suéter
+181	Primeiros dias frios
+182	Barra
+183	Corpo
+184	Topo
+185	Acabamento
+186	Cachecol
+187	Gola
+188	Borda inferior
+189	Borda superior
+190	Manta
+191	Aumentos
+192	Diminuições
+193	Faixa
+194	Xale
+195	Meio
+196	Pescoço
+197	Abertura do rosto
+198	Parte de cima
+199	Borda do rosto
+200	Gola do pescoço
+201	Costas do pescoço
+202	Gola raglã
+203	Divisão
+204	Primeira manga
+205	Segunda manga
+206	Punho
+207	Primeira orelha
+208	Segunda orelha
+209	Munhequeira %lld
+210	Polaina %lld
+211	Abertura do polegar
+212	Parte superior da mão
+213	Perna
+214	Tornozelo
+215	Fechar
+216	Receitas Ravel
+217	Todos os modelos da biblioteca, escritos para as suas medidas e o seu fio
+218	Não foi possível carregar os planos
+219	Tentar novamente
+220	Restaurar
+221	Termos
+222	Privacidade
+223	Anual
+224	Mensal
+225	Vitalício
+226	%@ por ano
+227	%@ por mês
+228	%@ uma vez
+229	Comprar vitalício
+230	one=Testar grátis por %lld dia|other=Testar grátis por %lld dias
+231	Assinar
+232	one=%lld dia grátis.|other=%lld dias grátis.
+233	Depois, %@.
+234	%@.
+235	Renova até você cancelar em Ajustes. Uma receita que você começou é sua para sempre.
+236	Um único pagamento de %@. Todas as receitas são suas para sempre.
+237	Sua compra está aguardando aprovação
+238	Sua compra foi concluída. Toque em Restaurar se as receitas continuarem bloqueadas.
+239	A compra não foi concluída
+240	Nenhuma compra encontrada neste Apple ID
+241	Não foi possível acessar a App Store. Tente de novo quando estiver online.
+242	Tricotar 2 pontos juntos
+243	Passar 2 pontos como para tricotar, um de cada vez, e depois tricotá-los juntos pela parte de trás
+244	Laçada
+245	Aumento de 1: levantar o fio entre os pontos e tricotá-lo pela parte de trás
+246	Aumento de 1 à esquerda: levantar o fio pela frente e tricotá-lo pela parte de trás
+247	Aumento de 1 à direita: levantar o fio por trás e tricotá-lo pela frente
+248	Trança de 6 na frente: passar 3 pontos para uma agulha de trança e deixá-la na frente, tricotar 3 e depois tricotar os 3 da agulha de trança
+249	Ponto liso. K2 é tricotar 2 pontos no liso
+250	Ponto avesso. P2 é tricotar 2 pontos no avesso
+251	Repetir os pontos depois do * de novo e de novo, até onde a carreira indicar
+252	Um anel na agulha que marca um lugar. Passe-o da agulha esquerda para a direita quando chegar nele
+253	Trocar as agulhas de mão e tricotar de volta no outro sentido
+254	Tricotar o primeiro ponto montado com o fio de trabalho para fechar o círculo, com a borda de montagem reta, sem torcer, ao redor da agulha
+255	Torcer uma laçada do fio de trabalho e deslizá-la para a agulha direita. Cada laçada é 1 ponto
+256	Passar a agulha pela borda do tecido, envolver o fio e puxar uma laçada. Cada laçada é 1 ponto
+257	Tricotar os pontos lisos no liso e os avessos no avesso ao arrematar
+258	K1, M1L, tricotar até 1 ponto antes do próximo marcador, M1R, k1, passar o marcador. Aumenta 2 pontos
+259	Uma virada de carreiras curtas alemã: com o fio na frente, passar o primeiro ponto como para o avesso, depois puxar o fio por cima da agulha para que o ponto mostre duas pernas. Tricotar as duas pernas juntas como um único ponto ao voltar a ele

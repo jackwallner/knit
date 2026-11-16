@@ -42,7 +42,7 @@ enum YarnColor: String, CaseIterable, Identifiable, Sendable {
 
     var id: String { rawValue }
 
-    var label: String { rawValue.capitalized }
+    var label: String { Loc.text(rawValue.capitalized) }
 
     private var rgb: (Double, Double, Double) {
         switch self {

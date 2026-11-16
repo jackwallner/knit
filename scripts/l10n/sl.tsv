@@ -1,0 +1,259 @@
+1	Projekti
+2	Vzorci
+3	Zaloga
+4	Končano
+5	Nov projekt
+6	Več
+7	Oceni Ravel
+8	Pošlji povratne informacije
+9	Pomoč
+10	Izbrišem %@?
+11	Izbriši projekt
+12	Ime
+13	Prekliči
+14	Nasnuj zanke
+15	Zaženi števec vrst
+16	Prebrskaj vzorce
+17	Vrsta %lld
+18	Brez imena
+19	Ravel ni mogel odpreti vaših projektov
+20	Še vedno so v tej napravi (%@). Znova jo zaženite in ponovno odprite Ravel.
+21	Poišči pomoč
+22	Preja
+23	Igle in kvačke
+24	Dodaj v zalogo
+25	Igla ali kvačka
+26	Dodaj prejo
+27	Dodaj igle
+28	one=%lld štrena|two=%lld štreni|few=%lld štrene|other=%lld štren
+29	Metrov na štreno
+30	Jardov na štreno
+31	Znamka
+32	Barva
+33	Vlakno
+34	Serija barvanja
+35	Debelina
+36	Štrene
+37	Končano
+38	Vrsta
+39	Velikost
+40	Dolžina
+41	Poljubna
+42	Kvačka
+43	Igla
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Krožna
+53	Ravna
+54	Nogavična
+55	Kvačka
+56	Ponastavim števec na 0?
+57	Ponastavi števec
+58	Odstranim vzorec iz tega projekta?
+59	Odstrani vzorec
+60	Vrst v enem ponavljanju
+61	Vrste
+62	Nastavi
+63	Ponavljanje se začne z naslednjo vrsto.
+64	Vrsta
+65	Krog
+66	Vrsta v tem delu
+67	Krog v tem delu
+68	Ime števca
+69	Preimenuj
+70	Dodaj
+71	Odstranim števec?
+72	Odstrani števec
+73	Tega vzorca ni bilo mogoče odpreti
+74	%lld od %lld
+75	one=%lld zanka|two=%lld zanki|few=%lld zanke|other=%lld zank
+76	Odštej ena pri %@
+77	Prištej ena pri %@
+78	Dodaj vrsto
+79	Vrsta %1$lld od %2$lld v ponavljanju
+80	Nazaj za eno vrsto
+81	Podrobnosti
+82	Material
+83	Pojdi na vrsto
+84	Pojdi na krog
+85	Pojdi na del
+86	Dodaj vzorec
+87	Zamenjaj vzorec
+88	Dodaj fotografije
+89	Nastavi vrsto
+90	Ponavljanje
+91	Števec
+92	Ponastavi na 0
+93	Odstrani
+94	Dodaj števec
+95	Označi kot aktivno
+96	Označi kot končano
+97	Možnosti projekta
+98	Igle
+99	Opombe
+100	Ni iz zaloge
+101	Izberi prejo iz zaloge
+102	Okrajšave
+103	Broč
+104	Ognjič
+105	Mah
+106	Smreka
+107	Indigo
+108	Sliva
+109	Oves
+110	Oglje
+111	V trendu
+112	Brezplačno
+113	Kape
+114	Šali in ovratniki
+115	Odeje in dom
+116	Dodatki
+117	Puloverji
+118	Začetnik
+119	Lahko
+120	Srednje
+121	Gostota
+122	Zank na %@
+123	Vrst na %@
+124	Odkleni vzorce
+125	Shema ne ustreza tej gostoti
+126	Glava
+127	Širina
+128	Obseg
+129	Višina
+130	Stran
+131	Roka
+132	Meča
+133	Razpon rok
+134	Prsi
+135	Dolžina telesa
+136	Dolžina rokava
+137	Dojenček
+138	Malček
+139	Otrok
+140	Majhna
+141	Srednja
+142	Velika
+143	Klasični
+144	Dolgi
+145	Tesni
+146	Neskončni
+147	Voziček
+148	Posteljica
+149	Pregrinjalo
+150	Odrasli
+151	Širok
+152	Majhna ruta
+153	Štola
+154	Rebrasta kapa
+155	Ohlapna kapa
+156	Kapa z zavihanim robom
+157	Šal v desnih petljah
+158	Rebrasti šal
+159	Šal v rižastem vzorcu
+160	Rebrast ovratnik
+161	Ovratnik v rižastem vzorcu
+162	Odeja z robom
+163	Odeja v desnih petljah
+164	Diagonalna krpa
+165	Grelnik za ušesa
+166	Grelniki za zapestja
+167	Grelniki za noge
+168	Trikotna ruta
+169	Pulover z raglanom
+170	Debel ovratnik
+171	Ruta za vrat
+172	Naglavni trak s kitami
+173	Balaklava
+174	Novo
+175	Čas daril
+176	Sredi zime
+177	Pomladne plasti
+178	Poletni bombaž
+179	Pletenje za na pot
+180	Vreme za pulover
+181	Prvi hladni dnevi
+182	Rob
+183	Telo
+184	Vrh
+185	Zaključek
+186	Šal
+187	Ovratnik
+188	Spodnji rob
+189	Zgornji rob
+190	Odeja
+191	Povečanja
+192	Zmanjšanja
+193	Trak
+194	Ruta
+195	Sredina
+196	Vrat
+197	Odprtina za obraz
+198	Zgornji del
+199	Rob ob obrazu
+200	Izrez
+201	Zadnji del vratu
+202	Okrogla pola
+203	Delitev
+204	Prvi rokav
+205	Drugi rokav
+206	Manšeta
+207	Prvo uho
+208	Drugo uho
+209	Grelnik za zapestje %lld
+210	Grelnik za nogo %lld
+211	Odprtina za palec
+212	Zgornji del roke
+213	Noga
+214	Gleženj
+215	Zapri
+216	Vzorci Ravel
+217	Vsak dizajn v knjižnici, napisan po vaših merah in preji
+218	Paketov ni bilo mogoče naložiti
+219	Poskusi znova
+220	Obnovi
+221	Pogoji
+222	Zasebnost
+223	Letno
+224	Mesečno
+225	Doživljenjsko
+226	%@ na leto
+227	%@ na mesec
+228	%@ enkratno
+229	Kupi doživljenjsko
+230	one=Preizkusi brezplačno za %lld dan|two=Preizkusi brezplačno za %lld dneva|few=Preizkusi brezplačno za %lld dni|other=Preizkusi brezplačno za %lld dni
+231	Naroči se
+232	one=%lld dan brezplačno.|two=%lld dneva brezplačno.|few=%lld dni brezplačno.|other=%lld dni brezplačno.
+233	Nato %@.
+234	%@.
+235	Se obnavlja, dokler ne prekličete v Nastavitvah. Vzorec, ki ste ga začeli, ostane vaš.
+236	Enkratno plačilo %@. Vsak vzorec je vaš za vedno.
+237	Vaš nakup čaka na odobritev
+238	Nakup je uspel. Tapnite Obnovi, če vzorci ostanejo zaklenjeni.
+239	Nakup ni uspel
+240	Za ta Apple ID ni bilo najdenega nakupa
+241	App Store ni dosegljiv. Poskusite znova, ko boste na spletu.
+242	Spleti 2 zanki skupaj
+243	Prenesi 2 zanki kot za pletenje, eno za drugo, nato ju spleti skupaj od zadaj
+244	Ovoj
+245	Povečaj za 1: dvigni nitko med zankama in jo spleti od zadaj
+246	Povečaj za 1 levo: dvigni nitko od spredaj in jo spleti od zadaj
+247	Povečaj za 1 desno: dvigni nitko od zadaj in jo spleti od spredaj
+248	Kita 6 spredaj: prenesi 3 zanke na pomožno iglo in jo pusti spredaj, spleti 3, nato spleti 3 zanke s pomožne igle
+249	Desno. K2 je splesti 2 zanki desno
+250	Levo. P2 je splesti 2 zanki levo
+251	Pleti zanke za * znova in znova, tako daleč, kot pravi vrsta
+252	Obroček na igli, ki označuje mesto. Prestavi ga z leve igle na desno, ko prideš do njega
+253	Zamenjaj igli v rokah in pleti nazaj v nasprotno smer
+254	Spleti prvo nasnuto zanko z delovno nitjo, da zaključiš krog, z robom nasnutja ravno in ne zasukano okoli igle
+255	Zavij zanko iz delovne niti in jo potisni na desno iglo. Vsaka zanka je 1 zanka
+256	Potisni iglo skozi rob dela, ovij nit in potegni zanko skozi. Vsaka zanka je 1 zanka
+257	Pri zaključevanju spleti desne zanke desno in leve zanke levo
+258	K1, M1L, pleti do 1 zanke pred naslednjim označevalcem, M1R, k1, prestavi označevalec. Doda 2 zanki
+259	Nemški skrajšani obrat: z nitjo spredaj prenesi prvo zanko kot za levo, nato potegni nit navzgor čez iglo, da zanka kaže dve nogici. Ko prideš nazaj, spleti obe nogici skupaj kot eno zanko
