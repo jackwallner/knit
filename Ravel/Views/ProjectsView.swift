@@ -190,7 +190,7 @@ struct ProjectsView: View {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         // Each new project takes the next yarn so the list reads at a glance.
         let color = YarnColor.allCases[projects.count % YarnColor.allCases.count]
-        let project = Project(name: trimmed.isEmpty ? "Untitled" : trimmed, color: color)
+        let project = Project(name: trimmed.isEmpty ? String(localized: "Untitled", comment: "Name of a project the knitter did not name") : trimmed, color: color)
         context.insert(project)
         try? context.save()
         name = ""

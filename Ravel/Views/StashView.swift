@@ -22,7 +22,7 @@ struct StashView: View {
                                 nameBefore = yarn.name
                                 editingYarn = yarn
                             } label: {
-                                row(title: yarn.name, detail: [yarn.detail, yarn.totalLength].compactMap { $0 }.joined(separator: " · "), count: yarn.skeins, countLabel: "\(yarn.skeins) skeins")
+                                row(title: yarn.name, detail: [yarn.detail, yarn.totalLength].compactMap { $0 }.joined(separator: " · "), count: yarn.skeins, countLabel: String(localized: "\(yarn.skeins) skeins", comment: "VoiceOver label for the number of skeins of a yarn"))
                             }
                         }
                         .onDelete { offsets in offsets.map { yarns[$0] }.forEach(context.delete) }
@@ -92,7 +92,7 @@ struct StashView: View {
         }
     }
 
-    private func header(_ title: String) -> some View {
+    private func header(_ title: LocalizedStringKey) -> some View {
         Text(title).font(.subheadline.weight(.semibold)).foregroundStyle(Theme.secondary).textCase(nil)
     }
 
@@ -150,10 +150,10 @@ struct YarnEditor: View {
     @Environment(\.dismiss) private var dismiss
     @FocusState private var nameFocused: Bool
     @State private var lengthText = ""
-    private let lengthLabel = Units.current == .metric ? "Meters per Skein" : "Yards per Skein"
+    private let lengthLabel: LocalizedStringKey = Units.current == .metric ? "Meters per Skein" : "Yards per Skein"
 
     /// A labeled row whose value is typed on the right, so a filled-in field still says what it is.
-    private func field(_ label: String, text: Binding<String>) -> some View {
+    private func field(_ label: LocalizedStringKey, text: Binding<String>) -> some View {
         LabeledContent(label) {
             TextField("", text: text).multilineTextAlignment(.trailing).accessibilityLabel(label)
         }
@@ -172,7 +172,7 @@ struct YarnEditor: View {
                 }
                 Section {
                     Picker("Weight", selection: $yarn.weight) {
-                        ForEach(YarnWeight.allCases) { Text($0.label).tag($0) }
+                        ForEach(YarnWeight.allCases) { Text($0.title).tag($0) }
                     }
                     Stepper(value: $yarn.skeins, in: 0...999) {
                         LabeledContent("Skeins", value: yarn.skeins, format: .number)
@@ -215,7 +215,7 @@ struct NeedleEditor: View {
         NavigationStack {
             Form {
                 Picker("Type", selection: $needle.kind) {
-                    ForEach(NeedleKind.allCases) { Text($0.label).tag($0) }
+                    ForEach(NeedleKind.allCases) { Text($0.title).tag($0) }
                 }
                 Picker("Size", selection: $needle.millimeters) {
                     ForEach(NeedleSize.all(hook: needle.kind == .hook)) { Text($0.label).tag($0.millimeters) }
@@ -227,7 +227,7 @@ struct NeedleEditor: View {
                     }
                 }
             }
-            .navigationTitle(needle.kind == .hook ? "Hook" : "Needle")
+            .navigationTitle(needle.kind == .hook ? LocalizedStringKey("Hook") : LocalizedStringKey("Needle"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }

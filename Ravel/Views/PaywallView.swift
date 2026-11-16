@@ -130,7 +130,7 @@ struct PaywallView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(isOn ? .isSelected : [])
-                .accessibilityIdentifier("paywall.\(option.termName.lowercased())")
+                .accessibilityIdentifier("paywall.\(option.slug)")
             }
 
             if let offer {
@@ -216,9 +216,9 @@ struct PaywallView: View {
             switch outcome {
             case .purchased: dismiss()
             case .cancelled: break
-            case .pending: message = "Your purchase is waiting for approval"
-            case .unconfirmed: message = "Your purchase went through. Tap Restore if the patterns stay locked."
-            case .failed: message = "The purchase did not go through"
+            case .pending: message = String(localized: "Your purchase is waiting for approval")
+            case .unconfirmed: message = String(localized: "Your purchase went through. Tap Restore if the patterns stay locked.")
+            case .failed: message = String(localized: "The purchase did not go through")
             }
         }
     }
@@ -231,8 +231,8 @@ struct PaywallView: View {
             switch result {
             case .found: dismiss()
             case .cancelled: break
-            case .notFound: message = "No purchase found on this Apple Account"
-            case .failed: message = "The App Store could not be reached. Try again when you are online."
+            case .notFound: message = String(localized: "No purchase found on this Apple Account")
+            case .failed: message = String(localized: "The App Store could not be reached. Try again when you are online.")
             }
         }
     }

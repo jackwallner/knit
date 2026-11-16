@@ -1,0 +1,259 @@
+Projects
+Patterns
+Stash
+Finished
+New Project
+More
+Rate Ravel
+Send Feedback
+Help
+Delete %@?
+Delete Project
+Name
+Cancel
+Cast On
+Start Row Counter
+Browse Patterns
+Row %lld
+Untitled
+Ravel could not open your projects
+They are still on this %@. Restart it, then open Ravel again.
+Get Help
+Yarn
+Needles & Hooks
+Add to Stash
+Needle or Hook
+Add Yarn
+Add Needles
+%lld skeins|plural
+Meters per Skein
+Yards per Skein
+Brand
+Color
+Fiber
+Dye Lot
+Weight
+Skeins
+Done
+Type
+Size
+Length
+Any
+Hook
+Needle
+Lace
+Fingering
+Sport
+DK
+Worsted
+Aran
+Bulky
+Super Bulky
+Circular
+Straight
+Double-Pointed
+Crochet Hook
+Reset the count to 0?
+Reset Count
+Remove the pattern from this project?
+Remove Pattern
+Rows in One Repeat
+Rows
+Set
+The repeat starts with your next row.
+Row
+Round
+Row in This Section
+Round in This Section
+Counter Name
+Rename
+Add
+Remove the counter?
+Remove Counter
+That pattern could not be opened
+%lld of %lld
+%lld stitches|plural
+Take one off %@
+Add one to %@
+Add a row
+Row %lld of %lld in the repeat
+Back one row
+Details
+Materials
+Go to Row
+Go to Round
+Go to Section
+Add Pattern
+Replace Pattern
+Add Photos
+Set Row
+Repeat
+Counter
+Reset to 0
+Remove
+Add Counter
+Mark Active
+Mark Finished
+Project options
+Needles
+Notes
+Not from Stash
+Choose yarn from stash
+Abbreviations
+Madder
+Marigold
+Moss
+Spruce
+Indigo
+Plum
+Oat
+Charcoal
+Trending
+Free
+Hats
+Scarves & Cowls
+Blankets & Home
+Accessories
+Sweaters
+Beginner
+Easy
+Intermediate
+Gauge
+Stitches over %@
+Rows over %@
+Unlock Patterns
+Chart Does Not Fit This Gauge
+Head
+Width
+Around
+Height
+Side
+Hand
+Calf
+Wingspan
+Chest
+Body Length
+Sleeve Length
+Baby
+Toddler
+Child
+Small
+Medium
+Large
+Classic
+Long
+Snug
+Infinity
+Stroller
+Crib
+Throw
+Adult
+Wide
+Shawlette
+Wrap
+Ribbed Beanie
+Slouch Hat
+Rolled Brim Hat
+Garter Scarf
+Ribbed Scarf
+Seed Stitch Scarf
+Ribbed Cowl
+Seed Stitch Cowl
+Bordered Blanket
+Garter Blanket
+Diagonal Dishcloth
+Ear Warmer
+Handwarmers
+Leg Warmers
+Triangle Shawl
+Raglan Pullover
+Chunky Cowl
+Neck Scarf
+Cabled Headband
+Balaclava
+New
+Gift season
+Deep winter
+Spring layers
+Summer cotton
+Travel knitting
+Sweater weather
+First cold days
+Brim
+Body
+Crown
+Finishing
+Scarf
+Cowl
+Bottom Border
+Top Border
+Blanket
+Increase
+Decrease
+Band
+Shawl
+Middle
+Neck
+Face Opening
+Top
+Face Edging
+Neckband
+Back Neck
+Yoke
+Divide
+First Sleeve
+Second Sleeve
+Cuff
+First Ear
+Second Ear
+Mitt %lld
+Leg Warmer %lld
+Thumb Opening
+Upper Hand
+Leg
+Ankle
+Close
+Ravel Patterns
+Every design in the library, written to your measurements and yarn
+Plans could not load
+Try Again
+Restore
+Terms
+Privacy
+Yearly
+Monthly
+Lifetime
+%@ a year
+%@ a month
+%@ once
+Buy Lifetime
+Try Free for %lld Days|plural
+Subscribe
+%lld days free.|plural
+Then %@.
+%@.
+Renews until you cancel in Settings. A pattern you cast on is yours to keep.
+One payment of %@. Every pattern is yours for good.
+Your purchase is waiting for approval
+Your purchase went through. Tap Restore if the patterns stay locked.
+The purchase did not go through
+No purchase found on this Apple Account
+The App Store could not be reached. Try again when you are online.
+Knit 2 stitches together
+Slip 2 stitches knitwise one at a time, then knit them together through the back
+Yarn over
+Make 1: lift the bar between the stitches and knit it through the back
+Make 1 left: lift the bar from the front and knit it through the back
+Make 1 right: lift the bar from the back and knit it through the front
+Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle
+Knit. K2 is knit 2 stitches
+Purl. P2 is purl 2 stitches
+Work the stitches after the * again and again, as far as the row says
+A ring on the needle that marks a spot. Slip it from the left needle to the right when you reach it
+Swap the needles between your hands and work back the other way
+Knit the first cast-on stitch with the working yarn to close the circle, with the cast-on edge lying flat, not spiraled, around the needle
+Twist a loop of the working yarn and slide it onto the right needle. Each loop is 1 stitch
+Push the needle through the edge of the fabric, wrap the yarn and pull a loop through. Each loop is 1 stitch
+Knit the knit stitches and purl the purl stitches as you bind off
+K1, M1L, knit to 1 stitch before the next marker, M1R, k1, slip the marker. It adds 2 stitches
+A German short row turn: with the yarn in front, slip the first stitch purlwise, then pull the yarn up and over the needle so the stitch shows two legs. Work both legs together as one stitch when you come back to it

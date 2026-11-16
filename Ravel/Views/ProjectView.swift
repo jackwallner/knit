@@ -86,15 +86,15 @@ struct ProjectView: View {
         } message: {
             if project.rows > 0, project.repeatLength == 0 { Text("The repeat starts with your next row.") }
         }
-        .alert(plan.map { "\($0.unit(at: project.rows)) in This Section" } ?? "Row", isPresented: $settingRow) {
-            TextField(plan?.unit(at: project.rows) ?? "Row", text: $rowText).keyboardType(.numberPad)
+        .alert(inSection, isPresented: $settingRow) {
+            TextField(isRound ? "Round" : "Row", text: $rowText).keyboardType(.numberPad)
             Button("Cancel", role: .cancel) {}
             Button("Set") { if let row = Int(rowText) { project.jump(to: row, following: plan) } }
         }
         .alert("Counter Name", isPresented: $namingTally) {
             TextField("Name", text: $tallyText).accessibilityLabel("Name").accessibilityIdentifier("tally.nameField")
             Button("Cancel", role: .cancel) {}
-            Button(project.tallyOn ? "Rename" : "Add") {
+            Button(project.tallyOn ? LocalizedStringKey("Rename") : LocalizedStringKey("Add")) {
                 if project.tallyOn { project.renameTally(tallyText) } else { project.addTally(named: tallyText) }
             }
         }
@@ -136,10 +136,15 @@ struct ProjectView: View {
         announce()
     }
 
+    /// True while a library pattern is worked in the round, so labels say Round and not Row.
+    private var isRound: Bool { plan?.unit(at: project.rows) == "Round" }
+
+    private var inSection: LocalizedStringKey { isRound ? "Round in This Section" : "Row in This Section" }
+
     /// What the count or the pattern now says, for VoiceOver.
     private var spoken: String {
-        guard let plan else { return "Row \(project.rows)" }
-        guard let spot = plan.position(at: project.rows) else { return "Finished" }
+        guard let plan else { return String(localized: "Row \(project.rows)", comment: "VoiceOver: the row count") }
+        guard let spot = plan.position(at: project.rows) else { return String(localized: "Finished") }
         return plan.steps[spot.step].text(at: spot.row)
     }
 
@@ -271,12 +276,12 @@ struct ProjectView: View {
             let step = plan.steps[spot.step]
             let said = step.text(at: spot.row)
             let detail = [
-                step.rows > 1 ? "\(spot.row + 1) of \(step.rows)" : nil,
+                step.rows > 1 ? String(localized: "\(spot.row + 1) of \(step.rows)", comment: "Position in a run of rows: 3 of 40") : nil,
                 // Not repeated when the instruction already says it ("Cast on 32 stitches.").
-                step.stitches(after: spot.row).flatMap { said.contains("\($0) st") ? nil : "\($0) stitches" },
+                step.stitches(after: spot.row).flatMap { said.contains("\($0) st") ? nil : String(localized: "\($0) stitches", comment: "Stitches on the needle after this row") },
             ].compactMap { $0 }.joined(separator: " · ")
             VStack(spacing: 16) {
-                Text(step.section)
+                Text(Loc.section(step.section))
                     .font(far ? .subheadline.weight(.semibold) : .footnote.weight(.semibold))
                     .textCase(.uppercase)
                     .tracking(1.4)
@@ -309,18 +314,20 @@ struct ProjectView: View {
     /// It sits outside the tap area, so a press here never knits a row.
     private var tallyBar: some View {
         let title = project.tallyTitle
+        let takeOff = String(localized: "Take one off \(title)", comment: "VoiceOver: minus button of the second counter; the argument is its name")
+        let addTo = String(localized: "Add one to \(title)", comment: "VoiceOver: plus button of the second counter; the argument is its name")
         return ViewThatFits(in: .horizontal) {
             HStack(spacing: 4) {
-                tallyButton("minus", "Take one off \(title)", id: "tally.minus", step: -1)
+                tallyButton("minus", takeOff, id: "tally.minus", step: -1)
                 tallyReadout(title).frame(maxWidth: .infinity)
-                tallyButton("plus", "Add one to \(title)", id: "tally.plus", step: 1)
+                tallyButton("plus", addTo, id: "tally.plus", step: 1)
             }
             VStack(spacing: 4) {
                 tallyReadout(title)
                 HStack(spacing: 4) {
-                    tallyButton("minus", "Take one off \(title)", id: "tally.minus", step: -1)
+                    tallyButton("minus", takeOff, id: "tally.minus", step: -1)
                     Spacer(minLength: 0)
-                    tallyButton("plus", "Add one to \(title)", id: "tally.plus", step: 1)
+                    tallyButton("plus", addTo, id: "tally.plus", step: 1)
                 }
             }
         }
@@ -467,14 +474,14 @@ struct ProjectView: View {
             if let plan {
                 Button("Materials", systemImage: "list.bullet") { showingMaterials = true }
                 if let spot = plan.position(at: project.rows), plan.steps[spot.step].rows > 1 {
-                    Button("Go to \(plan.unit(at: project.rows))", systemImage: "number") {
+                    Button(isRound ? "Go to Round" : "Go to Row", systemImage: "number") {
                         rowText = ""
                         settingRow = true
                     }
                 }
                 Menu("Go to Section", systemImage: "list.number") {
                     ForEach(plan.sections, id: \.tap) { section in
-                        Button(section.name) { project.jump(toTap: section.tap, following: plan) }
+                        Button(Loc.section(section.name)) { project.jump(toTap: section.tap, following: plan) }
                     }
                 }
             } else {
@@ -674,7 +681,7 @@ struct MaterialsView: View {
                         ForEach(plan.abbreviations, id: \.term) { entry in
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(entry.term).font(.headline)
-                                Text(entry.meaning).foregroundStyle(Theme.secondary)
+                                Text(Loc.text(entry.meaning)).foregroundStyle(Theme.secondary)
                             }
                         }
                     }

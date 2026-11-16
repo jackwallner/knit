@@ -1,0 +1,259 @@
+1	Projekte
+2	Muster
+3	Vorrat
+4	Fertig
+5	Neues Projekt
+6	Mehr
+7	Ravel bewerten
+8	Feedback senden
+9	Hilfe
+10	%@ löschen?
+11	Projekt löschen
+12	Name
+13	Abbrechen
+14	Anschlagen
+15	Reihenzähler starten
+16	Muster ansehen
+17	Reihe %lld
+18	Ohne Titel
+19	Ravel konnte deine Projekte nicht öffnen
+20	Sie sind noch auf diesem %@. Starte es neu und öffne Ravel dann erneut.
+21	Hilfe holen
+22	Garn
+23	Nadeln & Häkelnadeln
+24	Zum Vorrat hinzufügen
+25	Nadel oder Häkelnadel
+26	Garn hinzufügen
+27	Nadeln hinzufügen
+28	one=%lld Knäuel|other=%lld Knäuel
+29	Meter pro Knäuel
+30	Yards pro Knäuel
+31	Marke
+32	Farbe
+33	Faser
+34	Farbbad
+35	Garnstärke
+36	Knäuel
+37	Fertig
+38	Art
+39	Größe
+40	Länge
+41	Beliebig
+42	Häkelnadel
+43	Nadel
+44	Lace
+45	Fingering
+46	Sport
+47	DK
+48	Worsted
+49	Aran
+50	Bulky
+51	Super Bulky
+52	Rundstricknadel
+53	Stricknadel
+54	Nadelspiel
+55	Häkelnadel
+56	Zähler auf 0 zurücksetzen?
+57	Zähler zurücksetzen
+58	Anleitung aus diesem Projekt entfernen?
+59	Anleitung entfernen
+60	Reihen pro Rapport
+61	Reihen
+62	Festlegen
+63	Der Rapport beginnt mit deiner nächsten Reihe.
+64	Reihe
+65	Runde
+66	Reihe in diesem Abschnitt
+67	Runde in diesem Abschnitt
+68	Name des Zählers
+69	Umbenennen
+70	Hinzufügen
+71	Zähler entfernen?
+72	Zähler entfernen
+73	Diese Anleitung konnte nicht geöffnet werden
+74	%lld von %lld
+75	one=%lld Masche|other=%lld Maschen
+76	Eins abziehen von %@
+77	Eins addieren zu %@
+78	Reihe hinzufügen
+79	Reihe %1$lld von %2$lld im Rapport
+80	Eine Reihe zurück
+81	Details
+82	Material
+83	Zu Reihe springen
+84	Zu Runde springen
+85	Zu Abschnitt springen
+86	Anleitung hinzufügen
+87	Anleitung ersetzen
+88	Fotos hinzufügen
+89	Reihe festlegen
+90	Rapport
+91	Zähler
+92	Auf 0 setzen
+93	Entfernen
+94	Zähler hinzufügen
+95	Als aktiv markieren
+96	Als fertig markieren
+97	Projektoptionen
+98	Nadeln
+99	Notizen
+100	Nicht aus dem Vorrat
+101	Garn aus dem Vorrat wählen
+102	Abkürzungen
+103	Krapprot
+104	Ringelblume
+105	Moos
+106	Tannengrün
+107	Indigo
+108	Pflaume
+109	Hafer
+110	Anthrazit
+111	Beliebt
+112	Gratis
+113	Mützen
+114	Schals & Loops
+115	Decken & Wohnen
+116	Accessoires
+117	Pullover
+118	Anfänger
+119	Einfach
+120	Fortgeschritten
+121	Maschenprobe
+122	Maschen auf %@
+123	Reihen auf %@
+124	Muster freischalten
+125	Das Diagramm passt nicht zu dieser Maschenprobe
+126	Kopf
+127	Breite
+128	Umfang
+129	Höhe
+130	Seite
+131	Hand
+132	Wade
+133	Spannweite
+134	Brustumfang
+135	Körperlänge
+136	Ärmellänge
+137	Baby
+138	Kleinkind
+139	Kind
+140	Klein
+141	Mittel
+142	Groß
+143	Klassisch
+144	Lang
+145	Eng
+146	Endlos
+147	Kinderwagen
+148	Krippe
+149	Überwurf
+150	Erwachsene
+151	Weit
+152	Mini-Tuch
+153	Stola
+154	Gerippte Mütze
+155	Slouch-Mütze
+156	Mütze mit Rollrand
+157	Kraus-rechts-Schal
+158	Gerippter Schal
+159	Perlmuster-Schal
+160	Gerippter Loop
+161	Perlmuster-Loop
+162	Decke mit Rand
+163	Kraus-rechts-Decke
+164	Diagonales Spültuch
+165	Ohrenwärmer
+166	Pulswärmer
+167	Beinstulpen
+168	Dreieckstuch
+169	Raglanpullover
+170	Dicker Loop
+171	Halstuch
+172	Zopfmuster-Stirnband
+173	Sturmhaube
+174	Neu
+175	Geschenkzeit
+176	Tiefer Winter
+177	Frühlingslagen
+178	Sommerbaumwolle
+179	Reisestrickerei
+180	Pulloverwetter
+181	Erste kalte Tage
+182	Bündchen
+183	Rumpf
+184	Krone
+185	Abschluss
+186	Schal
+187	Loop
+188	Untere Blende
+189	Obere Blende
+190	Decke
+191	Zunahmen
+192	Abnahmen
+193	Band
+194	Tuch
+195	Mittelteil
+196	Hals
+197	Gesichtsöffnung
+198	Oberteil
+199	Gesichtsrand
+200	Halsblende
+201	Rückenausschnitt
+202	Passe
+203	Teilung
+204	Erster Ärmel
+205	Zweiter Ärmel
+206	Bündchen
+207	Erstes Ohr
+208	Zweites Ohr
+209	Pulswärmer %lld
+210	Beinstulpe %lld
+211	Daumenloch
+212	Oberhand
+213	Bein
+214	Knöchel
+215	Schließen
+216	Ravel Muster
+217	Jedes Muster der Bibliothek, passend zu deinen Maßen und deinem Garn geschrieben
+218	Pläne konnten nicht geladen werden
+219	Erneut versuchen
+220	Wiederherstellen
+221	Bedingungen
+222	Datenschutz
+223	Jährlich
+224	Monatlich
+225	Lebenslang
+226	%@ pro Jahr
+227	%@ pro Monat
+228	%@ einmalig
+229	Lebenslang kaufen
+230	one=Gratis für %lld Tag testen|other=Gratis für %lld Tage testen
+231	Abonnieren
+232	one=%lld Tag gratis.|other=%lld Tage gratis.
+233	Danach %@.
+234	%@.
+235	Verlängert sich, bis du in den Einstellungen kündigst. Ein Muster, das du angeschlagen hast, bleibt dir erhalten.
+236	Einmalige Zahlung von %@. Jedes Muster gehört dir für immer.
+237	Dein Kauf wartet auf Genehmigung
+238	Dein Kauf wurde abgeschlossen. Tippe auf „Wiederherstellen“, falls die Muster gesperrt bleiben.
+239	Der Kauf ist nicht zustande gekommen
+240	Für diese Apple-ID wurde kein Kauf gefunden
+241	Der App Store ist nicht erreichbar. Versuche es erneut, wenn du online bist.
+242	2 Maschen zusammenstricken
+243	2 Maschen einzeln rechts abheben, dann hinten verschränkt zusammenstricken
+244	Umschlag
+245	1 Masche zunehmen: den Querfaden zwischen den Maschen aufnehmen und hinten verschränkt rechts stricken
+246	1 Masche links geneigt zunehmen: den Querfaden von vorn aufnehmen und hinten verschränkt rechts stricken
+247	1 Masche rechts geneigt zunehmen: den Querfaden von hinten aufnehmen und vorn verschränkt rechts stricken
+248	6 Maschen Zopf nach vorn: 3 Maschen auf eine Zopfnadel abheben und vor die Arbeit legen, 3 Maschen rechts stricken, dann die 3 Maschen von der Zopfnadel rechts stricken
+249	Rechts stricken. K2 heißt 2 Maschen rechts stricken
+250	Links stricken. P2 heißt 2 Maschen links stricken
+251	Die Maschen nach dem * immer wieder arbeiten, so weit die Reihe es sagt
+252	Ein Ring auf der Nadel, der eine Stelle markiert. Beim Erreichen von der linken auf die rechte Nadel heben
+253	Die Nadeln in den Händen tauschen und in die andere Richtung zurückstricken
+254	Die erste angeschlagene Masche mit dem Arbeitsfaden stricken, um den Kreis zu schließen. Die Anschlagkante liegt flach um die Nadel und ist nicht verdreht
+255	Eine Schlinge aus dem Arbeitsfaden drehen und auf die rechte Nadel schieben. Jede Schlinge ist 1 Masche
+256	Die Nadel durch den Stoffrand stechen, den Faden umschlagen und eine Schlinge durchziehen. Jede Schlinge ist 1 Masche
+257	Beim Abketten rechte Maschen rechts und linke Maschen links stricken
+258	K1, M1L, rechts stricken bis 1 Masche vor dem nächsten Markierer, M1R, k1, Markierer abheben. Es nimmt 2 Maschen zu
+259	Eine deutsche verkürzte Reihe: den Faden vor der Arbeit lassen, die erste Masche links abheben, dann den Faden über die Nadel nach oben ziehen, sodass die Masche zwei Beine zeigt. Beide Beine beim Zurückkommen als eine Masche zusammenstricken

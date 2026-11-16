@@ -35,28 +35,48 @@ struct Offer: Identifiable, Equatable, Sendable {
 
     var termName: String {
         switch term {
-        case .yearly: "Yearly"
-        case .monthly: "Monthly"
-        case .lifetime: "Lifetime"
+        case .yearly: String(localized: "Yearly", comment: "Paywall plan name")
+        case .monthly: String(localized: "Monthly", comment: "Paywall plan name")
+        case .lifetime: String(localized: "Lifetime", comment: "Paywall plan name")
+        }
+    }
+
+    /// Stable across languages, for accessibility identifiers.
+    var slug: String {
+        switch term {
+        case .yearly: "yearly"
+        case .monthly: "monthly"
+        case .lifetime: "lifetime"
         }
     }
 
     var priceLine: String {
         switch term {
-        case .yearly: "\(price) a year"
-        case .monthly: "\(price) a month"
-        case .lifetime: "\(price) once"
+        case .yearly: String(localized: "\(price) a year", comment: "Plan price; the argument is a localized price such as $39.99")
+        case .monthly: String(localized: "\(price) a month", comment: "Plan price; the argument is a localized price")
+        case .lifetime: String(localized: "\(price) once", comment: "Lifetime price, paid one time; the argument is a localized price")
         }
     }
 
     var action: String {
-        if term == .lifetime { return "Buy Lifetime" }
-        return trialDays > 0 ? "Try Free for \(trialDays) Days" : "Subscribe"
+        if term == .lifetime { return String(localized: "Buy Lifetime", comment: "Paywall button for the one-time purchase") }
+        return trialDays > 0
+            ? String(localized: "Try Free for \(trialDays) Days", comment: "Paywall button; the argument is the number of free trial days")
+            : String(localized: "Subscribe", comment: "Paywall button")
     }
 
+    /// The terms under the button, in sentences a translator can shape freely: a free-days sentence (when there is a trial),
+    /// the price, and the renewal terms.
     var disclosure: String {
-        if term == .lifetime { return "One payment of \(price). Every pattern is yours for good." }
-        return (trialDays > 0 ? "\(trialDays) days free, then \(priceLine)." : "\(priceLine).") + " Renews until you cancel in Settings. A pattern you cast on is yours to keep."
+        if term == .lifetime {
+            return String(localized: "One payment of \(price). Every pattern is yours for good.", comment: "Lifetime terms; the argument is a localized price")
+        }
+        let renewal = String(localized: "Renews until you cancel in Settings. A pattern you cast on is yours to keep.", comment: "Subscription terms, required by App Review")
+        let charge = trialDays > 0
+            ? String(localized: "Then \(priceLine).", comment: "After the free trial; the argument is a price such as $39.99 a year")
+            : String(localized: "\(priceLine).", comment: "Subscription price as a sentence; the argument is a price such as $39.99 a year")
+        let free = trialDays > 0 ? [String(localized: "\(trialDays) days free.", comment: "Free trial length; the argument is a number of days")] : []
+        return (free + [charge, renewal]).joined(separator: " ")
     }
 
     #if DEBUG
