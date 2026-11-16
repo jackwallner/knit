@@ -30,6 +30,13 @@ struct ProjectView: View {
     @State private var confirmingTallyRemove = false
     /// Rows knitted since this project was opened.
     @State private var rowsThisVisit = 0
+    /// The space the project has, which picks its layout.
+    @State private var size = CGSize.zero
+
+    /// An iPad held sideways: the reading side (count, instruction or PDF) on the leading half, the work beside it.
+    private var sideBySide: Bool { size.width >= Layout.sideBySide && size.width > size.height }
+    /// An iPad sits further from the eye than a phone in the hand, so the count and the instruction set larger.
+    private var far: Bool { min(size.width, size.height) >= Layout.farReading }
 
     private var patternURL: URL? { project.patternFile.map(PatternStore.url(for:)) }
 
@@ -43,30 +50,12 @@ struct ProjectView: View {
             if let plan {
                 guided(plan)
             } else if let patternURL {
-                VStack(spacing: 0) {
-                    PatternView(url: patternURL, project: project)
-                    work(height: 112, tags: false, taps: true)
-                        .overlay(alignment: .trailing) { countPill.padding(.trailing, 20).padding(.top, 22) }
-                        .overlay(alignment: .leading) { undo.padding(.leading, 8).padding(.top, 22) }
-                }
-                .ignoresSafeArea(edges: .bottom)
+                reader(patternURL)
             } else {
-                VStack(spacing: 0) {
-                    VStack(spacing: 18) {
-                        Spacer(minLength: 0)
-                        count(size: 128)
-                        if project.isFinished { finishedMark } else { repeatDots }
-                        Spacer(minLength: 0)
-                    }
-                    .containerRelativeFrame(.vertical) { length, _ in length * 0.4 }
-                    work(height: nil, tags: true)
-                }
-                .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
-                .ignoresSafeArea(edges: .bottom)
-                .contentShape(Rectangle())
-                .onTapGesture(perform: knit)
+                counter
             }
         }
+        .onGeometryChange(for: CGSize.self) { $0.size } action: { size = $0 }
         .safeAreaInset(edge: .top, spacing: 0) { if project.tallyOn { tallyBar } }
         .background(Theme.paper)
         .overlay { if bindingPhotos { ProgressView().controlSize(.large).padding(28).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous)) } }
@@ -172,26 +161,103 @@ struct ProjectView: View {
         }
     }
 
-    /// A library pattern: the instruction for this row on top, the work below. Tap anywhere for the next row.
-    private func guided(_ plan: PatternPlan) -> some View {
-        VStack(spacing: 0) {
-            // The piece and its instruction sit together as one group, centered in the space above the work.
-            VStack(spacing: 20) {
-                // The piece itself, filling with fabric as the pattern goes on: where the knitter is in the whole.
-                if let silhouette = project.silhouette(plan) {
-                    Garment(silhouette: silhouette, yarn: project.color,
-                            progress: plan.totalTaps > 0 ? Double(project.rows) / Double(plan.totalTaps) : 0,
-                            colorwork: plan.palette == nil ? nil : plan)
-                        .frame(width: 120, height: 120)
-                        .motion(.smooth, value: project.rows)
+    /// A plain counter: the count over the work, or beside it on an iPad held sideways. Tap anywhere for a row.
+    private var counter: some View {
+        let readout = VStack(spacing: 18) {
+            count(size: far ? 200 : 128)
+            if project.isFinished { finishedMark } else { repeatDots }
+        }
+        return Group {
+            if sideBySide {
+                HStack(spacing: 0) {
+                    readout.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    work(height: nil, tags: true).frame(width: (size.width * 0.5).rounded())
                 }
-                instruction(plan).layoutPriority(1)
+            } else {
+                VStack(spacing: 0) {
+                    VStack(spacing: 18) {
+                        Spacer(minLength: 0)
+                        readout
+                        Spacer(minLength: 0)
+                    }
+                    .containerRelativeFrame(.vertical) { length, _ in length * 0.4 }
+                    work(height: nil, tags: true)
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.horizontal, 24)
-            .padding(.top, 8)
-            .containerRelativeFrame(.vertical) { length, _ in length * 0.46 }
-            work(height: nil, tags: true, rows: plan.knitRows(upTo: project.rows))
+        }
+        .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
+        .ignoresSafeArea(edges: .bottom)
+        .contentShape(Rectangle())
+        .onTapGesture(perform: knit)
+    }
+
+    /// A PDF pattern. On a phone the work is a strip under the page; on an iPad held sideways the page
+    /// takes the leading side and a counter of its own stands beside it, the whole of it one tap target.
+    @ViewBuilder
+    private func reader(_ url: URL) -> some View {
+        if sideBySide {
+            HStack(spacing: 0) {
+                PatternView(url: url, project: project)
+                Rectangle().fill(.primary.opacity(0.08)).frame(width: 1)
+                VStack(spacing: 0) {
+                    VStack(spacing: 14) {
+                        count(size: 96)
+                        if project.isFinished { finishedMark } else { repeatDots }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 28)
+                    work(height: nil, tags: true)
+                }
+                .frame(width: min(440, (size.width * 0.34).rounded()))
+                .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
+                .contentShape(Rectangle())
+                .onTapGesture(perform: knit)
+            }
+            .ignoresSafeArea(edges: .bottom)
+        } else {
+            VStack(spacing: 0) {
+                PatternView(url: url, project: project)
+                work(height: 112, tags: false, taps: true)
+                    .overlay(alignment: .trailing) { countPill.padding(.trailing, 20).padding(.top, 22) }
+                    .overlay(alignment: .leading) { undo.padding(.leading, 8).padding(.top, 22) }
+            }
+            .ignoresSafeArea(edges: .bottom)
+        }
+    }
+
+    /// A library pattern: the instruction for this row over the work, or beside it on an iPad held sideways.
+    /// Tap anywhere for the next row.
+    private func guided(_ plan: PatternPlan) -> some View {
+        // The piece and its instruction sit together as one group, centered in the space it has.
+        let reading = VStack(spacing: far ? 32 : 20) {
+            // The piece itself, filling with fabric as the pattern goes on: where the knitter is in the whole.
+            if let silhouette = project.silhouette(plan) {
+                Garment(silhouette: silhouette, yarn: project.color,
+                        progress: plan.totalTaps > 0 ? Double(project.rows) / Double(plan.totalTaps) : 0,
+                        colorwork: plan.palette == nil ? nil : plan)
+                    .frame(width: far ? 200 : 120, height: far ? 200 : 120)
+                    .motion(.smooth, value: project.rows)
+            }
+            instruction(plan).layoutPriority(1)
+        }
+        // A line of pattern stays a readable length on a wide screen.
+        .frame(maxWidth: 640)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal, far ? 40 : 24)
+        .padding(.top, 8)
+        let fabric = work(height: nil, tags: true, rows: plan.knitRows(upTo: project.rows))
+        return Group {
+            if sideBySide {
+                HStack(spacing: 0) {
+                    reading.padding(.bottom, 8)
+                    fabric.frame(width: (size.width * 0.45).rounded())
+                }
+            } else {
+                VStack(spacing: 0) {
+                    reading.containerRelativeFrame(.vertical) { length, _ in length * 0.46 }
+                    fabric
+                }
+            }
         }
         .overlay(alignment: .bottomLeading) { undo.padding(.leading, 8) }
         .ignoresSafeArea(edges: .bottom)
@@ -211,7 +277,7 @@ struct ProjectView: View {
             ].compactMap { $0 }.joined(separator: " · ")
             VStack(spacing: 16) {
                 Text(step.section)
-                    .font(.footnote.weight(.semibold))
+                    .font(far ? .subheadline.weight(.semibold) : .footnote.weight(.semibold))
                     .textCase(.uppercase)
                     .tracking(1.4)
                     .foregroundStyle(Theme.secondary)
@@ -219,12 +285,12 @@ struct ProjectView: View {
                 // A long row, such as a sweater's divide, sets smaller so it stays whole at large text sizes.
                 // The star stays on the line with "repeat from", never alone at the start of the next.
                 Text(text.replacingOccurrences(of: "from *", with: "from\u{00A0}*"))
-                    .font(Theme.display(text.count > 140 ? 20 : text.count > 70 ? 24 : 30))
+                    .font(Theme.display((text.count > 140 ? 20 : text.count > 70 ? 24 : 30) * (far ? 1.4 : 1)))
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.4)
                     .accessibilityIdentifier("guide.instruction")
                 Text(detail)
-                    .font(.subheadline)
+                    .font(far ? .title3 : .subheadline)
                     .monospacedDigit()
                     .foregroundStyle(Theme.secondary)
                     .contentTransition(.numericText(value: Double(spot.row)))
@@ -234,7 +300,7 @@ struct ProjectView: View {
             .motion(.snappy, value: project.rows)
         } else {
             Text("Finished")
-                .font(Theme.display(44))
+                .font(Theme.display(far ? 60 : 44))
                 .frame(maxWidth: .infinity)
         }
     }
@@ -260,6 +326,8 @@ struct ProjectView: View {
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 4)
+        // Plus and minus stay within reach of each other on a wide screen.
+        .frame(maxWidth: 520)
         .frame(maxWidth: .infinity)
         .background(Theme.paper)
         .sensoryFeedback(.impact(weight: .light), trigger: project.tallyCount)

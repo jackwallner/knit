@@ -9,14 +9,16 @@ struct LibraryView: View {
     }.map { [$0] } ?? []
 
     @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.horizontalSizeClass) private var sizeClass
     private let trending = Trending.shared
     private let topical = TopicalStore.shared
 
-    /// Two tiles a row on a phone, more on a wide screen, one at the accessibility text sizes so names never get cut.
+    /// Two tiles a row on a phone, four to six on an iPad, one at the accessibility text sizes on a phone so names
+    /// never get cut, two on an iPad.
     private var columns: [GridItem] {
-        typeSize.isAccessibilitySize
-            ? [GridItem(.flexible())]
-            : [GridItem(.adaptive(minimum: 150, maximum: 240), spacing: 16)]
+        let regular = sizeClass == .regular
+        if typeSize.isAccessibilitySize { return Array(repeating: GridItem(.flexible(), spacing: 20), count: regular ? 2 : 1) }
+        return [GridItem(.adaptive(minimum: regular ? 190 : 150, maximum: 240), spacing: regular ? 20 : 16)]
     }
 
     var body: some View {
@@ -125,6 +127,8 @@ struct DesignView: View {
     @State private var gauge: Gauge
     @State private var opened: Project?
     @State private var showingPaywall = false
+    /// Wide enough for the piece on the leading side and its settings beside it.
+    @State private var wide = false
     private let subscription = SubscriptionService.shared
 
     init(item: LibraryItem) {
@@ -139,76 +143,100 @@ struct DesignView: View {
 
     var body: some View {
         let plan = plan
-        ScrollView {
-            VStack(alignment: .leading, spacing: 32) {
-                VStack(spacing: 14) {
-                    Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
-                        .frame(height: 210)
-                    Text("\(item.level.rawValue) · \(Sizing.yardage(plan.yards))")
-                        .font(.subheadline)
-                        .monospacedDigit()
-                        .foregroundStyle(Theme.secondary)
-                        .contentTransition(.numericText(value: Double(plan.yards)))
-                        .motion(.snappy, value: plan.yards)
+        Group {
+            if wide {
+                // An iPad: the piece on the leading side, the settings and Cast On in a column beside it.
+                HStack(spacing: 0) {
+                    hero(plan, height: 420).frame(maxWidth: .infinity, maxHeight: .infinity).padding(.horizontal, 32)
+                    ScrollView { settings(plan).padding(.horizontal, 28).padding(.vertical, 24) }
+                        .safeAreaInset(edge: .bottom) { castOnBar }
+                        .frame(width: 480)
                 }
-                .frame(maxWidth: .infinity)
-
-                group("Size") {
-                    chips(design.sizes.map(\.name), selected: design.sizes.first { $0.values == values }?.name) { name in
-                        if let size = design.sizes.first(where: { $0.name == name }) { values = size.values }
+            } else {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 32) {
+                        hero(plan, height: 210).frame(maxWidth: .infinity)
+                        settings(plan)
                     }
-                    ForEach(design.measures) { measure in
-                        adjuster(measure.label, value: Binding(get: { values[measure.key] ?? measure.range.lowerBound }, set: { values[measure.key] = $0 }), range: measure.range, step: measure.step, length: true)
-                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 8)
+                    .padding(.bottom, 24)
                 }
-
-                group("Gauge") {
-                    chips(item.weights.map(\.label), selected: item.weights.first { $0.gauge == gauge }?.label) { label in
-                        if let weight = item.weights.first(where: { $0.label == label }) { gauge = weight.gauge }
-                    }
-                    adjuster("Stitches over \(Sizing.swatch())", value: $gauge.stitches, range: item.stitchRange, step: 0.5)
-                    adjuster("Rows over \(Sizing.swatch())", value: $gauge.rows, range: item.rowRange, step: 1)
-                }
-
-                group("Materials") {
-                    Text(plan.finished).frame(maxWidth: .infinity, alignment: .leading)
-                    ForEach(plan.materials, id: \.self) { line in
-                        Text(line).frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                }
+                .readableWidth(600)
+                .safeAreaInset(edge: .bottom) { castOnBar.frame(maxWidth: 600) }
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 8)
-            .padding(.bottom, 24)
         }
+        .onGeometryChange(for: Bool.self) { $0.size.width >= Layout.sideBySide } action: { wide = $0 }
         .background(Theme.paper)
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
-        .safeAreaInset(edge: .bottom) {
-            let fits = !subscription.canOpen(item) || item.fits(measures: values, gauge: gauge)
-            Button(action: castOn) {
-                Text(!subscription.canOpen(item) ? "Unlock Patterns" : fits ? "Cast On" : "Chart Does Not Fit This Gauge")
-                    .font(.headline)
-                    .foregroundStyle(Theme.onAccent)
-                    .frame(maxWidth: .infinity, minHeight: 54)
-                    .background(Color.accentColor.opacity(fits ? 1 : 0.35), in: Capsule())
-            }
-            .disabled(!fits)
-            .accessibilityIdentifier("design.castOn")
-            .padding(.horizontal, 20)
-            .padding(.vertical, 10)
-            // The page fades into the button instead of being cut off by it.
-            .background(alignment: .top) {
-                LinearGradient(colors: [Theme.paper.opacity(0), Theme.paper], startPoint: .top, endPoint: .bottom)
-                    .frame(height: 28)
-                    .offset(y: -28)
-                    .allowsHitTesting(false)
-            }
-            .background(Theme.paper)
-        }
         .navigationDestination(item: $opened) { ProjectView(project: $0) }
         .sheet(isPresented: $showingPaywall) { PaywallView() }
+    }
+
+    private func hero(_ plan: PatternPlan, height: CGFloat) -> some View {
+        VStack(spacing: 14) {
+            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
+                .frame(height: height)
+            Text("\(item.level.rawValue) · \(Sizing.yardage(plan.yards))")
+                .font(.subheadline)
+                .monospacedDigit()
+                .foregroundStyle(Theme.secondary)
+                .contentTransition(.numericText(value: Double(plan.yards)))
+                .motion(.snappy, value: plan.yards)
+        }
+    }
+
+    private func settings(_ plan: PatternPlan) -> some View {
+        VStack(alignment: .leading, spacing: 32) {
+            group("Size") {
+                chips(design.sizes.map(\.name), selected: design.sizes.first { $0.values == values }?.name) { name in
+                    if let size = design.sizes.first(where: { $0.name == name }) { values = size.values }
+                }
+                ForEach(design.measures) { measure in
+                    adjuster(measure.label, value: Binding(get: { values[measure.key] ?? measure.range.lowerBound }, set: { values[measure.key] = $0 }), range: measure.range, step: measure.step, length: true)
+                }
+            }
+
+            group("Gauge") {
+                chips(item.weights.map(\.label), selected: item.weights.first { $0.gauge == gauge }?.label) { label in
+                    if let weight = item.weights.first(where: { $0.label == label }) { gauge = weight.gauge }
+                }
+                adjuster("Stitches over \(Sizing.swatch())", value: $gauge.stitches, range: item.stitchRange, step: 0.5)
+                adjuster("Rows over \(Sizing.swatch())", value: $gauge.rows, range: item.rowRange, step: 1)
+            }
+
+            group("Materials") {
+                Text(plan.finished).frame(maxWidth: .infinity, alignment: .leading)
+                ForEach(plan.materials, id: \.self) { line in
+                    Text(line).frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+        }
+    }
+
+    private var castOnBar: some View {
+        let fits = !subscription.canOpen(item) || item.fits(measures: values, gauge: gauge)
+        return Button(action: castOn) {
+            Text(!subscription.canOpen(item) ? "Unlock Patterns" : fits ? "Cast On" : "Chart Does Not Fit This Gauge")
+                .font(.headline)
+                .foregroundStyle(Theme.onAccent)
+                .frame(maxWidth: .infinity, minHeight: 54)
+                .background(Color.accentColor.opacity(fits ? 1 : 0.35), in: Capsule())
+        }
+        .disabled(!fits)
+        .accessibilityIdentifier("design.castOn")
+        .padding(.horizontal, 20)
+        .padding(.vertical, 10)
+        // The page fades into the button instead of being cut off by it.
+        .background(alignment: .top) {
+            LinearGradient(colors: [Theme.paper.opacity(0), Theme.paper], startPoint: .top, endPoint: .bottom)
+                .frame(height: 28)
+                .offset(y: -28)
+                .allowsHitTesting(false)
+        }
+        .background(Theme.paper)
     }
 
     private func castOn() {
