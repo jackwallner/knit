@@ -67,7 +67,7 @@ struct ProjectsView: View {
             // `-OpenFirst` lands on the newest project and `-OpenProject <name>` on a named one, for screenshots.
             .task {
                 guard path.isEmpty else { return }
-                if let name = UserDefaults.standard.string(forKey: "OpenProject"), let match = projects.first(where: { $0.name == name }) {
+                if let name = UserDefaults.standard.string(forKey: "OpenProject"), let match = projects.first(where: { $0.name == name || $0.name == Persistence.demoName(name) }) {
                     path = [match]
                 } else if ProcessInfo.processInfo.arguments.contains("-OpenFirst"), let first = active.first {
                     path = [first]

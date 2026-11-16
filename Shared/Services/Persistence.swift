@@ -25,27 +25,37 @@ enum Persistence {
     }
 
     #if DEBUG
+    /// The seed reads in the app's language, so localized screenshots show no English sample data.
+    /// English keeps the names the UI tests and the English screenshots use.
+    private static var english: Bool { Bundle.main.preferredLocalizations.first?.hasPrefix("en") ?? true }
+
+    /// A seeded project's name in the app's language; `-OpenProject` takes the English name in any language.
+    static func demoName(_ english: String) -> String {
+        guard !Self.english else { return english }
+        return Loc.text(["Raglan Sweater": "Raglan Pullover", "Baby Blanket": "Garter Blanket"][english] ?? english)
+    }
+
     /// `-SeedDemo`: sample data for screenshots and visual checks.
     @MainActor
     static func seedDemo(_ context: ModelContext) {
-        let sweater = Project(name: "Raglan Sweater", rows: 44, color: .madder, createdAt: .now)
+        let sweater = Project(name: demoName("Raglan Sweater"), rows: 44, color: .madder, createdAt: .now)
         sweater.repeatLength = 6
-        sweater.yarn = "Merino Worsted, Oatmeal"
-        sweater.needles = "US 7 circular"
+        sweater.yarn = english ? "Merino Worsted, Oatmeal" : "Merino, \(Loc.text("Oat"))"
+        sweater.needles = english ? "US 7 circular" : "US 7 \(Loc.text("Circular"))"
         if !ProcessInfo.processInfo.arguments.contains("-NoPattern") {
             sweater.patternFile = samplePattern()
             markSampleRow(3, on: sweater)
         }
-        let beanie = Project(name: "Ribbed Beanie", rows: 18, color: .spruce, createdAt: .now.addingTimeInterval(-86_400))
+        let beanie = Project(name: demoName("Ribbed Beanie"), rows: 18, color: .spruce, createdAt: .now.addingTimeInterval(-86_400))
         let hat = Design.ribbedBeanie
         beanie.follow(hat.plan(measures: hat.defaultSize.values, gauge: hat.weight.gauge), of: hat)
-        let blanket = Project(name: "Baby Blanket", rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
+        let blanket = Project(name: demoName("Baby Blanket"), rows: 240, color: .oat, createdAt: .now.addingTimeInterval(-30 * 86_400))
         blanket.finishedAt = .now.addingTimeInterval(-2 * 86_400)
-        let merino = Yarn(name: "Merino Worsted", brand: "Hillside Wool", colorway: "Oatmeal", weight: .worsted, skeins: 6, yardsPerSkein: 200)
+        let merino = Yarn(name: english ? "Merino Worsted" : "Merino", brand: "Hillside Wool", colorway: english ? "Oatmeal" : Loc.text("Oat"), weight: .worsted, skeins: 6, yardsPerSkein: 200)
         merino.fiber = "100% Merino"
         merino.dyeLot = "4471"
         sweater.tallyOn = true
-        sweater.tallyName = "Decreases"
+        sweater.tallyName = english ? "Decreases" : Loc.text("Decrease")
         sweater.tallyCount = 7
         [sweater, beanie, blanket].forEach(context.insert)
         context.insert(merino)
@@ -61,11 +71,11 @@ enum Persistence {
             project.rows = plan.steps.prefix(chartRow + 1).reduce(0) { $0 + $1.rows } + 1
             context.insert(project)
         }
-        context.insert(Yarn(name: "Sock Yarn", brand: "Tidewater", colorway: "Harbor", weight: .fingering, skeins: 2, yardsPerSkein: 425, createdAt: .now.addingTimeInterval(-86_400)))
+        context.insert(Yarn(name: english ? "Sock Yarn" : "Cashmere", brand: "Tidewater", colorway: english ? "Harbor" : Loc.text("Indigo"), weight: .fingering, skeins: 2, yardsPerSkein: 425, createdAt: .now.addingTimeInterval(-86_400)))
         context.insert(Needle(kind: .circular, millimeters: 4.5, lengthInches: 32))
         context.insert(Needle(kind: .doublePointed, millimeters: 3.25, createdAt: .now.addingTimeInterval(-86_400)))
         context.insert(Needle(kind: .hook, millimeters: 5.0, createdAt: .now.addingTimeInterval(-2 * 86_400)))
-        context.insert(Yarn(name: "Chunky Alpaca", colorway: "Charcoal", weight: .bulky, skeins: 3, createdAt: .now.addingTimeInterval(-2 * 86_400)))
+        context.insert(Yarn(name: english ? "Chunky Alpaca" : "Alpaca", colorway: Loc.text("Charcoal"), weight: .bulky, skeins: 3, createdAt: .now.addingTimeInterval(-2 * 86_400)))
     }
 
     private static let samplePage = CGRect(x: 0, y: 0, width: 420, height: 595)

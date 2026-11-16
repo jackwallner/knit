@@ -40,7 +40,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "counter-three-rows")
 
         QA.relaunch(app)
-        openProject(name, in: app)
+        openProject(name, name, in: app)
         XCTAssertTrue(counter.waitForExistence(timeout: 10))
         expect(counter, reads: "Row 3", "Reihe 3")
         QA.checkpoint(app, "counter-after-relaunch")
@@ -90,10 +90,10 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testReturnVisitToAProjectWithAPDF() {
         let app = XCUIApplication()
         QA.launch(app, arguments: ["-SeedDemo"])
-        let projects = app.staticTexts["Raglan Sweater"].firstMatch
+        let projects = app.staticTexts.matching(label("Raglan Sweater", "Raglanpullover")).firstMatch
         XCTAssertTrue(projects.waitForExistence(timeout: 15))
         QA.checkpoint(app, "projects-seeded")
-        openProject("Raglan Sweater", in: app)
+        openProject("Raglan Sweater", "Raglanpullover", in: app)
         XCTAssertTrue(app.buttons["counter.plus"].waitForExistence(timeout: 15))
         QA.checkpoint(app, "pdf-reader")
         tap(app.buttons["counter.plus"], "Add a row")
@@ -103,7 +103,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testInterruptedMidRowKeepsTheCount() {
         let app = XCUIApplication()
         QA.launch(app, arguments: ["-SeedDemo"])
-        openProject("Ribbed Beanie", in: app)
+        openProject("Ribbed Beanie", "Gerippte Mütze", in: app)
         let detail = app.staticTexts["guide.detail"]
         XCTAssertTrue(detail.waitForExistence(timeout: 15))
         QA.checkpoint(app, "guide-seeded")
@@ -160,8 +160,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         sleep(1)
     }
 
-    private func openProject(_ name: String, in app: XCUIApplication) {
-        let row = app.staticTexts[name].firstMatch
+    /// A seeded project by its English name or the German one the demo seed uses in German.
+    private func openProject(_ name: String, _ german: String, in app: XCUIApplication) {
+        let row = app.staticTexts.matching(label(name, german)).firstMatch
         XCTAssertTrue(row.waitForExistence(timeout: 15), "\(name) is not in Projects")
         row.tap()
     }
