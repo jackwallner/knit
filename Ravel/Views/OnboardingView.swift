@@ -14,13 +14,15 @@ struct OnboardingView: View {
 
     private var yearly: Offer? { subscription.offers.first { $0.term == .yearly } }
     private var onTrial: Bool { page == 2 }
+    /// On the trial page while the offer is still on its way: the button waits rather than skip the trial.
+    private var waitingForOffer: Bool { onTrial && yearly == nil && subscription.isLoading }
 
     var body: some View {
         VStack(spacing: 0) {
             // At the largest text sizes the page scrolls rather than clip.
             ViewThatFits(in: .vertical) {
-                content
-                ScrollView { content.padding(.vertical, 16) }
+                pageWithTerms
+                ScrollView { pageWithTerms.padding(.vertical, 16) }
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .id(page)
@@ -32,6 +34,16 @@ struct OnboardingView: View {
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
         .onChange(of: subscription.isPro) { _, isPro in if isPro { finish() } }
+    }
+
+    /// The page and, on the trial, its plan and terms at the foot, where they sit just above the button.
+    private var pageWithTerms: some View {
+        VStack(spacing: 0) {
+            content
+            terms
+                .padding(.horizontal, 24)
+                .padding(.bottom, 12)
+        }
     }
 
     @ViewBuilder private var content: some View {
@@ -50,7 +62,7 @@ struct OnboardingView: View {
                     .onAppear { knitted = 1 }
             }
         default:
-            screen(yearly?.trialDays ?? 0 > 0 ? "Try every pattern free" : "Ravel Patterns") {
+            screen("Unlock Patterns") {
                 shelf
             } below: {
                 VStack(alignment: .leading, spacing: 14) {
@@ -107,44 +119,56 @@ struct OnboardingView: View {
 
     // MARK: - The bar
 
-    /// Everything that changes height sits above the button, and the footer row is laid out on every page,
-    /// so the button keeps one frame from the first page to the trial.
-    private var bar: some View {
-        VStack(spacing: 0) {
+    @ViewBuilder private var terms: some View {
+        if onTrial {
             VStack(spacing: 10) {
-                if onTrial, let yearly {
-                    // The plan and its full terms stay in view at all times, in the body's own weight.
+                if let yearly {
+                    // The plan by name, its price as the largest line about money on the page, and the full terms.
                     VStack(spacing: 4) {
                         Text(verbatim: "\(String(localized: "Ravel Patterns")) · \(yearly.termName)")
                             .font(.subheadline.weight(.semibold))
+                        Text(yearly.priceLine)
+                            .font(.title3.weight(.semibold))
                         Text(yearly.disclosure)
                             .font(.subheadline)
                     }
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityElement(children: .combine)
-                    if let message {
-                        Text(message)
-                            .font(.footnote)
-                            .foregroundStyle(Theme.secondary)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
                 }
-                if onTrial {
-                    Button("Get Started") { finish() }
-                        .font(.body)
+                if let message {
+                    Text(message)
+                        .font(.footnote)
                         .foregroundStyle(Theme.secondary)
-                        .frame(minHeight: 44)
-                        .accessibilityIdentifier("onboarding.skip")
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
+            }
+            .frame(maxWidth: .infinity)
+        }
+    }
+
+    /// Laid out the same on every page, the free way out and the footer only shown on the trial,
+    /// so the button keeps one frame from the first page to the last.
+    private var bar: some View {
+        VStack(spacing: 0) {
+            VStack(spacing: 10) {
+                Button("Get Started") { finish() }
+                    .font(.body)
+                    .foregroundStyle(Theme.secondary)
+                    .lineLimit(1)
+                    .frame(minHeight: 44)
+                    .opacity(onTrial ? 1 : 0)
+                    .allowsHitTesting(onTrial)
+                    .accessibilityHidden(!onTrial)
+                    .accessibilityIdentifier("onboarding.skip")
                 dots
             }
             .frame(maxWidth: .infinity)
 
             Button(action: primary) {
                 Group {
-                    if working { ProgressView().tint(Theme.onAccent) } else { Text(primaryTitle) }
+                    if working || waitingForOffer { ProgressView().tint(Theme.onAccent) } else { Text(primaryTitle) }
                 }
                 .font(.headline)
                 .lineLimit(1)
@@ -154,7 +178,7 @@ struct OnboardingView: View {
                 .frame(maxWidth: .infinity, minHeight: 54)
                 .background(Color.accentColor, in: Capsule())
             }
-            .disabled(working)
+            .disabled(working || waitingForOffer)
             .padding(.top, 16)
             .accessibilityIdentifier("onboarding.next")
 
@@ -166,6 +190,8 @@ struct OnboardingView: View {
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 8)
+        // The bar never scrolls: past this size its text would crowd the page out.
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
     }
 
     private var dots: some View {
@@ -210,6 +236,7 @@ struct OnboardingView: View {
             withAnimation(.smooth(duration: 0.35)) { page += 1 }
             return
         }
+        guard !waitingForOffer else { return }
         guard let yearly else {
             // Offline or still loading: no offer to make, so the free app opens. The paywall is a tap away later.
             finish()

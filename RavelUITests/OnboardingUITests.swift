@@ -40,7 +40,7 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertTrue(next.waitForNonExistence(timeout: 15))
         app.tabBars.buttons["Patterns"].tap()
         let design = app.buttons["design.raglanPullover"]
-        XCTAssertTrue(app.buttons["design.garterScarf"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["design.ribbedBeanie"].waitForExistence(timeout: 10))
         for _ in 0..<12 where !design.isHittable { app.swipeUp() }
         design.tap()
         XCTAssertEqual(app.buttons["design.castOn"].label, "Cast On")
