@@ -165,6 +165,25 @@ enum GarmentShape {
             path.addQuadCurve(to: p(0.1, 0.87), control: p(0.5, 0.78))
             path.addQuadCurve(to: p(0.1, 0.13), control: p(0.19, 0.5))
             path.closeSubpath()
+        case .bonnet:
+            // A hood seen from the front, open around the face and under the chin, with a pompom tie at each corner.
+            let hood = CGMutablePath()
+            hood.move(to: p(0.14, 0.74))
+            hood.addCurve(to: p(0.5, 0.1), control1: p(0.08, 0.3), control2: p(0.26, 0.1))
+            hood.addCurve(to: p(0.86, 0.74), control1: p(0.74, 0.1), control2: p(0.92, 0.3))
+            hood.closeSubpath()
+            var whole: CGPath = hood.subtracting(CGPath(ellipseIn: box(0.27, 0.3, 0.46, 0.62), transform: nil))
+            for x in [CGFloat(0.165), 0.815] {
+                whole = whole.union(CGPath(rect: box(x - 0.012, 0.72, 0.024, 0.14), transform: nil))
+                whole = whole.union(CGPath(ellipseIn: box(x - 0.05, 0.84, 0.1, 0.1), transform: nil))
+            }
+            path.addPath(whole)
+        case .beret:
+            // A wide, flat crown on a narrow band, with the little stem at its center.
+            let top = CGPath(ellipseIn: box(0.06, 0.26, 0.88, 0.4), transform: nil)
+            let band = CGPath(roundedRect: box(0.24, 0.58, 0.52, 0.14), cornerWidth: unit * 0.05, cornerHeight: unit * 0.05, transform: nil)
+            let stem = CGPath(roundedRect: box(0.485, 0.2, 0.03, 0.08), cornerWidth: unit * 0.012, cornerHeight: unit * 0.012, transform: nil)
+            path.addPath(top.union(band).union(stem))
         case .ears:
             // A beanie with two round ears on its crown: the ears merge into the dome, the brim sits apart.
             var top = dome(in: rect)

@@ -54,10 +54,24 @@ final class TopicalStore {
         // Kept for the next launch: swapping the shelf under a knitter who is looking at it shifts the whole screen.
     }
 
-    func item(_ id: String) -> Topical? { items.first { $0.id == id || $0.designRaw == id } }
+    /// The colorwork designs the library ships with: the record format the site uses, bundled, with no season.
+    static let collection: [Topical] = {
+        guard let url = Bundle.main.url(forResource: "collection", withExtension: "json"), let data = try? Data(contentsOf: url) else { return [] }
+        return Topical.parse(data).compactMap(\.topical).map { record in
+            var topical = record
+            topical.bundled = true
+            return topical
+        }
+    }()
+
+    func item(_ id: String) -> Topical? {
+        items.first { $0.id == id || $0.designRaw == id } ?? Self.collection.first { $0.id == id || $0.designRaw == id }
+    }
 
     /// A record by id whether or not its season is on, for corrections.
-    func record(_ id: String) -> Topical? { published.first { $0.id == id || $0.designRaw == id } }
+    func record(_ id: String) -> Topical? {
+        published.first { $0.id == id || $0.designRaw == id } ?? Self.collection.first { $0.id == id || $0.designRaw == id }
+    }
 }
 
 /// A design in the library: one of the built-in patterns, or a topical one from the site.
@@ -86,7 +100,15 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
     var title: String {
         switch self {
         case .builtIn(let design): design.title
-        case .topical(let topical): topical.title
+        case .topical(let topical): topical.bundled ? String(localized: String.LocalizationValue(topical.title)) : topical.title
+        }
+    }
+
+    /// The sample photo's asset name, for the designs that have one.
+    var photo: String? {
+        switch self {
+        case .builtIn(let design): design.photo
+        case .topical(let topical): topical.bundled ? "sample-\(topical.id)" : nil
         }
     }
 

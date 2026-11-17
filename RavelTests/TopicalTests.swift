@@ -9,6 +9,7 @@ final class TopicalTests: XCTestCase {
         var files: [URL] = []
         let published = Self.root.appending(path: "docs/designs.json")
         if FileManager.default.fileExists(atPath: published.path) { files.append(published) }
+        files.append(Self.root.appending(path: "Ravel/collection.json"))
         let drafts = Self.root.appending(path: "project-docs/topical/drafts")
         files += try FileManager.default.contentsOfDirectory(at: drafts, includingPropertiesForKeys: nil).filter { $0.pathExtension == "json" }
         return files.sorted { $0.path < $1.path }

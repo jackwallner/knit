@@ -17,6 +17,9 @@ struct Topical: Identifiable, Hashable, Sendable {
     /// Raised each time a published record is corrected, so projects cast on from it are offered the fix.
     /// Optional in the file and ignored by builds that do not know it.
     var revision = 0
+    /// Shipped inside the app as part of the library rather than published on the site: no season, a
+    /// translated name and a sample photo.
+    var bundled = false
 
     /// The newest record format this build reads. A record that needs more is skipped, so a feature added
     /// later can never be misread by an older app.

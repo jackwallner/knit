@@ -84,7 +84,9 @@ struct LibraryView: View {
 
     /// Topical designs lead the shelf, each with its own tag, then the list from the site.
     private var shelved: [Shelved] {
-        topical.items.map { Shelved(item: .topical($0), tag: $0.tag) } + trending.items.map { Shelved(item: .builtIn($0.design), tag: $0.tag) }
+        topical.items.map { Shelved(item: .topical($0), tag: $0.tag) }
+            + TopicalStore.collection.filter { $0.tag == "New" }.map { Shelved(item: .topical($0), tag: $0.tag) }
+            + trending.items.map { Shelved(item: .builtIn($0.design), tag: $0.tag) }
     }
 
     private struct Shelved: Identifiable {
@@ -93,9 +95,15 @@ struct LibraryView: View {
         var id: String { item.id }
     }
 
-    /// A shelf's designs: the library's own, then the topical ones on its shapes, which already lead Trending.
+    /// A shelf's designs: the newest first, then the colorwork collection, the rest of the library's own,
+    /// and the topical ones on its shapes, which already lead Trending.
     private func items(on shelf: Design.Shelf) -> [LibraryItem] {
-        Design.allCases.filter { $0.shelf == shelf }.map(LibraryItem.builtIn) + topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
+        let own = Design.allCases.filter { $0.shelf == shelf }
+        let newest: Set<Design> = [.pompomBonnet, .beret]
+        return own.filter(newest.contains).map(LibraryItem.builtIn)
+            + TopicalStore.collection.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
+            + own.filter { !newest.contains($0) }.map(LibraryItem.builtIn)
+            + topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
     }
 
     private func tile(_ item: LibraryItem, note: String) -> some View {
@@ -177,9 +185,9 @@ struct DesignView: View {
 
     private func hero(_ plan: PatternPlan, height: CGFloat) -> some View {
         VStack(spacing: 14) {
-            if case .builtIn(let design) = item {
+            if let photo = item.photo {
                 // A knitted sample: the finished thing, as it looks off the needles.
-                Image(design.photo)
+                Image(photo)
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
                     .frame(maxWidth: height * 1.7)

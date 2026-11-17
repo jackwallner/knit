@@ -173,6 +173,81 @@ enum Engines {
         return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: fits(brim, g, "head", head), gauge: g, round: true)
     }
 
+    /// A pixie bonnet: a rectangle knit flat from the ribbed face edge back, folded and seamed from the
+    /// crown down the back of the head. A ribbed band picked up along the neck carries two i-cord ties,
+    /// each finished with a pompom.
+    static func bonnet(head: Double, gauge g: Gauge) -> PatternPlan {
+        let width = head * 0.62
+        let depth = head * 0.33
+        let caston = Sizing.stitches(width, per: g.spi, multiple: 4, extra: 2, minimum: 26)
+        let brim = Sizing.rows(head * 0.055, per: g.rpi, even: true, minimum: 4)
+        // An even count of body rows ends on a wrong-side row, so the bind off is worked from the right side.
+        let body = max(4, Sizing.rows(depth, per: g.rpi, even: true) - brim)
+        let neck = 4 * Int((2 * depth * g.spi * 0.85 / 4).rounded()) + 2
+        let neckRows = Sizing.rows(0.75, per: g.rpi, even: true, minimum: 4)
+        let tie = Sizing.rows(head * 0.4, per: g.rpi, minimum: 24)
+        let pompom = head < 19 ? 1.25 : 1.75
+
+        var b = PlanBuilder()
+        b.section = "Brim"
+        b.action("With the smaller needles, cast on \(caston) stitches.", stitches: caston)
+        b.work(["K2, *p2, k2; repeat from * to the end", "P2, *k2, p2; repeat from * to the end"], rows: brim, stitches: caston)
+        b.section = "Body"
+        b.action("Change to the larger needles.")
+        b.work(["Knit", "Purl"], rows: body, stitches: caston)
+        b.section = "Back"
+        b.action("Bind off. Fold the piece in half, right sides together, and sew the bound-off edge closed: this seam runs from the crown down the back of the head. Turn the bonnet right side out.")
+        b.section = "Neckband"
+        b.action("With the smaller needles and the right side facing, pick up and knit \(neck) stitches along the lower edge, from one front corner to the other.", stitches: neck)
+        b.work(["P2, *k2, p2; repeat from * to the end", "K2, *p2, k2; repeat from * to the end"], rows: neckRows, stitches: neck)
+        b.action("Bind off in pattern.")
+        b.section = "Ties"
+        b.action("With two double-pointed needles, cast on 3 stitches.", stitches: 3)
+        b.work(["Slide the stitches to the other end of the needle, pull the yarn across the back and k3"], rows: tie, stitches: 3)
+        b.action("Cut the yarn, thread it through the 3 stitches and pull tight. Make a second tie the same way.")
+        b.section = "Finishing"
+        b.action("Make two pompoms about \(Sizing.inches(pompom)) across and sew one to the end of each tie. Sew the other end of each tie to a front corner of the neckband. Weave in the ends.")
+
+        let yards = Sizing.yards(squareInches: width * depth * 1.2, spi: g.spi, factor: 1.15)
+        return pattern(b, estimate: yards, tools: ["\(g.ribNeedle.label) needles for the ribbing", "\(g.needle.label) needles for the body", "\(g.needle.label) double-pointed needles for the ties", "Pompom maker or a piece of card", "Tapestry needle"], finished: "Fits a \(Sizing.inches(head)) head, \(Sizing.inches(Double(caston) / g.spi)) around the face", gauge: g)
+    }
+
+    /// A beret worked from the band up: a snug ribbed band, one round of increases out to the wide body,
+    /// then a top decreased in 8 wedges on every other round, which keeps it flat.
+    static func beret(head: Double, gauge g: Gauge) -> PatternPlan {
+        let band = hatCount(head: head, share: 0.9, spi: g.spi, multiple: 2) ?? Sizing.stitches(head * 0.9, per: g.spi, multiple: 2, minimum: 24)
+        let wide = Sizing.stitches(head * 1.3, per: g.spi, multiple: 8, minimum: band + 16)
+        let bandRounds = Sizing.rows(head * 0.05, per: g.rpi, minimum: 4)
+        let bodyRounds = Sizing.rows(head * 0.1, per: g.rpi, minimum: 4)
+        var top: [(text: String, stitches: Int)] = []
+        var width = wide / 8
+        while width > 1 {
+            top.append((width > 2 ? "*K\(width - 2), k2tog; repeat from * around" : "*K2tog; repeat from * around", (width - 1) * 8))
+            width -= 1
+            if width > 1 { top.append(("Knit", width * 8)) }
+        }
+        let small = Double(band) / g.spi < 16
+        let across = Double(wide) / g.spi / Double.pi
+
+        var b = PlanBuilder()
+        b.section = "Band"
+        b.action("Cast on \(band) stitches with the smaller needle\(small ? "s" : ""). Join in the round without twisting and place a marker.", stitches: band)
+        b.work(["*K1, p1; repeat from * around"], rows: bandRounds, stitches: band)
+        b.section = "Body"
+        b.row("Change to the larger needle. " + spread(wide - band, over: band), stitches: wide)
+        b.work(["Knit"], rows: bodyRounds, stitches: wide)
+        b.section = "Top"
+        for round in switching(top, g) { b.row(round.text, stitches: round.stitches) }
+        b.section = "Finishing"
+        b.action("Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends. Wet the beret and dry it stretched over a dinner plate about \(Sizing.inches(across.rounded())) across, so the top lies flat.")
+
+        let yards = Sizing.yards(squareInches: Double(wide) / g.spi * head * 0.3, spi: g.spi, factor: 1.1)
+        let needles = small
+            ? ["\(g.ribNeedle.label) double-pointed needles for the band, or a long circular for magic loop", "\(g.needle.label) \(Sizing.cable(16)) circular needle for the body", "Double-pointed needles in the larger size for the top"]
+            : ["\(g.ribNeedle.label) \(Sizing.cable(16)) circular needle for the band", "\(g.needle.label) \(Sizing.cable(16)) circular needle for the body", "Double-pointed needles in the larger size for the top"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: fits(band, g, "head", head), gauge: g, round: true)
+    }
+
     /// A rounded ear: stockinette narrowed at both edges to a blunt top, then a garter rim picked up
     /// around it. Its rows sit in a section ending "Ear", which colorwork reads as trim.
     private static func ear(_ b: inout PlanBuilder, _ name: String, _ g: Gauge) {

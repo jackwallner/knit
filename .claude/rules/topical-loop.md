@@ -72,6 +72,15 @@ plan (palette and silhouette included), so changing or removing a record never t
 - `requires`: bump `Topical.featureLevel` and the record's `requires` together when a field changes meaning,
   so older apps skip what they cannot draw instead of misreading it.
 
+## The bundled collection
+
+`Ravel/collection.json` holds evergreen colorwork designs (Heart, Cherry, Checkerboard, Diamond and Bear
+beanies, a Checkerboard Cowl, Heart Mitts) in the same record format, with no dates. They ship in the app,
+sit in their shape's shelf after the newest built-ins, and the ones tagged `New` lead Trending. Each needs
+a `sample-<id>` photo and its title in every language (`testTheCollectionLoadsWithPhotosAndNames`).
+`topical-check.sh` and `TopicalTests` check the file with the published list. Ids must never meet a site
+record's id; projects record them as `topical.<id>` like any topical design.
+
 ## Rules
 
 - No designer names, invented people, characters, brands, leagues or team names. Teams are colors, named

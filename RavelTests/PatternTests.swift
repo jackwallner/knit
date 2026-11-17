@@ -22,6 +22,20 @@ final class PatternTests: XCTestCase {
         for design in Design.allCases { XCTAssertNotNil(UIImage(named: design.photo), "\(design) has no sample photo") }
     }
 
+    /// The colorwork collection ships inside the app: every record loads, has its photo and a name in every language.
+    @MainActor func testTheCollectionLoadsWithPhotosAndNames() throws {
+        let collection = TopicalStore.collection
+        XCTAssertGreaterThanOrEqual(collection.count, 7)
+        let strings = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent().appending(path: "Ravel/Localizable.xcstrings"))) as? [String: Any]
+        let keys = strings?["strings"] as? [String: Any] ?? [:]
+        for topical in collection {
+            let item = LibraryItem.topical(topical)
+            XCTAssertNotNil(item.photo.flatMap { UIImage(named: $0) }, "\(topical.id) has no sample photo")
+            XCTAssertNotNil(keys[topical.title], "\(topical.title) is not translated")
+            XCTAssertNil(topical.ends, "\(topical.id) is part of the library and never ends")
+        }
+    }
+
     /// The free preview shows the opening of every pattern and never the whole of it.
     func testPreviewShowsTheOpeningNeverTheWholePattern() {
         everyPlan { design, input, gauge, plan in
@@ -529,8 +543,10 @@ final class PatternTests: XCTestCase {
         text.components(separatedBy: CharacterSet.decimalDigits.inverted).compactMap { Int($0) }
     }
 
-    func testTheLibraryHoldsThirtyTwoDesigns() {
-        XCTAssertEqual(Design.allCases.count, 32)
+    /// 34 shapes of its own and 7 colorwork designs bundled on them: the 41 the store listing promises.
+    @MainActor func testTheLibraryHoldsFortyOneDesigns() {
+        XCTAssertEqual(Design.allCases.count, 34)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 41)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }

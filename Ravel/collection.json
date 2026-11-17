@@ -1,0 +1,291 @@
+{
+  "designs": [
+    {
+      "id": "heart-beanie",
+      "title": "Heart Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "B.B.",
+          "BBB.",
+          ".B..",
+          "....",
+          "B.B.",
+          "B.BB",
+          "...B"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "New"
+    },
+    {
+      "id": "cherry-beanie",
+      "title": "Cherry Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          ".C..",
+          "BB..",
+          "BB..",
+          "....",
+          "...C",
+          "..BB",
+          "..BB"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "New"
+    },
+    {
+      "id": "checkerboard-beanie",
+      "title": "Checkerboard Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "pink",
+          "hex": "#E3A1AE"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "BB..",
+          "BB..",
+          "..BB",
+          "..BB",
+          "BB..",
+          "BB..",
+          "..BB",
+          "..BB"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Colorwork"
+    },
+    {
+      "id": "checkerboard-cowl",
+      "title": "Checkerboard Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "cobalt",
+          "hex": "#2F4E9C"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "BBBB....",
+          "BBBB....",
+          "BBBB....",
+          "BBBB....",
+          "....BBBB",
+          "....BBBB",
+          "....BBBB",
+          "....BBBB",
+          "BBBB....",
+          "BBBB....",
+          "BBBB....",
+          "BBBB....",
+          "....BBBB",
+          "....BBBB",
+          "....BBBB",
+          "....BBBB"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Colorwork"
+    },
+    {
+      "id": "diamond-beanie",
+      "title": "Diamond Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#2E3A55"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "B...",
+          ".B.B",
+          "C.B.",
+          ".B.B",
+          "B...",
+          ".B.B",
+          "C.B.",
+          ".B.B",
+          "B..."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork"
+    },
+    {
+      "id": "bear-beanie",
+      "title": "Bear Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "brown",
+          "hex": "#7A5536"
+        },
+        {
+          "name": "oatmeal",
+          "hex": "#D9CBB4"
+        }
+      ],
+      "crown": "ears",
+      "rim": "B",
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "New"
+    },
+    {
+      "id": "heart-mitts",
+      "title": "Heart Mitts",
+      "base": "handwarmers",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        }
+      ],
+      "brim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          ".B.B.",
+          "BBBBB",
+          ".BBB.",
+          "..B.."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork"
+    }
+  ]
+}

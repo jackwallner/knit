@@ -316,3 +316,12 @@ What went wrong?
 This pattern was corrected
 Update
 Pattern
+Heart Beanie
+Cherry Beanie
+Checkerboard Beanie
+Checkerboard Cowl
+Diamond Beanie
+Bear Beanie
+Heart Mitts
+Pompom Bonnet
+Beret
