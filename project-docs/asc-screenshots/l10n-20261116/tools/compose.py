@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -42,6 +43,9 @@ def compose(device: str, locale: str, raw_root: Path, headline: Path, out_root: 
     manifest_path = SHOTS / "configs" / config_name
     manifest = json.loads(manifest_path.read_text())
     frames = manifest["sets"][0]["frames"]
+    # ONLY=05-library.png recomposes one frame (a single recaptured flow); the rest stay as they are.
+    only = [name for name in os.environ.get("ONLY", "").split(",") if name]
+    frames = [f for f in frames if not only or f["filename"] in only]
     size = render.TARGETS[target]
     out = out_root / locale
     out.mkdir(parents=True, exist_ok=True)

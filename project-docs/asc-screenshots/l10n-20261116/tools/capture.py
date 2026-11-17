@@ -23,6 +23,7 @@ CONFIG = json.loads((Path.home() / "ios/appstore-screenshots/configs/knit.json")
 FLOWS = {f["id"]: ["-SeedDemo", "-MockProducts", *f["launch_args"]] for f in CONFIG["capture"]["flows"]}
 # ASC locale -> (AppleLanguages value, AppleLocale)
 LOCALES = {
+    "en-US": ("en", "en_US"),
     "ar-SA": ("ar", "ar_AE"), "bn-BD": ("bn", "bn_BD"), "ca": ("ca", "ca_ES"), "cs": ("cs", "cs_CZ"), "da": ("da", "da_DK"),
     "de-DE": ("de", "de_DE"), "el": ("el", "el_GR"), "es-ES": ("es", "es_ES"), "es-MX": ("es-MX", "es_MX"),
     "fi": ("fi", "fi_FI"), "fr-FR": ("fr", "fr_FR"), "fr-CA": ("fr-CA", "fr_CA"), "gu-IN": ("gu", "gu_IN"),
