@@ -49,6 +49,11 @@ enum PatternReport {
             "", "", "",
             "\(title), step \(code.step + 1) of \(plan.steps.count), row \(code.row + 1)",
             step.map { "\($0.section): \($0.text(at: code.row))" } ?? "",
+            plan.source.map { source in
+                let sizes = source.measures.sorted { $0.key < $1.key }.map { "\($0.key) \(Sizing.inches($0.value))" }.joined(separator: ", ")
+                return "\(sizes). \(source.gauge.stitches.formatted()) stitches and \(source.gauge.rows.formatted()) rows over \(Sizing.swatch())."
+            } ?? "",
+            "App \(code.app)",
             line(code),
         ].joined(separator: "\n")
         var parts = URLComponents()

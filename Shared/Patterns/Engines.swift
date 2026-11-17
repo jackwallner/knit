@@ -953,8 +953,10 @@ enum Engines {
             runs(&b, top, from: stitches)
             b.action("Cut the yarn, leaving a \(Sizing.inches(12)) tail. Put the \(topEnd / 2) stitches of the back on one needle and the \(topEnd / 2) of the palm on another, and graft them together with Kitchener stitch.")
             b.section = "\(name) · Thumb"
-            b.action("Return the \(gusset) held thumb stitches to the larger needles. Join new yarn at the gap and pick up and knit 1 stitch from the stitch cast on over it. Place a marker for the start of the round.", stitches: thumb)
-            b.work(["Knit"], rows: thumbRounds, stitches: thumb)
+            // Three picked up at the gap, then two taken away, so the base of the thumb closes without a hole.
+            b.action("Return the \(gusset) held thumb stitches to the larger needles. Join new yarn at the gap and pick up and knit 3 stitches: one in the corner, one in the stitch cast on over the gap, and one in the other corner. Place a marker for the start of the round.", stitches: thumb + 2)
+            b.row("Knit to the last 4 stitches, k2tog, k2tog", stitches: thumb)
+            b.work(["Knit"], rows: thumbRounds - 1, stitches: thumb)
             runs(&b, closing, from: thumb)
             b.action("Cut the yarn, thread it through the last \(count) stitches and pull tight. Weave in the ends, closing any gap at the base of the thumb.")
         }
@@ -994,10 +996,10 @@ enum Engines {
             b.row("Knit", stitches: 3)
             b.work(["K1, M1L, knit to the last stitch, M1R, k1", "Knit"], rows: 2 * increases, stitches: 5, delta: 2)
             b.work(["Knit"], rows: flapRows - 1 - 2 * increases, stitches: flap)
-            b.action(index == 0 ? "Cut the yarn and slip the \(flap) stitches to waste yarn." : "Leave the \(flap) stitches on the needle, with the yarn attached.")
+            b.action(index == 0 ? "Cut the yarn and slip the \(flap) stitches to a spare needle." : "Leave the \(flap) stitches on the needle, with the yarn attached.")
         }
         b.section = "Brim"
-        b.action("With the \(small ? "double-pointed needles" : "\(Sizing.cable(16)) circular needle") and the yarn of the second earflap, cast on \(back / 2) stitches with the backward loop method. Knit across the second earflap. Cast on \(front) stitches the same way, knit across the first earflap, then cast on \(back - back / 2) more. Join in the round and place a marker at the middle of the back.", stitches: around)
+        b.action("With the \(small ? "double-pointed needles" : "\(Sizing.cable(16)) circular needle") and the yarn of the second earflap, cast on \(back / 2) stitches with the backward loop method. Knit across the second earflap. Cast on \(front) stitches the same way, knit across the first earflap from its spare needle, then cast on \(back - back / 2) more. Join in the round and place a marker at the middle of the back.", stitches: around)
         b.work(["Purl", "Knit"], rows: border, stitches: around)
         b.section = "Body"
         b.work(["Knit"], rows: bodyRounds - (top == around ? 0 : 1), stitches: around)
@@ -1159,7 +1161,8 @@ enum Engines {
         b.work(["Knit"], rows: 6, stitches: 3)
         b.action("Do not turn. Rotate the strip a quarter turn and pick up and knit 3 stitches along its side, one in each garter ridge. Rotate it again and pick up and knit 3 stitches from the cast-on edge.", stitches: 9)
         b.section = "Shawl"
-        b.work(["K3, yo, k1, yo, knit to the last 4 stitches, yo, k1, yo, k3", "K3, yo, knit to the last 3 stitches, yo, k3"], rows: rows, stitches: 15, delta: 6)
+        // The right-side row adds 4 and the wrong-side row 2, so the right-side row ends 2 short of the pair.
+        b.work(["K3, yo, k1, yo, knit to the last 4 stitches, yo, k1, yo, k3", "K3, yo, knit to the last 3 stitches, yo, k3"], rows: rows, stitches: 15, delta: 6, offsets: [-2, 0])
         b.section = "Finishing"
         b.action("Bind off all \(last) stitches very loosely. Weave in the ends and block, pinning the top edge into a gentle curve.")
         // Garter has about twice as many rows to the inch as stitches; blocking opens it about a quarter.
@@ -1203,8 +1206,11 @@ enum Engines {
         }
         b.section = "Finishing"
         b.action("Sew the ends of one handle inside the band at the front, each \(Sizing.inches(width * 0.2)) in from a side, and the other handle at the back the same way. Weave in the ends.")
+        // What the knitter measures off the needles; mesh and garter open up under the load.
+        let knitHeight = Double(plain + mesh) / g.rpi + Double(band) / (g.spi * 2)
+        let knitHandle = Double(strapRows) / (g.spi * 2)
         let yards = Sizing.yards(squareInches: 2 * width * height * 0.8 + width * width * 0.3 + 2 * handle * Double(strap) / g.spi, spi: g.spi, factor: 1.1)
-        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide and \(Sizing.inches(height)) tall before it stretches, with handles \(Sizing.inches(handle)) long", gauge: g)
+        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide and \(Sizing.inches(knitHeight)) tall as knit, stretching to about \(Sizing.inches(height)) with a load, with handles \(Sizing.inches(knitHandle)) long that stretch to about \(Sizing.inches(handle))", gauge: g)
     }
 
     struct Pillow: Equatable, Sendable {

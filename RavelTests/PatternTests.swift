@@ -634,7 +634,9 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(gusset[gusset.count - 2].stitches, mitten.stitches - 1 + mitten.gusset, label)
                 XCTAssertTrue(gusset.last?.text.contains("Slip the \(mitten.gusset) gusset stitches") == true, label)
                 XCTAssertEqual(gusset.last?.stitches, mitten.stitches, label)
-                XCTAssertEqual(mitten.plan.steps.first { $0.section == "Mitten 1 · Thumb" }?.stitches, mitten.thumb, label)
+                let thumb = mitten.plan.steps.filter { $0.section == "Mitten 1 · Thumb" }
+                XCTAssertEqual(thumb.first?.stitches, mitten.thumb + 2, label)
+                XCTAssertEqual(thumb.dropFirst().first?.stitches, mitten.thumb, label)
                 XCTAssertEqual(rows(mitten.plan, "Mitten 1 · Top").last?.stitches, mitten.top, label)
             }
         }
@@ -781,11 +783,22 @@ final class PatternTests: XCTestCase {
                 let rows = shawl?.rows ?? 0
                 XCTAssertEqual(shawl?.delta, 6)
                 XCTAssertEqual(shawl?.texts.count, 2)
+                // The right-side row adds 4 and the wrong-side row 2: each row states the count it leaves.
+                XCTAssertEqual(shawl.flatMap { $0.stitches(after: 0) }, 13)
+                XCTAssertEqual(shawl.flatMap { $0.stitches(after: 1) }, 15)
+                XCTAssertEqual(shawl.flatMap { $0.stitches(after: 2) }, 19)
                 XCTAssertEqual(rows % 2, 0)
                 XCTAssertEqual(shawl.flatMap { $0.stitches(after: rows - 1) }, 9 + 3 * rows)
                 XCTAssertTrue(plan.steps.last { $0.section == "Finishing" }?.texts[0].contains("all \(9 + 3 * rows) stitches") == true)
             }
         }
+    }
+
+    func testSocksDefaultToAFirmSockGauge() {
+        let gauge = LibraryItem.builtIn(.cuffDownSocks).defaultGauge
+        XCTAssertEqual(gauge, Gauge(stitches: 32, rows: 44))
+        XCTAssertEqual(gauge.needle.millimeters, 2.25)
+        XCTAssertEqual(Design.cuffDownSocks.plan(measures: Design.cuffDownSocks.defaultSize.values, gauge: gauge).steps[0].stitches, 56)
     }
 
     func testBasketweaveStartsAndEndsOnTheSameBlock() {

@@ -127,8 +127,16 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
 
     var defaultGauge: Gauge {
         switch self {
-        case .builtIn(let design): design.weight.gauge
+        case .builtIn(let design): design.gauge(for: design.weight)
         case .topical(let topical): topical.defaultWeight.gauge
+        }
+    }
+
+    /// The gauge a yarn weight's chip sets for this pattern.
+    func gauge(for weight: YarnWeight) -> Gauge {
+        switch self {
+        case .builtIn(let design): design.gauge(for: weight)
+        case .topical: weight.gauge
         }
     }
 

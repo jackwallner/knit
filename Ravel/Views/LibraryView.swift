@@ -200,8 +200,8 @@ struct DesignView: View {
             }
 
             group("Gauge") {
-                chips(item.weights.map { ($0.label, $0.title) }, selected: item.weights.first { $0.gauge == gauge }?.label) { label in
-                    if let weight = item.weights.first(where: { $0.label == label }) { gauge = weight.gauge }
+                chips(item.weights.map { ($0.label, $0.title) }, selected: item.weights.first { item.gauge(for: $0) == gauge }?.label) { label in
+                    if let weight = item.weights.first(where: { $0.label == label }) { gauge = item.gauge(for: weight) }
                 }
                 adjuster(String(localized: "Stitches over \(Sizing.swatch())", comment: "Gauge: stitches counted across a swatch; the argument is its width such as 4 in or 10 cm"), value: $gauge.stitches, range: item.stitchRange, step: 0.5)
                 adjuster(String(localized: "Rows over \(Sizing.swatch())", comment: "Gauge: rows counted down a swatch; the argument is its height such as 4 in or 10 cm"), value: $gauge.rows, range: item.rowRange, step: 1)

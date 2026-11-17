@@ -26,12 +26,18 @@ struct Step: Codable, Equatable, Sendable {
     /// The colors of each row, cycled like `texts`, as palette letters: one letter for a row in a
     /// single color, or one letter per stitch, left to right as the right side faces. Nil is color A.
     var paint: [String]? = nil
+    /// For a cycle whose rows each change the count: how far each row's count sits from the cycle's end,
+    /// cycled like `texts`. Nil when only the first row of a cycle shapes.
+    var offsets: [Int]? = nil
 
     func text(at row: Int) -> String { texts[row % texts.count] }
 
     func paint(at row: Int) -> String? { paint.flatMap { $0.isEmpty ? nil : $0[row % $0.count] } }
 
-    func stitches(after row: Int) -> Int? { stitches.map { $0 + delta * (row / texts.count) } }
+    func stitches(after row: Int) -> Int? {
+        let offset = offsets.flatMap { $0.isEmpty ? nil : $0[row % $0.count] } ?? 0
+        return stitches.map { $0 + delta * (row / texts.count) + offset }
+    }
 }
 
 extension Step {
@@ -46,6 +52,7 @@ extension Step {
         delta = try values.decodeIfPresent(Int.self, forKey: .delta) ?? 0
         isAction = try values.decodeIfPresent(Bool.self, forKey: .isAction) ?? false
         paint = try values.decodeIfPresent([String].self, forKey: .paint)
+        offsets = try values.decodeIfPresent([Int].self, forKey: .offsets)
         if texts.isEmpty { texts = [""] }
     }
 }
@@ -213,9 +220,9 @@ struct PlanBuilder {
     }
 
     /// `rows` rows cycling through `texts`.
-    mutating func work(_ texts: [String], rows: Int, stitches: Int? = nil, delta: Int = 0) {
+    mutating func work(_ texts: [String], rows: Int, stitches: Int? = nil, delta: Int = 0, offsets: [Int]? = nil) {
         guard rows > 0 else { return }
-        steps.append(Step(section: section, texts: texts, rows: rows, stitches: stitches, delta: delta))
+        steps.append(Step(section: section, texts: texts, rows: rows, stitches: stitches, delta: delta, offsets: offsets))
     }
 }
 

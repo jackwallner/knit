@@ -159,9 +159,14 @@ extension Project {
         let old = plan
         planData = try? JSONEncoder().encode(corrected)
         guard let old, let spot = old.position(at: rows) else { return setRows(corrected.totalTaps) }
-        guard spot.step < corrected.steps.count else { return setRows(corrected.totalTaps) }
-        let start = corrected.steps[..<spot.step].reduce(0) { $0 + $1.rows }
-        setRows(start + min(spot.row, corrected.steps[spot.step].rows - 1))
+        // The same section, and the same distance into it, so a fix that adds or drops a step elsewhere never
+        // moves the knitter into unrelated work.
+        let section = old.steps[spot.step].section
+        let into = old.steps[..<spot.step].filter { $0.section == section }.reduce(0) { $0 + $1.rows } + spot.row
+        guard let first = corrected.steps.firstIndex(where: { $0.section == section }) else { return setRows(corrected.totalTaps) }
+        let tap = corrected.steps[..<first].reduce(0) { $0 + $1.rows }
+        let length = corrected.steps[first...].prefix { $0.section == section }.reduce(0) { $0 + $1.rows }
+        setRows(tap + min(into, max(length - 1, 0)))
         reopenIfUnfinished(corrected)
     }
 

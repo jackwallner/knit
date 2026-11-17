@@ -202,6 +202,12 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         }
     }
 
+    /// The gauge this design is knit at in a yarn weight. Socks are knit firmer than the label so they wear well.
+    func gauge(for weight: YarnWeight) -> Gauge {
+        if self == .cuffDownSocks, weight == .fingering { return Gauge(stitches: 32, rows: 44) }
+        return weight.gauge
+    }
+
     var weight: YarnWeight {
         switch self {
         case .triangleShawl, .neckScarf, .sweaterVest, .rectangularWrap: .dk
@@ -395,7 +401,8 @@ extension Gauge {
     /// The needle a knitter would usually reach for at this gauge.
     var needle: NeedleSize {
         let millimeters: Double = switch stitches {
-        case 30...: 2.75
+        case 32...: 2.25
+        case 30..<32: 2.75
         case 26..<30: 3.25
         case 23..<26: 3.75
         case 20..<23: 4.0
