@@ -26,7 +26,9 @@ step and row as written, and one `ravel-report <base64>` line.
 3. Confirmed: add a test in `ReportedPatternsTests` that fails on the report, then fix the engine.
 4. Fix the class, not the case: add the check to `PlanCheck` so every design at every size and yarn
    weight is held to it (`PatternTests` runs them all). Topical designs pass through `PlanCheck` too.
-5. Raise the design's entry in `Design.revisions`. Projects cast on at a lower revision show "This pattern
+5. Raise the design's entry in `Design.revisions`; for a seasonal design whose record was wrong (not its
+   base engine), raise the record's `"revision"` in `docs/designs.json` instead (publishing needs Jack's yes).
+   A seasonal project's revision is its base engine's plus its record's, so either fix reaches it. Projects cast on at a lower revision show "This pattern
    was corrected" with an Update button; `Project.adopt` keeps the knitter on the same step and row.
    Nothing changes without their tap.
 6. Reply to the knitter, and ship the build.

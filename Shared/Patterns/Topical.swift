@@ -14,6 +14,9 @@ struct Topical: Identifiable, Hashable, Sendable {
     let starts: Date?
     let ends: Date?
     let isFree: Bool
+    /// Raised each time a published record is corrected, so projects cast on from it are offered the fix.
+    /// Optional in the file and ignored by builds that do not know it.
+    var revision = 0
 
     /// The newest record format this build reads. A record that needs more is skipped, so a feature added
     /// later can never be misread by an older app.
@@ -103,6 +106,7 @@ extension Topical {
         var starts: String?
         var ends: String?
         var free: Bool?
+        var revision: Int?
     }
 
     struct Listing: Codable, Sendable {
@@ -224,11 +228,12 @@ extension Topical {
         guard problems.isEmpty, let base else { return Parsed(id: r.id, topical: nil, problems: problems) }
         let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, rim: rim)
         let order = YarnWeight.allCases
-        let topical = Topical(
+        var topical = Topical(
             id: r.id, title: title, base: base, work: work,
             weights: order.filter(weights.contains), tag: tag,
             starts: starts ?? nil, ends: ends ?? nil, isFree: r.free ?? false
         )
+        topical.revision = max(0, r.revision ?? 0)
         return Parsed(id: r.id, topical: topical, problems: [])
     }
 }

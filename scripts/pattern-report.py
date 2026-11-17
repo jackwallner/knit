@@ -21,7 +21,14 @@ def main() -> int:
     measures = ", ".join(f'"{k}": {v}' for k, v in sorted((code.get("measures") or {}).items()))
     gauge = code.get("gauge") or {}
     print("\nRegression test (RavelTests/ReportedPatternsTests.swift):")
-    print(f'    let plan = Design.{code["design"]}.plan(measures: [{measures}], '
+    design = code["design"]
+    target = f'Design.{design}'
+    if design.startswith("topical."):
+        # A topical design is a published record over a built-in engine: rebuild it from its record.
+        print(f'\nTopical record "{design[8:]}" in docs/designs.json (drafts: project-docs/topical/drafts). '
+              f'A fix to the record raises its "revision"; a fix to its base engine raises Design.revisions.')
+        target = f'try XCTUnwrap(Topical.decode(designsJSON).first {{ $0.designRaw == "{design}" }})'
+    print(f'    let plan = {target}.plan(measures: [{measures}], '
           f'gauge: Gauge(stitches: {gauge.get("stitches")}, rows: {gauge.get("rows")}))')
     print(f'    // reported at step {code["step"] + 1}, row {code["row"] + 1} (tap {code["taps"]}), app {code["app"]}, revision {code.get("revision")}')
     return 0

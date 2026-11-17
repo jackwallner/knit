@@ -154,6 +154,26 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         return low...high
     }
 
+    /// What a cast-on project records, to tell later whether its pattern was corrected. A topical design
+    /// adds its record's revision to its base engine's: a fix to either one raises it.
+    var revision: Int {
+        switch self {
+        case .builtIn(let design): design.revision
+        case .topical(let topical): topical.base.revision + topical.revision
+        }
+    }
+
+    /// The corrected pattern for a cast-on project, rebuilt from the numbers it was cast on with, or nil when
+    /// nothing it was built from has changed since (or a topical design is no longer published).
+    @MainActor static func correction(for plan: PatternPlan, topicals: TopicalStore = .shared) -> PatternPlan? {
+        guard let source = plan.source else { return nil }
+        let item = Design(rawValue: source.design).map(LibraryItem.builtIn) ?? topicals.item(source.design).map(LibraryItem.topical)
+        guard let item, item.revision > source.revision else { return nil }
+        var fixed = item.plan(measures: source.measures, gauge: source.gauge)
+        fixed.source = PlanSource(design: source.design, measures: source.measures, gauge: source.gauge, revision: item.revision)
+        return fixed
+    }
+
     func plan(measures: [String: Double], gauge: Gauge) -> PatternPlan {
         switch self {
         case .builtIn(let design): design.plan(measures: measures, gauge: gauge)

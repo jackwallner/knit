@@ -46,7 +46,7 @@ struct ProjectView: View {
     init(project: Project) {
         _project = Bindable(wrappedValue: project)
         _plan = State(initialValue: project.plan)
-        _correction = State(initialValue: project.plan.flatMap(Design.correction(for:)))
+        _correction = State(initialValue: project.plan.flatMap { LibraryItem.correction(for: $0) })
     }
 
     var body: some View {

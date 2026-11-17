@@ -250,7 +250,7 @@ struct DesignView: View {
         guard opened == nil else { return }
         let project = Project(name: item.title, color: item.yarn)
         var kept = plan
-        kept.source = PlanSource(design: item.designRaw, measures: values, gauge: gauge, revision: Design(rawValue: item.designRaw)?.revision ?? 0)
+        kept.source = PlanSource(design: item.designRaw, measures: values, gauge: gauge, revision: item.revision)
         project.follow(kept, as: item.designRaw)
         project.needles = gauge.needle.label
         context.insert(project)

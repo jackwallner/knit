@@ -125,14 +125,6 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     var revision: Int { Self.revisions[self] ?? 0 }
     private static let revisions: [Design: Int] = [:]
 
-    /// The corrected plan for a project cast on before the current revision. Nil when nothing was corrected.
-    static func correction(for plan: PatternPlan) -> PatternPlan? {
-        guard let source = plan.source, let design = Design(rawValue: source.design), design.revision > source.revision else { return nil }
-        var fixed = design.plan(measures: source.measures, gauge: source.gauge)
-        fixed.source = PlanSource(design: source.design, measures: source.measures, gauge: source.gauge, revision: design.revision)
-        return fixed
-    }
-
     /// Free designs show what the library does before anyone is asked to pay.
     var isFree: Bool { self == .garterScarf || self == .dishcloth }
 
