@@ -77,7 +77,7 @@ struct OnboardingView: View {
             screen("Patterns written to your size") {
                 Garment(silhouette: .sweater, yarn: .indigo, progress: knitted)
                     .padding(.horizontal, 40)
-                    .motion(.linear(duration: 1.2), value: knitted)
+                    .motion(.linear(duration: 0.6), value: knitted)
                     .onAppear { knitted = 1 }
             }
         default:
