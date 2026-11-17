@@ -1,0 +1,13 @@
+# Ravel: Knitting Patterns
+
+> Ravel is a free knitting row counter for iPhone and iPad. Read your own PDF patterns, track your yarn stash, and get patterns written to your size and gauge.
+
+## App
+
+- [Ravel: Knitting Patterns - Row Counter & Patterns for iPhone and iPad](https://jackwallner.com/ios/ravel/index.html.md): Ravel is a free knitting row counter for iPhone and iPad. Read your own PDF patterns, track your yarn stash, and get patterns written to your size and gauge.
+
+## Optional
+
+- [Privacy Policy: Ravel](https://jackwallner.com/ios/ravel/privacy-policy.html.md): How Ravel handles your data.
+- [Support: Ravel](https://jackwallner.com/ios/ravel/support.html.md): Help with Ravel.
+- [Terms of Use: Ravel](https://jackwallner.com/ios/ravel/terms.html.md): Terms of use for Ravel.
