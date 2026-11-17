@@ -11,14 +11,14 @@ HER ZAMAN ÜCRETSİZ
 • Tığ işi: sıra sayacı ve stok, tığ işi sıraları ve tığlar için de çalışır. Model kütüphanesi örgü içindir
 
 ÖLÇÜNÜZE GÖRE MODELLER
-Bir tasarım seçin, ölçülerinizi ve örgü sıklığınızı girin; Ravel modeli size uyacak şekilde yazar. Her ilmek atma, artırma ve azaltma sayılarınızdan hesaplanır ve her tasarım her bedende kontrol edilir, böylece ilmek sayıları tutar; bebek bereden 5X kazağa kadar.
+Bir tasarım seçin, ölçülerinizi ve örgü sıklığınızı girin; Ravel modeli size uyacak şekilde yazar. Her ilmek atma, artırma ve azaltma sayılarınızdan sabit örgü matematiğiyle hesaplanır, yapay zekayla değil, ve her tasarım her bedende ve her iplik kalınlığında kontrol edilir, böylece ilmek sayıları tutar; bebek bereden 5X kazağa kadar.
 
-Sonra sıra sıra ilerleyin. Her dokunuş bir sonraki talimatı ve şişte olması gereken ilmek sayısını gösterir. İşinize geri döndüğünüzde istediğiniz bölüme atlayın.
+Sonra sıra sıra ilerleyin. Her dokunuş bir sonraki talimatı ve şişte olması gereken ilmek sayısını gösterir. İşinize geri döndüğünüzde istediğiniz bölüme atlayın. Bir sıra yanlış görünürse modelde Sorun Bildir seçeneğini seçin; bir tasarım düzeltildiğinde başladığınız projeye bulunduğunuz sırada düzeltme önerilir.
 
-Kütüphanede bereler, bir balaklava, atkılar, boyunluklar, örgü desenli bir saç bandı, battaniyeler, bir bulaşık bezi, el ısıtıcılar, bacak ısıtıcılar, üçgen bir şal ve yukarıdan aşağıya örülen bir reglan kazak var. Trending rafı yeni tasarımlarla ve mevsime uyanlarla başlar. Renkli örgü modelleri çizgiler, şemayla çizilmiş motifler ve kulaklı bereler ekler, diğer her şey gibi ölçünüze göre yazılır; yeni mevsimlik modeller yıl boyunca uygulama güncellemesi olmadan gelir. Garter Scarf (düz örgü atkı) ve Diagonal Dishcloth (çapraz bulaşık bezi) ücretsizdir.
+Kütüphanede 32 tasarım var: bereler, örgülü bir bere, kulaklı bir bere, bir balaklava, manşetten başlayan çoraplar, eldivenler, el ısıtıcılar, atkılar, boyunluklar, bir stola, üçgen bir şal ve hilal şal, battaniyeler, bir yastık kılıfı, bir pazar çantası, bir bulaşık bezi, bacak ısıtıcılar ve kazaklar: bir reglan kazak, bir reglan hırka, bir yelek ve 2T'den 12'ye çocuk reglan. Trending rafı yeni tasarımlarla ve mevsime uyanlarla başlar. Renkli örgü modelleri çizgiler, şemayla çizilmiş motifler ve kulaklı bereler ekler, diğer her şey gibi ölçünüze göre yazılır; yeni mevsimlik modeller yıl boyunca uygulama güncellemesi olmadan gelir. Garter Scarf (düz örgü atkı) ve Diagonal Dishcloth (çapraz bulaşık bezi) ücretsizdir.
 
 DİL VE ÖLÇÜ BİRİMLERİ
-Uygulama ve tüm modeller yalnızca İngilizcedir. ABD dışında uzunluklar santimetre (cm) ve metre (m) olarak gösterilir.
+Uygulama Türkçedir. Oluşturulan model talimatları, örgü kısaltmalarının standart dili olan İngilizcedir. ABD dışında uzunluklar santimetre (cm) ve metre (m) olarak gösterilir.
 
 RAVEL PATTERNS
 Ravel Patterns tüm kütüphanenin kilidini açar. Aylık veya yıllık abone olun, ikisinde de yeni aboneler için 7 gün ücretsiz deneme vardır; ya da bir kez ödeyip ömür boyu erişin. Bölgenizdeki fiyat başlamadan önce gösterilir. Ödeme, satın alma onayında Apple Hesabınızdan tahsil edilir. Abonelik, dönem bitmeden en az 24 saat önce Ayarlar'dan iptal edene kadar yenilenir. Zaten başladığınız bir model projelerinizde kalır.

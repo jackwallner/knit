@@ -11,14 +11,14 @@ NAVŽDY ZDARMA
 • Háčkování: počítadlo řádků i zásoba fungují také pro háčkované řádky a háčky. Knihovna návodů je určena pro pletení
 
 NÁVODY VE VAŠÍ VELIKOSTI
-Vyberte model, zadejte své rozměry a hustotu pletení a Ravel napíše návod, aby seděl. Každé nahození, přidání a ubrání ok se spočítá z vašich čísel a každý model je zkontrolován ve všech velikostech, aby počty ok seděly, od dětské čepičky po svetr ve velikosti 5X.
+Vyberte model, zadejte své rozměry a hustotu pletení a Ravel napíše návod, aby seděl. Každé nahození, přidání a ubrání ok se spočítá z vašich čísel pevnou pletařskou matematikou, ne umělou inteligencí, a každý model je zkontrolován ve všech velikostech a tloušťkách příze, aby počty ok seděly, od dětské čepičky po svetr ve velikosti 5X.
 
-Potom pletete řádek po řádku. Každé klepnutí ukáže další pokyn a počet ok, který máte mít na jehlici. Přeskočte na libovolnou část, když se k práci vrátíte.
+Potom pletete řádek po řádku. Každé klepnutí ukáže další pokyn a počet ok, který máte mít na jehlici. Přeskočte na libovolnou část, když se k práci vrátíte. Pokud vám řádek přijde špatně, zvolte v návodu Nahlásit problém; když se model opraví, projekt, který jste začali, dostane opravu na řádku, kde právě jste.
 
-Knihovna obsahuje čepice, kuklu, šály, nákrčníky, čelenku s copánky, deky, hadřík na nádobí, návleky na ruce, návleky na nohy, trojúhelníkový šátek a svetr s raglánovými rukávy pletený odshora. Police Trending začíná novými modely a tím, co se hodí k ročnímu období. Návrhy s barevným vzorováním přidávají pruhy, motivy podle schématu a čepice s oušky, ušité na vaši velikost jako všechno ostatní, a nové sezonní návrhy přibývají během roku bez aktualizace aplikace. Garter Scarf (šála pletená samými hladkými řadami) a Diagonal Dishcloth (diagonální hadřík na nádobí) jsou zdarma.
+Knihovna obsahuje 32 modelů: čepice, čepici s copánky, čepici s klapkami na uši, kuklu, ponožky od manžety, palčáky, návleky na ruce, šály, nákrčníky, štólu, trojúhelníkový šátek a půlměsícový šátek, deky, povlak na polštář, síťovku, hadřík na nádobí, návleky na nohy a svetry: svetr s raglánovými rukávy, kardigan, vestu a dětský raglán od velikosti 2T do 12. Police Trending začíná novými modely a tím, co se hodí k ročnímu období. Návrhy s barevným vzorováním přidávají pruhy, motivy podle schématu a čepice s oušky, ušité na vaši velikost jako všechno ostatní, a nové sezonní návrhy přibývají během roku bez aktualizace aplikace. Garter Scarf (šála pletená samými hladkými řadami) a Diagonal Dishcloth (diagonální hadřík na nádobí) jsou zdarma.
 
 JAZYK A JEDNOTKY
-Aplikace i všechny návody jsou pouze v angličtině. Mimo Spojené státy se délky zobrazují v centimetrech (cm) a metrech (m).
+Aplikace je v češtině. Vygenerované návody jsou v angličtině, standardním jazyce pletacích zkratek. Mimo Spojené státy se délky zobrazují v centimetrech (cm) a metrech (m).
 
 RAVEL PATTERNS
 Ravel Patterns odemyká celou knihovnu. Předplaťte si měsíčně nebo ročně, obojí se 7denní bezplatnou zkušební dobou pro nové předplatitele, nebo zaplaťte jednou za přístup na celý život. Cena ve vašem regionu se zobrazí před začátkem. Platba se strhne z vašeho účtu Apple při potvrzení nákupu. Předplatné se obnovuje, dokud ho nezrušíte, nejpozději 24 hodin před koncem období, v Nastavení. Návod, který jste už začali, zůstane ve vašich projektech.

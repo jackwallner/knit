@@ -11,14 +11,14 @@ MIỄN PHÍ MÃI MÃI
 • Móc len: bộ đếm hàng và kho cũng dùng được cho hàng móc và kim móc. Thư viện mẫu dành cho đan len
 
 MẪU THEO SỐ ĐO CỦA BẠN
-Chọn một thiết kế, nhập số đo và mật độ đan, Ravel sẽ viết mẫu vừa với bạn. Mỗi bước lên mũi, tăng mũi và giảm mũi đều được tính từ số liệu của bạn, và mọi thiết kế được kiểm tra ở mọi cỡ để số mũi khớp nhau, từ mũ em bé đến áo chui đầu cỡ 5X.
+Chọn một thiết kế, nhập số đo và mật độ đan, Ravel sẽ viết mẫu vừa với bạn. Mỗi bước lên mũi, tăng mũi và giảm mũi đều được tính từ số liệu của bạn bằng toán đan cố định, không phải AI, và mọi thiết kế được kiểm tra ở mọi cỡ và mọi độ dày sợi để số mũi khớp nhau, từ mũ em bé đến áo chui đầu cỡ 5X.
 
-Sau đó đan theo từng hàng một. Mỗi lần chạm hiện bước tiếp theo và số mũi bạn cần có trên kim. Nhảy tới bất kỳ phần nào khi bạn quay lại với sản phẩm.
+Sau đó đan theo từng hàng một. Mỗi lần chạm hiện bước tiếp theo và số mũi bạn cần có trên kim. Nhảy tới bất kỳ phần nào khi bạn quay lại với sản phẩm. Nếu một hàng trông sai, hãy chọn Báo cáo sự cố trong mẫu; khi một thiết kế được sửa, dự án bạn đã bắt đầu sẽ được đề nghị bản sửa ở đúng hàng bạn đang đan.
 
-Thư viện có mũ, mũ trùm đầu, khăn quàng, khăn ống, băng đô đan xoắn, chăn, khăn lau chén, đồ ủ ấm tay, đồ ủ ấm chân, khăn choàng tam giác và áo chui đầu tay raglan đan từ trên xuống. Kệ Trending mở đầu bằng các thiết kế mới và những mẫu hợp mùa. Các thiết kế đan nhiều màu thêm sọc, họa tiết theo biểu đồ và mũ có tai, theo số đo của bạn như mọi thiết kế khác, và các thiết kế theo mùa mới đến suốt năm mà không cần cập nhật ứng dụng. Garter Scarf (khăn quàng đan mũi cơ bản mọi hàng) và Diagonal Dishcloth (khăn lau chén đan chéo) miễn phí.
+Thư viện có 32 thiết kế: mũ, mũ beanie bện thừng, mũ có tai, mũ trùm đầu, tất đan từ trên xuống, găng tay bao, đồ ủ ấm tay, khăn quàng, khăn ống, khăn choàng dài, khăn choàng tam giác và khăn choàng lưỡi liềm, chăn, vỏ gối, túi lưới đi chợ, khăn lau chén, đồ ủ ấm chân và áo len: áo chui đầu raglan, áo cardigan raglan, áo gile len và áo raglan trẻ em từ cỡ 2T đến 12. Kệ Trending mở đầu bằng các thiết kế mới và những mẫu hợp mùa. Các thiết kế đan nhiều màu thêm sọc, họa tiết theo biểu đồ và mũ có tai, theo số đo của bạn như mọi thiết kế khác, và các thiết kế theo mùa mới đến suốt năm mà không cần cập nhật ứng dụng. Garter Scarf (khăn quàng đan mũi cơ bản mọi hàng) và Diagonal Dishcloth (khăn lau chén đan chéo) miễn phí.
 
 NGÔN NGỮ VÀ ĐƠN VỊ
-Ứng dụng và mọi mẫu chỉ có tiếng Anh. Ngoài Hoa Kỳ, độ dài hiển thị bằng xentimét (cm) và mét (m).
+Ứng dụng có tiếng Việt. Hướng dẫn của mẫu được tạo bằng tiếng Anh, ngôn ngữ chuẩn của các ký hiệu viết tắt đan len. Ngoài Hoa Kỳ, độ dài hiển thị bằng xentimét (cm) và mét (m).
 
 RAVEL PATTERNS
 Ravel Patterns mở khóa toàn bộ thư viện. Đăng ký theo tháng hoặc theo năm, cả hai đều có 7 ngày dùng thử miễn phí cho người đăng ký mới, hoặc trả một lần để dùng trọn đời. Giá tại khu vực của bạn được hiển thị trước khi bạn bắt đầu. Khoản thanh toán được tính vào tài khoản Apple của bạn khi xác nhận mua. Gói đăng ký tự động gia hạn cho đến khi bạn hủy, ít nhất 24 giờ trước khi kết thúc kỳ, trong Cài đặt. Một mẫu bạn đã bắt đầu vẫn nằm trong các dự án của bạn.

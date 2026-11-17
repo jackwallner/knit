@@ -11,14 +11,14 @@ ILMAINEN PYSYVÄSTI
 • Virkkaus: kerroslaskuri ja varasto toimivat myös virkatuille kerroksille ja virkkuukoukuille. Ohjekirjasto on neulomiseen
 
 OHJEET SINUN KOOSSASI
-Valitse malli, anna mittasi ja silmukkatiheytesi, niin Ravel kirjoittaa ohjeen sopivaksi. Jokainen silmukoiden luominen, lisäys ja kavennus lasketaan sinun luvuistasi, ja jokainen malli on tarkistettu jokaisessa koossa, jotta silmukkamäärät täsmäävät vauvan piposta 5X-kokoiseen villapaitaan.
+Valitse malli, anna mittasi ja silmukkatiheytesi, niin Ravel kirjoittaa ohjeen sopivaksi. Jokainen silmukoiden luominen, lisäys ja kavennus lasketaan sinun luvuistasi kiinteällä neulontamatematiikalla, ei tekoälyllä, ja jokainen malli on tarkistettu jokaisessa koossa ja langan paksuudessa, jotta silmukkamäärät täsmäävät vauvan piposta 5X-kokoiseen villapaitaan.
 
-Seuraa ohjetta sitten kerros kerrokselta. Jokainen napautus näyttää seuraavan ohjeen ja silmukkamäärän, joka puikolla pitäisi olla. Hyppää mihin tahansa osioon, kun otat työn uudelleen käteen.
+Seuraa ohjetta sitten kerros kerrokselta. Jokainen napautus näyttää seuraavan ohjeen ja silmukkamäärän, joka puikolla pitäisi olla. Hyppää mihin tahansa osioon, kun otat työn uudelleen käteen. Jos kerros näyttää väärältä, valitse ohjeesta Ilmoita ongelmasta; kun malli korjataan, aloittamasi projekti saa korjauksen siihen kerrokseen, jossa olet.
 
-Kirjastossa on pipoja, kommandopipo, huiveja, kaulaliinoja, kaapeleilla neulottu otsapanta, peittoja, tiskirätti, rannelämmittimet, säärystimet, kolmiohuivi ja raglanvillapaita ylhäältä alas. Trending-hyllyn kärjessä ovat uudet mallit ja vuodenaikaan sopivat ohjeet. Kirjoneulemallit tuovat mukaan raitoja, kaavioon piirrettyjä kuvioita ja korvallisia pipoja, mitoitettuina kuten kaikki muu, ja uusia kausimalleja tulee vuoden mittaan ilman sovelluspäivitystä. Garter Scarf (ainaoikeaa neulottu huivi) ja Diagonal Dishcloth (vinottain neulottu tiskirätti) ovat ilmaisia.
+Kirjastossa on 32 mallia: pipoja, palmikkopipo, korvallinen pipo, kommandopipo, sukat resorista alkaen, lapaset, rannelämmittimet, huiveja, kaulaliinoja, stola, kolmiohuivi ja puolikuuhuivi, peittoja, tyynynpäällinen, ostosverkko, tiskirätti, säärystimet ja villapaitoja: raglanvillapaita, raglanneuletakki, liivi ja lasten raglan koosta 2T kokoon 12. Trending-hyllyn kärjessä ovat uudet mallit ja vuodenaikaan sopivat ohjeet. Kirjoneulemallit tuovat mukaan raitoja, kaavioon piirrettyjä kuvioita ja korvallisia pipoja, mitoitettuina kuten kaikki muu, ja uusia kausimalleja tulee vuoden mittaan ilman sovelluspäivitystä. Garter Scarf (ainaoikeaa neulottu huivi) ja Diagonal Dishcloth (vinottain neulottu tiskirätti) ovat ilmaisia.
 
 KIELI JA MITAT
-Sovellus ja kaikki ohjeet ovat vain englanniksi. Yhdysvaltojen ulkopuolella pituudet näytetään senttimetreinä (cm) ja metreinä (m).
+Sovellus on suomeksi. Luodut ohjeet ovat englanniksi, neulemerkintöjen vakiokielellä. Yhdysvaltojen ulkopuolella pituudet näytetään senttimetreinä (cm) ja metreinä (m).
 
 RAVEL PATTERNS
 Ravel Patterns avaa koko kirjaston. Tilaa kuukausittain tai vuosittain, kummassakin 7 päivän ilmainen kokeilu uusille tilaajille, tai maksa kerran elinikäisestä käytöstä. Hinta omalla alueellasi näytetään ennen aloitusta. Maksu veloitetaan Apple-tililtäsi oston vahvistuksen yhteydessä. Tilaus uusiutuu, kunnes peruutat sen vähintään 24 tuntia ennen jakson päättymistä Asetuksissa. Ohje, jonka olet jo aloittanut, pysyy projekteissasi.

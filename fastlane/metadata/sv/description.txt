@@ -11,14 +11,14 @@ GRATIS FÖR ALLTID
 • Virkning: varvräknaren och förrådet fungerar även för virkade varv och virknålar. Mönsterbiblioteket är för stickning
 
 MÖNSTER I DIN STORLEK
-Välj en modell, ange dina mått och ditt maskprov, så skriver Ravel mönstret så att det passar. Varje uppläggning, ökning och minskning räknas ut från dina siffror, och varje modell är kontrollerad i alla storlekar så att maskantalen stämmer, från en babymössa till en tröja i 5X.
+Välj en modell, ange dina mått och ditt maskprov, så skriver Ravel mönstret så att det passar. Varje uppläggning, ökning och minskning räknas ut från dina siffror med fast stickmatematik, inte AI, och varje modell är kontrollerad i alla storlekar och garntjocklekar så att maskantalen stämmer, från en babymössa till en tröja i 5X.
 
-Följ det sedan varv för varv. Varje tryck visar nästa instruktion och det antal maskor du ska ha på stickan. Hoppa till valfri del när du tar upp arbetet igen.
+Följ det sedan varv för varv. Varje tryck visar nästa instruktion och det antal maskor du ska ha på stickan. Hoppa till valfri del när du tar upp arbetet igen. Om ett varv ser fel ut, välj Rapportera ett problem i mönstret; när en modell rättas får projektet du har påbörjat rättelsen vid varvet du är på.
 
-Biblioteket har mössor, en balaklava, halsdukar, tubhalsdukar, ett kabelstickat pannband, filtar, en disktrasa, handledsvärmare, benvärmare, en trekantssjal och en raglantröja uppifrån. Hyllan Trending börjar med nya modeller och det som passar säsongen. Modeller med flerfärgsstickning lägger till ränder, diagrammönster och mössor med öron, i din storlek som allt annat, och nya säsongsmodeller kommer under året utan appuppdatering. Garter Scarf (rätstickad halsduk) och Diagonal Dishcloth (diagonal disktrasa) är gratis.
+Biblioteket har 32 modeller: mössor, en flätad mössa, en mössa med öronlappar, en balaklava, sockor från muddkanten, vantar, handledsvärmare, halsdukar, tubhalsdukar, en stola, en trekantssjal och en halvmåneformad sjal, filtar, ett kuddfodral, en nätkasse, en disktrasa, benvärmare och tröjor: en raglantröja, en raglankofta, en slipover och en raglan för barn från 2T till 12. Hyllan Trending börjar med nya modeller och det som passar säsongen. Modeller med flerfärgsstickning lägger till ränder, diagrammönster och mössor med öron, i din storlek som allt annat, och nya säsongsmodeller kommer under året utan appuppdatering. Garter Scarf (rätstickad halsduk) och Diagonal Dishcloth (diagonal disktrasa) är gratis.
 
 SPRÅK OCH MÅTT
-Appen och alla mönster finns bara på engelska. Utanför USA visas längder i centimeter (cm) och meter (m).
+Appen är på svenska. Genererade mönster är på engelska, stickförkortningarnas standardspråk. Utanför USA visas längder i centimeter (cm) och meter (m).
 
 RAVEL PATTERNS
 Ravel Patterns låser upp hela biblioteket. Prenumerera varje månad eller varje år, båda med 7 dagars gratis provperiod för nya prenumeranter, eller betala en gång för livstidsåtkomst. Priset i din region visas innan du börjar. Betalningen debiteras ditt Apple-konto när köpet bekräftas. En prenumeration förnyas tills du säger upp den, senast 24 timmar före periodens slut, i Inställningar. Ett mönster som du redan har lagt upp finns kvar i dina projekt.

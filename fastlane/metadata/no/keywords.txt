@@ -1,1 +1,1 @@
-radteller,hekle,strikkepinner,lue,genser,skjerf,pdf,nybegynner,pledd,fargestrikk,strikkefasthet
+radteller,hekle,strikkepinner,lue,genser,skjerf,nybegynner,pledd,fargestrikk,sokker,votter,cardigan

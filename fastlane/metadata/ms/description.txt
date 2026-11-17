@@ -11,14 +11,14 @@ PERCUMA SELAMANYA
 • Mengait (crochet): pembilang baris dan stok juga berfungsi untuk baris kait dan cangkuk. Pustaka corak adalah untuk merajut dengan jarum
 
 CORAK MENGIKUT SAIZ ANDA
-Pilih reka bentuk, masukkan ukuran badan dan kepadatan rajutan anda, dan Ravel menulis corak yang muat. Setiap pemasangan, penambahan dan pengurangan jahitan dikira daripada nombor anda, dan setiap reka bentuk disemak pada setiap saiz supaya bilangan jahitan sepadan, daripada topi bayi hingga sweater saiz 5X.
+Pilih reka bentuk, masukkan ukuran badan dan kepadatan rajutan anda, dan Ravel menulis corak yang muat. Setiap pemasangan, penambahan dan pengurangan jahitan dikira daripada nombor anda dengan matematik rajut yang tetap, bukan AI, dan setiap reka bentuk disemak pada setiap saiz dan ketebalan benang supaya bilangan jahitan sepadan, daripada topi bayi hingga sweater saiz 5X.
 
-Kemudian ikuti baris demi baris. Setiap ketikan memaparkan arahan seterusnya dan bilangan jahitan yang sepatutnya ada pada jarum. Lompat ke mana-mana bahagian apabila anda menyambung kerja.
+Kemudian ikuti baris demi baris. Setiap ketikan memaparkan arahan seterusnya dan bilangan jahitan yang sepatutnya ada pada jarum. Lompat ke mana-mana bahagian apabila anda menyambung kerja. Jika sebarang baris nampak salah, pilih Laporkan Masalah daripada corak; apabila reka bentuk dibetulkan, projek yang telah anda mulakan ditawarkan pembetulan pada baris yang sedang anda kerjakan.
 
-Pustaka mempunyai topi, balaclava, skarf, penghangat leher, jalur kepala kabel, selimut, kain pinggan, penghangat tangan, penghangat kaki, selendang segi tiga dan sweater raglan yang dirajut dari atas ke bawah. Rak Trending bermula dengan reka bentuk baharu dan yang sesuai dengan musim. Reka bentuk kerja warna menambah jalur, motif berpetakan dan topi bertelinga, bersaiz seperti semua yang lain, dan reka bentuk bermusim baharu tiba sepanjang tahun tanpa kemas kini aplikasi. Garter Scarf (skarf rajut garter) dan Diagonal Dishcloth (kain pinggan pepenjuru) adalah percuma.
+Pustaka mempunyai 32 reka bentuk: topi, beanie kabel, topi penutup telinga, balaclava, stoking dari atas, mitten, penghangat tangan, skarf, penghangat leher, stola, selendang segi tiga dan syal bulan sabit, selimut, sarung bantal, beg beli-belah jaring, kain pinggan, penghangat kaki, dan sweater: sweater raglan, kardigan raglan, rompi rajut dan raglan kanak-kanak dari 2T hingga 12. Rak Trending bermula dengan reka bentuk baharu dan yang sesuai dengan musim. Reka bentuk kerja warna menambah jalur, motif berpetakan dan topi bertelinga, bersaiz seperti semua yang lain, dan reka bentuk bermusim baharu tiba sepanjang tahun tanpa kemas kini aplikasi. Garter Scarf (skarf rajut garter) dan Diagonal Dishcloth (kain pinggan pepenjuru) adalah percuma.
 
 BAHASA DAN UNIT
-Aplikasi dan semua corak hanya dalam bahasa Inggeris. Di luar Amerika Syarikat, panjang dipaparkan dalam sentimeter (cm) dan meter (m).
+Aplikasi ini dalam bahasa Melayu. Arahan corak yang dijana adalah dalam bahasa Inggeris, bahasa piawai bagi singkatan mengait. Di luar Amerika Syarikat, panjang dipaparkan dalam sentimeter (cm) dan meter (m).
 
 RAVEL PATTERNS
 Ravel Patterns membuka seluruh pustaka. Langgan secara bulanan atau tahunan, kedua-duanya dengan percubaan percuma 7 hari untuk pelanggan baharu, atau bayar sekali untuk akses seumur hidup. Harga di rantau anda dipaparkan sebelum anda bermula. Bayaran dikenakan pada akaun Apple anda semasa pembelian disahkan. Langganan diperbaharui sehingga anda membatalkannya, selewat-lewatnya 24 jam sebelum tempoh tamat, dalam Tetapan. Corak yang sudah anda mulakan kekal dalam projek anda.

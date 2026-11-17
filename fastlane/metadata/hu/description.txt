@@ -11,14 +11,14 @@ VÉGLEG INGYENES
 • Horgolás: a sorszámláló és a készlet horgolt sorokhoz és horgolótűkhöz is használható. A mintakönyvtár kötéshez való
 
 MINTÁK A TE MÉRETEDRE
-Válassz egy modellt, add meg a méreteidet és a szemsűrűségedet, és a Ravel úgy írja meg a mintát, hogy jól álljon. Minden szemfelszedés, szaporítás és fogyasztás a te számaidból készül, és minden modellt minden méretben ellenőriztünk, hogy a szemszámok stimmeljenek, a babasapkától az 5X-es pulóverig.
+Válassz egy modellt, add meg a méreteidet és a szemsűrűségedet, és a Ravel úgy írja meg a mintát, hogy jól álljon. Minden szemfelszedés, szaporítás és fogyasztás a te számaidból készül, fix kötésmatematikával, nem mesterséges intelligenciával, és minden modellt minden méretben és fonalvastagságban ellenőriztünk, hogy a szemszámok stimmeljenek, a babasapkától az 5X-es pulóverig.
 
-Utána sorról sorra haladhatsz. Minden koppintás megmutatja a következő utasítást és azt a szemszámot, amelynek a tűn kell lennie. Ugorj bármelyik szakaszra, amikor újra elővetted a munkát.
+Utána sorról sorra haladhatsz. Minden koppintás megmutatja a következő utasítást és azt a szemszámot, amelynek a tűn kell lennie. Ugorj bármelyik szakaszra, amikor újra elővetted a munkát. Ha egy sor hibásnak tűnik, válaszd a mintában a Hiba jelentése lehetőséget; ha egy modellt kijavítanak, a megkezdett projekt felkínálja a javítást abban a sorban, ahol tartasz.
 
-A könyvtárban sapkák, símaszk, sálak, csősálak, csavart mintás fejpánt, takarók, mosogatókendő, kéz- és lábmelegítők, háromszög kendő és felülről kötött raglán pulóver található. A Trending polc az új modelleket és az évszakhoz illőket mutatja elsőként. A színes kötésmintás modellek csíkokkal, diagramos motívumokkal és fülecskés sapkákkal bővülnek, a te méretedre írva, mint minden más, és az év során új szezonális modellek érkeznek alkalmazásfrissítés nélkül. A Garter Scarf (csupa sima sorból kötött sál) és a Diagonal Dishcloth (átlós mosogatókendő) ingyenes.
+A könyvtárban 32 modell található: sapkák, fonatmintás sapka, fülvédős sapka, símaszk, zokni a szárától, egyujjas kesztyű, kézmelegítők, sálak, csősálak, stóla, háromszög kendő és félhold alakú kendő, takarók, párnahuzat, bevásárlóháló, mosogatókendő, lábmelegítők és pulóverek: raglán pulóver, raglán kardigán, mellény és gyerek raglán 2T-től 12-ig. A Trending polc az új modelleket és az évszakhoz illőket mutatja elsőként. A színes kötésmintás modellek csíkokkal, diagramos motívumokkal és fülecskés sapkákkal bővülnek, a te méretedre írva, mint minden más, és az év során új szezonális modellek érkeznek alkalmazásfrissítés nélkül. A Garter Scarf (csupa sima sorból kötött sál) és a Diagonal Dishcloth (átlós mosogatókendő) ingyenes.
 
 NYELV ÉS MÉRTÉKEGYSÉGEK
-Az alkalmazás és minden minta csak angolul érhető el. Az Egyesült Államokon kívül a hosszúságokat centiméterben (cm) és méterben (m) mutatja.
+Az alkalmazás magyar nyelvű. A generált minták leírása angolul van, a kötési rövidítések szokásos nyelvén. Az Egyesült Államokon kívül a hosszúságokat centiméterben (cm) és méterben (m) mutatja.
 
 RAVEL PATTERNS
 A Ravel Patterns feloldja az egész könyvtárat. Fizess elő havonta vagy évente, mindkettőhöz 7 napos ingyenes próba jár az új előfizetőknek, vagy fizess egyszer az élethosszig tartó hozzáférésért. A te régiódban érvényes ár a kezdés előtt látható. A fizetés a vásárlás megerősítésekor terhelődik az Apple-fiókodra. Az előfizetés megújul, amíg le nem mondod, legalább 24 órával az időszak vége előtt, a Beállításokban. Egy már megkezdett minta megmarad a projektjeidben.

@@ -1,1 +1,1 @@
-toque,sweater,stitch,tracker,crochet,beginner,pdf,hat,beanie,scarf,cowl,shawl,colourwork,gauge
+toque,sweater,crochet,beginner,hat,beanie,scarf,cowl,shawl,colourwork,gauge,socks,mittens,cardigan

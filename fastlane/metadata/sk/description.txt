@@ -11,14 +11,14 @@ NAVŽDY ZADARMO
 • Háčkovanie: počítadlo radov aj zásoba fungujú aj pre háčkované rady a háčiky. Knižnica návodov je určená na pletenie
 
 NÁVODY VO VAŠEJ VEĽKOSTI
-Vyberte model, zadajte svoje rozmery a hustotu pletenia a Ravel napíše návod tak, aby sedel. Každé nahodenie, pridanie a ubratie ôk sa vypočíta z vašich čísel a každý model je skontrolovaný vo všetkých veľkostiach, aby počty ôk sedeli, od detskej čiapočky po sveter vo veľkosti 5X.
+Vyberte model, zadajte svoje rozmery a hustotu pletenia a Ravel napíše návod tak, aby sedel. Každé nahodenie, pridanie a ubratie ôk sa vypočíta z vašich čísel pevnou pletiarskou matematikou, nie umelou inteligenciou, a každý model je skontrolovaný vo všetkých veľkostiach a hrúbkach priadze, aby počty ôk sedeli, od detskej čiapočky po sveter vo veľkosti 5X.
 
-Potom pletiete rad po rade. Každé klepnutie ukáže ďalší pokyn a počet ôk, ktorý máte mať na ihlici. Preskočte na ľubovoľnú časť, keď sa k práci vrátite.
+Potom pletiete rad po rade. Každé klepnutie ukáže ďalší pokyn a počet ôk, ktorý máte mať na ihlici. Preskočte na ľubovoľnú časť, keď sa k práci vrátite. Ak sa vám rad zdá nesprávny, vyberte v návode Nahlásiť problém; keď sa model opraví, projekt, ktorý ste začali, dostane opravu na rade, kde ste.
 
-Knižnica obsahuje čiapky, kuklu, šály, nákrčníky, čelenku s vrkočmi, deky, handričku na riad, návleky na ruky, návleky na nohy, trojuholníkovú šatku a sveter s raglánovými rukávmi pletený zhora. Polica Trending začína novými modelmi a tým, čo sa hodí k ročnému obdobiu. Návrhy s farebným pletením pridávajú pruhy, vzory podľa schémy a čiapky s ušami, vo vašej veľkosti ako všetko ostatné, a nové sezónne návrhy prichádzajú počas roka bez aktualizácie aplikácie. Garter Scarf (šál pletený samými hladkými radmi) a Diagonal Dishcloth (diagonálna handrička na riad) sú zadarmo.
+Knižnica obsahuje 32 modelov: čiapky, čiapku s vrkočmi, čiapku s klapkami na uši, kuklu, ponožky od manžety, palčiaky, návleky na ruky, šály, nákrčníky, štólu, trojuholníkovú šatku a polmesiacovú šatku, deky, obliečku na vankúš, sieťovku, handričku na riad, návleky na nohy a svetre: sveter s raglánovými rukávmi, kardigan s raglánom, vestu a detský raglán od 2T do 12. Polica Trending začína novými modelmi a tým, čo sa hodí k ročnému obdobiu. Návrhy s farebným pletením pridávajú pruhy, vzory podľa schémy a čiapky s ušami, vo vašej veľkosti ako všetko ostatné, a nové sezónne návrhy prichádzajú počas roka bez aktualizácie aplikácie. Garter Scarf (šál pletený samými hladkými radmi) a Diagonal Dishcloth (diagonálna handrička na riad) sú zadarmo.
 
 JAZYK A JEDNOTKY
-Aplikácia aj všetky návody sú iba v angličtine. Mimo Spojených štátov sa dĺžky zobrazujú v centimetroch (cm) a metroch (m).
+Aplikácia je v slovenčine. Vygenerované návody sú v angličtine, štandardnom jazyku pletacích skratiek. Mimo Spojených štátov sa dĺžky zobrazujú v centimetroch (cm) a metroch (m).
 
 RAVEL PATTERNS
 Ravel Patterns odomyká celú knižnicu. Predplaťte si mesačne alebo ročne, oboje so 7-dňovou bezplatnou skúšobnou dobou pre nových predplatiteľov, alebo zaplaťte raz za prístup na celý život. Cena vo vašom regióne sa zobrazí pred začiatkom. Platba sa strhne z vášho účtu Apple pri potvrdení nákupu. Predplatné sa obnovuje, kým ho nezrušíte, najneskôr 24 hodín pred koncom obdobia, v Nastaveniach. Návod, ktorý ste už začali, zostane vo vašich projektoch.

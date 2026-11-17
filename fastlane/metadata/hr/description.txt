@@ -11,14 +11,14 @@ BESPLATNO ZAUVIJEK
 • Kukičanje: brojač redova i zaliha rade i za kukičane redove i kuke. Knjižnica uzoraka je za pletenje
 
 UZORCI U VAŠOJ VELIČINI
-Odaberite dizajn, unesite svoje mjere i gustoću pletenja, a Ravel će napisati uzorak da vam stoji. Svako nabacivanje, povećanje i smanjenje izračunato je iz vaših brojeva, a svaki je dizajn provjeren u svakoj veličini kako bi se broj petlji slagao, od bebine kapice do džempera veličine 5X.
+Odaberite dizajn, unesite svoje mjere i gustoću pletenja, a Ravel će napisati uzorak da vam stoji. Svako nabacivanje, povećanje i smanjenje izračunato je iz vaših brojeva fiksnom matematikom pletenja, a ne umjetnom inteligencijom, a svaki je dizajn provjeren u svakoj veličini i debljini pređe kako bi se broj petlji slagao, od bebine kapice do džempera veličine 5X.
 
-Zatim pratite uzorak red po red. Svaki dodir prikazuje sljedeću uputu i broj petlji koji biste trebali imati na igli. Skočite na bilo koji dio kad nastavite rad.
+Zatim pratite uzorak red po red. Svaki dodir prikazuje sljedeću uputu i broj petlji koji biste trebali imati na igli. Skočite na bilo koji dio kad nastavite rad. Ako vam red izgleda pogrešno, u uzorku odaberite Prijavi problem; kad se dizajn ispravi, projekt koji ste započeli dobiva ispravak u redu u kojem se nalazite.
 
-Knjižnica ima kape, kukulju, šalove, tubaste šalove, traku za glavu s pletenicama, pokrivače, krpicu za suđe, ručne grijače, grijače za noge, trokutasti šal i džemper s raglan rukavima pleten odozgo prema dolje. Polica Trending počinje novim dizajnima i onim što pristaje sezoni. Dizajni s višebojnim pletenjem dodaju pruge, motive prema shemi i kape s ušima, u vašoj veličini kao i sve ostalo, a novi sezonski dizajni stižu tijekom godine bez ažuriranja aplikacije. Garter Scarf (šal pleten samo desnim petljama) i Diagonal Dishcloth (dijagonalna krpica za suđe) besplatni su.
+Knjižnica ima 32 dizajna: kape, kapu s pletenicama, kapu s ušima, kukulju, čarape od manšete, rukavice palčanice, ručne grijače, šalove, tubaste šalove, štolu, trokutasti šal i šal u obliku polumjeseca, pokrivače, jastučnicu, torbu za tržnicu, krpicu za suđe, grijače za noge i džempere: džemper s raglan rukavima, kardigan s raglan rukavima, prsluk i dječji raglan od 2T do 12. Polica Trending počinje novim dizajnima i onim što pristaje sezoni. Dizajni s višebojnim pletenjem dodaju pruge, motive prema shemi i kape s ušima, u vašoj veličini kao i sve ostalo, a novi sezonski dizajni stižu tijekom godine bez ažuriranja aplikacije. Garter Scarf (šal pleten samo desnim petljama) i Diagonal Dishcloth (dijagonalna krpica za suđe) besplatni su.
 
 JEZIK I MJERNE JEDINICE
-Aplikacija i svi uzorci dostupni su samo na engleskom jeziku. Izvan Sjedinjenih Država duljine se prikazuju u centimetrima (cm) i metrima (m).
+Aplikacija je na hrvatskom jeziku. Generirane upute za uzorke na engleskom su jeziku, standardnom jeziku pletaćih kratica. Izvan Sjedinjenih Država duljine se prikazuju u centimetrima (cm) i metrima (m).
 
 RAVEL PATTERNS
 Ravel Patterns otključava cijelu knjižnicu. Pretplatite se mjesečno ili godišnje, oboje sa 7 dana besplatnog probnog razdoblja za nove pretplatnike, ili jednom platite doživotni pristup. Cijena u vašoj regiji prikazuje se prije početka. Naplata se vrši s vašeg Apple računa pri potvrdi kupnje. Pretplata se obnavlja dok je ne otkažete, najkasnije 24 sata prije kraja razdoblja, u Postavkama. Uzorak koji ste već započeli ostaje u vašim projektima.

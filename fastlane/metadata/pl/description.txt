@@ -11,14 +11,14 @@ ZAWSZE ZA DARMO
 • Szydełko: licznik rzędów i zapas działają także dla rzędów szydełkowych i szydełek. Biblioteka wzorów jest do dziergania
 
 WZORY W TWOIM ROZMIARZE
-Wybierz projekt, wpisz swoje wymiary i próbkę, a Ravel napisze wzór, który pasuje. Każde nabranie oczek, dodawanie i zmniejszanie jest obliczane z Twoich liczb, a każdy projekt jest sprawdzony w każdym rozmiarze, aby liczby oczek się zgadzały, od czapeczki niemowlęcej do swetra w rozmiarze 5X.
+Wybierz projekt, wpisz swoje wymiary i próbkę, a Ravel napisze wzór, który pasuje. Każde nabranie oczek, dodawanie i zmniejszanie jest obliczane z Twoich liczb według stałej matematyki robót, a nie przez AI, a każdy projekt jest sprawdzony w każdym rozmiarze i każdej grubości włóczki, aby liczby oczek się zgadzały, od czapeczki niemowlęcej do swetra w rozmiarze 5X.
 
-Potem prowadź robótkę rząd po rzędzie. Każde dotknięcie pokazuje następną instrukcję i liczbę oczek, która powinna być na drucie. Przejdź do dowolnej części, gdy wracasz do pracy.
+Potem prowadź robótkę rząd po rzędzie. Każde dotknięcie pokazuje następną instrukcję i liczbę oczek, która powinna być na drucie. Przejdź do dowolnej części, gdy wracasz do pracy. Jeśli rząd wygląda źle, wybierz we wzorze Zgłoś problem; gdy projekt zostanie poprawiony, rozpoczęta robótka dostaje poprawkę w rzędzie, w którym jesteś.
 
-Biblioteka zawiera czapki, kominiarkę, szaliki, kominy, opaskę z warkoczami, koce, ściereczkę, mitenki, getry, trójkątny szal i sweter z raglanowymi rękawami robiony od góry. Półka Trending zaczyna się od nowych projektów i tego, co pasuje do pory roku. Wzory żakardowe dodają paski, motywy z wykresu i czapki z uszkami, rozmiarowane jak wszystko inne, a nowe wzory sezonowe pojawiają się przez cały rok bez aktualizacji aplikacji. Garter Scarf (szalik ściegiem francuskim) i Diagonal Dishcloth (ukośna ściereczka) są darmowe.
+Biblioteka zawiera 32 projekty: czapki, czapkę z warkoczami, czapkę z nausznikami, kominiarkę, skarpetki od mankietu, rękawiczki jednopalczaste, mitenki, szaliki, kominy, stułę, trójkątny szal i chustę w kształcie półksiężyca, koce, poszewkę na poduszkę, torbę na zakupy, ściereczkę, getry i swetry: sweter z reglanem, kardigan z reglanem, kamizelkę i dziecięcy reglan od 2T do 12. Półka Trending zaczyna się od nowych projektów i tego, co pasuje do pory roku. Wzory żakardowe dodają paski, motywy z wykresu i czapki z uszkami, rozmiarowane jak wszystko inne, a nowe wzory sezonowe pojawiają się przez cały rok bez aktualizacji aplikacji. Garter Scarf (szalik ściegiem francuskim) i Diagonal Dishcloth (ukośna ściereczka) są darmowe.
 
 JĘZYK I MIARY
-Aplikacja i wszystkie wzory są tylko po angielsku. Poza Stanami Zjednoczonymi długości są pokazywane w centymetrach (cm) i metrach (m).
+Aplikacja jest po polsku. Wygenerowane instrukcje wzorów są po angielsku, w standardowym języku skrótów dziewiarskich. Poza Stanami Zjednoczonymi długości są pokazywane w centymetrach (cm) i metrach (m).
 
 RAVEL PATTERNS
 Ravel Patterns odblokowuje całą bibliotekę. Subskrybuj co miesiąc lub co rok, z 7-dniowym bezpłatnym okresem próbnym dla nowych subskrybentów, albo zapłać raz za dostęp na całe życie. Cenę w Twoim regionie zobaczysz przed rozpoczęciem. Płatność jest pobierana z Twojego konta Apple po potwierdzeniu zakupu. Subskrypcja odnawia się, dopóki jej nie anulujesz, najpóźniej 24 godziny przed końcem okresu, w Ustawieniach. Wzór, który masz już rozpoczęty, zostaje w Twoich projektach.

@@ -11,14 +11,14 @@ ZA VEDNO BREZPLAČNO
 • Kvačkanje: števec vrstic in zaloga delujeta tudi za kvačkane vrstice in kvačke. Knjižnica vzorcev je za pletenje
 
 VZORCI V VAŠI VELIKOSTI
-Izberite model, vnesite svoje mere in gostoto pletenja, Ravel pa napiše vzorec, da vam bo prav. Vsako nabiranje, povečanje in zmanjšanje je izračunano iz vaših številk, vsak model pa je preverjen v vsaki velikosti, da se števila zank ujemajo, od otroške kapice do puloverja velikosti 5X.
+Izberite model, vnesite svoje mere in gostoto pletenja, Ravel pa napiše vzorec, da vam bo prav. Vsako nabiranje, povečanje in zmanjšanje je izračunano iz vaših številk s fiksno matematiko pletenja, ne z UI, vsak model pa je preverjen v vsaki velikosti in debelini preje, da se števila zank ujemajo, od otroške kapice do puloverja velikosti 5X.
 
-Nato sledite vzorcu vrstico za vrstico. Vsak dotik pokaže naslednje navodilo in število zank, ki jih morate imeti na igli. Skočite na kateri koli del, ko nadaljujete z delom.
+Nato sledite vzorcu vrstico za vrstico. Vsak dotik pokaže naslednje navodilo in število zank, ki jih morate imeti na igli. Skočite na kateri koli del, ko nadaljujete z delom. Če se vam vrstica zdi napačna, v vzorcu izberite Prijavi težavo; ko je model popravljen, projekt, ki ste ga začeli, dobi popravek v vrstici, na kateri ste.
 
-Knjižnica vsebuje kape, kukljo, šale, snoode, naglavni trak s kitami, odeje, krpo za posodo, grelce za zapestja, grelce za noge, trikoten šal in pulover z raglan rokavi, pleten od zgoraj navzdol. Polica Trending se začne z novimi modeli in tistim, kar ustreza sezoni. Modeli z večbarvnim pletenjem dodajo proge, motive po shemi in kape z ušesi, po vaši meri kot vse drugo, novi sezonski modeli pa prihajajo skozi vse leto brez posodobitve aplikacije. Garter Scarf (šal iz samih desnih vrstic) in Diagonal Dishcloth (diagonalna krpa za posodo) sta brezplačna.
+Knjižnica vsebuje 32 modelov: kape, kapo s kitami, kapo z ušesnimi zaklopkami, kukljo, nogavice od manšete, palčnike, grelce za zapestja, šale, snoode, štolo, trikoten šal in šal v obliki polmeseca, odeje, prevleko za blazino, mrežasto nakupovalno torbo, krpo za posodo, grelce za noge in puloverje: pulover z raglan rokavi, kardigan z raglan rokavi, brezrokavnik in otroški raglan od 2T do 12. Polica Trending se začne z novimi modeli in tistim, kar ustreza sezoni. Modeli z večbarvnim pletenjem dodajo proge, motive po shemi in kape z ušesi, po vaši meri kot vse drugo, novi sezonski modeli pa prihajajo skozi vse leto brez posodobitve aplikacije. Garter Scarf (šal iz samih desnih vrstic) in Diagonal Dishcloth (diagonalna krpa za posodo) sta brezplačna.
 
 JEZIK IN ENOTE
-Aplikacija in vsi vzorci so samo v angleščini. Zunaj Združenih držav se dolžine prikazujejo v centimetrih (cm) in metrih (m).
+Aplikacija je v slovenščini. Ustvarjena navodila za vzorce so v angleščini, standardnem jeziku pletilskih kratic. Zunaj Združenih držav se dolžine prikazujejo v centimetrih (cm) in metrih (m).
 
 RAVEL PATTERNS
 Ravel Patterns odklene celotno knjižnico. Naročite se mesečno ali letno, oboje s 7 dnevi brezplačnega preizkusa za nove naročnike, ali enkrat plačajte za dosmrten dostop. Cena v vaši regiji je prikazana pred začetkom. Plačilo se obremeni na vaš račun Apple ob potrditvi nakupa. Naročnina se obnavlja, dokler je ne prekličete, najpozneje 24 ur pred koncem obdobja, v Nastavitvah. Vzorec, ki ste ga že začeli, ostane v vaših projektih.

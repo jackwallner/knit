@@ -11,14 +11,14 @@ GRATIS PER SEMPRE
 • Ganxet: el comptador de voltes i la reserva també serveixen per a voltes de ganxet i per als ganxets. La biblioteca de patrons és per fer punt
 
 PATRONS A LA TEVA TALLA
-Tria un disseny, introdueix les teves mides i la teva mostra, i Ravel escriu el patró perquè et vagi bé. Cada muntatge, augment i disminució es calcula a partir dels teus números, i cada disseny es comprova en cada talla perquè el nombre de punts quadri, d'un gorro de nadó a un jersei de talla 5X.
+Tria un disseny, introdueix les teves mides i la teva mostra, i Ravel escriu el patró perquè et vagi bé. Cada muntatge, augment i disminució es calcula a partir dels teus números amb matemàtiques de punt fixes, no amb IA, i cada disseny es comprova en cada talla i en cada gruix de fil perquè el nombre de punts quadri, d'un gorro de nadó a un jersei de talla 5X.
 
-Després segueix-lo volta a volta. Cada toc mostra la instrucció següent i el nombre de punts que has de tenir a l'agulla. Salta a qualsevol secció quan reprenguis la feina.
+Després segueix-lo volta a volta. Cada toc mostra la instrucció següent i el nombre de punts que has de tenir a l'agulla. Salta a qualsevol secció quan reprenguis la feina. Si una volta et sembla errònia, tria Informa d’un problema des del patró; quan es corregeix un disseny, el projecte que has començat rep la correcció a la volta on ets.
 
-La biblioteca inclou gorros, un passamuntanyes, bufandes, colls, una cinta amb trenes per al cap, mantes, un drap de cuina, manyoples sense dits, escalfadors de cames, un mocador triangular i un jersei ragla de dalt a baix. El prestatge Trending comença amb els dissenys nous i el que va bé amb la temporada. Els dissenys amb colors afegeixen ratlles, motius de gràfic i gorros amb orelles, a la teva talla com tota la resta, i durant l'any arriben dissenys nous de temporada sense actualitzar l'app. La Garter Scarf (bufanda tota del dret) i la Diagonal Dishcloth (drap de cuina en diagonal) són gratuïts.
+La biblioteca inclou 32 dissenys: gorros, un gorro amb trenes, un gorro amb orelleres, un passamuntanyes, mitjons des del puny, mitenes, manyoples sense dits, bufandes, colls, una estola, un mocador triangular i una mantellina de mitja lluna, mantes, una funda de coixí, una bossa de la compra, un drap de cuina, escalfadors de cames, i jerseis: un jersei ragla, un cardigan ragla, una armilla de punt i un ragla infantil de la talla 2T a la 12. El prestatge Trending comença amb els dissenys nous i el que va bé amb la temporada. Els dissenys amb colors afegeixen ratlles, motius de gràfic i gorros amb orelles, a la teva talla com tota la resta, i durant l'any arriben dissenys nous de temporada sense actualitzar l'app. La Garter Scarf (bufanda tota del dret) i la Diagonal Dishcloth (drap de cuina en diagonal) són gratuïts.
 
 IDIOMA I MESURES
-L'app i tots els patrons són només en anglès. Fora dels Estats Units, les longituds es mostren en centímetres (cm) i metres (m).
+L'app és en català. Les instruccions dels patrons generats són en anglès, la llengua estàndard de les abreviatures de teixit. Fora dels Estats Units, les longituds es mostren en centímetres (cm) i metres (m).
 
 RAVEL PATTERNS
 Ravel Patterns desbloqueja tota la biblioteca. Subscriu-te cada mes o cada any, tots dos amb 7 dies de prova gratuïta per als nous subscriptors, o paga una sola vegada per l'accés de per vida. El preu a la teva regió es mostra abans de començar. El pagament es carrega al teu compte d'Apple en confirmar la compra. La subscripció es renova fins que la cancel·lis, almenys 24 hores abans que acabi el període, a Configuració. Un patró que ja has començat es queda als teus projectes.

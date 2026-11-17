@@ -1,1 +1,1 @@
-uncinetto,ferri,cappello,maglione,sciarpa,scaldacollo,coperta,principianti,pdf,jacquard,campione
+uncinetto,ferri,cappello,maglione,sciarpa,coperta,principianti,jacquard,calze,muffole,cardigan
