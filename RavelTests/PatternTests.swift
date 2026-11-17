@@ -850,8 +850,10 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(rows(plan, "First Earflap").count % 2, 0)
                 let join = plan.steps.first { $0.section == "Brim" && $0.isAction }
                 let cast = numbers((join?.texts[0] ?? "").replacingOccurrences(of: Sizing.cable(16), with: ""))
-                XCTAssertEqual(cast.count, 3)
-                XCTAssertEqual(cast.reduce(0, +) + 2 * flap, join?.stitches)
+                // Cast on, the second flap, cast on, the first flap, cast on.
+                XCTAssertEqual(cast.count, 5)
+                XCTAssertEqual([cast[1], cast[3]], [flap, flap])
+                XCTAssertEqual(cast[0] + cast[2] + cast[4] + 2 * flap, join?.stitches)
                 XCTAssertEqual(plan.steps.filter { $0.section == "Ties" && !$0.isAction }.count, 2)
             }
         }

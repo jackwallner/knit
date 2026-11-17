@@ -996,10 +996,10 @@ enum Engines {
             b.row("Knit", stitches: 3)
             b.work(["K1, M1L, knit to the last stitch, M1R, k1", "Knit"], rows: 2 * increases, stitches: 5, delta: 2)
             b.work(["Knit"], rows: flapRows - 1 - 2 * increases, stitches: flap)
-            b.action(index == 0 ? "Cut the yarn and slip the \(flap) stitches to a spare needle." : "Leave the \(flap) stitches on the needle, with the yarn attached.")
+            b.action(index == 0 ? "Cut the yarn and slip the \(flap) stitches to a spare needle." : "Cut the yarn and leave the \(flap) stitches on their needle.")
         }
         b.section = "Brim"
-        b.action("With the \(small ? "double-pointed needles" : "\(Sizing.cable(16)) circular needle") and the yarn of the second earflap, cast on \(back / 2) stitches with the backward loop method. Knit across the second earflap. Cast on \(front) stitches the same way, knit across the first earflap from its spare needle, then cast on \(back - back / 2) more. Join in the round and place a marker at the middle of the back.", stitches: around)
+        b.action("Join new yarn. With the \(small ? "double-pointed needles" : "\(Sizing.cable(16)) circular needle") in your right hand, cast on \(back / 2) stitches with the backward loop method. Hold the second earflap's needle in your left hand and knit its \(flap) stitches onto the right needle. Cast on \(front) stitches the same way, knit the first earflap's \(flap) stitches off its spare needle the same way, then cast on \(back - back / 2) more. Join in the round, without twisting, and place a marker at the middle of the back.", stitches: around)
         b.work(["Purl", "Knit"], rows: border, stitches: around)
         b.section = "Body"
         b.work(["Knit"], rows: bodyRounds - (top == around ? 0 : 1), stitches: around)
@@ -1020,7 +1020,7 @@ enum Engines {
         let yards = Sizing.yards(squareInches: Double(around) / g.spi * height + Double(flap) / g.spi * flapDepth, spi: g.spi, factor: 1.15)
         let needles = small ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop"]
             : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "Double-pointed needles in the same size for the crown and ties"]
-        return pattern(b, estimate: yards, tools: needles + ["Stitch marker, waste yarn", "Tapestry needle"], finished: "\(fits(around, g, "head", head)), with earflaps \(Sizing.inches(flapDepth)) deep", gauge: g)
+        return pattern(b, estimate: yards, tools: needles + ["A spare needle to hold the first earflap", "Stitch marker", "Tapestry needle"], finished: "\(fits(around, g, "head", head)), with earflaps \(Sizing.inches(flapDepth)) deep", gauge: g)
     }
 
     struct CabledHat: Equatable, Sendable {
@@ -1209,8 +1209,10 @@ enum Engines {
         // What the knitter measures off the needles; mesh and garter open up under the load.
         let knitHeight = Double(plain + mesh) / g.rpi + Double(band) / (g.spi * 2)
         let knitHandle = Double(strapRows) / (g.spi * 2)
+        // The base is garter: the width the knitter asked for, and its rows as deep as they are in ridges.
+        let baseDepth = Double(baseRows) / (g.spi * 2)
         let yards = Sizing.yards(squareInches: 2 * width * height * 0.8 + width * width * 0.3 + 2 * handle * Double(strap) / g.spi, spi: g.spi, factor: 1.1)
-        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide and \(Sizing.inches(knitHeight)) tall as knit, stretching to about \(Sizing.inches(height)) with a load, with handles \(Sizing.inches(knitHandle)) long that stretch to about \(Sizing.inches(handle))", gauge: g)
+        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "A base \(Sizing.inches(width)) wide and \(Sizing.inches(baseDepth)) deep, \(Sizing.inches(Double(around) / g.spi)) around, and \(Sizing.inches(knitHeight)) tall as knit, stretching to about \(Sizing.inches(height)) with a load, with handles \(Sizing.inches(knitHandle)) long that stretch to about \(Sizing.inches(handle))", gauge: g)
     }
 
     struct Pillow: Equatable, Sendable {
