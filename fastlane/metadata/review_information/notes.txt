@@ -1,9 +1,9 @@
 Ravel is a knitting companion for iPhone and iPad. It helps a knitter keep count of rows, keep their place in a pattern, track their yarn, and knit patterns written to their own measurements. There is no account of any kind, so no demo account is needed. Everything except the optional design list below works with no network.
 
 WHAT A FRESH INSTALL SHOWS
-Three tabs: Projects, Patterns and Stash.
+First launch shows three onboarding pages. The last offers the yearly plan's free week ("Try Free for 7 Days", price and renewal terms above the button, Restore, Terms and Privacy below). "Get Started" skips it and opens the free app. Then three tabs: Projects, Patterns and Stash.
 1. Projects: tap + to cast on a project. Inside a project, a tap anywhere counts a row and the fabric on screen grows a row with it. A project can hold the knitter's own pattern (a PDF from Files, or photos of a printed pattern), with a row marker over the page. An optional second counter (for example for decreases) sits above the work.
-2. Patterns: a library of 20 built-in patterns (hats, scarves, cowls, blankets, a shawl, a pullover and more), plus seasonal designs. Open one, pick a size or enter measurements, pick a yarn weight or enter a gauge, and the stitch counts and yardage are rewritten for that knitter. "Cast On" starts a guided project that shows one instruction at a time.
+2. Patterns: a library of 32 built-in patterns (hats, socks, mittens, scarves, cowls, shawls, blankets, a pullover, a cardigan, a vest and more), plus seasonal designs. Open one, pick a size or enter measurements, pick a yarn weight or enter a gauge, and the stitch counts and yardage are rewritten for that knitter. "Cast On" starts a guided project that shows one instruction at a time; its menu has "Report a Problem", which opens an email to the developer with the step the knitter is on.
 3. Stash: the knitter's yarn (weight, skeins, yardage, fiber, dye lot) and needles. A yarn can be linked to a project.
 
 WHAT IS FREE
