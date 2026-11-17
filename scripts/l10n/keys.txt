@@ -257,6 +257,53 @@ Push the needle through the edge of the fabric, wrap the yarn and pull a loop th
 Knit the knit stitches and purl the purl stitches as you bind off
 K1, M1L, knit to 1 stitch before the next marker, M1R, k1, slip the marker. It adds 2 stitches
 A German short row turn: with the yarn in front, slip the first stitch purlwise, then pull the yarn up and over the needle so the stitch shows two legs. Work both legs together as one stitch when you come back to it
+Cuff-Down Socks
+Mittens
+Raglan Cardigan
+Sweater Vest
+Kids' Raglan
+Earflap Hat
+Cabled Beanie
+Basketweave Blanket
+Rectangular Wrap
+Crescent Shawl
+Market Bag
+Pillow Cover
+Foot
+Foot Length
+Leg Length
+Hand Length
+Handle Length
+Extra Large
+Hem
+Sock %lld
+Mitten %lld
+Heel Flap
+Heel Turn
+Gusset
+Toe
+Thumb Gusset
+Thumb
+First Earflap
+Second Earflap
+Ties
+Front
+Back
+First Side
+Second Side
+First Armhole
+Second Armhole
+Neck Edging
+Button Band
+Buttonhole Band
+Garter Tab
+Base
+First Handle
+Second Handle
+Purl 2 stitches together
+Graft two rows of live stitches together with a tapestry needle, so the join looks like knitting
+Make 1 purlwise: lift the bar between the stitches and purl it through the back
+P1, M1P, purl to 1 stitch before the next marker, M1P, p1, slip the marker. It adds 2 stitches
 Tap anywhere to count a row
 Patterns written to your size
 Try every pattern free

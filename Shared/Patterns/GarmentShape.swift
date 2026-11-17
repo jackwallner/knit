@@ -82,6 +82,89 @@ enum GarmentShape {
             path.addLine(to: p(0.02, 0.62))
             path.addLine(to: p(0.24, 0.17))
             path.closeSubpath()
+        case .socks:
+            // One sock seen from the side: the leg, a rounded heel and the foot running out to the toe.
+            path.move(to: p(0.3, 0.08))
+            path.addLine(to: p(0.58, 0.08))
+            path.addLine(to: p(0.58, 0.52))
+            path.addLine(to: p(0.76, 0.55))
+            path.addCurve(to: p(0.78, 0.88), control1: p(0.93, 0.57), control2: p(0.95, 0.88))
+            path.addLine(to: p(0.44, 0.88))
+            path.addCurve(to: p(0.3, 0.64), control1: p(0.34, 0.88), control2: p(0.29, 0.78))
+            path.closeSubpath()
+        case .mittens:
+            // A pair, thumbs toward each other. Each thumb merges into its hand, so the outline has no seam.
+            for (x, thumb) in [(CGFloat(0.08), CGFloat(0.31)), (0.6, 0.0)] {
+                let hand = CGMutablePath()
+                hand.move(to: p(x, 0.88))
+                hand.addLine(to: p(x, 0.36))
+                hand.addQuadCurve(to: p(x + 0.16, 0.1), control: p(x, 0.1))
+                hand.addQuadCurve(to: p(x + 0.32, 0.36), control: p(x + 0.32, 0.1))
+                hand.addLine(to: p(x + 0.32, 0.88))
+                hand.closeSubpath()
+                let side = CGPath(roundedRect: box(x + thumb - 0.03, 0.4, 0.07, 0.22), cornerWidth: unit * 0.035, cornerHeight: unit * 0.035, transform: nil)
+                path.addPath(hand.union(side))
+            }
+        case .cardigan:
+            // The sweater, opened by a V at the neck and a slit down the front.
+            let opening = CGMutablePath()
+            opening.move(to: p(0.4, 0.05))
+            opening.addLine(to: p(0.6, 0.05))
+            opening.addLine(to: p(0.508, 0.42))
+            opening.addLine(to: p(0.508, 0.95))
+            opening.addLine(to: p(0.492, 0.95))
+            opening.addLine(to: p(0.492, 0.42))
+            opening.closeSubpath()
+            path.addPath(GarmentShape.path(.sweater, in: rect).subtracting(opening))
+        case .vest:
+            path.move(to: p(0.37, 0.1))
+            path.addLine(to: p(0.5, 0.44))
+            path.addLine(to: p(0.63, 0.1))
+            path.addLine(to: p(0.74, 0.13))
+            path.addQuadCurve(to: p(0.82, 0.44), control: p(0.72, 0.42))
+            path.addLine(to: p(0.8, 0.9))
+            path.addLine(to: p(0.2, 0.9))
+            path.addLine(to: p(0.18, 0.44))
+            path.addQuadCurve(to: p(0.26, 0.13), control: p(0.28, 0.42))
+            path.closeSubpath()
+        case .earflap:
+            // The dome, with a flap over each ear and a tie hanging from its tip.
+            let hat = CGMutablePath()
+            hat.move(to: p(0.16, 0.64))
+            hat.addCurve(to: p(0.5, 0.08), control1: p(0.14, 0.3), control2: p(0.3, 0.08))
+            hat.addCurve(to: p(0.84, 0.64), control1: p(0.7, 0.08), control2: p(0.86, 0.3))
+            hat.closeSubpath()
+            var whole: CGPath = hat
+            for x in [CGFloat(0.16), 0.62] {
+                let flap = CGMutablePath()
+                flap.move(to: p(x, 0.6))
+                flap.addLine(to: p(x + 0.22, 0.6))
+                flap.addQuadCurve(to: p(x + 0.11, 0.84), control: p(x + 0.22, 0.82))
+                flap.addQuadCurve(to: p(x, 0.6), control: p(x, 0.82))
+                flap.closeSubpath()
+                whole = whole.union(flap).union(CGPath(rect: box(x + 0.1, 0.82, 0.02, 0.14), transform: nil))
+            }
+            path.addPath(whole)
+        case .wrap:
+            path.addRoundedRect(in: box(0.22, 0.07, 0.56, 0.86), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02)
+        case .crescent:
+            path.move(to: p(0.03, 0.28))
+            path.addQuadCurve(to: p(0.97, 0.28), control: p(0.5, 1.0))
+            path.addQuadCurve(to: p(0.03, 0.28), control: p(0.5, 0.46))
+            path.closeSubpath()
+        case .bag:
+            // A body with a handle arching over it.
+            let body = CGPath(roundedRect: box(0.17, 0.42, 0.66, 0.48), cornerWidth: unit * 0.08, cornerHeight: unit * 0.08, transform: nil)
+            let handle = CGPath(ellipseIn: box(0.3, 0.1, 0.4, 0.5), transform: nil).subtracting(CGPath(ellipseIn: box(0.36, 0.16, 0.28, 0.38), transform: nil))
+            path.addPath(body.union(handle))
+        case .pillow:
+            // A cushion: four corners pulled out, the sides between them drawn in.
+            path.move(to: p(0.1, 0.13))
+            path.addQuadCurve(to: p(0.9, 0.13), control: p(0.5, 0.22))
+            path.addQuadCurve(to: p(0.9, 0.87), control: p(0.81, 0.5))
+            path.addQuadCurve(to: p(0.1, 0.87), control: p(0.5, 0.78))
+            path.addQuadCurve(to: p(0.1, 0.13), control: p(0.19, 0.5))
+            path.closeSubpath()
         case .ears:
             // A beanie with two round ears on its crown: the ears merge into the dome, the brim sits apart.
             var top = dome(in: rect)
@@ -122,8 +205,9 @@ enum GarmentShape {
 }
 
 extension Design.Silhouette {
-    /// A raglan is worked from the neck down; everything else here starts at its lower edge.
-    var knitsDown: Bool { self == .sweater }
+    /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
+    /// from its top edge; everything else here starts at its lower edge.
+    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit

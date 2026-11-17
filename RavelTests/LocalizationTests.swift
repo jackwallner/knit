@@ -47,6 +47,29 @@ final class LocalizationTests: XCTestCase {
         }
     }
 
+    /// Every name the library shows, every section a pattern is divided into and every abbreviation it spells
+    /// out has a line in each language. Letter and number sizes keep their international names.
+    func testEveryLibraryWordIsInTheCatalog() throws {
+        var keys = Set<String>()
+        for design in Design.allCases {
+            keys.formUnion([design.name, design.shelf.rawValue, design.level.rawValue])
+            keys.formUnion(design.sizes.map(\.name).filter { $0.range(of: "^([0-9]+T?|[0-9]?X?[SMLX]+)$", options: .regularExpression) == nil })
+            keys.formUnion(design.measures.map(\.label))
+            let plan = design.plan(measures: [:], gauge: design.weight.gauge)
+            for section in plan.sections.map(\.name) {
+                keys.formUnion(section.components(separatedBy: " · ").map { $0.replacingOccurrences(of: " [0-9]+$", with: " %lld", options: .regularExpression) })
+            }
+            keys.formUnion(plan.abbreviations.map(\.meaning))
+        }
+        for language in languages where !language.hasPrefix("en") {
+            let bundle = try table(language)
+            for key in keys.sorted() {
+                XCTAssertNotEqual(bundle.localizedString(forKey: key, value: "\u{1}", table: nil), "\u{1}", "\(language): no line for \(key)")
+            }
+        }
+        XCTAssertTrue(Loc.section("Sock 2 · Heel Turn").contains("2"))
+    }
+
     func testSectionNamesKeepTheirNumbers() {
         XCTAssertTrue(Loc.section("Mitt 2 · Cuff").contains("2"))
         XCTAssertEqual(Loc.section("Unheard Of"), "Unheard Of")

@@ -20,7 +20,7 @@ enum Loc {
     }
 
     private static func piece(_ english: String) -> String {
-        for prefix in ["Mitt ", "Leg Warmer "] where english.hasPrefix(prefix) {
+        for prefix in ["Mitt ", "Leg Warmer ", "Sock ", "Mitten "] where english.hasPrefix(prefix) {
             guard let number = Int(english.dropFirst(prefix.count)) else { break }
             let format = text(prefix + "%lld")
             return String(format: format, number)
