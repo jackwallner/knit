@@ -10,3 +10,6 @@ fastlane/report.xml
 fastlane/README.md
 # Names a handle that is not registered yet; the repo is public.
 project-docs/audit/raw/tiktok-warmup.md
+# Generated sample photo sources (about 3 MB each); the app ships the HEIC copies in Assets.xcassets/Samples.
+project-docs/sample-photos/raw/
+project-docs/sample-photos/raw-v1/

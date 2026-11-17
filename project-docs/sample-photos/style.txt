@@ -1,0 +1,10 @@
+Use case: photorealistic-natural
+Asset type: an ordinary knitter's "finished object" photo, the kind posted to r/knitting or a Ravelry project page right after binding off
+Style/medium: an unedited iPhone photo taken by the knitter at home, slightly high angle looking down, natural phone-camera look with mild noise, slightly imperfect white balance, not color graded, not a professional or editorial photo
+Lighting: ordinary indoor light, either daylight from a window off to one side or a warm evening lamp, uneven with soft real shadows, no studio lighting, no rim light
+Setting: an everyday unstyled home surface such as a couch cushion, a carpet or rug, a bedspread, a laminate or wood floor, a kitchen counter; the background can show a bit of normal home life slightly out of focus (a sofa arm, a TV stand, a bookshelf, a cable), but nothing arranged as props
+Handling: either laid out a little crooked with a few wrinkles, held up in one hand, or worn (on feet propped on a couch, on hands, on a head seen from behind or the side with the face out of frame or turned away)
+Materials/textures: real wool or cotton yarn with fiber halo and visible individual stitches, small tension irregularities of hand knitting, maybe a woven-in yarn end or a stray fiber, lightly blocked
+Composition/framing: square 1:1, the item fills most of the frame, framing slightly off-center like a quick phone snap, item in focus
+Constraints: the knitted construction must match the description exactly (stitch pattern, ribbing, seams, shaping); one item or one pair only; no text, no logos, no brand tags, no watermark, no visible faces
+Avoid: magazine, Pinterest or Etsy styling, perfect symmetry, staged props (mugs, plants, books arranged on purpose), seamless backdrops, glossy CGI look, machine-perfect knitting, oversaturated colors, extra limbs or distorted hands

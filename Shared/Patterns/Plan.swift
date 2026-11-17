@@ -164,6 +164,54 @@ extension PatternPlan {
         return round ? "Round" : "Row"
     }
 
+    /// The opening of the pattern as a knitter reads it before casting on: its first sections written out
+    /// with their row numbers, then the names of the sections after them. Never the whole pattern: a short
+    /// design shows its opening steps only and never its last one.
+    struct Preview: Equatable {
+        struct Block: Equatable {
+            var section: String
+            var lines: [String]
+        }
+        var blocks: [Block]
+        var later: [String]
+    }
+
+    func preview(sections limit: Int = 2, steps most: Int = 6) -> Preview? {
+        guard steps.count > 1 else { return nil }
+        var blocks: [Preview.Block] = []
+        var tap = 0
+        var row = 1
+        for step in steps.prefix(min(most, steps.count - 1)) {
+            if blocks.last?.section != step.section {
+                guard blocks.count < limit else { break }
+                blocks.append(Preview.Block(section: step.section, lines: []))
+                row = 1
+            }
+            defer { tap += step.rows }
+            if step.isAction {
+                blocks[blocks.count - 1].lines.append(step.texts[0])
+                continue
+            }
+            let unit = self.unit(at: tap)
+            let last = row + step.rows - 1
+            let span = step.rows == 1 ? "\(unit) \(row)" : "\(unit)s \(row)-\(last)"
+            if step.texts.count == 1 || step.rows <= 1 {
+                blocks[blocks.count - 1].lines.append("\(span): \(step.texts[0])")
+            } else {
+                blocks[blocks.count - 1].lines.append("\(span), repeating \(step.texts.count) \(unit.lowercased())s:")
+                for (index, text) in step.texts.enumerated() { blocks[blocks.count - 1].lines.append("\(unit) \(row + index): \(text)") }
+            }
+            row = last + 1
+        }
+        // The parts still to come, each named once: the second sock's heel is the first sock's heel again.
+        var seen = Set(blocks.map(\.section).map(Self.part))
+        let later = sections.map { Self.part($0.name) }.filter { seen.insert($0).inserted }
+        return Preview(blocks: blocks, later: later)
+    }
+
+    /// "Cuff" for "Sock 2 · Cuff": the part of a section, without the piece it belongs to.
+    static func part(_ section: String) -> String { section.components(separatedBy: " · ").last ?? section }
+
     /// Each section with the tap it starts on, in knitting order.
     var sections: [(name: String, tap: Int)] {
         var found: [(name: String, tap: Int)] = []

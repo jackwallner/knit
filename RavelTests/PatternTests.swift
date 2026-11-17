@@ -17,6 +17,25 @@ final class PatternTests: XCTestCase {
         }
     }
 
+    /// Every built-in design page has its knitted sample photo in the app.
+    func testEveryDesignHasASamplePhoto() {
+        for design in Design.allCases { XCTAssertNotNil(UIImage(named: design.photo), "\(design) has no sample photo") }
+    }
+
+    /// The free preview shows the opening of every pattern and never the whole of it.
+    func testPreviewShowsTheOpeningNeverTheWholePattern() {
+        everyPlan { design, input, gauge, plan in
+            guard let preview = plan.preview() else { return XCTFail("\(design) has no preview") }
+            let lines = preview.blocks.flatMap(\.lines)
+            XCTAssertFalse(lines.isEmpty, "\(design) \(input)")
+            XCTAssertEqual(preview.blocks.first?.section, plan.steps[0].section)
+            let last = plan.steps[plan.steps.count - 1]
+            if last.isAction { XCTAssertFalse(lines.contains(last.texts[0]), "\(design) previews its last step") }
+            for block in preview.blocks { XCTAssertFalse(preview.later.contains(PatternPlan.part(block.section))) }
+            XCTAssertEqual(Set(preview.later).count, preview.later.count, "\(design) names a part twice")
+        }
+    }
+
     func testEveryPlanIsWellFormed() {
         everyPlan { design, input, gauge, plan in
             let label = "\(design.rawValue) \(input) \(gauge.stitches)"

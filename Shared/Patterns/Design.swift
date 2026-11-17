@@ -128,6 +128,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     /// Free designs show what the library does before anyone is asked to pay.
     var isFree: Bool { self == .garterScarf || self == .dishcloth }
 
+    /// The asset name of the knitted sample photographed for the design page.
+    var photo: String { "sample-\(rawValue)" }
+
     var silhouette: Silhouette {
         switch self {
         case .ribbedBeanie, .rolledBrimHat: .hat

@@ -177,8 +177,18 @@ struct DesignView: View {
 
     private func hero(_ plan: PatternPlan, height: CGFloat) -> some View {
         VStack(spacing: 14) {
-            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
-                .frame(height: height)
+            if case .builtIn(let design) = item {
+                // A knitted sample: the finished thing, as it looks off the needles.
+                Image(design.photo)
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(maxWidth: height * 1.7)
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .accessibilityHidden(true)
+            } else {
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
+                    .frame(height: height)
+            }
             Text("\(item.level.title) · \(Sizing.yardage(plan.yards))")
                 .font(.subheadline)
                 .monospacedDigit()
@@ -212,6 +222,26 @@ struct DesignView: View {
                 ForEach(plan.materials, id: \.self) { line in
                     Text(line).frame(maxWidth: .infinity, alignment: .leading)
                 }
+            }
+
+            if let preview = plan.preview() {
+                // The opening rows at the knitter's own size and gauge, before anything is paid for or cast on.
+                group("Pattern") {
+                    ForEach(Array(preview.blocks.enumerated()), id: \.offset) { _, block in
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(Loc.section(block.section)).font(.headline)
+                            ForEach(Array(block.lines.enumerated()), id: \.offset) { _, line in
+                                Text(line).frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                        }
+                    }
+                    if !preview.later.isEmpty {
+                        Text(verbatim: preview.later.map(Loc.section).joined(separator: ", "))
+                            .foregroundStyle(Theme.secondary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                .accessibilityIdentifier("design.preview")
             }
         }
     }
