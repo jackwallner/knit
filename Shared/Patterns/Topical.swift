@@ -66,6 +66,7 @@ extension Design {
     var isFlat: Bool {
         switch self {
         case .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .dishcloth, .triangleShawl, .neckScarf, .cableHeadband: true
+        case .basketweaveBlanket, .rectangularWrap, .crescentShawl: true
         default: false
         }
     }

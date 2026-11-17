@@ -149,10 +149,12 @@ extension PatternPlan {
     private static let glossary: [(term: String, meaning: String)] = [
         ("k2tog", "Knit 2 stitches together"),
         ("ssk", "Slip 2 stitches knitwise one at a time, then knit them together through the back"),
+        ("p2tog", "Purl 2 stitches together"),
         ("yo", "Yarn over"),
         ("M1", "Make 1: lift the bar between the stitches and knit it through the back"),
         ("M1L", "Make 1 left: lift the bar from the front and knit it through the back"),
         ("M1R", "Make 1 right: lift the bar from the back and knit it through the front"),
+        ("M1P", "Make 1 purlwise: lift the bar between the stitches and purl it through the back"),
         ("C6F", "Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle"),
         ("k", "Knit. K2 is knit 2 stitches"),
         ("p", "Purl. P2 is purl 2 stitches"),
@@ -164,6 +166,8 @@ extension PatternPlan {
         ("pick up and knit", "Push the needle through the edge of the fabric, wrap the yarn and pull a loop through. Each loop is 1 stitch"),
         ("in pattern", "Knit the knit stitches and purl the purl stitches as you bind off"),
         ("inc across", "K1, M1L, knit to 1 stitch before the next marker, M1R, k1, slip the marker. It adds 2 stitches"),
+        ("inc purlwise", "P1, M1P, purl to 1 stitch before the next marker, M1P, p1, slip the marker. It adds 2 stitches"),
+        ("Kitchener stitch", "Graft two rows of live stitches together with a tapestry needle, so the join looks like knitting"),
         ("double stitch", "A German short row turn: with the yarn in front, slip the first stitch purlwise, then pull the yarn up and over the needle so the stitch shows two legs. Work both legs together as one stitch when you come back to it"),
     ]
 
