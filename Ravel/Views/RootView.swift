@@ -6,6 +6,8 @@ struct RootView: View {
     // `-Tab 1` opens on a given tab, for screenshots.
     @State private var tab = UserDefaults.standard.integer(forKey: "Tab")
     @State private var snapshot = UserDefaults.standard.string(forKey: "PaywallSnapshot") != nil
+    @AppStorage("onboarded") private var onboarded = false
+    @State private var onboarding = false
 
     var body: some View {
         TabView(selection: $tab) {
@@ -21,6 +23,18 @@ struct RootView: View {
         }
         // Leaving the app is the last sure moment to write: nothing typed or counted waits on an autosave.
         .onChange(of: scenePhase) { _, phase in if phase != .active { try? context.save() } }
+        .onAppear {
+            // In place from the first frame, so the tabs never flash behind it.
+            var instant = Transaction()
+            instant.disablesAnimations = true
+            withTransaction(instant) { onboarding = Self.showsOnboarding(onboarded: onboarded) }
+        }
+        .fullScreenCover(isPresented: $onboarding) {
+            OnboardingView {
+                onboarded = true
+                onboarding = false
+            }
+        }
         #if DEBUG
         // `-PaywallSnapshot yearly`, `monthly` or `lifetime` opens the paywall on that plan, for review screenshots.
         .fullScreenCover(isPresented: $snapshot) {
@@ -28,6 +42,16 @@ struct RootView: View {
             PaywallView(picked: plans[UserDefaults.standard.string(forKey: "PaywallSnapshot") ?? ""] ?? .yearly)
         }
         #endif
+    }
+
+    /// A fresh install sees onboarding once. Demo, UI-test and paywall-snapshot runs skip it unless `-Onboarding` asks.
+    private static func showsOnboarding(onboarded: Bool) -> Bool {
+        #if DEBUG
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.contains("-Onboarding") { return true }
+        if arguments.contains("-SeedDemo") || arguments.contains("-UITesting") || arguments.contains("-PaywallSnapshot") { return false }
+        #endif
+        return !onboarded
     }
 }
 

@@ -18,6 +18,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testCoreLoopRowsCountAndSurviveRelaunch() {
         let app = XCUIApplication()
         QA.launch(app)
+        passOnboarding(app)
         let name = "Gate Scarf \(Int(Date().timeIntervalSince1970) % 100_000)"
         let castOn = app.buttons["projects.castOn"]
         if castOn.waitForExistence(timeout: 15) {
@@ -49,6 +50,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     func testFirstRunToAFreePattern() {
         let app = XCUIApplication()
         QA.launch(app)
+        passOnboarding(app)
         tab("Patterns", "Muster", in: app)
         QA.checkpoint(app, "library")
         let design = app.buttons["design.garterScarf"]
@@ -137,6 +139,21 @@ final class ReleaseJourneysUITests: XCTestCase {
     }
 
     // MARK: - Helpers
+
+    /// A fresh install opens on onboarding: through its pages to the trial, then the free way out.
+    private func passOnboarding(_ app: XCUIApplication) {
+        let next = app.buttons["onboarding.next"]
+        guard next.waitForExistence(timeout: 10) else { return }
+        QA.checkpoint(app, "onboarding-counter")
+        next.tap()
+        QA.checkpoint(app, "onboarding-patterns")
+        next.tap()
+        let skip = app.buttons["onboarding.skip"]
+        XCTAssertTrue(skip.waitForExistence(timeout: 10))
+        QA.checkpoint(app, "onboarding-trial")
+        skip.tap()
+        XCTAssertTrue(next.waitForNonExistence(timeout: 10))
+    }
 
     private func tap(_ element: XCUIElement, _ name: String, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(element.waitForExistence(timeout: 15), "\(name) never appeared", file: file, line: line)
