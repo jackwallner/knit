@@ -26,6 +26,7 @@ while [[ $# -gt 0 ]]; do
 done
 if [[ ${#files[@]} -eq 0 ]]; then
   [[ -f docs/designs.json ]] && files+=(docs/designs.json)
+  files+=(Ravel/collection.json)
   for draft in project-docs/topical/drafts/*.json; do [[ -f "$draft" ]] && files+=("$draft"); done
 fi
 exec "$binary" --previews "${PREVIEWS:-project-docs/topical/previews}" "${args[@]+"${args[@]}"}" "${files[@]}"
