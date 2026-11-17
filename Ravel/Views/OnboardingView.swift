@@ -10,7 +10,6 @@ struct OnboardingView: View {
     @State private var knitted = 0.0
     @State private var working = false
     @State private var message: String?
-    @State private var plans = false
     private let subscription = SubscriptionService.shared
 
     private var yearly: Offer? { subscription.offers.first { $0.term == .yearly } }
@@ -18,7 +17,11 @@ struct OnboardingView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            content
+            // At the largest text sizes the page scrolls rather than clip.
+            ViewThatFits(in: .vertical) {
+                content
+                ScrollView { content.padding(.vertical, 16) }
+            }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .id(page)
                 .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
@@ -29,7 +32,6 @@ struct OnboardingView: View {
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
         .onChange(of: subscription.isPro) { _, isPro in if isPro { finish() } }
-        .fullScreenCover(isPresented: $plans) { PaywallView() }
     }
 
     @ViewBuilder private var content: some View {
@@ -110,12 +112,26 @@ struct OnboardingView: View {
     private var bar: some View {
         VStack(spacing: 0) {
             VStack(spacing: 10) {
+                if onTrial, let yearly {
+                    // The plan and its full terms stay in view at all times, in the body's own weight.
+                    VStack(spacing: 4) {
+                        Text(verbatim: "\(String(localized: "Ravel Patterns")) · \(yearly.termName)")
+                            .font(.subheadline.weight(.semibold))
+                        Text(yearly.disclosure)
+                            .font(.subheadline)
+                    }
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityElement(children: .combine)
+                    if let message {
+                        Text(message)
+                            .font(.footnote)
+                            .foregroundStyle(Theme.secondary)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
                 if onTrial {
-                    Text(message ?? yearly?.disclosure ?? "")
-                        .font(.footnote)
-                        .foregroundStyle(Theme.secondary)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
                     Button("Get Started") { finish() }
                         .font(.body)
                         .foregroundStyle(Theme.secondary)
@@ -195,8 +211,8 @@ struct OnboardingView: View {
             return
         }
         guard let yearly else {
-            // Plans have not loaded: the full paywall says so and can retry.
-            plans = true
+            // Offline or still loading: no offer to make, so the free app opens. The paywall is a tap away later.
+            finish()
             return
         }
         working = true
