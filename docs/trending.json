@@ -1,10 +1,32 @@
 {
   "items": [
-    { "design": "balaclava", "tag": "New" },
-    { "design": "neckScarf", "tag": "New" },
-    { "design": "cableHeadband", "tag": "New" },
-    { "design": "chunkyCowl", "tag": "New" },
-    { "design": "handwarmers", "tag": "Gift season" },
-    { "design": "ribbedBeanie", "tag": "Gift season" }
+    {
+      "design": "cuffDownSocks",
+      "tag": "New"
+    },
+    {
+      "design": "mittens",
+      "tag": "New"
+    },
+    {
+      "design": "raglanCardigan",
+      "tag": "New"
+    },
+    {
+      "design": "cabledBeanie",
+      "tag": "New"
+    },
+    {
+      "design": "earflapHat",
+      "tag": "Gift season"
+    },
+    {
+      "design": "handwarmers",
+      "tag": "Gift season"
+    },
+    {
+      "design": "kidsRaglan",
+      "tag": "Gift season"
+    }
   ]
 }
