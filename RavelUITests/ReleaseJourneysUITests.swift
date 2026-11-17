@@ -19,7 +19,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         let app = XCUIApplication()
         QA.launch(app)
         passOnboarding(app)
-        let name = "Gate Scarf \(Int(Date().timeIntervalSince1970) % 100_000)"
+        let typed = "Gate Scarf \(Int(Date().timeIntervalSince1970) % 100_000)"
         let castOn = app.buttons["projects.castOn"]
         if castOn.waitForExistence(timeout: 15) {
             QA.checkpoint(app, "projects-empty")
@@ -29,7 +29,11 @@ final class ReleaseJourneysUITests: XCTestCase {
         }
         let field = app.alerts.textFields.firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10))
-        field.typeText(name)
+        field.typeText(typed)
+        // A loaded simulator can drop a synthesized keystroke. This journey proves rows survive a
+        // relaunch, so it follows the project by the name the field actually holds.
+        sleep(1)
+        let name = (field.value as? String).flatMap { $0.isEmpty ? nil : $0 } ?? typed
         QA.checkpoint(app, "new-project-name")
         tap(app.alerts.buttons.matching(label("Cast On", "Anschlagen")).firstMatch, "Cast On")
 

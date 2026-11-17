@@ -82,7 +82,7 @@ struct ProjectsView: View {
                 Button("Delete Project", role: .destructive) { if let deleting { remove(deleting) } }
             }
             .alert("New Project", isPresented: $naming) {
-                TextField("Name", text: $name).accessibilityLabel("Name")
+                TextField("Name", text: $name).accessibilityLabel("Name").autocorrectionDisabled()
                 Button("Cancel", role: .cancel) { name = "" }
                 Button("Cast On", action: create)
             }
