@@ -1,0 +1,33 @@
+{
+  "designs": [
+    {
+      "id": "winter-star-hat",
+      "title": "Winter Star Hat",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        { "name": "blue", "hex": "#27408B" },
+        { "name": "white", "hex": "#F3F1EA" },
+        { "name": "silver", "hex": "#A9AEB5" }
+      ],
+      "brim": "C",
+      "stripes": [
+        { "color": "A", "inches": 2.25 },
+        { "color": "C", "inches": 0.5 }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          ".B..",
+          "BBB.",
+          ".B.."
+        ]
+      },
+      "weights": ["sport", "dk", "worsted", "aran", "bulky"],
+      "tag": "Winter",
+      "starts": "2026-12-01",
+      "ends": "2027-02-01"
+    }
+  ]
+}
