@@ -184,7 +184,9 @@ struct DesignView: View {
                     .aspectRatio(1, contentMode: .fit)
                     .frame(maxWidth: height * 1.7)
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                    .accessibilityHidden(true)
+                    .accessibilityElement()
+                    .accessibilityLabel(Text(verbatim: item.title))
+                    .accessibilityAddTraits(.isImage)
             } else {
                 Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
                     .frame(height: height)

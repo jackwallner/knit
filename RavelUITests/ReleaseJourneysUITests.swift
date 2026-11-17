@@ -33,7 +33,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         // A loaded simulator can drop a synthesized keystroke. This journey proves rows survive a
         // relaunch, so it follows the project by the name the field actually holds.
         sleep(1)
-        let name = (field.value as? String).flatMap { $0.isEmpty ? nil : $0 } ?? typed
+        // An empty field reports its placeholder as the value, so only text the field holds counts.
+        let held = (field.value as? String).flatMap { $0.isEmpty || $0 == field.placeholderValue ? nil : $0 }
+        let name = held ?? typed
         QA.checkpoint(app, "new-project-name")
         tap(app.alerts.buttons.matching(label("Cast On", "Anschlagen")).firstMatch, "Cast On")
 
