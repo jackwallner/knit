@@ -56,6 +56,16 @@ final class PatternReportTests: XCTestCase {
         XCTAssertNil(LibraryItem.correction(for: try XCTUnwrap(project.plan)))
     }
 
+    /// The correction bar names only the sections whose rows differ.
+    func testChangedSectionsNameOnlyWhatDiffers() throws {
+        let old = castOn(.raglanPullover)
+        var fixed = old
+        XCTAssertEqual(fixed.changedSections(from: old), [])
+        let index = try XCTUnwrap(fixed.steps.lastIndex { !$0.isAction })
+        fixed.steps[index].texts[0] += " Then slip the last stitch."
+        XCTAssertEqual(fixed.changedSections(from: old), [fixed.steps[index].section])
+    }
+
     /// A published seasonal record that is corrected (its "revision" raised) is offered to projects cast on from it.
     @MainActor func testCorrectedTopicalRecordIsOffered() throws {
         let file = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent().appending(path: "docs/designs.json")
@@ -80,5 +90,11 @@ final class PatternReportTests: XCTestCase {
         let fixed = try XCTUnwrap(LibraryItem.correction(for: plan, topicals: TopicalStore(defaults: defaults, now: now)))
         XCTAssertEqual(fixed.source?.revision, item.revision + 1)
         XCTAssertEqual(fixed.source?.design, item.designRaw)
+
+        // After its season the record leaves the shelf but still reaches the projects cast on from it.
+        let later = try XCTUnwrap(Calendar.current.date(byAdding: .year, value: 2, to: now))
+        let ended = TopicalStore(defaults: defaults, now: later)
+        XCTAssertNil(ended.item(topical.id))
+        XCTAssertNotNil(LibraryItem.correction(for: plan, topicals: ended))
     }
 }

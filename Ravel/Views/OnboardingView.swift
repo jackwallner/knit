@@ -17,6 +17,9 @@ struct OnboardingView: View {
     private var onTrial: Bool { page == 2 }
     /// On the trial page while the offer is still on its way: the button waits rather than skip the trial.
     private var waitingForOffer: Bool { onTrial && yearly == nil && subscription.isLoading }
+    /// The free way out, on the trial page while there is an offer to turn down. Offline, the main button
+    /// already opens the app, and a second button doing the same would read as a choice that is not one.
+    private var declinable: Bool { onTrial && (yearly != nil || subscription.isLoading) }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -187,9 +190,9 @@ struct OnboardingView: View {
                     .foregroundStyle(Theme.secondary)
                     .lineLimit(1)
                     .frame(minHeight: 44)
-                    .opacity(onTrial ? 1 : 0)
-                    .allowsHitTesting(onTrial)
-                    .accessibilityHidden(!onTrial)
+                    .opacity(declinable ? 1 : 0)
+                    .allowsHitTesting(declinable)
+                    .accessibilityHidden(!declinable)
                     .accessibilityIdentifier("onboarding.skip")
                 dots
             }

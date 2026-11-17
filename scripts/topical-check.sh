@@ -10,7 +10,7 @@ cd "$(dirname "$0")/.."
 
 build="${TMPDIR:-/tmp}/ravel-topical-check"
 mkdir -p "$build"
-sources=(Shared/Patterns/*.swift Shared/Models/Models.swift scripts/topical-check/*.swift)
+sources=(Shared/Patterns/*.swift Shared/Models/Models.swift Shared/Utilities/Loc.swift scripts/topical-check/*.swift)
 binary="$build/topical-check"
 if [[ ! -x "$binary" ]] || [[ -n "$(find "${sources[@]}" -newer "$binary" 2>/dev/null)" ]]; then
   swiftc -swift-version 6 -o "$binary" "${sources[@]}"

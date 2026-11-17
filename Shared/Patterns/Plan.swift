@@ -91,6 +91,16 @@ struct PatternPlan: Codable, Equatable, Sendable {
         return nil
     }
 
+    /// The sections whose rows differ from `old`, in this plan's order, so a knitter offered a correction
+    /// can see whether it touches work already on the needles.
+    func changedSections(from old: PatternPlan) -> [String] {
+        func rows(_ plan: PatternPlan) -> [String: [Step]] { Dictionary(grouping: plan.steps, by: \.section) }
+        let before = rows(old), after = rows(self)
+        var seen = Set<String>()
+        let order = (steps + old.steps).map(\.section).filter { seen.insert($0).inserted }
+        return order.filter { before[$0] != after[$0] }
+    }
+
     /// Knitted rows among the first `taps` taps, for drawing the fabric.
     func knitRows(upTo taps: Int) -> Int {
         var remaining = max(0, taps)

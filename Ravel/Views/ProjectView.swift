@@ -163,13 +163,22 @@ struct ProjectView: View {
         AccessibilityNotification.Announcement(spoken).post()
     }
 
-    /// A finished project is the moment to ask for a rating, once the screen has settled.
-    /// Offered, never applied on its own: the knitter keeps their place on the corrected pattern.
+    /// Offered, never applied on its own: the knitter keeps their place on the corrected pattern, and sees
+    /// which sections changed before taking it.
     private var correctionBar: some View {
         HStack(spacing: 12) {
-            Text("This pattern was corrected")
-                .font(.subheadline.weight(.medium))
-                .frame(maxWidth: .infinity, alignment: .leading)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("This pattern was corrected")
+                    .font(.subheadline.weight(.medium))
+                if let changed = correctedSections {
+                    Text(verbatim: changed)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.vertical, 8)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityElement(children: .combine)
             Button("Update") {
                 guard let correction else { return }
                 project.adopt(correction)
@@ -184,11 +193,18 @@ struct ProjectView: View {
         .background(.primary.opacity(0.05))
     }
 
+    private var correctedSections: String? {
+        guard let correction, let plan else { return nil }
+        let names = correction.changedSections(from: plan).map(Loc.section)
+        return names.isEmpty ? nil : names.joined(separator: ", ")
+    }
+
     private func report(_ plan: PatternPlan) {
         guard let url = PatternReport.mail(plan: plan, design: project.designRaw ?? "", title: project.name, taps: project.rows) else { return }
         openURL(url) { opened in if !opened { openURL(Links.support) } }
     }
 
+    /// A finished project is the moment to ask for a rating, once the screen has settled.
     private func celebrate() {
         let prompt = ReviewPrompt()
         prompt.recordPositiveMoment()

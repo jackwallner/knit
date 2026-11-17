@@ -133,8 +133,9 @@ def check_text_hygiene(loc, name, text):
 
 
 def check_keywords(loc, lang, kw, name, subtitle):
-    if re.search(r"\s", kw):
-        fail(loc, "keywords contain whitespace")
+    # Multi-word phrases ("kaus kaki") are fine; a space beside a comma wastes a character.
+    if re.search(r"\s,|,\s|^\s|\s$", kw):
+        fail(loc, "keywords have whitespace around a comma")
     tokens = [t for t in kw.split(",")]
     if any(t == "" for t in tokens):
         fail(loc, "keywords have an empty token")
@@ -239,7 +240,7 @@ def main():
     root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "fastlane" / "metadata"
     for loc in LOCALES:
         validate(root, loc)
-    extra = sorted(p.name for p in root.iterdir() if p.is_dir() and p.name not in LOCALES)
+    extra = sorted(p.name for p in root.iterdir() if p.is_dir() and p.name not in LOCALES and p.name != "review_information")
     for name in extra:
         fail(name, "unexpected locale directory")
     for line in warnings:
