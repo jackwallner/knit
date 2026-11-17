@@ -13,17 +13,23 @@ final class TopicalStore {
     private static let fetchedKey = "topical.fetched"
 
     private(set) var items: [Topical]
+    /// Every readable record in the list, ended ones too: a record kept in the list after its season can
+    /// still offer a fix to the projects cast on from it.
+    @ObservationIgnored private var published: [Topical]
     @ObservationIgnored private let defaults: UserDefaults
 
     init(defaults: UserDefaults = .standard, now: Date = .now) {
         self.defaults = defaults
-        items = defaults.data(forKey: Self.cacheKey).map { Topical.decode($0, now: now) } ?? []
+        let cached = defaults.data(forKey: Self.cacheKey)
+        items = cached.map { Topical.decode($0, now: now) } ?? []
+        published = cached.map { Topical.parse($0).compactMap(\.topical) } ?? []
         #if DEBUG
         // `-TopicalFile <path>`: drafts from disk, for screenshots and checks before anything is published.
         // A relative path is read from the repository this build was compiled from.
         if let path = UserDefaults.standard.string(forKey: "TopicalFile"),
            let data = FileManager.default.contents(atPath: path.hasPrefix("/") ? path : Self.repository.appending(path: path).path) {
             items = Topical.parse(data).compactMap(\.topical)
+            published = items
         }
         #endif
     }
@@ -49,6 +55,9 @@ final class TopicalStore {
     }
 
     func item(_ id: String) -> Topical? { items.first { $0.id == id || $0.designRaw == id } }
+
+    /// A record by id whether or not its season is on, for corrections.
+    func record(_ id: String) -> Topical? { published.first { $0.id == id || $0.designRaw == id } }
 }
 
 /// A design in the library: one of the built-in patterns, or a topical one from the site.
@@ -164,10 +173,10 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
     }
 
     /// The corrected pattern for a cast-on project, rebuilt from the numbers it was cast on with, or nil when
-    /// nothing it was built from has changed since (or a topical design is no longer published).
+    /// nothing it was built from has changed since (or a topical record was taken out of the list).
     @MainActor static func correction(for plan: PatternPlan, topicals: TopicalStore = .shared) -> PatternPlan? {
         guard let source = plan.source else { return nil }
-        let item = Design(rawValue: source.design).map(LibraryItem.builtIn) ?? topicals.item(source.design).map(LibraryItem.topical)
+        let item = Design(rawValue: source.design).map(LibraryItem.builtIn) ?? topicals.record(source.design).map(LibraryItem.topical)
         guard let item, item.revision > source.revision else { return nil }
         var fixed = item.plan(measures: source.measures, gauge: source.gauge)
         fixed.source = PlanSource(design: source.design, measures: source.measures, gauge: source.gauge, revision: item.revision)

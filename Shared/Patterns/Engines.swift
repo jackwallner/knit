@@ -1209,10 +1209,11 @@ enum Engines {
         // What the knitter measures off the needles; mesh and garter open up under the load.
         let knitHeight = Double(plain + mesh) / g.rpi + Double(band) / (g.spi * 2)
         let knitHandle = Double(strapRows) / (g.spi * 2)
-        // The base is garter: the width the knitter asked for, and its rows as deep as they are in ridges.
+        // The base is garter: its stitches as wide as they knit, and its rows as deep as they are in ridges.
+        let baseWidth = Double(base) / g.spi
         let baseDepth = Double(baseRows) / (g.spi * 2)
         let yards = Sizing.yards(squareInches: 2 * width * height * 0.8 + width * width * 0.3 + 2 * handle * Double(strap) / g.spi, spi: g.spi, factor: 1.1)
-        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "A base \(Sizing.inches(width)) wide and \(Sizing.inches(baseDepth)) deep, \(Sizing.inches(Double(around) / g.spi)) around, and \(Sizing.inches(knitHeight)) tall as knit, stretching to about \(Sizing.inches(height)) with a load, with handles \(Sizing.inches(knitHandle)) long that stretch to about \(Sizing.inches(handle))", gauge: g)
+        return pattern(b, estimate: yards, yarnNote: ", cotton or linen so the bag holds its shape", tools: ["\(g.needle.label) \(Sizing.cable(Double(around) / g.spi < 20 ? 16 : 24)) circular needle", "Stitch marker", "Tapestry needle"], finished: "A base \(Sizing.inches(baseWidth)) wide and \(Sizing.inches(baseDepth)) deep, \(Sizing.inches(Double(around) / g.spi)) around, and \(Sizing.inches(knitHeight)) tall as knit, stretching to about \(Sizing.inches(height)) with a load, with handles \(Sizing.inches(knitHandle)) long that stretch to about \(Sizing.inches(handle))", gauge: g)
     }
 
     struct Pillow: Equatable, Sendable {

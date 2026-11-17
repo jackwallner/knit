@@ -28,9 +28,12 @@ step and row as written, and one `ravel-report <base64>` line.
    weight is held to it (`PatternTests` runs them all). Topical designs pass through `PlanCheck` too.
 5. Raise the design's entry in `Design.revisions`; for a seasonal design whose record was wrong (not its
    base engine), raise the record's `"revision"` in `docs/designs.json` instead (publishing needs Jack's yes).
-   A seasonal project's revision is its base engine's plus its record's, so either fix reaches it. Projects cast on at a lower revision show "This pattern
-   was corrected" with an Update button; `Project.adopt` keeps the knitter on the same step and row.
-   Nothing changes without their tap.
+   A seasonal project's revision is its base engine's plus its record's, so either fix reaches it.
+   A record past its `ends` date leaves the shelf but still offers its fix, as long as it stays in the list:
+   never delete a record that projects were cast on from. Older revisions of a record are in the git history
+   of `docs/designs.json`, for rebuilding a report filed against one. Projects cast on at a lower revision
+   show "This pattern was corrected", the changed section names and an Update button; `Project.adopt` keeps
+   the knitter on the same step and row. Nothing changes without their tap.
 6. Reply to the knitter, and ship the build.
 
 Not confirmed (a misread instruction, a gauge that did not match the swatch): reply with the fix, and if the

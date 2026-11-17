@@ -114,7 +114,7 @@ The price is shown in the app before you buy and varies by region. Ravel Pattern
 
 ## Do I lose a pattern if I stop subscribing?
 
-No. A pattern you have already cast on stays in your projects with its own copy of the rows, so later updates never change it.
+No. A pattern you have already cast on stays in your projects with its own copy of the rows, so later updates never change it unless you choose to take a corrected version.
 
 ### Specs
 
