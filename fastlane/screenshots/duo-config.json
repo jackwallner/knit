@@ -1,0 +1,11 @@
+{
+  "top": "#f9f5ee", "bottom": "#efe7da", "ink": "#1c1a17",
+  "font": "/System/Library/Fonts/Avenir Next Condensed.ttc", "index": 0,
+  "frames": [
+    {"out": "duo_01.png", "src": "pdf-inner.png", "header": "Keep your place in any PDF pattern"},
+    {"out": "duo_02.png", "src": "guided-inner.png", "header": "Follow your pattern one row at a time"},
+    {"out": "duo_03.png", "src": "design-inner.png", "header": "Knitting patterns written to your size"},
+    {"out": "duo_04.png", "src": "library-inner.png", "header": "Pick a hat, sweater or shawl to knit"},
+    {"out": "duo_05.png", "src": "stash-inner.png", "header": "Check your yarn before you shop"}
+  ]
+}
