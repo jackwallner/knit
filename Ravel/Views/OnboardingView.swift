@@ -5,6 +5,7 @@ import SwiftUI
 struct OnboardingView: View {
     let finish: () -> Void
     @Environment(\.openURL) private var openURL
+    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var page = 0
     @State private var rows = 0.0
     @State private var knitted = 0.0
@@ -39,10 +40,21 @@ struct OnboardingView: View {
     /// The page and, on the trial, its plan and terms at the foot, where they sit just above the button.
     private var pageWithTerms: some View {
         VStack(spacing: 0) {
-            content
-            terms
+            if onTrial && typeSize.isAccessibilitySize {
+                // Large text: the price comes straight after the title, ahead of anything that could push it off screen.
+                VStack(spacing: 20) {
+                    trialTitle
+                    terms
+                    points
+                }
                 .padding(.horizontal, 24)
-                .padding(.bottom, 12)
+                .padding(.vertical, 16)
+            } else {
+                content
+                terms
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 12)
+            }
         }
     }
 
@@ -50,27 +62,26 @@ struct OnboardingView: View {
         switch page {
         case 0:
             screen("Tap anywhere to count a row") {
+                // One continuous run of rows that comes to rest, so the page is still once it has knit.
                 Fabric(rows: rows, yarn: .madder, markEvery: 0, stitch: 30, showsNeedle: true)
-                    .motion(.smooth(duration: 0.4), value: rows)
-                    .task { await knit(to: 9) }
+                    .motion(.easeOut(duration: 1.8), value: rows)
+                    .task {
+                        try? await Task.sleep(for: .milliseconds(300))
+                        rows = 9
+                    }
             }
         case 1:
             screen("Patterns written to your size") {
                 Garment(silhouette: .sweater, yarn: .indigo, progress: knitted)
                     .padding(.horizontal, 40)
-                    .motion(.easeInOut(duration: 2.4), value: knitted)
+                    .motion(.easeOut(duration: 1.6), value: knitted)
                     .onAppear { knitted = 1 }
             }
         default:
-            screen("Unlock Patterns") {
+            screen(trialTitleKey) {
                 shelf
             } below: {
-                VStack(alignment: .leading, spacing: 14) {
-                    point("Hats, socks, sweaters and shawls")
-                    point("Sized to your measurements and yarn")
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 36)
+                points.padding(.horizontal, 36)
             }
         }
     }
@@ -108,6 +119,24 @@ struct OnboardingView: View {
             }
         }
         .padding(.horizontal, 24)
+    }
+
+    private let trialTitleKey: LocalizedStringKey = "Unlock Patterns"
+
+    private var trialTitle: some View {
+        Text(trialTitleKey)
+            .font(Theme.display(30, weight: .semibold))
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .accessibilityAddTraits(.isHeader)
+    }
+
+    private var points: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            point("Hats, socks, sweaters and shawls")
+            point("Sized to your measurements and yarn")
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func point(_ text: LocalizedStringKey) -> some View {
@@ -269,15 +298,6 @@ struct OnboardingView: View {
             case .notFound: message = String(localized: "No purchase found on this Apple Account")
             case .failed: message = String(localized: "The App Store could not be reached. Try again when you are online.")
             }
-        }
-    }
-
-    /// Knits the sample fabric a row at a time, the way the counter does.
-    private func knit(to target: Double) async {
-        while rows < target {
-            try? await Task.sleep(for: .milliseconds(420))
-            guard !Task.isCancelled else { return }
-            rows += 1
         }
     }
 }
