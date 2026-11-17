@@ -249,7 +249,9 @@ struct DesignView: View {
         // A second quick tap must not cast on twice.
         guard opened == nil else { return }
         let project = Project(name: item.title, color: item.yarn)
-        project.follow(plan, as: item.designRaw)
+        var kept = plan
+        kept.source = PlanSource(design: item.designRaw, measures: values, gauge: gauge, revision: Design(rawValue: item.designRaw)?.revision ?? 0)
+        project.follow(kept, as: item.designRaw)
         project.needles = gauge.needle.label
         context.insert(project)
         try? context.save()

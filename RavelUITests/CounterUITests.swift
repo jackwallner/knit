@@ -85,6 +85,16 @@ final class CounterUITests: XCTestCase {
         expect(detail, toRead: "label BEGINSWITH %@", "\(row + 1) of", "undo takes one row back")
     }
 
+    /// A library pattern can be reported wrong from its menu, and the report does not move the count.
+    func testGuidedPatternOffersAReport() {
+        app.launchArguments = ["-SeedDemo", "-OpenProject", "Ribbed Beanie"]
+        app.launch()
+        let detail = app.staticTexts["guide.detail"]
+        XCTAssertTrue(detail.waitForExistence(timeout: 15))
+        app.buttons["Project options"].tap()
+        XCTAssertTrue(app.buttons["guide.report"].waitForExistence(timeout: 5))
+    }
+
     /// A PDF pattern: only the strip under the page counts.
     func testOneTapIsOneRowUnderAPDF() {
         app.launchArguments = ["-SeedDemo", "-OpenProject", "Raglan Sweater"]

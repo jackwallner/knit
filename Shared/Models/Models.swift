@@ -153,6 +153,18 @@ extension Project {
         persist()
     }
 
+    /// Takes a corrected pattern in place of the frozen one, at the same step and row the knitter was on.
+    func adopt(_ corrected: PatternPlan) {
+        defer { persist() }
+        let old = plan
+        planData = try? JSONEncoder().encode(corrected)
+        guard let old, let spot = old.position(at: rows) else { return setRows(corrected.totalTaps) }
+        guard spot.step < corrected.steps.count else { return setRows(corrected.totalTaps) }
+        let start = corrected.steps[..<spot.step].reduce(0) { $0 + $1.rows }
+        setRows(start + min(spot.row, corrected.steps[spot.step].rows - 1))
+        reopenIfUnfinished(corrected)
+    }
+
     private func reopenIfUnfinished(_ plan: PatternPlan?) {
         if let plan, isFinished, rows < plan.totalTaps { toggleFinished() }
     }

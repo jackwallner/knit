@@ -50,6 +50,14 @@ extension Step {
     }
 }
 
+/// The design, measurements and gauge a plan was written from, and the design's revision at the time.
+struct PlanSource: Codable, Equatable, Sendable {
+    var design: String
+    var measures: [String: Double]
+    var gauge: Gauge
+    var revision: Int
+}
+
 /// A full pattern, sized: every row, in order, plus what to buy.
 struct PatternPlan: Codable, Equatable, Sendable {
     var steps: [Step]
@@ -60,6 +68,9 @@ struct PatternPlan: Codable, Equatable, Sendable {
     var palette: [Shade]? = nil
     /// The shape the pattern draws as, kept with the plan so a project never needs its design to draw.
     var silhouette: String? = nil
+    /// What the pattern was written from, so a knitter's report can be rebuilt exactly and a corrected
+    /// design can offer its fix. Nil for a plan cast on before it was kept.
+    var source: PlanSource? = nil
 
     var totalTaps: Int { steps.reduce(0) { $0 + $1.rows } }
 
@@ -97,6 +108,7 @@ extension PatternPlan {
         yards = try values.decodeIfPresent(Int.self, forKey: .yards) ?? 0
         palette = try values.decodeIfPresent([Shade].self, forKey: .palette)
         silhouette = try values.decodeIfPresent(String.self, forKey: .silhouette)
+        source = try values.decodeIfPresent(PlanSource.self, forKey: .source)
     }
 
     /// The palette letters of every knitted row among the first `taps` taps, oldest first. Empty for a

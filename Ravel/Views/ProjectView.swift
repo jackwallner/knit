@@ -12,6 +12,8 @@ struct ProjectView: View {
     @Bindable var project: Project
     @Environment(\.requestReview) private var requestReview
     @State private var plan: PatternPlan?
+    /// The fixed pattern when this project's design was corrected after it was cast on.
+    @State private var correction: PatternPlan?
     @State private var showingMaterials = false
     @State private var importing = false
     @State private var editing = false
@@ -28,6 +30,7 @@ struct ProjectView: View {
     @State private var namingTally = false
     @State private var tallyText = ""
     @State private var confirmingTallyRemove = false
+    @Environment(\.openURL) private var openURL
     /// Rows knitted since this project was opened.
     @State private var rowsThisVisit = 0
     /// The space the project has, which picks its layout.
@@ -43,6 +46,7 @@ struct ProjectView: View {
     init(project: Project) {
         _project = Bindable(wrappedValue: project)
         _plan = State(initialValue: project.plan)
+        _correction = State(initialValue: project.plan.flatMap(Design.correction(for:)))
     }
 
     var body: some View {
@@ -56,7 +60,12 @@ struct ProjectView: View {
             }
         }
         .onGeometryChange(for: CGSize.self) { $0.size } action: { size = $0 }
-        .safeAreaInset(edge: .top, spacing: 0) { if project.tallyOn { tallyBar } }
+        .safeAreaInset(edge: .top, spacing: 0) {
+            VStack(spacing: 0) {
+                if correction != nil { correctionBar }
+                if project.tallyOn { tallyBar }
+            }
+        }
         .background(Theme.paper)
         .overlay { if bindingPhotos { ProgressView().controlSize(.large).padding(28).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous)) } }
         .navigationTitle(project.name)
@@ -155,6 +164,31 @@ struct ProjectView: View {
     }
 
     /// A finished project is the moment to ask for a rating, once the screen has settled.
+    /// Offered, never applied on its own: the knitter keeps their place on the corrected pattern.
+    private var correctionBar: some View {
+        HStack(spacing: 12) {
+            Text("This pattern was corrected")
+                .font(.subheadline.weight(.medium))
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Button("Update") {
+                guard let correction else { return }
+                project.adopt(correction)
+                plan = project.plan
+                self.correction = nil
+            }
+            .font(.subheadline.weight(.semibold))
+            .frame(minHeight: 44)
+            .accessibilityIdentifier("guide.update")
+        }
+        .padding(.horizontal, 20)
+        .background(.primary.opacity(0.05))
+    }
+
+    private func report(_ plan: PatternPlan) {
+        guard let url = PatternReport.mail(plan: plan, design: project.designRaw ?? "", title: project.name, taps: project.rows) else { return }
+        openURL(url) { opened in if !opened { openURL(Links.support) } }
+    }
+
     private func celebrate() {
         let prompt = ReviewPrompt()
         prompt.recordPositiveMoment()
@@ -488,6 +522,8 @@ struct ProjectView: View {
                         Button(Loc.section(section.name)) { project.jump(toTap: section.tap, following: plan) }
                     }
                 }
+                Button("Report a Problem", systemImage: "exclamationmark.bubble") { report(plan) }
+                    .accessibilityIdentifier("guide.report")
             } else {
                 // One import at a time: a second would race the first for the project's pattern.
                 Group {

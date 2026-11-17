@@ -102,6 +102,20 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         }
     }
 
+    /// Raised when an engine fix changes what a knitter of this design must knit (a confirmed pattern report,
+    /// `.claude/rules/pattern-reports.md`). A project cast on at a lower revision is offered the corrected
+    /// pattern; it is never changed without the knitter's tap.
+    var revision: Int { Self.revisions[self] ?? 0 }
+    private static let revisions: [Design: Int] = [:]
+
+    /// The corrected plan for a project cast on before the current revision. Nil when nothing was corrected.
+    static func correction(for plan: PatternPlan) -> PatternPlan? {
+        guard let source = plan.source, let design = Design(rawValue: source.design), design.revision > source.revision else { return nil }
+        var fixed = design.plan(measures: source.measures, gauge: source.gauge)
+        fixed.source = PlanSource(design: source.design, measures: source.measures, gauge: source.gauge, revision: design.revision)
+        return fixed
+    }
+
     /// Free designs show what the library does before anyone is asked to pay.
     var isFree: Bool { self == .garterScarf || self == .dishcloth }
 

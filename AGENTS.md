@@ -31,6 +31,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - `Project.patternFile` is a file name, never a full path (the container path changes between installs).
 - `Purchases.configure` never runs on a simulator. Use `-MockProducts`, `-Pro` or `SubscriptionService.shared.setLocalOverride(isPro:)`.
 - Patterns are sized in inches and yards underneath. Every length a person reads goes through `Sizing.inches`, `Sizing.cable`, `Sizing.yardage` or `Sizing.swatch`, which print centimeters and meters outside the United States (`Units.current`). Never hardcode "in" or "yd".
+- A knitter's pattern report is believed until the rebuilt plan proves otherwise. Report code, triage, regression tests and offering a corrected pattern to cast-on projects: `.claude/rules/pattern-reports.md`.
 - Topical designs: records in `docs/designs.json` are published only with Jack's yes, and every record must pass `scripts/topical-check.sh`. Loop, format and rules: `.claude/rules/topical-loop.md`.
 - `docs/trending.json` may only name `Design` raw values. A design the installed build does not know is skipped, so add a design to the list only after the build that carries it is live. `TrendingTests.testPublishedListDecodes` reads the file.
 - The interface is translated into every listing language (`Ravel/Localizable.xcstrings`, generated from `scripts/l10n`). New UI text needs a key in every language. Generated pattern instructions stay English on purpose. Rules, source files and the build step: `.claude/rules/localization.md`.
@@ -38,6 +39,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - iPad layouts switch on the space a view has, never on the device: `Ravel/Views/Layout.swift`. Thresholds, per-screen layouts, why iPhone stays portrait, and the capture test: `.claude/rules/ipad-layout.md`.
 
 ## Launch arguments (DEBUG)
+- `-Onboarding`: show first-launch onboarding (a fresh install sees it once; `-SeedDemo`, `-UITesting` and `-PaywallSnapshot` skip it otherwise).
 - `-SeedDemo`: in-memory store with three projects (one PDF, one library pattern), yarns and needles. `-NoPattern` drops the PDF. Seeded and `-UITesting` runs never fetch the trending list.
 - `-UITesting`: empty in-memory store.
 - `-OpenFirst`, `-OpenProject <name>`: land inside a project.
