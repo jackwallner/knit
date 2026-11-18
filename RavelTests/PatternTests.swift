@@ -543,10 +543,10 @@ final class PatternTests: XCTestCase {
         text.components(separatedBy: CharacterSet.decimalDigits.inverted).compactMap { Int($0) }
     }
 
-    /// 34 shapes of its own and 7 colorwork designs bundled on them: the 41 the store listing promises.
-    @MainActor func testTheLibraryHoldsFortyOneDesigns() {
-        XCTAssertEqual(Design.allCases.count, 34)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 41)
+    /// 38 shapes of its own and 7 colorwork designs bundled on them: the 45 the store listing promises.
+    @MainActor func testTheLibraryHoldsFortyFiveDesigns() {
+        XCTAssertEqual(Design.allCases.count, 38)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 45)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }

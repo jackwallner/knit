@@ -84,3 +84,11 @@ Runners-up: beret, pet sweater, mitten with heart chart, chunky ribbed beanie pr
 - Ravelry "Hot right now" and Etsy bestseller lists were not reachable; several sources are retailer blogs with their own selling motives.
 - The Ravelry top-100 is dominated by old free patterns (average age 14 years), so it shows durable categories, not fresh fashion. Fresh signals come from fashion press and Katia, KnitPro, ASOS.
 - Bow motifs, mushrooms and TikTok-specific trends had no solid source.
+
+## Etsy bestsellers, read live 2026-11-17
+Ten Etsy searches (knitting pattern, sweater, hat, baby, beginner, cardigan, socks, toy, scarf, top), two pages each, keeping listings marked Bestseller or Popular now (139 distinct).
+- Beginner sweaters dominate: drop-shoulder and "first sweater" pullovers, top-down raglans, chunky everyday pullovers, roll-neck raglans.
+- Accessories that recur: knitted hood/bonnet, keyhole scarf, small triangle scarf, hooded scarf, slippers, booties, simple and chunky beanies, cat-ear and bear-ear hats, vanilla socks.
+- Baby: bonnets, booties, jumpers, cardigans, checkered and textured blankets.
+- Toys (teddy bears, bunnies, geese) sell well but need shaping the engines do not do.
+Added from this read: Drop-Shoulder Sweater, Keyhole Scarf, Slippers, Baby Booties (generic constructions, no pattern text or names copied).

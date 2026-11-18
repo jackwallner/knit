@@ -1,0 +1,193 @@
+{
+ "cameras": {
+  "flash": "Taken at night with the phone's built-in flash: harsh direct flash, a bright hotspot on the nearest part and quick falloff into a darker background, a hard shadow just behind the item, slightly flat colors, visible grain.",
+  "lamp": "Taken in the evening under a warm table lamp: a mildly warm white balance that still shows the yarn's true color, high-ISO grain with smeary noise reduction in the shadows, a little soft and a little underexposed.",
+  "overcast": "Cool grey daylight from a window on an overcast day: slightly underexposed and bluish, low contrast, soft at the edges of the frame.",
+  "outdoor": "Taken outside on an overcast day: flat light, the bright background slightly blown out, a little wind in the fibers, focus a touch off on part of the item.",
+  "oldphone": "Looks like it came off an older phone: oversharpened edges, visible JPEG compression, crushed blacks, faint purple fringing on bright edges, the horizon tilted a few degrees.",
+  "snap": "A hurried snap: slight motion blur, the frame tilted, the knitter's hand, sleeve or toes caught at the edge of the frame, ordinary clutter partly in view.",
+  "sun": "Hard afternoon sun through a window: bright patches and deep shadows across the item, some highlights clipped, a little lens flare haze."
+ },
+ "shots": {
+  "ribbedBeanie": {
+   "camera": "flash",
+   "scene": "lying on a rumpled dark duvet at night"
+  },
+  "slouchHat": {
+   "camera": "outdoor",
+   "scene": "worn on the back of someone's head seen from behind on a sidewalk, hair visible, no face"
+  },
+  "rolledBrimHat": {
+   "camera": "oldphone",
+   "scene": "sitting on a car passenger seat"
+  },
+  "garterScarf": {
+   "camera": "lamp",
+   "scene": "heaped on a couch cushion next to a TV remote"
+  },
+  "ribbedScarf": {
+   "camera": "overcast",
+   "scene": "hung over a coat hook by a front door"
+  },
+  "seedScarf": {
+   "camera": "snap",
+   "scene": "held up in one hand in a kitchen, dangling"
+  },
+  "ribbedCowl": {
+   "camera": "sun",
+   "scene": "standing slumped on a windowsill"
+  },
+  "seedCowl": {
+   "camera": "overcast",
+   "scene": "worn around a neck over a grey hoodie, cropped below the chin, no face"
+  },
+  "borderedBlanket": {
+   "camera": "oldphone",
+   "scene": "spread on beige carpet, one corner flipped over, a slipper at the edge"
+  },
+  "garterBlanket": {
+   "camera": "lamp",
+   "scene": "draped over the arm of a worn sofa"
+  },
+  "dishcloth": {
+   "camera": "flash",
+   "scene": "lying beside a sink on a speckled counter, a little damp"
+  },
+  "earWarmer": {
+   "camera": "snap",
+   "scene": "held stretched between two hands"
+  },
+  "handwarmers": {
+   "camera": "outdoor",
+   "scene": "worn on two hands holding a paper coffee cup outside, no face"
+  },
+  "legWarmers": {
+   "camera": "oldphone",
+   "scene": "worn over leggings, from the knee down, standing on a bathroom mat"
+  },
+  "triangleShawl": {
+   "camera": "overcast",
+   "scene": "spread a little crooked on an unmade bed"
+  },
+  "raglanPullover": {
+   "camera": "flash",
+   "scene": "laid flat on a hardwood floor at night, sleeves angled"
+  },
+  "chunkyCowl": {
+   "camera": "lamp",
+   "scene": "worn by someone seen from the shoulders down, sitting on a couch, no face"
+  },
+  "neckScarf": {
+   "camera": "sun",
+   "scene": "tied around a neck over a denim jacket collar, cropped below the chin, no face"
+  },
+  "cableHeadband": {
+   "camera": "oldphone",
+   "scene": "lying on a dark desk next to a laptop edge"
+  },
+  "balaclava": {
+   "camera": "flash",
+   "scene": "laid flat and empty on a white sheet"
+  },
+  "cuffDownSocks": {
+   "camera": "lamp",
+   "scene": "worn on feet propped on a coffee table, seen from the side"
+  },
+  "mittens": {
+   "camera": "outdoor",
+   "scene": "worn on two hands in a snowy yard, a bit of snow on them"
+  },
+  "raglanCardigan": {
+   "camera": "overcast",
+   "scene": "hanging on a plastic hanger on a closet door"
+  },
+  "sweaterVest": {
+   "camera": "snap",
+   "scene": "laid on a bed with a phone charger cable nearby"
+  },
+  "kidsRaglan": {
+   "camera": "oldphone",
+   "scene": "laid out on a playroom rug with a toy truck at the edge"
+  },
+  "earflapHat": {
+   "camera": "outdoor",
+   "scene": "held up by its ties against a wooden fence"
+  },
+  "cabledBeanie": {
+   "camera": "sun",
+   "scene": "lying on a dark wool blanket"
+  },
+  "basketweaveBlanket": {
+   "camera": "lamp",
+   "scene": "folded over the foot of a bed"
+  },
+  "rectangularWrap": {
+   "camera": "overcast",
+   "scene": "draped over a kitchen chair"
+  },
+  "crescentShawl": {
+   "camera": "outdoor",
+   "scene": "worn around someone's shoulders seen from behind on a porch, no face"
+  },
+  "marketBag": {
+   "camera": "snap",
+   "scene": "held by its handles with apples inside, in a kitchen"
+  },
+  "pillowCover": {
+   "camera": "flash",
+   "scene": "on a sofa among other cushions"
+  },
+  "pompomBonnet": {
+   "camera": "overcast",
+   "scene": "laid flat on a bedspread with the ties spread out a little crooked"
+  },
+  "beret": {
+   "camera": "oldphone",
+   "scene": "lying on a café table next to a glass of water"
+  },
+  "heart-beanie": {
+   "camera": "lamp",
+   "scene": "laid on a couch cushion"
+  },
+  "cherry-beanie": {
+   "camera": "snap",
+   "scene": "held up in one hand in a hallway"
+  },
+  "checkerboard-beanie": {
+   "camera": "flash",
+   "scene": "laid on a bed at night"
+  },
+  "checkerboard-cowl": {
+   "camera": "sun",
+   "scene": "laid in a loose ring on a rug"
+  },
+  "diamond-beanie": {
+   "camera": "outdoor",
+   "scene": "worn on someone seen from behind in a parking lot, no face"
+  },
+  "bear-beanie": {
+   "camera": "overcast",
+   "scene": "worn by a small child seen from behind, sitting on a rug, no face"
+  },
+  "heart-mitts": {
+   "camera": "oldphone",
+   "scene": "worn on two hands holding a phone, no face"
+  },
+  "dropShoulder": {
+   "camera": "snap",
+   "scene": "laid on a bed, a little rumpled, one sleeve folded under"
+  },
+  "keyholeScarf": {
+   "camera": "outdoor",
+   "scene": "worn around a neck over a dark coat with the end pulled through the slit, cropped below the chin, no face"
+  },
+  "slippers": {
+   "camera": "lamp",
+   "scene": "worn on feet resting on a rug in front of a couch"
+  },
+  "babyBooties": {
+   "camera": "sun",
+   "scene": "a pair side by side on a changing-table pad"
+  }
+ }
+}

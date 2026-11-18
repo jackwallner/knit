@@ -1580,3 +1580,175 @@ enum Engines {
         return Vest(plan: plan, body: body, piece: piece, shoulders: shoulders, shoulder: shoulder, neck: neck, armholeRows: rows, boundOff: boundOff, armholeDecreases: decreases, neckDecreases: narrow)
     }
 }
+
+// MARK: Drop-shoulder sweater, keyhole scarf, slippers and booties
+
+extension Engines {
+    /// The beginner's sweater: four flat pieces and no armhole shaping. The back is a rectangle, the front the
+    /// same rectangle with a crew neck scooped out; the sleeves widen from the cuff and are sewn flat to the
+    /// side edges, so the shoulder seam drops over the arm. A ribbed band is picked up around the neck.
+    static func dropShoulder(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge) -> PatternPlan {
+        let worn = wearer ?? chest - Design.dropEase
+        let piece = Sizing.stitches(chest / 2, per: g.spi, multiple: 4, extra: 2)
+        // The armhole runs half the sleeve's top edge down each side, so it takes the arm and its ease.
+        let depth = worn * 0.125 + 4.5
+        let hem = Sizing.rows(min(2.5, length * 0.15), per: g.rpi, even: true, minimum: 4)
+        let total = Sizing.rows(length + depth, per: g.rpi, even: true)
+        let neckRows = Sizing.rows(min(3, 1.5 + worn * 0.03), per: g.rpi, even: true, minimum: 6)
+        let neck = even(min(9, worn * 0.1 + 4) * g.spi, minimum: 8)
+        let shoulder = (piece - neck) / 2
+        let shaped = max(1, min(neckRows / 2 - 1, Int((Double(neck) * 0.2).rounded())))
+        let side = shoulder + shaped
+        let center = piece - 2 * side
+
+        func half(_ first: Bool) -> [(text: String, stitches: Int)] {
+            var out: [(text: String, stitches: Int)] = []
+            var count = side
+            for row in 1...neckRows {
+                let right = row % 2 == 1
+                let shaping = right && row >= 3 && (row - 1) / 2 <= shaped
+                if shaping { count -= 1 }
+                let text: String
+                switch (row, right, shaping) {
+                case (1, _, _): text = first ? "Knit \(side) stitches and turn, leaving the other \(piece - side) on the needle for the second side" : "Bind off \(center) stitches, knit to the end"
+                case (_, false, _): text = "Purl to the end"
+                case (_, true, true): text = first ? "Knit to the last 3 stitches, k2tog, k1" : "K1, ssk, knit to the end"
+                default: text = "Knit to the end"
+                }
+                out.append((text, count))
+            }
+            return out
+        }
+
+        var b = PlanBuilder()
+        let rib = ["K2, *p2, k2; repeat from * to the end", "P2, *k2, p2; repeat from * to the end"]
+        b.section = "Back"
+        b.action("With the smaller needles, cast on \(piece) stitches.", stitches: piece)
+        b.work(rib, rows: hem, stitches: piece)
+        b.action("Change to the larger needles.")
+        b.work(["Knit", "Purl"], rows: total - hem, stitches: piece)
+        b.action("Bind off all \(piece) stitches.")
+        b.section = "Front"
+        b.action("With the smaller needles, cast on \(piece) stitches.", stitches: piece)
+        b.work(rib, rows: hem, stitches: piece)
+        b.action("Change to the larger needles.")
+        b.work(["Knit", "Purl"], rows: total - hem - neckRows, stitches: piece)
+        b.section = "Front · First Side"
+        runs(&b, half(true), from: piece)
+        b.action("Bind off the \(shoulder) shoulder stitches.")
+        b.section = "Front · Second Side"
+        b.action("With the right side facing, join new yarn at the neck edge of the \(piece - side) stitches left.", stitches: piece - side)
+        runs(&b, half(false), from: piece - side)
+        b.action("Bind off the \(shoulder) shoulder stitches.")
+
+        let wrist = worn * 0.1 + 3
+        let cuff = Sizing.stitches(wrist, per: g.spi, multiple: 4, extra: 2, minimum: 18)
+        let cuffRows = Sizing.rows(min(2.5, wrist * 0.3), per: g.rpi, even: true, minimum: 4)
+        // The body reaches past the shoulder, so the sleeve is that much shorter than an underarm-to-cuff measure.
+        let drop = max(0, (Double(piece) / g.spi - (worn * 0.2 + 8.5)) / 2)
+        let sleeveRows = max(8, Sizing.rows(max(6, sleeveLength - drop) - Double(cuffRows) / g.rpi, per: g.rpi, even: true))
+        var increases = max(0, (even(2 * depth * g.spi) - cuff) / 2)
+        let spacing = increases == 0 ? 2 : max(2, 2 * Int(Double(sleeveRows) * 0.85 / Double(increases) / 2))
+        increases = min(increases, sleeveRows / spacing)
+        let top = cuff + 2 * increases
+        let cycle = ["K1, m1, knit to the last stitch, m1, k1"] + (1..<spacing).map { $0 % 2 == 1 ? "Purl" : "Knit" }
+        for name in ["First Sleeve", "Second Sleeve"] {
+            b.section = name
+            b.action("With the smaller needles, cast on \(cuff) stitches.", stitches: cuff)
+            b.work(rib, rows: cuffRows, stitches: cuff)
+            b.action("Change to the larger needles.")
+            b.work(cycle, rows: increases * spacing, stitches: cuff + 2, delta: 2)
+            b.work(["Knit", "Purl"], rows: sleeveRows - increases * spacing, stitches: top)
+            b.action("Bind off all \(top) stitches loosely.")
+        }
+
+        let along = Int((Double(neckRows) * 0.75).rounded()) + shaped
+        let around = even(Double(neck + center + 2 * along))
+        let band = Sizing.rows(0.75, per: g.rpi, minimum: 3)
+        b.section = "Neckband"
+        b.action("Sew the shoulder seams, \(shoulder) stitches on each side.")
+        b.action("With the smaller \(Sizing.cable(16)) circular needle and the right side facing, start at the left shoulder seam. Pick up and knit \(along) stitches down the left side of the neck, \(center) across the front, \(along) up the right side and \(neck) across the back. Join in the round and place a marker.", stitches: around)
+        b.work(["*K1, p1; repeat from * around"], rows: band, stitches: around)
+        b.action("Bind off loosely in pattern.")
+        b.section = "Finishing"
+        b.action("Place a marker on each side edge of the front and the back, \(Sizing.inches(Double(top) / g.spi / 2)) below the shoulder seam. Sew the bound-off top of each sleeve between the markers, with its middle at the shoulder seam. Sew each side and sleeve seam in one line from the hem to the cuff. Weave in the ends and block.")
+
+        let finishedChest = 2 * Double(piece) / g.spi
+        let ease = wearer.map { ", to fit a \(Sizing.inches($0)) chest with \(Sizing.inches(finishedChest - $0)) of ease" } ?? ""
+        let sleeveArea = Double(cuff + top) / 2 / g.spi * (Double(cuffRows + sleeveRows) / g.rpi)
+        let yards = Sizing.yards(squareInches: 2 * Double(piece) / g.spi * Double(total) / g.rpi + 2 * sleeveArea, spi: g.spi)
+        let needle = Double(piece) / g.spi > 14 ? longCircular(piece, g, flat: true) : "\(g.needle.label) needles"
+        return pattern(b, estimate: yards, tools: [needle, "\(g.ribNeedle.label) needles for the ribbing", "\(g.ribNeedle.label) \(Sizing.cable(16)) circular needle for the neckband", "4 locking stitch markers, a stitch marker, tapestry needle"], finished: "Finished chest \(Sizing.inches(finishedChest))\(ease). \(Sizing.inches(Double(total) / g.rpi)) from the hem to the shoulder", gauge: g)
+    }
+
+    /// A short garter scarf with a slit near one end: the two halves are knit side by side, each from its own
+    /// ball, then joined again. The far end pulls through the slit, so the scarf sits closed without a knot.
+    static func keyholeScarf(width: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+        let caston = Sizing.stitches(width, per: g.spi, multiple: 2, minimum: 10)
+        let perInch = g.spi * 2
+        let total = Sizing.rows(length, per: perInch, even: true)
+        let slit = Sizing.rows(max(2.5, width * 0.7), per: perInch, even: true)
+        let before = Sizing.rows(length * 0.22, per: perInch, even: true)
+        let after = max(2, total - before - slit)
+        let left = caston / 2
+        let right = caston - left
+
+        var b = PlanBuilder()
+        b.section = "Scarf"
+        b.action("Cast on \(caston) stitches.", stitches: caston)
+        b.work(["Knit"], rows: before, stitches: caston)
+        b.section = "Keyhole"
+        b.row("Knit \(left) stitches and turn, leaving the other \(right) unworked", stitches: left)
+        b.work(["Knit"], rows: slit - 1, stitches: left)
+        b.action("Leave this yarn attached at the outer edge. With the right side facing, join a second ball of yarn at the slit.", stitches: right)
+        b.work(["Knit"], rows: slit, stitches: right)
+        b.action("Cut the second yarn, leaving a tail to weave in.")
+        b.section = "Long End"
+        b.row("With the first yarn, knit across all \(caston) stitches, closing the slit", stitches: caston)
+        b.work(["Knit"], rows: after - 1, stitches: caston)
+        b.section = "Finishing"
+        b.action("Bind off loosely. Weave in the ends, closing any gap at the top and bottom of the slit. To wear, wrap the scarf around the neck and pull the long end through the slit.")
+        let yards = Sizing.yards(squareInches: width * length, spi: g.spi, factor: 1.25)
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide, \(Sizing.inches(length)) long, with a \(Sizing.inches(Double(slit) / perInch)) slit", gauge: g)
+    }
+
+    /// The rectangle slipper: a garter piece knit from the heel to the toe, the toe gathered closed, the top of
+    /// the foot seamed back from the toe and the cast-on edge folded and seamed for the heel. Booties get a
+    /// ribbed cuff picked up around the opening, so they stay on; slippers get a pompom on the toe.
+    static func slipper(foot around: Double, length footLength: Double, gauge g: Gauge, bootie: Bool) -> PatternPlan {
+        let caston = Sizing.stitches(around * 0.95, per: g.spi, multiple: 4, minimum: 16)
+        let perInch = g.spi * 2
+        let rows = Sizing.rows(footLength * 0.95 - 0.5, per: perInch, even: true, minimum: 8)
+        let instep = footLength * 0.45
+        let open = max(1.5, footLength - instep)
+        let pickup = 4 * max(4, Int((2 * open * g.spi * 0.75 / 4).rounded()))
+        let cuffRounds = Sizing.rows(min(2, footLength * 0.35), per: g.rpi, minimum: 4)
+        let name = bootie ? "Bootie" : "Slipper"
+
+        var b = PlanBuilder()
+        for index in 1...2 {
+            b.section = "\(name) \(index) · Foot"
+            b.action("Cast on \(caston) stitches, leaving a long tail for the heel seam.", stitches: caston)
+            b.work(["Knit"], rows: rows, stitches: caston)
+            b.section = "\(name) \(index) · Toe"
+            b.row("*K2tog; repeat from * to the end", stitches: caston / 2)
+            b.row("Knit", stitches: caston / 2)
+            b.row("*K2tog; repeat from * to the end", stitches: caston / 4)
+            b.action("Cut the yarn, leaving a long tail. Thread it through the \(caston / 4) stitches and pull tight.")
+            b.section = "\(name) \(index) · Finishing"
+            b.action("Fold the piece in half along its length. With the toe tail, sew the long edges together from the toe for \(Sizing.inches(instep)), over the top of the foot. Fold the cast-on edge in half and sew it closed with the cast-on tail: this is the heel.")
+            if bootie {
+                b.section = "\(name) \(index) · Cuff"
+                b.action("With double-pointed needles and the right side facing, start at the heel seam and pick up and knit \(pickup) stitches around the opening. Join in the round and place a marker.", stitches: pickup)
+                b.work(["*K2, p2; repeat from * around"], rows: cuffRounds, stitches: pickup)
+                b.action("Bind off loosely in pattern. Weave in the ends.")
+            } else {
+                b.action("Make a pompom about \(Sizing.inches(1.5)) across and sew it to the top of the toe. Weave in the ends.")
+            }
+        }
+        let yards = Sizing.yards(squareInches: around * footLength * 2.3, spi: g.spi, factor: 1.25)
+        var tools = ["\(g.needle.label) needles", "Tapestry needle"]
+        if bootie { tools.insert("\(g.needle.label) double-pointed needles for the cuff", at: 1) } else { tools.insert("Pompom maker or a piece of card", at: 1) }
+        return pattern(b, estimate: yards, tools: tools, finished: "Fits a foot \(Sizing.inches(around)) around and \(Sizing.inches(footLength)) long", gauge: g)
+    }
+}

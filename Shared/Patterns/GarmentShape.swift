@@ -178,6 +178,34 @@ enum GarmentShape {
                 whole = whole.union(CGPath(ellipseIn: box(x - 0.05, 0.84, 0.1, 0.1), transform: nil))
             }
             path.addPath(whole)
+        case .dropShoulder:
+            // A boxy body whose shoulders run straight out, with wide sleeves hanging from below the shoulder line.
+            path.move(to: p(0.4, 0.14))
+            path.addCurve(to: p(0.6, 0.14), control1: p(0.45, 0.21), control2: p(0.55, 0.21))
+            path.addLine(to: p(0.82, 0.16))
+            path.addLine(to: p(0.97, 0.7))
+            path.addLine(to: p(0.86, 0.73))
+            path.addLine(to: p(0.77, 0.42))
+            path.addLine(to: p(0.77, 0.88))
+            path.addLine(to: p(0.23, 0.88))
+            path.addLine(to: p(0.23, 0.42))
+            path.addLine(to: p(0.14, 0.73))
+            path.addLine(to: p(0.03, 0.7))
+            path.addLine(to: p(0.18, 0.16))
+            path.closeSubpath()
+        case .keyhole:
+            // A short strip with a slit near the top; the slit is a hole, so the even-odd fill leaves it open.
+            path.addRoundedRect(in: box(0.38, 0.06, 0.24, 0.88), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
+            path.addRoundedRect(in: box(0.485, 0.2, 0.03, 0.16), cornerWidth: unit * 0.012, cornerHeight: unit * 0.012)
+        case .slipper:
+            // A pair seen from above, toes up: the foot, the opening over the heel and a pompom on each toe.
+            var pair: CGPath = CGMutablePath()
+            for x in [CGFloat(0.17), 0.57] {
+                let foot = CGPath(roundedRect: box(x, 0.16, 0.26, 0.74), cornerWidth: unit * 0.13, cornerHeight: unit * 0.15, transform: nil)
+                let shoe = foot.subtracting(CGPath(ellipseIn: box(x + 0.055, 0.46, 0.15, 0.38), transform: nil))
+                pair = pair.union(shoe.union(CGPath(ellipseIn: box(x + 0.08, 0.08, 0.1, 0.1), transform: nil)))
+            }
+            path.addPath(pair)
         case .beret:
             // A wide, flat crown on a narrow band, with the little stem at its center.
             let top = CGPath(ellipseIn: box(0.06, 0.26, 0.88, 0.4), transform: nil)

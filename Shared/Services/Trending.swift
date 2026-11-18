@@ -68,7 +68,7 @@ final class Trending {
 
     /// The list for a date with no network: the newest designs, then what suits the season.
     nonisolated static func bundled(for date: Date, calendar: Calendar = .current) -> [Trend] {
-        let new = [Design.pompomBonnet, .beret, .cuffDownSocks, .mittens].map { Trend(design: $0, tag: "New") }
+        let new = [Design.dropShoulder, .pompomBonnet, .slippers, .beret, .keyholeScarf, .babyBooties].map { Trend(design: $0, tag: "New") }
         let seasonal: [Trend] = switch calendar.component(.month, from: date) {
         case 10, 11, 12: [Trend(design: .earflapHat, tag: "Gift season"), Trend(design: .handwarmers, tag: "Gift season"), Trend(design: .kidsRaglan, tag: "Gift season")]
         case 1, 2: [Trend(design: .raglanPullover, tag: "Deep winter"), Trend(design: .legWarmers, tag: "Deep winter")]

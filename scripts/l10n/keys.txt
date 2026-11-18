@@ -325,3 +325,12 @@ Bear Beanie
 Heart Mitts
 Pompom Bonnet
 Beret
+Drop-Shoulder Sweater
+Keyhole Scarf
+Slippers
+Baby Booties
+Newborn
+Keyhole
+Long End
+Slipper %lld
+Bootie %lld

@@ -99,7 +99,7 @@ struct LibraryView: View {
     /// and the topical ones on its shapes, which already lead Trending.
     private func items(on shelf: Design.Shelf) -> [LibraryItem] {
         let own = Design.allCases.filter { $0.shelf == shelf }
-        let newest: Set<Design> = [.pompomBonnet, .beret]
+        let newest: Set<Design> = [.dropShoulder, .pompomBonnet, .beret, .keyholeScarf, .slippers, .babyBooties]
         return own.filter(newest.contains).map(LibraryItem.builtIn)
             + TopicalStore.collection.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
             + own.filter { !newest.contains($0) }.map(LibraryItem.builtIn)

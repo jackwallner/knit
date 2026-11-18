@@ -54,7 +54,7 @@ Included with Ravel Patterns
 
 ### The whole library
 
-41 designs: beanies, heart, cherry, checkerboard and bear beanies, a pompom bonnet, a beret, an earflap hat, a balaclava, socks, mittens, handwarmers, scarves, cowls, a wrap, two shawls, blankets, a pillow cover, a market bag, a dishcloth, leg warmers, and a raglan pullover, cardigan, vest and kids' raglan. Inches or centimeters to match your region.
+45 designs: beanies, heart, cherry, checkerboard and bear beanies, a pompom bonnet, a beret, an earflap hat, a balaclava, socks, mittens, handwarmers, scarves, cowls, a wrap, two shawls, blankets, a keyhole scarf, slippers, baby booties, a pillow cover, a market bag, a dishcloth, leg warmers, and a drop-shoulder sweater, raglan pullover, cardigan, vest and kids' raglan. Inches or centimeters to match your region.
 
 Included with Ravel Patterns
 
@@ -82,7 +82,7 @@ An optional upgrade that unlocks the whole pattern library. Monthly or yearly, e
 
 **One row at a time.** Each tap shows the next instruction and the stitch count to expect. Jump to any section when you pick the work back up.
 
-**The library.** 41 designs: beanies, heart, cherry, checkerboard and bear beanies, a pompom bonnet, a beret, an earflap hat, a balaclava, socks, mittens, handwarmers, scarves, cowls, a wrap, two shawls, blankets, a pillow cover, a market bag, a dishcloth, leg warmers, and a raglan pullover, cardigan, vest and kids' raglan. The Trending shelf leads with new designs and what suits the season.
+**The library.** 45 designs: beanies, heart, cherry, checkerboard and bear beanies, a pompom bonnet, a beret, an earflap hat, a balaclava, socks, mittens, handwarmers, scarves, cowls, a wrap, two shawls, blankets, a keyhole scarf, slippers, baby booties, a pillow cover, a market bag, a dishcloth, leg warmers, and a drop-shoulder sweater, raglan pullover, cardigan, vest and kids' raglan. The Trending shelf leads with new designs and what suits the season.
 
 **A pattern you cast on stays.** It remains in your projects if you stop subscribing.
 
