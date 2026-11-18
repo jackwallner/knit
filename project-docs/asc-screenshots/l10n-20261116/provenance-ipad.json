@@ -19,6 +19,24 @@
    "sha256": "882d10af9b5fbb7c0e98ada8764f1230fb469bfe4d567ebbf3f991e8b06ecc1e"
   },
   {
+   "file": "02-your-size.png",
+   "header": "أنماط تريكو مكتوبة على مقاسك",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "cfe112404bf5fd3cf68b683022b184467b067be65b48760fd407b28f59bd0b60",
+   "sha256": "99873d7ee6a551e7778c04c00927b3671b9e0d155002eca6998047efefb3c15a"
+  },
+  {
+   "file": "03-library.png",
+   "header": "قبعات وقفازات وأوشحة لتحيكها",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "2df8922ee97be1bfd9359e42d12bb39b14741acba335c42397ee441f448148bb",
+   "sha256": "c5df1c68bad2e36a0215e41dd88a8590f20f61fa477e70825ff275e8e992685e"
+  },
+  {
    "file": "03-one-row.png",
    "header": "اتبع نمطك صف بعد صف",
    "size": 180,
@@ -82,6 +100,24 @@
    "source": "pdf.png",
    "source_sha256": "80415696ed9378616aaf75b1c84194da9ea4ab1c175db774267fcd3807913e82",
    "sha256": "f654991f4db826719c331b13cd276ee77be3ee8e0ced9b89cf4b4ab810c1ba30"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "আপনার মাপে লেখা নিটিং প্যাটার্ন",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "013bb3a778017f011991e65aa7703a73bbaedfd4aa1be83ffc56ceecc9682972",
+   "sha256": "ce2eee153656d46fc630a15062b313decbb27a745ad3aa3ec596071cf5a4bbf1"
+  },
+  {
+   "file": "03-library.png",
+   "header": "বুনুন টুপি, দস্তানা আর মাফলার",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "24eb82c72730157c61f4c09c320608edb47c1f8b9da6b8616a148d3288fc1025",
+   "sha256": "a04caa38ff18decc54a86c23b841eb57948563dba9e2145b5a13c14ccfb4b942"
   },
   {
    "file": "03-one-row.png",
@@ -149,6 +185,24 @@
    "sha256": "2675fc23048bac2aa9d1e5a7543b7bd3e862d964975bf8af4533e157db1943c7"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Patrons de punt escrits a la teva mida",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "fb9ade37aae570638cb1e316203da5a022f6ab9d4486d8df344ea57d6df79293",
+   "sha256": "ba00fe872118783174e9697420633121df50d53ea335ed4eede6c2a0de934303"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Barrets, manyoples i bufandes per fer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "e2b7ea9669ccb324f183746cd1eefc87aa6033f8e9b35700186e5e89bf66d22e",
+   "sha256": "ee0fcf6d7a22038cfbe02d74439c3dde81e8f87cd7f8dd9be0b45ddd0c893a33"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Segueix el patró fila a fila",
    "size": 180,
@@ -212,6 +266,24 @@
    "source": "pdf.png",
    "source_sha256": "17eab61b8fa00b72419efba9c0824e037a268ed7f7e15920c1cc1e445a2e41ab",
    "sha256": "bdaed16c5c20b6c5458531c3f7ff3312dac082df742d3138c6fcebef2dbf4586"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Pletací návody psané na tvou míru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2930988a47680a5d7c321fcad7e669d3a4f346c5c1c66c925a80790b7ebd1285",
+   "sha256": "c89e52c8662581163a2d81d6f45dbccc8d7b64218f401e7c39dd90360b37b6c4"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Čepice, palčáky a šály k pletení",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "1ddfcaae77b5a2755691f55a95f8077471368d1cdc719f6764318585ece6e59b",
+   "sha256": "8f376f1f777690f7e23aa4718359fafdb9b8bd105329bfefa43ec1805394ab88"
   },
   {
    "file": "03-one-row.png",
@@ -279,6 +351,24 @@
    "sha256": "9aca04013e6aa8439629481192365c3684aa89707465ca192f73b841ba3d7df4"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Strikkeopskrifter i din størrelse",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "6f25c52856e2132289b78782f7a82b086cc67d3b9a7b2a59a329e04f4e9cb58a",
+   "sha256": "0c6ea23cce8b4fa1b088895069101b12b6febce74c6459a74d74056af43c9235"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Huer, vanter og halstørklæder",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "d391e599b9975808ffc4914c5d48f02024019c7f3623106007a10ce6308b24b9",
+   "sha256": "3265ab8a6e10bcfcd021085011bd3d3fd6abff81f4a4f40a3064bc9c58e95021"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Følg opskriften én række ad gangen",
    "size": 180,
@@ -342,6 +432,24 @@
    "source": "pdf.png",
    "source_sha256": "e439ff07bcc6fdbc49b7d02992dc7b410ba3e9deaca6a31c58fa47b6fadc95a8",
    "sha256": "514215449634c28eafd5b9dc02d453e2565b2adf5732078468f08fd914712936"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Strickmuster passend zu deiner Größe",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b50bc9f717d40d11047dbf5c5c573a751f6f66ceb374a8a1b6a27f242103e80c",
+   "sha256": "60212d3a557e168f876b9c40ab3ca23ffc50310ffcd1b9c5296e7dd9bcca1458"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Mützen, Fäustlinge und Schals stricken",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "2ab3dcf1731b6143c05e155508cf4162b7cc702ed0e5380cec879910f94d6b2c",
+   "sha256": "d4e366f504db825c52d0e52f57175720c5f7d302581f46bf440768a51a8bb3ec"
   },
   {
    "file": "03-one-row.png",
@@ -409,6 +517,24 @@
    "sha256": "39d822519e5b338c6c61d71677dd525fdfab75b74e60c06ca87a74d626bd7c58"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Πλεκτά πατρόν στο μέτρο σου",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "9ffa464239f219f61498ca4412a5a7f1c4f8cd55e2ae7c539d0ddf1d00346cb4",
+   "sha256": "613bc4502e33c0c4432d63f7d8b794f9054dbf04c3c1b2ea7b3a45d35303893a"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Σκούφοι, γάντια και κασκόλ για πλέξιμο",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "667ceefbc56defa1cae69f7e9107283fbceeffe0eaf07c5640c47400a1a803c6",
+   "sha256": "85ef97f36fe1a04b3b19e1e3059f598251b73e515b1cef6e190fa7b173139936"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Ακολούθησε το πατρόν ανά σειρά",
    "size": 180,
@@ -472,6 +598,24 @@
    "source": "pdf.png",
    "source_sha256": "e1a01520d4731088495e35e28007377c1e65546bbe6bfc96ea2932824592dcec",
    "sha256": "a627b0be99b1edb72ca1acddb0298178cd4859cfdafe50ded7f77087f4bd3ab1"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Patrones de punto escritos a tu talla",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "3e11a95543f229a0320c985953d8e421d09b936e6297548f88b8e61b063dbded",
+   "sha256": "6351c29459ccf73f483aeb0a049dc3d676715db400a4374b7cba905315d185c3"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Gorros, manoplas y bufandas para tejer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "0ecd6ecdc5ac7223b25e94a93921c67b76d4580b1b5e83e12a3ea3cc4450e8ee",
+   "sha256": "1490f72c6a14e7b14559034fb9217cfd06f91b4e312191f3f6b7c9961a220a28"
   },
   {
    "file": "03-one-row.png",
@@ -539,6 +683,24 @@
    "sha256": "3d1e674d62ad892a8ef93ff813b1549ef56633e0180cba2e48512a0566841549"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Patrones de tejido escritos a tu talla",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "337b36e8fe0b2aa539b18e971e1b2fb2f531efe571d5cea854d7c08c5a37f8bb",
+   "sha256": "a76bb6d8e58968e94944e8a7cf2b66c49a7639a0afab16a9170d4c285720e523"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Gorros, guantes y bufandas para tejer",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "0ecd6ecdc5ac7223b25e94a93921c67b76d4580b1b5e83e12a3ea3cc4450e8ee",
+   "sha256": "a9cb00450af92a6d20e9b7272fdf31c1c9dccaa5a4356dc64daac04627f3fc74"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Sigue tu patrón fila a fila",
    "size": 180,
@@ -602,6 +764,24 @@
    "source": "pdf.png",
    "source_sha256": "517e1598e9759a4b0e12c38eedb722d0c6c4db77226aa67130420819f9dc7bd5",
    "sha256": "44c2a4c5b27e4d3ab8477f519d7bb9d07cdd06a8227b35a4622d575637174f46"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Neuleohjeet sinun koollesi",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "1c2ca1a7e4290e92079d55c5ac40a259f1022227d3aa20114d144fd79bedb9b0",
+   "sha256": "ea968d69e3d50a0e91f49df104fd350a0b798c67e03c6bd02e7fb5df179a08b2"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Pipot, lapaset ja huivit neulottavaksi",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "895378d7e879e6c054f8c568dbfb31fbbc525bf25ac7378a002e8273ad36e8c7",
+   "sha256": "ffcfc41b9b5b02c81a83a882c5ac3446d80ca513de080797d01c42987d5b33a3"
   },
   {
    "file": "03-one-row.png",
@@ -669,6 +849,24 @@
    "sha256": "458eebe2252c551e2c0b547079f97ea58f2c7d273bc827ff67b6e811cfd61854"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Des modèles de tricot à ta taille",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "f55f71e1d46c62be50f9127c3da36ccf6bf89b548398d04992c9e328c20985ee",
+   "sha256": "db0d82e24b244adc60c589d070e72ed70dc390391cb034e3a70a40aba8209313"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Bonnets, moufles et écharpes à tricoter",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "897e61006ab99e24a9c84da81e3b4c958b596ce840aaecbe2a1676b1cc3c6ed0",
+   "sha256": "ac2f94b4de1967f2a19f0ec51d17584333004c0244f758ef95309b84b3098e58"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Suis ton modèle rang après rang",
    "size": 180,
@@ -732,6 +930,24 @@
    "source": "pdf.png",
    "source_sha256": "c2a48c12fb5f1c2c62160654efaead51fd7fc67b7c0601c172311754c4f219e3",
    "sha256": "0471a917d94e0156f9b95c5cc393bf33807cabe4bd6863f3e49a06f18d83b29f"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Des modèles de tricot à ta taille",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "f55f71e1d46c62be50f9127c3da36ccf6bf89b548398d04992c9e328c20985ee",
+   "sha256": "db0d82e24b244adc60c589d070e72ed70dc390391cb034e3a70a40aba8209313"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Tuques, mitaines et foulards à tricoter",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "3da7688ed60e606525fef70d4638f4edffce1dfa6cf527b773be495feed9ef58",
+   "sha256": "9227c357c98198dde996350a4f7d3c4127d5298b24f75c8d28d99f5c494ff22d"
   },
   {
    "file": "03-one-row.png",
@@ -799,6 +1015,24 @@
    "sha256": "dbb904877f7b369f30c59983bbe89e47aadf20ce64093ab3960e38bf06717935"
   },
   {
+   "file": "02-your-size.png",
+   "header": "તમારા માપ મુજબ લખાયેલી ગૂંથણ પેટર્ન",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "486952d0d7e901770f64976684c0cf96f54ac3919b693122c30d6d15be74305c",
+   "sha256": "645d4f68c922196e26c63ae1d7b1204303efc119a248171056c4084036017f4c"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ટોપી, મોજાં અને મફલર ગૂંથો",
+   "size": 172,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "751b3d664605792694e4e98a08a8516452df72366c2bd70d3c4dc562b596bb2e",
+   "sha256": "7dce86e8d135316ec41c1d1a4af513c93bd5b58e259a44bb4e45fd394a5a9beb"
+  },
+  {
    "file": "03-one-row.png",
    "header": "પેટર્નને એક સમયે એક હરોળ અનુસરો",
    "size": 180,
@@ -862,6 +1096,24 @@
    "source": "pdf.png",
    "source_sha256": "ad9b1667678ee28561f67bb5e4ef05a9b72e4e11cec66f1d89bf7922e09493ef",
    "sha256": "a80d3ba48b0a10a26e2674789f1ec206403ba4d537c50e9689df76d60f13cb75"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "תבניות סריגה במידה שלכם",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "27b1fd80712583a0f279a872aa67795829bebfd7391fdb5230ed6c5eeff1ae40",
+   "sha256": "069abf5201b89d778b8e666c6b3d90629e727dff2a75fa7c2a768bd41cbf2e45"
+  },
+  {
+   "file": "03-library.png",
+   "header": "כובעים, כפפות וצעיפים לסריגה",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "df235aae2a5e45410ab64290311c603615baaa9e7e322fe7d3c6e002620242e8",
+   "sha256": "a66e64b2dffb6ec5fab1889519a0151500a28f4916e1a4853bb11429f11945b9"
   },
   {
    "file": "03-one-row.png",
@@ -929,6 +1181,24 @@
    "sha256": "52ecb5179a67e357357cb0386a46cba9fa91551d6e17ef13d1b200974e6486c9"
   },
   {
+   "file": "02-your-size.png",
+   "header": "आपके साइज़ के हिसाब से बुनाई पैटर्न",
+   "size": 172,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "7fa5900a1576463fb449b55e827d54e62748eb2d45f93ca1bbbb987c101ba3ac",
+   "sha256": "c1a70684d5ba75670de5f241ac77874096283619788a45a7a7aedceff604dac8"
+  },
+  {
+   "file": "03-library.png",
+   "header": "टोपी, दस्ताने और मफ़लर बुनें",
+   "size": 168,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "a9ad8338e77310f15c4e40522572ddd7b9adc0e8330f2427b29c298fb7342207",
+   "sha256": "8e6802b79c9aae5d10827f91e3eaea73de87682ae746d94c02aab4b3f86aef5a"
+  },
+  {
    "file": "03-one-row.png",
    "header": "पैटर्न को हर बार एक पंक्ति बुनें",
    "size": 176,
@@ -992,6 +1262,24 @@
    "source": "pdf.png",
    "source_sha256": "a13142b380782178b7dd4e68b569ce9c55bbecff4c0344ae54f006cdb0d973b7",
    "sha256": "bcd7ec4034e17968044e546fa2477a75ed45059493f5cd14e638146fe06939d2"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Uzorci za pletenje pisani za tvoju mjeru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "71d225fd703c4fc2a02c3aa43746b14f34c8c733f00a0d033e84320a45e6bcf7",
+   "sha256": "d4bade2fab2396f2a8bc14d00a5b36be6ee157657715aa138919f8b1ec454a73"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Kape, rukavice i šalovi za pletenje",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "4c237daf7dba41b5e4a8dc02b2ae7298585f0cc05657fa72c4f3d4f320b9bb72",
+   "sha256": "ab41b76cc4f8bb7f60ecdd541e17e5fd8870f9d62ec2f6a557e51a5f2c75f656"
   },
   {
    "file": "03-one-row.png",
@@ -1059,6 +1347,24 @@
    "sha256": "f94b6e23c13d1dd1ce7c74a7074d20adf2f74ef9c245b8be9bf6d84721e21018"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Kötésminták a te méretedre írva",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "ae418c357f011dc534f0bbf61fe643acd495c25edef90eb7577b834becda7420",
+   "sha256": "13d66072a2aeeb9b5f7de933a08250880ee3fbb60d480e95012771a845f5b4fe"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Sapkák, kesztyűk és sálak kötéshez",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "70e1a4a37da3ebf07dfd4ad9fd09ffdd7811634771964fe9510a2c13f7490e7d",
+   "sha256": "540ba5067fa03f13624f61846e2e1a98c456318212b77888de98cbcde0ce9296"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Kövesd a mintát sorról sorra",
    "size": 180,
@@ -1122,6 +1428,24 @@
    "source": "pdf.png",
    "source_sha256": "88b1a835b9c3df494ba80c89075e7bad41fc488789b98e3478cc6b510e2b2d81",
    "sha256": "7b7c6c8a1004e436fe41c2e2a3300ed0dc6780557008725456b0b80c393a715b"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Pola rajut ditulis sesuai ukuranmu",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "71484d0fe2dbe054f4c834ffb91e03b37929fedc020b91666ff703ff62e4ab15",
+   "sha256": "cc72d39783fba07e97c735b64bdf99128c2142ea78813f89c0b4596c9a2c8614"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Rajut topi, sarung tangan, dan syal",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "e4507c7be399060b148b01b836d40c659eadc139f979e90f02047a9fc927be76",
+   "sha256": "43e0d3ef9b709e315cba86795594bf026040c6581cfc865e9e39ed05c7ad67e7"
   },
   {
    "file": "03-one-row.png",
@@ -1189,6 +1513,24 @@
    "sha256": "484d8ee13594bb57e0b13c87714b5e61e06c42d63a47b74b0739f965736aa620"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Schemi a maglia scritti sulla tua taglia",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2defc94100c806a87be3dedeec0a6fdab67fb7f67afa772c324b31ef1f81df37",
+   "sha256": "0209f7cacaaa7721813cf3460d9d6619829f66a4661ec0a0c5adffe8ea09d94c"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Cappelli, muffole e sciarpe a maglia",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "bad97d4306696ba8b69657f409ca19da1b4759906483690d3e1f4a56dff00d66",
+   "sha256": "6cc8464c8cb9025c1c59f07b7c084ad02eb89d97a45c3a1a6488e69f0d23e47c"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Segui lo schema un ferro alla volta",
    "size": 180,
@@ -1252,6 +1594,24 @@
    "source": "pdf.png",
    "source_sha256": "42ddd53ed5bf658c8c8cedfd9f8210e005ab9aa332ee451d767919a67d00b214",
    "sha256": "e355f931ba3dd70937f2217791d951fe0c71b781264643a0b93a0fe5bb8e9ddd"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "あなたのサイズで\n書かれる編み図",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "67aeb82bf65cc42741e340c4eae3427e6ae3ba889c219b5f9691533073506345",
+   "sha256": "c9b44f1d5f58b3f0ee74cf5ec73c109c2b6d99c1197d401ad4b5846cffd0019c"
+  },
+  {
+   "file": "03-library.png",
+   "header": "帽子、ミトン、\nマフラーを編もう",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "5b1e2dadf7ddaddaffde89be58c7a91bdef700cfc668a27696bc902271e7d94e",
+   "sha256": "c2f88068a5c247850f137223a2fd64ab105c02dfd6f249685cde7120b7fdbd25"
   },
   {
    "file": "03-one-row.png",
@@ -1319,6 +1679,24 @@
    "sha256": "c12f3e59452ea2f058539d1a397db033f07c6cff60d359351ab02c9c4c3b38d2"
   },
   {
+   "file": "02-your-size.png",
+   "header": "ನಿಮ್ಮ ಅಳತೆಗೆ ಹೆಣಿಗೆ ಪ್ಯಾಟರ್ನ್‌ಗಳು",
+   "size": 168,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "c729f586985313a54e6f710ad906c27de8d548a12948964670c5ee8f2b35dbcb",
+   "sha256": "2dfcc4d0ccacca20dcea1e2cdd253c7091bd433df5056c8dcb4e24b13f1e3e7f"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ಟೋಪಿ, ಕೈಗವಸು, ಮಫ್ಲರ್ ಹೆಣೆಯಿರಿ",
+   "size": 172,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "76524fc9fa2dc07e33f8ef10df3ca2c1223e03b7dd01ef3a30be392e36bd2344",
+   "sha256": "7c69c28598d919079dba9ec247d0692f3bc5c25a6704df0150ea5747da015f28"
+  },
+  {
    "file": "03-one-row.png",
    "header": "ಪ್ಯಾಟರ್ನ್ ಸಾಲು ಸಾಲಾಗಿ ಅನುಸರಿಸಿ",
    "size": 180,
@@ -1382,6 +1760,24 @@
    "source": "pdf.png",
    "source_sha256": "f514b51eacbed785a4972a62b00b1bfaa5dc8bcd267560ea56458e4529a50c16",
    "sha256": "a2cd4c8e6a8997585b57e432b7c352a740db16096787dc724b1ea4b5afe9d027"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "내 사이즈에 맞춰 쓰이는 뜨개 도안",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "ef7e60c4b86bbe84aa83b4986b682c815a13826e2e069fd902856e000517a662",
+   "sha256": "d5d6a6e48d911f5b4fe35039eed0416027187fc58ece3ee97213e2f3b54f8371"
+  },
+  {
+   "file": "03-library.png",
+   "header": "모자, 벙어리장갑, 목도리 뜨기",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "62092ed4d8eb02823e7e88f8d3f4f1af5f4a8e3ab34d013ea693a7de25ae8d32",
+   "sha256": "1eb634d78063d7aed8a5cea340f60c5c03f556354dd3785267bc6dcbad10bed6"
   },
   {
    "file": "03-one-row.png",
@@ -1449,6 +1845,24 @@
    "sha256": "61a382db753c960d59da95286080ab16d173c36c5b3677a17dde23ea4759f452"
   },
   {
+   "file": "02-your-size.png",
+   "header": "നിങ്ങളുടെ അളവിൽ നിറ്റിങ് പാറ്റേൺ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "95178a4fb0ac2be88d13dc60eba35fb5166ce5dbf8f2bbcfedaeb674652dcbfb",
+   "sha256": "37a53b90a2bec0cc6e69de5120ebe365fa1b16ff30e831d8e64ab4522361d413"
+  },
+  {
+   "file": "03-library.png",
+   "header": "തൊപ്പി, കൈയുറ, മഫ്ലർ നെയ്യൂ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "7145a52ef338dc53fdbbd5adb39fe0b1587a5b0e15edba9e6f72df8a41283a77",
+   "sha256": "d41bbf0a1edd61e9fb253ba2301af2b0d2ca1a31a66afc6d7f5387c2542ea9df"
+  },
+  {
    "file": "03-one-row.png",
    "header": "പാറ്റേൺ ഓരോ വരിയായി പിന്തുടരൂ",
    "size": 180,
@@ -1512,6 +1926,24 @@
    "source": "pdf.png",
    "source_sha256": "5a3aeba912f097d30d8bc71212ef739b5efe637782b1bbc4a5371294a474cbf2",
    "sha256": "94a32080de3ad49de66a86ad67a1a081f98fa679d8e0eeefdf27218fb9bd28e3"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "तुमच्या मापाचे विणकाम पॅटर्न",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "1bfe8af1d248e570f880989cbb7d55a1785f5ac430db11ce4321961ed2fbc29c",
+   "sha256": "b1ac65259bf0bfd356536de3ef91dd4f11b6805bea34527c36529931fe805a10"
+  },
+  {
+   "file": "03-library.png",
+   "header": "टोपी, हातमोजे आणि मफलर विणा",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "6efb13ef1130c0e97e16d97512d8649f9ff1a7f20f0a91e9b00af160818cb59c",
+   "sha256": "de648e888e016cc27c681699291225f8f2fb5e9bb9b88e4685477c13463ec896"
   },
   {
    "file": "03-one-row.png",
@@ -1579,6 +2011,24 @@
    "sha256": "d072b97d12566dcd5397f0196a298d18dda0764f67e258e9d35fd95a2925379d"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Corak rajutan ditulis ikut saiz anda",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "e28064005f95d16b1f731f849343dd617f5386fcfdd3afeb9312f1103b8d5cd2",
+   "sha256": "f0adbeb4c6106f035d555885b09d76a8d37672a8b27e70874d97e1c7eb975198"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Rajut topi, sarung tangan dan skarf",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "264b08e624a466ea09157108bd23024b5c89a064f3a0812ef3cb52d2090f4c1f",
+   "sha256": "4437f7c7fd9e8ef66fe126d56b78976be1b7afd4ab40426de5b73e2dcf820e4d"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Ikut corak anda baris demi baris",
    "size": 180,
@@ -1642,6 +2092,24 @@
    "source": "pdf.png",
    "source_sha256": "67ee837229527a6beb8dfddcfb787bb5ba03624992c6475bbc4fa5682db53b54",
    "sha256": "b806f06e4480ab73489498cfd8be39ab8165c5a83523eed609afd95e715403b4"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Breipatronen op jouw maat",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "c7375d7c8a0f15979ef2d0e13024ed9a0fde93ceba57526f990e6f1307cad4e2",
+   "sha256": "9d680821f6b484ee130afbd2155765f1edc42b58dce1873d2f05b11c13ac505f"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Mutsen, wanten en sjaals om te breien",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "1791ed2fe3ebb804f63e45ac8f2b44dc5b2c0527d2b584dfad237b484b229e6f",
+   "sha256": "6042f579f4e03ad05bdbe906047c30b91d912f4e9be72a4c811fd36152dc1f1a"
   },
   {
    "file": "03-one-row.png",
@@ -1709,6 +2177,24 @@
    "sha256": "3a2855d66cee4c84e9f6006f4364a692c450aade4459db2af7361e50a5f15954"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Strikkeoppskrifter i din størrelse",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "95ee0dc696fb63d8a0c701eecf62d8c3a358877021d90feb9e71247dce6f72d8",
+   "sha256": "aec4f7635e45c5456e4f540d11aae45493418177a91bfcd7c7ac18a007e1878c"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Luer, votter og skjerf å strikke",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "7f01a4c14be72774243944c6783b44af091714efee82df6b634bf241445261c9",
+   "sha256": "caf448fc2ba10232fccc0b25caf0694bc888f6b68f36bba0b414576cd3fae8c4"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Følg oppskriften én rad om gangen",
    "size": 180,
@@ -1772,6 +2258,24 @@
    "source": "pdf.png",
    "source_sha256": "215d557777ab6d3071e8b120d89287da5938395cf1cab3ce544e21f5ea297a9b",
    "sha256": "7b1bddcc5645083fd0dee9bcf6c565e57c2c5d6638f1d1c84c5c7c95c882b980"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "ଆପଣଙ୍କ ମାପର ବୁଣା ପ୍ୟାଟର୍ନ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "04c6ea42bdc725d8ff37ea960cfca05ac0272e3b465da0aa83ab1330d3824a18",
+   "sha256": "58035eb55c5d19e2969a4442b034503d29ac5df04d750bfb77a58a74b6ca72ad"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ଟୋପି, ଗ୍ଲୋଭସ୍ ଓ ମଫଲର ବୁଣନ୍ତୁ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "f1fd364c189e6e21d1664379fa80696c98b5e59ee077cc3e323217526145d390",
+   "sha256": "eb82ba08c360893c1c2228aa2852aabf1adc26e899eb1edfccd1f707be94d84a"
   },
   {
    "file": "03-one-row.png",
@@ -1839,6 +2343,24 @@
    "sha256": "87bbdeeeb551bfc14abee35ac92361a9e631352022280ee99f124aa72c776d10"
   },
   {
+   "file": "02-your-size.png",
+   "header": "ਤੁਹਾਡੇ ਸਾਈਜ਼ ਮੁਤਾਬਕ ਲਿਖੇ ਬੁਣਾਈ ਪੈਟਰਨ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "4334abfbe74ccd969a540797822633e9734de5456ba7f501e822feae774307a0",
+   "sha256": "4f081245de0a3ddddf0dd19a28577b21cefc4ed8265e2dee7630bdf59c2611ef"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ਟੋਪੀ, ਦਸਤਾਨੇ ਅਤੇ ਮਫ਼ਲਰ ਬੁਣੋ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "1de5e5db01e22b2a244459de108f191ca0e0762cc55363f9abc0595437bc0ad1",
+   "sha256": "6747a782d4237f3c69d75f382798147bcba0cab5f7a75e74d76d20b1093344ca"
+  },
+  {
    "file": "03-one-row.png",
    "header": "ਪੈਟਰਨ ਨੂੰ ਇੱਕ ਵਾਰ ਵਿੱਚ ਇੱਕ ਕਤਾਰ ਬੁਣੋ",
    "size": 180,
@@ -1902,6 +2424,24 @@
    "source": "pdf.png",
    "source_sha256": "a4ba65f177fe82832777d95a7781a5d6b6a966e2f7680ae5e42461a10dccd27c",
    "sha256": "d05ae9d8dc5e767bfc66b280f6d9396226555af05225b6a59f21b4acb321b808"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Wzory na drutach na twój rozmiar",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "7431a3b302a5284b054226810dd06e9fc963cb37e874bcd61d29a14ca4091cbc",
+   "sha256": "5565c7b09bfe05a23173517feb4521e2a07f052ddd2edb05d7b0019c191fae07"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Czapki, rękawiczki i szaliki na drutach",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "7217bc3548b4c7372b9da38bc59a608ab7c1bd958db7b28e5132cf47ab32be55",
+   "sha256": "68875e6c2f5fbf5722dd905d3d8035e8ea1ec3a3c3ee4ada0661cdf079f8be0b"
   },
   {
    "file": "03-one-row.png",
@@ -1969,6 +2509,24 @@
    "sha256": "1af5d1322f378a67e695b8f8c72b5d3ad94108d397235f61480742c7989887fe"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Receitas de tricô no seu tamanho",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b852e05afe531b9bde73959a002d4950771494f9c86ecf5bd9faca55ac3cc426",
+   "sha256": "297bc3d18cde840ef30e1d5a7f5a11205e4e51157aa670a0d1034df932f733ac"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Gorros, luvas e cachecóis de tricô",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "89b0bdc87d45f49a3d19664ffaa59540461c479af66f01b9a4717ff3ad869378",
+   "sha256": "254fef847e8a9b1eefd1e60d4315e7359442e19cdc10ad24cfa7d1da448d5314"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Siga sua receita fileira por fileira",
    "size": 180,
@@ -2032,6 +2590,24 @@
    "source": "pdf.png",
    "source_sha256": "2c687153cb74146d68c874244a206fd117bc6b4cdaa6027290496ad80f08b0fb",
    "sha256": "03b37199b4ba32179d0657902517f42729acd7961d5391571618fd62c5bd699c"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Padrões de tricô escritos à tua medida",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2427f091ef821ba0df25a7288dce38ba7225bca1457e3c1a4d8e2bf689036fd6",
+   "sha256": "a49f6b38d1265785d8cf7c72c66dbc231494e18ba74ea3df51ecfaf3b8efcd74"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Gorros, luvas e cachecóis de tricô",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "66ef3f9e4f71a5738309e3a2da0264ff00544e72d6aee144636b3c8fd682b85a",
+   "sha256": "261ac04787c1e713a50174b9d51f13dad8377ae48526881a56d178fb53bd1dce"
   },
   {
    "file": "03-one-row.png",
@@ -2099,6 +2675,24 @@
    "sha256": "e52d98441268ee393fca93578d7b057c3e1001b73b510da2bb860db89a31a9f7"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Modele de tricotat scrise pe măsura ta",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "b293eadb81740a87bdd0bcf1742b2024dbfc77a67a77f1a1e148afffd660925d",
+   "sha256": "8565b51160ab278203dcd44968e53991e8ed30b4fcb1e31d00d5575d8f7bd2fd"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Căciuli, mănuși și fulare de tricotat",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "6d445a7208e8f4a86d50f956a4f1918f8154d1ac389beec7311e2a04e0f3b5cc",
+   "sha256": "5c32871f73013b1ca7bbe9db43b026d6be96ca10739932c75e421e4c16430605"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Urmează modelul rând cu rând",
    "size": 180,
@@ -2162,6 +2756,24 @@
    "source": "pdf.png",
    "source_sha256": "b2975ec78bdb9ed96782f1c7205957920def25d4fa2080b13c62403144535d88",
    "sha256": "f12b75e71a4998ee3c0d3cc098014422973c3964f2faa4e2db8a32ff34bad33a"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Схемы вязания под ваш размер",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "3b21379f5f30775584a26bf86b2ac5000417baef797081df178ecf17268a1d60",
+   "sha256": "979b6d269a1ba0199d4f0bf100a5570d64445db248915bcbbad21d071794dee7"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Шапки, варежки и шарфы для вязания",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "63f989e0832e01a19dfc9a24bc7a7ae5dc7ad248607a5a7d3a78c4f5d7d3d4d7",
+   "sha256": "480e7040d3e299583280036553f5c9b1c15e1760edc6078561ce5b4a46eeeaba"
   },
   {
    "file": "03-one-row.png",
@@ -2229,6 +2841,24 @@
    "sha256": "6c62be879dd920826732570916bac07ac41179519ad6d69005f150dce95f92d8"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Pletacie návody na tvoju mieru",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "f6d54bdfdd7467d88b38e81796b5ff44723739284e274e439811d0761f378732",
+   "sha256": "cbd744a026148036addf257755dd7fdf8765f3902e3fd5c7139ff9af17e046d3"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Čiapky, palčiaky a šály na pletenie",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "eb09752bb71b0f8d395782a49fd9e010befc6d9942b68c1801ffc5333c075559",
+   "sha256": "47c5fa1734b279e85ce7f724a0eb7ca1c62d216a78511e0907696b2cfe1be58f"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Pleť podľa návodu riadok po riadku",
    "size": 180,
@@ -2292,6 +2922,24 @@
    "source": "pdf.png",
    "source_sha256": "1e7f540290e9e34c5fe3243f8d93799d98fb19ea6f3f5f3ec18685b669a2328e",
    "sha256": "4fc08b3815edae79b75cd4f68cbd13b67dd84d7fdf5e43f787e4f3545da1fe91"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Pletilni vzorci za tvojo velikost",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "6dd0475057992b064f750d85e0fdb84a220a79d1dfddc4184d31f29a186e6654",
+   "sha256": "9b9dab1064dd7876cde47e7ae97ba72bcad8226021d5e525f9dfd259bf8f6e87"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Kape, palčniki in šali za pletenje",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "ef8b3452b63c739b9eb5c9681749c95256efc20c4c8e911fdf3ee4cd94692096",
+   "sha256": "dbc009600c7e7f48ec73b9972de0fffbf05c3fd83966ee2c63ceb54e8af55e47"
   },
   {
    "file": "03-one-row.png",
@@ -2359,6 +3007,24 @@
    "sha256": "72df4430ee1f6eef0ee52b2fc7d10ccc16daeb7d776f829cf266a30946c3ca05"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Stickmönster skrivna efter din storlek",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "0eb13f5900e238f45f96f7eaf9e459f3eb440562e46defb14a758baf13a323e1",
+   "sha256": "7438001321d6864870fc6a0ba276e28dd840f8e7a6606c1edce990099b50c20b"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Mössor, vantar och halsdukar att sticka",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "61a3caaff635aeae1c9884152f5e08bd1d48a2b91129334530614225a1538aed",
+   "sha256": "022e2ae4d453d58d6c5fb50fe47d16bf0bef52728f10b93177316a1f973ea9b5"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Följ mönstret varv för varv",
    "size": 180,
@@ -2422,6 +3088,24 @@
    "source": "pdf.png",
    "source_sha256": "49d8870794e9afcb56741d968aaaf004de0e1548b451a5d0d52d65b0ba5e4605",
    "sha256": "fc69790511b6ac7824b41f803cd0a90e3f79eff5c0704976944cb9e3ab71e77b"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "உங்கள் அளவில் பின்னல் பேட்டர்ன்",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "5b971bdd6ad7fdf4234e93be7f701035a71dd058ae5525ffd20ab94741da9cf9",
+   "sha256": "3efa19805b539accb56766a3ee09a5f62cfe32a214e0a65b34405c315f9c25e0"
+  },
+  {
+   "file": "03-library.png",
+   "header": "தொப்பி, கையுறை, மஃப்ளர் பின்னுங்கள்",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "43b202df7c191e6e253cdc78c8f55b90beb535d3770d63514929177a559e1585",
+   "sha256": "d57eb7807b8a75d0a5eea7a12e3c2c59fc52fa049f2e6243950056d5d57a791a"
   },
   {
    "file": "03-one-row.png",
@@ -2489,6 +3173,24 @@
    "sha256": "36ccfab986d2952941bd84c2a2fa78445f470a9b1b0db8e145df3996fd849d7a"
   },
   {
+   "file": "02-your-size.png",
+   "header": "మీ సైజుకు రాసిన అల్లిక ప్యాటర్న్‌లు",
+   "size": 160,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "0ef4e053ba83ad3ba070a82a485dbc4f4531d6a300488fafbd29e9b2115f3d35",
+   "sha256": "2f5f9a81ff6eda370c0e9adc1fbbcc43cda09a79675e40e3456f3eb892522305"
+  },
+  {
+   "file": "03-library.png",
+   "header": "టోపీ, గ్లౌజులు, మఫ్లర్ అల్లండి",
+   "size": 152,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "f203ce43b37221b8e9a8345ebef943def81ba4083a9ff30a0237cce4a30559db",
+   "sha256": "06d51857b54d1d77567b993edf909652082aeae0e65a3e3615a1e32bdbf6bc4f"
+  },
+  {
    "file": "03-one-row.png",
    "header": "ప్యాటర్న్ వరుస వరుసగా అల్లండి",
    "size": 164,
@@ -2552,6 +3254,24 @@
    "source": "pdf.png",
    "source_sha256": "2df9b9f763c94cc6a59cf70d1820c1d222adb431e1b3a23b065960fa4147fc52",
    "sha256": "2533165e30f1babb56aef845cf4ce730b8548ecf05b47285cff10fea9f514690"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "แบบถักเขียนให้\nพอดีไซส์คุณ",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "7818bf6d276147cc45c39228dc569baec232ae4fc9f377107a8421a2662c9142",
+   "sha256": "60a4dec31355e5f5732d38e0fa2ee05566de6b8c8aed57c8a5a2411ff7a313da"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ถักหมวก ถุงมือ\nและผ้าพันคอ",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "473a0bd1880bb6fc5ec8f9b17719e4fbf696db12edaeaa6c3ec34f7e7e9640a7",
+   "sha256": "33d526050b125391852f47096bb05f7f6380f393432923a37df4f896d8f3f026"
   },
   {
    "file": "03-one-row.png",
@@ -2619,6 +3339,24 @@
    "sha256": "6c4683495e0146b1a7baf5a02985c54e3021330b4346e1ee76096795c2317e61"
   },
   {
+   "file": "02-your-size.png",
+   "header": "Bedenine göre örgü modelleri",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "d9b8f8111d32a1e33225d2baf954aeead79fb46a7db90de0cfa8b7f0e39db142",
+   "sha256": "d82fd0725eb5edea8c7df1366eb3ac7cd5763faf2f9e5b898248f95aeb7ce043"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Örmek için bere, eldiven ve atkı",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "5129c673cbd6ec5717c64be5ee97ce219cc17437b081f809e760e85f501c3be4",
+   "sha256": "38127da938df3d72dd5d343aa54b0b8ca8eadbdb662baa0e830936a896a55113"
+  },
+  {
    "file": "03-one-row.png",
    "header": "Modeli sıra sıra takip et",
    "size": 180,
@@ -2682,6 +3420,24 @@
    "source": "pdf.png",
    "source_sha256": "ac0e8229e64d2b1251ec0becf6c32f96496dc2710e8ae623fbd3a1c51aab6a0b",
    "sha256": "b6a981e1ab50256931f6afa9248154ef65863eb2aa29d40e933b276a6b86088c"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Схеми в'язання під ваш розмір",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "d801c3678e318462f41e244e6299454109e263b5f3ba6ee3a7256df6d233abe8",
+   "sha256": "23088a3f592ae4b5d442e8d17eaa73fc92c193927b0813b566e842ca5f2aeb21"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Шапки, рукавиці й шарфи для в'язання",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "7400388717c91e1b0407921fb74c35feaf582761d3780077d8c782410204e847",
+   "sha256": "e2276374477e78a6205a3c078e2f433065dc189515da3dad500fff312052edb9"
   },
   {
    "file": "03-one-row.png",
@@ -2749,6 +3505,24 @@
    "sha256": "6e63913b4b925add4ae7e868b430ec4a0e72f68649b775a89e17f361d0c52d1c"
   },
   {
+   "file": "02-your-size.png",
+   "header": "آپ کے سائز کے بنائی پیٹرن",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "2fdb19674ebbaf0af3cc318968b5ebc35abb79ebeeb7264c7d0d7c1235db2981",
+   "sha256": "fa144365b1bc7aeafb1fbf3f8789e76f276f7cefe422f04cfc5b3973fca68b8a"
+  },
+  {
+   "file": "03-library.png",
+   "header": "ٹوپی، دستانے اور مفلر بُنیں",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "bab6f44fb93c3a071c6701f0567d5b3be0e1b4ff749d9ff518d7f6f7c64d96ea",
+   "sha256": "bf8195d97db4dcf42ed4f49bb7a4554890d8a701e74b1b45980292a6a7c6c2ec"
+  },
+  {
    "file": "03-one-row.png",
    "header": "پیٹرن کو ایک وقت میں ایک قطار بُنیں",
    "size": 180,
@@ -2812,6 +3586,24 @@
    "source": "pdf.png",
    "source_sha256": "62bd748b25fb526b79750ca52c91e4c15585786e02681ef41c4f5b6ae28810a3",
    "sha256": "19c1926522bebb81eafe09f350e1836621b2a9365a9abe9bd9c88bccb590c136"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "Mẫu đan viết theo đúng cỡ của bạn",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "438cf6ff8a8e8b50fa0c02a39c8980822d223fc7ae6d07aa7c056cad76e246ae",
+   "sha256": "78047dd0d57da3df863410533713d0f8be8934c802e304ba6d716b14af30edf8"
+  },
+  {
+   "file": "03-library.png",
+   "header": "Đan mũ, găng tay và khăn quàng",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "0f19e4bad91fff6f7805979d15a0efb14ac154a805da2ae8cce257c2334a8f18",
+   "sha256": "980d47afa4020c94d12152c6999041e6618b2d12b042a541dc0802edcc780f5f"
   },
   {
    "file": "03-one-row.png",
@@ -2879,6 +3671,24 @@
    "sha256": "0ed96004ab78e567b8a79fd7e5918ba0c932421d50198801b0564aed59bd046b"
   },
   {
+   "file": "02-your-size.png",
+   "header": "按你的尺寸\n写成的编织图解",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "10c845438ba724ec431822e129429bfd8a875c3c81f876925b779c396477800b",
+   "sha256": "2afe0ce8d6f79dc5a2ba2426f9fb17de7a232d03b44ace478d253ea38a85ff76"
+  },
+  {
+   "file": "03-library.png",
+   "header": "织帽子、手套\n和围巾",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "66b06bf4c8edf47f034e59a0f87c3688a63c5dd198481e4c30da2bf05213399e",
+   "sha256": "3cc030e67f285ce741491ae3645e5528523be87e17869570c888aec456ea9d3f"
+  },
+  {
    "file": "03-one-row.png",
    "header": "跟着图解\n一行一行织",
    "size": 180,
@@ -2942,6 +3752,24 @@
    "source": "pdf.png",
    "source_sha256": "c9369a0a925e0f32b3c9cd7bf508f7e882c2c838987b8a2b1fdec5fb6517b909",
    "sha256": "6f1407413bc4445b90c136b6338858add5c0e85f93d2786e51ff50c73637a29f"
+  },
+  {
+   "file": "02-your-size.png",
+   "header": "依你的尺寸\n撰寫的編織圖解",
+   "size": 180,
+   "lines": 2,
+   "source": "design.png",
+   "source_sha256": "0121cb98eff4f71228d9eeb129af6d83db62afc0308e11c6b66a9eceea4dd8ee",
+   "sha256": "96b7a0a04e85030a5c7f4272632a4bc3da1f363502f9f4cdb8f7ea0c29131fd3"
+  },
+  {
+   "file": "03-library.png",
+   "header": "織帽子、手套\n和圍巾",
+   "size": 180,
+   "lines": 2,
+   "source": "library.png",
+   "source_sha256": "78983c0786f4907bf2a9d36b132e84c0e085d232ba0e2324cc16abbe6a8c099a",
+   "sha256": "58d0f0c7367d13884a0747ac193af68dadd83374a665a678647fb0680843beb5"
   },
   {
    "file": "03-one-row.png",
