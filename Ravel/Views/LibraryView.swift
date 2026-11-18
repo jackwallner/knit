@@ -180,6 +180,8 @@ struct LibraryView: View {
                 Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
                     .padding(14)
                     .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+                    // Decorative like the photo: the title under it names the tile.
+                    .accessibilityHidden(true)
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text(item.title)
