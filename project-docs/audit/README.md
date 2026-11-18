@@ -7,4 +7,5 @@
 - [raw/tech-edit.md](raw/tech-edit.md): knitting tech edit of the pattern engines, 30 findings K-01 to K-30 plus the missing-designs catalog.
 - [raw/aso-listing.md](raw/aso-listing.md): App Store listing and keyword audit, 20 findings A-01 to A-20.
 - [raw/research-competitors.md](raw/research-competitors.md): competitor, review and pricing research, 16 findings R-01 to R-16.
+- [2026-11-17-gift-knitter-walkthrough.md](2026-11-17-gift-knitter-walkthrough.md): one pass through build 23 as a seasonal gift knitter, 19 findings and takeaways, screenshots in `raw/2026-11-17-gift-knitter/`. Documented only, nothing fixed.
 - `raw/tiktok-warmup.md`: TikTok account warm-up research and 14 day plan, 12 findings T-01 to T-12. Kept on the Mac and out of this public repo (it names an unregistered handle); the ledger carries its findings.
