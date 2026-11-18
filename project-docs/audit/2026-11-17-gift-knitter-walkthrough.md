@@ -21,7 +21,7 @@ Ordered by how much each one costs this user. File references are where the beha
 
 1. **Tapping Cast On a second time makes a second project that looks like a lost count.** Back from a project that was just cast on returns to the design page, inside the Patterns tab, with Cast On still live. She tapped it to get back to her scarf and landed on "Cast on 32 stitches" at row 0. The Projects list then showed two rows named Garter Scarf, one at 5 and one at 0, with nothing to tell them apart. The guard in `castOn()` only blocks a double tap while the project is open (`Ravel/Views/LibraryView.swift:284`). Screenshot: [raw/2026-11-17-gift-knitter/duplicate-projects.jpg](raw/2026-11-17-gift-knitter/duplicate-projects.jpg).
 
-2. **First launch sells before it shows, and never says the tracker is free.** Three pages: an animation, a sweater, then the yearly trial at $39.99. The promise the store listing leads with (counter, PDFs and stash free for good, no account) appears nowhere in the app. The free way in, "Get Started", is small grey text above a full width "Try Free for 7 Days". Only the yearly plan is offered there; the monthly plan, the one this user would take, shows only on the later paywall. She read page three as "this app costs $39.99 a year".
+2. **First launch reads as "this app costs $39.99 a year".** Three pages: an animation, a sweater, then the trial. The page follows the fleet onboarding trial contract (`~/ios/onboarding/trial-conversion-thumb-zone.md`): one tap trial in the Continue slot, "Get Started" as the quiet free exit above it, no plan cards. That structure is deliberate and stays. What cost her was the number: the trial is the yearly plan at $39.99, and someone who has not used the app yet reacts to that figure. Mahj, Cribbity and Bridge pitch the monthly trial in onboarding for this reason and keep yearly leading on the paywall. Corrected 2026-11-17: the first version of this finding faulted the quiet exit and the missing plan choice, which are by design.
 
 3. **Page one says "Tap anywhere to count a row" and tapping does nothing.** The fabric knits itself once and stops (`Ravel/Views/OnboardingView.swift:66`). She tapped it twice, then found Continue.
 
@@ -68,10 +68,10 @@ Ordered by how much each one costs this user. File references are where the beha
 
 ## Takeaways
 
-- She arrives for one specific gift, not to browse. Her path is Patterns, a hat, a size, the paywall. That path is the strongest part of the app up to the paywall. It breaks at finding the piece (finding 4) and at what happens after she says no (findings 2 and 4).
+- She arrives for one specific gift, not to browse. Her path is Patterns, a hat, a size, the paywall. That path is the strongest part of the app up to the paywall. It breaks at finding the piece (finding 4) and at what happens after she says no (finding 4).
 - She makes several of the same thing in different sizes. The app treats each as an anonymous copy (findings 1, 5 and 8).
 - What she will pay for is a week or a month, and the app lets her keep what she cast on. Whether to catch her with a single pattern price is the open pricing question (finding 6).
-- The free tracker is what would keep her past December, and the app never tells her it is free (findings 2 and 11).
+- The free tracker is what would keep her past December, and nothing after first launch shows her that her own printed pattern can live here (finding 11).
 - Nothing she did lost a count. The one moment that felt like a lost count was the duplicate project (finding 1).
 
 If these are fixed, the order that follows from the walk: 1, 2 and 3 together, 4, 5, 7.
