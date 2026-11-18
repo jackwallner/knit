@@ -34404,6 +34404,287 @@
         }
       }
     },
+    "From the Library": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "من المكتبة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "লাইব্রেরি থেকে"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De la biblioteca"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z knihovny"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fra biblioteket"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus der Bibliothek"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Από τη βιβλιοθήκη"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De la biblioteca"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De la biblioteca"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjastosta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Depuis la bibliothèque"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Depuis la bibliothèque"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "લાઇબ્રેરીમાંથી"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מהספרייה"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "लाइब्रेरी से"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iz knjižnice"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A könyvtárból"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dari Perpustakaan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dalla libreria"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ライブラリから"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಲೈಬ್ರರಿಯಿಂದ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "라이브러리에서"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ലൈബ്രറിയിൽ നിന്ന്"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "लायब्ररीतून"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dari Perpustakaan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fra biblioteket"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uit de bibliotheek"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଲାଇବ୍ରେରୀରୁ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਲਾਇਬ੍ਰੇਰੀ ਤੋਂ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z biblioteki"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Da biblioteca"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Da biblioteca"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din bibliotecă"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Из библиотеки"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z knižnice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iz knjižnice"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Från biblioteket"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "நூலகத்திலிருந்து"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "లైబ్రరీ నుండి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จากคลัง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kütüphaneden"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "З бібліотеки"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لائبریری سے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Từ thư viện"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从图库"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "從圖庫"
+          }
+        }
+      }
+    },
     "Front": {
       "extractionState": "manual",
       "localizations": {
@@ -39462,283 +39743,564 @@
         }
       }
     },
-    "Hats, socks, sweaters and shawls": {
+    "Hats, mittens, scarves": {
       "extractionState": "manual",
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "قبعات وجوارب وكنزات وشالات"
+            "value": "قبعات، قفازات، أوشحة"
           }
         },
         "bn": {
           "stringUnit": {
             "state": "translated",
-            "value": "টুপি, মোজা, সোয়েটার ও শাল"
+            "value": "টুপি, দস্তানা, স্কার্ফ"
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gorros, mitjons, jerseis i mantellines"
+            "value": "Barrets, manyoples, bufandes"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Čepice, ponožky, svetry a šátky"
+            "value": "Čepice, palčáky, šály"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Huer, sokker, trøjer og sjaler"
+            "value": "Huer, luffer, halstørklæder"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mützen, Socken, Pullover und Tücher"
+            "value": "Mützen, Fäustlinge, Schals"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Σκούφοι, κάλτσες, πουλόβερ και σάλια"
+            "value": "Σκούφοι, γάντια, κασκόλ"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gorros, calcetines, jerséis y chales"
+            "value": "Gorros, manoplas, bufandas"
           }
         },
         "es-MX": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gorros, calcetines, suéteres y chales"
+            "value": "Gorros, manoplas, bufandas"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pipot, sukat, neuleet ja huivit"
+            "value": "Pipot, lapaset, huivit"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonnets, chaussettes, pulls et châles"
+            "value": "Bonnets, moufles, écharpes"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonnets, chaussettes, pulls et châles"
+            "value": "Bonnets, moufles, écharpes"
           }
         },
         "gu": {
           "stringUnit": {
             "state": "translated",
-            "value": "ટોપીઓ, મોજાં, સ્વેટર અને શાલ"
+            "value": "ટોપી, હાથમોજાં, સ્કાર્ફ"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "כובעים, גרביים, סוודרים ושאלים"
+            "value": "כובעים, כפפות, צעיפים"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "टोपियाँ, मोज़े, स्वेटर और शॉल"
+            "value": "टोपी, दस्ताने, मफ़लर"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kape, čarape, puloveri i šalovi"
+            "value": "Kape, rukavice, šalovi"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sapkák, zoknik, pulóverek és kendők"
+            "value": "Sapkák, kesztyűk, sálak"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Topi, kaus kaki, sweter, dan selendang"
+            "value": "Topi, sarung tangan, syal"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cappelli, calze, maglioni e scialli"
+            "value": "Cappelli, muffole, sciarpe"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "帽子、靴下、セーター、ショール"
+            "value": "帽子、ミトン、マフラー"
           }
         },
         "kn": {
           "stringUnit": {
             "state": "translated",
-            "value": "ಟೋಪಿಗಳು, ಸಾಕ್ಸ್, ಸ್ವೆಟರ್‌ಗಳು ಮತ್ತು ಶಾಲುಗಳು"
+            "value": "ಟೋಪಿ, ಕೈಗವಸು, ಸ್ಕಾರ್ಫ್"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "모자, 양말, 스웨터, 숄"
+            "value": "모자, 벙어리장갑, 목도리"
           }
         },
         "ml": {
           "stringUnit": {
             "state": "translated",
-            "value": "തൊപ്പികൾ, സോക്സുകൾ, സ്വെറ്ററുകൾ, ഷാളുകൾ"
+            "value": "തൊപ്പി, കൈയുറ, സ്കാർഫ്"
           }
         },
         "mr": {
           "stringUnit": {
             "state": "translated",
-            "value": "टोप्या, मोजे, स्वेटर आणि शाल"
+            "value": "टोपी, हातमोजे, स्कार्फ"
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Topi, stoking, baju panas dan selendang"
+            "value": "Topi, sarung tangan, skaf"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Luer, sokker, gensere og sjal"
+            "value": "Luer, votter, skjerf"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mutsen, sokken, truien en omslagdoeken"
+            "value": "Mutsen, wanten, sjaals"
           }
         },
         "or": {
           "stringUnit": {
             "state": "translated",
-            "value": "ଟୋପି, ମୋଜା, ସ୍ୱେଟର୍ ଓ ଶାଲ"
+            "value": "ଟୋପି, ହାତମୋଜା, ସ୍କାର୍ଫ"
           }
         },
         "pa": {
           "stringUnit": {
             "state": "translated",
-            "value": "ਟੋਪੀਆਂ, ਜੁਰਾਬਾਂ, ਸਵੈਟਰ ਅਤੇ ਸ਼ਾਲ"
+            "value": "ਟੋਪੀਆਂ, ਦਸਤਾਨੇ, ਸਕਾਰਫ਼"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Czapki, skarpetki, swetry i chusty"
+            "value": "Czapki, rękawiczki, szaliki"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gorros, meias, suéteres e xales"
+            "value": "Gorros, luvas, cachecóis"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gorros, meias, camisolas e xailes"
+            "value": "Gorros, luvas, cachecóis"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Căciuli, șosete, pulovere și șaluri"
+            "value": "Căciuli, mănuși, fulare"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Шапки, носки, свитеры и шали"
+            "value": "Шапки, варежки, шарфы"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Čiapky, ponožky, svetre a šatky"
+            "value": "Čiapky, palčiaky, šály"
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kape, nogavice, puloverji in rute"
+            "value": "Kape, palčniki, šali"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mössor, sockor, tröjor och sjalar"
+            "value": "Mössor, vantar, halsdukar"
           }
         },
         "ta": {
           "stringUnit": {
             "state": "translated",
-            "value": "தொப்பிகள், சாக்ஸ், ஸ்வெட்டர்கள் மற்றும் சால்வைகள்"
+            "value": "தொப்பி, கையுறை, ஸ்கார்ஃப்"
           }
         },
         "te": {
           "stringUnit": {
             "state": "translated",
-            "value": "టోపీలు, సాక్సులు, స్వెటర్లు మరియు శాలువాలు"
+            "value": "టోపీలు, చేతి తొడుగులు, స్కార్ఫ్‌లు"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "หมวก ถุงเท้า เสื้อสเวตเตอร์ และผ้าคลุมไหล่"
+            "value": "หมวก ถุงมือ ผ้าพันคอ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bereler, çoraplar, kazaklar ve şallar"
+            "value": "Bere, eldiven, atkı"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Шапки, шкарпетки, светри та шалі"
+            "value": "Шапки, рукавиці, шарфи"
           }
         },
         "ur": {
           "stringUnit": {
             "state": "translated",
-            "value": "ٹوپیاں، جرابیں، سویٹر اور شال"
+            "value": "ٹوپیاں، دستانے، مفلر"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mũ, tất, áo len và khăn choàng"
+            "value": "Mũ, găng tay, khăn quàng"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "帽子、袜子、毛衣和披肩"
+            "value": "帽子、连指手套、围巾"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "帽子、襪子、毛衣和披肩"
+            "value": "帽子、連指手套、圍巾"
+          }
+        }
+      }
+    },
+    "Hats, mittens, scarves and sweaters": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قبعات، قفازات، أوشحة وكنزات"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "টুপি, দস্তানা, স্কার্ফ ও সোয়েটার"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Barrets, manyoples, bufandes i jerseis"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čepice, palčáky, šály a svetry"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Huer, luffer, halstørklæder og trøjer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mützen, Fäustlinge, Schals und Pullover"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Σκούφοι, γάντια, κασκόλ και πουλόβερ"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gorros, manoplas, bufandas y jerséis"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gorros, mitones, bufandas y suéteres"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pipot, lapaset, huivit ja neuleet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bonnets, moufles, écharpes et pulls"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bonnets, moufles, écharpes et pulls"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ટોપી, હાથમોજાં, સ્કાર્ફ અને સ્વેટર"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "כובעים, כפפות, צעיפים וסוודרים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टोपी, दस्ताने, मफ़लर और स्वेटर"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kape, rukavice, šalovi i džemperi"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sapkák, kesztyűk, sálak és pulóverek"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Topi, sarung tangan, syal, dan sweter"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cappelli, muffole, sciarpe e maglioni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子、ミトン、マフラー、セーター"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಟೋಪಿ, ಕೈಗವಸು, ಸ್ಕಾರ್ಫ್ ಮತ್ತು ಸ್ವೆಟರ್"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모자, 벙어리장갑, 목도리, 스웨터"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "തൊപ്പി, കൈയുറ, സ്കാർഫ്, സ്വെറ്റർ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टोपी, हातमोजे, स्कार्फ आणि स्वेटर"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Topi, sarung tangan, skaf dan baju sejuk"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luer, votter, skjerf og gensere"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mutsen, wanten, sjaals en truien"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଟୋପି, ହାତମୋଜା, ସ୍କାର୍ଫ ଓ ସ୍ୱେଟର"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਟੋਪੀਆਂ, ਦਸਤਾਨੇ, ਸਕਾਰਫ਼ ਅਤੇ ਸਵੈਟਰ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czapki, rękawiczki, szaliki i swetry"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gorros, luvas, cachecóis e suéteres"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gorros, luvas, cachecóis e camisolas"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Căciuli, mănuși, fulare și pulovere"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапки, варежки, шарфы и свитеры"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čiapky, palčiaky, šály a svetre"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kape, palčniki, šali in puloverji"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mössor, vantar, halsdukar och tröjor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "தொப்பி, கையுறை, ஸ்கார்ஃப், ஸ்வெட்டர்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "టోపీలు, చేతి తొడుగులు, స్కార్ఫ్‌లు, స్వెటర్లు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หมวก ถุงมือ ผ้าพันคอ และเสื้อสเวตเตอร์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bere, eldiven, atkı ve kazak"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шапки, рукавиці, шарфи та светри"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹوپیاں، دستانے، مفلر اور سویٹر"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mũ, găng tay, khăn quàng và áo len"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子、连指手套、围巾和毛衣"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子、連指手套、圍巾和毛衣"
           }
         }
       }
@@ -53811,6 +54373,287 @@
         }
       }
     },
+    "My Own Pattern": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نقشتي الخاصة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "আমার নিজের প্যাটার্ন"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El meu patró"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Můj vlastní návod"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Min egen opskrift"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigene Anleitung"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το δικό μου σχέδιο"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi propio patrón"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi propio patrón"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oma ohje"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon propre modèle"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon propre modèle"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "મારી પોતાની પેટર્ન"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "דוגמה משלי"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मेरा अपना पैटर्न"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moj vlastiti uzorak"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saját minta"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pola Saya Sendiri"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il mio schema"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自分の編み図"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ನನ್ನ ಸ್ವಂತ ಪ್ಯಾಟರ್ನ್"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내 도안"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "എന്റെ സ്വന്തം പാറ്റേൺ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "माझा स्वतःचा पॅटर्न"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corak Saya Sendiri"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Min egen oppskrift"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mijn eigen patroon"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ମୋର ନିଜ ପ୍ୟାଟର୍ନ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਮੇਰਾ ਆਪਣਾ ਪੈਟਰਨ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mój własny wzór"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meu próprio padrão"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meu próprio padrão"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelul meu"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Моя схема"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Môj vlastný návod"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moj lasten vzorec"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitt eget mönster"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "என் சொந்த பேட்டர்ன்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "నా సొంత ప్యాటర్న్"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แพตเทิร์นของฉันเอง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kendi Modelim"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Моя власна схема"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "میرا اپنا پیٹرن"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mẫu của riêng tôi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我自己的图解"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我自己的織圖"
+          }
+        }
+      }
+    },
     "Name": {
       "extractionState": "manual",
       "localizations": {
@@ -58584,6 +59427,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "一次性付款 %@。每個織圖永遠屬於你。"
+          }
+        }
+      }
+    },
+    "Open Project": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فتح المشروع"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "প্রজেক্ট খুলুন"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obre el projecte"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otevřít projekt"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åbn projekt"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Projekt öffnen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Άνοιγμα έργου"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir proyecto"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir proyecto"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avaa projekti"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir le projet"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir le projet"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "પ્રોજેક્ટ ખોલો"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "פתיחת הפרויקט"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रोजेक्ट खोलें"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otvori projekt"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Projekt megnyitása"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buka Proyek"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri progetto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロジェクトを開く"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಪ್ರಾಜೆಕ್ಟ್ ತೆರೆಯಿರಿ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로젝트 열기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "പ്രോജക്റ്റ് തുറക്കുക"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रोजेक्ट उघडा"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buka Projek"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åpne prosjekt"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Project openen"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ପ୍ରୋଜେକ୍ଟ ଖୋଲନ୍ତୁ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਪ੍ਰੋਜੈਕਟ ਖੋਲ੍ਹੋ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz projekt"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir projeto"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir projeto"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deschide proiectul"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Открыть проект"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otvoriť projekt"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odpri projekt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öppna projekt"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "திட்டத்தைத் திற"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ప్రాజెక్ట్ తెరవండి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปิดโปรเจกต์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Projeyi Aç"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відкрити проєкт"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پروجیکٹ کھولیں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mở dự án"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开项目"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開專案"
           }
         }
       }
@@ -70667,6 +71791,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "循環中的第 %1$lld 段（共 %2$lld 段）"
+          }
+        }
+      }
+    },
+    "Row Counter": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عداد الصفوف"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সারি গণক"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comptador de files"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Počítadlo řad"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pindetæller"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reihenzähler"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Μετρητής σειρών"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contador de vueltas"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contador de vueltas"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kerroslaskuri"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compteur de rangs"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compteur de rangs"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "હરોળ ગણક"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מונה שורות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पंक्ति काउंटर"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brojač redova"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sorszámláló"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Penghitung Baris"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contagiri"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "段数カウンター"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಸಾಲು ಎಣಿಕೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "단 카운터"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "വരി എണ്ണം"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ओळ मोजणी"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pembilang Baris"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Omgangsteller"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toerenteller"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଧାଡ଼ି ଗଣକ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਕਤਾਰ ਗਿਣਤੀ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Licznik rzędów"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contador de carreiras"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contador de carreiras"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contor de rânduri"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Счётчик рядов"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Počítadlo radov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Števec vrst"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varvräknare"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "வரிசை எண்ணி"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "వరుస లెక్కింపు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวนับแถว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sıra Sayacı"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лічильник рядів"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قطار شمار"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bộ đếm hàng"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行数计数器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行數計數器"
           }
         }
       }

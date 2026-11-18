@@ -10,6 +10,7 @@ struct LibraryView: View {
 
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @State private var query = ""
     private let trending = Trending.shared
     private let topical = TopicalStore.shared
 
@@ -24,21 +25,23 @@ struct LibraryView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 36) {
-                    if !trending.items.isEmpty || !topical.items.isEmpty { trendingShelf }
-                    ForEach(Design.Shelf.allCases) { shelf in
-                        VStack(alignment: .leading, spacing: 14) {
-                            Text(shelf.title)
-                                .font(Theme.display(22, weight: .semibold))
-                                .accessibilityAddTraits(.isHeader)
-                            LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
-                                ForEach(items(on: shelf)) { item in
-                                    NavigationLink(value: item) { tile(item, note: item.isFree ? String(localized: "Free", comment: "Label under a design that needs no purchase") : item.level.title) }
-                                        .buttonStyle(.plain)
-                                        .accessibilityIdentifier("design.\(item.designRaw)")
-                                }
+                // Each case keeps its own stack: a branch inside one lazy stack hides its shelves from VoiceOver.
+                Group {
+                    if searching.isEmpty {
+                        LazyVStack(alignment: .leading, spacing: 36) {
+                            if !shelved.isEmpty { row("Trending", shelved, id: "trending") }
+                            // The patterns that need no purchase, together near the top so they are easy to find.
+                            // A row that scrolls sideways, like Trending: set as a grid beside the shelves in this
+                            // lazy stack, it hid every shelf after it from VoiceOver.
+                            if !free.isEmpty { row("Free", free.map { Shelved(item: $0, tag: $0.level.rawValue) }, id: "free") }
+                            ForEach(Design.Shelf.allCases) { shelf in
+                                self.shelf(shelf.title, items: items(on: shelf))
                             }
                         }
+                    } else if matches.isEmpty {
+                        ContentUnavailableView.search(text: searching)
+                    } else {
+                        grid(matches)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -47,6 +50,7 @@ struct LibraryView: View {
             }
             .background(Theme.paper)
             .navigationTitle("Patterns")
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("Hats, mittens, scarves"))
             .navigationDestination(for: LibraryItem.self) { DesignView(item: $0) }
             .task {
                 // Seeded and test runs keep the list that ships in the app, so captures do not shift.
@@ -59,21 +63,72 @@ struct LibraryView: View {
         }
     }
 
-    /// New designs and what suits the season, in a row that scrolls sideways.
-    private var trendingShelf: some View {
+    private var searching: String { query.trimmingCharacters(in: .whitespaces) }
+
+    private func shelf(_ title: String, items: [LibraryItem]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("Trending")
+            Text(title)
+                .font(Theme.display(22, weight: .semibold))
+                .accessibilityAddTraits(.isHeader)
+            grid(items)
+        }
+    }
+
+    private func grid(_ items: [LibraryItem]) -> some View {
+        LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
+            ForEach(items) { item in
+                NavigationLink(value: item) { tile(item, note: note(item)) }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("design.\(item.designRaw)")
+            }
+        }
+    }
+
+    /// The level, and for a design that needs no purchase, that too: a free tile still says how hard it is.
+    private func note(_ item: LibraryItem) -> String {
+        guard item.isFree else { return item.level.title }
+        return "\(String(localized: "Free", comment: "Label under a design that needs no purchase")) · \(item.level.title)"
+    }
+
+    /// Every design in the library, in shelf order, once each.
+    private var everything: [LibraryItem] {
+        var seen = Set<String>()
+        return Design.Shelf.allCases.flatMap(items(on:)).filter { seen.insert($0.id).inserted }
+    }
+
+    private var free: [LibraryItem] { everything.filter(\.isFree) }
+
+    /// Designs that have every word searched for in their name, shelf, level or size names ("baby hat",
+    /// "child mittens"), in the knitter's language or in English. "Kids" finds the child sizes.
+    private var matches: [LibraryItem] {
+        let words = searching.lowercased().split(separator: " ").map { word -> String in
+            let one = word.hasSuffix("s") && word.count > 3 ? String(word.dropLast()) : String(word)
+            return ["kid": "child", "children": "child", "beanie": "hat"][one] ?? one
+        }
+        return everything.filter { item in
+            let sizes = item.base.sizes.flatMap { [$0.name, Loc.text($0.name)] }
+            let free = item.isFree ? String(localized: "Free", comment: "Label under a design that needs no purchase") : ""
+            let haystack = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.level.title, free] + sizes)
+                .joined(separator: " ").lowercased()
+            return words.allSatisfy(haystack.contains)
+        }
+    }
+
+    /// A row that scrolls sideways: Trending (new designs and what suits the season) or the free patterns.
+    private func row(_ title: LocalizedStringKey, _ entries: [Shelved], id: String) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(title)
                 .font(Theme.display(22, weight: .semibold))
                 .accessibilityAddTraits(.isHeader)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
-                    ForEach(shelved) { entry in
+                    ForEach(entries) { entry in
                         NavigationLink(value: entry.item) { tile(entry.item, note: Loc.text(entry.tag)) }
                             .buttonStyle(.plain)
                             .containerRelativeFrame(.horizontal) { width, _ in
                                 typeSize.isAccessibilitySize ? min((width - 72) / 1.3, 420) : min((width - 72) / 2.3, 220)
                             }
-                            .accessibilityIdentifier("trending.\(entry.item.designRaw)")
+                            .accessibilityIdentifier("\(id).\(entry.item.designRaw)")
                     }
                 }
                 .padding(.horizontal, 20)
@@ -82,11 +137,18 @@ struct LibraryView: View {
         }
     }
 
-    /// Topical designs lead the shelf, each with its own tag, then the list from the site.
+    /// Topical designs lead the shelf, each with its own tag, then the list from the site, which can name any
+    /// design in the library, built-in or colorwork. Each design shows once, where it first appears.
     private var shelved: [Shelved] {
-        topical.items.map { Shelved(item: .topical($0), tag: $0.tag) }
+        let listed = trending.items.compactMap { trend -> Shelved? in
+            let item = trend.design.map(LibraryItem.builtIn) ?? topical.item(trend.id).map(LibraryItem.topical)
+            return item.map { Shelved(item: $0, tag: trend.tag) }
+        }
+        let all = topical.items.map { Shelved(item: .topical($0), tag: $0.tag) }
             + TopicalStore.collection.filter { $0.tag == "New" }.map { Shelved(item: .topical($0), tag: $0.tag) }
-            + trending.items.map { Shelved(item: .builtIn($0.design), tag: $0.tag) }
+            + listed
+        var seen = Set<String>()
+        return all.filter { seen.insert($0.id).inserted }
     }
 
     private struct Shelved: Identifiable {
@@ -108,9 +170,17 @@ struct LibraryView: View {
 
     private func tile(_ item: LibraryItem, note: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
-                .padding(14)
-                .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+            // The knitted sample where there is one, so a tile shows what the piece really looks like.
+            if let photo = item.photo {
+                Color.clear
+                    .aspectRatio(1, contentMode: .fit)
+                    .overlay { Image(decorative: photo).resizable().scaledToFill() }
+                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+            } else {
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
+                    .padding(14)
+                    .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+            }
             VStack(alignment: .leading, spacing: 2) {
                 Text(item.title)
                     .font(Theme.display(18))
@@ -134,6 +204,9 @@ struct DesignView: View {
     @State private var values: [String: Double]
     @State private var gauge: Gauge
     @State private var opened: Project?
+    /// The project cast on from this page, and the size and gauge it was cast on at. Back on the page with
+    /// the same numbers, the button opens that project again instead of casting on a second copy.
+    @State private var cast: (project: Project, values: [String: Double], gauge: Gauge)?
     @State private var showingPaywall = false
     /// Wide enough for the piece on the leading side and its settings beside it.
     @State private var wide = false
@@ -141,8 +214,38 @@ struct DesignView: View {
 
     init(item: LibraryItem) {
         self.item = item
-        _values = State(initialValue: item.base.defaultSize.values)
-        _gauge = State(initialValue: item.defaultGauge)
+        // Opens at the size and gauge last cast on from this design: the same child, the same yarn.
+        let kept = Self.remembered(item)
+        var start = kept?.values ?? item.base.defaultSize.values
+        #if DEBUG
+        // `-DesignSize Child` opens at a named size, for screenshots.
+        if let name = UserDefaults.standard.string(forKey: "DesignSize"), let size = item.base.sizes.first(where: { $0.name == name }) { start = size.values }
+        #endif
+        _values = State(initialValue: start)
+        _gauge = State(initialValue: kept?.gauge ?? item.defaultGauge)
+    }
+
+    private struct Remembered: Codable {
+        var values: [String: Double]
+        var gauge: Gauge
+    }
+
+    private static func remembered(_ item: LibraryItem) -> (values: [String: Double], gauge: Gauge)? {
+        guard let data = UserDefaults.standard.data(forKey: "design.last.\(item.designRaw)"),
+              let kept = try? JSONDecoder().decode(Remembered.self, from: data),
+              Set(kept.values.keys) == Set(item.base.defaultSize.values.keys) else { return nil }
+        return (kept.values, kept.gauge)
+    }
+
+    private func remember() {
+        guard let data = try? JSONEncoder().encode(Remembered(values: values, gauge: gauge)) else { return }
+        UserDefaults.standard.set(data, forKey: "design.last.\(item.designRaw)")
+    }
+
+    /// The design's name with the size picked, so three hats in three sizes are told apart in every list.
+    private var projectName: String {
+        guard let size = design.sizes.first(where: { $0.values == values }) else { return item.title }
+        return "\(item.title), \(Loc.text(size.name))"
     }
 
     private var design: Design { item.base }
@@ -256,10 +359,22 @@ struct DesignView: View {
         }
     }
 
+    /// The project this page already cast on at the numbers now set, while it still exists.
+    private var castHere: Project? {
+        guard let cast, cast.values == values, cast.gauge == gauge, !cast.project.isDeleted, cast.project.modelContext != nil else { return nil }
+        return cast.project
+    }
+
+    private var castOnTitle: LocalizedStringKey {
+        if !subscription.canOpen(item) { return "Unlock Patterns" }
+        if castHere != nil { return "Open Project" }
+        return item.fits(measures: values, gauge: gauge) ? "Cast On" : "Chart Does Not Fit This Gauge"
+    }
+
     private var castOnBar: some View {
-        let fits = !subscription.canOpen(item) || item.fits(measures: values, gauge: gauge)
+        let fits = !subscription.canOpen(item) || castHere != nil || item.fits(measures: values, gauge: gauge)
         return Button(action: castOn) {
-            Text(!subscription.canOpen(item) ? LocalizedStringKey("Unlock Patterns") : fits ? LocalizedStringKey("Cast On") : LocalizedStringKey("Chart Does Not Fit This Gauge"))
+            Text(castOnTitle)
                 .font(.headline)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 16)
@@ -286,15 +401,21 @@ struct DesignView: View {
             showingPaywall = true
             return
         }
-        // A second quick tap must not cast on twice.
+        // A second quick tap must not cast on twice, and coming back to the page reopens what was cast on.
         guard opened == nil else { return }
-        let project = Project(name: item.title, color: item.yarn)
+        if let project = castHere {
+            opened = project
+            return
+        }
+        let project = Project(name: projectName, color: item.yarn)
         var kept = plan
         kept.source = PlanSource(design: item.designRaw, measures: values, gauge: gauge, revision: item.revision)
         project.follow(kept, as: item.designRaw)
         project.needles = gauge.needle.label
         context.insert(project)
         try? context.save()
+        cast = (project, values, gauge)
+        remember()
         opened = project
     }
 

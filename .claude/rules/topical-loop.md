@@ -33,10 +33,22 @@ plan (palette and silhouette included), so changing or removing a record never t
    `--print <id>` prints the pattern. CI (`.github/workflows/topical.yml`) runs the same check on every PR and
    uploads the previews. `TopicalTests` runs it in the test suite too.
 5. **Jack approves.** Show him the preview PNG and the printed pattern. Nothing is published without his yes.
-6. **Publish** (only after that yes): move the record into `docs/designs.json`, set `starts`/`ends`, merge to
-   main. GitHub Pages serves it; phones pick it up within a day. To pull one early, delete it from the list.
+6. **Publish** (only after that yes): `scripts/remote.py publish <id> --starts <date> --ends <date> --push`
+   checks the draft, moves it into `docs/designs.json` (raising `revision` when an already published pattern
+   changed) and pushes. GitHub Pages serves it; phones pick it up within a day. To pull one early,
+   `scripts/remote.py pull <id> --push` ends it today and keeps the record for the projects cast on from it.
 7. **Hand off** to the knit-tiktok session (SendMessage): title, tag, preview PNG, and the one stitch fact worth
    a video.
+
+## Remote control, no app update
+
+`scripts/remote.py status` shows what is live, scheduled and ended, the Trending list and the drafts.
+- Designs: `publish`, `pull` (above). Only colorwork on an existing shape (`Topical.bases`) can ship as data;
+  a new shape or engine needs a build.
+- Trending shelf: `scripts/remote.py feature <id> "<tag>" [--at N]` and `unfeature <id>`. An id is a built-in
+  design's raw value or a colorwork id (collection or published); older builds skip ids they do not know.
+- Onboarding trial plan: RevenueCat, offering `default`, metadata `onboarding_plan` = `monthly` (the default)
+  or `yearly`. Read on every offerings fetch; the paywall always leads with yearly.
 
 ## Record format (`requires: 1`)
 

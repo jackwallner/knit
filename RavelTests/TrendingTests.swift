@@ -24,6 +24,9 @@ final class TrendingTests: XCTestCase {
         {"design":"dishcloth","tag":""},{"design":"neckScarf","tag":"A tag that runs far past the limit"},{"design":"chunkyCowl","tag":" Chunky "}]}
         """
         XCTAssertEqual(Trending.decode(Data(json.utf8)), [Trend(design: .balaclava, tag: "New"), Trend(design: .chunkyCowl, tag: "Chunky")])
+        // Colorwork designs are named by id and looked up when the shelf is drawn.
+        let colorwork = #"{"items":[{"design":"bear-beanie","tag":"Gift season"},{"design":"topical.fir-tree-hat","tag":"Holiday"}]}"#
+        XCTAssertEqual(Trending.decode(Data(colorwork.utf8)), [Trend(id: "bear-beanie", tag: "Gift season"), Trend(id: "topical.fir-tree-hat", tag: "Holiday")])
         XCTAssertEqual(Trending.decode(Data("not json".utf8)), [])
     }
 

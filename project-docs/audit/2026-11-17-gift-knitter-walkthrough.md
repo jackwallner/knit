@@ -75,3 +75,14 @@ Ordered by how much each one costs this user. File references are where the beha
 - Nothing she did lost a count. The one moment that felt like a lost count was the duplicate project (finding 1).
 
 If these are fixed, the order that follows from the walk: 1, 2 and 3 together, 4, 5, 7.
+
+## Fixed after the walk (build 24)
+
+- 1: back on a design page with the same size and gauge, the button reads Open Project and opens the project already cast on.
+- 2: the onboarding trial sells the monthly plan ($6.99). RevenueCat offering metadata `onboarding_plan` = `yearly` switches it back with no build.
+- 3: a tap anywhere on the first page knits a row.
+- 4: the library has search (names, shelves, levels and size names: "baby hat", "kids mittens") and a Free shelf under Trending; free tiles also show their level.
+- 5: a project cast on from the library is named with its size ("Ribbed Beanie, Child").
+- 7: Mark Finished shows the check mark in a library pattern.
+- 8: a design page opens at the size and gauge last cast on from it.
+- 11: the Projects plus button offers Row Counter, My Own Pattern and From the Library.

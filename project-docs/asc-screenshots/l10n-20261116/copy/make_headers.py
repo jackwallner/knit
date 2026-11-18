@@ -51,7 +51,7 @@ H = {
 "zh-Hans": ["数着行数\n看织物长高", "在任何PDF图解里\n记住进度", "跟着图解\n一行一行织", "按你的尺寸\n写成的编织图解", "选一顶帽子、毛衣\n或披肩来织", "每个作品都\n从停下的地方继续", "购买前\n先看看你的毛线"],
 "zh-Hant": ["數著行數\n看織物長高", "在任何PDF圖解中\n記住進度", "跟著圖解\n一行一行織", "依你的尺寸\n撰寫的編織圖解", "選一頂帽子、毛衣\n或披肩來織", "每個作品都\n從停下處繼續", "購買前\n先看看你的毛線"],
 }
-FILES = ["01-count-rows.png", "02-pdf-place.png", "03-one-row.png", "04-your-size.png", "05-library.png", "06-projects.png", "07-stash.png"]
+FILES = ["01-count-rows.png", "02-your-size.png", "03-library.png", "04-one-row.png", "05-pdf-place.png", "06-projects.png", "07-stash.png"]
 out = {loc: {f: t for f, t in zip(FILES, texts)} for loc, texts in H.items()}
 assert len(out) == 46 and all(len(t) == 7 for t in H.values())
 bad = [(l, t) for l, ts in H.items() for t in ts if "." in t or "\u2014" in t or "。" in t]

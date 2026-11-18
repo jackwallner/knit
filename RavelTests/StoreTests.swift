@@ -89,4 +89,12 @@ final class StoreTests: XCTestCase {
         XCTAssertFalse(store.isPro)
         XCTAssertTrue(session.allTransactions().isEmpty)
     }
+
+    /// The onboarding trial sells monthly unless RevenueCat's offering metadata asks for yearly by name.
+    func testOnboardingPlanIsMonthlyUnlessTheOfferingSaysYearly() {
+        XCTAssertEqual(SubscriptionService.onboardingTerm(nil), .monthly)
+        XCTAssertEqual(SubscriptionService.onboardingTerm("monthly"), .monthly)
+        XCTAssertEqual(SubscriptionService.onboardingTerm("weekly"), .monthly)
+        XCTAssertEqual(SubscriptionService.onboardingTerm(" Yearly "), .yearly)
+    }
 }

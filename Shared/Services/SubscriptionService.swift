@@ -101,6 +101,10 @@ final class SubscriptionService {
     private(set) var isPro = false
     private(set) var offers: [Offer] = []
     private(set) var isLoading = false
+    /// The plan the onboarding trial sells. Monthly: someone who has not used the app yet reacts to the
+    /// figure on Apple's sheet, and the smaller one starts the trial. The paywall still leads with yearly.
+    /// RevenueCat's offering metadata `onboarding_plan` ("monthly" or "yearly") switches it remotely.
+    private(set) var onboardingTerm: Offer.Term = .monthly
     @ObservationIgnored private var packages: [String: Package] = [:]
     @ObservationIgnored private var isConfigured = false
     #if DEBUG && targetEnvironment(simulator)
@@ -119,6 +123,7 @@ final class SubscriptionService {
         let arguments = ProcessInfo.processInfo.arguments
         if arguments.contains("-Pro") { isPro = true }
         if arguments.contains("-MockProducts") { offers = Offer.samples }
+        if let plan = UserDefaults.standard.string(forKey: "OnboardingPlan") { onboardingTerm = Self.onboardingTerm(plan) }
         #endif
         configureIfNeeded()
         guard isConfigured else { return }
@@ -137,6 +142,7 @@ final class SubscriptionService {
             return
         }
         guard let current = try? await Purchases.shared.offerings().current else { return }
+        onboardingTerm = Self.onboardingTerm(current.metadata["onboarding_plan"] as? String)
         let terms: [PackageType: Offer.Term] = [.annual: .yearly, .monthly: .monthly, .lifetime: .lifetime]
         let available = current.availablePackages.filter { terms[$0.packageType] != nil }
         let eligibility = await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: available)
@@ -232,6 +238,11 @@ final class SubscriptionService {
 
     private func apply(_ info: CustomerInfo) {
         isPro = info.entitlements[RevenueCatConfig.entitlement]?.isActive == true
+    }
+
+    /// Yearly only when asked for by name; anything else, missing or misspelled, is the monthly default.
+    nonisolated static func onboardingTerm(_ value: String?) -> Offer.Term {
+        value?.trimmingCharacters(in: .whitespaces).lowercased() == "yearly" ? .yearly : .monthly
     }
 
     private static func trialDays(_ discount: StoreProductDiscount?) -> Int {

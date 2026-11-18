@@ -307,7 +307,7 @@ P1, M1P, purl to 1 stitch before the next marker, M1P, p1, slip the marker. It a
 Tap anywhere to count a row
 Patterns written to your size
 Try every pattern free
-Hats, socks, sweaters and shawls
+Hats, mittens, scarves and sweaters
 Sized to your measurements and yarn
 Continue
 Get Started
@@ -334,3 +334,8 @@ Keyhole
 Long End
 Slipper %lld
 Bootie %lld
+Row Counter
+My Own Pattern
+From the Library
+Open Project
+Hats, mittens, scarves

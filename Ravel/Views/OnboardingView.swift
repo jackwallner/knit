@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// First launch: two pages of what Ravel does, then the yearly trial. One button in one place advances every
-/// page and, on the last, starts the trial; "Get Started" keeps the free app. The tracker never waits on this.
+/// First launch: two pages of what Ravel does, then the trial. One button in one place advances every page and,
+/// on the last, starts the trial; "Get Started" keeps the free app. The tracker never waits on this.
 struct OnboardingView: View {
     let finish: () -> Void
     @Environment(\.openURL) private var openURL
@@ -13,13 +13,17 @@ struct OnboardingView: View {
     @State private var message: String?
     private let subscription = SubscriptionService.shared
 
-    private var yearly: Offer? { subscription.offers.first { $0.term == .yearly } }
+    /// The plan the trial button buys. The price line and terms above it always name this same plan.
+    private var plan: Offer? {
+        subscription.offers.first { $0.term == subscription.onboardingTerm }
+            ?? subscription.offers.first { $0.term != .lifetime }
+    }
     private var onTrial: Bool { page == 2 }
     /// On the trial page while the offer is still on its way: the button waits rather than skip the trial.
-    private var waitingForOffer: Bool { onTrial && yearly == nil && subscription.isLoading }
+    private var waitingForOffer: Bool { onTrial && plan == nil && subscription.isLoading }
     /// The free way out, on the trial page while there is an offer to turn down. Offline, the main button
     /// already opens the app, and a second button doing the same would read as a choice that is not one.
-    private var declinable: Bool { onTrial && (yearly != nil || subscription.isLoading) }
+    private var declinable: Bool { onTrial && (plan != nil || subscription.isLoading) }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -29,6 +33,9 @@ struct OnboardingView: View {
                 ScrollView { pageWithTerms.padding(.vertical, 16) }
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                // The first page does what it says: a tap anywhere on it knits one more row.
+                .contentShape(Rectangle())
+                .onTapGesture { if page == 0 { rows = min(rows + 1, 60) } }
                 .id(page)
                 .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
             bar
@@ -67,7 +74,8 @@ struct OnboardingView: View {
             screen("Tap anywhere to count a row") {
                 // One continuous run of rows that comes to rest, so the page is still once it has knit.
                 Fabric(rows: rows, yarn: .madder, markEvery: 0, stitch: 30, showsNeedle: true)
-                    .motion(.easeOut(duration: 1.8), value: rows)
+                    .motion(.easeOut(duration: rows > 9 ? 0.35 : 1.8), value: rows)
+                    .sensoryFeedback(.increase, trigger: rows)
                     .task {
                         try? await Task.sleep(for: .milliseconds(300))
                         rows = 9
@@ -136,7 +144,7 @@ struct OnboardingView: View {
 
     private var points: some View {
         VStack(alignment: .leading, spacing: 14) {
-            point("Hats, socks, sweaters and shawls")
+            point("Hats, mittens, scarves and sweaters")
             point("Sized to your measurements and yarn")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -154,14 +162,14 @@ struct OnboardingView: View {
     @ViewBuilder private var terms: some View {
         if onTrial {
             VStack(spacing: 10) {
-                if let yearly {
+                if let plan {
                     // The plan by name, its price as the largest line about money on the page, and the full terms.
                     VStack(spacing: 4) {
-                        Text(verbatim: "\(String(localized: "Ravel Patterns")) · \(yearly.termName)")
+                        Text(verbatim: "\(String(localized: "Ravel Patterns")) · \(plan.termName)")
                             .font(.subheadline.weight(.semibold))
-                        Text(yearly.priceLine)
+                        Text(plan.priceLine)
                             .font(.title3.weight(.semibold))
-                        Text(yearly.disclosure)
+                        Text(plan.disclosure)
                             .font(.subheadline)
                     }
                     .multilineTextAlignment(.center)
@@ -258,7 +266,7 @@ struct OnboardingView: View {
 
     private var primaryTitle: String {
         guard onTrial else { return String(localized: "Continue", comment: "Onboarding button to the next page") }
-        return yearly?.action ?? String(localized: "Continue", comment: "Onboarding button to the next page")
+        return plan?.action ?? String(localized: "Continue", comment: "Onboarding button to the next page")
     }
 
     // MARK: - Actions
@@ -269,7 +277,7 @@ struct OnboardingView: View {
             return
         }
         guard !waitingForOffer else { return }
-        guard let yearly else {
+        guard let plan else {
             // Offline or still loading: no offer to make, so the free app opens. The paywall is a tap away later.
             finish()
             return
@@ -277,7 +285,7 @@ struct OnboardingView: View {
         working = true
         message = nil
         Task {
-            let outcome = await subscription.purchase(yearly)
+            let outcome = await subscription.purchase(plan)
             working = false
             switch outcome {
             case .purchased: finish()

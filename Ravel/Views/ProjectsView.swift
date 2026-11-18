@@ -14,6 +14,8 @@ struct ProjectsView: View {
     @State private var naming = false
     @State private var name = ""
     @State private var deleting: Project?
+    @State private var importing = false
+    @State private var importFailed = false
 
     private var active: [Project] { projects.filter { !$0.isFinished } }
     private var finished: [Project] { projects.filter(\.isFinished) }
@@ -42,8 +44,18 @@ struct ProjectsView: View {
             .onChange(of: path) { _, open in if open.isEmpty { askForRatingIfDue() } }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("New Project", systemImage: "plus") { naming = true }
-                        .accessibilityIdentifier("projects.add")
+                    // Every way in, named: a counter, the knitter's own pattern (free, like the rest of the tracker), or the library.
+                    Menu {
+                        Button("Row Counter", systemImage: "number") { naming = true }
+                            .accessibilityIdentifier("projects.add.counter")
+                        Button("My Own Pattern", systemImage: "doc") { importing = true }
+                            .accessibilityIdentifier("projects.add.pdf")
+                        Button("From the Library", systemImage: "books.vertical", action: browse)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .accessibilityLabel("New Project")
+                    .accessibilityIdentifier("projects.add")
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     Menu {
@@ -81,6 +93,8 @@ struct ProjectsView: View {
             ) {
                 Button("Delete Project", role: .destructive) { if let deleting { remove(deleting) } }
             }
+            .fileImporter(isPresented: $importing, allowedContentTypes: [.pdf, .image], onCompletion: start)
+            .alert("That pattern could not be opened", isPresented: $importFailed) {}
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name).accessibilityLabel("Name").autocorrectionDisabled()
                 Button("Cancel", role: .cancel) { name = "" }
@@ -186,6 +200,24 @@ struct ProjectsView: View {
         PatternStore.delete(project.patternFile)
         context.delete(project)
         try? context.save()
+    }
+
+    /// A project made from the knitter's own pattern file, named after it, opened at its first page.
+    private func start(_ result: Result<URL, Error>) {
+        guard case let .success(url) = result else { return }
+        let title = url.deletingPathExtension().lastPathComponent
+        Task {
+            guard let file = await Task.detached(operation: { try? PatternStore.save(from: url) }).value else {
+                importFailed = true
+                return
+            }
+            let color = YarnColor.allCases[projects.count % YarnColor.allCases.count]
+            let project = Project(name: title.isEmpty ? String(localized: "Untitled", comment: "Name of a project the knitter did not name") : title, color: color)
+            project.patternFile = file
+            context.insert(project)
+            try? context.save()
+            path = [project]
+        }
     }
 
     private func create() {

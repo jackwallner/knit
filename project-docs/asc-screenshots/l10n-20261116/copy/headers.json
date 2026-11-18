@@ -1,416 +1,416 @@
 {
- "ar-SA": {
-  "01-count-rows.png": "عدّ الصفوف وشاهد القماش ينمو",
-  "02-pdf-place.png": "احتفظ بمكانك في أي نمط PDF",
-  "03-one-row.png": "اتبع نمطك صف بعد صف",
-  "04-your-size.png": "أنماط تريكو مكتوبة على مقاسك",
-  "05-library.png": "اختر قبعة أو سترة أو شال لتحيكه",
-  "06-projects.png": "تابع كل مشروع من حيث توقفت",
-  "07-stash.png": "تفقد خيوطك قبل أن تتسوق"
- },
- "bn-BD": {
-  "01-count-rows.png": "সারি গুনুন, দেখুন কাপড় বড় হচ্ছে",
-  "02-pdf-place.png": "PDF প্যাটার্নে জায়গা ধরে রাখুন",
-  "03-one-row.png": "প্যাটার্ন অনুসরণ করুন এক সারি করে",
-  "04-your-size.png": "আপনার মাপে লেখা নিটিং প্যাটার্ন",
-  "05-library.png": "বুনতে বেছে নিন টুপি, সোয়েটার বা শাল",
-  "06-projects.png": "থেমে যাওয়া জায়গা থেকেই চালান",
-  "07-stash.png": "কেনাকাটার আগে সুতা দেখে নিন"
- },
- "ca": {
-  "01-count-rows.png": "Compta files i veu créixer el teixit",
-  "02-pdf-place.png": "No perdis el punt en cap patró PDF",
-  "03-one-row.png": "Segueix el patró fila a fila",
-  "04-your-size.png": "Patrons de punt escrits a la teva mida",
-  "05-library.png": "Tria un barret, jersei o xal per fer",
-  "06-projects.png": "Reprèn cada projecte on el vas deixar",
-  "07-stash.png": "Mira el teu fil abans de comprar"
- },
- "cs": {
-  "01-count-rows.png": "Počítej řádky a sleduj, jak látka roste",
-  "02-pdf-place.png": "Neztrať místo v žádném PDF návodu",
-  "03-one-row.png": "Pleť podle návodu řádek po řádku",
-  "04-your-size.png": "Pletací návody psané na tvou míru",
-  "05-library.png": "Vyber si čepici, svetr nebo šálu",
-  "06-projects.png": "Projekt se otevře, kde skončil",
-  "07-stash.png": "Zkontroluj přízi, než půjdeš nakupovat"
- },
- "da": {
-  "01-count-rows.png": "Tæl rækker og se strikketøjet vokse",
-  "02-pdf-place.png": "Hold styr på rækken i enhver PDF-opskrift",
-  "03-one-row.png": "Følg opskriften én række ad gangen",
-  "04-your-size.png": "Strikkeopskrifter i din størrelse",
-  "05-library.png": "Vælg en hue, trøje eller sjal at strikke",
-  "06-projects.png": "Fortsæt hvert projekt, hvor du slap",
-  "07-stash.png": "Tjek dit garn, før du handler"
- },
- "de-DE": {
-  "01-count-rows.png": "Zähl Reihen und sieh es wachsen",
-  "02-pdf-place.png": "Dein Platz in jeder PDF-Anleitung",
-  "03-one-row.png": "Strick dein Muster Reihe für Reihe",
-  "04-your-size.png": "Strickmuster passend zu deiner Größe",
-  "05-library.png": "Mütze, Pullover oder Tuch zum Stricken",
-  "06-projects.png": "Mach dort weiter, wo du aufgehört hast",
-  "07-stash.png": "Prüfe dein Garn, bevor du einkaufst"
- },
- "el": {
-  "01-count-rows.png": "Μέτρα σειρές, δες το να μεγαλώνει",
-  "02-pdf-place.png": "Κράτα τη θέση σου σε κάθε PDF",
-  "03-one-row.png": "Ακολούθησε το πατρόν ανά σειρά",
-  "04-your-size.png": "Πλεκτά πατρόν στο μέτρο σου",
-  "05-library.png": "Διάλεξε σκούφο, πουλόβερ ή σάλι",
-  "06-projects.png": "Συνέχισε από εκεί που σταμάτησες",
-  "07-stash.png": "Έλεγξε τα νήματα πριν αγοράσεις"
- },
- "es-ES": {
-  "01-count-rows.png": "Cuenta filas y mira crecer la tela",
-  "02-pdf-place.png": "No pierdas el punto en ningún PDF",
-  "03-one-row.png": "Sigue tu patrón fila a fila",
-  "04-your-size.png": "Patrones de punto escritos a tu talla",
-  "05-library.png": "Elige un gorro, jersey o chal para tejer",
-  "06-projects.png": "Cada proyecto, donde lo dejaste",
-  "07-stash.png": "Revisa tu lana antes de comprar"
- },
- "es-MX": {
-  "01-count-rows.png": "Cuenta filas y mira crecer la tela",
-  "02-pdf-place.png": "No pierdas el punto en ningún PDF",
-  "03-one-row.png": "Sigue tu patrón fila a fila",
-  "04-your-size.png": "Patrones de tejido escritos a tu talla",
-  "05-library.png": "Elige un gorro, suéter o chal para tejer",
-  "06-projects.png": "Cada proyecto, donde lo dejaste",
-  "07-stash.png": "Revisa tu estambre antes de comprar"
- },
- "fi": {
-  "01-count-rows.png": "Laske kerros, katso neuleen kasvua",
-  "02-pdf-place.png": "Pidä paikkasi missä tahansa PDF-ohjeessa",
-  "03-one-row.png": "Seuraa ohjetta kerros kerrokselta",
-  "04-your-size.png": "Neuleohjeet sinun koollesi",
-  "05-library.png": "Valitse pipo, villapaita tai huivi",
-  "06-projects.png": "Jatka jokaista työtä siitä, mihin jäit",
-  "07-stash.png": "Tarkista langat ennen ostoksille lähtöä"
- },
- "fr-FR": {
-  "01-count-rows.png": "Compte les rangs, vois-le grandir",
-  "02-pdf-place.png": "Garde ta place dans n'importe quel PDF",
-  "03-one-row.png": "Suis ton modèle rang après rang",
-  "04-your-size.png": "Des modèles de tricot à ta taille",
-  "05-library.png": "Choisis un bonnet, un pull ou un châle",
-  "06-projects.png": "Reprends chaque projet au bon rang",
-  "07-stash.png": "Vérifie ta laine avant d'acheter"
- },
- "fr-CA": {
-  "01-count-rows.png": "Compte les rangs, vois-le grandir",
-  "02-pdf-place.png": "Garde ta place dans n'importe quel PDF",
-  "03-one-row.png": "Suis ton modèle rang après rang",
-  "04-your-size.png": "Des modèles de tricot à ta taille",
-  "05-library.png": "Choisis tuque, chandail ou châle",
-  "06-projects.png": "Reprends chaque projet au bon rang",
-  "07-stash.png": "Vérifie ta laine avant de magasiner"
- },
- "gu-IN": {
-  "01-count-rows.png": "હરોળ ગણો અને કાપડને વધતું જુઓ",
-  "02-pdf-place.png": "દરેક PDF પેટર્નમાં જગ્યા યાદ રાખો",
-  "03-one-row.png": "પેટર્નને એક સમયે એક હરોળ અનુસરો",
-  "04-your-size.png": "તમારા માપ મુજબ લખાયેલી ગૂંથણ પેટર્ન",
-  "05-library.png": "ટોપી, સ્વેટર કે શાલ પસંદ કરો",
-  "06-projects.png": "જ્યાં અટક્યા ત્યાંથી ફરી શરૂ કરો",
-  "07-stash.png": "ખરીદી પહેલાં તમારો દોરો તપાસો"
- },
- "he": {
-  "01-count-rows.png": "ספרו שורות וצפו בבד גדל",
-  "02-pdf-place.png": "שמרו על המקום בכל תבנית PDF",
-  "03-one-row.png": "עקבו אחרי התבנית שורה אחר שורה",
-  "04-your-size.png": "תבניות סריגה במידה שלכם",
-  "05-library.png": "בחרו כובע, סוודר או צעיף לסריגה",
-  "06-projects.png": "המשיכו כל פרויקט מאיפה שעצרתם",
-  "07-stash.png": "בדקו את החוטים לפני הקנייה"
- },
- "hi": {
-  "01-count-rows.png": "पंक्तियाँ गिनें, बुनाई को बढ़ते देखें",
-  "02-pdf-place.png": "किसी भी PDF पैटर्न में अपनी जगह रखें",
-  "03-one-row.png": "पैटर्न को हर बार एक पंक्ति बुनें",
-  "04-your-size.png": "आपके साइज़ के हिसाब से बुनाई पैटर्न",
-  "05-library.png": "टोपी, स्वेटर या शॉल चुनें और बुनें",
-  "06-projects.png": "हर प्रोजेक्ट वहीं से शुरू करें जहाँ रुके थे",
-  "07-stash.png": "खरीदारी से पहले अपना ऊन देखें"
- },
- "hr": {
-  "01-count-rows.png": "Broji redove i gledaj kako pletivo raste",
-  "02-pdf-place.png": "Zadrži mjesto u svakom PDF uzorku",
-  "03-one-row.png": "Prati uzorak red po red",
-  "04-your-size.png": "Uzorci za pletenje pisani za tvoju mjeru",
-  "05-library.png": "Odaberi kapu, džemper ili šal",
-  "06-projects.png": "Svaki projekt otvori tamo gdje je stao",
-  "07-stash.png": "Provjeri svoju pređu prije kupnje"
- },
- "hu": {
-  "01-count-rows.png": "Számolj sorokat, nézd nőni a kelmét",
-  "02-pdf-place.png": "Tartsd a helyed minden PDF-ben",
-  "03-one-row.png": "Kövesd a mintát sorról sorra",
-  "04-your-size.png": "Kötésminták a te méretedre írva",
-  "05-library.png": "Válassz sapkát, pulóvert vagy kendőt",
-  "06-projects.png": "Folytasd ott, ahol abbahagytad",
-  "07-stash.png": "Nézd át a fonalad vásárlás előtt"
- },
- "id": {
-  "01-count-rows.png": "Hitung baris dan lihat kain tumbuh",
-  "02-pdf-place.png": "Tandai posisimu di pola PDF mana pun",
-  "03-one-row.png": "Ikuti pola baris demi baris",
-  "04-your-size.png": "Pola rajut ditulis sesuai ukuranmu",
-  "05-library.png": "Pilih topi, sweter, atau syal",
-  "06-projects.png": "Lanjut proyek dari tempat berhenti",
-  "07-stash.png": "Cek benangmu sebelum belanja"
- },
- "it": {
-  "01-count-rows.png": "Conta i ferri e guarda il lavoro crescere",
-  "02-pdf-place.png": "Non perdere il segno in nessun PDF",
-  "03-one-row.png": "Segui lo schema un ferro alla volta",
-  "04-your-size.png": "Schemi a maglia scritti sulla tua taglia",
-  "05-library.png": "Scegli cappello, maglione o scialle",
-  "06-projects.png": "Riprendi da dove avevi smesso",
-  "07-stash.png": "Controlla i tuoi filati prima di comprare"
- },
- "ja": {
-  "01-count-rows.png": "段数を数えて\n編み地が育つ",
-  "02-pdf-place.png": "PDFの編み図で\n現在地を記録",
-  "03-one-row.png": "編み図を\n1段ずつたどれる",
-  "04-your-size.png": "あなたのサイズで\n書かれる編み図",
-  "05-library.png": "帽子やセーター、\nショールを選ぼう",
-  "06-projects.png": "各作品を\n続きの段から再開",
-  "07-stash.png": "買い物の前に\n毛糸をチェック"
- },
- "kn-IN": {
-  "01-count-rows.png": "ಸಾಲು ಎಣಿಸಿ, ಬೆಳವಣಿಗೆ ನೋಡಿ",
-  "02-pdf-place.png": "PDF ಪ್ಯಾಟರ್ನ್‌ನಲ್ಲಿ ಸ್ಥಾನ ಉಳಿಸಿ",
-  "03-one-row.png": "ಪ್ಯಾಟರ್ನ್ ಸಾಲು ಸಾಲಾಗಿ ಅನುಸರಿಸಿ",
-  "04-your-size.png": "ನಿಮ್ಮ ಅಳತೆಗೆ ಹೆಣಿಗೆ ಪ್ಯಾಟರ್ನ್‌ಗಳು",
-  "05-library.png": "ಟೋಪಿ, ಸ್ವೆಟರ್ ಅಥವಾ ಶಾಲು ಆರಿಸಿ",
-  "06-projects.png": "ನಿಲ್ಲಿಸಿದಲ್ಲಿಂದಲೇ ಮುಂದುವರಿಸಿ",
-  "07-stash.png": "ಖರೀದಿಗೆ ಮುನ್ನ ನಿಮ್ಮ ನೂಲು ನೋಡಿ"
- },
- "ko": {
-  "01-count-rows.png": "단을 세고 뜨개가 자라는 모습 보기",
-  "02-pdf-place.png": "어떤 PDF 도안에서도 위치 기억",
-  "03-one-row.png": "도안을 한 단씩 따라 뜨세요",
-  "04-your-size.png": "내 사이즈에 맞춰 쓰이는 뜨개 도안",
-  "05-library.png": "모자, 스웨터, 숄 중에 골라 뜨기",
-  "06-projects.png": "프로젝트마다 멈춘 곳에서 이어가기",
-  "07-stash.png": "사기 전에 내 털실부터 확인"
- },
- "ml-IN": {
-  "01-count-rows.png": "വരി എണ്ണൂ, തുണി വളരുന്നത് കാണൂ",
-  "02-pdf-place.png": "PDF പാറ്റേണിൽ സ്ഥാനം ഓർക്കൂ",
-  "03-one-row.png": "പാറ്റേൺ ഓരോ വരിയായി പിന്തുടരൂ",
-  "04-your-size.png": "നിങ്ങളുടെ അളവിൽ നിറ്റിങ് പാറ്റേൺ",
-  "05-library.png": "തൊപ്പി, സ്വെറ്റർ, ഷാൾ എടുക്കൂ",
-  "06-projects.png": "നിർത്തിയിടത്ത് തുടരൂ",
-  "07-stash.png": "വാങ്ങും മുമ്പ് നൂൽ പരിശോധിക്കൂ"
- },
- "mr-IN": {
-  "01-count-rows.png": "ओळी मोजा आणि कापड वाढताना पाहा",
-  "02-pdf-place.png": "PDF पॅटर्नमध्ये तुमची जागा जपा",
-  "03-one-row.png": "पॅटर्न एकेक ओळीने पुढे नेत विणा",
-  "04-your-size.png": "तुमच्या मापाचे विणकाम पॅटर्न",
-  "05-library.png": "टोपी, स्वेटर किंवा शाल निवडा",
-  "06-projects.png": "प्रत्येक प्रोजेक्ट जिथे थांबला तिथून सुरू करा",
-  "07-stash.png": "खरेदीपूर्वी तुमचा धागा तपासा"
- },
- "ms": {
-  "01-count-rows.png": "Kira baris dan lihat kain membesar",
-  "02-pdf-place.png": "Tandai baris dalam mana-mana PDF",
-  "03-one-row.png": "Ikut corak anda baris demi baris",
-  "04-your-size.png": "Corak rajutan ditulis ikut saiz anda",
-  "05-library.png": "Pilih topi, sweater atau selendang",
-  "06-projects.png": "Sambung projek dari tempat berhenti",
-  "07-stash.png": "Semak benang anda sebelum membeli"
- },
- "nl-NL": {
-  "01-count-rows.png": "Tel rijen en zie je breiwerk groeien",
-  "02-pdf-place.png": "Houd je plek bij in elk pdf-patroon",
-  "03-one-row.png": "Volg je patroon rij voor rij",
-  "04-your-size.png": "Breipatronen op jouw maat",
-  "05-library.png": "Kies een muts, trui of sjaal om te breien",
-  "06-projects.png": "Pak elk project op waar je bleef",
-  "07-stash.png": "Check je garen voor je shopt"
- },
- "no": {
-  "01-count-rows.png": "Tell rader og se strikketøyet vokse",
-  "02-pdf-place.png": "Behold plassen i alle PDF-oppskrifter",
-  "03-one-row.png": "Følg oppskriften én rad om gangen",
-  "04-your-size.png": "Strikkeoppskrifter i din størrelse",
-  "05-library.png": "Velg lue, genser eller sjal å strikke",
-  "06-projects.png": "Hvert prosjekt der du sluttet",
-  "07-stash.png": "Sjekk garnet før du handler"
- },
- "or-IN": {
-  "01-count-rows.png": "ଧାଡ଼ି ଗଣନ୍ତୁ, କପଡ଼ା ବଢ଼ିବା ଦେଖନ୍ତୁ",
-  "02-pdf-place.png": "PDF ପ୍ୟାଟର୍ନରେ ଆପଣଙ୍କ ସ୍ଥାନ ରଖନ୍ତୁ",
-  "03-one-row.png": "ପ୍ୟାଟର୍ନ ଧାଡ଼ି ଧାଡ଼ି ଅନୁସରଣ କରନ୍ତୁ",
-  "04-your-size.png": "ଆପଣଙ୍କ ମାପର ବୁଣା ପ୍ୟାଟର୍ନ",
-  "05-library.png": "ଟୋପି, ସ୍ୱେଟର କିମ୍ବା ଶାଲ ବାଛନ୍ତୁ",
-  "06-projects.png": "ଛାଡ଼ିଥିବା ସ୍ଥାନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
-  "07-stash.png": "କିଣିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସୂତା ଯାଞ୍ଚ କରନ୍ତୁ"
- },
- "pa-IN": {
-  "01-count-rows.png": "ਕਤਾਰਾਂ ਗਿਣੋ, ਕੱਪੜੇ ਨੂੰ ਵਧਦਾ ਵੇਖੋ",
-  "02-pdf-place.png": "ਕਿਸੇ ਵੀ PDF ਪੈਟਰਨ ਵਿੱਚ ਆਪਣੀ ਥਾਂ ਰੱਖੋ",
-  "03-one-row.png": "ਪੈਟਰਨ ਨੂੰ ਇੱਕ ਵਾਰ ਵਿੱਚ ਇੱਕ ਕਤਾਰ ਬੁਣੋ",
-  "04-your-size.png": "ਤੁਹਾਡੇ ਸਾਈਜ਼ ਮੁਤਾਬਕ ਲਿਖੇ ਬੁਣਾਈ ਪੈਟਰਨ",
-  "05-library.png": "ਟੋਪੀ, ਸਵੈਟਰ ਜਾਂ ਸ਼ਾਲ ਚੁਣੋ",
-  "06-projects.png": "ਹਰ ਪ੍ਰੋਜੈਕਟ ਜਿੱਥੇ ਰੁਕੇ ਸੀ ਉੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ",
-  "07-stash.png": "ਖਰੀਦਦਾਰੀ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣਾ ਧਾਗਾ ਵੇਖੋ"
- },
- "pl": {
-  "01-count-rows.png": "Licz rzędy i patrz, jak rośnie robótka",
-  "02-pdf-place.png": "Nie gub miejsca w żadnym PDF-ie",
-  "03-one-row.png": "Wykonuj wzór rząd po rzędzie",
-  "04-your-size.png": "Wzory na drutach na twój rozmiar",
-  "05-library.png": "Wybierz czapkę, sweter lub szal",
-  "06-projects.png": "Projekt otwiera się na ostatnim rzędzie",
-  "07-stash.png": "Sprawdź włóczkę przed zakupami"
- },
- "pt-BR": {
-  "01-count-rows.png": "Conte as fileiras e veja o tecido crescer",
-  "02-pdf-place.png": "Não perca o ponto em nenhum PDF",
-  "03-one-row.png": "Siga sua receita fileira por fileira",
-  "04-your-size.png": "Receitas de tricô no seu tamanho",
-  "05-library.png": "Escolha um gorro, suéter ou xale",
-  "06-projects.png": "Retome cada projeto de onde parou",
-  "07-stash.png": "Confira sua lã antes de comprar"
- },
- "pt-PT": {
-  "01-count-rows.png": "Conta as carreiras e vê o tecido crescer",
-  "02-pdf-place.png": "Não percas o ponto em nenhum PDF",
-  "03-one-row.png": "Segue o padrão carreira a carreira",
-  "04-your-size.png": "Padrões de tricô escritos à tua medida",
-  "05-library.png": "Escolhe um gorro, camisola ou xaile",
-  "06-projects.png": "Retoma cada projeto onde ficaste",
-  "07-stash.png": "Vê a tua lã antes de comprar"
- },
- "ro": {
-  "01-count-rows.png": "Numără rânduri, vezi cum crește",
-  "02-pdf-place.png": "Păstrează-ți locul în orice model PDF",
-  "03-one-row.png": "Urmează modelul rând cu rând",
-  "04-your-size.png": "Modele de tricotat scrise pe măsura ta",
-  "05-library.png": "Alege o căciulă, un pulover sau o șal",
-  "06-projects.png": "Reia fiecare proiect de unde ai rămas",
-  "07-stash.png": "Verifică-ți firele înainte să cumperi"
- },
- "ru": {
-  "01-count-rows.png": "Считайте ряды, пока растёт полотно",
-  "02-pdf-place.png": "Не теряйте место в любом PDF-узоре",
-  "03-one-row.png": "Вяжите по схеме ряд за рядом",
-  "04-your-size.png": "Схемы вязания под ваш размер",
-  "05-library.png": "Выберите шапку, свитер или шаль",
-  "06-projects.png": "Продолжайте с места остановки",
-  "07-stash.png": "Проверьте пряжу перед покупкой"
- },
- "sk": {
-  "01-count-rows.png": "Počítaj riadky, sleduj rast látky",
-  "02-pdf-place.png": "Nestrať miesto v žiadnom PDF návode",
-  "03-one-row.png": "Pleť podľa návodu riadok po riadku",
-  "04-your-size.png": "Pletacie návody na tvoju mieru",
-  "05-library.png": "Vyber si čiapku, sveter alebo šál",
-  "06-projects.png": "Pokračuj tam, kde projekt skončil",
-  "07-stash.png": "Skontroluj priadzu pred nákupom"
- },
- "sl-SI": {
-  "01-count-rows.png": "Štej vrste in glej, kako pletivo raste",
-  "02-pdf-place.png": "Ne izgubi mesta v nobenem PDF vzorcu",
-  "03-one-row.png": "Sledi vzorcu vrsto za vrsto",
-  "04-your-size.png": "Pletilni vzorci za tvojo velikost",
-  "05-library.png": "Izberi kapo, pulover ali šal",
-  "06-projects.png": "Nadaljuj vsak projekt tam, kjer je obstal",
-  "07-stash.png": "Preveri prejo, preden greš po nakupih"
- },
- "sv": {
-  "01-count-rows.png": "Räkna varv och se arbetet växa",
-  "02-pdf-place.png": "Behåll platsen i alla PDF-mönster",
-  "03-one-row.png": "Följ mönstret varv för varv",
-  "04-your-size.png": "Stickmönster skrivna efter din storlek",
-  "05-library.png": "Välj mössa, tröja eller sjal att sticka",
-  "06-projects.png": "Fortsätt varje projekt där du slutade",
-  "07-stash.png": "Kolla garnet innan du handlar"
- },
- "ta-IN": {
-  "01-count-rows.png": "வரிசை எண்ணி துணி வளருங்கள்",
-  "02-pdf-place.png": "PDF பேட்டர்னில் இடம் குறியுங்கள்",
-  "03-one-row.png": "பேட்டர்ன் வரிசை வரிசையாக",
-  "04-your-size.png": "உங்கள் அளவில் பின்னல் பேட்டர்ன்",
-  "05-library.png": "தொப்பி, ஸ்வெட்டர், சால்வை எடுங்கள்",
-  "06-projects.png": "நிறுத்திய இடத்தில் தொடருங்கள்",
-  "07-stash.png": "வாங்கும் முன் நூலைப் பாருங்கள்"
- },
- "te-IN": {
-  "01-count-rows.png": "వరుసలు లెక్కించి పెరుగుదల చూడండి",
-  "02-pdf-place.png": "PDF లో మీ చోటు గుర్తుంచుకోండి",
-  "03-one-row.png": "ప్యాటర్న్ వరుస వరుసగా అల్లండి",
-  "04-your-size.png": "మీ సైజుకు రాసిన అల్లిక ప్యాటర్న్‌లు",
-  "05-library.png": "టోపీ, స్వెటర్ లేదా శాలువా ఎంచుకోండి",
-  "06-projects.png": "ప్రతి ప్రాజెక్ట్‌ను ఆపిన చోటే కొనసాగించండి",
-  "07-stash.png": "కొనే ముందు మీ నూలు చూడండి"
- },
- "th": {
-  "01-count-rows.png": "นับแถว\nแล้วดูผ้าถักโตขึ้น",
-  "02-pdf-place.png": "จำตำแหน่งในทุก\nแพตเทิร์น PDF",
-  "03-one-row.png": "ถักตามแบบ\nทีละแถว",
-  "04-your-size.png": "แบบถักเขียนให้\nพอดีไซส์คุณ",
-  "05-library.png": "เลือกหมวก เสื้อถัก\nหรือผ้าคลุมไหล่",
-  "06-projects.png": "ทำแต่ละโปรเจกต์\nต่อจากที่หยุดไว้",
-  "07-stash.png": "เช็กไหมพรม\nก่อนไปซื้อ"
- },
- "tr": {
-  "01-count-rows.png": "Sıraları say, örgünün büyüdüğünü izle",
-  "02-pdf-place.png": "Her PDF modelde yerini kaybetme",
-  "03-one-row.png": "Modeli sıra sıra takip et",
-  "04-your-size.png": "Bedenine göre örgü modelleri",
-  "05-library.png": "Bir bere, kazak ya da şal seç",
-  "06-projects.png": "Her projeye kaldığın yerden devam et",
-  "07-stash.png": "Alışverişten önce ipliklerine bak"
- },
- "uk": {
-  "01-count-rows.png": "Лічіть ряди, стежте за ростом",
-  "02-pdf-place.png": "Не губіть місце в жодному PDF",
-  "03-one-row.png": "В'яжіть за схемою ряд за рядом",
-  "04-your-size.png": "Схеми в'язання під ваш розмір",
-  "05-library.png": "Оберіть шапку, светр або шаль",
-  "06-projects.png": "Продовжуйте з місця зупинки",
-  "07-stash.png": "Перевірте пряжу перед покупкою"
- },
- "ur-PK": {
-  "01-count-rows.png": "قطاریں گنیں، کپڑا بڑھتا دیکھیں",
-  "02-pdf-place.png": "PDF پیٹرن میں اپنی جگہ رکھیں",
-  "03-one-row.png": "پیٹرن کو ایک وقت میں ایک قطار بُنیں",
-  "04-your-size.png": "آپ کے سائز کے بنائی پیٹرن",
-  "05-library.png": "ٹوپی، سویٹر یا شال چنیں اور بُنیں",
-  "06-projects.png": "ہر پراجیکٹ وہیں سے جہاں چھوڑا",
-  "07-stash.png": "خریداری سے پہلے اپنا اون دیکھ لیں"
- },
- "vi": {
-  "01-count-rows.png": "Đếm hàng và xem tấm vải lớn dần",
-  "02-pdf-place.png": "Giữ chỗ đang đan trong mọi mẫu PDF",
-  "03-one-row.png": "Đan theo mẫu từng hàng một",
-  "04-your-size.png": "Mẫu đan viết theo đúng cỡ của bạn",
-  "05-library.png": "Chọn mũ, áo len hay khăn choàng để đan",
-  "06-projects.png": "Tiếp tục mỗi dự án từ chỗ bạn dừng",
-  "07-stash.png": "Kiểm tra len trước khi đi mua"
- },
- "zh-Hans": {
-  "01-count-rows.png": "数着行数\n看织物长高",
-  "02-pdf-place.png": "在任何PDF图解里\n记住进度",
-  "03-one-row.png": "跟着图解\n一行一行织",
-  "04-your-size.png": "按你的尺寸\n写成的编织图解",
-  "05-library.png": "选一顶帽子、毛衣\n或披肩来织",
-  "06-projects.png": "每个作品都\n从停下的地方继续",
-  "07-stash.png": "购买前\n先看看你的毛线"
- },
- "zh-Hant": {
-  "01-count-rows.png": "數著行數\n看織物長高",
-  "02-pdf-place.png": "在任何PDF圖解中\n記住進度",
-  "03-one-row.png": "跟著圖解\n一行一行織",
-  "04-your-size.png": "依你的尺寸\n撰寫的編織圖解",
-  "05-library.png": "選一頂帽子、毛衣\n或披肩來織",
-  "06-projects.png": "每個作品都\n從停下處繼續",
-  "07-stash.png": "購買前\n先看看你的毛線"
- }
+  "ar-SA": {
+    "01-count-rows.png": "عدّ الصفوف وشاهد القماش ينمو",
+    "05-pdf-place.png": "احتفظ بمكانك في أي نمط PDF",
+    "04-one-row.png": "اتبع نمطك صف بعد صف",
+    "02-your-size.png": "أنماط تريكو مكتوبة على مقاسك",
+    "03-library.png": "اختر قبعة أو سترة أو شال لتحيكه",
+    "06-projects.png": "تابع كل مشروع من حيث توقفت",
+    "07-stash.png": "تفقد خيوطك قبل أن تتسوق"
+  },
+  "bn-BD": {
+    "01-count-rows.png": "সারি গুনুন, দেখুন কাপড় বড় হচ্ছে",
+    "05-pdf-place.png": "PDF প্যাটার্নে জায়গা ধরে রাখুন",
+    "04-one-row.png": "প্যাটার্ন অনুসরণ করুন এক সারি করে",
+    "02-your-size.png": "আপনার মাপে লেখা নিটিং প্যাটার্ন",
+    "03-library.png": "বুনতে বেছে নিন টুপি, সোয়েটার বা শাল",
+    "06-projects.png": "থেমে যাওয়া জায়গা থেকেই চালান",
+    "07-stash.png": "কেনাকাটার আগে সুতা দেখে নিন"
+  },
+  "ca": {
+    "01-count-rows.png": "Compta files i veu créixer el teixit",
+    "05-pdf-place.png": "No perdis el punt en cap patró PDF",
+    "04-one-row.png": "Segueix el patró fila a fila",
+    "02-your-size.png": "Patrons de punt escrits a la teva mida",
+    "03-library.png": "Tria un barret, jersei o xal per fer",
+    "06-projects.png": "Reprèn cada projecte on el vas deixar",
+    "07-stash.png": "Mira el teu fil abans de comprar"
+  },
+  "cs": {
+    "01-count-rows.png": "Počítej řádky a sleduj, jak látka roste",
+    "05-pdf-place.png": "Neztrať místo v žádném PDF návodu",
+    "04-one-row.png": "Pleť podle návodu řádek po řádku",
+    "02-your-size.png": "Pletací návody psané na tvou míru",
+    "03-library.png": "Vyber si čepici, svetr nebo šálu",
+    "06-projects.png": "Projekt se otevře, kde skončil",
+    "07-stash.png": "Zkontroluj přízi, než půjdeš nakupovat"
+  },
+  "da": {
+    "01-count-rows.png": "Tæl rækker og se strikketøjet vokse",
+    "05-pdf-place.png": "Hold styr på rækken i enhver PDF-opskrift",
+    "04-one-row.png": "Følg opskriften én række ad gangen",
+    "02-your-size.png": "Strikkeopskrifter i din størrelse",
+    "03-library.png": "Vælg en hue, trøje eller sjal at strikke",
+    "06-projects.png": "Fortsæt hvert projekt, hvor du slap",
+    "07-stash.png": "Tjek dit garn, før du handler"
+  },
+  "de-DE": {
+    "01-count-rows.png": "Zähl Reihen und sieh es wachsen",
+    "05-pdf-place.png": "Dein Platz in jeder PDF-Anleitung",
+    "04-one-row.png": "Strick dein Muster Reihe für Reihe",
+    "02-your-size.png": "Strickmuster passend zu deiner Größe",
+    "03-library.png": "Mütze, Pullover oder Tuch zum Stricken",
+    "06-projects.png": "Mach dort weiter, wo du aufgehört hast",
+    "07-stash.png": "Prüfe dein Garn, bevor du einkaufst"
+  },
+  "el": {
+    "01-count-rows.png": "Μέτρα σειρές, δες το να μεγαλώνει",
+    "05-pdf-place.png": "Κράτα τη θέση σου σε κάθε PDF",
+    "04-one-row.png": "Ακολούθησε το πατρόν ανά σειρά",
+    "02-your-size.png": "Πλεκτά πατρόν στο μέτρο σου",
+    "03-library.png": "Διάλεξε σκούφο, πουλόβερ ή σάλι",
+    "06-projects.png": "Συνέχισε από εκεί που σταμάτησες",
+    "07-stash.png": "Έλεγξε τα νήματα πριν αγοράσεις"
+  },
+  "es-ES": {
+    "01-count-rows.png": "Cuenta filas y mira crecer la tela",
+    "05-pdf-place.png": "No pierdas el punto en ningún PDF",
+    "04-one-row.png": "Sigue tu patrón fila a fila",
+    "02-your-size.png": "Patrones de punto escritos a tu talla",
+    "03-library.png": "Elige un gorro, jersey o chal para tejer",
+    "06-projects.png": "Cada proyecto, donde lo dejaste",
+    "07-stash.png": "Revisa tu lana antes de comprar"
+  },
+  "es-MX": {
+    "01-count-rows.png": "Cuenta filas y mira crecer la tela",
+    "05-pdf-place.png": "No pierdas el punto en ningún PDF",
+    "04-one-row.png": "Sigue tu patrón fila a fila",
+    "02-your-size.png": "Patrones de tejido escritos a tu talla",
+    "03-library.png": "Elige un gorro, suéter o chal para tejer",
+    "06-projects.png": "Cada proyecto, donde lo dejaste",
+    "07-stash.png": "Revisa tu estambre antes de comprar"
+  },
+  "fi": {
+    "01-count-rows.png": "Laske kerros, katso neuleen kasvua",
+    "05-pdf-place.png": "Pidä paikkasi missä tahansa PDF-ohjeessa",
+    "04-one-row.png": "Seuraa ohjetta kerros kerrokselta",
+    "02-your-size.png": "Neuleohjeet sinun koollesi",
+    "03-library.png": "Valitse pipo, villapaita tai huivi",
+    "06-projects.png": "Jatka jokaista työtä siitä, mihin jäit",
+    "07-stash.png": "Tarkista langat ennen ostoksille lähtöä"
+  },
+  "fr-FR": {
+    "01-count-rows.png": "Compte les rangs, vois-le grandir",
+    "05-pdf-place.png": "Garde ta place dans n'importe quel PDF",
+    "04-one-row.png": "Suis ton modèle rang après rang",
+    "02-your-size.png": "Des modèles de tricot à ta taille",
+    "03-library.png": "Choisis un bonnet, un pull ou un châle",
+    "06-projects.png": "Reprends chaque projet au bon rang",
+    "07-stash.png": "Vérifie ta laine avant d'acheter"
+  },
+  "fr-CA": {
+    "01-count-rows.png": "Compte les rangs, vois-le grandir",
+    "05-pdf-place.png": "Garde ta place dans n'importe quel PDF",
+    "04-one-row.png": "Suis ton modèle rang après rang",
+    "02-your-size.png": "Des modèles de tricot à ta taille",
+    "03-library.png": "Choisis tuque, chandail ou châle",
+    "06-projects.png": "Reprends chaque projet au bon rang",
+    "07-stash.png": "Vérifie ta laine avant de magasiner"
+  },
+  "gu-IN": {
+    "01-count-rows.png": "હરોળ ગણો અને કાપડને વધતું જુઓ",
+    "05-pdf-place.png": "દરેક PDF પેટર્નમાં જગ્યા યાદ રાખો",
+    "04-one-row.png": "પેટર્નને એક સમયે એક હરોળ અનુસરો",
+    "02-your-size.png": "તમારા માપ મુજબ લખાયેલી ગૂંથણ પેટર્ન",
+    "03-library.png": "ટોપી, સ્વેટર કે શાલ પસંદ કરો",
+    "06-projects.png": "જ્યાં અટક્યા ત્યાંથી ફરી શરૂ કરો",
+    "07-stash.png": "ખરીદી પહેલાં તમારો દોરો તપાસો"
+  },
+  "he": {
+    "01-count-rows.png": "ספרו שורות וצפו בבד גדל",
+    "05-pdf-place.png": "שמרו על המקום בכל תבנית PDF",
+    "04-one-row.png": "עקבו אחרי התבנית שורה אחר שורה",
+    "02-your-size.png": "תבניות סריגה במידה שלכם",
+    "03-library.png": "בחרו כובע, סוודר או צעיף לסריגה",
+    "06-projects.png": "המשיכו כל פרויקט מאיפה שעצרתם",
+    "07-stash.png": "בדקו את החוטים לפני הקנייה"
+  },
+  "hi": {
+    "01-count-rows.png": "पंक्तियाँ गिनें, बुनाई को बढ़ते देखें",
+    "05-pdf-place.png": "किसी भी PDF पैटर्न में अपनी जगह रखें",
+    "04-one-row.png": "पैटर्न को हर बार एक पंक्ति बुनें",
+    "02-your-size.png": "आपके साइज़ के हिसाब से बुनाई पैटर्न",
+    "03-library.png": "टोपी, स्वेटर या शॉल चुनें और बुनें",
+    "06-projects.png": "हर प्रोजेक्ट वहीं से शुरू करें जहाँ रुके थे",
+    "07-stash.png": "खरीदारी से पहले अपना ऊन देखें"
+  },
+  "hr": {
+    "01-count-rows.png": "Broji redove i gledaj kako pletivo raste",
+    "05-pdf-place.png": "Zadrži mjesto u svakom PDF uzorku",
+    "04-one-row.png": "Prati uzorak red po red",
+    "02-your-size.png": "Uzorci za pletenje pisani za tvoju mjeru",
+    "03-library.png": "Odaberi kapu, džemper ili šal",
+    "06-projects.png": "Svaki projekt otvori tamo gdje je stao",
+    "07-stash.png": "Provjeri svoju pređu prije kupnje"
+  },
+  "hu": {
+    "01-count-rows.png": "Számolj sorokat, nézd nőni a kelmét",
+    "05-pdf-place.png": "Tartsd a helyed minden PDF-ben",
+    "04-one-row.png": "Kövesd a mintát sorról sorra",
+    "02-your-size.png": "Kötésminták a te méretedre írva",
+    "03-library.png": "Válassz sapkát, pulóvert vagy kendőt",
+    "06-projects.png": "Folytasd ott, ahol abbahagytad",
+    "07-stash.png": "Nézd át a fonalad vásárlás előtt"
+  },
+  "id": {
+    "01-count-rows.png": "Hitung baris dan lihat kain tumbuh",
+    "05-pdf-place.png": "Tandai posisimu di pola PDF mana pun",
+    "04-one-row.png": "Ikuti pola baris demi baris",
+    "02-your-size.png": "Pola rajut ditulis sesuai ukuranmu",
+    "03-library.png": "Pilih topi, sweter, atau syal",
+    "06-projects.png": "Lanjut proyek dari tempat berhenti",
+    "07-stash.png": "Cek benangmu sebelum belanja"
+  },
+  "it": {
+    "01-count-rows.png": "Conta i ferri e guarda il lavoro crescere",
+    "05-pdf-place.png": "Non perdere il segno in nessun PDF",
+    "04-one-row.png": "Segui lo schema un ferro alla volta",
+    "02-your-size.png": "Schemi a maglia scritti sulla tua taglia",
+    "03-library.png": "Scegli cappello, maglione o scialle",
+    "06-projects.png": "Riprendi da dove avevi smesso",
+    "07-stash.png": "Controlla i tuoi filati prima di comprare"
+  },
+  "ja": {
+    "01-count-rows.png": "段数を数えて\n編み地が育つ",
+    "05-pdf-place.png": "PDFの編み図で\n現在地を記録",
+    "04-one-row.png": "編み図を\n1段ずつたどれる",
+    "02-your-size.png": "あなたのサイズで\n書かれる編み図",
+    "03-library.png": "帽子やセーター、\nショールを選ぼう",
+    "06-projects.png": "各作品を\n続きの段から再開",
+    "07-stash.png": "買い物の前に\n毛糸をチェック"
+  },
+  "kn-IN": {
+    "01-count-rows.png": "ಸಾಲು ಎಣಿಸಿ, ಬೆಳವಣಿಗೆ ನೋಡಿ",
+    "05-pdf-place.png": "PDF ಪ್ಯಾಟರ್ನ್‌ನಲ್ಲಿ ಸ್ಥಾನ ಉಳಿಸಿ",
+    "04-one-row.png": "ಪ್ಯಾಟರ್ನ್ ಸಾಲು ಸಾಲಾಗಿ ಅನುಸರಿಸಿ",
+    "02-your-size.png": "ನಿಮ್ಮ ಅಳತೆಗೆ ಹೆಣಿಗೆ ಪ್ಯಾಟರ್ನ್‌ಗಳು",
+    "03-library.png": "ಟೋಪಿ, ಸ್ವೆಟರ್ ಅಥವಾ ಶಾಲು ಆರಿಸಿ",
+    "06-projects.png": "ನಿಲ್ಲಿಸಿದಲ್ಲಿಂದಲೇ ಮುಂದುವರಿಸಿ",
+    "07-stash.png": "ಖರೀದಿಗೆ ಮುನ್ನ ನಿಮ್ಮ ನೂಲು ನೋಡಿ"
+  },
+  "ko": {
+    "01-count-rows.png": "단을 세고 뜨개가 자라는 모습 보기",
+    "05-pdf-place.png": "어떤 PDF 도안에서도 위치 기억",
+    "04-one-row.png": "도안을 한 단씩 따라 뜨세요",
+    "02-your-size.png": "내 사이즈에 맞춰 쓰이는 뜨개 도안",
+    "03-library.png": "모자, 스웨터, 숄 중에 골라 뜨기",
+    "06-projects.png": "프로젝트마다 멈춘 곳에서 이어가기",
+    "07-stash.png": "사기 전에 내 털실부터 확인"
+  },
+  "ml-IN": {
+    "01-count-rows.png": "വരി എണ്ണൂ, തുണി വളരുന്നത് കാണൂ",
+    "05-pdf-place.png": "PDF പാറ്റേണിൽ സ്ഥാനം ഓർക്കൂ",
+    "04-one-row.png": "പാറ്റേൺ ഓരോ വരിയായി പിന്തുടരൂ",
+    "02-your-size.png": "നിങ്ങളുടെ അളവിൽ നിറ്റിങ് പാറ്റേൺ",
+    "03-library.png": "തൊപ്പി, സ്വെറ്റർ, ഷാൾ എടുക്കൂ",
+    "06-projects.png": "നിർത്തിയിടത്ത് തുടരൂ",
+    "07-stash.png": "വാങ്ങും മുമ്പ് നൂൽ പരിശോധിക്കൂ"
+  },
+  "mr-IN": {
+    "01-count-rows.png": "ओळी मोजा आणि कापड वाढताना पाहा",
+    "05-pdf-place.png": "PDF पॅटर्नमध्ये तुमची जागा जपा",
+    "04-one-row.png": "पॅटर्न एकेक ओळीने पुढे नेत विणा",
+    "02-your-size.png": "तुमच्या मापाचे विणकाम पॅटर्न",
+    "03-library.png": "टोपी, स्वेटर किंवा शाल निवडा",
+    "06-projects.png": "प्रत्येक प्रोजेक्ट जिथे थांबला तिथून सुरू करा",
+    "07-stash.png": "खरेदीपूर्वी तुमचा धागा तपासा"
+  },
+  "ms": {
+    "01-count-rows.png": "Kira baris dan lihat kain membesar",
+    "05-pdf-place.png": "Tandai baris dalam mana-mana PDF",
+    "04-one-row.png": "Ikut corak anda baris demi baris",
+    "02-your-size.png": "Corak rajutan ditulis ikut saiz anda",
+    "03-library.png": "Pilih topi, sweater atau selendang",
+    "06-projects.png": "Sambung projek dari tempat berhenti",
+    "07-stash.png": "Semak benang anda sebelum membeli"
+  },
+  "nl-NL": {
+    "01-count-rows.png": "Tel rijen en zie je breiwerk groeien",
+    "05-pdf-place.png": "Houd je plek bij in elk pdf-patroon",
+    "04-one-row.png": "Volg je patroon rij voor rij",
+    "02-your-size.png": "Breipatronen op jouw maat",
+    "03-library.png": "Kies een muts, trui of sjaal om te breien",
+    "06-projects.png": "Pak elk project op waar je bleef",
+    "07-stash.png": "Check je garen voor je shopt"
+  },
+  "no": {
+    "01-count-rows.png": "Tell rader og se strikketøyet vokse",
+    "05-pdf-place.png": "Behold plassen i alle PDF-oppskrifter",
+    "04-one-row.png": "Følg oppskriften én rad om gangen",
+    "02-your-size.png": "Strikkeoppskrifter i din størrelse",
+    "03-library.png": "Velg lue, genser eller sjal å strikke",
+    "06-projects.png": "Hvert prosjekt der du sluttet",
+    "07-stash.png": "Sjekk garnet før du handler"
+  },
+  "or-IN": {
+    "01-count-rows.png": "ଧାଡ଼ି ଗଣନ୍ତୁ, କପଡ଼ା ବଢ଼ିବା ଦେଖନ୍ତୁ",
+    "05-pdf-place.png": "PDF ପ୍ୟାଟର୍ନରେ ଆପଣଙ୍କ ସ୍ଥାନ ରଖନ୍ତୁ",
+    "04-one-row.png": "ପ୍ୟାଟର୍ନ ଧାଡ଼ି ଧାଡ଼ି ଅନୁସରଣ କରନ୍ତୁ",
+    "02-your-size.png": "ଆପଣଙ୍କ ମାପର ବୁଣା ପ୍ୟାଟର୍ନ",
+    "03-library.png": "ଟୋପି, ସ୍ୱେଟର କିମ୍ବା ଶାଲ ବାଛନ୍ତୁ",
+    "06-projects.png": "ଛାଡ଼ିଥିବା ସ୍ଥାନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
+    "07-stash.png": "କିଣିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସୂତା ଯାଞ୍ଚ କରନ୍ତୁ"
+  },
+  "pa-IN": {
+    "01-count-rows.png": "ਕਤਾਰਾਂ ਗਿਣੋ, ਕੱਪੜੇ ਨੂੰ ਵਧਦਾ ਵੇਖੋ",
+    "05-pdf-place.png": "ਕਿਸੇ ਵੀ PDF ਪੈਟਰਨ ਵਿੱਚ ਆਪਣੀ ਥਾਂ ਰੱਖੋ",
+    "04-one-row.png": "ਪੈਟਰਨ ਨੂੰ ਇੱਕ ਵਾਰ ਵਿੱਚ ਇੱਕ ਕਤਾਰ ਬੁਣੋ",
+    "02-your-size.png": "ਤੁਹਾਡੇ ਸਾਈਜ਼ ਮੁਤਾਬਕ ਲਿਖੇ ਬੁਣਾਈ ਪੈਟਰਨ",
+    "03-library.png": "ਟੋਪੀ, ਸਵੈਟਰ ਜਾਂ ਸ਼ਾਲ ਚੁਣੋ",
+    "06-projects.png": "ਹਰ ਪ੍ਰੋਜੈਕਟ ਜਿੱਥੇ ਰੁਕੇ ਸੀ ਉੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ",
+    "07-stash.png": "ਖਰੀਦਦਾਰੀ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣਾ ਧਾਗਾ ਵੇਖੋ"
+  },
+  "pl": {
+    "01-count-rows.png": "Licz rzędy i patrz, jak rośnie robótka",
+    "05-pdf-place.png": "Nie gub miejsca w żadnym PDF-ie",
+    "04-one-row.png": "Wykonuj wzór rząd po rzędzie",
+    "02-your-size.png": "Wzory na drutach na twój rozmiar",
+    "03-library.png": "Wybierz czapkę, sweter lub szal",
+    "06-projects.png": "Projekt otwiera się na ostatnim rzędzie",
+    "07-stash.png": "Sprawdź włóczkę przed zakupami"
+  },
+  "pt-BR": {
+    "01-count-rows.png": "Conte as fileiras e veja o tecido crescer",
+    "05-pdf-place.png": "Não perca o ponto em nenhum PDF",
+    "04-one-row.png": "Siga sua receita fileira por fileira",
+    "02-your-size.png": "Receitas de tricô no seu tamanho",
+    "03-library.png": "Escolha um gorro, suéter ou xale",
+    "06-projects.png": "Retome cada projeto de onde parou",
+    "07-stash.png": "Confira sua lã antes de comprar"
+  },
+  "pt-PT": {
+    "01-count-rows.png": "Conta as carreiras e vê o tecido crescer",
+    "05-pdf-place.png": "Não percas o ponto em nenhum PDF",
+    "04-one-row.png": "Segue o padrão carreira a carreira",
+    "02-your-size.png": "Padrões de tricô escritos à tua medida",
+    "03-library.png": "Escolhe um gorro, camisola ou xaile",
+    "06-projects.png": "Retoma cada projeto onde ficaste",
+    "07-stash.png": "Vê a tua lã antes de comprar"
+  },
+  "ro": {
+    "01-count-rows.png": "Numără rânduri, vezi cum crește",
+    "05-pdf-place.png": "Păstrează-ți locul în orice model PDF",
+    "04-one-row.png": "Urmează modelul rând cu rând",
+    "02-your-size.png": "Modele de tricotat scrise pe măsura ta",
+    "03-library.png": "Alege o căciulă, un pulover sau o șal",
+    "06-projects.png": "Reia fiecare proiect de unde ai rămas",
+    "07-stash.png": "Verifică-ți firele înainte să cumperi"
+  },
+  "ru": {
+    "01-count-rows.png": "Считайте ряды, пока растёт полотно",
+    "05-pdf-place.png": "Не теряйте место в любом PDF-узоре",
+    "04-one-row.png": "Вяжите по схеме ряд за рядом",
+    "02-your-size.png": "Схемы вязания под ваш размер",
+    "03-library.png": "Выберите шапку, свитер или шаль",
+    "06-projects.png": "Продолжайте с места остановки",
+    "07-stash.png": "Проверьте пряжу перед покупкой"
+  },
+  "sk": {
+    "01-count-rows.png": "Počítaj riadky, sleduj rast látky",
+    "05-pdf-place.png": "Nestrať miesto v žiadnom PDF návode",
+    "04-one-row.png": "Pleť podľa návodu riadok po riadku",
+    "02-your-size.png": "Pletacie návody na tvoju mieru",
+    "03-library.png": "Vyber si čiapku, sveter alebo šál",
+    "06-projects.png": "Pokračuj tam, kde projekt skončil",
+    "07-stash.png": "Skontroluj priadzu pred nákupom"
+  },
+  "sl-SI": {
+    "01-count-rows.png": "Štej vrste in glej, kako pletivo raste",
+    "05-pdf-place.png": "Ne izgubi mesta v nobenem PDF vzorcu",
+    "04-one-row.png": "Sledi vzorcu vrsto za vrsto",
+    "02-your-size.png": "Pletilni vzorci za tvojo velikost",
+    "03-library.png": "Izberi kapo, pulover ali šal",
+    "06-projects.png": "Nadaljuj vsak projekt tam, kjer je obstal",
+    "07-stash.png": "Preveri prejo, preden greš po nakupih"
+  },
+  "sv": {
+    "01-count-rows.png": "Räkna varv och se arbetet växa",
+    "05-pdf-place.png": "Behåll platsen i alla PDF-mönster",
+    "04-one-row.png": "Följ mönstret varv för varv",
+    "02-your-size.png": "Stickmönster skrivna efter din storlek",
+    "03-library.png": "Välj mössa, tröja eller sjal att sticka",
+    "06-projects.png": "Fortsätt varje projekt där du slutade",
+    "07-stash.png": "Kolla garnet innan du handlar"
+  },
+  "ta-IN": {
+    "01-count-rows.png": "வரிசை எண்ணி துணி வளருங்கள்",
+    "05-pdf-place.png": "PDF பேட்டர்னில் இடம் குறியுங்கள்",
+    "04-one-row.png": "பேட்டர்ன் வரிசை வரிசையாக",
+    "02-your-size.png": "உங்கள் அளவில் பின்னல் பேட்டர்ன்",
+    "03-library.png": "தொப்பி, ஸ்வெட்டர், சால்வை எடுங்கள்",
+    "06-projects.png": "நிறுத்திய இடத்தில் தொடருங்கள்",
+    "07-stash.png": "வாங்கும் முன் நூலைப் பாருங்கள்"
+  },
+  "te-IN": {
+    "01-count-rows.png": "వరుసలు లెక్కించి పెరుగుదల చూడండి",
+    "05-pdf-place.png": "PDF లో మీ చోటు గుర్తుంచుకోండి",
+    "04-one-row.png": "ప్యాటర్న్ వరుస వరుసగా అల్లండి",
+    "02-your-size.png": "మీ సైజుకు రాసిన అల్లిక ప్యాటర్న్‌లు",
+    "03-library.png": "టోపీ, స్వెటర్ లేదా శాలువా ఎంచుకోండి",
+    "06-projects.png": "ప్రతి ప్రాజెక్ట్‌ను ఆపిన చోటే కొనసాగించండి",
+    "07-stash.png": "కొనే ముందు మీ నూలు చూడండి"
+  },
+  "th": {
+    "01-count-rows.png": "นับแถว\nแล้วดูผ้าถักโตขึ้น",
+    "05-pdf-place.png": "จำตำแหน่งในทุก\nแพตเทิร์น PDF",
+    "04-one-row.png": "ถักตามแบบ\nทีละแถว",
+    "02-your-size.png": "แบบถักเขียนให้\nพอดีไซส์คุณ",
+    "03-library.png": "เลือกหมวก เสื้อถัก\nหรือผ้าคลุมไหล่",
+    "06-projects.png": "ทำแต่ละโปรเจกต์\nต่อจากที่หยุดไว้",
+    "07-stash.png": "เช็กไหมพรม\nก่อนไปซื้อ"
+  },
+  "tr": {
+    "01-count-rows.png": "Sıraları say, örgünün büyüdüğünü izle",
+    "05-pdf-place.png": "Her PDF modelde yerini kaybetme",
+    "04-one-row.png": "Modeli sıra sıra takip et",
+    "02-your-size.png": "Bedenine göre örgü modelleri",
+    "03-library.png": "Bir bere, kazak ya da şal seç",
+    "06-projects.png": "Her projeye kaldığın yerden devam et",
+    "07-stash.png": "Alışverişten önce ipliklerine bak"
+  },
+  "uk": {
+    "01-count-rows.png": "Лічіть ряди, стежте за ростом",
+    "05-pdf-place.png": "Не губіть місце в жодному PDF",
+    "04-one-row.png": "В'яжіть за схемою ряд за рядом",
+    "02-your-size.png": "Схеми в'язання під ваш розмір",
+    "03-library.png": "Оберіть шапку, светр або шаль",
+    "06-projects.png": "Продовжуйте з місця зупинки",
+    "07-stash.png": "Перевірте пряжу перед покупкою"
+  },
+  "ur-PK": {
+    "01-count-rows.png": "قطاریں گنیں، کپڑا بڑھتا دیکھیں",
+    "05-pdf-place.png": "PDF پیٹرن میں اپنی جگہ رکھیں",
+    "04-one-row.png": "پیٹرن کو ایک وقت میں ایک قطار بُنیں",
+    "02-your-size.png": "آپ کے سائز کے بنائی پیٹرن",
+    "03-library.png": "ٹوپی، سویٹر یا شال چنیں اور بُنیں",
+    "06-projects.png": "ہر پراجیکٹ وہیں سے جہاں چھوڑا",
+    "07-stash.png": "خریداری سے پہلے اپنا اون دیکھ لیں"
+  },
+  "vi": {
+    "01-count-rows.png": "Đếm hàng và xem tấm vải lớn dần",
+    "05-pdf-place.png": "Giữ chỗ đang đan trong mọi mẫu PDF",
+    "04-one-row.png": "Đan theo mẫu từng hàng một",
+    "02-your-size.png": "Mẫu đan viết theo đúng cỡ của bạn",
+    "03-library.png": "Chọn mũ, áo len hay khăn choàng để đan",
+    "06-projects.png": "Tiếp tục mỗi dự án từ chỗ bạn dừng",
+    "07-stash.png": "Kiểm tra len trước khi đi mua"
+  },
+  "zh-Hans": {
+    "01-count-rows.png": "数着行数\n看织物长高",
+    "05-pdf-place.png": "在任何PDF图解里\n记住进度",
+    "04-one-row.png": "跟着图解\n一行一行织",
+    "02-your-size.png": "按你的尺寸\n写成的编织图解",
+    "03-library.png": "选一顶帽子、毛衣\n或披肩来织",
+    "06-projects.png": "每个作品都\n从停下的地方继续",
+    "07-stash.png": "购买前\n先看看你的毛线"
+  },
+  "zh-Hant": {
+    "01-count-rows.png": "數著行數\n看織物長高",
+    "05-pdf-place.png": "在任何PDF圖解中\n記住進度",
+    "04-one-row.png": "跟著圖解\n一行一行織",
+    "02-your-size.png": "依你的尺寸\n撰寫的編織圖解",
+    "03-library.png": "選一頂帽子、毛衣\n或披肩來織",
+    "06-projects.png": "每個作品都\n從停下處繼續",
+    "07-stash.png": "購買前\n先看看你的毛線"
+  }
 }

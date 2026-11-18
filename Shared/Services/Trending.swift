@@ -1,12 +1,24 @@
 import Foundation
 import Observation
 
-/// One design on the Trending shelf, with the reason it is there.
+/// One design on the Trending shelf, with the reason it is there: a built-in design, or a colorwork one
+/// (from the bundled collection or published on the site) named by its id.
 struct Trend: Identifiable, Equatable, Sendable {
-    let design: Design
+    let id: String
     let tag: String
 
-    var id: String { design.rawValue }
+    init(design: Design, tag: String) {
+        id = design.rawValue
+        self.tag = tag
+    }
+
+    init(id: String, tag: String) {
+        self.id = id
+        self.tag = tag
+    }
+
+    /// Nil for a colorwork design, which the library looks up by id.
+    var design: Design? { Design(rawValue: id) }
 }
 
 /// What the Patterns tab leads with: new designs and what knitters are making this season.
@@ -55,14 +67,18 @@ final class Trending {
         let items: [Entry]
     }
 
-    /// Reads a list, skipping designs this version of the app does not have.
+    /// Reads a list, skipping built-in designs this version of the app does not have. A colorwork id
+    /// ("bear-beanie", "topical.fir-tree-hat") is kept and looked up when the shelf is drawn, where one this
+    /// app has never seen is skipped too.
     nonisolated static func decode(_ data: Data) -> [Trend] {
         guard let listing = try? JSONDecoder().decode(Listing.self, from: data) else { return [] }
-        var seen = Set<Design>()
+        var seen = Set<String>()
         return listing.items.compactMap { entry in
             let tag = entry.tag.trimmingCharacters(in: .whitespacesAndNewlines)
-            guard let design = Design(rawValue: entry.design), !tag.isEmpty, tag.count <= 24, seen.insert(design).inserted else { return nil }
-            return Trend(design: design, tag: tag)
+            let id = entry.design.trimmingCharacters(in: .whitespacesAndNewlines)
+            let colorwork = id.contains("-") || id.hasPrefix("topical.")
+            guard Design(rawValue: id) != nil || colorwork, !tag.isEmpty, tag.count <= 24, seen.insert(id).inserted else { return nil }
+            return Trend(id: id, tag: tag)
         }
     }
 

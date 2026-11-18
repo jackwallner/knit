@@ -350,6 +350,8 @@ struct ProjectView: View {
                     .foregroundStyle(Theme.secondary)
                     .contentTransition(.numericText(value: Double(spot.row)))
                     .accessibilityIdentifier("guide.detail")
+                // Marked finished before the last row: said here, where the knitter is looking.
+                if project.isFinished { finishedMark }
             }
             .frame(maxWidth: .infinity)
             .motion(.snappy, value: project.rows)

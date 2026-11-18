@@ -26,6 +26,7 @@ final class ReleaseJourneysUITests: XCTestCase {
             castOn.tap()
         } else {
             tap(app.buttons["projects.add"], "New Project")
+            tap(app.buttons["projects.add.counter"], "Row Counter")
         }
         let field = app.alerts.textFields.firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10))
@@ -59,7 +60,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         passOnboarding(app)
         tab("Patterns", "Muster", in: app)
         QA.checkpoint(app, "library")
-        let design = app.buttons["design.garterScarf"]
+        let design = app.buttons["free.garterScarf"]
         scrollTo(design, in: app)
         design.tap()
         let castOn = app.buttons["design.castOn"]
@@ -77,8 +78,13 @@ final class ReleaseJourneysUITests: XCTestCase {
         let app = XCUIApplication()
         QA.launch(app, arguments: ["-SeedDemo"])
         tab("Patterns", "Muster", in: app)
+        // A new knitter looking for one thing searches for it.
+        let search = app.searchFields.firstMatch
+        tap(search, "Search")
+        search.typeText("ribbed")
         let design = app.buttons["design.ribbedBeanie"]
-        scrollTo(design, in: app)
+        XCTAssertTrue(design.waitForExistence(timeout: 10))
+        QA.checkpoint(app, "library-search")
         design.tap()
         let unlock = app.buttons["design.castOn"]
         XCTAssertTrue(unlock.waitForExistence(timeout: 10))
@@ -194,8 +200,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         // The library is lazy: a tile further down is not built until it is near the screen.
         // Large text puts one tile a row, so the library runs long.
         _ = element.waitForExistence(timeout: 15)
-        for _ in 0..<24 where !(element.exists && element.isHittable) {
-            QA.swipe(app.windows.firstMatch, .up)
+        // Slow swipes: a fast fling over the tall photo tiles carries a tile past the screen between checks.
+        for _ in 0..<40 where !(element.exists && element.isHittable) {
+            app.windows.firstMatch.swipeUp(velocity: .slow)
         }
         // A swipe keeps scrolling after the finger lifts: tap only once the tile has stopped moving.
         var frame = element.frame
