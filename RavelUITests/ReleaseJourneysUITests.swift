@@ -30,7 +30,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         }
         let field = app.alerts.textFields.firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10))
-        field.typeText(typed)
+        QA.type(typed, into: field, in: app)
         // A loaded simulator can drop a synthesized keystroke. This journey proves rows survive a
         // relaunch, so it follows the project by the name the field actually holds.
         sleep(1)
@@ -80,8 +80,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         tab("Patterns", "Muster", in: app)
         // A new knitter looking for one thing searches for it.
         let search = app.searchFields.firstMatch
-        tap(search, "Search")
-        search.typeText("ribbed")
+        QA.type("ribbed", into: search, in: app)
         let design = app.buttons["design.ribbedBeanie"]
         XCTAssertTrue(design.waitForExistence(timeout: 10))
         QA.checkpoint(app, "library-search")
@@ -143,8 +142,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         // A knitter who pauses before naming must not lose the yarn: autosave runs in the pause
         // and once closed the editor and deleted the unnamed yarn.
         sleep(15)
-        tap(app.textFields["Name"], "Name field")
-        app.textFields["Name"].typeText("Merino")
+        QA.type("Merino", into: app.textFields["Name"], in: app)
         tap(app.buttons.matching(label("Done", "Fertig")).firstMatch, "Done")
         XCTAssertTrue(app.staticTexts["Merino"].firstMatch.waitForExistence(timeout: 10))
         QA.checkpoint(app, "stash-one-yarn")
@@ -174,8 +172,7 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     /// Tabs are matched by label on any element, so a tab bar and a sidebar both work.
     private func tab(_ label: String, _ german: String, in app: XCUIApplication) {
-        let button = app.buttons.matching(self.label(label, german)).firstMatch
-        tap(button, "\(label) tab")
+        QA.openTab(app, label, german)
     }
 
     /// Matches the English label or its German translation (the `german` persona).
