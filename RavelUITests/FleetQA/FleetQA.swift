@@ -478,9 +478,16 @@ enum Layout {
         guard !found.isEmpty else { return }
         // A frame caught mid-transition, or glass still blending what scrolled under it, reads
         // differently a moment later. Only an overlap that a second capture still shows is drawn.
+        // Frames are read again with it: a card that lands late moves the pair (the control
+        // app's broken screen does), and the old frames would point at the wrong pixels.
         usleep(700_000)
+        guard let fresh = Layout.leaves(app)?.leaves else { return }
         let again = Render.read(QA.capture(app))
-        for item in found where drawnOver(item.a, item.b, item.region, again, leaves) {
+        let now = Dictionary(fresh.map { ($0.key, $0) }, uniquingKeysWith: { first, _ in first })
+        for item in found {
+            guard let a = now[item.a.key], let b = now[item.b.key] else { continue }
+            let region = a.frame.intersection(b.frame)
+            guard !region.isNull, region.width > 2, region.height > 2, drawnOver(a, b, region, again, fresh) else { continue }
             QA.record(context, "overlap", "P1", item.pair,
                       String(format: "%@ \"%@\" overlaps \"%@\" by %.0f%%", typeName(item.a.type), item.a.name,
                              item.b.name, 100 * item.share))
