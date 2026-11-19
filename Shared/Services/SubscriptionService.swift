@@ -352,6 +352,12 @@ final class SubscriptionService {
         return answer
     }
 
+    /// Drops a kept late reply and the question still out, so the next tap asks StoreKit about the current account.
+    func forgetPendingAnswer() {
+        askingFor = nil
+        lateReply = nil
+    }
+
     /// A reply counts only for the tap still waiting on it: a purchase or a newer tap since makes it stale.
     private func reply(_ eligible: Bool, for tap: UUID) {
         guard askingFor == tap else { return }

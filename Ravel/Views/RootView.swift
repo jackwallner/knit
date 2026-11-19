@@ -22,7 +22,11 @@ struct RootView: View {
                 .tag(2)
         }
         // Leaving the app is the last sure moment to write: nothing typed or counted waits on an autosave.
-        .onChange(of: scenePhase) { _, phase in if phase != .active { try? context.save() } }
+        .onChange(of: scenePhase) { _, phase in
+            if phase != .active { try? context.save() }
+            // The Apple Account can change in Settings while Ravel is away.
+            if phase == .background { SubscriptionService.shared.forgetPendingAnswer() }
+        }
         .onAppear {
             // In place from the first frame, so the tabs never flash behind it.
             var instant = Transaction()
