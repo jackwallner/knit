@@ -330,7 +330,7 @@ struct OnboardingView: View {
         working = true
         message = nil
         buying = Task {
-            let outcome = await subscription.purchase(plan)
+            let outcome = await subscription.purchase(plan) { self.plan }
             working = false
             switch outcome {
             case .purchased, .alreadyOwned: finish()

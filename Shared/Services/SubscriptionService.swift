@@ -147,9 +147,12 @@ final class SubscriptionService {
     private(set) var onboardingTerm: Offer.Term = .monthly
     @ObservationIgnored private var packages: [String: Package] = [:]
     @ObservationIgnored private var isConfigured = false
-    /// StoreKit's answer to "can this Apple Account still have a free week", kept across reloads and late replies.
-    /// The plans share one subscription group, so one answer covers them all, and a spent week stays spent.
+    /// The latest answer to "can this Apple Account still have a free week", for the screens across reloads. The
+    /// plans share one subscription group, so one answer covers them all.
     @ObservationIgnored private var freeWeek: Bool?
+    /// When StoreKit last answered at a tap. A purchase trusts that answer only briefly (an Apple Account can
+    /// change), long enough for a retry after a slow reply.
+    @ObservationIgnored private var freeWeekAt: Date?
     #if DEBUG && targetEnvironment(simulator)
     @ObservationIgnored private var testProducts: [String: StoreKit.Product] = [:]
     #endif
@@ -190,7 +193,7 @@ final class SubscriptionService {
         let available = current.availablePackages.filter { terms[$0.packageType] != nil }
         let eligibility = await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: available)
         let statuses = eligibility.values.map(\.status)
-        if statuses.contains(.ineligible) { freeWeek = false } else if freeWeek == nil, statuses.contains(.eligible) { freeWeek = true }
+        if statuses.contains(.ineligible) { freeWeek = false } else if statuses.contains(.eligible) { freeWeek = true }
         packages = Dictionary(available.map { ($0.storeProduct.productIdentifier, $0) }) { first, _ in first }
         offers = available
             .map { package in
@@ -250,7 +253,9 @@ final class SubscriptionService {
     }
     #endif
 
-    func purchase(_ offer: Offer) async -> Outcome {
+    /// `shown` reads what the screen offers right now, so a reload during the preflight that changed the plan on
+    /// screen stops the purchase.
+    func purchase(_ offer: Offer, shown: @MainActor () -> Offer?) async -> Outcome {
         guard isConfigured, packages[offer.id] != nil else {
             #if DEBUG && targetEnvironment(simulator)
             if let product = testProducts[offer.id] { return await purchaseFromTestStore(product) }
@@ -264,13 +269,15 @@ final class SubscriptionService {
             #endif
         }
         let package: Package
-        switch await preflight(offer) {
+        switch await preflight(offer, shown: shown) {
         case let .buy(cleared): package = cleared
         case let .stop(outcome): return outcome
         }
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return .cancelled }
+            // Whatever was sold, this account's free week is spent now.
+            if offer.term != .lifetime { freeWeek = false }
             apply(result.customerInfo)
             // Paid, but the entitlement can trail the receipt by a moment: ask once more before saying so.
             if !isPro, let info = try? await Purchases.shared.customerInfo(fetchPolicy: .fetchCurrent) { apply(info) }
@@ -285,7 +292,7 @@ final class SubscriptionService {
     /// Mahj's preflight, run after every tap: settle ownership, then get StoreKit's free-week answer, each bounded,
     /// then compare the live terms with the tapped ones. A reinstall that owns the patterns is not sold them again,
     /// and an account whose free week is spent never meets a charge under "7 days free" (3.1.2).
-    private func preflight(_ offer: Offer) async -> Cleared {
+    private func preflight(_ offer: Offer, shown: @MainActor () -> Offer?) async -> Cleared {
         let ids: Set = [RevenueCatConfig.yearly, RevenueCatConfig.monthly, RevenueCatConfig.lifetime]
         guard let checked = await Self.within(3, { await Self.ownsInStoreKit(ids) }), let owns = checked else { return .stop(.unavailable) }
         if owns {
@@ -293,18 +300,22 @@ final class SubscriptionService {
             if !isPro, let info = await Self.within(3, { try? await Purchases.shared.syncPurchases() }) ?? nil { apply(info) }
             return .stop(isPro ? .alreadyOwned : .unavailable)
         }
-        var liveDays = 0
+        var eligible = false
         if offer.term != .lifetime {
-            guard let package = packages[offer.id], let eligible = await freeWeekAnswer(package) else { return .stop(.unavailable) }
-            liveDays = eligible ? Self.trialDays(package.storeProduct.introductoryDiscount) : 0
-            if liveDays != offer.trialDays { offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays) }
+            guard let package = packages[offer.id], let answer = await freeWeekAnswer(package) else { return .stop(.unavailable) }
+            eligible = answer
         }
         // Nothing below waits, so no reload or RevenueCat update can land between this check and Apple's sheet.
         // The screen went away during the waits (Close, Get Started): nothing reaches Apple's sheet unseen.
         guard !Task.isCancelled else { return .stop(.cancelled) }
         if isPro { return .stop(.alreadyOwned) }
+        // The package that will be bought, read after the waits, decides the price and the free week.
         let package = packages[offer.id]
-        if let stop = Self.confirm(tapped: offer, shown: offers.first { $0.id == offer.id }, storePrice: package?.storeProduct.localizedPriceString, freeWeekDays: liveDays) {
+        let liveDays = eligible ? Self.trialDays(package?.storeProduct.introductoryDiscount) : 0
+        if offer.term != .lifetime, let current = offers.first(where: { $0.id == offer.id }), current.trialDays != liveDays {
+            offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays)
+        }
+        if let stop = Self.confirm(tapped: offer, shown: shown(), storePrice: package?.storeProduct.localizedPriceString, freeWeekDays: liveDays) {
             return .stop(stop)
         }
         return package.map(Cleared.buy) ?? .stop(.unavailable)
@@ -318,10 +329,10 @@ final class SubscriptionService {
         return nil
     }
 
-    /// The kept answer, else StoreKit's within 3 seconds. A reply that comes later is still kept, so the next tap
-    /// has it at once.
+    /// StoreKit's answer within 3 seconds, asked at every tap. A reply that comes later is kept for 30 seconds, so
+    /// the retry has it at once.
     private func freeWeekAnswer(_ package: Package) async -> Bool? {
-        if let freeWeek { return freeWeek }
+        if let freeWeek, let freeWeekAt, Date().timeIntervalSince(freeWeekAt) < 30 { return freeWeek }
         guard let subscription = package.storeProduct.sk2Product?.subscription else { return nil }
         return await Self.within(3) { [weak self] in
             let eligible = await subscription.isEligibleForIntroOffer
@@ -331,8 +342,8 @@ final class SubscriptionService {
     }
 
     private func remember(freeWeek eligible: Bool) {
-        guard freeWeek != false else { return }
         freeWeek = eligible
+        freeWeekAt = Date()
         if !eligible { offers = Offer.redrawn(offers, id: "", trialDays: 0) }
     }
 

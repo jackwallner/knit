@@ -47,7 +47,7 @@ final class StoreTests: XCTestCase {
         let answered = expectation(description: "the store answers")
         var outcome: SubscriptionService.Outcome?
         Task {
-            outcome = await store.purchase(offer)
+            outcome = await store.purchase(offer) { offer }
             answered.fulfill()
         }
         guard await XCTWaiter.fulfillment(of: [answered], timeout: 30) == .completed, let outcome else {

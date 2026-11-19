@@ -278,7 +278,7 @@ struct PaywallView: View {
     private func buy(_ offer: Offer) {
         working = true
         buying = Task {
-            let outcome = await subscription.purchase(offer)
+            let outcome = await subscription.purchase(offer) { self.offer }
             working = false
             switch outcome {
             case .purchased, .alreadyOwned: dismiss()
