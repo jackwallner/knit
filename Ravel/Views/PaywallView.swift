@@ -8,6 +8,7 @@ struct PaywallView: View {
     @State private var picked: Offer.Term
     @State private var working = false
     @State private var message: String?
+    @State private var buying: Task<Void, Never>?
     private let subscription = SubscriptionService.shared
 
     init(picked: Offer.Term = .yearly) { _picked = State(initialValue: picked) }
@@ -45,10 +46,24 @@ struct PaywallView: View {
             .background(Theme.paper)
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            if let offer { purchase(offer).frame(maxWidth: 540).frame(maxWidth: .infinity).background(Theme.paper) }
+            if let offer {
+                purchase(offer)
+                    .frame(maxWidth: 540)
+                    .frame(maxWidth: .infinity)
+                    // The plans fade into the terms instead of being cut off by them.
+                    .background(alignment: .top) {
+                        LinearGradient(colors: [Theme.paper.opacity(0), Theme.paper], startPoint: .top, endPoint: .bottom)
+                            .frame(height: 28)
+                            .offset(y: -28)
+                            .allowsHitTesting(false)
+                    }
+                    .background(Theme.paper)
+            }
         }
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
+        // Closing the paywall during the preflight stops the purchase before Apple's sheet.
+        .onDisappear { buying?.cancel() }
         .onChange(of: subscription.isPro) { _, isPro in if isPro { dismiss() } }
         .alert(message ?? "", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {}
     }
@@ -132,6 +147,8 @@ struct PaywallView: View {
                 let isOn = option.id == offer?.id
                 Button { picked = option.term } label: { card(option, isOn: isOn) }
                     .buttonStyle(.plain)
+                    // The plan she tapped buy on stays the one on screen until Apple's sheet is done.
+                    .disabled(working)
                     .accessibilityAddTraits(isOn ? .isSelected : [])
                     .accessibilityIdentifier("paywall.\(option.slug)")
             }
@@ -215,6 +232,8 @@ struct PaywallView: View {
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
+        // Capped as on the trial page: past this size the pinned bar would crowd out the plans.
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
     }
 
     private var unavailable: some View {
@@ -236,7 +255,7 @@ struct PaywallView: View {
 
     private var footer: some View {
         HStack(spacing: 8) {
-            link("Restore") { restore() }
+            link("Restore") { restore() }.disabled(working)
             link("Terms") { openURL(Links.terms) }
             link("Privacy") { openURL(Links.privacy) }
         }
@@ -256,17 +275,19 @@ struct PaywallView: View {
 
     private func buy(_ offer: Offer) {
         working = true
-        Task {
+        buying = Task {
             let outcome = await subscription.purchase(offer)
             working = false
             switch outcome {
-            case .purchased: dismiss()
+            case .purchased, .alreadyOwned: dismiss()
             case .cancelled: break
             case .pending: message = String(localized: "Your purchase is waiting for approval")
             case .unconfirmed: message = String(localized: "Your purchase went through. Tap Restore if the patterns stay locked.")
             case .failed: message = String(localized: "The purchase did not go through")
-            // The free week was already used: the page now shows what is charged today. Nothing was bought.
-            case .termsChanged: break
+            case .unavailable: message = String(localized: "The App Store could not be reached. Try again when you are online.")
+            // The page now shows the live terms and nothing was bought. A spent free week is said out loud, so a
+            // second tap knows it is charged today.
+            case .termsChanged: message = subscription.spentTrialMessage(offer)
             }
         }
     }

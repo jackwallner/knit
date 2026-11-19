@@ -358,3 +358,4 @@ Billed monthly.
 One payment. Nothing renews.
 Save %lld%%
 Sized for anyone, baby to adult
+This Apple Account already had its free week.

@@ -1,9 +1,7 @@
 import Foundation
 import Observation
 import RevenueCat
-#if DEBUG && targetEnvironment(simulator)
 import StoreKit
-#endif
 
 enum RevenueCatConfig {
     /// Public SDK key. It is never configured on a simulator.
@@ -109,6 +107,15 @@ struct Offer: Identifiable, Equatable, Sendable {
         return percent >= 1 ? Int(percent) : nil
     }
 
+    /// `offers` with the live free week for the plan `id`. The plans share one subscription group, so a spent free
+    /// week is spent on all of them.
+    static func redrawn(_ offers: [Offer], id: String, trialDays: Int) -> [Offer] {
+        offers.map { offer in
+            guard offer.term != .lifetime, offer.id == id || trialDays == 0 else { return offer }
+            return Offer(id: offer.id, term: offer.term, price: offer.price, trialDays: trialDays, amount: offer.amount, perMonth: offer.perMonth)
+        }
+    }
+
     #if DEBUG
     static let samples = [
         Offer(id: RevenueCatConfig.yearly, term: .yearly, price: "$39.99", trialDays: 7, amount: 39.99, perMonth: "$3.33"),
@@ -123,8 +130,10 @@ struct Offer: Identifiable, Equatable, Sendable {
 @Observable
 final class SubscriptionService {
     /// `unconfirmed`: the store took the payment but the entitlement has not arrived yet.
-    /// `termsChanged`: the free week was already used, so the screen redrew with today's terms and nothing was bought.
-    enum Outcome: Equatable { case purchased, cancelled, pending, unconfirmed, failed, termsChanged }
+    /// `termsChanged`: the free week the screen showed is not what Apple would sell, so the screen redrew with the
+    /// live terms and nothing was bought. `alreadyOwned`: this Apple Account already has the patterns.
+    /// `unavailable`: the store did not answer in time, so nothing was sold; a later tap tries again.
+    enum Outcome: Equatable { case purchased, cancelled, pending, unconfirmed, failed, termsChanged, alreadyOwned, unavailable }
     enum Restored: Equatable { case found, notFound, cancelled, failed }
 
     static let shared = SubscriptionService()
@@ -249,14 +258,9 @@ final class SubscriptionService {
             return .failed
             #endif
         }
-        // Mahj's preflight: the page promised a free week, so ask StoreKit again at the tap. An account that already
-        // had one would otherwise meet a charge on Apple's sheet under "7 days free" (3.1.2). The screen redraws
-        // with today's terms and nothing is bought. Unknown still reads as eligible.
-        if offer.trialDays > 0,
-           await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: [package])[package]?.status == .ineligible {
-            await loadOffers()
-            return .termsChanged
-        }
+        if let verdict = await preflight(offer, package) { return verdict }
+        // The screen went away during the preflight (Close, a swipe down): nothing reaches Apple's sheet unseen.
+        guard !Task.isCancelled else { return .cancelled }
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return .cancelled }
@@ -266,6 +270,55 @@ final class SubscriptionService {
             return isPro ? .purchased : .unconfirmed
         } catch {
             return (error as? ErrorCode) == .paymentPendingError ? .pending : .failed
+        }
+    }
+
+    /// Mahj's preflight, run after every tap: settle ownership, then get StoreKit's free-week answer, each bounded,
+    /// and buy only on the terms the screen showed. nil means buy. A reinstall that owns the patterns is not sold
+    /// them again, and an account whose free week is spent never meets a charge under "7 days free" (3.1.2).
+    private func preflight(_ offer: Offer, _ package: Package) async -> Outcome? {
+        let ids: Set = [RevenueCatConfig.yearly, RevenueCatConfig.monthly, RevenueCatConfig.lifetime]
+        guard let owns = await Self.within(3, { await Self.ownsInStoreKit(ids) }) else { return .unavailable }
+        if owns {
+            // StoreKit holds a current purchase that RevenueCat has not caught up with yet.
+            if !isPro, let info = await Self.within(3, { try? await Purchases.shared.syncPurchases() }) ?? nil { apply(info) }
+            return isPro ? .alreadyOwned : .unavailable
+        }
+        if isPro { return .alreadyOwned }
+        guard offer.term != .lifetime else { return nil }
+        let product = package.storeProduct.sk2Product
+        guard let subscription = product?.subscription,
+              let eligible = await Self.within(3, { await subscription.isEligibleForIntroOffer })
+        else { return .unavailable }
+        let liveDays = eligible ? Self.trialDays(package.storeProduct.introductoryDiscount) : 0
+        guard liveDays == offer.trialDays else {
+            offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays)
+            return .termsChanged
+        }
+        return nil
+    }
+
+    /// After `termsChanged`: the words for a free week that turned out to be spent. nil when the change went the
+    /// other way.
+    func spentTrialMessage(_ tapped: Offer) -> String? {
+        guard tapped.trialDays > 0, offers.first(where: { $0.id == tapped.id })?.trialDays == 0 else { return nil }
+        return String(localized: "This Apple Account already had its free week.", comment: "After a purchase tap, when the account turned out to have used its free trial")
+    }
+
+    private nonisolated static func ownsInStoreKit(_ ids: Set<String>) async -> Bool {
+        for await result in Transaction.currentEntitlements {
+            if case let .verified(transaction) = result, ids.contains(transaction.productID), transaction.revocationDate == nil { return true }
+        }
+        return false
+    }
+
+    /// `work`'s answer, or nil when it takes longer than `seconds`. The work keeps running; nobody waits on it.
+    nonisolated static func within<T: Sendable>(_ seconds: Double, _ work: @escaping @Sendable () async -> T) async -> T? {
+        let once = Once<T?>()
+        return await withCheckedContinuation { continuation in
+            once.set(continuation)
+            Task { once.resume(await work()) }
+            Task { try? await Task.sleep(for: .seconds(seconds)); once.resume(nil) }
         }
     }
 
@@ -313,5 +366,23 @@ final class SubscriptionService {
         Purchases.configure(withAPIKey: RevenueCatConfig.apiKey)
         isConfigured = true
         #endif
+    }
+}
+
+/// Resumes a continuation with whichever answer comes first and ignores the rest.
+private final class Once<Value: Sendable>: @unchecked Sendable {
+    private let lock = NSLock()
+    private var continuation: CheckedContinuation<Value, Never>?
+
+    func set(_ continuation: CheckedContinuation<Value, Never>) {
+        lock.withLock { self.continuation = continuation }
+    }
+
+    func resume(_ value: Value) {
+        let waiting = lock.withLock { () -> CheckedContinuation<Value, Never>? in
+            defer { continuation = nil }
+            return continuation
+        }
+        waiting?.resume(returning: value)
     }
 }

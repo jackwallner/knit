@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @State private var knitted = 0.0
     @State private var working = false
     @State private var message: String?
+    @State private var buying: Task<Void, Never>?
     private let subscription = SubscriptionService.shared
 
     /// The plan the trial button buys. The price line and terms above it always name this same plan.
@@ -49,6 +50,7 @@ struct OnboardingView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
+        .onDisappear { buying?.cancel() }
         // Reaching the trial with no offer (offline at launch): ask the store again rather than end the pitch.
         .onChange(of: page) { _, page in
             if page == 2, plan == nil, !subscription.isLoading { Task { await subscription.loadOffers() } }
@@ -261,7 +263,8 @@ struct OnboardingView: View {
     }
 
     private var freeExit: some View {
-        Button("Get Started") { finish() }
+        // Leaving during the preflight stops the purchase before Apple's sheet.
+        Button("Get Started") { buying?.cancel(); finish() }
             .font(.body)
             .foregroundStyle(Theme.secondary)
             .lineLimit(typeSize.isAccessibilitySize ? nil : 1)
@@ -287,7 +290,7 @@ struct OnboardingView: View {
         // Stacked at the accessibility sizes, where three links side by side break mid word.
         let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 0)) : AnyLayout(HStackLayout(spacing: 8))
         return layout {
-            link("Restore") { restore() }
+            link("Restore") { restore() }.disabled(working)
             link("Terms") { openURL(Links.terms) }
             link("Privacy") { openURL(Links.privacy) }
         }
@@ -326,17 +329,19 @@ struct OnboardingView: View {
         }
         working = true
         message = nil
-        Task {
+        buying = Task {
             let outcome = await subscription.purchase(plan)
             working = false
             switch outcome {
-            case .purchased: finish()
+            case .purchased, .alreadyOwned: finish()
             case .cancelled: break
             case .pending: message = String(localized: "Your purchase is waiting for approval")
             case .unconfirmed: message = String(localized: "Your purchase went through. Tap Restore if the patterns stay locked.")
             case .failed: message = String(localized: "The purchase did not go through")
-            // The free week was already used: the page now shows what is charged today. Nothing was bought.
-            case .termsChanged: break
+            case .unavailable: message = String(localized: "The App Store could not be reached. Try again when you are online.")
+            // The page now shows the live terms and nothing was bought. A spent free week is said out loud, so a
+            // second tap knows it is charged today.
+            case .termsChanged: message = subscription.spentTrialMessage(plan)
             }
         }
     }

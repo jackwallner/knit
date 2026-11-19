@@ -93897,6 +93897,305 @@
         }
       }
     },
+    "This Apple Account already had its free week.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حساب Apple هذا استخدم أسبوعه المجاني من قبل."
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "এই Apple অ্যাকাউন্ট আগেই তার বিনামূল্যের সপ্তাহ নিয়েছে।"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquest compte d’Apple ja ha fet servir la setmana gratuïta."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tento účet Apple už svůj týden zdarma využil."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denne Apple-konto har allerede haft sin gratis uge."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieser Apple Account hatte seine Gratiswoche schon."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Αυτός ο λογαριασμός Apple έχει ήδη χρησιμοποιήσει τη δωρεάν εβδομάδα του."
+          }
+        },
+        "en-AU": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Apple Account already had its free week."
+          }
+        },
+        "en-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Apple Account already had its free week."
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Apple Account already had its free week."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta cuenta de Apple ya ha usado su semana gratis."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta cuenta de Apple ya usó su semana gratis."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tämä Apple-tili on jo käyttänyt ilmaisen viikkonsa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce compte Apple a déjà profité de sa semaine gratuite."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce compte Apple a déjà profité de sa semaine gratuite."
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "આ Apple એકાઉન્ટે તેનું મફત અઠવાડિયું પહેલેથી વાપર્યું છે."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "חשבון Apple הזה כבר ניצל את השבוע החינמי שלו."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह Apple खाता अपना मुफ़्त सप्ताह पहले ही ले चुका है।"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovaj Apple račun već je iskoristio besplatni tjedan."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ez az Apple-fiók már kihasználta az ingyenes hetét."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akun Apple ini sudah memakai minggu gratisnya."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questo account Apple ha già usato la sua settimana gratuita."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このApple Accountは無料の1週間をすでに使っています。"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಈ Apple ಖಾತೆ ಈಗಾಗಲೇ ತನ್ನ ಉಚಿತ ವಾರವನ್ನು ಬಳಸಿದೆ."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 Apple 계정은 이미 무료 1주를 사용했습니다."
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ഈ Apple അക്കൗണ്ട് സൗജന്യ ആഴ്ച ഇതിനകം ഉപയോഗിച്ചു."
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "या Apple खात्याने आपला मोफत आठवडा आधीच वापरला आहे."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akaun Apple ini sudah menggunakan minggu percumanya."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denne Apple-kontoen har allerede hatt sin gratis uke."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dit Apple Account heeft zijn gratis week al gehad."
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଏହି Apple ଆକାଉଣ୍ଟ ଏହାର ମାଗଣା ସପ୍ତାହ ପୂର୍ବରୁ ବ୍ୟବହାର କରିସାରିଛି।"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਇਸ Apple ਖਾਤੇ ਨੇ ਆਪਣਾ ਮੁਫ਼ਤ ਹਫ਼ਤਾ ਪਹਿਲਾਂ ਹੀ ਵਰਤ ਲਿਆ ਹੈ।"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To konto Apple wykorzystało już swój darmowy tydzień."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta Conta Apple já usou a semana grátis."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta Conta Apple já usou a semana gratuita."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acest cont Apple și-a folosit deja săptămâna gratuită."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Этот Apple Account уже использовал бесплатную неделю."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tento účet Apple už svoj týždeň zadarmo využil."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta Apple račun je brezplačni teden že porabil."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Det här Apple-kontot har redan haft sin gratisvecka."
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "இந்த Apple கணக்கு அதன் இலவச வாரத்தை ஏற்கெனவே பயன்படுத்திவிட்டது."
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ఈ Apple ఖాతా తన ఉచిత వారాన్ని ఇప్పటికే వాడుకుంది."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บัญชี Apple นี้ใช้สัปดาห์ฟรีไปแล้ว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu Apple Hesabı ücretsiz haftasını zaten kullandı."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цей Apple Account уже використав безкоштовний тиждень."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یہ Apple اکاؤنٹ اپنا مفت ہفتہ پہلے ہی استعمال کر چکا ہے۔"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tài khoản Apple này đã dùng tuần miễn phí rồi."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Apple 账户已用过免费的一周。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Apple 帳號已使用過免費一週。"
+          }
+        }
+      }
+    },
     "This pattern was corrected": {
       "extractionState": "manual",
       "localizations": {
