@@ -9,3 +9,4 @@
 - [raw/research-competitors.md](raw/research-competitors.md): competitor, review and pricing research, 16 findings R-01 to R-16.
 - [2026-11-17-gift-knitter-walkthrough.md](2026-11-17-gift-knitter-walkthrough.md): one pass through build 23 as a seasonal gift knitter, 19 findings and takeaways, screenshots in `raw/2026-11-17-gift-knitter/`. Documented only, nothing fixed.
 - `raw/tiktok-warmup.md`: TikTok account warm-up research and 14 day plan, 12 findings T-01 to T-12. Kept on the Mac and out of this public repo (it names an unregistered handle); the ledger carries its findings.
+- [2026-11-19-council-flow-audit.md](2026-11-19-council-flow-audit.md): council pass (Opus, Fable, Sol 6.2, Flash outside) through build 25 as a holiday knitter, round scores and what build 26 fixed.
