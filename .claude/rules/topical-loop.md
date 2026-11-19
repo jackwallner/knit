@@ -48,7 +48,7 @@ plan (palette and silhouette included), so changing or removing a record never t
 - Trending shelf: `scripts/remote.py feature <id> "<tag>" [--at N]` and `unfeature <id>`. An id is a built-in
   design's raw value or a colorwork id (collection or published); older builds skip ids they do not know.
 - Onboarding trial plan: RevenueCat, offering `default`, metadata `onboarding_plan` = `monthly` (the default)
-  or `yearly`. Read on every offerings fetch; the paywall always leads with yearly.
+  or `yearly`. Read on every offerings fetch; the paywall always leads with yearly, as on every fleet app.
 
 ## Record format (`requires: 1`)
 
@@ -80,7 +80,8 @@ plan (palette and silhouette included), so changing or removing a record never t
   cannot have a 1-stitch point or a tier wider than 5: use a 4-wide repeat for small pointed motifs. Every plan
   with chart rows says how to carry and catch the floats.
 - `free`: off unless Jack asks. The Round Raccoon Beanie is free as the standing TikTok hook (Jack, 2026-11-15:
-  "everything at launch, be smart"). Everything else is behind the subscription.
+  "everything at launch, be smart"). The English promotional texts name it ("A raccoon hat"); edit them
+  (no review needed) before it is pulled. Everything else is behind the subscription.
 - `requires`: bump `Topical.featureLevel` and the record's `requires` together when a field changes meaning,
   so older apps skip what they cannot draw instead of misreading it.
 

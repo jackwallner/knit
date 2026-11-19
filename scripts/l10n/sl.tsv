@@ -342,3 +342,19 @@
 342	Števec vrst, PDF-ji in zaloga ostanejo brezplačni
 343	one=%lld zanka po tej vrsti|two=%lld zanki po tej vrsti|few=%lld zanke po tej vrsti|other=%lld zank po tej vrsti
 344	one=%lld zanka po tem krogu|two=%lld zanki po tem krogu|few=%lld zanke po tem krogu|other=%lld zank po tem krogu
+345	Preizkusi brezplačno Vzorce Ravel
+346	Pridobi Vzorce Ravel
+347	Začni %lld-dnevni brezplačni preizkus
+348	Začni %lld-dnevni brezplačni preizkus
+349	Vsak vzorec napisan po vaši velikosti in preji
+350	Novi sezonski dizajni skozi vse leto
+351	Vzorec, ki ste ga začeli, ostane vaš
+352	%lld dni brezplačno, nato %@. Samodejno se obnavlja, dokler ne prekličete.
+353	%@, zaračunano danes. Samodejno se obnavlja, dokler ne prekličete.
+354	%lld dni brezplačno, nato zaračunavanje letno.
+355	%lld dni brezplačno, nato zaračunavanje mesečno.
+356	Zaračunavanje letno.
+357	Zaračunavanje mesečno.
+358	Eno plačilo. Brez obnavljanja.
+359	Prihranite %lld %%
+360	Velikosti za vse, od dojenčka do odraslega

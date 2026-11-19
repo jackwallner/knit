@@ -32,7 +32,7 @@ final class StoreTests: XCTestCase {
         XCTAssertEqual(try offer(.monthly).priceLine, "$6.99 a month")
         XCTAssertEqual(try offer(.lifetime).priceLine, "$79.99 once")
         XCTAssertEqual(store.offers.map(\.trialDays), [7, 7, 0])
-        XCTAssertEqual(try offer(.yearly).action, "Try Free for 7 Days")
+        XCTAssertEqual(try offer(.yearly).action, "Start 7-Day Free Trial")
         XCTAssertEqual(try offer(.lifetime).action, "Buy Lifetime")
     }
 

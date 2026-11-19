@@ -29,12 +29,21 @@ struct RootView: View {
             instant.disablesAnimations = true
             withTransaction(instant) { onboarding = Self.showsOnboarding(onboarded: onboarded) }
         }
+        .task {
+            // Fetched at launch, while onboarding is up, so a knitter who came for a seasonal design
+            // finds it on the first visit. Seeded and test runs keep the shipped lists, so captures do not shift.
+            let arguments = ProcessInfo.processInfo.arguments
+            guard !arguments.contains("-SeedDemo"), !arguments.contains("-UITesting") else { return }
+            async let designs: Void = TopicalStore.shared.refresh()
+            await Trending.shared.refresh()
+            await designs
+        }
         .fullScreenCover(isPresented: $onboarding) {
             OnboardingView {
                 onboarded = true
                 onboarding = false
-                // A trial just started: open on the patterns it paid for, not an empty project list.
-                if SubscriptionService.shared.isPro { tab = 1 }
+                // Everyone arrives for the patterns, trial or not: open there, not on an empty project list.
+                tab = 1
             }
         }
         #if DEBUG

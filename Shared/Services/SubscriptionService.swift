@@ -32,6 +32,10 @@ struct Offer: Identifiable, Equatable, Sendable {
     let price: String
     /// Days of free trial this customer can still claim. 0 for none.
     let trialDays: Int
+    /// The price as a number, for the yearly plan's saving. 0 when unknown.
+    var amount: Decimal = 0
+    /// Yearly's price over twelve months, in the store's currency, shown small under the billed amount as on Mahj.
+    var perMonth: String? = nil
 
     var termName: String {
         switch term {
@@ -58,32 +62,58 @@ struct Offer: Identifiable, Equatable, Sendable {
         }
     }
 
+    /// The paywall button, worded as on every fleet paywall (Mahj, Cribbity, Bridge).
     var action: String {
         if term == .lifetime { return String(localized: "Buy Lifetime", comment: "Paywall button for the one-time purchase") }
         return trialDays > 0
-            ? String(localized: "Try Free for \(trialDays) Days", comment: "Paywall button; the argument is the number of free trial days")
+            ? String(localized: "Start \(trialDays)-Day Free Trial", comment: "Paywall button, title case; the argument is the number of free trial days")
             : String(localized: "Subscribe", comment: "Paywall button")
     }
 
-    /// The terms under the button, in sentences a translator can shape freely: a free-days sentence (when there is a trial),
-    /// the price, and the renewal terms.
+    /// The onboarding trial button: the paywall's words in sentence case, as on the fleet's trial pages.
+    var trialAction: String {
+        trialDays > 0
+            ? String(localized: "Start \(trialDays)-day free trial", comment: "Onboarding trial button; the argument is the number of free trial days")
+            : String(localized: "Subscribe", comment: "Paywall button")
+    }
+
+    /// One line of terms over the button, the fleet's approved point-of-purchase copy: trial length, price,
+    /// that it renews. An account that already had its free week is charged today, and says so (3.1.2).
     var disclosure: String {
         if term == .lifetime {
             return String(localized: "One payment of \(price). Every pattern is yours for good.", comment: "Lifetime terms; the argument is a localized price")
         }
-        let renewal = String(localized: "Renews until you cancel in Settings. A pattern you cast on is yours to keep.", comment: "Subscription terms, required by App Review")
-        let charge = trialDays > 0
-            ? String(localized: "Then \(priceLine).", comment: "After the free trial; the argument is a price such as $39.99 a year")
-            : String(localized: "\(priceLine).", comment: "Subscription price as a sentence; the argument is a price such as $39.99 a year")
-        let free = trialDays > 0 ? [String(localized: "\(trialDays) days free.", comment: "Free trial length; the argument is a number of days")] : []
-        return (free + [charge, renewal]).joined(separator: " ")
+        return trialDays > 0
+            ? String(localized: "\(trialDays) days free, then \(priceLine). Auto-renews until canceled.", comment: "Trial terms; the arguments are the trial days and a price such as $6.99 a month")
+            : String(localized: "\(priceLine), billed today. Auto-renews until canceled.", comment: "Terms with no trial; the argument is a price such as $6.99 a month")
+    }
+
+    /// The line under a plan's name on the paywall.
+    var detail: String {
+        switch term {
+        case .lifetime: String(localized: "One payment. Nothing renews.", comment: "Under the Lifetime plan")
+        case .yearly: trialDays > 0
+            ? String(localized: "\(trialDays) days free, then billed yearly.", comment: "Under the Yearly plan; the argument is the trial days")
+            : String(localized: "Billed yearly.", comment: "Under the Yearly plan, no trial")
+        case .monthly: trialDays > 0
+            ? String(localized: "\(trialDays) days free, then billed monthly.", comment: "Under the Monthly plan; the argument is the trial days")
+            : String(localized: "Billed monthly.", comment: "Under the Monthly plan, no trial")
+        }
+    }
+
+    /// The yearly plan's saving over twelve months of the monthly one, in whole percent. nil when it saves nothing
+    /// or a price is unknown.
+    static func saving(yearly: Decimal, monthly: Decimal) -> Int? {
+        guard yearly > 0, monthly > 0 else { return nil }
+        let percent = NSDecimalNumber(decimal: (1 - yearly / (monthly * 12)) * 100).doubleValue.rounded(.down)
+        return percent >= 1 ? Int(percent) : nil
     }
 
     #if DEBUG
     static let samples = [
-        Offer(id: RevenueCatConfig.yearly, term: .yearly, price: "$39.99", trialDays: 7),
-        Offer(id: RevenueCatConfig.monthly, term: .monthly, price: "$6.99", trialDays: 7),
-        Offer(id: RevenueCatConfig.lifetime, term: .lifetime, price: "$79.99", trialDays: 0),
+        Offer(id: RevenueCatConfig.yearly, term: .yearly, price: "$39.99", trialDays: 7, amount: 39.99, perMonth: "$3.33"),
+        Offer(id: RevenueCatConfig.monthly, term: .monthly, price: "$6.99", trialDays: 7, amount: 6.99),
+        Offer(id: RevenueCatConfig.lifetime, term: .lifetime, price: "$79.99", trialDays: 0, amount: 79.99),
     ]
     #endif
 }
@@ -93,7 +123,8 @@ struct Offer: Identifiable, Equatable, Sendable {
 @Observable
 final class SubscriptionService {
     /// `unconfirmed`: the store took the payment but the entitlement has not arrived yet.
-    enum Outcome: Equatable { case purchased, cancelled, pending, unconfirmed, failed }
+    /// `termsChanged`: the free week was already used, so the screen redrew with today's terms and nothing was bought.
+    enum Outcome: Equatable { case purchased, cancelled, pending, unconfirmed, failed, termsChanged }
     enum Restored: Equatable { case found, notFound, cancelled, failed }
 
     static let shared = SubscriptionService()
@@ -150,12 +181,16 @@ final class SubscriptionService {
         offers = available
             .map { package in
                 let product = package.storeProduct
-                let canTrial = eligibility[package]?.status == .eligible
+                // Unknown reads as eligible, as on Mahj: the trial is offered unless StoreKit says this account
+                // already had its free week. Hiding it on an unanswered check costs eligible people the trial.
+                let canTrial = eligibility[package]?.status != .ineligible
                 return Offer(
                     id: product.productIdentifier,
                     term: terms[package.packageType] ?? .monthly,
                     price: product.localizedPriceString,
-                    trialDays: canTrial ? Self.trialDays(product.introductoryDiscount) : 0
+                    trialDays: canTrial ? Self.trialDays(product.introductoryDiscount) : 0,
+                    amount: product.price,
+                    perMonth: package.packageType == .annual ? product.localizedPricePerMonth : nil
                 )
             }
             .sorted { $0.term.rawValue < $1.term.rawValue }
@@ -181,7 +216,8 @@ final class SubscriptionService {
                     }
                     days = intro.period.value * unit
                 }
-                return Offer(id: product.id, term: terms[product.id] ?? .monthly, price: product.displayPrice, trialDays: days)
+                let perMonth = terms[product.id] == .yearly ? (product.price / 12).formatted(product.priceFormatStyle) : nil
+                return Offer(id: product.id, term: terms[product.id] ?? .monthly, price: product.displayPrice, trialDays: days, amount: product.price, perMonth: perMonth)
             }
             .sorted { $0.term.rawValue < $1.term.rawValue }
     }
@@ -212,6 +248,14 @@ final class SubscriptionService {
             #else
             return .failed
             #endif
+        }
+        // Mahj's preflight: the page promised a free week, so ask StoreKit again at the tap. An account that already
+        // had one would otherwise meet a charge on Apple's sheet under "7 days free" (3.1.2). The screen redraws
+        // with today's terms and nothing is bought. Unknown still reads as eligible.
+        if offer.trialDays > 0,
+           await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: [package])[package]?.status == .ineligible {
+            await loadOffers()
+            return .termsChanged
         }
         do {
             let result = try await Purchases.shared.purchase(package: package)

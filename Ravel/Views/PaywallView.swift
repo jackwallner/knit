@@ -4,6 +4,7 @@ import SwiftUI
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
+    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var picked: Offer.Term
     @State private var working = false
     @State private var message: String?
@@ -14,7 +15,22 @@ struct PaywallView: View {
     private var offer: Offer? { subscription.offers.first { $0.term == picked } ?? subscription.offers.first }
 
     var body: some View {
-        VStack(spacing: 0) {
+        // The fleet paywall: the pitch and plans scroll, the terms and the button stay pinned above the home
+        // indicator, so no text size or language can push the price or the purchase off screen.
+        ScrollView {
+            VStack(spacing: 20) {
+                hero.frame(height: 72)
+                pitch
+                benefits
+                if subscription.offers.isEmpty { unavailable } else { plans }
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 16)
+            .frame(maxWidth: 540)
+            .frame(maxWidth: .infinity)
+        }
+        .scrollBounceBehavior(.basedOnSize)
+        .safeAreaInset(edge: .top, spacing: 0) {
             HStack {
                 Spacer()
                 Button { dismiss() } label: {
@@ -26,27 +42,10 @@ struct PaywallView: View {
                 .accessibilityLabel("Close")
             }
             .padding(.horizontal, 8)
-
-            // At large text sizes the page scrolls and nothing truncates. On an iPad the page keeps a phone's width.
-            ViewThatFits(in: .vertical) {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 0)
-                    hero.frame(minHeight: 44, idealHeight: 44, maxHeight: 300)
-                    pitch
-                    // The tagline never sits on the plans, whatever height the hero takes in a language.
-                    Spacer(minLength: 24)
-                    store
-                }
-                ScrollView {
-                    VStack(spacing: 28) {
-                        hero.frame(height: 96)
-                        pitch
-                        store
-                    }
-                }
-            }
-            .frame(maxWidth: 540, maxHeight: 900)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Theme.paper)
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if let offer { purchase(offer).frame(maxWidth: 540).frame(maxWidth: .infinity).background(Theme.paper) }
         }
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
@@ -85,10 +84,10 @@ struct PaywallView: View {
 
     private var pitch: some View {
         VStack(spacing: 10) {
-            Text("Ravel Patterns")
-                .font(Theme.display(34, weight: .semibold))
-                .minimumScaleFactor(0.6)
-                .lineLimit(1)
+            Text("Get Ravel Patterns")
+                .font(Theme.display(32, weight: .semibold))
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
             // What the purchase buys, in one line (App Review 3.1.2).
             Text("Every design in the library, written to your measurements and yarn")
@@ -97,79 +96,125 @@ struct PaywallView: View {
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(.horizontal, 28)
-        .padding(.top, 20)
+        .padding(.horizontal, 8)
     }
 
-    @ViewBuilder private var store: some View {
-        if subscription.offers.isEmpty { unavailable } else { plans }
+    /// Reassurance first, as on Mahj's paywall: what stays free, then what the plan adds.
+    private var benefits: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            point("Row counter, PDFs and stash stay free")
+            point("Hats, mittens, scarves and sweaters")
+            point("New seasonal designs through the year")
+            point("A pattern you cast on is yours to keep")
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 8)
+    }
+
+    private func point(_ text: LocalizedStringKey) -> some View {
+        Label { Text(text) } icon: {
+            Image(systemName: "checkmark").font(.body.weight(.semibold)).foregroundStyle(Color.accentColor)
+        }
+        .font(.body)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+
+    /// Yearly's saving over twelve months of monthly, for its badge.
+    private var saving: Int? {
+        guard let yearly = subscription.offers.first(where: { $0.term == .yearly }),
+              let monthly = subscription.offers.first(where: { $0.term == .monthly }) else { return nil }
+        return Offer.saving(yearly: yearly.amount, monthly: monthly.amount)
     }
 
     private var plans: some View {
         VStack(spacing: 10) {
             ForEach(subscription.offers) { option in
                 let isOn = option.id == offer?.id
-                Button { picked = option.term } label: {
-                    ViewThatFits(in: .horizontal) {
-                        HStack {
-                            Text(option.termName).font(.headline)
-                            Spacer(minLength: 12)
-                            Text(option.priceLine).font(.body).monospacedDigit()
-                        }
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(option.termName).font(.headline)
-                            Text(option.priceLine).font(.body).monospacedDigit()
-                        }
+                Button { picked = option.term } label: { card(option, isOn: isOn) }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(isOn ? .isSelected : [])
+                    .accessibilityIdentifier("paywall.\(option.slug)")
+            }
+        }
+    }
+
+    /// A plan: its name (yearly with the one badge on the page), what it bills under it, the billed price beside it.
+    private func card(_ option: Offer, isOn: Bool) -> some View {
+        let name = HStack(spacing: 8) {
+            Text(option.termName).font(.headline)
+            if option.term == .yearly, let saving {
+                Text("Save \(saving)%")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(Color.accentColor)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(Color.accentColor.opacity(0.14), in: Capsule())
+            }
+        }
+        let detail = Text(option.detail).font(.subheadline).foregroundStyle(Theme.secondary)
+        // Yearly's per-month figure sits small under the billed amount, which stays the larger (as on Mahj).
+        let price = VStack(alignment: .trailing, spacing: 2) {
+            Text(option.priceLine).font(.body.weight(.semibold)).monospacedDigit()
+            if let perMonth = option.perMonth {
+                Text("\(perMonth) a month").font(.caption).foregroundStyle(Theme.secondary).monospacedDigit()
+            }
+        }
+        // Price beside the name, the detail wrapping under it; stacked only at the accessibility sizes.
+        return Group {
+            if typeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 3) { name; price; detail.fixedSize(horizontal: false, vertical: true) }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            } else {
+                HStack(alignment: .center, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 3) { name; detail.fixedSize(horizontal: false, vertical: true) }
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .foregroundStyle(.primary)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 8)
-                    .frame(minHeight: 54)
-                    .background(.primary.opacity(isOn ? 0.09 : 0.04), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                    .overlay { RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(.primary, lineWidth: isOn ? 2 : 0) }
-                }
-                .buttonStyle(.plain)
-                .accessibilityAddTraits(isOn ? .isSelected : [])
-                .accessibilityIdentifier("paywall.\(option.slug)")
-            }
-
-            if let offer {
-                Button { buy(offer) } label: {
-                    Group {
-                        if working { ProgressView().tint(Theme.onAccent) } else { Text(offer.action) }
-                    }
-                    .font(.headline)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                    .padding(.horizontal, 16)
-                    .foregroundStyle(Theme.onAccent)
-                    .frame(maxWidth: .infinity, minHeight: 54)
-                    .background(Color.accentColor, in: Capsule())
-                }
-                .disabled(working)
-                .padding(.top, 8)
-                .accessibilityIdentifier("paywall.buy")
-
-                // Every plan's terms are laid out, so the tallest holds the space and
-                // picking a plan never moves the rows above.
-                ZStack {
-                    ForEach(subscription.offers) { option in
-                        let isOn = option.id == offer.id
-                        Text(option.disclosure)
-                            .font(.footnote)
-                            .foregroundStyle(Theme.secondary)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .opacity(isOn ? 1 : 0)
-                            .accessibilityHidden(!isOn)
-                    }
+                    price.fixedSize()
                 }
             }
+        }
+        .foregroundStyle(.primary)
+        .padding(.horizontal, 18)
+        .padding(.vertical, 12)
+        .frame(minHeight: 64)
+        .background(.primary.opacity(isOn ? 0.09 : 0.04), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay { RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(.primary, lineWidth: isOn ? 2 : 0) }
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    /// Pinned: the picked plan's terms, then the button that charges them, then the legal links.
+    private func purchase(_ offer: Offer) -> some View {
+        VStack(spacing: 10) {
+            // Every plan's terms are laid out, so the tallest holds the space and picking a plan never moves the button.
+            ZStack {
+                ForEach(subscription.offers) { option in
+                    let isOn = option.id == offer.id
+                    Text(option.disclosure)
+                        .font(.footnote)
+                        .foregroundStyle(Theme.secondary)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .opacity(isOn ? 1 : 0)
+                        .accessibilityHidden(!isOn)
+                }
+            }
+            Button { buy(offer) } label: {
+                Group {
+                    if working { ProgressView().tint(Theme.onAccent) } else { Text(offer.action) }
+                }
+                .font(.headline)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .padding(.horizontal, 16)
+                .foregroundStyle(Theme.onAccent)
+                .frame(maxWidth: .infinity, minHeight: 54)
+                .background(Color.accentColor, in: Capsule())
+            }
+            .disabled(working)
+            .accessibilityIdentifier("paywall.buy")
             footer
         }
         .padding(.horizontal, 20)
-        .padding(.bottom, 8)
+        .padding(.top, 12)
     }
 
     private var unavailable: some View {
@@ -220,6 +265,8 @@ struct PaywallView: View {
             case .pending: message = String(localized: "Your purchase is waiting for approval")
             case .unconfirmed: message = String(localized: "Your purchase went through. Tap Restore if the patterns stay locked.")
             case .failed: message = String(localized: "The purchase did not go through")
+            // The free week was already used: the page now shows what is charged today. Nothing was bought.
+            case .termsChanged: break
             }
         }
     }

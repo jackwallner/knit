@@ -15,7 +15,7 @@ final class PaywallUITests: XCTestCase {
     private func openPaywall() {
         let unlock = app.buttons["design.castOn"]
         XCTAssertTrue(unlock.waitForExistence(timeout: 15))
-        XCTAssertEqual(unlock.label, "Unlock Patterns")
+        XCTAssertEqual(unlock.label, "Try Free for 7 Days")
         unlock.tap()
         XCTAssertTrue(app.buttons["paywall.yearly"].waitForExistence(timeout: 15))
     }
@@ -30,10 +30,12 @@ final class PaywallUITests: XCTestCase {
 
     func testEachPlanStatesItsPriceBeforeTheButton() {
         openPaywall()
-        XCTAssertEqual(app.buttons["paywall.buy"].label, "Try Free for 7 Days")
-        XCTAssertTrue(app.staticTexts["7 days free. Then $39.99 a year. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
+        // Yearly leads, as on every fleet paywall, with the one badge on the page.
+        XCTAssertEqual(app.buttons["paywall.buy"].label, "Start 7-Day Free Trial")
+        XCTAssertTrue(app.staticTexts["7 days free, then $39.99 a year. Auto-renews until canceled."].exists)
+        XCTAssertTrue(app.staticTexts["Save 52%"].exists)
         app.buttons["paywall.monthly"].tap()
-        XCTAssertTrue(app.staticTexts["7 days free. Then $6.99 a month. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
+        XCTAssertTrue(app.staticTexts["7 days free, then $6.99 a month. Auto-renews until canceled."].exists)
         app.buttons["paywall.lifetime"].tap()
         XCTAssertEqual(app.buttons["paywall.buy"].label, "Buy Lifetime")
         XCTAssertTrue(app.staticTexts["One payment of $79.99. Every pattern is yours for good."].exists)
@@ -56,6 +58,6 @@ final class PaywallUITests: XCTestCase {
         openPaywall()
         app.buttons["Close"].tap()
         XCTAssertTrue(app.buttons["design.castOn"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.buttons["design.castOn"].label, "Unlock Patterns")
+        XCTAssertEqual(app.buttons["design.castOn"].label, "Try Free for 7 Days")
     }
 }

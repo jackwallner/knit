@@ -32,22 +32,21 @@ final class OnboardingUITests: XCTestCase {
         app.launchArguments += ["-OnboardingPlan", "yearly"]
         app.launch()
         _ = walkToTrial()
-        XCTAssertTrue(app.staticTexts["7 days free. Then $39.99 a year. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
+        XCTAssertTrue(app.staticTexts["7 days free, then $39.99 a year. Auto-renews until canceled."].exists)
     }
 
     func testButtonKeepsItsFrameAndStartsTheMonthlyTrial() {
         let frames = walkToTrial()
         XCTAssertEqual(Set(frames.map { "\($0)" }).count, 1, "\(frames)")
         let next = app.buttons["onboarding.next"]
-        XCTAssertEqual(next.label, "Try Free for 7 Days")
-        XCTAssertTrue(app.staticTexts["7 days free. Then $6.99 a month. Renews until you cancel in Settings. A pattern you cast on is yours to keep."].exists)
+        XCTAssertEqual(next.label, "Start 7-day free trial")
+        XCTAssertTrue(app.staticTexts["7 days free, then $6.99 a month. Auto-renews until canceled."].exists)
         for link in ["Restore", "Terms", "Privacy"] {
             let button = app.buttons[link]
             XCTAssertTrue(button.exists && app.windows.firstMatch.frame.contains(button.frame), "\(link) \(button.frame)")
         }
         next.tap()
         XCTAssertTrue(next.waitForNonExistence(timeout: 15))
-        app.tabBars.buttons["Patterns"].tap()
         let design = app.buttons["design.raglanPullover"]
         XCTAssertTrue(app.buttons["free.garterScarf"].waitForExistence(timeout: 10))
         for _ in 0..<12 where !design.isHittable { app.swipeUp() }
@@ -58,7 +57,8 @@ final class OnboardingUITests: XCTestCase {
     func testGetStartedKeepsTheFreeApp() {
         _ = walkToTrial()
         app.buttons["onboarding.skip"].tap()
-        XCTAssertTrue(app.buttons["projects.castOn"].waitForExistence(timeout: 10))
+        // Everyone came for the patterns: the free way out opens on them too.
+        XCTAssertTrue(app.buttons["free.garterScarf"].waitForExistence(timeout: 10))
         XCTAssertFalse(app.buttons["onboarding.next"].exists)
     }
 }

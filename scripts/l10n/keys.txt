@@ -342,3 +342,19 @@ Hats, mittens, scarves
 Row counter, PDFs and stash stay free
 %lld stitches after this row|plural
 %lld stitches after this round|plural
+Try Ravel Patterns free
+Get Ravel Patterns
+Start %lld-day free trial
+Start %lld-Day Free Trial
+Every pattern written to your size and yarn
+New seasonal designs through the year
+A pattern you cast on is yours to keep
+%lld days free, then %@. Auto-renews until canceled.
+%@, billed today. Auto-renews until canceled.
+%lld days free, then billed yearly.
+%lld days free, then billed monthly.
+Billed yearly.
+Billed monthly.
+One payment. Nothing renews.
+Save %lld%%
+Sized for anyone, baby to adult

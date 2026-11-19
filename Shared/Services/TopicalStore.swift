@@ -51,7 +51,11 @@ final class TopicalStore {
         guard (try? JSONDecoder().decode(Topical.Listing.self, from: data)) != nil else { return }
         defaults.set(data, forKey: Self.cacheKey)
         defaults.set(now, forKey: Self.fetchedKey)
-        // Kept for the next launch: swapping the shelf under a knitter who is looking at it shifts the whole screen.
+        // A shelf already showing is swapped on the next launch, so it never shifts under a knitter. A first install
+        // has nothing to shift, and someone who came for a seasonal design must find it on the first visit.
+        guard published.isEmpty else { return }
+        items = Topical.decode(data, now: now)
+        published = Topical.parse(data).compactMap(\.topical)
     }
 
     /// The colorwork designs the library ships with: the record format the site uses, bundled, with no season.

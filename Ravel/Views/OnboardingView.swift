@@ -49,6 +49,10 @@ struct OnboardingView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
+        // Reaching the trial with no offer (offline at launch): ask the store again rather than end the pitch.
+        .onChange(of: page) { _, page in
+            if page == 2, plan == nil, !subscription.isLoading { Task { await subscription.loadOffers() } }
+        }
         .onChange(of: subscription.isPro) { _, isPro in if isPro { finish() } }
     }
 
@@ -56,11 +60,13 @@ struct OnboardingView: View {
     private var pageWithTerms: some View {
         VStack(spacing: 0) {
             if onTrial && typeSize.isAccessibilitySize {
-                // Large text: the price comes straight after the title, ahead of anything that could push it off screen.
+                // Large text: the page scrolls, and the price stays pinned over the button in the bar (Mahj found a
+                // free week sold with no price on screen when it scrolled).
                 VStack(spacing: 20) {
                     trialTitle
-                    terms
                     points
+                    freeExit
+                    footer
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 16)
@@ -87,7 +93,7 @@ struct OnboardingView: View {
             }
         case 1:
             screen("Patterns written to your size") {
-                Garment(silhouette: .sweater, yarn: .indigo, progress: knitted)
+                Garment(silhouette: .hat, yarn: .indigo, progress: knitted)
                     .padding(.horizontal, 40)
                     .motion(.linear(duration: 0.6), value: knitted)
                     .onAppear { knitted = 1 }
@@ -138,7 +144,13 @@ struct OnboardingView: View {
         .padding(.horizontal, 24)
     }
 
-    private let trialTitleKey: LocalizedStringKey = "Unlock Patterns"
+    /// Trial-forward, as on every fleet trial page ("Try Mahj+ free"). An account that already had its free week
+    /// is charged today, so its page promises no trial.
+    private var trialTitleKey: LocalizedStringKey {
+        // No free week left, or no offer could load: the page promises no trial.
+        if let plan { return plan.trialDays == 0 ? "Get Ravel Patterns" : "Try Ravel Patterns free" }
+        return subscription.isLoading ? "Try Ravel Patterns free" : "Get Ravel Patterns"
+    }
 
     private var trialTitle: some View {
         Text(trialTitleKey)
@@ -149,9 +161,13 @@ struct OnboardingView: View {
     }
 
     private var points: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            point("Hats, mittens, scarves and sweaters")
+        // What stays free first, as on Mahj's proven page, then why a week covers a gift (it is kept), then what
+        // the trial opens. Four rows, so a 667 point phone in German keeps every line.
+        VStack(alignment: .leading, spacing: 12) {
             point("Row counter, PDFs and stash stay free")
+            point("A pattern you cast on is yours to keep")
+            point("Hats, mittens, scarves and sweaters")
+            point("Sized for anyone, baby to adult")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -161,6 +177,7 @@ struct OnboardingView: View {
             Image(systemName: "checkmark").font(.body.weight(.semibold)).foregroundStyle(Color.accentColor)
         }
         .font(.body)
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     // MARK: - The bar
@@ -169,14 +186,15 @@ struct OnboardingView: View {
         if onTrial {
             VStack(spacing: 10) {
                 if let plan {
-                    // The plan by name, its price as the largest line about money on the page, and the full terms.
-                    VStack(spacing: 4) {
-                        Text(verbatim: "\(String(localized: "Ravel Patterns")) · \(plan.termName)")
-                            .font(.subheadline.weight(.semibold))
+                    // The billed amount is the most conspicuous thing about price on the page (App Review 3.1.2(c)
+                    // rejected Mahj 1.3.0 when the trial outshone it); one line of terms under it. Cribbity's
+                    // approved layout, as on every fleet trial page.
+                    VStack(spacing: 2) {
                         Text(plan.priceLine)
-                            .font(.title3.weight(.semibold))
+                            .font(Theme.display(22, weight: .semibold))
                         Text(plan.disclosure)
-                            .font(.subheadline)
+                            .font(.caption)
+                            .foregroundStyle(Theme.secondary)
                     }
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -198,23 +216,16 @@ struct OnboardingView: View {
     /// so the button keeps one frame from the first page to the last.
     private var bar: some View {
         VStack(spacing: 0) {
-            // Above the free way out, so the button below keeps its frame whether or not they show.
-            if !typeSize.isAccessibilitySize {
-                terms.padding(.bottom, 12)
-            }
             VStack(spacing: 10) {
-                Button("Get Started") { finish() }
-                    .font(.body)
-                    .foregroundStyle(Theme.secondary)
-                    .lineLimit(1)
-                    .frame(minHeight: 44)
-                    .opacity(declinable ? 1 : 0)
-                    .allowsHitTesting(declinable)
-                    .accessibilityHidden(!declinable)
-                    .accessibilityIdentifier("onboarding.skip")
                 dots
+                // At the accessibility sizes the free way out and the legal links scroll with the page, as on Mahj,
+                // so the pinned bar is only the price and the button.
+                if !typeSize.isAccessibilitySize { freeExit }
             }
             .frame(maxWidth: .infinity)
+            // The fleet's order: the free way out, then the price right over the button that charges it. The bar grows
+            // upward from the bottom, so the button keeps its frame on every page. Pinned at every text size.
+            terms.padding(.top, 8)
 
             Button(action: primary) {
                 Group {
@@ -232,16 +243,33 @@ struct OnboardingView: View {
             .padding(.top, 16)
             .accessibilityIdentifier("onboarding.next")
 
-            footer
-                .padding(.top, 4)
-                .opacity(onTrial ? 1 : 0)
-                .allowsHitTesting(onTrial)
-                .accessibilityHidden(!onTrial)
+            if !typeSize.isAccessibilitySize {
+                footer
+                    .padding(.top, 4)
+                    .opacity(onTrial ? 1 : 0)
+                    .allowsHitTesting(onTrial)
+                    .accessibilityHidden(!onTrial)
+            }
         }
         .padding(.horizontal, 24)
+        .padding(.top, 8)
         .padding(.bottom, 8)
+        // Opaque, so a page that scrolls at large text sizes never shows through the dots or the price.
+        .background(Theme.paper)
         // The bar never scrolls: past this size its text would crowd the page out.
         .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+    }
+
+    private var freeExit: some View {
+        Button("Get Started") { finish() }
+            .font(.body)
+            .foregroundStyle(Theme.secondary)
+            .lineLimit(typeSize.isAccessibilitySize ? nil : 1)
+            .frame(minHeight: 44)
+            .opacity(declinable ? 1 : 0)
+            .allowsHitTesting(declinable)
+            .accessibilityHidden(!declinable)
+            .accessibilityIdentifier("onboarding.skip")
     }
 
     private var dots: some View {
@@ -256,7 +284,9 @@ struct OnboardingView: View {
     }
 
     private var footer: some View {
-        HStack(spacing: 8) {
+        // Stacked at the accessibility sizes, where three links side by side break mid word.
+        let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 0)) : AnyLayout(HStackLayout(spacing: 8))
+        return layout {
             link("Restore") { restore() }
             link("Terms") { openURL(Links.terms) }
             link("Privacy") { openURL(Links.privacy) }
@@ -276,7 +306,7 @@ struct OnboardingView: View {
 
     private var primaryTitle: String {
         guard onTrial else { return String(localized: "Continue", comment: "Onboarding button to the next page") }
-        return plan?.action ?? String(localized: "Continue", comment: "Onboarding button to the next page")
+        return plan?.trialAction ?? String(localized: "Continue", comment: "Onboarding button to the next page")
     }
 
     // MARK: - Actions
@@ -287,6 +317,8 @@ struct OnboardingView: View {
             return
         }
         guard !waitingForOffer else { return }
+        // A reinstall whose subscription is already restored is not sold it again: the button just opens the app.
+        guard !subscription.isPro else { finish(); return }
         guard let plan else {
             // Offline or still loading: no offer to make, so the free app opens. The paywall is a tap away later.
             finish()
@@ -303,6 +335,8 @@ struct OnboardingView: View {
             case .pending: message = String(localized: "Your purchase is waiting for approval")
             case .unconfirmed: message = String(localized: "Your purchase went through. Tap Restore if the patterns stay locked.")
             case .failed: message = String(localized: "The purchase did not go through")
+            // The free week was already used: the page now shows what is charged today. Nothing was bought.
+            case .termsChanged: break
             }
         }
     }

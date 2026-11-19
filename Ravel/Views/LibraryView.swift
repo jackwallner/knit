@@ -52,14 +52,6 @@ struct LibraryView: View {
             .navigationTitle("Patterns")
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("Hats, mittens, scarves"))
             .navigationDestination(for: LibraryItem.self) { DesignView(item: $0) }
-            .task {
-                // Seeded and test runs keep the list that ships in the app, so captures do not shift.
-                let arguments = ProcessInfo.processInfo.arguments
-                guard !arguments.contains("-SeedDemo"), !arguments.contains("-UITesting") else { return }
-                async let designs: Void = topical.refresh()
-                await trending.refresh()
-                await designs
-            }
         }
     }
 
@@ -388,7 +380,11 @@ struct DesignView: View {
     private var castOnTitle: LocalizedStringKey {
         // A pattern already cast on stays open after a trial lapses: it is the knitter's to keep.
         if castHere != nil { return "Open Project" }
-        if !subscription.canOpen(item) { return "Unlock Patterns" }
+        if !subscription.canOpen(item) {
+            // The offer is a free week, so the button says so: "Unlock" reads as a bill.
+            let trial = subscription.offers.first { $0.term == .yearly }?.trialDays ?? 0
+            return trial > 0 ? "Try Free for \(trial) Days" : "Unlock Patterns"
+        }
         return item.fits(measures: values, gauge: gauge) ? "Cast On" : "Chart Does Not Fit This Gauge"
     }
 

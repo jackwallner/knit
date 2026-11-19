@@ -342,3 +342,19 @@
 342	Kerroslaskuri, PDF-tiedostot ja varasto pysyvät ilmaisina
 343	one=%lld silmukka tämän rivin jälkeen|other=%lld silmukkaa tämän rivin jälkeen
 344	one=%lld silmukka tämän kierroksen jälkeen|other=%lld silmukkaa tämän kierroksen jälkeen
+345	Kokeile Ravel-ohjeita ilmaiseksi
+346	Hanki Ravel-ohjeet
+347	Aloita %lld päivän ilmainen kokeilu
+348	Aloita %lld päivän ilmainen kokeilu
+349	Jokainen ohje kirjoitettu sinun koollesi ja langallesi
+350	Uusia kausimalleja läpi vuoden
+351	Aloittamasi ohje pysyy sinulla
+352	%lld päivää ilmaiseksi, sitten %@. Uusiutuu automaattisesti, kunnes perut.
+353	%@, veloitetaan tänään. Uusiutuu automaattisesti, kunnes perut.
+354	%lld päivää ilmaiseksi, sitten veloitus vuosittain.
+355	%lld päivää ilmaiseksi, sitten veloitus kuukausittain.
+356	Veloitus vuosittain.
+357	Veloitus kuukausittain.
+358	Yksi maksu. Ei uusiutumista.
+359	Säästä %lld %%
+360	Koot kaikille, vauvasta aikuiseen
