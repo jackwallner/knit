@@ -341,15 +341,18 @@ struct ProjectView: View {
                 step.stitches(after: spot.row).flatMap { count in
                     if said.contains("\(count) st") { return nil }
                     // On a row that adds or takes away stitches the count is the one it leaves, and says so.
-                    guard step.delta != 0 || (step.offsets?.contains { $0 != 0 } ?? false) else {
+                    let before = spot.row > 0 ? step.stitches(after: spot.row - 1)
+                        : spot.step > 0 ? plan.steps[spot.step - 1].stitches(after: plan.steps[spot.step - 1].rows - 1) : nil
+                    guard let before, before != count else {
                         return String(localized: "\(count) stitches", comment: "Stitches on the needle after this row")
                     }
                     return isRound ? String(localized: "\(count) stitches after this round", comment: "Stitches on the needle once a shaping round is done")
                         : String(localized: "\(count) stitches after this row", comment: "Stitches on the needle once a shaping row is done")
                 },
             ].compactMap { $0 }.joined(separator: " · ")
-            // Before the first stitch: which needles to cast on with, from the materials (English, like the steps).
-            let needles = project.rows == 0 ? plan.materials.filter { $0.localizedCaseInsensitiveContains("needle") && !$0.hasPrefix("Tapestry") && !$0.hasPrefix("Gauge") } : []
+            // Before the first stitch: the sized needles from the materials (English, like the steps). Only lines with a
+            // size in mm, so markers, waste yarn and a cable needle stay in Materials.
+            let needles = project.rows == 0 ? plan.materials.filter { $0.contains(" mm") && !$0.hasPrefix("Gauge") } : []
             VStack(spacing: 16) {
                 Text(Loc.section(step.section))
                     .font(far ? .subheadline.weight(.semibold) : .footnote.weight(.semibold))

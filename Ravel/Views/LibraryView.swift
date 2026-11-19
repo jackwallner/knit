@@ -103,11 +103,12 @@ struct LibraryView: View {
     /// Typed the way people talk ("hat for kids", "a baby blanket"): small words are dropped, and if no design
     /// has every word, designs with any of them are shown rather than nothing.
     private var matches: [LibraryItem] {
-        let skipped: Set<String> = ["a", "an", "the", "for", "to", "of", "and", "with", "my", "in", "on", "pattern", "patterns"]
+        let skipped: Set<String> = ["a", "an", "the", "for", "to", "of", "and", "with", "my", "in", "on", "pattern", "patterns",
+                                     // Sizes are letters or measurements, not genders: "men sweater" looks for sweaters.
+                                     "men", "man", "mens", "women", "woman", "womens"]
         let words = searching.lowercased().split(whereSeparator: { $0 == " " || $0 == "," }).map { word -> String in
             let one = word.hasSuffix("s") && word.count > 3 ? String(word.dropLast()) : String(word)
-            return ["kid": "child", "children": "child", "toddler": "child", "beanie": "hat", "newborn": "baby",
-                    "men": "adult", "man": "adult", "women": "adult", "woman": "adult", "glove": "mitten"][one] ?? one
+            return ["kid": "child", "children": "child", "beanie": "hat", "newborn": "baby", "glove": "mitten"][one] ?? one
         }.filter { !skipped.contains($0) }
         guard !words.isEmpty else { return everything }
         let found = everything.map { item -> (LibraryItem, Int) in
@@ -385,8 +386,9 @@ struct DesignView: View {
     }
 
     private var castOnTitle: LocalizedStringKey {
-        if !subscription.canOpen(item) { return "Unlock Patterns" }
+        // A pattern already cast on stays open after a trial lapses: it is the knitter's to keep.
         if castHere != nil { return "Open Project" }
+        if !subscription.canOpen(item) { return "Unlock Patterns" }
         return item.fits(measures: values, gauge: gauge) ? "Cast On" : "Chart Does Not Fit This Gauge"
     }
 
@@ -416,14 +418,15 @@ struct DesignView: View {
     }
 
     private func castOn() {
-        guard subscription.canOpen(item) else {
-            showingPaywall = true
-            return
-        }
-        // A second quick tap must not cast on twice, and coming back to the page reopens what was cast on.
+        // A second quick tap must not cast on twice, and coming back to the page reopens what was cast on,
+        // with or without a subscription.
         guard opened == nil else { return }
         if let project = castHere {
             opened = project
+            return
+        }
+        guard subscription.canOpen(item) else {
+            showingPaywall = true
             return
         }
         let project = Project(name: projectName, color: item.yarn)
