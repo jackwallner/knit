@@ -70,3 +70,30 @@ Release gate on build 27 (c0204474cc52): PASS, 0 blocking. One paywall sheet fli
 | GPT Sol 6.2 | 9/10 | yes |
 
 All five round 2 fixes verified. No new launch blockers.
+
+## Customer fit (c1, build 27)
+
+The seats judged the flow as the seasonal gift knitter we market to (TikTok raccoon hat, App Store search). Opus 8/10, Fable 7/10, Sol 8/10. Fixes went into the fleet alignment below.
+
+## Fleet trial alignment (c2 to c7, build 28)
+
+Jack's ask: the trial page, paywall and locked design button must work like the fleet apps, with Mahj Trainer as the reference (trial start rates Aug 13 to Sep 26: Mahj 31%, Cribbage 24%, Bridge 9%).
+
+| Seat | c2 | c3 | c4 | c5 | c6 | c7 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Claude Opus | 8.5/10 | 9/10 | 9/10 | 9/10 | 9/10 | 9/10 |
+| Claude Fable | 8/10 | 9/10 | 9/10 | 9/10 | 8.5/10 | 9.5/10 |
+| GPT Sol 6.2 | 7/10 | 8/10 | 8/10 | 8/10 | 8/10 | 9/10 |
+
+Voting seats from two providers (Anthropic, OpenAI); Gemini Flash read each round as an outside voice.
+
+What changed (b3341bc, f630d9b, 7699954, b3a87de, 61d85d3):
+
+- Trial page: the billed price ("$6.99 a month") is the largest price text, one line of terms under it, reassurance first in the benefits ("Row counter, PDFs and stash stay free", "A pattern you cast on is yours to keep"), quiet Get Started above the button. At accessibility sizes the price and button stay pinned and the links scroll.
+- Paywall: "Get Ravel Patterns", yearly first with "Save 52%" and "$3.33 a month" under the billed price, terms pinned over "Start 7-Day Free Trial", the plans fade into the bar. Locked designs say "Try Free for 7 Days", or "Unlock Patterns" with no trial left.
+- Everyone lands on Patterns after onboarding; the raccoon hat leads Trending and Free on a fresh install.
+- Purchase preflight, ported from Mahj: StoreKit ownership settles first (a reinstall that owns the patterns is not sold again; an unverified match is unresolved), StoreKit asked for the free week at every tap within 3 seconds (a late reply serves the next tap once, and is dropped on a purchase or when the app backgrounds), then, with nothing awaited before Apple's sheet, the plan on screen, the store price and the free week must equal what was tapped. A changed free week redraws every plan and says so. Plan cards and Restore lock while buying; Close and Get Started cancel; the paywall cannot be swiped away mid purchase.
+
+Deferred by decision: RevenueCat remote copy arms (no baseline yet), the tapped design's name in the paywall, "Cancel in Settings" wording.
+
+c7: all three seats ship. Still to verify by hand on the TestFlight build: a sandbox trial from a fresh account reaches Apple's sheet, a spent-trial account sees "This Apple Account already had its free week.", and Close during the spinner opens no sheet.
