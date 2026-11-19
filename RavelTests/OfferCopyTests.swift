@@ -46,18 +46,18 @@ final class OfferCopyTests: XCTestCase {
 
     /// A spent free week found at the tap: every subscription redraws without trial words, lifetime is untouched.
     func testSpentTrialRedrawsEverySubscription() {
-        let redrawn = Offer.redrawn([yearly, monthly, lifetime], id: monthly.id, trialDays: 0)
+        let redrawn = Offer.redrawn([yearly, monthly, lifetime], freeWeek: [:])
         XCTAssertEqual(redrawn.map(\.trialDays), [0, 0, 0])
         XCTAssertEqual(redrawn[1].trialAction, "Subscribe")
         XCTAssertEqual(redrawn[0].amount, 39.99)
         XCTAssertEqual(redrawn[2], lifetime)
     }
 
-    /// A free week that appeared redraws only the plan that was tapped.
-    func testFoundTrialRedrawsOnlyTheTappedPlan() {
+    /// A free week found available puts it back on every subscription plan, not only the tapped one.
+    func testFoundTrialRedrawsEverySubscription() {
         let noTrial = Offer(id: "y", term: .yearly, price: "$39.99", trialDays: 0, amount: 39.99)
-        let redrawn = Offer.redrawn([noTrial, usedTrial], id: usedTrial.id, trialDays: 7)
-        XCTAssertEqual(redrawn.map(\.trialDays), [0, 7])
+        let redrawn = Offer.redrawn([noTrial, usedTrial, lifetime], freeWeek: ["y": 7, "m": 7, "l": 0])
+        XCTAssertEqual(redrawn.map(\.trialDays), [7, 7, 0])
     }
 
     /// The preflight never waits on a store that does not answer.

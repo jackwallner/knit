@@ -107,12 +107,12 @@ struct Offer: Identifiable, Equatable, Sendable {
         return percent >= 1 ? Int(percent) : nil
     }
 
-    /// `offers` with the live free week for the plan `id`. The plans share one subscription group, so a spent free
-    /// week is spent on all of them.
-    static func redrawn(_ offers: [Offer], id: String, trialDays: Int) -> [Offer] {
+    /// `offers` with StoreKit's free week: `days` per subscription plan, none where it has no entry. Lifetime never
+    /// has one.
+    static func redrawn(_ offers: [Offer], freeWeek days: [String: Int]) -> [Offer] {
         offers.map { offer in
-            guard offer.term != .lifetime, offer.id == id || trialDays == 0 else { return offer }
-            return Offer(id: offer.id, term: offer.term, price: offer.price, trialDays: trialDays, amount: offer.amount, perMonth: offer.perMonth)
+            guard offer.term != .lifetime else { return offer }
+            return Offer(id: offer.id, term: offer.term, price: offer.price, trialDays: days[offer.id] ?? 0, amount: offer.amount, perMonth: offer.perMonth)
         }
     }
 
@@ -150,9 +150,12 @@ final class SubscriptionService {
     /// The latest answer to "can this Apple Account still have a free week", for the screens across reloads. The
     /// plans share one subscription group, so one answer covers them all.
     @ObservationIgnored private var freeWeek: Bool?
-    /// When StoreKit last answered at a tap. A purchase trusts that answer only briefly (an Apple Account can
-    /// change), long enough for a retry after a slow reply.
-    @ObservationIgnored private var freeWeekAt: Date?
+    /// The tap whose StoreKit question is still out, and that question's reply when it came after the tap gave up.
+    /// The very next tap uses the late reply once instead of asking again; everything else asks StoreKit.
+    @ObservationIgnored private var askingFor: UUID?
+    @ObservationIgnored private var lateReply: (eligible: Bool, at: Date)?
+    /// StoreKit answered at a tap this session, so RevenueCat's cached list no longer repaints the free week.
+    @ObservationIgnored private var storeKitAnswered = false
     #if DEBUG && targetEnvironment(simulator)
     @ObservationIgnored private var testProducts: [String: StoreKit.Product] = [:]
     #endif
@@ -193,7 +196,9 @@ final class SubscriptionService {
         let available = current.availablePackages.filter { terms[$0.packageType] != nil }
         let eligibility = await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: available)
         let statuses = eligibility.values.map(\.status)
-        if statuses.contains(.ineligible) { freeWeek = false } else if statuses.contains(.eligible) { freeWeek = true }
+        let listed: Bool? = statuses.contains(.ineligible) ? false : statuses.contains(.eligible) ? true : nil
+        // A reload's answer is for the screens; a purchase still asks StoreKit itself.
+        if let listed, !storeKitAnswered { freeWeek = listed }
         packages = Dictionary(available.map { ($0.storeProduct.productIdentifier, $0) }) { first, _ in first }
         offers = available
             .map { package in
@@ -276,8 +281,8 @@ final class SubscriptionService {
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return .cancelled }
-            // Whatever was sold, this account's free week is spent now.
-            if offer.term != .lifetime { freeWeek = false }
+            // Whatever was sold, this account's free week is spent now, and no earlier reply may say otherwise.
+            if offer.term != .lifetime { freeWeek = false; askingFor = nil; lateReply = nil }
             apply(result.customerInfo)
             // Paid, but the entitlement can trail the receipt by a moment: ask once more before saying so.
             if !isPro, let info = try? await Purchases.shared.customerInfo(fetchPolicy: .fetchCurrent) { apply(info) }
@@ -312,9 +317,7 @@ final class SubscriptionService {
         // The package that will be bought, read after the waits, decides the price and the free week.
         let package = packages[offer.id]
         let liveDays = eligible ? Self.trialDays(package?.storeProduct.introductoryDiscount) : 0
-        if offer.term != .lifetime, let current = offers.first(where: { $0.id == offer.id }), current.trialDays != liveDays {
-            offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays)
-        }
+        if offer.term != .lifetime { redrawFreeWeek(eligible) }
         if let stop = Self.confirm(tapped: offer, shown: shown(), storePrice: package?.storeProduct.localizedPriceString, freeWeekDays: liveDays) {
             return .stop(stop)
         }
@@ -329,22 +332,41 @@ final class SubscriptionService {
         return nil
     }
 
-    /// StoreKit's answer within 3 seconds, asked at every tap. A reply that comes later is kept for 30 seconds, so
-    /// the retry has it at once.
+    /// StoreKit's answer within 3 seconds, asked at every tap. When the previous tap gave up waiting and its reply
+    /// came in since (within 30 seconds), this tap uses that reply once instead.
     private func freeWeekAnswer(_ package: Package) async -> Bool? {
-        if let freeWeek, let freeWeekAt, Date().timeIntervalSince(freeWeekAt) < 30 { return freeWeek }
+        if let late = lateReply {
+            lateReply = nil
+            if Date().timeIntervalSince(late.at) < 30 { return late.eligible }
+        }
         guard let subscription = package.storeProduct.sk2Product?.subscription else { return nil }
-        return await Self.within(3) { [weak self] in
+        let tap = UUID()
+        askingFor = tap
+        let answer = await Self.within(3) { [weak self] in
             let eligible = await subscription.isEligibleForIntroOffer
-            await self?.remember(freeWeek: eligible)
+            await self?.reply(eligible, for: tap)
             return eligible
         }
+        // Answered in time: the reply was this tap's own, so nothing is kept for the next one.
+        if answer != nil { lateReply = nil; if askingFor == tap { askingFor = nil } }
+        return answer
     }
 
-    private func remember(freeWeek eligible: Bool) {
+    /// A reply counts only for the tap still waiting on it: a purchase or a newer tap since makes it stale.
+    private func reply(_ eligible: Bool, for tap: UUID) {
+        guard askingFor == tap else { return }
+        askingFor = nil
+        lateReply = (eligible, Date())
+        redrawFreeWeek(eligible)
+    }
+
+    /// StoreKit's answer, on every subscription plan on screen: the plans share one free week.
+    private func redrawFreeWeek(_ eligible: Bool) {
         freeWeek = eligible
-        freeWeekAt = Date()
-        if !eligible { offers = Offer.redrawn(offers, id: "", trialDays: 0) }
+        storeKitAnswered = true
+        let days = eligible ? packages.mapValues { Self.trialDays($0.storeProduct.introductoryDiscount) } : [:]
+        let redrawn = Offer.redrawn(offers, freeWeek: days)
+        if redrawn != offers { offers = redrawn }
     }
 
     /// After `termsChanged`: the words for a free week that turned out to be spent. nil when the change went the

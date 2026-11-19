@@ -229,7 +229,9 @@ struct OnboardingView: View {
             // upward from the bottom, so the button keeps its frame on every page. Pinned at every text size.
             terms.padding(.top, 8)
 
-            Button(action: primary) {
+            // The plan this render shows is the one the tap buys; a reload between draw and tap stops the purchase.
+            let drawn = plan
+            Button { primary(drawn) } label: {
                 Group {
                     if working || waitingForOffer { ProgressView().tint(Theme.onAccent) } else { Text(primaryTitle) }
                 }
@@ -314,7 +316,7 @@ struct OnboardingView: View {
 
     // MARK: - Actions
 
-    private func primary() {
+    private func primary(_ drawn: Offer?) {
         guard onTrial else {
             withAnimation(.smooth(duration: 0.35)) { page += 1 }
             return
@@ -322,7 +324,7 @@ struct OnboardingView: View {
         guard !waitingForOffer else { return }
         // A reinstall whose subscription is already restored is not sold it again: the button just opens the app.
         guard !subscription.isPro else { finish(); return }
-        guard let plan else {
+        guard let plan = drawn else {
             // Offline or still loading: no offer to make, so the free app opens. The paywall is a tap away later.
             finish()
             return
