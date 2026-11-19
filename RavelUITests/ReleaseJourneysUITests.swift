@@ -19,6 +19,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         let app = XCUIApplication()
         QA.launch(app)
         passOnboarding(app)
+        // First run lands on Patterns; a knitter with her own project goes to Projects.
+        tab("Projects", "Projekte", in: app)
         let typed = "Gate Scarf \(Int(Date().timeIntervalSince1970) % 100_000)"
         let castOn = app.buttons["projects.castOn"]
         if castOn.waitForExistence(timeout: 15) {
@@ -91,6 +93,10 @@ final class ReleaseJourneysUITests: XCTestCase {
         unlock.tap()
         XCTAssertTrue(app.buttons["paywall.yearly"].waitForExistence(timeout: 20))
         QA.checkpoint(app, "paywall-yearly", paywall: true)
+        // The plans scroll under the pinned purchase bar (all of them on an iPad form sheet): bring them up first,
+        // as a person would, so a tap lands on the plan and not on the button over it.
+        app.buttons["paywall.yearly"].swipeUp(velocity: .slow)
+        sleep(1)
         tap(app.buttons["paywall.monthly"], "Monthly")
         QA.checkpoint(app, "paywall-monthly", paywall: true)
         tap(app.buttons["paywall.lifetime"], "Lifetime")
