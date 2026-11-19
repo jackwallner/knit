@@ -33,6 +33,8 @@ struct RootView: View {
             OnboardingView {
                 onboarded = true
                 onboarding = false
+                // A trial just started: open on the patterns it paid for, not an empty project list.
+                if SubscriptionService.shared.isPro { tab = 1 }
             }
         }
         #if DEBUG

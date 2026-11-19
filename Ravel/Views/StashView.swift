@@ -106,12 +106,12 @@ struct StashView: View {
                     .accessibilityIdentifier("stash.detail")
             }
             Spacer()
-            if let count {
-                Text(count, format: .number)
+            // "3 skeins", never a bare number.
+            if count != nil {
+                Text(countLabel)
                     .font(Theme.display(19, weight: .regular))
                     .monospacedDigit()
                     .foregroundStyle(Theme.secondary)
-                    .accessibilityLabel(countLabel)
             }
         }
         .padding(.vertical, 6)

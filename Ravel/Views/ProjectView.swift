@@ -30,6 +30,7 @@ struct ProjectView: View {
     @State private var namingTally = false
     @State private var tallyText = ""
     @State private var confirmingTallyRemove = false
+    @State private var confirmingTallyReset = false
     @Environment(\.openURL) private var openURL
     /// Rows knitted since this project was opened.
     @State private var rowsThisVisit = 0
@@ -99,6 +100,11 @@ struct ProjectView: View {
             TextField(isRound ? "Round" : "Row", text: $rowText).keyboardType(.numberPad)
             Button("Cancel", role: .cancel) {}
             Button("Set") { if let row = Int(rowText) { project.jump(to: row, following: plan) } }
+        } message: {
+            // Numbered as under the instruction ("6 of 40"), so the number typed lands where it reads.
+            if let plan, let spot = plan.position(at: project.rows), plan.steps[spot.step].rows > 1 {
+                Text("\(spot.row + 1) of \(plan.steps[spot.step].rows)")
+            }
         }
         .alert("Counter Name", isPresented: $namingTally) {
             TextField("Name", text: $tallyText).accessibilityLabel("Name").accessibilityIdentifier("tally.nameField")
@@ -109,6 +115,10 @@ struct ProjectView: View {
         }
         .confirmationDialog("Remove the counter?", isPresented: $confirmingTallyRemove, titleVisibility: .visible) {
             Button("Remove Counter", role: .destructive) { project.removeTally() }
+        }
+        // A second count is as easy to lose as the first: one more tap before it goes back to 0.
+        .confirmationDialog("Reset to 0", isPresented: $confirmingTallyReset) {
+            Button("Reset to 0", role: .destructive) { project.resetTally() }
         }
         .alert("That pattern could not be opened", isPresented: $importFailed) {}
         // Knitting hands are busy: keep the screen on while a project is open.
@@ -328,8 +338,18 @@ struct ProjectView: View {
             let detail = [
                 step.rows > 1 ? String(localized: "\(spot.row + 1) of \(step.rows)", comment: "Position in a run of rows: 3 of 40") : nil,
                 // Not repeated when the instruction already says it ("Cast on 32 stitches.").
-                step.stitches(after: spot.row).flatMap { said.contains("\($0) st") ? nil : String(localized: "\($0) stitches", comment: "Stitches on the needle after this row") },
+                step.stitches(after: spot.row).flatMap { count in
+                    if said.contains("\(count) st") { return nil }
+                    // On a row that adds or takes away stitches the count is the one it leaves, and says so.
+                    guard step.delta != 0 || (step.offsets?.contains { $0 != 0 } ?? false) else {
+                        return String(localized: "\(count) stitches", comment: "Stitches on the needle after this row")
+                    }
+                    return isRound ? String(localized: "\(count) stitches after this round", comment: "Stitches on the needle once a shaping round is done")
+                        : String(localized: "\(count) stitches after this row", comment: "Stitches on the needle once a shaping row is done")
+                },
             ].compactMap { $0 }.joined(separator: " · ")
+            // Before the first stitch: which needles to cast on with, from the materials (English, like the steps).
+            let needles = project.rows == 0 ? plan.materials.filter { $0.localizedCaseInsensitiveContains("needle") && !$0.hasPrefix("Tapestry") && !$0.hasPrefix("Gauge") } : []
             VStack(spacing: 16) {
                 Text(Loc.section(step.section))
                     .font(far ? .subheadline.weight(.semibold) : .footnote.weight(.semibold))
@@ -343,6 +363,8 @@ struct ProjectView: View {
                     .font(Theme.display((text.count > 140 ? 20 : text.count > 70 ? 24 : 30) * (far ? 1.4 : 1)))
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.4)
+                    // The instruction keeps its size; the needle lines under it give way first.
+                    .layoutPriority(1)
                     .accessibilityIdentifier("guide.instruction")
                 Text(detail)
                     .font(far ? .title3 : .subheadline)
@@ -350,6 +372,13 @@ struct ProjectView: View {
                     .foregroundStyle(Theme.secondary)
                     .contentTransition(.numericText(value: Double(spot.row)))
                     .accessibilityIdentifier("guide.detail")
+                if !needles.isEmpty {
+                    VStack(spacing: 4) { ForEach(needles, id: \.self) { Text($0).lineLimit(2).minimumScaleFactor(0.8) } }
+                        .font(far ? .body : .footnote)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(Theme.secondary)
+                        .accessibilityIdentifier("guide.needles")
+                }
                 // Marked finished before the last row: said here, where the knitter is looking.
                 if project.isFinished { finishedMark }
             }
@@ -569,7 +598,7 @@ struct ProjectView: View {
                         namingTally = true
                     }
                     .accessibilityIdentifier("tally.rename")
-                    Button("Reset to 0", systemImage: "arrow.counterclockwise") { project.resetTally() }
+                    Button("Reset to 0", systemImage: "arrow.counterclockwise") { confirmingTallyReset = true }
                         .disabled(project.tallyCount == 0)
                         .accessibilityIdentifier("tally.reset")
                     Button("Remove", systemImage: "trash", role: .destructive) {
@@ -623,9 +652,14 @@ struct ProjectView: View {
             defer { bindingPhotos = false }
             // One photo at a time, each shrunk to reading size before the next loads.
             var pages: [Data] = []
+            // A page that will not load stops the import: a pattern quietly missing a page is worse than none.
             for item in picked {
-                guard let data = try? await item.loadTransferable(type: Data.self) else { continue }
-                if let page = await Task.detached(operation: { PatternStore.page(from: data) }).value { pages.append(page) }
+                guard let data = try? await item.loadTransferable(type: Data.self),
+                      let page = await Task.detached(operation: { PatternStore.page(from: data) }).value else {
+                    importFailed = true
+                    return
+                }
+                pages.append(page)
             }
             guard let file = try? PatternStore.save(pages: pages) else {
                 importFailed = true

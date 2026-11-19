@@ -136,7 +136,7 @@ struct ProjectsView: View {
         .onDelete { offsets in
             for project in offsets.map({ list[$0] }) {
                 // A swipe must not throw away rows already knitted: ask first.
-                if project.rows > 0 || project.patternFile != nil { deleting = project } else { remove(project) }
+                if project.rows > 0 || project.tallyCount > 0 || project.patternFile != nil { deleting = project } else { remove(project) }
             }
         }
     }

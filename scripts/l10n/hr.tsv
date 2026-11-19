@@ -339,3 +339,6 @@
 339	Iz knjižnice
 340	Otvori projekt
 341	Kape, rukavice, šalovi
+342	Brojač redova, PDF-ovi i zaliha ostaju besplatni
+343	one=%lld petlja nakon ovog reda|few=%lld petlje nakon ovog reda|other=%lld petlji nakon ovog reda
+344	one=%lld petlja nakon ovog kruga|few=%lld petlje nakon ovog kruga|other=%lld petlji nakon ovog kruga

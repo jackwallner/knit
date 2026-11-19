@@ -339,3 +339,6 @@
 339	Kirjastosta
 340	Avaa projekti
 341	Pipot, lapaset, huivit
+342	Kerroslaskuri, PDF-tiedostot ja varasto pysyvät ilmaisina
+343	one=%lld silmukka tämän rivin jälkeen|other=%lld silmukkaa tämän rivin jälkeen
+344	one=%lld silmukka tämän kierroksen jälkeen|other=%lld silmukkaa tämän kierroksen jälkeen

@@ -339,3 +339,6 @@ My Own Pattern
 From the Library
 Open Project
 Hats, mittens, scarves
+Row counter, PDFs and stash stay free
+%lld stitches after this row|plural
+%lld stitches after this round|plural

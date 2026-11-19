@@ -339,3 +339,6 @@
 339	Z knižnice
 340	Otvoriť projekt
 341	Čiapky, palčiaky, šály
+342	Počítadlo radov, PDF a zásoby zostávajú zadarmo
+343	one=%lld očko po tomto rade|few=%lld očká po tomto rade|many=%lld očka po tomto rade|other=%lld očiek po tomto rade
+344	one=%lld očko po tomto kole|few=%lld očká po tomto kole|many=%lld očka po tomto kole|other=%lld očiek po tomto kole

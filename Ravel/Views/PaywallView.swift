@@ -63,7 +63,7 @@ struct PaywallView: View {
                 Garment(silhouette: .shawl, yarn: .indigo)
             }
             HStack(spacing: 4) {
-                Garment(silhouette: .mitts, yarn: .marigold)
+                Garment(silhouette: .mittens, yarn: .marigold)
                 Garment(silhouette: .scarf, yarn: .plum)
                 Garment(silhouette: .cowl, yarn: .moss)
             }

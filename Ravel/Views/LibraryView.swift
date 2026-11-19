@@ -100,18 +100,28 @@ struct LibraryView: View {
 
     /// Designs that have every word searched for in their name, shelf, level or size names ("baby hat",
     /// "child mittens"), in the knitter's language or in English. "Kids" finds the child sizes.
+    /// Typed the way people talk ("hat for kids", "a baby blanket"): small words are dropped, and if no design
+    /// has every word, designs with any of them are shown rather than nothing.
     private var matches: [LibraryItem] {
-        let words = searching.lowercased().split(separator: " ").map { word -> String in
+        let skipped: Set<String> = ["a", "an", "the", "for", "to", "of", "and", "with", "my", "in", "on", "pattern", "patterns"]
+        let words = searching.lowercased().split(whereSeparator: { $0 == " " || $0 == "," }).map { word -> String in
             let one = word.hasSuffix("s") && word.count > 3 ? String(word.dropLast()) : String(word)
-            return ["kid": "child", "children": "child", "beanie": "hat"][one] ?? one
-        }
-        return everything.filter { item in
+            return ["kid": "child", "children": "child", "toddler": "child", "beanie": "hat", "newborn": "baby",
+                    "men": "adult", "man": "adult", "women": "adult", "woman": "adult", "glove": "mitten"][one] ?? one
+        }.filter { !skipped.contains($0) }
+        guard !words.isEmpty else { return everything }
+        let found = everything.map { item -> (LibraryItem, Int) in
             let sizes = item.base.sizes.flatMap { [$0.name, Loc.text($0.name)] }
             let free = item.isFree ? String(localized: "Free", comment: "Label under a design that needs no purchase") : ""
-            let haystack = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.level.title, free] + sizes)
+            // Blankets come in stroller, crib and throw sizes: a baby blanket is one of the first two.
+            let baby = item.base.sizes.contains { ["Stroller", "Crib"].contains($0.name) } ? "baby" : ""
+            let haystack = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.level.title, free, baby] + sizes)
                 .joined(separator: " ").lowercased()
-            return words.allSatisfy(haystack.contains)
+            return (item, words.filter(haystack.contains).count)
         }
+        let all = found.filter { $0.1 == words.count }.map(\.0)
+        guard all.isEmpty else { return all }
+        return found.filter { $0.1 > 0 }.sorted { $0.1 > $1.1 }.map(\.0)
     }
 
     /// A row that scrolls sideways: Trending (new designs and what suits the season) or the free patterns.
@@ -209,6 +219,8 @@ struct DesignView: View {
     /// The project cast on from this page, and the size and gauge it was cast on at. Back on the page with
     /// the same numbers, the button opens that project again instead of casting on a second copy.
     @State private var cast: (project: Project, values: [String: Double], gauge: Gauge)?
+    /// Every project, to find one already cast on from this design at these numbers on a later visit.
+    @Query private var projects: [Project]
     @State private var showingPaywall = false
     /// Wide enough for the piece on the leading side and its settings beside it.
     @State private var wide = false
@@ -363,8 +375,13 @@ struct DesignView: View {
 
     /// The project this page already cast on at the numbers now set, while it still exists.
     private var castHere: Project? {
-        guard let cast, cast.values == values, cast.gauge == gauge, !cast.project.isDeleted, cast.project.modelContext != nil else { return nil }
-        return cast.project
+        if let cast, cast.values == values, cast.gauge == gauge, !cast.project.isDeleted, cast.project.modelContext != nil { return cast.project }
+        // Back from the library another day: an unfinished project from this design at the same size and yarn
+        // opens again, rather than a second copy at row 0 that looks like a lost count.
+        return projects.first { project in
+            guard !project.isFinished, project.designRaw == item.designRaw, let source = project.plan?.source else { return false }
+            return source.measures == values && source.gauge == gauge
+        }
     }
 
     private var castOnTitle: LocalizedStringKey {

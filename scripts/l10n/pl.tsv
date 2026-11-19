@@ -339,3 +339,6 @@
 339	Z biblioteki
 340	Otwórz projekt
 341	Czapki, rękawiczki, szaliki
+342	Licznik rzędów, PDF-y i zapasy pozostają za darmo
+343	one=%lld oczko po tym rzędzie|few=%lld oczka po tym rzędzie|many=%lld oczek po tym rzędzie|other=%lld oczka po tym rzędzie
+344	one=%lld oczko po tym okrążeniu|few=%lld oczka po tym okrążeniu|many=%lld oczek po tym okrążeniu|other=%lld oczka po tym okrążeniu

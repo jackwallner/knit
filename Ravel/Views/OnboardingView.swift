@@ -27,10 +27,15 @@ struct OnboardingView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // At the largest text sizes the page scrolls rather than clip.
-            ViewThatFits(in: .vertical) {
-                pageWithTerms
-                ScrollView { pageWithTerms.padding(.vertical, 16) }
+            // At the largest text sizes the page scrolls rather than clip. Below them the picture shrinks to make
+            // room, so nothing scrolls out of sight. (ViewThatFits measured the picture at full size and picked
+            // the scrolling page even where a smaller picture fit.)
+            Group {
+                if typeSize.isAccessibilitySize {
+                    ScrollView { pageWithTerms.padding(.vertical, 16) }
+                } else {
+                    pageWithTerms
+                }
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 // The first page does what it says: a tap anywhere on it knits one more row.
@@ -60,10 +65,9 @@ struct OnboardingView: View {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 16)
             } else {
+                // The plan and terms sit in the bar, which never scrolls, so a short screen (an iPhone Duo
+                // open, a long language) can push the picture away but never the price.
                 content
-                terms
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 12)
             }
         }
     }
@@ -104,6 +108,8 @@ struct OnboardingView: View {
             Spacer(minLength: 16)
             picture()
                 .frame(maxHeight: 360)
+                // On a short screen the picture gives way first, never the words under it.
+                .layoutPriority(-1)
                 .accessibilityHidden(true)
             Text(title)
                 .font(Theme.display(30, weight: .semibold))
@@ -124,7 +130,7 @@ struct OnboardingView: View {
                 Garment(silhouette: .shawl, yarn: .indigo)
             }
             HStack(spacing: 4) {
-                Garment(silhouette: .mitts, yarn: .marigold)
+                Garment(silhouette: .mittens, yarn: .marigold)
                 Garment(silhouette: .scarf, yarn: .plum)
                 Garment(silhouette: .cowl, yarn: .moss)
             }
@@ -145,7 +151,7 @@ struct OnboardingView: View {
     private var points: some View {
         VStack(alignment: .leading, spacing: 14) {
             point("Hats, mittens, scarves and sweaters")
-            point("Sized to your measurements and yarn")
+            point("Row counter, PDFs and stash stay free")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -192,6 +198,10 @@ struct OnboardingView: View {
     /// so the button keeps one frame from the first page to the last.
     private var bar: some View {
         VStack(spacing: 0) {
+            // Above the free way out, so the button below keeps its frame whether or not they show.
+            if !typeSize.isAccessibilitySize {
+                terms.padding(.bottom, 12)
+            }
             VStack(spacing: 10) {
                 Button("Get Started") { finish() }
                     .font(.body)
