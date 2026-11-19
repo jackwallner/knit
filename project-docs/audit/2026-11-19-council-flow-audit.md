@@ -39,3 +39,34 @@ Agreed: no count loss, the counter and saved count are strong, the design page (
 - Gauge below the fold on the design page (Opus), PDF link on the empty Projects screen (Opus, Flash), stash editor field order (Sol, Flash), listing photo quality (Fable): later.
 - Name next to Ravelry (Fable): a judgment for Jack, not a flow defect.
 - Seasonal knitters can cast on everything in the trial and cancel ("yours to keep"): pricing, not flow.
+
+## Round 2 (build 26)
+
+| Seat | Score | Ship as is |
+| --- | --- | --- |
+| Claude Opus | 8.5/10 | yes |
+| Claude Fable | 8/10 | yes |
+| GPT Sol 6.2 | 8/10 | no (build 26 gate) |
+| Gemini Flash (outside) | 8/10 | yes |
+
+Round 1 fixes verified. New defects, fixed in build 27 (26dd75d):
+
+| Finding | Raised by | Fix |
+| --- | --- | --- |
+| Cast-on row listed notions (markers, waste yarn) as needles | Opus, Fable | Only materials lines with a size in mm. |
+| Open Project hidden behind the paywall after a trial lapses | Fable | The matching project is checked before the subscription. |
+| Single-round crown decreases still showed a bare count | Sol | "after this round" whenever a row's count differs from the row before. |
+| "toddler" dropped Baby Booties; men/women mapped to Adult | Sol, Opus | Toddler matches literally; men/women are ignored words. |
+| iPhone Duo listing set led with the PDF shot | Sol | Leads with the sized pattern, then the library. |
+
+Release gate on build 27 (c0204474cc52): PASS, 0 blocking. One paywall sheet flicker candidate was judged clean on a frame-by-frame recording (Q055).
+
+## Round 3 (build 27)
+
+| Seat | Score | Ship as is |
+| --- | --- | --- |
+| Claude Opus | 9/10 | yes |
+| Claude Fable | 9/10 | yes |
+| GPT Sol 6.2 | 9/10 | yes |
+
+All five round 2 fixes verified. No new launch blockers.
