@@ -1,7 +1,7 @@
 {
  "ar-SA": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "عدّ الصفوف وشاهد القماش ينمو",
    "size": 142,
    "lines": 2,
@@ -28,7 +28,7 @@
    "sha256": "fde1227e80bf7258db60062ec4cbc4da86e922737107a2be0eb47c7fdfe3c63b"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "قبعات وقفازات وأوشحة لتحيكها",
    "size": 142,
    "lines": 2,
@@ -84,7 +84,7 @@
  ],
  "bn-BD": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "সারি গুনুন, দেখুন কাপড় বড় হচ্ছে",
    "size": 142,
    "lines": 2,
@@ -111,7 +111,7 @@
    "sha256": "26c0c65e4a6b3acc6e1d0b24613c661b60a2e9e1136b24b93ec43dba89a68eff"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "বুনুন টুপি, দস্তানা আর মাফলার",
    "size": 142,
    "lines": 2,
@@ -167,7 +167,7 @@
  ],
  "ca": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Compta files i veu créixer el teixit",
    "size": 142,
    "lines": 2,
@@ -194,7 +194,7 @@
    "sha256": "25e94ba8520e600b82196b3401c1af17f737e61e9d9227b35be66d5ef6ff0a0d"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Barrets, manyoples i bufandes per fer",
    "size": 142,
    "lines": 2,
@@ -250,7 +250,7 @@
  ],
  "cs": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Počítej řádky a sleduj, jak látka roste",
    "size": 142,
    "lines": 2,
@@ -277,7 +277,7 @@
    "sha256": "c58cff98a737b8a7d1063d8e341d6a4216e1f16555945e75bbb5a99c17333d79"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Čepice, palčáky a šály k pletení",
    "size": 142,
    "lines": 2,
@@ -333,7 +333,7 @@
  ],
  "da": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Tæl rækker og se strikketøjet vokse",
    "size": 142,
    "lines": 2,
@@ -360,7 +360,7 @@
    "sha256": "11155aa0c6192eadc4200f292e7a5f985fe8b240282f5e59e7ad1a9a97477dbe"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Huer, vanter og halstørklæder",
    "size": 142,
    "lines": 2,
@@ -416,7 +416,7 @@
  ],
  "de-DE": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Zähl Reihen und sieh es wachsen",
    "size": 142,
    "lines": 2,
@@ -443,7 +443,7 @@
    "sha256": "3d4b2c83187b56eb53c2bfc18f432721cd3879e063d891aa3696de16bd20447a"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Mützen, Fäustlinge und Schals stricken",
    "size": 142,
    "lines": 2,
@@ -499,7 +499,7 @@
  ],
  "el": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Μέτρα σειρές, δες το να μεγαλώνει",
    "size": 142,
    "lines": 2,
@@ -526,7 +526,7 @@
    "sha256": "e24c62839d01d0c1c099bb122e29ab17494f8e925490fbd40786481e882379b3"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Σκούφοι, γάντια και κασκόλ για πλέξιμο",
    "size": 142,
    "lines": 2,
@@ -582,7 +582,7 @@
  ],
  "es-ES": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Cuenta filas y mira crecer la tela",
    "size": 142,
    "lines": 2,
@@ -609,7 +609,7 @@
    "sha256": "650438ff0a3642c8202c8103bfd07b3f306bd90937b556a32db0f7db13985622"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Gorros, manoplas y bufandas para tejer",
    "size": 142,
    "lines": 2,
@@ -665,7 +665,7 @@
  ],
  "es-MX": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Cuenta filas y mira crecer la tela",
    "size": 142,
    "lines": 2,
@@ -692,7 +692,7 @@
    "sha256": "703c1195c08e7c7bd141b0127925d51a892a492056a8d7ca14fb5fb362a552b6"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Gorros, guantes y bufandas para tejer",
    "size": 142,
    "lines": 2,
@@ -748,7 +748,7 @@
  ],
  "fi": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Laske kerros, katso neuleen kasvua",
    "size": 142,
    "lines": 2,
@@ -775,7 +775,7 @@
    "sha256": "6cb4e171d2277ed6d2d8e283d00a2a55329234fafd6018505e4b4ff4707b014c"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Pipot, lapaset ja huivit neulottavaksi",
    "size": 142,
    "lines": 2,
@@ -831,7 +831,7 @@
  ],
  "fr-FR": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Compte les rangs, vois-le grandir",
    "size": 142,
    "lines": 2,
@@ -858,7 +858,7 @@
    "sha256": "29457f41654baf154bd72247f296f4ae299bea80eefdf758d92ed572887ae303"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Bonnets, moufles et écharpes à tricoter",
    "size": 142,
    "lines": 2,
@@ -914,7 +914,7 @@
  ],
  "fr-CA": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Compte les rangs, vois-le grandir",
    "size": 142,
    "lines": 2,
@@ -941,7 +941,7 @@
    "sha256": "29457f41654baf154bd72247f296f4ae299bea80eefdf758d92ed572887ae303"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Tuques, mitaines et foulards à tricoter",
    "size": 142,
    "lines": 2,
@@ -997,7 +997,7 @@
  ],
  "gu-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "હરોળ ગણો અને કાપડને વધતું જુઓ",
    "size": 142,
    "lines": 2,
@@ -1024,7 +1024,7 @@
    "sha256": "de850c015cbf8e0291b8f966f87a685bd401793ee950b78545bc2c9b0163cbd9"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ટોપી, મોજાં અને મફલર ગૂંથો",
    "size": 142,
    "lines": 2,
@@ -1080,7 +1080,7 @@
  ],
  "he": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "ספרו שורות וצפו בבד גדל",
    "size": 142,
    "lines": 2,
@@ -1107,7 +1107,7 @@
    "sha256": "5497336f6093121ee59cc47da1d7f2cd1f8ac82fe152f832cb72a71010e27bd9"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "כובעים, כפפות וצעיפים לסריגה",
    "size": 142,
    "lines": 2,
@@ -1163,7 +1163,7 @@
  ],
  "hi": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "पंक्तियाँ गिनें, बुनाई को बढ़ते देखें",
    "size": 142,
    "lines": 2,
@@ -1190,7 +1190,7 @@
    "sha256": "f0f1370503045a89a05747b96baa2eadf12e80fe9d4ffc03f09131eab850d206"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "टोपी, दस्ताने और मफ़लर बुनें",
    "size": 142,
    "lines": 2,
@@ -1246,7 +1246,7 @@
  ],
  "hr": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Broji redove i gledaj kako pletivo raste",
    "size": 142,
    "lines": 2,
@@ -1273,7 +1273,7 @@
    "sha256": "a1c9da8c035bddd65bd1cf7f30450f9e58e4f7217f29aecddc73e28013a19b84"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Kape, rukavice i šalovi za pletenje",
    "size": 142,
    "lines": 2,
@@ -1329,7 +1329,7 @@
  ],
  "hu": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Számolj sorokat, nézd nőni a kelmét",
    "size": 142,
    "lines": 2,
@@ -1356,7 +1356,7 @@
    "sha256": "c3a92dba3af0ca6b65c5a8c0c81152cd3cf5e36441ecb2101eeaa229f52a1d04"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Sapkák, kesztyűk és sálak kötéshez",
    "size": 142,
    "lines": 2,
@@ -1412,7 +1412,7 @@
  ],
  "id": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Hitung baris dan lihat kain tumbuh",
    "size": 142,
    "lines": 2,
@@ -1439,7 +1439,7 @@
    "sha256": "4ac0412b99c932d65ba4a07d17334e6ab5b95828be1e6a10c5c969ac2284042a"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Rajut topi, sarung tangan, dan syal",
    "size": 142,
    "lines": 2,
@@ -1495,7 +1495,7 @@
  ],
  "it": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Conta i ferri e guarda il lavoro crescere",
    "size": 142,
    "lines": 2,
@@ -1522,7 +1522,7 @@
    "sha256": "fca79ceed31aaaed9eedb998b72f329bc24f55ed231a35d79b5c5f620dc2003f"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Cappelli, muffole e sciarpe a maglia",
    "size": 142,
    "lines": 2,
@@ -1578,7 +1578,7 @@
  ],
  "ja": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "段数を数えて\n編み地が育つ",
    "size": 142,
    "lines": 2,
@@ -1605,7 +1605,7 @@
    "sha256": "fc888d133f2fcea11ef6f9eb5b331663052479775584265cb48f934d3e1f9f9e"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "帽子、ミトン、\nマフラーを編もう",
    "size": 142,
    "lines": 2,
@@ -1661,7 +1661,7 @@
  ],
  "kn-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "ಸಾಲು ಎಣಿಸಿ, ಬೆಳವಣಿಗೆ ನೋಡಿ",
    "size": 142,
    "lines": 2,
@@ -1688,7 +1688,7 @@
    "sha256": "703020084b37cefa2bb67b62eb03e2d04d8895932914c10be1058af6d8e66588"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ಟೋಪಿ, ಕೈಗವಸು, ಮಫ್ಲರ್ ಹೆಣೆಯಿರಿ",
    "size": 142,
    "lines": 2,
@@ -1744,7 +1744,7 @@
  ],
  "ko": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "단을 세고 뜨개가 자라는 모습 보기",
    "size": 142,
    "lines": 2,
@@ -1771,7 +1771,7 @@
    "sha256": "ba525ed6c2cf9236ea3373a851cd6a0e420765032518e986707139c732fcf18d"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "모자, 벙어리장갑, 목도리 뜨기",
    "size": 142,
    "lines": 2,
@@ -1827,7 +1827,7 @@
  ],
  "ml-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "വരി എണ്ണൂ, തുണി വളരുന്നത് കാണൂ",
    "size": 142,
    "lines": 2,
@@ -1854,7 +1854,7 @@
    "sha256": "c449c97723977c5b30cd94d0a378cfc80b33299e967e0cc0a02bec0fd1333b09"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "തൊപ്പി, കൈയുറ, മഫ്ലർ നെയ്യൂ",
    "size": 142,
    "lines": 2,
@@ -1910,7 +1910,7 @@
  ],
  "mr-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "ओळी मोजा आणि कापड वाढताना पाहा",
    "size": 142,
    "lines": 2,
@@ -1937,7 +1937,7 @@
    "sha256": "c2f970e6131ccfcd821a3e7c3690edcb58b38d37bc0d04e140d9d91c5f2b1ab5"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "टोपी, हातमोजे आणि मफलर विणा",
    "size": 142,
    "lines": 2,
@@ -1993,7 +1993,7 @@
  ],
  "ms": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Kira baris dan lihat kain membesar",
    "size": 142,
    "lines": 2,
@@ -2020,7 +2020,7 @@
    "sha256": "e5d409d3ab7f9366c53677c6787ab93a2a95f6ebe9fe9fa2687af8f84f141111"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Rajut topi, sarung tangan dan skarf",
    "size": 142,
    "lines": 2,
@@ -2076,7 +2076,7 @@
  ],
  "nl-NL": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Tel rijen en zie je breiwerk groeien",
    "size": 142,
    "lines": 2,
@@ -2103,7 +2103,7 @@
    "sha256": "9733f63306c3dbf0a598e147517c15230e84dd866fc4a97865deae7a61f62663"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Mutsen, wanten en sjaals om te breien",
    "size": 142,
    "lines": 2,
@@ -2159,7 +2159,7 @@
  ],
  "no": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Tell rader og se strikketøyet vokse",
    "size": 142,
    "lines": 2,
@@ -2186,7 +2186,7 @@
    "sha256": "59f1905b8b721e74652d3927ed04ca642b093797d4297b7df3c5f81c7cb6ccb0"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Luer, votter og skjerf å strikke",
    "size": 142,
    "lines": 2,
@@ -2242,7 +2242,7 @@
  ],
  "or-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "ଧାଡ଼ି ଗଣନ୍ତୁ, କପଡ଼ା ବଢ଼ିବା ଦେଖନ୍ତୁ",
    "size": 142,
    "lines": 2,
@@ -2269,7 +2269,7 @@
    "sha256": "df2ceb062294e2adfca55286f7fb1c254ceb8622ef393870b4d65faa4523dbbe"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ଟୋପି, ଗ୍ଲୋଭସ୍ ଓ ମଫଲର ବୁଣନ୍ତୁ",
    "size": 142,
    "lines": 2,
@@ -2325,7 +2325,7 @@
  ],
  "pa-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "ਕਤਾਰਾਂ ਗਿਣੋ, ਕੱਪੜੇ ਨੂੰ ਵਧਦਾ ਵੇਖੋ",
    "size": 142,
    "lines": 2,
@@ -2352,7 +2352,7 @@
    "sha256": "eb13173b2cb00caaa2b9691422d1203256ffe189da0447d94848f4c04c79a941"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ਟੋਪੀ, ਦਸਤਾਨੇ ਅਤੇ ਮਫ਼ਲਰ ਬੁਣੋ",
    "size": 142,
    "lines": 2,
@@ -2408,7 +2408,7 @@
  ],
  "pl": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Licz rzędy i patrz, jak rośnie robótka",
    "size": 142,
    "lines": 2,
@@ -2435,7 +2435,7 @@
    "sha256": "5664dbb99f6c46e65288de54cd64a988f61b3ef4d7c36d0ddff9b647c7518404"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Czapki, rękawiczki i szaliki na drutach",
    "size": 142,
    "lines": 2,
@@ -2491,7 +2491,7 @@
  ],
  "pt-BR": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Conte as fileiras e veja o tecido crescer",
    "size": 142,
    "lines": 2,
@@ -2518,7 +2518,7 @@
    "sha256": "4d4e9f554b93e238fb34e2ad4662cd7d2e5b5a4bead82f69a9644c8024458c69"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Gorros, luvas e cachecóis de tricô",
    "size": 142,
    "lines": 2,
@@ -2574,7 +2574,7 @@
  ],
  "pt-PT": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Conta as carreiras e vê o tecido crescer",
    "size": 142,
    "lines": 2,
@@ -2601,7 +2601,7 @@
    "sha256": "ccdf9b294fe940320ec48afc9d14b82b6f379438b7ee252c0dad1c0c0e079d05"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Gorros, luvas e cachecóis de tricô",
    "size": 142,
    "lines": 2,
@@ -2657,7 +2657,7 @@
  ],
  "ro": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Numără rânduri, vezi cum crește",
    "size": 142,
    "lines": 2,
@@ -2684,7 +2684,7 @@
    "sha256": "c22fade770e6bc577e61328d36f55d1bc904e2c9f03f5529cb3634ad78ad2431"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Căciuli, mănuși și fulare de tricotat",
    "size": 142,
    "lines": 2,
@@ -2740,7 +2740,7 @@
  ],
  "ru": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Считайте ряды, пока растёт полотно",
    "size": 142,
    "lines": 2,
@@ -2767,7 +2767,7 @@
    "sha256": "deb287312489945242b839cb8c4e57718f9b104eee695ed406fadd98d654f58d"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Шапки, варежки и шарфы для вязания",
    "size": 142,
    "lines": 2,
@@ -2823,7 +2823,7 @@
  ],
  "sk": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Počítaj riadky, sleduj rast látky",
    "size": 142,
    "lines": 2,
@@ -2850,7 +2850,7 @@
    "sha256": "b97a9b203e1135d10448acc486d0c7e15b6c8b2f2780744ab74883e9e695676d"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Čiapky, palčiaky a šály na pletenie",
    "size": 142,
    "lines": 2,
@@ -2906,7 +2906,7 @@
  ],
  "sl-SI": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Štej vrste in glej, kako pletivo raste",
    "size": 142,
    "lines": 2,
@@ -2933,7 +2933,7 @@
    "sha256": "465a1a8fdf662dd030ae0fb30fb9ef892f1f68a663111c5380ae2a75feb5eeec"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Kape, palčniki in šali za pletenje",
    "size": 142,
    "lines": 2,
@@ -2989,7 +2989,7 @@
  ],
  "sv": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Räkna varv och se arbetet växa",
    "size": 142,
    "lines": 2,
@@ -3016,7 +3016,7 @@
    "sha256": "4433ffeaad8f145a14bc913aec0551940e67379cdafee1778ca9d38ba0bbd351"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Mössor, vantar och halsdukar att sticka",
    "size": 142,
    "lines": 2,
@@ -3072,7 +3072,7 @@
  ],
  "ta-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "வரிசை எண்ணி துணி வளருங்கள்",
    "size": 142,
    "lines": 2,
@@ -3099,7 +3099,7 @@
    "sha256": "456655965075537d45e51d1c9fe048a2b5552ba60b33fc3b5a016f4b93cc9468"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "தொப்பி, கையுறை, மஃப்ளர் பின்னுங்கள்",
    "size": 142,
    "lines": 2,
@@ -3155,7 +3155,7 @@
  ],
  "te-IN": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "వరుసలు లెక్కించి పెరుగుదల చూడండి",
    "size": 142,
    "lines": 2,
@@ -3182,7 +3182,7 @@
    "sha256": "ca92b6ea4612b1246b699b26761a03152ffb248931c669b46d9d8bd97cbb6aef"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "టోపీ, గ్లౌజులు, మఫ్లర్ అల్లండి",
    "size": 142,
    "lines": 2,
@@ -3238,7 +3238,7 @@
  ],
  "th": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "นับแถว\nแล้วดูผ้าถักโตขึ้น",
    "size": 142,
    "lines": 2,
@@ -3265,7 +3265,7 @@
    "sha256": "fe7d85c9a0a55c32ee0f4d6b7d6e73d9e6eefd6d3c2279c3a50d3cca891a7073"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ถักหมวก ถุงมือ\nและผ้าพันคอ",
    "size": 142,
    "lines": 2,
@@ -3321,7 +3321,7 @@
  ],
  "tr": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Sıraları say, örgünün büyüdüğünü izle",
    "size": 142,
    "lines": 2,
@@ -3348,7 +3348,7 @@
    "sha256": "39fb8eb86e2b2e52cb0deae6e51c24c4f445da8ed6df998a53ba028f7f2a4bf2"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Örmek için bere, eldiven ve atkı",
    "size": 142,
    "lines": 2,
@@ -3404,7 +3404,7 @@
  ],
  "uk": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Лічіть ряди, стежте за ростом",
    "size": 142,
    "lines": 2,
@@ -3431,7 +3431,7 @@
    "sha256": "4d15b7580e3fafd099cfde826eaad77b2020e7c70fb23809e6d7b4acfe9346e8"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Шапки, рукавиці й шарфи для в'язання",
    "size": 142,
    "lines": 2,
@@ -3487,7 +3487,7 @@
  ],
  "ur-PK": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "قطاریں گنیں، کپڑا بڑھتا دیکھیں",
    "size": 142,
    "lines": 2,
@@ -3514,7 +3514,7 @@
    "sha256": "ab05fee4bf04517b4faae82860c2cd2bb724080de625449b8588fea4edc8105e"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "ٹوپی، دستانے اور مفلر بُنیں",
    "size": 142,
    "lines": 2,
@@ -3570,7 +3570,7 @@
  ],
  "vi": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "Đếm hàng và xem tấm vải lớn dần",
    "size": 142,
    "lines": 2,
@@ -3597,7 +3597,7 @@
    "sha256": "f0cfa0e529305a2f867bad297cb378cd847771b800739e0082d3eb6b092c6616"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "Đan mũ, găng tay và khăn quàng",
    "size": 142,
    "lines": 2,
@@ -3653,7 +3653,7 @@
  ],
  "zh-Hans": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "数着行数\n看织物长高",
    "size": 142,
    "lines": 2,
@@ -3680,7 +3680,7 @@
    "sha256": "c6f77e728bd64adeb879e7e7d6b08ea1419c5aa6e740ac8a1b2ef4fe10ead6e2"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "织帽子、手套\n和围巾",
    "size": 142,
    "lines": 2,
@@ -3736,7 +3736,7 @@
  ],
  "zh-Hant": [
   {
-   "file": "02-count-rows.png",
+   "file": "04-count-rows.png",
    "header": "數著行數\n看織物長高",
    "size": 142,
    "lines": 2,
@@ -3763,7 +3763,7 @@
    "sha256": "3c919ea335e2c73dc83e7dbeb32f758e25121059acd332d4634d9be3c8c6a2f2"
   },
   {
-   "file": "03-library.png",
+   "file": "02-library.png",
    "header": "織帽子、手套\n和圍巾",
    "size": 142,
    "lines": 2,
