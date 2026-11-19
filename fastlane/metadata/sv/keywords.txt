@@ -1,1 +1,1 @@
-stickning,virka,stickor,maskprov,mössa,tröja,halsduk,ull,nybörjare,sjal,sockor,vantar,kofta,cardigan
+stickning,stickor,maskprov,mössa,tröja,halsduk,ull,nybörjare,sjal,sockor,vantar,kofta,cardigan

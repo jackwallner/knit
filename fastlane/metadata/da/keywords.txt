@@ -1,1 +1,1 @@
-strikke,rækketæller,hækle,hue,sweater,halstørklæde,tæppe,farvestrikning,sokker,vanter,cardigan
+strikke,rækketæller,hue,sweater,halstørklæde,tæppe,farvestrikning,sokker,vanter,cardigan

@@ -52,7 +52,7 @@ H = {
 "zh-Hant": ["數著行數\n看織物長高", "在任何PDF圖解中\n記住進度", "跟著圖解\n一行一行織", "依你的尺寸\n撰寫的編織圖解", "織帽子、手套\n和圍巾", "每個作品都\n從停下處繼續", "購買前\n先看看你的毛線"],
 }
 # Each list is in the original frame order; FILES maps it to the current filenames.
-FILES = ["01-count-rows.png", "05-pdf-place.png", "04-one-row.png", "02-your-size.png", "03-library.png", "06-projects.png", "07-stash.png"]
+FILES = ["02-count-rows.png", "05-pdf-place.png", "04-one-row.png", "01-your-size.png", "03-library.png", "06-projects.png", "07-stash.png"]
 out = {loc: {f: t for f, t in zip(FILES, texts)} for loc, texts in H.items()}
 assert len(out) == 46 and all(len(t) == 7 for t in H.values())
 bad = [(l, t) for l, ts in H.items() for t in ts if "." in t or "\u2014" in t or "。" in t]

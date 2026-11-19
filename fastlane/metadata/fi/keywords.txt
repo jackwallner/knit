@@ -1,1 +1,1 @@
-neulominen,virkkaus,puikot,pipo,huivi,villapaita,aloittelija,peitto,sukat,lapaset,neuletakki
+neulominen,puikot,pipo,huivi,villapaita,aloittelija,peitto,sukat,lapaset,neuletakki

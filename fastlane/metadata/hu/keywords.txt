@@ -1,1 +1,1 @@
-kötés,horgolás,kötőtű,sapka,sál,pulóver,takaró,kezdő,gyapjú,csősál,raglán,zokni,kesztyű,kardigán
+kötés,kötőtű,sapka,sál,pulóver,takaró,kezdő,gyapjú,csősál,raglán,zokni,kesztyű,kardigán

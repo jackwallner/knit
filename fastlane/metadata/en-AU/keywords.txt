@@ -1,1 +1,1 @@
-wool,jumper,crochet,beginner,hat,beanie,scarf,cowl,shawl,kids,baby,gift,socks,mittens,cardigan
+wool,jumper,beginner,knit,hat,beanie,scarf,cowl,shawl,kids,baby,gift,socks,mittens,cardigan

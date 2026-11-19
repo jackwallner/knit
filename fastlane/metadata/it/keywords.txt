@@ -1,1 +1,1 @@
-uncinetto,ferri,cappello,maglione,sciarpa,coperta,principianti,jacquard,calze,muffole,cardigan
+ferri,cappello,maglione,sciarpa,coperta,principianti,jacquard,calze,muffole,cardigan

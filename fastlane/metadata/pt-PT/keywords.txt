@@ -1,1 +1,1 @@
-malha,croché,agulhas,gorro,cachecol,manta,camisola,principiantes,novelos,meias,luvas,casaco,cardigan
+malha,agulhas,gorro,cachecol,manta,camisola,principiantes,novelos,meias,luvas,casaco,cardigan

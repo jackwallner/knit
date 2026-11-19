@@ -1,1 +1,1 @@
-toque,sweater,crochet,beginner,hat,beanie,scarf,cowl,shawl,kids,baby,gift,socks,mittens,cardigan
+toque,sweater,beginner,knit,hat,beanie,scarf,cowl,shawl,kids,baby,gift,socks,mittens,cardigan

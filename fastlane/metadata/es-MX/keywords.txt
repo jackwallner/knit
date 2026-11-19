@@ -1,1 +1,1 @@
-tejido,crochet,suéter,gorro,bufanda,chal,cobija,principiantes,lana,calcetines,manoplas,cárdigan
+tejido,suéter,gorro,bufanda,chal,cobija,principiantes,lana,calcetines,manoplas,cárdigan
