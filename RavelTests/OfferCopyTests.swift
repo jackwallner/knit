@@ -69,4 +69,18 @@ final class OfferCopyTests: XCTestCase {
         let fast = await SubscriptionService.within(2) { true }
         XCTAssertEqual(fast, true)
     }
+
+    /// The last check before Apple's sheet buys only on exactly the terms that were tapped.
+    func testConfirmBuysOnlyTheTappedTerms() {
+        XCTAssertNil(SubscriptionService.confirm(tapped: monthly, shown: monthly, storePrice: "$6.99", freeWeekDays: 7))
+        XCTAssertNil(SubscriptionService.confirm(tapped: lifetime, shown: lifetime, storePrice: "$79.99", freeWeekDays: 0))
+        // Free week spent since the screen drew.
+        XCTAssertEqual(SubscriptionService.confirm(tapped: monthly, shown: monthly, storePrice: "$6.99", freeWeekDays: 0), .termsChanged)
+        // A reload redrew the plan with another price.
+        let repriced = Offer(id: "m", term: .monthly, price: "$7.99", trialDays: 7, amount: 7.99)
+        XCTAssertEqual(SubscriptionService.confirm(tapped: monthly, shown: repriced, storePrice: "$7.99", freeWeekDays: 7), .termsChanged)
+        XCTAssertEqual(SubscriptionService.confirm(tapped: monthly, shown: monthly, storePrice: "$7.99", freeWeekDays: 7), .termsChanged)
+        // The plan is gone from the store.
+        XCTAssertEqual(SubscriptionService.confirm(tapped: monthly, shown: nil, storePrice: nil, freeWeekDays: 7), .unavailable)
+    }
 }

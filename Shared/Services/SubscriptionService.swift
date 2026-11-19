@@ -147,6 +147,9 @@ final class SubscriptionService {
     private(set) var onboardingTerm: Offer.Term = .monthly
     @ObservationIgnored private var packages: [String: Package] = [:]
     @ObservationIgnored private var isConfigured = false
+    /// StoreKit's answer to "can this Apple Account still have a free week", kept across reloads and late replies.
+    /// The plans share one subscription group, so one answer covers them all, and a spent week stays spent.
+    @ObservationIgnored private var freeWeek: Bool?
     #if DEBUG && targetEnvironment(simulator)
     @ObservationIgnored private var testProducts: [String: StoreKit.Product] = [:]
     #endif
@@ -186,13 +189,15 @@ final class SubscriptionService {
         let terms: [PackageType: Offer.Term] = [.annual: .yearly, .monthly: .monthly, .lifetime: .lifetime]
         let available = current.availablePackages.filter { terms[$0.packageType] != nil }
         let eligibility = await Purchases.shared.checkTrialOrIntroDiscountEligibility(packages: available)
+        let statuses = eligibility.values.map(\.status)
+        if statuses.contains(.ineligible) { freeWeek = false } else if freeWeek == nil, statuses.contains(.eligible) { freeWeek = true }
         packages = Dictionary(available.map { ($0.storeProduct.productIdentifier, $0) }) { first, _ in first }
         offers = available
             .map { package in
                 let product = package.storeProduct
                 // Unknown reads as eligible, as on Mahj: the trial is offered unless StoreKit says this account
                 // already had its free week. Hiding it on an unanswered check costs eligible people the trial.
-                let canTrial = eligibility[package]?.status != .ineligible
+                let canTrial = freeWeek ?? (eligibility[package]?.status != .ineligible)
                 return Offer(
                     id: product.productIdentifier,
                     term: terms[package.packageType] ?? .monthly,
@@ -246,7 +251,7 @@ final class SubscriptionService {
     #endif
 
     func purchase(_ offer: Offer) async -> Outcome {
-        guard isConfigured, let package = packages[offer.id] else {
+        guard isConfigured, packages[offer.id] != nil else {
             #if DEBUG && targetEnvironment(simulator)
             if let product = testProducts[offer.id] { return await purchaseFromTestStore(product) }
             #endif
@@ -258,9 +263,11 @@ final class SubscriptionService {
             return .failed
             #endif
         }
-        if let verdict = await preflight(offer, package) { return verdict }
-        // The screen went away during the preflight (Close, a swipe down): nothing reaches Apple's sheet unseen.
-        guard !Task.isCancelled else { return .cancelled }
+        let package: Package
+        switch await preflight(offer) {
+        case let .buy(cleared): package = cleared
+        case let .stop(outcome): return outcome
+        }
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return .cancelled }
@@ -273,29 +280,60 @@ final class SubscriptionService {
         }
     }
 
+    private enum Cleared { case buy(Package), stop(Outcome) }
+
     /// Mahj's preflight, run after every tap: settle ownership, then get StoreKit's free-week answer, each bounded,
-    /// and buy only on the terms the screen showed. nil means buy. A reinstall that owns the patterns is not sold
-    /// them again, and an account whose free week is spent never meets a charge under "7 days free" (3.1.2).
-    private func preflight(_ offer: Offer, _ package: Package) async -> Outcome? {
+    /// then compare the live terms with the tapped ones. A reinstall that owns the patterns is not sold them again,
+    /// and an account whose free week is spent never meets a charge under "7 days free" (3.1.2).
+    private func preflight(_ offer: Offer) async -> Cleared {
         let ids: Set = [RevenueCatConfig.yearly, RevenueCatConfig.monthly, RevenueCatConfig.lifetime]
-        guard let owns = await Self.within(3, { await Self.ownsInStoreKit(ids) }) else { return .unavailable }
+        guard let checked = await Self.within(3, { await Self.ownsInStoreKit(ids) }), let owns = checked else { return .stop(.unavailable) }
         if owns {
             // StoreKit holds a current purchase that RevenueCat has not caught up with yet.
             if !isPro, let info = await Self.within(3, { try? await Purchases.shared.syncPurchases() }) ?? nil { apply(info) }
-            return isPro ? .alreadyOwned : .unavailable
+            return .stop(isPro ? .alreadyOwned : .unavailable)
         }
-        if isPro { return .alreadyOwned }
-        guard offer.term != .lifetime else { return nil }
-        let product = package.storeProduct.sk2Product
-        guard let subscription = product?.subscription,
-              let eligible = await Self.within(3, { await subscription.isEligibleForIntroOffer })
-        else { return .unavailable }
-        let liveDays = eligible ? Self.trialDays(package.storeProduct.introductoryDiscount) : 0
-        guard liveDays == offer.trialDays else {
-            offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays)
-            return .termsChanged
+        var liveDays = 0
+        if offer.term != .lifetime {
+            guard let package = packages[offer.id], let eligible = await freeWeekAnswer(package) else { return .stop(.unavailable) }
+            liveDays = eligible ? Self.trialDays(package.storeProduct.introductoryDiscount) : 0
+            if liveDays != offer.trialDays { offers = Offer.redrawn(offers, id: offer.id, trialDays: liveDays) }
         }
+        // Nothing below waits, so no reload or RevenueCat update can land between this check and Apple's sheet.
+        // The screen went away during the waits (Close, Get Started): nothing reaches Apple's sheet unseen.
+        guard !Task.isCancelled else { return .stop(.cancelled) }
+        if isPro { return .stop(.alreadyOwned) }
+        let package = packages[offer.id]
+        if let stop = Self.confirm(tapped: offer, shown: offers.first { $0.id == offer.id }, storePrice: package?.storeProduct.localizedPriceString, freeWeekDays: liveDays) {
+            return .stop(stop)
+        }
+        return package.map(Cleared.buy) ?? .stop(.unavailable)
+    }
+
+    /// The last check before Apple's sheet: buy only when the screen still shows exactly the plan that was tapped,
+    /// at the store's price, with the free week StoreKit gives this account. nil means buy.
+    nonisolated static func confirm(tapped: Offer, shown: Offer?, storePrice: String?, freeWeekDays: Int) -> Outcome? {
+        guard let shown, let storePrice else { return .unavailable }
+        guard shown == tapped, storePrice == tapped.price, freeWeekDays == tapped.trialDays else { return .termsChanged }
         return nil
+    }
+
+    /// The kept answer, else StoreKit's within 3 seconds. A reply that comes later is still kept, so the next tap
+    /// has it at once.
+    private func freeWeekAnswer(_ package: Package) async -> Bool? {
+        if let freeWeek { return freeWeek }
+        guard let subscription = package.storeProduct.sk2Product?.subscription else { return nil }
+        return await Self.within(3) { [weak self] in
+            let eligible = await subscription.isEligibleForIntroOffer
+            await self?.remember(freeWeek: eligible)
+            return eligible
+        }
+    }
+
+    private func remember(freeWeek eligible: Bool) {
+        guard freeWeek != false else { return }
+        freeWeek = eligible
+        if !eligible { offers = Offer.redrawn(offers, id: "", trialDays: 0) }
     }
 
     /// After `termsChanged`: the words for a free week that turned out to be spent. nil when the change went the
@@ -305,11 +343,18 @@ final class SubscriptionService {
         return String(localized: "This Apple Account already had its free week.", comment: "After a purchase tap, when the account turned out to have used its free trial")
     }
 
-    private nonisolated static func ownsInStoreKit(_ ids: Set<String>) async -> Bool {
+    /// nil when a matching purchase is there but StoreKit could not verify it: ownership is unresolved, so nothing is sold.
+    private nonisolated static func ownsInStoreKit(_ ids: Set<String>) async -> Bool? {
+        var unverified = false
         for await result in Transaction.currentEntitlements {
-            if case let .verified(transaction) = result, ids.contains(transaction.productID), transaction.revocationDate == nil { return true }
+            switch result {
+            case let .verified(transaction):
+                if ids.contains(transaction.productID), transaction.revocationDate == nil { return true }
+            case let .unverified(transaction, _):
+                if ids.contains(transaction.productID) { unverified = true }
+            }
         }
-        return false
+        return unverified ? nil : false
     }
 
     /// `work`'s answer, or nil when it takes longer than `seconds`. The work keeps running; nobody waits on it.

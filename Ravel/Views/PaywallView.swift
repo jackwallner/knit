@@ -34,7 +34,7 @@ struct PaywallView: View {
         .safeAreaInset(edge: .top, spacing: 0) {
             HStack {
                 Spacer()
-                Button { dismiss() } label: {
+                Button { buying?.cancel(); dismiss() } label: {
                     Image(systemName: "xmark")
                         .font(.body.weight(.semibold))
                         .foregroundStyle(Theme.secondary)
@@ -62,8 +62,10 @@ struct PaywallView: View {
         }
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
-        // Closing the paywall during the preflight stops the purchase before Apple's sheet.
+        // Closing the paywall during the preflight stops the purchase before Apple's sheet; while it runs the sheet
+        // cannot be swiped away.
         .onDisappear { buying?.cancel() }
+        .interactiveDismissDisabled(working)
         .onChange(of: subscription.isPro) { _, isPro in if isPro { dismiss() } }
         .alert(message ?? "", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {}
     }
