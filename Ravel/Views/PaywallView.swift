@@ -34,12 +34,14 @@ struct PaywallView: View {
         .safeAreaInset(edge: .top, spacing: 0) {
             HStack {
                 Spacer()
-                Button { buying?.cancel(); dismiss() } label: {
+                // Off while a purchase runs, like the swipe down: Apple's sheet must never open over another screen.
+                Button { dismiss() } label: {
                     Image(systemName: "xmark")
                         .font(.body.weight(.semibold))
                         .foregroundStyle(Theme.secondary)
                         .frame(width: 44, height: 44)
                 }
+                .disabled(working)
                 .accessibilityLabel("Close")
             }
             .padding(.horizontal, 8)
@@ -62,8 +64,8 @@ struct PaywallView: View {
         }
         .background(Theme.paper)
         .task { await subscription.loadOffers() }
-        // Closing the paywall during the preflight stops the purchase before Apple's sheet; while it runs the sheet
-        // cannot be swiped away.
+        // While a purchase runs the paywall cannot be closed or swiped away. If it goes away anyway, the checks
+        // before Apple's sheet stop.
         .onDisappear { buying?.cancel() }
         .interactiveDismissDisabled(working)
         .onChange(of: subscription.isPro) { _, isPro in if isPro { dismiss() } }

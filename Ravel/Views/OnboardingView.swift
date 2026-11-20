@@ -265,8 +265,10 @@ struct OnboardingView: View {
     }
 
     private var freeExit: some View {
-        // Leaving during the preflight stops the purchase before Apple's sheet.
-        Button("Get Started") { buying?.cancel(); finish() }
+        // As in Mahj: off while a purchase runs. Apple's sheet cannot be called back once asked for, and on a phone
+        // the checks before it take a few milliseconds, so leaving here let the sheet open over the app.
+        Button("Get Started") { finish() }
+            .disabled(working)
             .font(.body)
             .foregroundStyle(Theme.secondary)
             .lineLimit(typeSize.isAccessibilitySize ? nil : 1)
