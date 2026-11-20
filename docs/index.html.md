@@ -76,7 +76,7 @@ The row counter is drawn as the fabric itself, so the piece on screen grows with
 
 ### Ravel Patterns
 
-An optional upgrade that unlocks the whole pattern library. Monthly or yearly, each with a 7-day free trial for new subscribers, or lifetime. Prices are shown in the app before you buy and vary by region. The Garter Scarf and the Diagonal Dishcloth are free.
+An optional upgrade that unlocks the whole pattern library. Monthly or yearly, each with a 7-day free trial for new subscribers, or lifetime. Prices are shown in the app before you buy and vary by region. The Round Raccoon Beanie, the Garter Scarf and the Diagonal Dishcloth are free.
 
 **Your measurements.** Choose a design, enter your measurements and gauge, and every cast on, increase and decrease is calculated from your numbers. Sizes run from a baby hat to a 5X pullover.
 
@@ -110,7 +110,7 @@ No. Projects, the row counter, your own PDFs and your stash work offline and nev
 
 ## What does Ravel Patterns cost?
 
-The price is shown in the app before you buy and varies by region. Ravel Patterns is monthly or yearly with a 7-day free trial for new subscribers, or a one-time lifetime purchase, and the Garter Scarf and Diagonal Dishcloth are free.
+The price is shown in the app before you buy and varies by region. Ravel Patterns is monthly or yearly with a 7-day free trial for new subscribers, or a one-time lifetime purchase, and the Round Raccoon Beanie, the Garter Scarf and the Diagonal Dishcloth are free.
 
 ## Do I lose a pattern if I stop subscribing?
 
@@ -132,7 +132,7 @@ No. A pattern you have already cast on stays in your projects with its own copy 
 
 **A cast-on pattern stays put.** Each library project keeps its own frozen copy of the pattern, so an app update or a lapsed subscription never alters or removes it.
 
-**The stitch counts add up.** Every design is tested at every size and yarn weight, and the stitch count carries from step to step.
+**The stitch counts add up.** Every design is checked at every size and yarn weight, and the stitch count carries from step to step.
 
 **The tracker stays free.** Projects, the row counter, your own PDFs and your stash never go behind a paywall and never need a network.
 
