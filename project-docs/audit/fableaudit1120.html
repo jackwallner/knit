@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ravel user audit, 2026-11-20</title>
+<style>
+:root {
+  --paper: #f8f5ef; --card: #fffdf9; --ink: #1f1d1a; --soft: #6b655c; --line: #e2dcd0;
+  --red: #a3272f; --amber: #9a6a00; --green: #2f6b3f; --blue: #2b3f7a; --bar: #2b3f7a;
+  --red-bg: #f7e4e3; --amber-bg: #f6ecd2; --green-bg: #e1efe2; --blue-bg: #e3e8f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141311; --card: #1c1a17; --ink: #efeae0; --soft: #a39c90; --line: #34302a;
+    --red: #f08a8f; --amber: #e3b750; --green: #86c795; --blue: #9fb2ee; --bar: #7f95dc;
+    --red-bg: #3a1c1e; --amber-bg: #372c10; --green-bg: #18301d; --blue-bg: #1c2440;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 -apple-system, system-ui, "Segoe UI", sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 32px 16px 80px; }
+h1, h2, h3 { font-family: ui-serif, "New York", Georgia, serif; line-height: 1.2; }
+h1 { font-size: 34px; margin: 0 0 6px; }
+h2 { font-size: 26px; margin: 56px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+h3 { font-size: 19px; margin: 0 0 6px; }
+p { margin: 8px 0; }
+a { color: var(--blue); }
+.meta { color: var(--soft); font-size: 14px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 18px 0 0; font-size: 14px; }
+.lead { font-size: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 14px 0; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; margin-right: 6px; vertical-align: 2px; white-space: nowrap; }
+.now { background: var(--red-bg); color: var(--red); }
+.soon { background: var(--amber-bg); color: var(--amber); }
+.later { background: var(--blue-bg); color: var(--blue); }
+.good { background: var(--green-bg); color: var(--green); }
+.how { color: var(--soft); font-size: 13px; }
+.fix { border-left: 3px solid var(--green); padding-left: 12px; margin-top: 10px; }
+.fix b { color: var(--green); }
+ul, ol { padding-left: 22px; margin: 8px 0; }
+li { margin: 4px 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; margin: 10px 0; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font-size: 12.5px; color: var(--soft); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+figure { margin: 14px 0; }
+figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+figure.phone img { max-height: 520px; width: auto; }
+figcaption { color: var(--soft); font-size: 13.5px; margin-top: 6px; }
+.pair { display: flex; flex-wrap: wrap; gap: 14px; }
+.pair figure { margin: 8px 0; flex: 0 1 auto; }
+.bar { display: flex; align-items: center; gap: 10px; margin: 5px 0; font-size: 14.5px; }
+.bar span:first-child { flex: 0 0 240px; }
+.bar i { display: block; height: 14px; background: var(--bar); border-radius: 4px; }
+.bar em { font-style: normal; color: var(--soft); font-variant-numeric: tabular-nums; }
+code { font: 13px ui-monospace, Menlo, monospace; background: var(--line); padding: 1px 5px; border-radius: 4px; }
+@media (max-width: 640px) { h1 { font-size: 28px; } .bar span:first-child { flex-basis: 150px; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Ravel user audit</h1>
+<p class="meta">2026-11-20. The working tree after build 28, on a headless iPhone simulator, in English, light and dark mode. Audit only: no app code was changed.</p>
+<p class="meta">Method: 9 screen recordings (about 11 minutes) reviewed frame by frame, the Round Raccoon Beanie and Raglan Pullover followed tap by tap to the last row, the source read for every screen, and two research passes (30 competing apps, about 2,700 App Store reviews, knitting blogs and Ravelry pattern pages).</p>
+
+<nav>
+  <a href="#verdict">Verdict</a>
+  <a href="#top">Ranked fixes</a>
+  <a href="#trust">Purchase and claims</a>
+  <a href="#guided">The paid pattern</a>
+  <a href="#firstrun">First run and library</a>
+  <a href="#tracker">The free tracker</a>
+  <a href="#motion">Motion, frame by frame</a>
+  <a href="#journey">The two journeys</a>
+  <a href="#market">Market and gaps</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#works">What works</a>
+  <a href="#notcovered">Not covered</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<h2 id="verdict">Verdict</h2>
+<p class="lead">The app is calm, fast and honest about money, and the counter never lost a row. Two defects should be fixed before release: a trial is offered for a hat the app cannot write at the chosen gauge, and a yarn saved without a name is thrown away. After that, the paid pattern needs a way to read ahead and a round number on every step. The rest is a list of holes a knitter finds in week one.</p>
+<div class="card">
+  <p><b>As a gift knitter</b> (the raccoon hat from TikTok): I get from the store to a pattern at my size in under a minute, with the price shown before anything else. Then I cast on and the app shows me one instruction at a time with no way to read the whole pattern, no round number on most rounds, and a finish screen that leads nowhere.</p>
+  <p><b>As a knitter with my own PDF</b> (searched "row counter"): the counter is lovely. The PDF reader forgets my zoom every time, its row marker does not follow the count, and if I lose my phone I lose everything, because there is no backup.</p>
+</div>
+
+<h2 id="top">Ranked fixes</h2>
+<p>Ranked by harm to a real user, then by how small the fix is. "Before release" items are all small.</p>
+<div class="scroll">
+<table>
+<tr><th>#</th><th>What</th><th>When</th><th>Size</th></tr>
+<tr><td>1</td><td><a href="#fit">A trial is offered for a chart that does not fit the chosen gauge</a>; the knitter learns it after subscribing (found by the other audit today, confirmed in the code)</td><td><span class="tag now">Before release</span></td><td>Small</td></tr>
+<tr><td>2</td><td><a href="#claims">Make the public claims match</a>: "tested" on the site, 32 versus 45 designs, which designs are free</td><td><span class="tag now">Before release</span></td><td>Tiny</td></tr>
+<tr><td>3</td><td><a href="#whole">Let a knitter read the whole pattern</a> and see what comes next</td><td><span class="tag now">Before release</span></td><td>Small to medium</td></tr>
+<tr><td>4</td><td><a href="#roundno">Show the round or row number on every step</a></td><td><span class="tag now">Before release</span></td><td>Small</td></tr>
+<tr><td>5</td><td><a href="#raccoon">Raccoon Beanie</a>: needle color at cast on, ear placement, eyes worked the usual way</td><td><span class="tag now">Before release</span></td><td>Small (pattern data)</td></tr>
+<tr><td>6</td><td><a href="#launch">White flash at launch</a>: give the launch screen the app's cream background</td><td><span class="tag now">Before release</span></td><td>Tiny</td></tr>
+<tr><td>7</td><td><a href="#stash">Stash</a>: a yarn saved without a name is discarded with everything typed; swipe deletes without asking; a needle is added even if the editor is dismissed</td><td><span class="tag now">Before release</span></td><td>Tiny</td></tr>
+<tr><td>8</td><td><a href="#terms">Explain "Inc across" and other house terms</a> where they appear</td><td><span class="tag soon">First update</span></td><td>Small</td></tr>
+<tr><td>9</td><td><a href="#backup">Backup or export</a>, so a lost phone does not lose every count</td><td><span class="tag soon">First update</span></td><td>Medium</td></tr>
+<tr><td>10</td><td><a href="#pdf">PDF reader</a>: keep the zoom, move the marker with the count, accept "Open in Ravel"</td><td><span class="tag soon">First update</span></td><td>Medium</td></tr>
+<tr><td>11</td><td><a href="#finish">A finish worth reaching</a>: photo, share, knit again, next pattern</td><td><span class="tag soon">First update</span></td><td>Small</td></tr>
+<tr><td>12</td><td><a href="#search">Search words knitters use</a>: christmas, gift, toque, jumper; hide wrong matches</td><td><span class="tag soon">First update</span></td><td>Small</td></tr>
+<tr><td>13</td><td><a href="#tapfade">Instruction text smears</a> for 0.2 s on every tap; onboarding button blinks</td><td><span class="tag soon">First update</span></td><td>Small</td></tr>
+<tr><td>14</td><td><a href="#lockscreen">Count from the Lock Screen</a> (Live Activity or widget)</td><td><span class="tag soon">First update</span></td><td>Medium</td></tr>
+<tr><td>15</td><td><a href="#counters">Counters</a>: how many repeats are done, more than one extra counter, a reminder at a row</td><td><span class="tag later">Later</span></td><td>Medium</td></tr>
+<tr><td>16</td><td>Real test knits with photos, a schematic and an ease choice for sweaters, Ravelry import, Apple Watch, timer, project photos, a units switch</td><td><span class="tag later">Later</span></td><td>Large</td></tr>
+</table>
+</div>
+
+<h2 id="trust">Before release: purchase and claims</h2>
+
+<div class="card" id="fit">
+  <h3><span class="tag now">Before release</span>A trial is offered for a pattern the app cannot write</h3>
+  <p>Found by <a href="audit%201120.html">the other audit</a> and confirmed in the code. On a colorwork design, some size and gauge pairs leave no room for the chart. A subscriber sees a disabled button, "Chart Does Not Fit This Gauge". A person who has not paid sees "Try Free for 7 Days" at the same settings, because the fit check is skipped for locked designs (<code>LibraryView.swift</code> line 392). They agree to a renewing trial and land on a dead button.</p>
+  <div class="fix"><b>Fix.</b> Run the fit check for everyone, before any purchase button, and say which number to change.</div>
+</div>
+
+<div class="card" id="photos">
+  <h3><span class="tag later">Decided</span>Sample photos</h3>
+  <p>The library's sample photos are generated images. Jack's decision on 2026-11-20: they stay. For reference, the rules elsewhere: Etsy announced on 2026-10-22 that craft pattern listings need a real photo of a finished result (<a href="https://www.valueaddedresource.net/etsy-bans-ai-patterns/">source</a>), and Ribblr and TKGA take the same line. Photos of real knits from test knitters remain the cheapest proof the library can add.</p>
+  <div class="pair">
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/raglan1.jpg" alt="Raglan Pullover design page"><figcaption>Raglan Pullover design page.</figcaption></figure>
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/lib1.jpg" alt="Patterns tab"><figcaption>Patterns tab, first screen.</figcaption></figure>
+  </div>
+</div>
+
+<div class="card" id="claims">
+  <h3><span class="tag now">Before release</span>Public claims that do not match each other</h3>
+  <ul>
+    <li><b>"Tested".</b> The site says "Every design is tested at every size and yarn weight" (<code>docs/index.html</code> line 723). To a knitter "tested" means test-knitted by people. The store description already uses the right word, "checked". Use "checked by software" on the site too.</li>
+    <li><b>Design count.</b> The site's structured data says "a library of 32 designs" (line 34). The page body and the store say 45.</li>
+    <li><b>Free designs.</b> The promotional text says "A raccoon hat, two more patterns" are free. The description names only the Garter Scarf and the Diagonal Dishcloth. The app shows three free designs.</li>
+    <li><b>Nobody has knitted these.</b> No test knit is claimed anywhere, which is honest. It is also the gap. A pattern with zero finished projects reads as untested. Five to ten test knitters with Ravelry project pages are the cheapest proof there is, and they are also the cheapest launch channel.</li>
+  </ul>
+</div>
+
+<h2 id="guided">The paid pattern, knitted start to finish</h2>
+<p>This is what the subscription buys, so I knitted the free Round Raccoon Beanie (71 taps) and the Raglan Pullover (386 taps) to the last row and read every instruction.</p>
+
+<figure><img loading="lazy" src="raw/2026-11-20-fable/guide-all.jpg" alt="Six steps of the guided raccoon beanie"><figcaption>Cast on, two ribbing rounds, the change to the larger needle, two body rounds. Note the green loops under "in gray", the cut-off title, and "Knit, 88 stitches" with no round number.</figcaption></figure>
+
+<div class="card" id="whole">
+  <h3><span class="tag now">Before release</span>There is no way to read the whole pattern</h3>
+  <p>Before casting on, the design page shows the opening rows and then one grey line of section names ("Crown, First Ear, Second Ear, Finishing"). After casting on, the screen shows exactly one instruction. I cannot see the next round, read ahead to check I understand the crown before I get there, or look back at what I did. I cannot print or export it either.</p>
+  <p>Knitters read a pattern through before they buy yarn. It is also how they recover from a mistake: you need the last few rows to find where you went wrong. Every paper pattern and every PDF gives this for free.</p>
+  <div class="fix"><b>Fix.</b> A "Whole Pattern" item in the project menu that opens the full written pattern as a scrolling list with the current step marked. The design page already renders the same text for the preview, so the pieces exist. Then show the next instruction in small grey type under the current one. Paid designs can keep the preview limit before purchase.</div>
+</div>
+
+<div class="card" id="roundno">
+  <h3><span class="tag now">Before release</span>Most steps do not say which round you are on</h3>
+  <p>The design page preview numbers every round ("Round 4: With cream, knit"). The guided screen drops the number: a single round shows "Knit" and "88 stitches". A run shows "1 of 12", which counts within the run, not the round of the section. When I put the work down and pick it up, "Body, Knit" does not tell me whether I am on round 3 or round 5. The fabric shows a small 10 every ten rows, but that is the count for the whole project, not the section.</p>
+  <div class="fix"><b>Fix.</b> Put the section's round number on every step: "Body · Round 5". It is already computed for the preview.</div>
+</div>
+
+<div class="card" id="raccoon">
+  <h3><span class="tag now">Before release</span>The Round Raccoon Beanie, the design that leads both shelves</h3>
+  <p>This is the free design the marketing points at, so it is the first pattern most people will knit. Four things:</p>
+  <ul>
+    <li><b>The needle shows green loops while the text says "Cast on 88 stitches in gray".</b> At cast on and round 1 the loops are the default green. A beginner checks the picture against the words.</li>
+    <li><b>The eyes are stranded.</b> As written, the two cream eye squares are knitted in, with cream carried behind about 60 black stitches for 3 rounds. That makes long floats inside a hat or constant catching. Small isolated motifs like these are normally added afterwards in duplicate stitch, which is also easier for the "Intermediate" knitter this design is rated for.</li>
+    <li><b>Nothing says where the ears go relative to the face.</b> The mask is centered about a quarter of the way round from the start of the round, so the color jog sits at the side of the head. The finishing step does not tell the knitter to line the ears up with the face. Get that wrong and the hat is not a raccoon.</li>
+    <li><b>The design page has no description.</b> No sentence on what techniques it needs (stranded colorwork, picking up stitches for ears) and no sample image beyond the drawing.</li>
+  </ul>
+  <p class="how">The pattern lives in <code>docs/designs.json</code>, so it can be corrected without an app update. Records there are published only with Jack's yes.</p>
+</div>
+
+<div class="card" id="terms">
+  <h3><span class="tag soon">First update</span>House terms are not explained where they appear</h3>
+  <p>The raglan yoke's key row reads "*Inc across; repeat from * 3 more times". "Inc across" is Ravel's own shorthand (knit 1, make 1 left, knit to 1 before the marker, make 1 right, knit 1, slip the marker). It is defined in the glossary, which sits under the menu, then Materials, then a long scroll. Tapping the screen for help knits a row. "Double stitch" in the short rows has the same problem.</p>
+  <div class="fix"><b>Fix.</b> Write the row out in full the first time it appears, and make a dotted-underlined term open its definition (a tap on the word must not count a row).</div>
+</div>
+
+<div class="card">
+  <h3><span class="tag soon">First update</span>Smaller things on the guided screen</h3>
+  <ul>
+    <li><b>The title cuts off the size</b>: "Round Raccoon Beanie, M...". The size is the one fact I want confirmed.</li>
+    <li><b>The needle sizes at cast on are tiny</b> (footnote type that shrinks further). This is the one moment the knitter needs them.</li>
+    <li><b>The garment picture and the section label move up and down</b> by 7 to 15 points whenever the instruction changes length. Pin them.</li>
+    <li><b>Sweaters take 3 measurements and a fixed 3 inches of ease.</b> There is no upper arm measurement and no choice of fit. A garment knitter's first question is "is 38 my chest or the finished chest?" The page should answer it in one line and, later, offer close, classic or relaxed fit.</li>
+  </ul>
+  <p><b>What held up.</b> The Raglan Pullover's numbers are consistent end to end: 184 body stitches is 41 inches at the stated gauge, sleeves go from 64 to 40 stitches at the stated rate, lengths match the measurements, and the short rows are written correctly. Shaping rows say the count "after this round". Undo works at every step.</p>
+</div>
+
+<div class="card" id="finish">
+  <h3><span class="tag soon">First update</span>Finishing is a dead end</h3>
+  <div class="pair">
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/finished.jpg" alt="Finished screen"><figcaption>The end of the pattern: the word "Finished".</figcaption></figure>
+    <div style="flex:1 1 320px">
+      <p>The happiest moment in the app has nothing to do. No photo of the real hat, no share, no "knit it again in another size", no next pattern. The rating ask fires 3 seconds later, which is well timed, but then the screen just sits there.</p>
+      <p>Going back to the design in the same visit, the button still says "Open Project" for the finished project instead of "Cast On" (the check for an existing project does not look at whether it is finished).</p>
+      <div class="fix"><b>Fix.</b> Under "Finished": Add a Photo, Share, Knit Again. A shared photo of a real hat made from a Ravel pattern is also the best advertisement the library can get.</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="firstrun">First run and finding a pattern</h2>
+
+<div class="card" id="launch">
+  <h3><span class="tag now">Before release</span>A white screen flashes before the cream app</h3>
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/launch-white-frames.jpg" alt="Launch frames: white for many frames"><figcaption>Cold launch at 10 frames a second. The system launch screen is pure white; the app is cream in light mode and near black in dark mode.</figcaption></figure>
+  <p><code>Info.plist</code> has an empty <code>UILaunchScreen</code>, so iOS shows white (or black) until the first frame. The length on the simulator (3 seconds and more) is inflated by the debug build and is not what a phone will show. The color jump is real on any device, and in dark mode it is a white flash into a dark app.</p>
+  <div class="fix"><b>Fix.</b> Add a named color with the paper's light and dark values and set it as the launch screen's background color. Check the duration once on a phone.</div>
+</div>
+
+<div class="card">
+  <h3><span class="tag soon">First update</span>Onboarding</h3>
+  <div class="pair">
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/ob1-tapped.jpg" alt="Onboarding page 1"><figcaption>Page 1 after tapping.</figcaption></figure>
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/ob2.jpg" alt="Onboarding page 2"><figcaption>Page 2.</figcaption></figure>
+    <figure class="phone"><img loading="lazy" src="raw/2026-11-20-fable/ob3.jpg" alt="Onboarding trial page"><figcaption>Page 3, the trial.</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>Page 1 lets me tap and the fabric grows, which is the best moment in onboarding. It shows no number.</b> A row counter that does not show the count leaves the point half made. Show the count ticking up.</li>
+    <li><b>Page 2 says "Patterns written to your size" over a hat that fills with color.</b> It does not show what the sentence means. One size chip changing and a stitch count changing with it ("Baby 64 stitches" to "Adult 88 stitches") would make the claim concrete without a word of copy.</li>
+    <li><b>Page 3 follows the fleet trial layout and I would not change its structure.</b> The price is the largest price text, the terms are readable, and "Get Started" leaves quietly.</li>
+    <li><b>Everyone lands on Patterns afterwards.</b> That was a deliberate choice. Its cost falls on the person who searched "row counter": their first screen is a paid library, and the counter is one tab away with no hint. Watch how many first sessions ever open Projects.</li>
+  </ul>
+  <p class="how">Motion problems on these pages are under <a href="#motion">Motion</a>.</p>
+</div>
+
+<div class="card">
+  <h3><span class="tag soon">First update</span>The Patterns tab</h3>
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/lib-scroll-all.jpg" alt="The whole library scrolled"><figcaption>The whole library, top to bottom.</figcaption></figure>
+  <ul>
+    <li><b>The Round Raccoon Beanie is first in Trending and first in Free</b>, stacked directly above itself on the first screen. It looks like a short catalogue. Drop it from one shelf when it leads the other.</li>
+    <li><b>Drawings and photos are mixed</b> in the same row, which makes the drawings look like missing images.</li>
+    <li><b>Nothing says other people knit these.</b> No project counts, no ratings, no "knitted by". Fine for day one; it is where real test knits would show.</li>
+  </ul>
+</div>
+
+<div class="card" id="search">
+  <h3><span class="tag soon">First update</span>Search misses the words gift knitters type</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>Typed</th><th>Result</th><th>Should</th></tr>
+    <tr><td>christmas, gift</td><td>Nothing</td><td>The Holiday shelf, quick gifts. The "Holiday" tag is not searched.</td></tr>
+    <tr><td>toque, jumper</td><td>Nothing</td><td>Hats, sweaters. Canadian and British words; "beanie" already maps to hat.</td></tr>
+    <tr><td>cardigan for baby</td><td>Baby hats first, the cardigan below</td><td>The garment word should outrank the size word.</td></tr>
+    <tr><td>dog sweater, crochet blanket</td><td>Human sweaters, knitted blankets, no note</td><td>Say "No dog patterns yet" and then show sweaters, or show nothing.</td></tr>
+    <tr><td>3 year old</td><td>Adult sweaters</td><td>Child sizes.</td></tr>
+    <tr><td>top down</td><td>Socks</td><td>The top-down raglans.</td></tr>
+  </table>
+  </div>
+  <p>Working well: socks, free, easy, gloves, raccoon, shawl, xl, "husband sweater", "ribbed beanie".</p>
+</div>
+
+<div class="card">
+  <h3><span class="tag soon">First update</span>The design page</h3>
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/design-all.jpg" alt="Design page scrolled"><figcaption>The Round Raccoon Beanie's page: size, head, gauge, materials, opening rows, then a grey line of the sections to come.</figcaption></figure>
+  <ul>
+    <li><b>This is the strongest screen in the app.</b> Size, yardage, needles and the opening rows at my size, all before paying. No competitor shows this much.</li>
+    <li><b>The "Gauge" heading sits over yarn weight chips</b> (DK, Worsted, Aran, Bulky). A beginner does not know that picking a weight sets a gauge. Call the chips "Yarn" and keep "Gauge" for the stitches row.</li>
+    <li><b>No help measuring.</b> "Head 22 in": measured where? One line ("around the widest part, above the ears") and, for hats, a note that the hat is knitted smaller than the head so it stays on. The materials line already says "19.5 in around, to fit a 22 in head", which a new knitter will read as a mistake unless it is explained.</li>
+    <li><b>The last grey line ("Crown, First Ear, Second Ear, Finishing") reads as stray text.</b> Label it: "Then: Crown, First Ear..." or make it the entry to the whole pattern.</li>
+  </ul>
+</div>
+
+<h2 id="tracker">The free tracker</h2>
+<p>The tracker is the part that earns ratings, because it is what most people will use and it is free. It is also thinner than the free tiers of the apps knitters already use.</p>
+
+<div class="card" id="pdf">
+  <h3><span class="tag soon">First update</span>PDF reader</h3>
+  <div class="pair">
+    <figure><img loading="lazy" src="raw/2026-11-20-fable/pdf-all.jpg" alt="PDF with band not moving as count rises"><figcaption>Count 0, then 4. The band stays on "Row 8" because it is not tied to the count.</figcaption></figure>
+    <figure><img loading="lazy" src="raw/2026-11-20-fable/zoom-all.jpg" alt="Zoomed PDF then reopened at fit width"><figcaption>Zoomed in to read, left the project, came back: the page is back to full width and unreadable.</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>Zoom is forgotten every time the project opens.</b> A full page at phone width is too small to knit from, so the first act of every session is pinch and scroll. The page and the band are saved; the zoom and position are not.</li>
+    <li><b>The band does not move when I count.</b> My Row Counter's most praised feature is a highlighter tied to the counter. Here I tap to count and then tap again to move the band.</li>
+    <li><b>One band, no notes, no column marker for charts, no highlighter.</b> PDF markup comes up in 66 competitor reviews, charts in 41.</li>
+    <li><b>The page stays white in dark mode</b>, bright next to the dark fabric at night.</li>
+    <li><b>A PDF cannot be sent to Ravel.</b> The app declares no document types, so a pattern downloaded in Safari or Mail has no "Open in Ravel". The only way in is the app's own file picker.</li>
+  </ul>
+</div>
+
+<div class="card" id="backup">
+  <h3><span class="tag soon">First update</span>No backup, no sync, no export</h3>
+  <p>Everything lives in one local store. A lost, broken or replaced phone without an iCloud device backup loses every count, PDF and stash entry. Lost data is the most common complaint across the category (74 reviews in 10 of 11 apps) and the loudest 1-star reason after money. Free iCloud sync is already standard in StitchTally, CozyKnit, KnitHub and YarnBuddy.</p>
+  <p>The project rule says a row count must never be lost, and sync is where apps lose counts, so the caution is right. An export file ("Save a backup to Files", and "Restore") keeps the rule and closes the hole. Check too that the store is included in device backups.</p>
+</div>
+
+<div class="card" id="counters">
+  <h3><span class="tag later">Later</span>Counters</h3>
+  <div class="pair">
+    <figure><img loading="lazy" src="raw/2026-11-20-fable/counter-all.jpg" alt="Counter screens"><figcaption>The counter. The whole screen is the button.</figcaption></figure>
+    <figure><img loading="lazy" src="raw/2026-11-20-fable/rep-all.jpg" alt="Repeat dots"><figcaption>A repeat shows where I am inside it, not how many I have finished.</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>The repeat shows position only.</b> "Work the 8-row repeat 12 times" needs "repeat 5 of 12". The dots tell me I am on row 3 of 8.</li>
+    <li><b>One extra counter.</b> Sock and sleeve knitters run three or more (rows, decreases, pattern repeat).</li>
+    <li><b>No reminder at a row</b> ("buttonhole on row 24", "decrease every 6th row"), which is the thing knitCompanion sells.</li>
+    <li id="lockscreen"><b>No counting without opening the app.</b> Lock Screen, Live Activity, widget and Watch are in every serious 2025 and 2026 entrant, and "count rows without unlocking" is asked for even in 5-star reviews. A Live Activity is the cheapest of these and covers the knitter whose phone locked mid-row. Inside a project Ravel keeps the screen awake, which already helps.</li>
+  </ul>
+</div>
+
+<div class="card" id="stash">
+  <h3><span class="tag now">Before release</span>Stash</h3>
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/stash-all.jpg" alt="Stash empty, yarn editor, needle editor, stash filled"><figcaption>Empty stash, the yarn and needle editors, and the list.</figcaption></figure>
+  <ul>
+    <li><b>Swipe to delete removes a yarn or needle at once, with no question and no undo.</b> A yarn can hold brand, color, dye lot and yardage typed by hand. Ask first, as deleting a project does.</li>
+    <li><b>A yarn saved without a name is thrown away.</b> Enter fiber, dye lot and skeins, leave Name empty, tap Done: the yarn is gone (<code>dropUnnamed</code> deletes on an empty name, whatever else was typed). Found by the other audit; I had missed it. Keep any yarn with a field filled in and name it from its fiber or weight.</li>
+    <li><b>Adding a needle saves it the moment the editor opens.</b> Swipe the sheet away and a default "US 7 circular" stays in the stash.</li>
+    <li class="how">First update: skeins are whole numbers only (no half skein); the editors and the Materials and Details sheets are cool system grey against the warm paper everywhere else; the stash is not used by the library ("you have enough Cascade 220 for this hat" is the obvious payoff for keeping one).</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="tag soon">First update</span>Project list, units, relaunch</h3>
+  <ul>
+    <li><b>Each project row shows a bare number</b> ("18"). Say "row 18", and for a library project show progress ("round 34 of 71").</li>
+    <li><b>The list is sorted by when a project was created</b>, not when it was last worked, so the scarf I knit every night sinks under the project I added yesterday.</li>
+    <li><b>Finished projects show no date.</b></li>
+    <li><b>Units follow the phone's region with no switch.</b> Many Canadian knitters, and anyone following a US pattern abroad, work in inches. One setting.</li>
+    <li><b>Reopening the app shows the project list, not the project I was in.</b> The count is safe; it is one extra tap every time I pick up the needles.</li>
+  </ul>
+</div>
+
+<h2 id="motion">Motion, frame by frame</h2>
+<div class="scroll">
+<table>
+<tr><th>Moment</th><th>What the frames show</th><th>Verdict</th></tr>
+<tr><td>Cold launch</td><td>White system screen, then a hard cut to the cream app</td><td><span class="tag now">Fix</span>Launch background color (<a href="#launch">above</a>)</td></tr>
+<tr><td>Onboarding, each Continue</td><td>The page slides and fades in 0.35 s. During it the black button fades almost to the paper color and back, about 0.3 s, so the one control on screen blinks on every page</td><td><span class="tag soon">Fix</span>Keep the button outside the animated view</td></tr>
+<tr><td>Onboarding, arriving at the trial page</td><td>For about 2 frames the new price line and "Start 7-day free trial" are drawn over the old dots and the old "Continue". The dots then sit about 27 points higher than on page 2</td><td><span class="tag soon">Fix</span>Same cause; hold the bar's height steady across pages</td></tr>
+<tr><td>Leaving onboarding</td><td>The cover drops and the Patterns tab is already in place</td><td><span class="tag good">Clean</span></td></tr>
+<tr><td>Design to project (Cast On)</td><td>Standard push; the cast-on screen is laid out before it arrives</td><td><span class="tag good">Clean</span></td></tr>
+<tr id="tapfade"><td>Each tap in a guided pattern</td><td>The old and new instruction are drawn on top of each other for about 0.2 s. With two lines of text it is an unreadable smear. The picture and section label shift vertically when the text length changes</td><td><span class="tag soon">Fix</span>Fade the old text out before the new one in, or cut; pin the header</td></tr>
+<tr><td>Each tap on the counter</td><td>A new row of stitches grows on the needle; the number changes at once</td><td><span class="tag good">Clean</span>The best motion in the app</td></tr>
+<tr><td>Ten taps in 1.2 seconds</td><td>All ten counted, fabric caught up without stutter</td><td><span class="tag good">Clean</span></td></tr>
+<tr><td>Undo</td><td>The row unravels, count steps back</td><td><span class="tag good">Clean</span></td></tr>
+<tr><td>Paywall open, plan change, close</td><td>Sheet rises with prices in place; selection moves without a jump; closes with no flash</td><td><span class="tag good">Clean</span></td></tr>
+<tr><td>Menu, Materials, Go to Section</td><td>System menus and sheets, no layout shift</td><td><span class="tag good">Clean</span>Sheets are grey, not paper</td></tr>
+<tr><td>Force quit and relaunch mid-project</td><td>Count intact, fabric redrawn at the same row</td><td><span class="tag good">Clean</span></td></tr>
+</table>
+</div>
+<div class="pair">
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/onboarding-page-change-frames.jpg" alt="Onboarding page change frames"><figcaption>Page 1 to page 2 at 15 frames a second. The button is nearly invisible in the first three frames.</figcaption></figure>
+  <figure><img loading="lazy" src="raw/2026-11-20-fable/onboarding-trial-page-frames.jpg" alt="Trial page arriving"><figcaption>Arriving at the trial page. Frame 2: the price is drawn over the old dots.</figcaption></figure>
+</div>
+<figure><img loading="lazy" src="raw/2026-11-20-fable/instruction-crossfade-frames.jpg" alt="Instruction cross-fade frames"><figcaption>One tap at 20 frames a second. Frames 3 to 6: "Cast on 88 stitches..." and "*K2, p2..." on top of each other.</figcaption></figure>
+<p class="how">Dark mode was checked on the project list, counter, PDF and library: colors and contrast are right throughout, except the white PDF page.</p>
+
+<h2 id="journey">The two journeys, and where each one has a hole</h2>
+<div class="card">
+  <h3>The gift knitter who saw the raccoon hat</h3>
+  <ol>
+    <li>Store page, install, open. <b>Hole:</b> white flash.</li>
+    <li>Three onboarding pages, "Get Started". Smooth, under 20 seconds. <b>Hole:</b> page 2 does not show what "your size" does.</li>
+    <li>Patterns tab, raccoon hat first. Good: exactly what they came for, and it is free.</li>
+    <li>Design page. Good: size, yarn, needles and the first rows before any commitment. <b>Hole:</b> cannot read the whole pattern before buying yarn; no word on techniques; "19.5 in to fit a 22 in head" unexplained.</li>
+    <li>Cast On, knit. Good: one calm instruction, big text, fabric growing. <b>Holes:</b> green loops versus "gray"; no round numbers; no look-ahead; stranded eyes; ear placement.</li>
+    <li>Finished. <b>Hole:</b> nothing to do next, at the exact moment they would pay to knit mittens to match.</li>
+    <li>They tap a locked design: "Try Free for 7 Days", a clear paywall, price first. Good.</li>
+  </ol>
+</div>
+<div class="card">
+  <h3>The knitter with a PDF who searched "row counter"</h3>
+  <ol>
+    <li>Onboarding, then the Patterns tab. <b>Hole:</b> they came for a counter and are looking at a paid library.</li>
+    <li>Projects tab, add a project, tap to count. Good: instant, no account, nothing to set up.</li>
+    <li>Add their PDF. <b>Hole:</b> only from inside the app; no "Open in Ravel" from Safari or Mail.</li>
+    <li>Knit from the PDF. <b>Holes:</b> zoom resets each visit; the band does not follow the count; no notes on the page.</li>
+    <li>Week two: a second project with sleeve decreases. <b>Holes:</b> one extra counter, no reminder at a row, no count of repeats done.</li>
+    <li>New phone. <b>Hole:</b> no backup inside the app.</li>
+  </ol>
+</div>
+
+<h2 id="market">Market: what Ravel has, and what knitters will miss</h2>
+
+<div class="card">
+  <h3>What nobody else has</h3>
+  <ul>
+    <li><b>Patterns computed from the knitter's own measurements and gauge, across 45 designs.</b> The only live comparables are KnitsThatFit (sweaters only, 127 ratings, no update since March 2025) and Knitting Genius (52 ratings). Bellish, the venture-backed version of this idea, is gone. Loopsy, LooseLoop, Ribblr, Knitrino and Tin Can Knits only hide the other sizes of a fixed pattern.</li>
+    <li><b>Arithmetic, not a language model.</b> The fastest-growing rivals run AI parsers, and their 1-star reviews are AI errors ("Got my charts completely wrong", LooseLoop, after five hours of socks).</li>
+    <li><b>A cast-on pattern is frozen and stays yours.</b> This answers the most damaging review pattern of 2026: Loopsy removed a paid feature mid-project, knitCompanion moved lifetime buyers to a subscription, Tin Can Knits wiped progress.</li>
+    <li><b>A wrong pattern can be reported and the fix is offered at the row you are on.</b></li>
+    <li><b>The whole tracker is free with no account, no ads, no project cap.</b> No app that also sells patterns does this.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>What knitters ask competitors for, and Ravel lacks</h3>
+  <p class="how">Reviews mentioning each feature, across 2,108 US App Store reviews of 11 knitting apps dated 2024 or later. Counts are keyword matches: read them as relative size, not statistics.</p>
+  <div class="bar"><span>Sync, backup, lost data</span><i style="width:296px"></i><em>74</em></div>
+  <div class="bar"><span>PDF highlight and notes</span><i style="width:264px"></i><em>66</em></div>
+  <div class="bar"><span>Ravelry import</span><i style="width:264px"></i><em>66</em></div>
+  <div class="bar"><span>Chart reading aids</span><i style="width:164px"></i><em>41</em></div>
+  <div class="bar"><span>Project timer</span><i style="width:152px"></i><em>38</em></div>
+  <div class="bar"><span>Apple Watch</span><i style="width:144px"></i><em>36</em></div>
+  <div class="bar"><span>More or linked counters</span><i style="width:128px"></i><em>32</em></div>
+  <div class="bar"><span>Export or print</span><i style="width:84px"></i><em>21</em></div>
+  <div class="bar"><span>Project photos</span><i style="width:72px"></i><em>18</em></div>
+  <div class="bar"><span>Widget or Lock Screen</span><i style="width:68px"></i><em>17</em></div>
+  <div class="bar"><span>Reminders at a row</span><i style="width:68px"></i><em>17</em></div>
+  <div class="bar"><span>Voice counting</span><i style="width:64px"></i><em>16</em></div>
+  <p>The two that move ratings most are data safety and counting without opening the app: they are what the happiest reviewers of other apps say they pay for and what the angriest say they lost. A store name one syllable from "Ravelry" will also draw the question "does it connect to Ravelry?"</p>
+</div>
+
+<div class="card">
+  <h3>Who pays for sized patterns, and what sank the earlier attempts</h3>
+  <ul>
+    <li><b>The buyers are garment knitters whose bodies sit outside standard sizes, and gift knitters buying children's sizes in November and December.</b> Scarves, cowls and dishcloths are free everywhere and do not sell a subscription.</li>
+    <li><b>The market for custom fit is real and small.</b> CustomFit, the best-known tool, had 3,854 Ravelry projects in a decade and closed in June 2024. One ordinary sweater pattern (Flax) has 33,772.</li>
+    <li><b>One visible wrong number defines a sizing app.</b> KnitsThatFit's reviews: "401 yards of yarn for a men's sweater", "would fit Barbie". The checks in <code>PatternTests</code> are the right defense; a real test knit per garment is the other half.</li>
+    <li><b>Knitters accept calculators.</b> A free custom raglan worksheet has 2,423 Ravelry projects and no AI complaints. Name the method ("the same arithmetic as a percentage-system sweater, worked out from your gauge") and show who made the app. Avoid "generate", "smart", "instantly".</li>
+    <li><b>Crochet is not a launch need.</b> 58 percent of yarn crafters do both, but only 7 of 2,629 reviews of knit-first apps complain about missing crochet. Being misled is what gets punished, and Ravel says plainly that the library is knitting.</li>
+    <li><b>What gets apps deleted in the first five minutes</b> (forced sign-up, a trial pushed before any free use, ads, lost work) Ravel already avoids by design.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Reaching the first thousand</h3>
+  <ul>
+    <li><b>Test knitters first.</b> They produce Ravelry project pages and real photos, which is the proof the library lacks and Ravelry is where 70 percent of surveyed knitters say they get their ideas.</li>
+    <li><b>A late November launch catches only quick gifts</b>: hats, mittens, baby things. Lead with those, in children's sizes.</li>
+    <li><b>TikTok and Instagram reward real hands and real yarn.</b></li>
+    <li><b>r/craftsnark is where a misstep gets taken apart</b>, not where to launch. Reddit could not be read for this audit, so this point rests on press coverage.</li>
+  </ul>
+</div>
+
+<h2 id="pricing">Pricing</h2>
+<div class="scroll">
+<table>
+<tr><th>Group</th><th>Monthly</th><th>Yearly</th><th>Lifetime</th><th>What it buys</th></tr>
+<tr><td><b>Ravel</b></td><td>$6.99</td><td>$39.99</td><td>$79.99</td><td>45 sized designs; the tracker is free</td></tr>
+<tr><td>YarnPal, Loopsy, Woolsy, LoopCraft</td><td>up to $8.99</td><td>$39.99</td><td>Loopsy $99.99</td><td>Hundreds of patterns, video, sync, stash</td></tr>
+<tr><td>Knit&amp;Note</td><td>about $9.99</td><td>$107.99</td><td>none</td><td>1,200 patterns, tracker (3.9 stars)</td></tr>
+<tr><td>Trackers: My Row Counter, YarnBuddy, StitchTally, CozyKnit</td><td>$1.99 to $4.99</td><td>$9.99 to $24.99</td><td>$24.99 to $79.99</td><td>Sync, Watch, PDF markup</td></tr>
+<tr><td>Per pattern: Tin Can Knits, Knitting Genius, KnitsThatFit</td><td></td><td></td><td>$2.99 to $14.99 each</td><td>One pattern or one generator</td></tr>
+</table>
+</div>
+<ul>
+  <li><b>$39.99 a year is the top of the category, and everyone else charging it bundles a far larger library.</b> Knitters compare on catalogue size first. Ravel's answer has to be "45 designs times every size and every yarn", said in numbers on the paywall and the store page.</li>
+  <li><b>$6.99 a month is high for the category but equals one indie pattern</b>, which is the fair comparison and worth saying.</li>
+  <li><b>$79.99 lifetime is mid-pack</b> and lifetime buyers are the most vocal fans. Never take it back from anyone.</li>
+  <li><b>Recommendation: do not change prices before launch.</b> There is no baseline yet, and real finished knits will move conversion more than ten dollars will. Revisit yearly after the first month of data.</li>
+</ul>
+
+<h2 id="works">What works and should not change</h2>
+<ul>
+  <li>No account, no ads, no network needed, and the tracker is really free. This is the category's top complaint, avoided.</li>
+  <li>The price is on screen before the trial, the paywall closes cleanly, and a pattern you cast on is yours.</li>
+  <li>The counter: whole screen as the button, fabric that grows, instant undo, 10 fast taps all counted, count intact after a force quit, screen stays awake.</li>
+  <li>The design page shows size, yardage, needles and opening rows before paying.</li>
+  <li>Stitch counts after every shaping row; needles named at cast on; abbreviations defined in plain language.</li>
+  <li>The Raglan Pullover's numbers are consistent from cast on to bind off.</li>
+  <li>Dark mode is right nearly everywhere. The type and the paper color give the app a look of its own.</li>
+</ul>
+
+<h2 id="notcovered">Not covered</h2>
+<ul>
+  <li>iPad, German, reduce motion: a separate audit ran those today (<a href="audit%201120.html">audit 1120</a>).</li>
+  <li>VoiceOver and large text.</li>
+  <li>A real purchase, restore, or a lapsed trial. Only the mock paywall was exercised.</li>
+  <li>A physical phone. Launch time and frame timing should be checked on one.</li>
+  <li>The other 43 designs were not knitted through. Only the Raccoon Beanie and Raglan Pullover were followed to the end.</li>
+  <li>Reddit and Ravelry forums could not be read by the research agents. Points that rest on them are marked in the raw notes as unverified.</li>
+</ul>
+
+<h2 id="sources">Sources and evidence</h2>
+<ul>
+  <li>Competitor research with the full 30-app table, feature matrix, review quotes and links: <a href="raw/2026-11-20-fable/research-competitors.md">raw/2026-11-20-fable/research-competitors.md</a></li>
+  <li>Knitter research (who buys, how patterns are trusted, AI, precedents, launch channels) with links: <a href="raw/2026-11-20-fable/research-knitters.md">raw/2026-11-20-fable/research-knitters.md</a></li>
+  <li>Screens and frame sheets used above: <code>raw/2026-11-20-fable/</code>. More in the same folder: <a href="raw/2026-11-20-fable/pw-all.jpg">paywall</a>, <a href="raw/2026-11-20-fable/m-all.jpg">materials, glossary and section menu</a>, <a href="raw/2026-11-20-fable/dk-all.jpg">dark mode</a>, <a href="raw/2026-11-20-fable/projects3.jpg">project list</a>, <a href="raw/2026-11-20-fable/search-result.jpg">search</a>, <a href="raw/2026-11-20-fable/cast-on-push-frames.jpg">cast-on transition frames</a>.</li>
+  <li>Etsy's rule: <a href="https://www.valueaddedresource.net/etsy-bans-ai-patterns/">valueaddedresource.net/etsy-bans-ai-patterns</a>. Ribblr: <a href="https://ribblr.com/contentpolicy">ribblr.com/contentpolicy</a>. TKGA: <a href="https://tkga.org/recognizing-ai-in-knitting/">tkga.org/recognizing-ai-in-knitting</a>.</li>
+  <li>Yarn consumer survey, 2024: <a href="https://craftindustryalliance.org/the-size-of-the-yarn-market-yarn-consumer-survey-results-2024/">Craft Industry Alliance</a>. CustomFit on Ravelry: <a href="https://www.ravelry.com/patterns/library/customfit">ravelry.com/patterns/library/customfit</a>. Flax: <a href="https://www.ravelry.com/patterns/library/flax">ravelry.com/patterns/library/flax</a>.</li>
+  <li>App facts and reviews: US App Store pages and the iTunes review feed, read 2026-11-20. Review counts are keyword matches.</li>
+</ul>
+<p class="meta">How each finding was established: seen on the simulator recording, read in the source, or taken from the research notes. Simulator timing is from a debug build and runs slower than a phone.</p>
+
+</main>
+</body>
+</html>
