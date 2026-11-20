@@ -93,12 +93,10 @@ final class ReleaseJourneysUITests: XCTestCase {
         unlock.tap()
         XCTAssertTrue(app.buttons["paywall.yearly"].waitForExistence(timeout: 20))
         QA.checkpoint(app, "paywall-yearly", paywall: true)
-        // The plans scroll under the pinned purchase bar (all of them on an iPad form sheet): bring them up first,
-        // as a person would, so a tap lands on the plan and not on the button over it.
-        app.buttons["paywall.yearly"].swipeUp(velocity: .slow)
-        sleep(1)
+        revealPlan(app.buttons["paywall.monthly"], in: app)
         tap(app.buttons["paywall.monthly"], "Monthly")
         QA.checkpoint(app, "paywall-monthly", paywall: true)
+        revealPlan(app.buttons["paywall.lifetime"], in: app)
         tap(app.buttons["paywall.lifetime"], "Lifetime")
         QA.checkpoint(app, "paywall-lifetime", paywall: true)
         tap(app.buttons.matching(label("Close", "Schließen")).firstMatch, "Close")
@@ -174,6 +172,24 @@ final class ReleaseJourneysUITests: XCTestCase {
     private func tap(_ element: XCUIElement, _ name: String, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(element.waitForExistence(timeout: 15), "\(name) never appeared", file: file, line: line)
         element.tap()
+    }
+
+    /// The plans scroll under the paywall's pinned purchase bar (all of them on an iPad form sheet, and at large
+    /// text sizes): scroll as a person would until the plan sits clear of the bar, so a tap lands on the plan and
+    /// not on the button over it.
+    private func revealPlan(_ plan: XCUIElement, in app: XCUIApplication) {
+        XCTAssertTrue(plan.waitForExistence(timeout: 10))
+        let bar = app.buttons["paywall.buy"]
+        let plans = app.scrollViews.containing(.button, identifier: "paywall.yearly").firstMatch
+        for _ in 0..<10 {
+            // The bar's terms sit about 80 points over its button.
+            if plan.frame.maxY > bar.frame.minY - 80 {
+                plans.swipeUp(velocity: .slow)
+            } else if plan.frame.minY < app.windows.firstMatch.frame.minY + 60 {
+                plans.swipeDown(velocity: .slow)
+            } else { break }
+            sleep(1)
+        }
     }
 
     /// Tabs are matched by label on any element, so a tab bar and a sidebar both work.
