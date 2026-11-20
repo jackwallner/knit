@@ -12,3 +12,4 @@
 - [2026-11-19-council-flow-audit.md](2026-11-19-council-flow-audit.md): council pass (Opus, Fable, Sol 6.2, Flash outside) through build 25 as a holiday knitter, round scores and what build 26 fixed.
 - [November 20 release experience audit](audit%201120.html) covers the gift-pattern, PDF and stash journeys, with 13 iPhone and iPad recordings, competitor research and release priorities.
 - [fableaudit1120.html](fableaudit1120.html): 2026-11-20 user audit of the tree after build 28. Nine iPhone recordings read frame by frame, two patterns knitted to the last row, 30 competing apps and about 2,700 reviews, ranked fixes. Evidence and research notes in `raw/2026-11-20-fable/`. Documented only, nothing fixed.
+- [2026-11-20-approved-changes.md](2026-11-20-approved-changes.md): the 15 changes Jack approved from the two 2026-11-20 audits, for the build after 29, with what is not changing and the free and paid split.
