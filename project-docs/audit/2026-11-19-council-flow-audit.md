@@ -97,3 +97,5 @@ What changed (b3341bc, f630d9b, 7699954, b3a87de, 61d85d3):
 Deferred by decision: RevenueCat remote copy arms (no baseline yet), the tapped design's name in the paywall, "Cancel in Settings" wording.
 
 c7: all three seats ship. Still to verify by hand on the TestFlight build: a sandbox trial from a fresh account reaches Apple's sheet, a spent-trial account sees "This Apple Account already had its free week.", and Close during the spinner opens no sheet.
+
+Release gate on build 28: PASS at 13f5947 (same app code as build 28), after two journey updates (first run lands on Patterns; the paywall journey scrolls each plan clear of the pinned bar, which on an iPad form sheet covers every plan) and two ledger judgements (Q056 paywall button on a different screen, Q057 the system's relaunch cross-fade). `release.py check`: ready to submit.
