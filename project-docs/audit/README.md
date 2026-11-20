@@ -11,3 +11,4 @@
 - `raw/tiktok-warmup.md`: TikTok account warm-up research and 14 day plan, 12 findings T-01 to T-12. Kept on the Mac and out of this public repo (it names an unregistered handle); the ledger carries its findings.
 - [2026-11-19-council-flow-audit.md](2026-11-19-council-flow-audit.md): council pass (Opus, Fable, Sol 6.2, Flash outside) through build 25 as a holiday knitter, round scores and what build 26 fixed.
 - [November 20 release experience audit](audit%201120.html) covers the gift-pattern, PDF and stash journeys, with 13 iPhone and iPad recordings, competitor research and release priorities.
+- `fableaudit1120.html`: 2026-11-20 user audit of the tree after build 28. Nine iPhone recordings read frame by frame, two patterns knitted to the last row, 30 competing apps and about 2,700 reviews, ranked fixes. Documented only, nothing fixed. Kept on the Mac with its evidence (`raw/2026-11-20-fable/`) and out of this public repo for now.
