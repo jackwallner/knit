@@ -8,10 +8,13 @@ struct RootView: View {
     @State private var snapshot = UserDefaults.standard.string(forKey: "PaywallSnapshot") != nil
     @AppStorage("onboarded") private var onboarded = false
     @State private var onboarding = false
+    @State private var saveFailed = false
+    /// A PDF or a backup another app opened in Ravel.
+    @State private var incoming: URL?
 
     var body: some View {
         TabView(selection: $tab) {
-            ProjectsView { tab = 1 }
+            ProjectsView(incoming: $incoming) { tab = 1 }
                 .tabItem { Label("Projects", systemImage: "square.stack") }
                 .tag(0)
             LibraryView()
@@ -26,6 +29,24 @@ struct RootView: View {
             if phase != .active { try? context.save() }
             // The Apple Account can change in Settings while Ravel is away.
             if phase == .background { SubscriptionService.shared.forgetPendingAnswer() }
+        }
+        // A count that did not reach the disk is said at once, where the knitter is, not found out at the next launch.
+        .onReceive(NotificationCenter.default.publisher(for: SaveWatch.failedNotice)) { _ in saveFailed = true }
+        .alert("Your last change was not saved", isPresented: $saveFailed) {} message: {
+            Text("Ravel could not write to this \(UIDevice.current.model). Free up some storage, then make the change again.")
+        }
+        // "Open in Ravel" from Files, Mail or a browser: the projects list takes it from here.
+        .onOpenURL { url in
+            guard url.isFileURL else { return }
+            tab = 0
+            incoming = url
+        }
+        // Knit Again on a finished project: the design's page, in the library.
+        .onReceive(NotificationCenter.default.publisher(for: LibraryView.openDesign)) { _ in tab = 1 }
+        // A row counted in the app shows on the Lock Screen counter, when that project has one.
+        .onReceive(NotificationCenter.default.publisher(for: Project.savedNotice)) { note in
+            guard let project = note.object as? Project else { return }
+            Task { await LockCounter.refresh(project) }
         }
         .onAppear {
             // In place from the first frame, so the tabs never flash behind it.

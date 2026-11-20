@@ -180,8 +180,9 @@ struct FabricColors: Sendable {
 
     /// The tints of row `number` (from 1), one per column on screen.
     func row(_ number: Int, columns: Int) -> [Tint] {
-        guard number >= 1, number <= paints.count, !tints.isEmpty else { return Array(repeating: yarn, count: columns) }
-        let letters = Array(paints[number - 1])
+        guard !paints.isEmpty, !tints.isEmpty else { return Array(repeating: yarn, count: columns) }
+        // Before the first row the loops on the needle are the cast on, in the first row's yarn.
+        let letters = Array(paints[min(max(number, 1), paints.count) - 1])
         func tint(_ letter: Character) -> Tint { Colorwork.index(letter).flatMap { $0 < tints.count ? tints[$0] : nil } ?? tints[0] }
         guard letters.count > 1 else { return Array(repeating: tint(letters.first ?? "A"), count: columns) }
         let start = Int(Double(letters.count) * focus) - columns / 2

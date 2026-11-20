@@ -20,6 +20,9 @@ struct PatternView: UIViewRepresentable {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         NotificationCenter.default.addObserver(context.coordinator, selector: #selector(Coordinator.pageChanged(_:)), name: .PDFViewPageChanged, object: view)
+        // Leaving the app is the other way out of the reader: the place is kept then too.
+        NotificationCenter.default.addObserver(context.coordinator, selector: #selector(Coordinator.leaving), name: UIApplication.willResignActiveNotification, object: nil)
+        context.coordinator.view = view
         context.coordinator.load(url, into: view)
         return view
     }
@@ -28,6 +31,11 @@ struct PatternView: UIViewRepresentable {
         context.coordinator.project = project
         if view.document?.documentURL != url { context.coordinator.load(url, into: view) }
         context.coordinator.recolor()
+        context.coordinator.step()
+    }
+
+    static func dismantleUIView(_ view: PDFView, coordinator: Coordinator) {
+        coordinator.keepPlace(in: view)
     }
 
     @MainActor
@@ -36,8 +44,32 @@ struct PatternView: UIViewRepresentable {
         /// True while the document is loading, so its first-page notification does not overwrite the saved page.
         private var restoring = false
         private var band: PDFAnnotation?
+        weak var view: PDFView?
 
         init(project: Project) { self.project = project }
+
+        @objc func leaving() { if let view { keepPlace(in: view) } }
+
+        /// Writes down the zoom and the point of the page at the top of the screen, so the pattern reopens
+        /// exactly where it was put down. A page still at fit-to-width is kept as that, for any screen.
+        func keepPlace(in view: PDFView) {
+            guard !restoring, view.document != nil, project.modelContext != nil, !project.isDeleted else { return }
+            let fit = view.scaleFactorForSizeToFit
+            project.readerZoom = fit > 0 && abs(view.scaleFactor - fit) / fit > 0.02 ? view.scaleFactor : 0
+            if let place = view.currentDestination, let page = place.page, let index = view.document?.index(for: page) {
+                project.patternPage = index
+                project.readerX = place.point.x
+                project.readerY = place.point.y
+            }
+        }
+
+        /// Moves the band to where the count puts it, when it steps with the count.
+        func step() {
+            guard let band, let page = band.page, project.markPage >= 0 else { return }
+            let box = page.bounds(for: .cropBox)
+            let y = min(max(project.bandY, box.minY), box.maxY - project.markHeight)
+            if abs(band.bounds.minY - y) > 0.5 { band.bounds = CGRect(x: box.minX, y: y, width: box.width, height: project.markHeight) }
+        }
 
         func load(_ url: URL, into view: PDFView) {
             let document = PDFDocument(url: url)
@@ -47,10 +79,17 @@ struct PatternView: UIViewRepresentable {
             view.document = document
             if let document, project.markPage >= 0, project.markPage < document.pageCount, let page = document.page(at: project.markPage) {
                 place(on: page, y: project.markY, height: project.markHeight)
+                step()
             }
+            let zoom = project.readerZoom
+            let point = CGPoint(x: project.readerX, y: project.readerY)
             // Jump after layout, or PDFKit snaps back to the first page.
             DispatchQueue.main.async { [self] in
-                if let document, start > 0, start < document.pageCount, let target = document.page(at: start) { view.go(to: target) }
+                if zoom > 0 { view.scaleFactor = min(max(zoom, view.minScaleFactor), view.maxScaleFactor) }
+                if let document, start < document.pageCount, let target = document.page(at: max(start, 0)) {
+                    // The same zoom and the same spot on the page, or the top of the page it was left on.
+                    if point != .zero { view.go(to: PDFDestination(page: target, at: point)) } else if start > 0 { view.go(to: target) }
+                }
                 restoring = false
             }
         }
@@ -73,7 +112,7 @@ struct PatternView: UIViewRepresentable {
             }
             let height = max((line?.height ?? 12) + 4, 14)
             let y = (line?.midY ?? point.y) - height / 2
-            if project.markPage == index, abs(project.markY - y) < 1 {
+            if project.markPage == index, abs(project.bandY - y) < 1 {
                 clear()
                 return
             }
@@ -81,6 +120,8 @@ struct PatternView: UIViewRepresentable {
             project.markPage = index
             project.markY = y
             project.markHeight = height
+            // A band laid by hand counts its steps from this row.
+            project.markRow = project.rows
         }
 
         private func place(on page: PDFPage, y: Double, height: Double) {

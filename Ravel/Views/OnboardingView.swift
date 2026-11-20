@@ -6,6 +6,7 @@ struct OnboardingView: View {
     let finish: () -> Void
     @Environment(\.openURL) private var openURL
     @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var page = 0
     @State private var rows = 0.0
     @State private var knitted = 0.0
@@ -43,7 +44,8 @@ struct OnboardingView: View {
                 .contentShape(Rectangle())
                 .onTapGesture { if page == 0 { rows = min(rows + 1, 60) } }
                 .id(page)
-                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
+                // With Reduce Motion on the next page fades in where it stands; nothing slides.
+                .transition(reduceMotion ? .opacity : .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
             bar
         }
         .frame(maxWidth: 540)
@@ -211,6 +213,8 @@ struct OnboardingView: View {
                 }
             }
             .frame(maxWidth: .infinity)
+            // In once the page before has slid away, so the price is never drawn over the page that is leaving.
+            .transition(.opacity.animation(.easeOut(duration: 0.15).delay(reduceMotion ? 0.1 : 0.3)))
         }
     }
 
@@ -244,6 +248,8 @@ struct OnboardingView: View {
                 .background(Color.accentColor, in: Capsule())
             }
             .disabled(working || waitingForOffer)
+            // The button stands still while the page changes over it: no fade on its label.
+            .animation(nil, value: page)
             .padding(.top, 16)
             .accessibilityIdentifier("onboarding.next")
 
@@ -320,7 +326,7 @@ struct OnboardingView: View {
 
     private func primary(_ drawn: Offer?) {
         guard onTrial else {
-            withAnimation(.smooth(duration: 0.35)) { page += 1 }
+            withAnimation(reduceMotion ? .easeOut(duration: 0.15) : .smooth(duration: 0.35)) { page += 1 }
             return
         }
         guard !waitingForOffer else { return }

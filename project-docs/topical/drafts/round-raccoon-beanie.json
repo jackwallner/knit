@@ -44,11 +44,11 @@
         "placement": "motif",
         "stripe": 2,
         "rows": [
-          ".CCCC....CCCC.",
-          "CC..CC..CC..CC",
-          "CC..CC..CC..CC",
-          ".CCCC....CCCC."
-        ]
+          "CCC....CCC",
+          "C.C....C.C",
+          "CCC....CCC"
+        ],
+        "stitch": "duplicate"
       },
       "weights": [
         "dk",
@@ -56,9 +56,10 @@
         "aran",
         "bulky"
       ],
-      "tag": "Free",
-      "starts": "2026-11-20",
-      "ends": "2027-03-01"
+      "tag": "Viral",
+      "starts": "2026-11-15",
+      "ends": "2027-03-01",
+      "free": true
     }
   ]
 }

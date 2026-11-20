@@ -108,6 +108,14 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         }
     }
 
+    /// What a colorwork design asks of the knitter beyond its shape: "Stripes", "Duplicate stitch".
+    var techniques: [String] {
+        switch self {
+        case .builtIn: []
+        case .topical(let topical): topical.techniques
+        }
+    }
+
     /// The sample photo's asset name, for the designs that have one.
     var photo: String? {
         switch self {
@@ -189,6 +197,12 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         return low...high
     }
 
+    /// The design a project was cast on from, by the name the project keeps: a built-in design's raw value or
+    /// a topical id. Nil when a topical record is no longer published.
+    @MainActor static func named(_ raw: String, topicals: TopicalStore = .shared) -> LibraryItem? {
+        Design(rawValue: raw).map(LibraryItem.builtIn) ?? topicals.item(raw).map(LibraryItem.topical)
+    }
+
     /// What a cast-on project records, to tell later whether its pattern was corrected. A topical design
     /// adds its record's revision to its base engine's: a fix to either one raises it.
     var revision: Int {
@@ -221,6 +235,38 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
     func fits(measures: [String: Double], gauge: Gauge) -> Bool {
         guard case .topical(let topical) = self else { return true }
         return topical.painted(measures: measures, gauge: gauge).issues.isEmpty
+    }
+
+    /// One number to change so a chart that does not fit does.
+    enum Refit: Equatable {
+        case stitches(Double), rows(Double)
+        case measure(label: String, value: Double)
+    }
+
+    /// The nearest change that makes the chart fit: a stitch gauge within two stitches, else a measurement,
+    /// else any stitch or row gauge in reach. Nil when it fits already or nothing near does.
+    func refit(measures: [String: Double], gauge: Gauge) -> Refit? {
+        guard !fits(measures: measures, gauge: gauge) else { return nil }
+        func nearest(_ start: Double, in range: ClosedRange<Double>, step: Double, reach: Int, fits: (Double) -> Bool) -> Double? {
+            for n in 1...reach {
+                for value in [start + Double(n) * step, start - Double(n) * step] where range.contains(value) && fits(value) { return value }
+            }
+            return nil
+        }
+        func stitches(reach: Int) -> Refit? {
+            nearest(gauge.stitches, in: stitchRange, step: 0.5, reach: reach) { fits(measures: measures, gauge: Gauge(stitches: $0, rows: gauge.rows)) }.map(Refit.stitches)
+        }
+        if let near = stitches(reach: 4) { return near }
+        for measure in base.measures {
+            let found = nearest(measures[measure.key] ?? measure.range.lowerBound, in: measure.range, step: measure.step, reach: 12) { value in
+                var changed = measures
+                changed[measure.key] = value
+                return fits(measures: changed, gauge: gauge)
+            }
+            if let found { return .measure(label: measure.label, value: found) }
+        }
+        if let far = stitches(reach: 16) { return far }
+        return nearest(gauge.rows, in: rowRange, step: 1, reach: 12) { fits(measures: measures, gauge: Gauge(stitches: gauge.stitches, rows: $0)) }.map(Refit.rows)
     }
 
     /// The pattern at its default size, for drawing a colorwork design before it is sized. Nil in one color.

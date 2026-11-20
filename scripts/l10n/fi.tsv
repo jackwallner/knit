@@ -359,3 +359,36 @@
 359	Säästä %lld %%
 360	Koot kaikille, vauvasta aikuiseen
 361	Tämä Apple-tili on jo käyttänyt ilmaisen viikkonsa.
+362	Kaavio sopii, kun silmukoita on %@
+363	Kaavio sopii, kun rivejä on %@
+364	Kaavio sopii mittaan %1$@: %2$@
+365	Poista
+366	Kierros %lld
+367	Valmiit rivit
+368	Koko ohje
+369	Seuraavaksi: %@
+370	Selittää tämän termin
+371	Viimeisintä muutosta ei tallennettu
+372	Ravel ei voinut kirjoittaa laitteelle: %@. Vapauta tallennustilaa ja tee muutos uudelleen.
+373	Tuo ohje
+374	Kuva valmiista työstä
+375	Lisää kuva
+376	Vaihda kuva
+377	Jaa
+378	Sain työn %@ valmiiksi Ravelilla
+379	Neulo uudelleen
+380	Nauha seuraa laskuria
+381	Tallenna varmuuskopio
+382	Palauta varmuuskopio
+383	Varmuuskopiota ei voitu avata
+384	Varmuuskopio palautettu
+385	one=%lld projekti lisätty|other=%lld projektia lisätty
+386	Kaikki tämän varmuuskopion sisältö on jo täällä
+387	Mittaa pään ympärys heti korvien yläpuolelta. Pipo neulotaan hieman pienemmäksi, jotta se pysyy päässä.
+388	Lanka ja silmukkatiheys
+389	Raidat
+390	Kirjoneule
+391	Silmukkakirjonta
+392	Kiinni ommellut korvat
+393	Ommellaan valmiin oikean silmukan päälle villaneulalla sen kahta jalkaa seuraten, jolloin se näyttää neulotulta
+394	Laskuri lukitusnäytölle

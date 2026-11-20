@@ -38,6 +38,15 @@ struct Topical: Identifiable, Hashable, Sendable {
 
     var level: Design.Level { work.chart == nil ? base.level : .intermediate }
 
+    /// What the knitter will do beyond the shape's own stitches, in the order they meet it.
+    var techniques: [String] {
+        var all: [String] = []
+        if !work.stripes.isEmpty { all.append("Stripes") }
+        if let chart = work.chart { all.append(chart.duplicate ? "Duplicate stitch" : "Stranded colorwork") }
+        if work.ears { all.append("Sewn-on ears") }
+        return all
+    }
+
     var defaultWeight: YarnWeight { weights.contains(base.weight) ? base.weight : weights[weights.count / 2] }
 
     var fit: Engines.Fit {
@@ -91,6 +100,8 @@ extension Topical {
             var placement: String
             var stripe: Int?
             var rows: [String]
+            /// "duplicate" sews the chart on afterward. Builds that do not know it knit the chart in.
+            var stitch: String?
         }
 
         var id: String
@@ -207,7 +218,9 @@ extension Topical {
             check((1...40).contains(width) && (1...30).contains(cells.count), "A chart is 1 to 40 stitches wide and 1 to 30 rows high")
             check(cells.contains { $0.contains { $0 >= 0 } }, "The chart has no stitches in a color")
             if let stripe = c.stripe { check(stripe >= 0 && stripe < stripes.count, "The chart sits on stripe \(stripe), which does not exist") }
-            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe) }
+            check(c.stitch == nil || c.stitch == "duplicate", "Chart stitch \(c.stitch ?? "") is not one this build knows")
+            check(c.stitch == nil || placement == .motif, "Only a motif can be worked in duplicate stitch")
+            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe, duplicate: c.stitch == "duplicate") }
         }
 
         var ears = false

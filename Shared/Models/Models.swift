@@ -35,6 +35,18 @@ final class Project {
     var tallyOn: Bool = false
     var tallyName: String = ""
     var tallyCount: Int = 0
+    /// When the count last moved: the list leads with what is on the needles now.
+    var workedAt: Date?
+    /// The reader's zoom and the point of the page at the top of the screen, put back when the pattern
+    /// reopens. Zoom 0 means the page fits the width.
+    var readerZoom: Double = 0
+    var readerX: Double = 0
+    var readerY: Double = 0
+    /// The row band moves down a line with every row. `markRow` is the count it was laid at.
+    var markSteps: Bool = false
+    var markRow: Int = 0
+    /// A picture of the finished piece: a file name in `PatternStore.directory`, never a full path.
+    var finishPhoto: String?
 
     init(name: String, rows: Int = 0, color: YarnColor = .madder, createdAt: Date = .now) {
         self.name = name
@@ -84,14 +96,35 @@ final class Project {
 
     static let rowLimit = 99_999
 
-    func increment() { rows = min(rows + 1, Self.rowLimit) }
+    func increment() { move(to: rows + 1) }
 
-    func decrement() { rows = max(0, rows - 1) }
+    func decrement() { move(to: rows - 1) }
 
     /// Jumps straight to a row, for a project already under way when it was added.
-    func setRows(_ count: Int) {
-        rows = min(max(count, 0), Self.rowLimit)
+    func setRows(_ count: Int) { move(to: count) }
+
+    /// The one place the count is written. A count that moved marks the project as worked just now.
+    private func move(to count: Int) {
+        let next = min(max(count, 0), Self.rowLimit)
+        guard next != rows else { return }
+        rows = next
+        workedAt = .now
     }
+
+    /// Where the row band sits on its page: where it was laid, moved down a line for every row since when it
+    /// steps with the count.
+    var bandY: Double { markSteps ? markY - Double(rows - markRow) * markHeight : markY }
+
+    /// Turns stepping on from the row the knitter is on, or off with the band left where it has got to.
+    func setBandSteps(_ on: Bool) {
+        markY = bandY
+        markRow = rows
+        markSteps = on
+        persist()
+    }
+
+    /// When the project was last touched: its last row, or the day it was made.
+    var lastWorked: Date { workedAt ?? createdAt }
 
     /// Sets the rows in one repeat. A new repeat starts with the next row knitted.
     func setRepeat(_ length: Int) {
@@ -102,8 +135,52 @@ final class Project {
 
     func toggleFinished(at date: Date = .now) { finishedAt = isFinished ? nil : date }
 
-    /// Writes the project to disk now. A row must never wait on an autosave.
-    func persist() { try? modelContext?.save() }
+    /// Writes the project to disk now. A row must never wait on an autosave, and a save that fails is said
+    /// out loud (`SaveWatch`), never dropped.
+    /// Posted after each save of a project, so anything that mirrors its count (the Lock Screen) can catch up.
+    static let savedNotice = Notification.Name("Ravel.projectSaved")
+
+    func persist() {
+        guard let modelContext else { return }
+        do {
+            try modelContext.save()
+            SaveWatch.saved()
+            NotificationCenter.default.post(name: Self.savedNotice, object: self)
+        } catch {
+            SaveWatch.failed()
+        }
+    }
+
+    /// Where the work stands, for the project list: "Row 18", or in a library pattern "Body · Round 5".
+    /// Empty once a library pattern is complete.
+    func standing(_ plan: PatternPlan?) -> String {
+        guard let plan else { return String(localized: "Row \(rows)", comment: "Project list: rows knitted so far") }
+        guard let spot = plan.position(at: rows) else { return "" }
+        let section = Loc.section(plan.steps[spot.step].section)
+        guard let place = plan.sectionRow(at: rows) else { return section }
+        let row = plan.unit(at: rows) == "Round"
+            ? String(localized: "Round \(place.row)", comment: "Guided pattern: the round within the section")
+            : String(localized: "Row \(place.row)", comment: "Guided pattern: the row within the section")
+        return "\(section) · \(row)"
+    }
+}
+
+/// Tells the app when a change could not be written to disk, once per run of failures, so a knitter is never
+/// left counting rows that are not being kept. The store saves on the main thread, like every caller here.
+enum SaveWatch {
+    static let failedNotice = Notification.Name("Ravel.saveFailed")
+    nonisolated(unsafe) private static var failing = false
+
+    static func failed() {
+        guard !failing else { return }
+        failing = true
+        NotificationCenter.default.post(name: failedNotice, object: nil)
+    }
+
+    static func saved() { failing = false }
+
+    /// True from a save that failed until the next one that works.
+    static var isFailing: Bool { failing }
 }
 
 /// The counter's rules, in one place: every change to the count ends on disk.
@@ -129,13 +206,13 @@ extension Project {
         persist()
     }
 
-    /// Lands on a row without tapping up to it. In a library pattern the row is counted within the current section.
+    /// Lands on a row without tapping up to it. In a library pattern the row is counted within the current
+    /// section, across every step the section is written in.
     func jump(to row: Int, following plan: PatternPlan?) {
         defer { persist() }
         guard let plan else { return setRows(row) }
-        guard let spot = plan.position(at: rows) else { return }
-        let start = rows - spot.row
-        setRows(start + min(max(row, 1), plan.steps[spot.step].rows) - 1)
+        guard let tap = plan.tap(ofRow: row, inSectionAt: rows) else { return }
+        setRows(tap)
     }
 
     /// Lands on the first row of a section of a library pattern.
@@ -261,6 +338,17 @@ final class Yarn {
         return color.isEmpty ? name : "\(name), \(color)"
     }
 
+    /// A new yarn nobody typed into: no text, no length, the weight and skein count it opened with.
+    var isBlank: Bool {
+        [name, brand, colorway, fiber, dyeLot].allSatisfy { $0.trimmingCharacters(in: .whitespaces).isEmpty }
+            && yardsPerSkein == 0 && skeins == 1 && weight == .worsted
+    }
+
+    /// What a yarn saved without a name is called: its fiber, else its brand or color, else its weight.
+    var fallbackName: String {
+        [fiber, brand, colorway].map { $0.trimmingCharacters(in: .whitespaces) }.first { !$0.isEmpty } ?? weight.title
+    }
+
     /// Yards in the whole lot. 0 when the length of a skein is not known.
     var totalYards: Int { yardsPerSkein * skeins }
 
@@ -330,6 +418,9 @@ final class Needle {
     var detail: String {
         lengthInches > 0 ? "\(kind.title) · \(Sizing.cable(lengthInches))" : kind.title
     }
+
+    /// Still exactly the needle a new one starts as.
+    var isUntouched: Bool { kind == .circular && millimeters == 4.5 && lengthInches == 0 }
 }
 
 enum NeedleKind: String, CaseIterable, Identifiable {

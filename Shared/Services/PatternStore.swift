@@ -79,6 +79,19 @@ enum PatternStore {
         try save(pages: pages.compactMap { $0.jpegData(compressionQuality: 0.9) }.compactMap { page(from: $0) })
     }
 
+    /// A picture of a finished piece, cut to a size a list can draw, and its stored file name.
+    nonisolated static func save(photo data: Data) -> String? {
+        guard let small = page(from: data, pixels: 1200 * 1200) else { return nil }
+        let file = UUID().uuidString + ".jpg"
+        do {
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            try small.write(to: url(for: file), options: .atomic)
+            return file
+        } catch {
+            return nil
+        }
+    }
+
     static func delete(_ file: String?) {
         guard let file else { return }
         try? FileManager.default.removeItem(at: url(for: file))

@@ -10,6 +10,12 @@ struct StashView: View {
     /// The yarn whose editor is open and the name it had, put back if the editor closes with the name cleared.
     @State private var opened: Yarn?
     @State private var nameBefore = ""
+    /// A needle just added, dropped again if its editor is swiped away without a change or Done.
+    @State private var draftNeedle: Needle?
+    @State private var needleKept = false
+    /// What a swipe asked to delete, until the knitter confirms.
+    @State private var deletingYarn: Yarn?
+    @State private var deletingNeedle: Needle?
 
     var body: some View {
         NavigationStack {
@@ -25,7 +31,7 @@ struct StashView: View {
                                 row(title: yarn.name, detail: [yarn.detail, yarn.totalLength].compactMap { $0 }.joined(separator: " · "), count: yarn.skeins, countLabel: String(localized: "\(yarn.skeins) skeins", comment: "VoiceOver label for the number of skeins of a yarn"))
                             }
                         }
-                        .onDelete { offsets in offsets.map { yarns[$0] }.forEach(context.delete) }
+                        .onDelete { offsets in deletingYarn = offsets.first.map { yarns[$0] } }
                         .listRowBackground(Theme.paper)
                         .listRowSeparatorTint(.primary.opacity(0.08))
                     } header: { header("Yarn") }
@@ -37,7 +43,7 @@ struct StashView: View {
                                 row(title: needle.size.label, detail: needle.detail, count: nil, countLabel: "")
                             }
                         }
-                        .onDelete { offsets in offsets.map { needles[$0] }.forEach(context.delete) }
+                        .onDelete { offsets in deletingNeedle = offsets.first.map { needles[$0] } }
                         .listRowBackground(Theme.paper)
                         .listRowSeparatorTint(.primary.opacity(0.08))
                     } header: { header("Needles & Hooks") }
@@ -73,7 +79,23 @@ struct StashView: View {
             }
             #endif
             .sheet(item: $editingYarn, onDismiss: dropUnnamed) { YarnEditor(yarn: $0) }
-            .sheet(item: $editingNeedle) { NeedleEditor(needle: $0) }
+            .sheet(item: $editingNeedle, onDismiss: dropUntouchedNeedle) { NeedleEditor(needle: $0) { needleKept = true } }
+            .confirmationDialog(
+                "Delete \(deletingYarn?.name ?? "")?",
+                isPresented: Binding(get: { deletingYarn != nil }, set: { if !$0 { deletingYarn = nil } }),
+                titleVisibility: .visible
+            ) {
+                Button("Delete", role: .destructive) { if let deletingYarn { remove(deletingYarn) } }
+                Button("Cancel", role: .cancel) {}
+            }
+            .confirmationDialog(
+                "Delete \(deletingNeedle.map { "\($0.size.label) \($0.detail)" } ?? "")?",
+                isPresented: Binding(get: { deletingNeedle != nil }, set: { if !$0 { deletingNeedle = nil } }),
+                titleVisibility: .visible
+            ) {
+                Button("Delete", role: .destructive) { if let deletingNeedle { remove(deletingNeedle) } }
+                Button("Cancel", role: .cancel) {}
+            }
         }
     }
 
@@ -132,17 +154,32 @@ struct StashView: View {
         let needle = Needle()
         context.insert(needle)
         try? context.save()
+        draftNeedle = needle
+        needleKept = false
         editingNeedle = needle
     }
 
-    /// A new yarn closed without a name was never really added. A yarn already in the stash keeps its name.
+    private func remove(_ model: any PersistentModel) {
+        context.delete(model)
+        try? context.save()
+    }
+
+    /// A needle whose editor was swiped away as it opened was never added. Done, or any change, keeps it.
+    private func dropUntouchedNeedle() {
+        defer { draftNeedle = nil }
+        guard let draft = draftNeedle, !needleKept, draft.isUntouched else { return }
+        remove(draft)
+    }
+
+    /// A new yarn closed with nothing typed was never really added. One with anything filled in is kept and
+    /// called by its fiber or weight; a yarn already in the stash keeps its name.
     private func dropUnnamed() {
         defer {
             opened = nil
             try? context.save()
         }
         for yarn in yarns where yarn.name.trimmingCharacters(in: .whitespaces).isEmpty {
-            if yarn === opened, !nameBefore.isEmpty { yarn.name = nameBefore } else { context.delete(yarn) }
+            if yarn === opened, !nameBefore.isEmpty { yarn.name = nameBefore } else if yarn.isBlank { context.delete(yarn) } else { yarn.name = yarn.fallbackName }
         }
     }
 }
@@ -211,6 +248,8 @@ struct YarnEditor: View {
 
 struct NeedleEditor: View {
     @Bindable var needle: Needle
+    /// Done was tapped: a needle left at the defaults is still one the knitter meant to add.
+    var kept: () -> Void = {}
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -232,7 +271,12 @@ struct NeedleEditor: View {
             .navigationTitle(needle.kind == .hook ? LocalizedStringKey("Hook") : LocalizedStringKey("Needle"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") {
+                        kept()
+                        dismiss()
+                    }
+                }
             }
             // Hooks and needles use different size charts; keep the size on one that exists.
             .onChange(of: needle.kind) { _, kind in

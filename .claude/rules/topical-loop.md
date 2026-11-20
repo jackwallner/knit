@@ -72,7 +72,10 @@ plan (palette and silhouette included), so changing or removing a record never t
   `repeat` runs around (the stitch count rounds to a multiple of its width: keep hats to 8 or 4 wide, or the
   fit check fails); `motif` is one centered on the front. `stripe` centers it on that stripe; without it, on
   the longest stretch of stockinette. Charts go on stockinette only: cowls, ear warmers and mitts get a
-  stockinette band for them; flat charts need the bordered blanket.
+  stockinette band for them; flat charts need the bordered blanket. `"stitch": "duplicate"` (motifs only)
+  leaves the chart's rows plain and adds finishing steps that sew it on afterward: use it for a small motif
+  on a round, where knitting it in would carry a yarn all the way around for a few stitches. The picture
+  still shows it. A build that does not know the field knits the chart in.
 - `crown: "ears"`: two small rounded ears, knit flat in color A, rimmed in garter and sewn to an ordinary
   crown. Beanies only. `rim` colors the rim (the pale edge that makes a raccoon or bear read at a glance).
 - `weights`: only the weights the check passes at. Floats are capped at about 1.25 in and never more than

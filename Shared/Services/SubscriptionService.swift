@@ -17,6 +17,7 @@ enum Links {
     static let terms = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
     static let support = URL(string: "https://jackwallner.github.io/knit/support.html")!
     static let writeReview = URL(string: "https://apps.apple.com/app/id6834244566?action=write-review")!
+    static let appStore = URL(string: "https://apps.apple.com/app/id6834244566")!
     static let feedback = URL(string: "mailto:jackwallner@gmail.com?subject=Ravel%20feedback")!
 }
 

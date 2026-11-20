@@ -8,6 +8,9 @@ struct LibraryView: View {
         Design(rawValue: raw).map(LibraryItem.builtIn) ?? TopicalStore.shared.item(raw).map(LibraryItem.topical)
     }.map { [$0] } ?? []
 
+    /// Posted with a design's raw value or topical id to open its page from another tab.
+    static let openDesign = Notification.Name("Ravel.openDesign")
+
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var query = ""
@@ -33,7 +36,7 @@ struct LibraryView: View {
                             // The patterns that need no purchase, together near the top so they are easy to find.
                             // A row that scrolls sideways, like Trending: set as a grid beside the shelves in this
                             // lazy stack, it hid every shelf after it from VoiceOver.
-                            if !free.isEmpty { row("Free", free.map { Shelved(item: $0, tag: $0.level.rawValue) }, id: "free") }
+                            if !free.isEmpty { row("Free", freeRow.map { Shelved(item: $0, tag: $0.level.rawValue) }, id: "free") }
                             ForEach(Design.Shelf.allCases) { shelf in
                                 self.shelf(shelf.title, items: items(on: shelf))
                             }
@@ -52,6 +55,10 @@ struct LibraryView: View {
             .navigationTitle("Patterns")
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("Hats, mittens, scarves"))
             .navigationDestination(for: LibraryItem.self) { DesignView(item: $0) }
+            .onReceive(NotificationCenter.default.publisher(for: Self.openDesign)) { note in
+                guard let raw = note.object as? String, let item = LibraryItem.named(raw) else { return }
+                path = [item]
+            }
         }
     }
 
@@ -90,31 +97,18 @@ struct LibraryView: View {
 
     private var free: [LibraryItem] { everything.filter(\.isFree) }
 
-    /// Designs that have every word searched for in their name, shelf, level or size names ("baby hat",
-    /// "child mittens"), in the knitter's language or in English. "Kids" finds the child sizes.
-    /// Typed the way people talk ("hat for kids", "a baby blanket"): small words are dropped, and if no design
-    /// has every word, designs with any of them are shown rather than nothing.
+    /// What the search finds: `LibrarySearch`, over every design and the tags the shelves show them under.
     private var matches: [LibraryItem] {
-        let skipped: Set<String> = ["a", "an", "the", "for", "to", "of", "and", "with", "my", "in", "on", "pattern", "patterns",
-                                     // Sizes are letters or measurements, not genders: "men sweater" looks for sweaters.
-                                     "men", "man", "mens", "women", "woman", "womens"]
-        let words = searching.lowercased().split(whereSeparator: { $0 == " " || $0 == "," }).map { word -> String in
-            let one = word.hasSuffix("s") && word.count > 3 ? String(word.dropLast()) : String(word)
-            return ["kid": "child", "children": "child", "beanie": "hat", "newborn": "baby", "glove": "mitten"][one] ?? one
-        }.filter { !skipped.contains($0) }
-        guard !words.isEmpty else { return everything }
-        let found = everything.map { item -> (LibraryItem, Int) in
-            let sizes = item.base.sizes.flatMap { [$0.name, Loc.text($0.name)] }
-            let free = item.isFree ? String(localized: "Free", comment: "Label under a design that needs no purchase") : ""
-            // Blankets come in stroller, crib and throw sizes: a baby blanket is one of the first two.
-            let baby = item.base.sizes.contains { ["Stroller", "Crib"].contains($0.name) } ? "baby" : ""
-            let haystack = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.level.title, free, baby] + sizes)
-                .joined(separator: " ").lowercased()
-            return (item, words.filter(haystack.contains).count)
-        }
-        let all = found.filter { $0.1 == words.count }.map(\.0)
-        guard all.isEmpty else { return all }
-        return found.filter { $0.1 > 0 }.sorted { $0.1 > $1.1 }.map(\.0)
+        var tags: [String: [String]] = [:]
+        for trend in trending.items { tags[trend.id, default: []].append(trend.tag) }
+        for record in topical.items + TopicalStore.collection { tags[LibraryItem.topical(record).id, default: []].append(record.tag) }
+        return LibrarySearch.find(searching, in: everything, tags: tags)
+    }
+
+    /// The free row, with its first design not the one that already leads Trending.
+    private var freeRow: [LibraryItem] {
+        let lead = shelved.first?.id
+        return free.filter { $0.id != lead } + free.filter { $0.id == lead }
     }
 
     /// A row that scrolls sideways: Trending (new designs and what suits the season) or the free patterns.
@@ -315,6 +309,12 @@ struct DesignView: View {
                 .foregroundStyle(Theme.secondary)
                 .contentTransition(.numericText(value: Double(plan.yards)))
                 .motion(.snappy, value: plan.yards)
+            if !item.techniques.isEmpty {
+                Text(item.techniques.map(Loc.text).joined(separator: ", "))
+                    .font(.footnote)
+                    .foregroundStyle(Theme.secondary)
+                    .accessibilityIdentifier("design.techniques")
+            }
         }
     }
 
@@ -327,9 +327,17 @@ struct DesignView: View {
                 ForEach(design.measures) { measure in
                     adjuster(Loc.text(measure.label), value: Binding(get: { values[measure.key] ?? measure.range.lowerBound }, set: { values[measure.key] = $0 }), range: measure.range, step: measure.step, length: true)
                 }
+                // A hat is knitted smaller than the head: said once, where the head is measured.
+                if design.measures.contains(where: { $0.key == "head" }) {
+                    Text("Measure around the head, just above the ears. The hat is knitted a little smaller, so it stays on.")
+                        .font(.footnote)
+                        .foregroundStyle(Theme.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .accessibilityIdentifier("design.headNote")
+                }
             }
 
-            group("Gauge") {
+            group("Yarn and Gauge") {
                 chips(item.weights.map { ($0.label, $0.title) }, selected: item.weights.first { item.gauge(for: $0) == gauge }?.label) { label in
                     if let weight = item.weights.first(where: { $0.label == label }) { gauge = item.gauge(for: weight) }
                 }
@@ -368,7 +376,8 @@ struct DesignView: View {
 
     /// The project this page already cast on at the numbers now set, while it still exists.
     private var castHere: Project? {
-        if let cast, cast.values == values, cast.gauge == gauge, !cast.project.isDeleted, cast.project.modelContext != nil { return cast.project }
+        // A finished piece is done: the button casts on the next one, it does not reopen the last.
+        if let cast, cast.values == values, cast.gauge == gauge, !cast.project.isDeleted, cast.project.modelContext != nil, !cast.project.isFinished { return cast.project }
         // Back from the library another day: an unfinished project from this design at the same size and yarn
         // opens again, rather than a second copy at row 0 that looks like a lost count.
         return projects.first { project in
@@ -380,27 +389,51 @@ struct DesignView: View {
     private var castOnTitle: LocalizedStringKey {
         // A pattern already cast on stays open after a trial lapses: it is the knitter's to keep.
         if castHere != nil { return "Open Project" }
+        // Before any offer: nobody is sold a week of a chart that cannot be knitted at these numbers.
+        guard item.fits(measures: values, gauge: gauge) else { return "Chart Does Not Fit This Gauge" }
         if !subscription.canOpen(item) {
             // The offer is a free week, so the button says so: "Unlock" reads as a bill.
             let trial = subscription.offers.first { $0.term == .yearly }?.trialDays ?? 0
             return trial > 0 ? "Try Free for \(trial) Days" : "Unlock Patterns"
         }
-        return item.fits(measures: values, gauge: gauge) ? "Cast On" : "Chart Does Not Fit This Gauge"
+        return "Cast On"
+    }
+
+    /// The one number to change when the chart does not fit, as the knitter reads it on this page.
+    private var refitHint: String? {
+        switch item.refit(measures: values, gauge: gauge) {
+        case nil: nil
+        case .stitches(let count)?:
+            String(localized: "The chart fits at \(count.formatted(.number.precision(.fractionLength(0...1)))) stitches", comment: "Design page, under a chart that does not fit: the stitch gauge to change to")
+        case .rows(let count)?:
+            String(localized: "The chart fits at \(count.formatted(.number.precision(.fractionLength(0...1)))) rows", comment: "Design page, under a chart that does not fit: the row gauge to change to")
+        case .measure(let label, let value)?:
+            String(localized: "The chart fits at \(Loc.text(label)): \(Sizing.inches(value))", comment: "Design page, under a chart that does not fit: a measurement's name such as Head, then the length to change it to")
+        }
     }
 
     private var castOnBar: some View {
-        let fits = !subscription.canOpen(item) || castHere != nil || item.fits(measures: values, gauge: gauge)
-        return Button(action: castOn) {
-            Text(castOnTitle)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 16)
-                .foregroundStyle(Theme.onAccent)
-                .frame(maxWidth: .infinity, minHeight: 54)
-                .background(Color.accentColor.opacity(fits ? 1 : 0.35), in: Capsule())
+        let fits = castHere != nil || item.fits(measures: values, gauge: gauge)
+        return VStack(spacing: 8) {
+            if !fits, let hint = refitHint {
+                Text(hint)
+                    .font(.footnote)
+                    .foregroundStyle(Theme.secondary)
+                    .multilineTextAlignment(.center)
+                    .accessibilityIdentifier("design.refit")
+            }
+            Button(action: castOn) {
+                Text(castOnTitle)
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 16)
+                    .foregroundStyle(Theme.onAccent)
+                    .frame(maxWidth: .infinity, minHeight: 54)
+                    .background(Color.accentColor.opacity(fits ? 1 : 0.35), in: Capsule())
+            }
+            .disabled(!fits)
+            .accessibilityIdentifier("design.castOn")
         }
-        .disabled(!fits)
-        .accessibilityIdentifier("design.castOn")
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
         // The page fades into the button instead of being cut off by it.
@@ -421,6 +454,7 @@ struct DesignView: View {
             opened = project
             return
         }
+        guard item.fits(measures: values, gauge: gauge) else { return }
         guard subscription.canOpen(item) else {
             showingPaywall = true
             return

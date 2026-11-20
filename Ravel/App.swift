@@ -12,6 +12,8 @@ struct RavelApp: App {
         inMemory = arguments.contains("-UITesting") || arguments.contains("-SeedDemo")
         #endif
         container = Persistence.container(inMemory: inMemory)
+        // The Lock Screen counter writes through this same store, never one of its own.
+        LockCounter.container = container
         Theme.applyNavigationAppearance()
         SubscriptionService.shared.start()
         ReviewPrompt().recordLaunch()

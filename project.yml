@@ -43,6 +43,7 @@ targets:
     dependencies:
       - package: RevenueCat
         product: RevenueCat
+      - target: RavelWidgets
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.knit
@@ -51,6 +52,20 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTS_MACCATALYST: NO
+  # The Lock Screen row counter (a Live Activity). It draws what the app hands it and holds no store:
+  # its buttons run in the app's process.
+  RavelWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: RavelWidgets
+      - path: Shared/Counting
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.knit.widgets
+        INFOPLIST_FILE: RavelWidgets/Info.plist
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) RAVEL_WIDGETS"
   RavelTests:
     type: bundle.unit-test
     platform: iOS

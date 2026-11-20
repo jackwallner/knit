@@ -359,3 +359,36 @@ One payment. Nothing renews.
 Save %lld%%
 Sized for anyone, baby to adult
 This Apple Account already had its free week.
+The chart fits at %@ stitches
+The chart fits at %@ rows
+The chart fits at %1$@: %2$@
+Delete
+Round %lld
+Rows Completed
+Whole Pattern
+Next: %@
+Explains this term
+Your last change was not saved
+Ravel could not write to this %@. Free up some storage, then make the change again.
+Import a Pattern
+Photo of the finished piece
+Add a Photo
+Change Photo
+Share
+I finished %@ with Ravel
+Knit Again
+Band Follows the Count
+Save a Backup
+Restore a Backup
+That backup could not be opened
+Backup Restored
+%lld projects added|plural
+Everything in this backup is already here
+Measure around the head, just above the ears. The hat is knitted a little smaller, so it stays on.
+Yarn and Gauge
+Stripes
+Stranded colorwork
+Duplicate stitch
+Sewn-on ears
+Sewn over a finished knit stitch with a tapestry needle, following its two legs, so it looks knitted in
+Count on Lock Screen

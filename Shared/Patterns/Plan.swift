@@ -209,6 +209,110 @@ extension PatternPlan {
         return Preview(blocks: blocks, later: later)
     }
 
+    /// The steps of the section a tap is in: the run of neighbouring steps that share its name, and the tap
+    /// the run starts on. Nil once the pattern is complete.
+    private func sectionRun(at taps: Int) -> (steps: Range<Int>, tap: Int)? {
+        guard let spot = position(at: taps) else { return nil }
+        let name = steps[spot.step].section
+        var first = spot.step
+        while first > 0, steps[first - 1].section == name { first -= 1 }
+        var last = spot.step
+        while last + 1 < steps.count, steps[last + 1].section == name { last += 1 }
+        return (first..<(last + 1), steps[..<first].reduce(0) { $0 + $1.rows })
+    }
+
+    /// The knitted row or round a tap is within its section, from 1, and how many the section has: "Round 5"
+    /// of the body, whatever steps the body is written in. Nil on a step that is not a row (cast on, join).
+    func sectionRow(at taps: Int) -> (row: Int, of: Int)? {
+        guard let spot = position(at: taps), !steps[spot.step].isAction, let run = sectionRun(at: taps) else { return nil }
+        let before = steps[run.steps.lowerBound..<spot.step].filter { !$0.isAction }.reduce(0) { $0 + $1.rows }
+        let total = steps[run.steps].filter { !$0.isAction }.reduce(0) { $0 + $1.rows }
+        return (before + spot.row + 1, total)
+    }
+
+    /// The tap that lands on knitted row `row` (from 1) of the section a knitter is in, kept inside the
+    /// section. Nil when the section has no rows or the pattern is complete.
+    func tap(ofRow row: Int, inSectionAt taps: Int) -> Int? {
+        guard let run = sectionRun(at: taps) else { return nil }
+        let total = steps[run.steps].filter { !$0.isAction }.reduce(0) { $0 + $1.rows }
+        guard total > 0 else { return nil }
+        var left = min(max(row, 1), total) - 1
+        var tap = run.tap
+        for step in steps[run.steps] {
+            if !step.isAction {
+                if left < step.rows { return tap + left }
+                left -= step.rows
+            }
+            tap += step.rows
+        }
+        return nil
+    }
+
+    /// The instruction after the one at `taps`, when it reads differently: what to get ready for.
+    func upcoming(after taps: Int) -> String? {
+        guard let spot = position(at: taps), let next = position(at: taps + 1) else { return nil }
+        let now = steps[spot.step].text(at: spot.row), then = steps[next.step].text(at: next.row)
+        return then == now ? nil : then
+    }
+
+    /// One line of the written pattern and the taps it covers.
+    struct Line: Equatable, Identifiable {
+        var text: String
+        var taps: Range<Int>
+        /// The tap the line starts on. A repeat's heading covers no tap and takes a negative id of its own.
+        var id: Int { taps.isEmpty ? -taps.lowerBound - 1 : taps.lowerBound }
+    }
+
+    /// The whole pattern as written, section by section, numbered like the preview: rows count from 1 in each
+    /// section, a run of rows is one line, and a repeat lists its rows once.
+    func written() -> [(section: String, lines: [Line])] {
+        var blocks: [(section: String, lines: [Line])] = []
+        var tap = 0
+        var row = 1
+        for step in steps {
+            if blocks.last?.section != step.section {
+                blocks.append((step.section, []))
+                row = 1
+            }
+            defer { tap += step.rows }
+            let span = tap..<(tap + step.rows)
+            if step.isAction {
+                blocks[blocks.count - 1].lines.append(Line(text: step.texts[0], taps: span))
+                continue
+            }
+            let unit = self.unit(at: tap)
+            let last = row + step.rows - 1
+            let label = step.rows == 1 ? "\(unit) \(row)" : "\(unit)s \(row)-\(last)"
+            if step.texts.count == 1 || step.rows <= 1 {
+                blocks[blocks.count - 1].lines.append(Line(text: "\(label): \(step.texts[0])", taps: span))
+            } else {
+                // The heading covers no tap of its own; each row of the repeat covers its first time through.
+                blocks[blocks.count - 1].lines.append(Line(text: "\(label), repeating \(step.texts.count) \(unit.lowercased())s:", taps: tap..<tap))
+                for (index, text) in step.texts.enumerated() where index < step.rows {
+                    blocks[blocks.count - 1].lines.append(Line(text: "\(unit) \(row + index): \(text)", taps: (tap + index)..<(tap + index + 1)))
+                }
+            }
+            row = last + 1
+        }
+        return blocks
+    }
+
+    /// The line of `written()` a knitter is on: the row of a repeat they are working, whichever time through.
+    func currentLine(at taps: Int) -> Int? {
+        guard let spot = position(at: taps) else { return nil }
+        let step = steps[spot.step]
+        let start = taps - spot.row
+        return step.texts.count > 1 && step.rows > 1 && !step.isAction ? start + spot.row % step.texts.count : start
+    }
+
+    /// The glossary terms an instruction uses that are worth a tap: the house wordings and the two-letter-plus
+    /// abbreviations, not the bare k and p every row has.
+    func terms(in text: String) -> [(term: String, meaning: String)] {
+        Self.glossary.filter { entry in
+            entry.term.count > 1 && text.range(of: "\\b\(NSRegularExpression.escapedPattern(for: entry.term))\\b", options: [.regularExpression, .caseInsensitive]) != nil
+        }
+    }
+
     /// "Cuff" for "Sock 2 · Cuff": the part of a section, without the piece it belongs to.
     static func part(_ section: String) -> String { section.components(separatedBy: " · ").last ?? section }
 
@@ -228,6 +332,7 @@ extension PatternPlan {
         ("ssk", "Slip 2 stitches knitwise one at a time, then knit them together through the back"),
         ("p2tog", "Purl 2 stitches together"),
         ("yo", "Yarn over"),
+        ("duplicate stitch", "Sewn over a finished knit stitch with a tapestry needle, following its two legs, so it looks knitted in"),
         ("M1", "Make 1: lift the bar between the stitches and knit it through the back"),
         ("M1L", "Make 1 left: lift the bar from the front and knit it through the back"),
         ("M1R", "Make 1 right: lift the bar from the back and knit it through the front"),

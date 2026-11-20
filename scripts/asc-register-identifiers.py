@@ -11,6 +11,7 @@ import asc_lib
 
 IDENTIFIERS = {
     "com.jackwallner.knit": ("Ravel", {"IN_APP_PURCHASE"}),
+    "com.jackwallner.knit.widgets": ("Ravel Widgets", set()),
 }
 
 

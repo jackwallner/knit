@@ -84,7 +84,7 @@ final class PatternReportTests: XCTestCase {
 
         var records = try XCTUnwrap(listing["designs"] as? [[String: Any]])
         let index = try XCTUnwrap(records.firstIndex { $0["id"] as? String == topical.id })
-        records[index]["revision"] = 1
+        records[index]["revision"] = item.revision + 1
         listing["designs"] = records
         defaults.set(try JSONSerialization.data(withJSONObject: listing), forKey: "topical.list")
         let fixed = try XCTUnwrap(LibraryItem.correction(for: plan, topicals: TopicalStore(defaults: defaults, now: now)))

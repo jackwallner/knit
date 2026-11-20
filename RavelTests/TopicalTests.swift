@@ -82,9 +82,13 @@ final class TopicalTests: XCTestCase {
                 for input in TopicalCheck.inputs(for: topical.base) {
                     let plain = topical.base.plan(measures: input, gauge: weight.gauge, fit: topical.fit)
                     let painted = topical.plan(measures: input, gauge: weight.gauge)
-                    XCTAssertEqual(painted.totalTaps, plain.totalTaps, id)
+                    // A chart sewn on afterward adds its own finishing steps and changes nothing that is knitted.
+                    let sewn = topical.work.chart.map { $0.duplicate ? $0.height + 1 : 0 } ?? 0
+                    XCTAssertEqual(painted.totalTaps, plain.totalTaps + sewn, id)
                     XCTAssertEqual(painted.knitRows(upTo: .max), plain.knitRows(upTo: .max), id)
-                    func counts(_ plan: PatternPlan) -> [Int?] { plan.steps.flatMap { step in (0..<step.rows).map { step.stitches(after: $0) } } }
+                    func counts(_ plan: PatternPlan) -> [Int?] {
+                        plan.steps.filter { !($0.isAction && $0.section == "Finishing") }.flatMap { step in (0..<step.rows).map { step.stitches(after: $0) } }
+                    }
                     XCTAssertEqual(counts(painted), counts(plain), id)
                     XCTAssertEqual(painted.paints().count, painted.knitRows(upTo: .max), id)
                 }
@@ -94,35 +98,81 @@ final class TopicalTests: XCTestCase {
 
     /// A row worked in a new yarn says which, and a chart row names every color it uses.
     func testEveryChangeOfYarnIsNamed() throws {
-        let topical = try draft("round-raccoon-beanie")
-        let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
-        let names = topical.work.palette.map(\.name)
-        var previous: String?
-        for step in plan.steps {
-            if step.isAction {
-                // A cast on starts a piece; a pick-up names the yarn its rows are worked in.
-                if step.texts[0].hasPrefix("Cast on") { previous = nil }
-                if let name = names.first(where: { step.texts[0].hasPrefix("With \($0), pick up") }) { previous = Colorwork.letter(names.firstIndex(of: name)!) }
-                continue
-            }
-            for row in 0..<step.rows {
-                let paint = try XCTUnwrap(step.paint(at: row))
-                let text = step.text(at: row)
-                if paint.count > 1 {
-                    for letter in Set(paint) { XCTAssertTrue(text.contains(names[Colorwork.index(letter)!]), text) }
-                    previous = nil
-                } else {
-                    if let previous, previous != paint { XCTAssertTrue(text.hasPrefix("With \(names[Colorwork.index(Character(paint))!])"), "\(step.section): \(text)") }
-                    previous = paint
+        for id in ["round-raccoon-beanie", "fir-tree-hat"] {
+            let topical = try draft(id)
+            let sewn = topical.work.chart?.duplicate == true
+            let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
+            let names = topical.work.palette.map(\.name)
+            var previous: String?
+            for step in plan.steps {
+                if step.isAction {
+                    // A cast on starts a piece; a pick-up names the yarn its rows are worked in.
+                    if step.texts[0].hasPrefix("Cast on") { previous = nil }
+                    if let name = names.first(where: { step.texts[0].hasPrefix("With \($0), pick up") }) { previous = Colorwork.letter(names.firstIndex(of: name)!) }
+                    continue
+                }
+                for row in 0..<step.rows {
+                    let paint = try XCTUnwrap(step.paint(at: row))
+                    let text = step.text(at: row)
+                    if paint.count > 1, sewn {
+                        // Sewn on afterward: the row is knitted plain, in the yarn already in hand.
+                        XCTAssertFalse(names.contains { text.contains($0) }, text)
+                    } else if paint.count > 1 {
+                        for letter in Set(paint) { XCTAssertTrue(text.contains(names[Colorwork.index(letter)!]), text) }
+                        previous = nil
+                    } else {
+                        if let previous, previous != paint { XCTAssertTrue(text.hasPrefix("With \(names[Colorwork.index(Character(paint))!])"), "\(step.section): \(text)") }
+                        previous = paint
+                    }
                 }
             }
+            XCTAssertEqual(plan.materials.last == Painter.carrying, !sewn, id)
+            XCTAssertEqual(PlanCheck.problems(plan), [], id)
         }
+        let topical = try draft("round-raccoon-beanie")
+        let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
         XCTAssertTrue(plan.steps[0].texts[0].hasPrefix("Cast on 88 stitches in gray"))
         XCTAssertEqual(plan.materials.prefix(3).map { $0.components(separatedBy: ",")[0] }, ["Gray", "Black", "Cream"])
-        XCTAssertEqual(plan.materials.last, Painter.carrying)
         XCTAssertEqual(plan.silhouette, "ears")
         // The rim is picked up in its own color.
         XCTAssertEqual(plan.steps.filter { $0.texts[0].hasPrefix("With cream, pick up and knit") }.count, 2)
+    }
+
+    /// The raccoon's eyes are sewn on after the knitting, not carried around the whole round: its rounds
+    /// stay plain, the picture still shows the eyes, and the finishing says where each stitch goes.
+    func testASmallMotifIsSewnOnAfterward() throws {
+        let topical = try draft("round-raccoon-beanie")
+        XCTAssertEqual(topical.techniques, ["Stripes", "Duplicate stitch", "Sewn-on ears"])
+        for weight in topical.weights {
+            let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: weight.gauge)
+            let finishing = plan.steps.filter { $0.section == "Finishing" }
+            XCTAssertEqual(finishing.count, 5, "\(weight)")
+            XCTAssertTrue(finishing.allSatisfy(\.isAction))
+            XCTAssertTrue(finishing[0].texts[0].contains("duplicate stitch over the black stripe: 3 rounds high and 10 stitches wide"), finishing[0].texts[0])
+            XCTAssertEqual(finishing[1].texts[0], "Chart round 1, the bottom one, left to right: 3 cream, skip 4, 3 cream.")
+            XCTAssertEqual(finishing[2].texts[0], "Chart round 2, left to right: 1 cream, skip 1, 1 cream, skip 4, 1 cream, skip 1, 1 cream.")
+            XCTAssertTrue(finishing[4].texts[0].contains("Line them up with the face"))
+            // The eyes are on the front: inside the first half of the round, and centered in it.
+            let painted = plan.steps.flatMap { step in (0..<step.rows).compactMap { step.isAction ? nil : step.paint(at: $0) } }.filter { $0.count > 1 }
+            XCTAssertEqual(painted.count, 3, "\(weight)")
+            let row = Array(try XCTUnwrap(painted.first))
+            let cream = row.indices.filter { row[$0] == "C" }
+            let first = row.count - (cream.last ?? 0), last = row.count - (cream.first ?? 0)
+            XCTAssertTrue(finishing[0].texts[0].contains("stitches \(first) to \(last) of the round"), finishing[0].texts[0])
+            XCTAssertEqual(first - 1, row.count / 2 - last, "centered on the front at \(weight)")
+            XCTAssertFalse(plan.steps.contains { !$0.isAction && $0.texts.contains { $0.range(of: "k[0-9]+ cream", options: [.regularExpression, .caseInsensitive]) != nil } }, "no eye is knitted in")
+            XCTAssertEqual(PlanCheck.problems(plan), [], "\(weight)")
+        }
+    }
+
+    /// A record may ask for duplicate stitch only on a motif, and only by that name.
+    func testOnlyAMotifCanBeSewnOn() {
+        let chart = { (placement: String, stitch: String) in
+            ##","chart":{"placement":"\##(placement)","stripe":0,"rows":["B..B","B..B"],"stitch":"\##(stitch)"}"##
+        }
+        XCTAssertEqual(Topical.parse(record(chart("motif", "duplicate"))).first?.topical?.work.chart?.duplicate, true)
+        XCTAssertNil(Topical.parse(record(chart("repeat", "duplicate"))).first?.topical)
+        XCTAssertNil(Topical.parse(record(chart("motif", "embroidered"))).first?.topical)
     }
 
     /// No float is longer than 5 stitches, at any weight a chart can be offered in.
@@ -134,6 +184,24 @@ final class TopicalTests: XCTestCase {
         small["head"] = 13
         XCTAssertFalse(item.fits(measures: small, gauge: Gauge(stitches: 24, rows: 20)))
         XCTAssertTrue(LibraryItem.builtIn(.ribbedBeanie).fits(measures: small, gauge: Gauge(stitches: 24, rows: 20)))
+    }
+
+    /// A chart that does not fit names one number to change, and changing it makes the chart fit.
+    func testAChartThatDoesNotFitSaysWhichNumberToChange() throws {
+        let item = LibraryItem.topical(try draft("fir-tree-hat"))
+        var small = item.base.defaultSize.values
+        small["head"] = 13
+        let gauge = Gauge(stitches: 24, rows: 20)
+        XCTAssertNil(item.refit(measures: item.base.defaultSize.values, gauge: item.defaultGauge))
+        switch try XCTUnwrap(item.refit(measures: small, gauge: gauge)) {
+        case .stitches(let count): XCTAssertTrue(item.fits(measures: small, gauge: Gauge(stitches: count, rows: gauge.rows)))
+        case .rows(let count): XCTAssertTrue(item.fits(measures: small, gauge: Gauge(stitches: gauge.stitches, rows: count)))
+        case .measure(let label, let value):
+            let key = try XCTUnwrap(item.base.measures.first { $0.label == label }?.key)
+            small[key] = value
+            XCTAssertTrue(item.fits(measures: small, gauge: gauge))
+        }
+        XCTAssertNil(LibraryItem.builtIn(.ribbedBeanie).refit(measures: small, gauge: gauge))
     }
 
     func testFloatsStayShort() {

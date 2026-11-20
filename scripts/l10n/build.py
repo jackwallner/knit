@@ -95,7 +95,7 @@ def main():
     for text, plural in keys:
         if plural and "en" not in strings[text]["localizations"]:
             one = text.replace("%lld", "%lld", 1)
-            singular = {"%lld skeins": "%lld skein", "%lld stitches": "%lld stitch", "%lld stitches after this row": "%lld stitch after this row", "%lld stitches after this round": "%lld stitch after this round", "Try Free for %lld Days": "Try Free for %lld Day", "%lld days free.": "%lld day free."}[text]
+            singular = {"%lld skeins": "%lld skein", "%lld stitches": "%lld stitch", "%lld stitches after this row": "%lld stitch after this row", "%lld stitches after this round": "%lld stitch after this round", "Try Free for %lld Days": "Try Free for %lld Day", "%lld days free.": "%lld day free.", "%lld projects added": "%lld project added"}[text]
             strings[text]["localizations"]["en"] = {"variations": {"plural": {"one": unit(singular), "other": unit(text)}}}
     catalog = {"sourceLanguage": "en", "strings": strings, "version": "1.0"}
     OUT.write_text(json.dumps(catalog, ensure_ascii=False, indent=2, sort_keys=True) + "\n")

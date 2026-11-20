@@ -36,6 +36,9 @@ struct Colorwork: Equatable, Hashable, Sendable {
         var rows: [[Int]]
         /// The stripe the chart is centered on. Nil centers it on the longest stretch of stockinette.
         var stripe: Int?
+        /// Embroidered over the finished fabric in duplicate stitch, not knitted in: for a small motif on a
+        /// round, where knitting it would carry a second yarn all the way around for a few stitches.
+        var duplicate = false
 
         var width: Int { rows.first?.count ?? 0 }
         var height: Int { rows.count }
@@ -128,7 +131,7 @@ enum Painter {
                     let at = mine[start + offset]
                     let row = rows[at]
                     if let filled = fill(line, row: row, under: color[at], placement: chart.placement, issues: &issues) {
-                        if let longest = longestFloat(filled, around: !row.flat && chart.placement == .repeating), longest > float {
+                        if !chart.duplicate, let longest = longestFloat(filled, around: !row.flat && chart.placement == .repeating), longest > float {
                             issues.append("A float of \(longest) stitches on a row of \(row.stitches) (the most is \(float))")
                         }
                         cells[at] = filled
@@ -146,11 +149,13 @@ enum Painter {
         }
 
         // Instructions: a row that starts a new yarn says so, and a chart row spells out every color.
+        let embroidered = work.chart?.duplicate == true
         var texts: [String?] = Array(repeating: nil, count: rows.count)
         var previous: Int?
         for (at, row) in rows.enumerated() {
             if row.index == 0 { previous = color[at] }
-            if let filled = cells[at] {
+            // A chart added afterward leaves its rows as the engine wrote them.
+            if let filled = cells[at], !embroidered {
                 texts[at] = chartText(filled, row: row, names: names, placement: work.chart?.placement ?? .motif, width: work.chart?.width ?? 1)
                 previous = color[at]
                 continue
@@ -180,6 +185,11 @@ enum Painter {
 
         var painted = plan
         painted.steps = regroup(plan.steps, rows: rows, colors: color, cells: cells, texts: texts, names: names, rim: work.rim)
+        if embroidered, !cells.isEmpty {
+            let added = embroidery(cells, rows: rows, colors: color, names: names)
+            let at = painted.steps.firstIndex { $0.section == "Finishing" } ?? painted.steps.count
+            painted.steps.insert(contentsOf: added.map { Step(section: "Finishing", texts: [$0], rows: 1, isAction: true) }, at: at)
+        }
         painted.palette = work.palette
 
         // Yarn per color, from the rows as written: worked stitches, plus the strands carried behind them.
@@ -187,6 +197,12 @@ enum Painter {
         for (at, row) in rows.enumerated() {
             guard let filled = cells[at] else {
                 worked[color[at]] += Double(row.stitches) * 4.3
+                continue
+            }
+            if embroidered {
+                // The row is knitted whole in its own yarn; each stitch sewn over it takes a little more than a stitch.
+                worked[color[at]] += Double(row.stitches) * 4.3
+                for index in filled where index != color[at] { worked[index] += 5 }
                 continue
             }
             for index in Set(filled) {
@@ -202,7 +218,7 @@ enum Painter {
         let lines = work.palette.indices.map { index in
             "\(names[index].capitalized), color \(Colorwork.letter(index)): " + lowerFirst(Engines.yarnLine(yards[index], g))
         }
-        painted.materials = lines + plan.materials.dropFirst() + (cells.isEmpty ? [] : [carrying])
+        painted.materials = lines + plan.materials.dropFirst() + (cells.isEmpty || embroidered ? [] : [carrying])
         painted.yards = yards.reduce(0, +)
         return Result(plan: painted, issues: issues)
     }
@@ -393,6 +409,58 @@ enum Painter {
         return opening + (tail > 0 ? "; repeat from * to the last \(tail) stitches, " + runs((n - tail)..<n) : "; repeat from * to the end")
     }
 
+    // MARK: Duplicate stitch
+
+    /// A chart sewn over the finished fabric: where it goes, then each of its rows from the bottom, read
+    /// left to right as the right side faces.
+    private static func embroidery(_ cells: [Int: [Int]], rows: [Row], colors: [Int], names: [String]) -> [String] {
+        let covered = cells.keys.sorted()
+        guard let bottom = covered.first else { return [] }
+        let row = rows[bottom], ground = colors[bottom]
+        var left = Int.max, right = -1
+        var yarns: [Int] = []
+        for at in covered {
+            for (p, cell) in (cells[at] ?? []).enumerated() where cell != colors[at] {
+                left = min(left, p)
+                right = max(right, p)
+                if !yarns.contains(cell) { yarns.append(cell) }
+            }
+        }
+        guard right >= left else { return [] }
+        let width = right - left + 1
+        let line = row.flat ? "row" : "round"
+        // Rows of the same yarn straight under the chart, so the knitter can count up from where the color starts.
+        var under = 0
+        var at = bottom - 1
+        while at >= 0, rows[at].piece == row.piece, colors[at] == ground, cells[at] == nil {
+            under += 1
+            at -= 1
+        }
+        let band = covered.allSatisfy { colors[$0] == ground } ? "the \(names[ground]) stripe" : "the front"
+        // A round is worked right to left as it faces, so its first stitch is at the right-hand end.
+        let first = row.stitches - right
+        let across = row.flat
+            ? "It is centered, \(left) stitches in from each edge"
+            : "It covers stitches \(first) to \(first + width - 1) of the round, counted from the marker"
+        let below = under > 0 ? ", with \(under) \(under == 1 ? line : line + "s") of \(names[ground]) under it" : ""
+        var texts = ["With \(list(yarns.map { names[$0] })) and a tapestry needle, work the chart in duplicate stitch over \(band): \(covered.count) \(covered.count == 1 ? line : line + "s") high and \(width) stitches wide. \(across)\(below)."]
+        for (number, at) in covered.enumerated() {
+            var parts: [(color: Int?, count: Int)] = []
+            for p in left...right {
+                let cell = cells[at]?[p] ?? colors[at]
+                let color: Int? = cell == colors[at] ? nil : cell
+                if let last = parts.last, last.color == color { parts[parts.count - 1].count += 1 } else { parts.append((color, 1)) }
+            }
+            let words = parts.map { part in part.color.map { "\(part.count) \(names[$0])" } ?? "skip \(part.count)" }.joined(separator: ", ")
+            texts.append("Chart \(line) \(number + 1)\(number == 0 ? ", the bottom one" : ""), left to right: \(words).")
+        }
+        return texts
+    }
+
+    private static func list(_ words: [String]) -> String {
+        words.count < 2 ? words.joined() : words.dropLast().joined(separator: ", ") + " and " + (words.last ?? "")
+    }
+
     // MARK: Steps
 
     private static func regroup(_ steps: [Step], rows: [Row], colors: [Int], cells: [Int: [Int]], texts: [String?], names: [String], rim: Int?) -> [Step] {
@@ -420,15 +488,18 @@ enum Painter {
                 guard let first = run.first else { return }
                 let r0 = rows[first].row
                 let letter = Colorwork.letter(colors[first])
+                // A chart sewn on afterward shows on its rows in the picture, though they are knitted plain.
+                func look(_ at: Int) -> String { cells[at].map { $0.map(Colorwork.letter).joined() } ?? letter }
+                let paint = run.contains { cells[$0] != nil } ? run.map(look) : [letter]
                 if run.count == step.rows {
                     var whole = step
-                    whole.paint = [letter]
+                    whole.paint = paint
                     out.append(whole)
                 } else if step.delta == 0 {
                     let rotated = (0..<step.texts.count).map { step.texts[(r0 + $0) % step.texts.count] }
-                    out.append(Step(section: step.section, texts: rotated, rows: run.count, stitches: step.stitches, paint: [letter]))
+                    out.append(Step(section: step.section, texts: rotated, rows: run.count, stitches: step.stitches, paint: paint))
                 } else {
-                    for at in run { out.append(Step(section: step.section, texts: [rows[at].text], rows: 1, stitches: rows[at].stitches, paint: [letter])) }
+                    for at in run { out.append(Step(section: step.section, texts: [rows[at].text], rows: 1, stitches: rows[at].stitches, paint: [look(at)])) }
                 }
                 run = []
             }

@@ -116,6 +116,46 @@ final class SchemaTests: XCTestCase {
         XCTAssertEqual(try container.mainContext.fetch(FetchDescriptor<Needle>()).map(\.kindRaw), ["hook"])
     }
 
+    /// A store written by builds 1 to 29 opens with every count, the stash link and the second counter.
+    func testStoreWrittenByVersionTwoOpensWithEveryCount() throws {
+        let url = storeURL()
+        do {
+            let schema = Schema(versionedSchema: SchemaV2.self)
+            let container = try ModelContainer(for: schema, configurations: ModelConfiguration(schema: schema, url: url))
+            let context = container.mainContext
+            let scarf = SchemaV2.Project(name: "Scarf", rows: 412)
+            scarf.patternFile = "scarf.pdf"
+            scarf.patternPage = 3
+            scarf.markPage = 2
+            scarf.markY = 310
+            scarf.tallyOn = true
+            scarf.tallyName = "Decreases"
+            scarf.tallyCount = 7
+            let yarn = SchemaV2.Yarn(name: "Wool", skeins: 4)
+            yarn.yardsPerSkein = 220
+            yarn.dyeLot = "4471"
+            context.insert(scarf)
+            context.insert(yarn)
+            scarf.stashYarn = yarn
+            context.insert(SchemaV2.Needle(kindRaw: "hook", millimeters: 5))
+            try context.save()
+        }
+        let container = try XCTUnwrap(Persistence.container(inMemory: false, at: url))
+        let scarf = try XCTUnwrap(container.mainContext.fetch(FetchDescriptor<Project>()).first)
+        XCTAssertEqual([scarf.rows, scarf.patternPage, scarf.markPage, scarf.tallyCount], [412, 3, 2, 7])
+        XCTAssertEqual([scarf.patternFile, scarf.tallyName, scarf.stashYarn?.name], ["scarf.pdf", "Decreases", "Wool"])
+        XCTAssertEqual(scarf.markY, 310)
+        XCTAssertNil(scarf.workedAt)
+        XCTAssertEqual(scarf.lastWorked, scarf.createdAt)
+        XCTAssertEqual([scarf.readerZoom, scarf.readerX, scarf.readerY], [0, 0, 0])
+        XCTAssertFalse(scarf.markSteps)
+        XCTAssertNil(scarf.finishPhoto)
+        let yarn = try XCTUnwrap(container.mainContext.fetch(FetchDescriptor<Yarn>()).first)
+        XCTAssertEqual([yarn.skeins, yarn.yardsPerSkein], [4, 220])
+        XCTAssertEqual(yarn.dyeLot, "4471")
+        XCTAssertEqual(try container.mainContext.fetch(FetchDescriptor<Needle>()).map(\.kindRaw), ["hook"])
+    }
+
     /// The first builds carried less than version 1; their stores open on the same file, never an empty one.
     func testStoreFromBeforeTheVersionsStillOpens() throws {
         let url = storeURL()

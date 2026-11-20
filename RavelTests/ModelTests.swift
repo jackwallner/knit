@@ -34,6 +34,75 @@ final class ModelTests: XCTestCase {
         XCTAssertEqual(fetched.map(\.rows), [12])
     }
 
+    /// The list says where the work stands in words, and a count that moves marks the project as just worked.
+    func testAProjectSaysWhereItStandsAndWhenItWasLastWorked() {
+        let plain = Project(name: "Scarf", rows: 18, createdAt: Date(timeIntervalSinceReferenceDate: 100))
+        XCTAssertEqual(plain.standing(nil), "Row 18")
+        XCTAssertNil(plain.workedAt)
+        XCTAssertEqual(plain.lastWorked, plain.createdAt)
+        plain.knit(following: nil)
+        XCTAssertGreaterThan(plain.lastWorked, plain.createdAt)
+        let stamp = plain.workedAt
+        // A jump to the row it is already on is not work.
+        plain.jump(to: 19, following: nil)
+        XCTAssertEqual(plain.workedAt, stamp)
+
+        let hat = Design.ribbedBeanie
+        let plan = hat.plan(measures: hat.defaultSize.values, gauge: hat.weight.gauge)
+        let beanie = Project(name: "Hat")
+        beanie.follow(plan, of: hat)
+        // Casting on is not a row: the section alone.
+        XCTAssertEqual(beanie.standing(plan), plan.steps[0].section)
+        beanie.jump(toTap: plan.sections[1].tap + 3, following: plan)
+        let place = plan.sectionRow(at: beanie.rows)
+        XCTAssertEqual(beanie.standing(plan), "Body · Round \(place?.row ?? 0)")
+        beanie.jump(toTap: plan.totalTaps, following: plan)
+        XCTAssertEqual(beanie.standing(plan), "")
+    }
+
+    /// The band steps down a line a row when asked to, from the row it was switched on at, and stays where it
+    /// has got to when switched off.
+    func testTheRowBandStepsWithTheCount() {
+        let project = Project(name: "Scarf", rows: 10)
+        project.markPage = 0
+        project.markY = 500
+        project.markHeight = 16
+        XCTAssertEqual(project.bandY, 500)
+        project.knit(following: nil)
+        XCTAssertEqual(project.bandY, 500)
+        project.setBandSteps(true)
+        XCTAssertEqual(project.bandY, 500)
+        project.knit(following: nil)
+        project.knit(following: nil)
+        XCTAssertEqual(project.bandY, 468)
+        project.unknit(following: nil)
+        XCTAssertEqual(project.bandY, 484)
+        project.setBandSteps(false)
+        XCTAssertEqual([project.markY, project.bandY], [484, 484])
+        project.knit(following: nil)
+        XCTAssertEqual(project.bandY, 484)
+    }
+
+    func testOnlyAnUntouchedYarnDraftIsBlank() {
+        XCTAssertTrue(Yarn(name: " ").isBlank)
+        let typed = Yarn(name: "")
+        typed.fiber = "Merino"
+        XCTAssertFalse(typed.isBlank)
+        XCTAssertEqual(typed.fallbackName, "Merino")
+        XCTAssertFalse(Yarn(name: "", skeins: 4).isBlank)
+        XCTAssertFalse(Yarn(name: "", yardsPerSkein: 220).isBlank)
+        XCTAssertEqual(Yarn(name: "", weight: .dk, skeins: 2).fallbackName, YarnWeight.dk.title)
+        let lot = Yarn(name: "")
+        lot.dyeLot = "4412"
+        XCTAssertFalse(lot.isBlank)
+    }
+
+    func testANeedleLeftAtItsDefaultsIsUntouched() {
+        XCTAssertTrue(Needle().isUntouched)
+        XCTAssertFalse(Needle(millimeters: 5).isUntouched)
+        XCTAssertFalse(Needle(kind: .hook).isUntouched)
+    }
+
     func testYarnDetailSkipsEmptyFields() {
         XCTAssertEqual(Yarn(name: "Wool", colorway: "Moss", weight: .dk).detail, "Moss · DK")
         XCTAssertEqual(Yarn(name: "Wool", brand: " ", weight: .superBulky).detail, "Super Bulky")
@@ -121,14 +190,50 @@ final class ModelTests: XCTestCase {
         project.resetCount(following: plan)
         XCTAssertEqual(project.rows, 0)
         XCTAssertFalse(project.isFinished)
-        // Go to Row counts within the step and stays inside it. The body's plain rounds start after
-        // the round that changes to the larger needle.
-        let plain = plan.sections[1].tap + 1
-        project.jump(toTap: plain, following: plan)
+        // Go to Round counts within the section, across its steps, and stays inside it.
+        project.jump(toTap: plan.sections[1].tap + 1, following: plan)
         project.jump(to: 5, following: plan)
-        XCTAssertEqual(project.rows, plain + 4)
+        XCTAssertEqual(plan.sectionRow(at: project.rows)?.row, 5)
+        XCTAssertEqual(plan.position(at: project.rows).map { plan.steps[$0.step].section }, "Body")
+        project.jump(to: 1, following: plan)
+        XCTAssertEqual(plan.sectionRow(at: project.rows)?.row, 1)
         project.jump(to: 9_999, following: plan)
         XCTAssertEqual(plan.position(at: project.rows).map { plan.steps[$0.step].section }, "Body")
+        XCTAssertEqual(plan.sectionRow(at: project.rows).map { $0.row == $0.of }, true)
+    }
+
+    /// Every row of every design has a number within its section that Go to Round lands back on, and a line
+    /// in the written pattern.
+    func testEveryRowIsNumberedInItsSectionAndWrittenOut() {
+        for design in Design.allCases {
+            let plan = design.plan(measures: design.defaultSize.values, gauge: design.weight.gauge)
+            let lines = Set(plan.written().flatMap(\.lines).map(\.id))
+            XCTAssertEqual(plan.written().map(\.section), plan.sections.map(\.name), design.rawValue)
+            var last: (section: String, row: Int)?
+            for tap in 0..<plan.totalTaps {
+                guard let spot = plan.position(at: tap) else { return XCTFail(design.rawValue) }
+                XCTAssertTrue(plan.currentLine(at: tap).map(lines.contains) ?? false, "\(design.rawValue) tap \(tap)")
+                let section = plan.steps[spot.step].section
+                guard let place = plan.sectionRow(at: tap) else {
+                    XCTAssertTrue(plan.steps[spot.step].isAction, design.rawValue)
+                    continue
+                }
+                XCTAssertEqual(plan.tap(ofRow: place.row, inSectionAt: tap), tap, "\(design.rawValue) tap \(tap)")
+                XCTAssertLessThanOrEqual(place.row, place.of)
+                // Rows count up by one inside a section and start again at 1 in the next.
+                if let last, last.section == section { XCTAssertEqual(place.row, last.row + 1, "\(design.rawValue) tap \(tap)") }
+                if last?.section != section, tap == plan.sections.first(where: { $0.name == section })?.tap ?? -1 { XCTAssertEqual(place.row, 1) }
+                last = (section, place.row)
+            }
+            XCTAssertNil(plan.sectionRow(at: plan.totalTaps))
+            XCTAssertNil(plan.currentLine(at: plan.totalTaps))
+        }
+    }
+
+    func testTermsWorthATapSkipBareKnitAndPurl() {
+        let plan = Design.ribbedBeanie.plan(measures: Design.ribbedBeanie.defaultSize.values, gauge: Design.ribbedBeanie.weight.gauge)
+        XCTAssertEqual(plan.terms(in: "*K2, k2tog; repeat from * to end").map(\.term), ["k2tog", "repeat from"])
+        XCTAssertEqual(plan.terms(in: "Knit").map(\.term), [])
     }
 
     /// The store on disk has to hand back exactly what was put in, after the app is gone and back.

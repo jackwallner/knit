@@ -7,6 +7,8 @@ struct ProjectsView: View {
     @Environment(\.openURL) private var openURL
     @Environment(\.requestReview) private var requestReview
     @Environment(\.dynamicTypeSize) private var typeSize
+    /// A file another app handed over ("Open in Ravel"): a pattern to start a project from, or a backup.
+    @Binding var incoming: URL?
     /// Opens the Patterns tab.
     var browse: () -> Void = {}
     @Query(sort: \Project.createdAt, order: .reverse) private var projects: [Project]
@@ -16,9 +18,22 @@ struct ProjectsView: View {
     @State private var deleting: Project?
     @State private var importing = false
     @State private var importFailed = false
+    /// What the file picker is open for.
+    @State private var restoring = false
+    /// A backup written and waiting to be put where the knitter picks.
+    @State private var backup: URL?
+    @State private var backupFailed = false
+    /// How many projects the last restore added, while its result is on screen.
+    @State private var restored: Int?
 
-    private var active: [Project] { projects.filter { !$0.isFinished } }
-    private var finished: [Project] { projects.filter(\.isFinished) }
+    init(incoming: Binding<URL?> = .constant(nil), browse: @escaping () -> Void = {}) {
+        _incoming = incoming
+        self.browse = browse
+    }
+
+    /// What was worked last leads, so the piece on the needles is the first row of the list.
+    private var active: [Project] { projects.filter { !$0.isFinished }.sorted { $0.lastWorked > $1.lastWorked } }
+    private var finished: [Project] { projects.filter(\.isFinished).sorted { ($0.finishedAt ?? .distantPast) > ($1.finishedAt ?? .distantPast) } }
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -68,6 +83,16 @@ struct ProjectsView: View {
                             openURL(Links.feedback) { opened in if !opened { openURL(Links.support) } }
                         }
                         Button("Help", systemImage: "questionmark.circle") { openURL(Links.support) }
+                        // Kept by hand, wherever the knitter likes: Files, iCloud Drive, a computer. No account.
+                        Section {
+                            Button("Save a Backup", systemImage: "square.and.arrow.down", action: saveBackup)
+                                .accessibilityIdentifier("projects.backup")
+                            Button("Restore a Backup", systemImage: "arrow.counterclockwise") {
+                                restoring = true
+                                importing = true
+                            }
+                            .accessibilityIdentifier("projects.restore")
+                        }
                     } label: {
                         Image(systemName: "ellipsis")
                     }
@@ -93,8 +118,24 @@ struct ProjectsView: View {
             ) {
                 Button("Delete Project", role: .destructive) { if let deleting { remove(deleting) } }
             }
-            .fileImporter(isPresented: $importing, allowedContentTypes: [.pdf, .image], onCompletion: start)
+            .fileImporter(isPresented: $importing, allowedContentTypes: restoring ? [.ravelBackup] : [.pdf, .image]) { result in
+                let wasRestoring = restoring
+                restoring = false
+                guard case let .success(url) = result else { return }
+                if wasRestoring { restore(url) } else { start(url) }
+            }
+            .onChange(of: importing) { _, open in if !open { restoring = false } }
+            .fileMover(isPresented: Binding(get: { backup != nil }, set: { if !$0 { backup = nil } }), file: backup) { _ in backup = nil }
+            .onChange(of: incoming, initial: true) { _, url in
+                guard let url else { return }
+                incoming = nil
+                if url.pathExtension.lowercased() == Backup.fileExtension { restore(url) } else { start(url) }
+            }
             .alert("That pattern could not be opened", isPresented: $importFailed) {}
+            .alert("That backup could not be opened", isPresented: $backupFailed) {}
+            .alert("Backup Restored", isPresented: Binding(get: { restored != nil }, set: { if !$0 { restored = nil } })) {} message: {
+                if let restored, restored > 0 { Text("\(restored) projects added") } else { Text("Everything in this backup is already here") }
+            }
             .alert("New Project", isPresented: $naming) {
                 TextField("Name", text: $name).accessibilityLabel("Name").autocorrectionDisabled()
                 Button("Cancel", role: .cancel) { name = "" }
@@ -116,12 +157,18 @@ struct ProjectsView: View {
                 .frame(minHeight: 50)
                 .background(Color.accentColor, in: Capsule())
                 .accessibilityIdentifier("projects.castOn")
-            Button("Browse Patterns", action: browse)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .frame(minHeight: 44)
-                .padding(.top, -14)
-                .accessibilityIdentifier("projects.browse")
+            VStack(spacing: 0) {
+                Button("Browse Patterns", action: browse)
+                    .accessibilityIdentifier("projects.browse")
+                // A knitter who arrives with a PDF starts from it, without hunting through the plus menu.
+                Button("Import a Pattern") { importing = true }
+                    .accessibilityIdentifier("projects.import")
+            }
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            .buttonStyle(.borderless)
+            .controlSize(.large)
+            .padding(.top, -14)
         }
     }
 
@@ -141,33 +188,27 @@ struct ProjectsView: View {
         }
     }
 
-    /// At the accessibility text sizes the name gets its own line, so it is never cut.
-    @ViewBuilder
+    /// The name, and under it where the work stands ("Row 18", "Body · Round 5") or the day it was finished:
+    /// never a bare number.
     private func row(_ project: Project) -> some View {
         let plan = project.plan
-        let rows = project.knittedRows(plan)
-        let name = Text(project.name).font(Theme.display(22))
-        let count = Text(rows, format: .number)
-            .font(Theme.display(22, weight: .regular))
-            .monospacedDigit()
-            .foregroundStyle(Theme.secondary)
-            .accessibilityLabel("Row \(rows)")
-        if typeSize.isAccessibilitySize {
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    thumbnail(project, plan)
-                    Spacer(minLength: 8)
-                    count
+        let standing = project.isFinished
+            ? project.finishedAt.map { $0.formatted(.dateTime.day().month(.abbreviated).year()) } ?? ""
+            : project.standing(plan)
+        return HStack(spacing: 16) {
+            thumbnail(project, plan)
+            VStack(alignment: .leading, spacing: 3) {
+                // At the accessibility text sizes the name runs as long as it needs, so it is never cut.
+                Text(project.name).font(Theme.display(22)).lineLimit(typeSize.isAccessibilitySize ? nil : 2)
+                if !standing.isEmpty {
+                    Text(standing)
+                        .font(.subheadline)
+                        .monospacedDigit()
+                        .foregroundStyle(Theme.secondary)
+                        .accessibilityIdentifier("projects.standing")
                 }
-                name
             }
-        } else {
-            HStack(spacing: 16) {
-                thumbnail(project, plan)
-                name.lineLimit(2)
-                Spacer(minLength: 8)
-                count
-            }
+            Spacer(minLength: 0)
         }
     }
 
@@ -175,7 +216,14 @@ struct ProjectsView: View {
     @ViewBuilder
     private func thumbnail(_ project: Project, _ plan: PatternPlan?) -> some View {
         let side: CGFloat = 64
-        if let plan, let silhouette = project.silhouette(plan), plan.totalTaps > 0 {
+        if let photo = project.finishPhoto, let image = UIImage(contentsOfFile: PatternStore.url(for: photo).path) {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .frame(width: side, height: side)
+                .clipShape(RoundedRectangle(cornerRadius: side * 0.27, style: .continuous))
+                .accessibilityHidden(true)
+        } else if let plan, let silhouette = project.silhouette(plan), plan.totalTaps > 0 {
             Garment(silhouette: silhouette, yarn: project.color, progress: Double(project.rows) / Double(plan.totalTaps), colorwork: plan.palette == nil ? nil : plan)
                 .padding(6)
                 .frame(width: side, height: side)
@@ -198,16 +246,40 @@ struct ProjectsView: View {
 
     private func remove(_ project: Project) {
         PatternStore.delete(project.patternFile)
+        PatternStore.delete(project.finishPhoto)
+        // Its Lock Screen counter goes first, while the project can still be named.
+        let gone = LockCounter.key(project)
+        Task { await LockCounter.drop(gone) }
         context.delete(project)
         try? context.save()
     }
 
+    private func saveBackup() {
+        // What is on screen is on disk first, so the backup holds the last row counted.
+        try? context.save()
+        guard let url = try? Backup.write(from: context) else { return backupFailed = true }
+        backup = url
+    }
+
+    /// Adds what a backup holds that this device does not. Projects already here are never changed.
+    private func restore(_ url: URL) {
+        defer { Self.clearInbox(url) }
+        guard let kept = try? Backup.read(url), let added = try? kept.restore(into: context) else { return backupFailed = true }
+        restored = added
+    }
+
+    /// A file handed over by another app is a copy in the app's Inbox: gone once it has been read.
+    private static func clearInbox(_ url: URL) {
+        if url.pathComponents.contains("Inbox") { try? FileManager.default.removeItem(at: url) }
+    }
+
     /// A project made from the knitter's own pattern file, named after it, opened at its first page.
-    private func start(_ result: Result<URL, Error>) {
-        guard case let .success(url) = result else { return }
+    private func start(_ url: URL) {
         let title = url.deletingPathExtension().lastPathComponent
         Task {
-            guard let file = await Task.detached(operation: { try? PatternStore.save(from: url) }).value else {
+            let saved = await Task.detached(operation: { try? PatternStore.save(from: url) }).value
+            Self.clearInbox(url)
+            guard let file = saved else {
                 importFailed = true
                 return
             }

@@ -156,7 +156,7 @@ enum Engines {
             ear(&b, "First Ear", g)
             ear(&b, "Second Ear", g)
             b.section = "Finishing"
-            b.action("Sew the cast-on edge of each ear to the crown, right side out, one on each side of the top and about \(Sizing.inches(head * 0.2)) apart. Weave in the ends.")
+            b.action("Sew the cast-on edge of each ear to the crown, right side out, one on each side of the top and about \(Sizing.inches(head * 0.2)) apart. Line them up with the face: the front of the hat is the half that begins at the start of the round, so center the pair over it. Weave in the ends.")
         } else {
             b.section = "Finishing"
             b.action("Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.")
