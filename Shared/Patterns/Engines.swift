@@ -15,11 +15,13 @@ enum Engines {
         var band = 0
         /// Two small rounded ears, knit flat with a rim of their own and sewn to the crown.
         var ears = false
+        /// A stitch pattern for the shape's main fabric, in place of its own. Nil keeps the shape as it is.
+        var stitch: Stitch?
 
         static let plain = Fit()
     }
 
-    private static func lcm(_ a: Int, _ b: Int) -> Int {
+    static func lcm(_ a: Int, _ b: Int) -> Int {
         func gcd(_ x: Int, _ y: Int) -> Int { y == 0 ? x : gcd(y, x % y) }
         return a / gcd(a, max(1, b)) * max(1, b)
     }
@@ -27,7 +29,7 @@ enum Engines {
     // MARK: Wording
 
     /// A piece worked in the round counts its gauge in rounds, the way the rest of its pattern does.
-    private static func gaugeLine(_ g: Gauge, round: Bool) -> String {
+    static func gaugeLine(_ g: Gauge, round: Bool) -> String {
         let format = FloatingPointFormatStyle<Double>.number.precision(.fractionLength(0...1))
         return "Gauge: \(g.stitches.formatted(format)) stitches and \(g.rows.formatted(format)) \(round ? "rounds" : "rows") over \(Sizing.swatch()) of stockinette, after blocking. Use the needle that gives you this gauge"
     }
@@ -48,25 +50,25 @@ enum Engines {
     }
 
     /// A circular long enough to hold a flat piece or a wide round: 40 in once the stitches span about 45 in.
-    private static func longCircular(_ stitches: Int, _ g: Gauge, flat: Bool) -> String {
+    static func longCircular(_ stitches: Int, _ g: Gauge, flat: Bool) -> String {
         Double(stitches) / g.spi > 45 ? "\(g.needle.label) \(Sizing.cable(40)) circular needle\(flat ? ", worked flat" : "")"
             : "\(g.needle.label) circular needle, \(Sizing.cable(32)) or longer\(flat ? ", worked flat" : "")"
     }
 
     /// Closes a pattern. The yarn asked for is never less than what the written rows use, plus a reserve.
     /// `round` is true for a piece worked in the round.
-    private static func pattern(_ b: PlanBuilder, estimate: Int, yarnNote: String = "", tools: [String], finished: String, gauge g: Gauge, round: Bool = false) -> PatternPlan {
+    static func pattern(_ b: PlanBuilder, estimate: Int, yarnNote: String = "", tools: [String], finished: String, gauge g: Gauge, round: Bool = false) -> PatternPlan {
         let yards = max(estimate, Sizing.yards(worked: b.steps, spi: g.spi))
         return PatternPlan(steps: b.steps, materials: [yarnLine(yards, g) + yarnNote] + tools + [gaugeLine(g, round: round)], finished: finished, yards: yards)
     }
 
     /// "19.5 in around, to fit a 22 in head": the number a knitter checks against the swatch, then who it fits.
-    private static func fits(_ stitches: Int, _ g: Gauge, _ part: String, _ size: Double) -> String {
+    static func fits(_ stitches: Int, _ g: Gauge, _ part: String, _ size: Double) -> String {
         "\(Sizing.inches(Double(stitches) / g.spi)) around, to fit a \(Sizing.inches(size)) \(part)"
     }
 
     /// Wording for `count` increases spread evenly over `stitches` stitches.
-    private static func spread(_ count: Int, over stitches: Int) -> String {
+    static func spread(_ count: Int, over stitches: Int) -> String {
         let gap = max(1, stitches / count)
         let rest = stitches - gap * count
         // Leftover stitches go one to a repeat, so the increases never bunch at one side.
@@ -74,7 +76,7 @@ enum Engines {
         return "Work (k\(gap + 1), M1) \(rest) times, then (k\(gap), M1) \(count - rest) times"
     }
 
-    private static func even(_ value: Double, minimum: Int = 2) -> Int { max(minimum, 2 * Int((value / 2).rounded())) }
+    static func even(_ value: Double, minimum: Int = 2) -> Int { max(minimum, 2 * Int((value / 2).rounded())) }
 
     // MARK: Hats
 
@@ -84,7 +86,7 @@ enum Engines {
     /// A cast-on count for `head` inches at this gauge: a multiple of `multiple` whose ease lands in
     /// `hatEase`, nearest `share` of the head. A count within 3 percent of that which also divides into
     /// the crown's 8 wedges wins, so most hats need no adjusting round. Nil when no multiple lands in the band.
-    private static func hatCount(head: Double, share: Double, spi: Double, multiple: Int) -> Int? {
+    static func hatCount(head: Double, share: Double, spi: Double, multiple: Int) -> Int? {
         let low = Int((head * hatEase.lowerBound * spi / Double(multiple)).rounded(.up))
         let high = Int((head * hatEase.upperBound * spi / Double(multiple)).rounded(.down))
         guard low <= high else { return nil }
@@ -95,7 +97,7 @@ enum Engines {
     }
 
     /// The round that brings a count to a multiple of 8 for the crown, worked as the last round of the body.
-    private static func adjusting(_ from: Int, to: Int) -> String {
+    static func adjusting(_ from: Int, to: Int) -> String {
         if to > from { return "Knit, increasing \(to - from) evenly: " + lowerFirst(spread(to - from, over: from)) }
         let count = from - to
         let gap = from / count
@@ -105,9 +107,10 @@ enum Engines {
         return "Knit, decreasing \(count) evenly: \(groups)"
     }
 
-    private static func lowerFirst(_ text: String) -> String { text.prefix(1).lowercased() + text.dropFirst() }
+    static func lowerFirst(_ text: String) -> String { text.prefix(1).lowercased() + text.dropFirst() }
 
     static func hat(_ style: HatStyle, head: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch, style != .rolled { return texturedHat(style, stitch, head: head, gauge: g, fit: fit) }
         let share = style == .slouch ? 0.88 : 0.9
         // K2, p2 needs a multiple of 4. A heavy yarn can leave no multiple of 4 inside the ease band at a
         // small head, so the ribbed brim falls back to k1, p1 there. The slouch brim is k1, p1 throughout.
@@ -250,7 +253,7 @@ enum Engines {
 
     /// A rounded ear: stockinette narrowed at both edges to a blunt top, then a garter rim picked up
     /// around it. Its rows sit in a section ending "Ear", which colorwork reads as trim.
-    private static func ear(_ b: inout PlanBuilder, _ name: String, _ g: Gauge) {
+    static func ear(_ b: inout PlanBuilder, _ name: String, _ g: Gauge) {
         let width = even(2.25 * g.spi, minimum: 6)
         let straight = even(0.5 * g.rpi)
         b.section = name
@@ -270,7 +273,7 @@ enum Engines {
     }
 
     /// Says once, on the round where a 16 in needle stops reaching, to move to the short needles.
-    private static func switching(_ rounds: [(text: String, stitches: Int)], _ g: Gauge) -> [(text: String, stitches: Int)] {
+    static func switching(_ rounds: [(text: String, stitches: Int)], _ g: Gauge) -> [(text: String, stitches: Int)] {
         var rounds = rounds
         if let index = rounds.firstIndex(where: { Double($0.stitches) / g.spi < 14 && $0.text != "Knit" }) {
             rounds[index].text += ". Change to double-pointed needles when the stitches no longer reach around"
@@ -279,7 +282,7 @@ enum Engines {
     }
 
     /// Eight wedges, decreased every other round for the first half and every round after, down to 8 stitches.
-    private static func crownRounds(wedge: Int) -> [(text: String, stitches: Int)] {
+    static func crownRounds(wedge: Int) -> [(text: String, stitches: Int)] {
         var rounds: [(text: String, stitches: Int)] = []
         var width = wedge
         var spaced = wedge / 2
@@ -298,6 +301,7 @@ enum Engines {
     // MARK: Scarves and cowls
 
     static func scarf(_ texture: Texture, width: Double, length: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedScarf(stitch, width: width, length: length, gauge: g) }
         var b = PlanBuilder()
         b.section = "Scarf"
         let caston: Int
@@ -326,6 +330,7 @@ enum Engines {
     }
 
     static func cowl(_ texture: Texture, around: Double, height: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedCowl(stitch, around: around, height: height, gauge: g, fit: fit) }
         var b = PlanBuilder()
         b.section = "Cowl"
         let caston: Int
@@ -369,6 +374,7 @@ enum Engines {
     // MARK: Blankets and home
 
     static func blanket(bordered: Bool, width: Double, length: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedBlanket(stitch, width: width, length: length, gauge: g) }
         var b = PlanBuilder()
         let caston: Int
         if bordered {
@@ -413,6 +419,7 @@ enum Engines {
     // MARK: Accessories
 
     static func earWarmer(head: Double, width: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedEarWarmer(stitch, head: head, width: width, gauge: g, fit: fit) }
         let caston = Sizing.stitches(head * 0.9, per: g.spi, multiple: lcm(4, fit.multiple), minimum: 24)
         let rows = Sizing.rows(width, per: g.rpi, minimum: 6)
         let rib = "*K2, p2; repeat from * around"
@@ -625,7 +632,7 @@ enum Engines {
     }
 
     /// Writes rounds as steps: a run of one round, or of an increase round and a plain one, becomes one step.
-    private static func grouped(_ b: inout PlanBuilder, _ rounds: [(text: String, stitches: Int)], from start: Int) {
+    static func grouped(_ b: inout PlanBuilder, _ rounds: [(text: String, stitches: Int)], from start: Int) {
         var index = 0
         while index < rounds.count {
             let first = rounds[index]
@@ -645,7 +652,7 @@ enum Engines {
     }
 
     /// Both sleeves of a top-down raglan, from the held stitches to the cuff, in the round. Returns the cuff count.
-    private static func raglanSleeves(_ b: inout PlanBuilder, _ fit: RaglanFit, chest: Double, length sleeveLength: Double, gauge g: Gauge) -> Int {
+    static func raglanSleeves(_ b: inout PlanBuilder, _ fit: RaglanFit, chest: Double, length sleeveLength: Double, gauge g: Gauge) -> Int {
         let sleeve = fit.sleeve, sleeveTop = fit.sleeveTop, underarm = fit.underarm
         let cuffRounds = Sizing.rows(min(2, sleeveLength * 0.2), per: g.rpi, minimum: 4)
         let straight = Sizing.rows(1.5, per: g.rpi)
@@ -810,11 +817,11 @@ enum Engines {
 
     // MARK: Building blocks for the larger library
 
-    private static func odd(_ value: Double, minimum: Int = 1) -> Int { max(minimum, 2 * Int(((value - 1) / 2).rounded()) + 1) }
+    static func odd(_ value: Double, minimum: Int = 1) -> Int { max(minimum, 2 * Int(((value - 1) / 2).rounded()) + 1) }
 
     /// Writes rows as steps, folding a run that repeats one row, or a pair of rows whose second keeps the
     /// count, into one step. `start` is the count before the first row.
-    private static func runs(_ b: inout PlanBuilder, _ rows: [(text: String, stitches: Int)], from start: Int) {
+    static func runs(_ b: inout PlanBuilder, _ rows: [(text: String, stitches: Int)], from start: Int) {
         var index = 0
         var before = start
         while index < rows.count {
@@ -840,7 +847,7 @@ enum Engines {
     /// A sock toe or a mitten top closed over its two sides, 4 stitches a decrease round: every other round
     /// until about half the stitches are left, then every round down to `last`. The start of the round and a
     /// marker halfway around are the two sides.
-    private static func wedge(from start: Int, to last: Int) -> [(text: String, stitches: Int)] {
+    static func wedge(from start: Int, to last: Int) -> [(text: String, stitches: Int)] {
         let decrease = "K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1"
         var rounds: [(text: String, stitches: Int)] = []
         var count = start
@@ -853,7 +860,7 @@ enum Engines {
     }
 
     /// What a wedge closes on: about a quarter of the stitches, a multiple of 4 and never fewer than 8.
-    private static func wedgeEnd(_ stitches: Int) -> Int { min(stitches, max(8, 4 * Int((Double(stitches) / 16).rounded()))) }
+    static func wedgeEnd(_ stitches: Int) -> Int { min(stitches, max(8, 4 * Int((Double(stitches) / 16).rounded()))) }
 
     /// Spaces `count` buttonholes of 2 stitches each (k2tog, yo) evenly over `stitches`, `edge` stitches in
     /// from each end. Returns the stitches before each hole, then the stitches after the last one.
@@ -865,7 +872,7 @@ enum Engines {
     }
 
     /// The row or round that works the buttonholes in rib. `rest` finishes it after the last hole.
-    private static func buttonholeText(_ gaps: [Int], rest: String) -> String {
+    static func buttonholeText(_ gaps: [Int], rest: String) -> String {
         var groups: [(gap: Int, times: Int)] = []
         for gap in gaps.dropFirst().dropLast() {
             if groups.last?.gap == gap { groups[groups.count - 1].times += 1 } else { groups.append((gap, 1)) }

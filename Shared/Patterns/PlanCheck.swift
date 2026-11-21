@@ -73,6 +73,30 @@ enum TopicalCheck {
         return inputs
     }
 
+    /// What a stitch pattern's repeat did to the size asked for, if it moved it too far: a hat must stay in
+    /// the ease band, anything else within a tenth of the size or half a repeat, whichever is more.
+    static func stitchFit(_ stitch: Stitch, base: Design, input: [String: Double], gauge g: Gauge, plan: PatternPlan) -> String? {
+        guard let widest = plan.steps.compactMap(\.stitches).max() else { return "No stitch count" }
+        let across = g.spi * stitch.widthFactor
+        let measured = Double(widest) / across
+        let head = input["head"] ?? 0
+        if base == .ribbedBeanie {
+            let band = (head * (Engines.hatEase.lowerBound - 0.01))...(head * (Engines.hatEase.upperBound + 0.01))
+            return band.contains(measured) ? nil : "\(widest) stitches make \(measured.formatted(.number.precision(.fractionLength(1)))) in for a \(head.formatted()) in head"
+        }
+        let wanted: Double
+        switch base {
+        // The slouch's own body, which a small head at a heavy weight keeps 8 stitches wider than its brim.
+        case .slouchHat: wanted = Double(base.plan(measures: input, gauge: g).steps.compactMap(\.stitches).max() ?? 0) / g.spi
+        case .earWarmer: wanted = head * 0.9
+        case .garterScarf, .borderedBlanket: wanted = input["width"] ?? 0
+        case .ribbedCowl: wanted = input["around"] ?? 0
+        default: return nil
+        }
+        let room = max(wanted * 0.1, (Double(stitch.multiple) / 2 + 1) / across)
+        return abs(measured - wanted) <= room ? nil : "\(widest) stitches make \(measured.formatted(.number.precision(.fractionLength(1)))) in where \(wanted.formatted(.number.precision(.fractionLength(1)))) in was asked for"
+    }
+
     static func problems(_ topical: Topical) -> [String] {
         var problems: [String] = []
         let words = ([topical.title, topical.tag, topical.id] + topical.work.palette.map(\.name)).joined(separator: " ").lowercased()
@@ -87,9 +111,13 @@ enum TopicalCheck {
                 for problem in result.issues + PlanCheck.problems(result.plan) { problems.append("\(label): \(problem)") }
                 // A chart repeat may round the stitch count, but never far from the size asked for.
                 let plain = topical.base.plan(measures: input, gauge: gauge)
-                if let sized = result.plan.steps.compactMap(\.stitches).max(), let wanted = plain.steps.compactMap(\.stitches).max(), wanted > 0 {
+                // A stitch pattern changes the count on purpose (ribs draw in, lace opens out): `stitchFit` checks it.
+                if topical.stitch == nil, let sized = result.plan.steps.compactMap(\.stitches).max(), let wanted = plain.steps.compactMap(\.stitches).max(), wanted > 0 {
                     let off = abs(Double(sized - wanted)) / Double(wanted)
                     if off > 0.05 { problems.append("\(label): the chart repeat moves the fit \(Int((off * 100).rounded())) percent (\(wanted) to \(sized) stitches)") }
+                }
+                if let stitch = topical.stitch, let off = stitchFit(stitch, base: topical.base, input: input, gauge: gauge, plan: result.plan) {
+                    problems.append("\(label): \(off)")
                 }
                 // Each yarn covers its own rows plus 15 percent, and together they cover the shape knit plain.
                 let shape = topical.base.plan(measures: input, gauge: gauge, fit: topical.fit)

@@ -16,6 +16,7 @@ struct LibraryView: View {
     @State private var query = ""
     private let trending = Trending.shared
     private let topical = TopicalStore.shared
+    private let photos = PhotoStore.shared
 
     /// Two tiles a row on a phone, four to six on an iPad, one at the accessibility text sizes on a phone so names
     /// never get cut, two on an iPad.
@@ -173,12 +174,18 @@ struct LibraryView: View {
                     .aspectRatio(1, contentMode: .fit)
                     .overlay { Image(decorative: photo).resizable().scaledToFill() }
                     .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+            } else if let image = item.sitePhoto.flatMap(photos.image) {
+                Color.clear
+                    .aspectRatio(1, contentMode: .fit)
+                    .overlay { Image(uiImage: image).resizable().scaledToFill().accessibilityHidden(true) }
+                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
             } else {
                 Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
                     .padding(14)
                     .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
                     // Decorative like the photo: the title under it names the tile.
                     .accessibilityHidden(true)
+                    .task { if let path = item.sitePhoto { await photos.load(path) } }
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text(item.title)
@@ -299,9 +306,19 @@ struct DesignView: View {
                     .accessibilityElement()
                     .accessibilityLabel(Text(verbatim: item.title))
                     .accessibilityAddTraits(.isImage)
+            } else if let image = item.sitePhoto.flatMap(PhotoStore.shared.image) {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(maxWidth: height * 1.7)
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .accessibilityElement()
+                    .accessibilityLabel(Text(verbatim: item.title))
+                    .accessibilityAddTraits(.isImage)
             } else {
                 Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
                     .frame(height: height)
+                    .task { if let path = item.sitePhoto { await PhotoStore.shared.load(path) } }
             }
             Text("\(item.level.title) · \(Sizing.yardage(plan.yards))")
                 .font(.subheadline)

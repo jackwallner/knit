@@ -32,6 +32,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     case basketweaveBlanket, rectangularWrap, crescentShawl, marketBag, pillowCover
     case pompomBonnet, beret
     case dropShoulder, keyholeScarf, slippers, babyBooties
+    case toeUpSocks, fingerlessMitts
 
     enum Shelf: String, CaseIterable, Identifiable, Sendable {
         case hats = "Hats"
@@ -58,6 +59,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case hat, slouch, scarf, cowl, blanket, cloth, band, mitts, tubes, shawl, sweater, hood, kerchief, ears
         case socks, mittens, cardigan, vest, earflap, wrap, crescent, bag, pillow, bonnet, beret
         case dropShoulder, keyhole, slipper
+        case toeUp
     }
 
     var id: String { rawValue }
@@ -102,6 +104,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .keyholeScarf: "Keyhole Scarf"
         case .slippers: "Slippers"
         case .babyBooties: "Baby Booties"
+        case .toeUpSocks: "Toe-Up Socks"
+        case .fingerlessMitts: "Fingerless Mitts"
         }
     }
 
@@ -113,7 +117,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .balaclava, .earflapHat, .cabledBeanie, .pompomBonnet, .beret: .hats
         case .garterScarf, .ribbedScarf, .seedScarf, .ribbedCowl, .seedCowl, .chunkyCowl, .neckScarf, .rectangularWrap, .keyholeScarf: .scarves
         case .borderedBlanket, .garterBlanket, .dishcloth, .basketweaveBlanket, .pillowCover, .marketBag: .home
-        case .earWarmer, .handwarmers, .legWarmers, .triangleShawl, .cableHeadband, .crescentShawl, .mittens, .cuffDownSocks, .slippers, .babyBooties: .accessories
+        case .earWarmer, .handwarmers, .legWarmers, .triangleShawl, .cableHeadband, .crescentShawl, .mittens, .cuffDownSocks, .slippers, .babyBooties, .toeUpSocks, .fingerlessMitts: .accessories
         case .raglanPullover, .raglanCardigan, .sweaterVest, .kidsRaglan, .dropShoulder: .sweaters
         }
     }
@@ -123,9 +127,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .garterScarf, .garterBlanket, .ribbedScarf, .seedScarf, .keyholeScarf, .slippers: .beginner
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .borderedBlanket, .earWarmer, .legWarmers, .triangleShawl, .chunkyCowl, .neckScarf, .dishcloth, .handwarmers: .easy
         case .earflapHat, .basketweaveBlanket, .rectangularWrap, .crescentShawl, .marketBag, .pillowCover, .mittens: .easy
-        case .pompomBonnet, .beret, .dropShoulder, .babyBooties: .easy
+        case .pompomBonnet, .beret, .dropShoulder, .babyBooties, .fingerlessMitts: .easy
         case .raglanPullover, .cableHeadband, .balaclava: .intermediate
-        case .cuffDownSocks, .raglanCardigan, .sweaterVest, .kidsRaglan, .cabledBeanie: .intermediate
+        case .cuffDownSocks, .raglanCardigan, .sweaterVest, .kidsRaglan, .cabledBeanie, .toeUpSocks: .intermediate
         }
     }
 
@@ -141,6 +145,18 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     /// The asset name of the knitted sample photographed for the design page.
     var photo: String { "sample-\(rawValue)" }
 
+    /// The designs that shipped in 1.0 carry their photo in the app. Every one added since has it on the
+    /// site instead, under this path, so the app does not grow with the library.
+    var sitePhoto: String? { Self.firstRelease.contains(self) ? nil : "photos/\(rawValue).jpg" }
+
+    private static let firstRelease: Set<Design> = [
+        .ribbedBeanie, .slouchHat, .rolledBrimHat, .garterScarf, .ribbedScarf, .seedScarf, .ribbedCowl, .seedCowl,
+        .borderedBlanket, .garterBlanket, .dishcloth, .earWarmer, .handwarmers, .legWarmers, .triangleShawl,
+        .raglanPullover, .chunkyCowl, .neckScarf, .cableHeadband, .balaclava, .cuffDownSocks, .mittens, .raglanCardigan,
+        .sweaterVest, .kidsRaglan, .earflapHat, .cabledBeanie, .basketweaveBlanket, .rectangularWrap, .crescentShawl,
+        .marketBag, .pillowCover, .pompomBonnet, .beret, .dropShoulder, .keyholeScarf, .slippers, .babyBooties,
+    ]
+
     var silhouette: Silhouette {
         switch self {
         case .ribbedBeanie, .rolledBrimHat: .hat
@@ -152,7 +168,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .borderedBlanket, .garterBlanket: .blanket
         case .dishcloth: .cloth
         case .earWarmer, .cableHeadband: .band
-        case .handwarmers: .mitts
+        case .handwarmers, .fingerlessMitts: .mitts
         case .legWarmers: .tubes
         case .triangleShawl: .shawl
         case .raglanPullover, .kidsRaglan: .sweater
@@ -172,6 +188,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .dropShoulder: .dropShoulder
         case .keyholeScarf: .keyhole
         case .slippers, .babyBooties: .slipper
+        case .toeUpSocks: .toeUp
         }
     }
 
@@ -215,12 +232,14 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .keyholeScarf: .plum
         case .slippers: .spruce
         case .babyBooties: .marigold
+        case .toeUpSocks: .indigo
+        case .fingerlessMitts: .charcoal
         }
     }
 
     /// The gauge this design is knit at in a yarn weight. Socks are knit firmer than the label so they wear well.
     func gauge(for weight: YarnWeight) -> Gauge {
-        if self == .cuffDownSocks, weight == .fingering { return Gauge(stitches: 32, rows: 44) }
+        if [.cuffDownSocks, .toeUpSocks].contains(self), weight == .fingering { return Gauge(stitches: 32, rows: 44) }
         return weight.gauge
     }
 
@@ -228,7 +247,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .triangleShawl, .neckScarf, .sweaterVest, .rectangularWrap, .beret, .babyBooties: .dk
         case .garterBlanket, .slouchHat, .cableHeadband, .cabledBeanie, .keyholeScarf, .slippers: .aran
-        case .cuffDownSocks, .crescentShawl: .fingering
+        case .cuffDownSocks, .crescentShawl, .toeUpSocks: .fingering
         // Chunky is #5 bulky to most knitters.
         case .chunkyCowl, .dropShoulder: .bulky
         default: .worsted
@@ -249,7 +268,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [Measure(key: "side", label: "Side", range: 6...12, step: 0.5)]
         case .earWarmer, .cableHeadband:
             [Measure(key: "head", label: "Head", range: 15...25, step: 0.5), Measure(key: "width", label: "Width", range: 2.5...5, step: 0.25)]
-        case .handwarmers:
+        case .handwarmers, .fingerlessMitts:
             [Measure(key: "hand", label: "Hand", range: 5.5...10.5, step: 0.25)]
         case .legWarmers:
             [Measure(key: "calf", label: "Calf", range: 9...20, step: 0.5), Measure(key: "length", label: "Length", range: 8...22, step: 1)]
@@ -271,7 +290,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [Measure(key: "width", label: "Width", range: 3...9, step: 0.5), Measure(key: "length", label: "Length", range: 20...50, step: 1)]
         case .slippers, .babyBooties:
             [Measure(key: "foot", label: "Foot", range: 3.5...12, step: 0.25), Measure(key: "footLength", label: "Foot Length", range: 3...13, step: 0.25)]
-        case .cuffDownSocks:
+        case .cuffDownSocks, .toeUpSocks:
             [Measure(key: "foot", label: "Foot", range: 5...12, step: 0.25), Measure(key: "footLength", label: "Foot Length", range: 4...13, step: 0.25), Measure(key: "leg", label: "Leg Length", range: 2...12, step: 0.5)]
         case .mittens:
             [Measure(key: "hand", label: "Hand", range: 4.5...10.5, step: 0.25), Measure(key: "handLength", label: "Hand Length", range: 3.5...9.5, step: 0.25)]
@@ -298,6 +317,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [("Small", 7), ("Classic", 8.5), ("Large", 10)].map { NamedSize(name: $0.0, values: ["side": $0.1]) }
         case .earWarmer, .cableHeadband:
             [("Child", 20), ("Adult", 22), ("Large", 23.5)].map { NamedSize(name: $0.0, values: ["head": $0.1, "width": 3.5]) }
+        case .fingerlessMitts:
+            [("Child", 6), ("Small", 6.5), ("Medium", 7.5), ("Large", 8.5)].map { NamedSize(name: $0.0, values: ["hand": $0.1]) }
         case .handwarmers:
             [("Small", 6.5), ("Medium", 7.5), ("Large", 8.5)].map { NamedSize(name: $0.0, values: ["hand": $0.1]) }
         case .legWarmers:
@@ -327,7 +348,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .babyBooties:
             [("Newborn", 3.75, 3.25), ("Baby", 4.25, 4), ("Toddler", 5, 4.75)]
                 .map { NamedSize(name: $0.0, values: ["foot": $0.1, "footLength": $0.2]) }
-        case .cuffDownSocks:
+        case .cuffDownSocks, .toeUpSocks:
             [("Child", 6.5, 7, 4), ("Small", 7.5, 9, 6), ("Medium", 8, 9.5, 6.5), ("Large", 9, 10.5, 7)]
                 .map { NamedSize(name: $0.0, values: ["foot": $0.1, "footLength": $0.2, "leg": $0.3]) }
         case .mittens:
@@ -352,8 +373,9 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     var defaultSize: NamedSize {
         switch self {
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .earflapHat, .cabledBeanie, .pompomBonnet: sizes[4]
-        case .raglanPullover, .raglanCardigan, .sweaterVest, .kidsRaglan, .balaclava, .cuffDownSocks, .beret, .dropShoulder, .slippers: sizes[2]
+        case .raglanPullover, .raglanCardigan, .sweaterVest, .kidsRaglan, .balaclava, .cuffDownSocks, .beret, .dropShoulder, .slippers, .toeUpSocks: sizes[2]
         case .mittens: sizes[3]
+        case .fingerlessMitts: sizes[2]
         default: sizes[1]
         }
     }
@@ -415,6 +437,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .keyholeScarf: return Engines.keyholeScarf(width: value("width"), length: value("length"), gauge: gauge)
         case .slippers: return Engines.slipper(foot: value("foot"), length: value("footLength"), gauge: gauge, bootie: false)
         case .babyBooties: return Engines.slipper(foot: value("foot"), length: value("footLength"), gauge: gauge, bootie: true)
+        case .fingerlessMitts: return Engines.fingerlessMitts(hand: value("hand"), gauge: gauge).plan
+        case .toeUpSocks: return Engines.toeUpSocks(foot: value("foot"), length: value("footLength"), leg: value("leg"), gauge: gauge).plan
         }
     }
 }

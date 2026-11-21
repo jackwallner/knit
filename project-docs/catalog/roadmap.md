@@ -16,7 +16,7 @@ Gaps in the 45 the list fills first: toe-up and ankle socks, mitts with a thumb 
 sweater, baby hats and mittens, a top-down hat, headbands, shawl shapes beyond the triangle and crescent,
 ponchos and capelets, home items (washcloths, coasters, cozies, bags), holiday pieces, and the classic
 stitch patterns (double moss, broken rib, waffle, honeycomb, linen, rope cable, feather and fan, chevron and
-eyelet lace, fisherman's rib) across scarves, cowls, hats, blankets and cloths.
+eyelet lace, seeded rib) across scarves, cowls, hats, blankets and cloths.
 
 ## How each gets built
 
@@ -36,6 +36,9 @@ existing designs, hashed at commit 598a5fb, must not change); a read of the prin
 and largest size; the title in every listing language; `LibrarySearch` finding it under the words a knitter
 types.
 
+Fisherman's rib was left out of the stitch set: it is worked into the row below, which the fabric check
+cannot prove, so the four rows planned for it became seeded rib (2026-11-20).
+
 ## Photos
 
 Prompts are queued in `project-docs/sample-photos/subjects.json` and `shots.json`. No image is generated
@@ -46,8 +49,8 @@ cached on the phone, so the app does not carry them.
 
 | # | Design | Category | For | Build | Status |
 |---|---|---|---|---|---|
-| 1 | Toe-Up Socks | Socks & Feet | Adults and children, intermediate | New shape | planned |
-| 2 | Fingerless Mitts with Gusset | Hands | Adults, easy | New shape | planned |
+| 1 | Toe-Up Socks | Socks & Feet | Adults and children, intermediate | New shape | verified |
+| 2 | Fingerless Mitts with Gusset | Hands | Adults, easy | New shape | verified |
 | 3 | Double Moss Scarf | Scarves & Cowls | Anyone, beginner | Stitch: double moss on scarf | planned |
 | 4 | Baby Cardigan | Baby | Babies 0 to 24 months, easy | New shape: cardigan engine at baby sizes | planned |
 | 5 | Top-Down Beanie | Hats | Adults and children, easy | New shape | planned |
@@ -56,7 +59,7 @@ cached on the phone, so the app does not carry them.
 | 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | planned |
 | 9 | Garter Washcloth | Home | Anyone, beginner | New shape: square cloth, base for stitch cloths | planned |
 | 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | planned |
-| 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | planned |
+| 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | dropped: both sock designs already knit a leg as short as 2 in, so this would be a size, not a design |
 | 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | planned |
 | 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | planned |
 | 14 | Asymmetric Shawl | Shawls & Wraps | Adults, easy | New shape | planned |
@@ -77,7 +80,7 @@ cached on the phone, so the app does not carry them.
 | 29 | Rope Cable Scarf | Scarves & Cowls | Adults, intermediate | Stitch: rope cable on scarf | planned |
 | 30 | Baby Mittens | Baby | Babies, easy | New shape: thumbless | planned |
 | 31 | Square Cat Hat | Hats | Children and adults, beginner | New shape: tube seamed flat at the top | planned |
-| 32 | Fisherman's Rib Beanie | Hats | Adults, intermediate | Stitch: fisherman's rib on ribbed beanie | planned |
+| 32 | Seeded Rib Beanie | Hats | Adults, easy | Stitch: seeded rib on ribbed beanie | planned |
 | 33 | Eyelet Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch: eyelet rows on wrap | planned |
 | 34 | Tea Cozy | Home | Gift, easy | New shape | planned |
 | 35 | Boot Cuffs | Socks & Feet | Adults, beginner | New shape | planned |
@@ -123,7 +126,7 @@ cached on the phone, so the app does not carry them.
 | 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 76 | Kids' Vest | Sweaters | Children 2 to 12, intermediate | New shape: vest at child sizes | planned |
 | 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | planned |
-| 78 | Fisherman's Rib Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
+| 78 | Seeded Rib Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 79 | Table Runner | Home | Anyone, beginner | New shape | planned |
 | 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | planned |
 | 81 | Waffle Mitts | Hands | Adults, easy | Stitch | planned |
@@ -177,19 +180,19 @@ cached on the phone, so the app does not carry them.
 | 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | planned |
 | 130 | Chevron Lace Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
 | 131 | Snowflake Mittens | Hands | Winter gift, intermediate | Colorwork: mittens taught colorwork | planned |
-| 132 | Double Moss Wrap | Shawls & Wraps | Adults, beginner | Stitch | planned |
+| 132 | Double Moss Wrap | Shawls & Wraps | Adults, beginner | Stitch | dropped: the Rectangular Wrap is already a moss stole, and the wrap shape takes no stitch |
 | 133 | Broken Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | planned |
 | 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
-| 137 | Fisherman's Rib Blanket | Blankets | Throw, intermediate | Stitch | planned |
+| 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | planned |
 | 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | planned |
 | 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | planned |
 | 140 | Linen Stitch Wrap | Shawls & Wraps | Adults, easy | Stitch | planned |
 | 141 | Double Moss Mitts | Hands | Anyone, easy | Stitch | planned |
 | 142 | Chevron Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |
 | 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | planned |
-| 144 | Fisherman's Rib Scarf | Scarves & Cowls | Adults, intermediate | Stitch | planned |
+| 144 | Seeded Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | planned |
 | 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape | planned |
 | 147 | Yoke Sweater | Sweaters | Adults, intermediate | New shape: circular yoke | planned |

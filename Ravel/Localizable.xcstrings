@@ -8475,6 +8475,287 @@
         }
       }
     },
+    "A cast on for toes: the yarn wraps two needles held side by side, a loop on each in turn, so the toe begins closed with no seam": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بداية للأصابع: يلتف الخيط حول إبرتين متجاورتين، حلقة على كل منهما بالتناوب، فتبدأ المقدمة مغلقة بلا وصلة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "পায়ের আঙুলের জন্য কাস্ট অন: সুতো পাশাপাশি রাখা দুটি কাঁটায় জড়ায়, প্রতিটিতে পালা করে একটি ফাঁস, ফলে আঙুলের মুখ সেলাই ছাড়াই বন্ধ অবস্থায় শুরু হয়"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un muntatge per a la punta: el fil envolta dues agulles agafades una al costat de l’altra, una llaçada a cada una per torn, de manera que la punta comença tancada i sense costura"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nahození na špičku: nit obtáčí dvě jehlice držené vedle sebe, na každou střídavě jedno oko, takže špička začíná uzavřená a bez švu"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En opslagning til tæer: tråden lægges om to pinde, der holdes side om side, en løkke på hver efter tur, så tåen starter lukket uden søm"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Anschlag für die Spitze: Der Faden wird um zwei nebeneinander gehaltene Nadeln gelegt, abwechselnd eine Schlinge auf jede, sodass die Spitze ohne Naht geschlossen beginnt"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ξεκίνημα για μύτη: το νήμα τυλίγεται γύρω από δύο βελόνες που κρατιούνται δίπλα δίπλα, ένας βρόχος σε καθεμία εναλλάξ, έτσι η μύτη ξεκινά κλειστή χωρίς ραφή"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un montaje para la punta: la hebra rodea dos agujas sostenidas juntas, una lazada en cada una por turno, así la punta empieza cerrada y sin costura"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un montaje para la punta: la hebra rodea dos agujas sostenidas juntas, una lazada en cada una por turno, así la punta empieza cerrada y sin costura"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aloitus kärkeä varten: lanka kiertyy kahden vierekkäin pidetyn puikon ympäri, silmukka vuorotellen kummallekin, joten kärki alkaa suljettuna ilman saumaa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un montage pour la pointe : le fil enroule deux aiguilles tenues côte à côte, une boucle sur chacune à tour de rôle, si bien que la pointe commence fermée, sans couture"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un montage pour la pointe : le fil enroule deux aiguilles tenues côte à côte, une boucle sur chacune à tour de rôle, si bien que la pointe commence fermée, sans couture"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "પંજા માટે કાસ્ટ ઓન: દોરો બાજુમાં પકડેલી બે સળી ફરતે વીંટળાય છે, દરેક પર વારાફરતી એક ફંદો, એટલે પંજાનો છેડો સીવણ વગર બંધ શરૂ થાય છે"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "פתיחה לאצבעות: החוט נכרך סביב שתי מסרגות המוחזקות זו לצד זו, לולאה על כל אחת לסירוגין, כך שהקצה מתחיל סגור וללא תפר"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अगले सिरे के लिए कास्ट ऑन: धागा साथ-साथ पकड़ी दो सलाइयों पर लिपटता है, बारी-बारी से हर एक पर एक लूप, इसलिए सिरा बिना सिलाई के बंद शुरू होता है"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Početak za vrh stopala: nit obavija dvije igle držane jedna uz drugu, po jedna petlja na svaku naizmjence, pa vrh počinje zatvoren i bez šava"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Felvetés az orrhoz: a fonal két egymás mellett tartott tűre tekeredik, felváltva egy-egy hurok mindegyikre, így az orr varrás nélkül, zártan indul"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cast on untuk ujung kaki: benang melilit dua jarum yang dipegang berdampingan, satu lilitan di tiap jarum bergantian, sehingga ujung kaki dimulai tertutup tanpa sambungan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un avvio per la punta: il filo avvolge due ferri tenuti affiancati, un giro su ciascuno a turno, così la punta inizia chiusa e senza cucitura"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "つま先用の作り目：糸を並べて持った2本の針に交互に1目ずつかけるので、つま先は縫い目なしで閉じた状態から始まる"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಕಾಲ್ಬೆರಳಿಗಾಗಿ ಕ್ಯಾಸ್ಟ್ ಆನ್: ದಾರ ಪಕ್ಕಪಕ್ಕ ಹಿಡಿದ ಎರಡು ಸೂಜಿಗಳ ಸುತ್ತ ಸುತ್ತುತ್ತದೆ, ಪ್ರತಿಯೊಂದರ ಮೇಲೆ ಸರದಿಯಲ್ಲಿ ಒಂದು ಲೂಪ್, ಹೀಗಾಗಿ ತುದಿ ಹೊಲಿಗೆ ಇಲ್ಲದೆ ಮುಚ್ಚಿದಂತೆ ಆರಂಭವಾಗುತ್ತದೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "발끝용 코 만들기: 실을 나란히 든 두 바늘에 번갈아 한 코씩 감아, 발끝이 이음선 없이 닫힌 채로 시작된다"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "കാൽവിരലിനുള്ള കാസ്റ്റ് ഓൺ: നൂൽ അടുത്തടുത്ത് പിടിച്ച രണ്ട് സൂചികളിൽ ചുറ്റുന്നു, ഓരോന്നിലും മാറിമാറി ഒരു ലൂപ്പ്, അതിനാൽ അറ്റം തുന്നൽ ഇല്ലാതെ അടഞ്ഞ് തുടങ്ങുന്നു"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पंजासाठी कास्ट ऑन: धागा शेजारी धरलेल्या दोन सुयांभोवती गुंडाळला जातो, प्रत्येकावर आलटून पालटून एक लूप, त्यामुळे पंजा शिवणीशिवाय बंद सुरू होतो"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cast on untuk jari kaki: benang dililit pada dua jarum yang dipegang bersebelahan, satu gelung pada setiap jarum secara bergilir, jadi hujung kaki bermula tertutup tanpa jahitan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En oppslagning for tå: tråden legges rundt to pinner som holdes side om side, en løkke på hver etter tur, så tåen starter lukket uten søm"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Een opzet voor de teen: de draad gaat om twee naalden die naast elkaar worden gehouden, om en om een lus op elke naald, zodat de teen gesloten en zonder naad begint"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଆଙ୍ଗୁଠି ପାଇଁ କାଷ୍ଟ ଅନ୍: ସୂତା ପାଖାପାଖି ଧରାଯାଇଥିବା ଦୁଇଟି ଛୁଞ୍ଚିରେ ଗୁଡ଼ାଏ, ପ୍ରତ୍ୟେକରେ ପାଳିକରି ଗୋଟିଏ ଲୁପ୍, ତେଣୁ ଅଗ୍ର ସିଲେଇ ବିନା ବନ୍ଦ ଭାବେ ଆରମ୍ଭ ହୁଏ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਪੰਜੇ ਲਈ ਕਾਸਟ ਆਨ: ਧਾਗਾ ਨਾਲ-ਨਾਲ ਫੜੀਆਂ ਦੋ ਸਲਾਈਆਂ ਦੁਆਲੇ ਲਿਪਟਦਾ ਹੈ, ਹਰੇਕ ਉੱਤੇ ਵਾਰੀ-ਵਾਰੀ ਇੱਕ ਲੂਪ, ਇਸ ਲਈ ਸਿਰਾ ਬਿਨਾਂ ਸਿਲਾਈ ਦੇ ਬੰਦ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Początek na palce: nitka owija dwa druty trzymane obok siebie, na zmianę po jednej pętli na każdy, więc palce zaczynają się zamknięte, bez szwu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um início para a ponta: o fio envolve duas agulhas seguradas lado a lado, uma laçada em cada uma por vez, assim a ponta começa fechada e sem costura"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um início para a ponta: o fio envolve duas agulhas seguradas lado a lado, uma laçada em cada uma por vez, assim a ponta começa fechada e sem costura"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O montare pentru vârf: firul înconjoară două andrele ținute alăturat, câte o buclă pe fiecare pe rând, astfel vârful începe închis, fără cusătură"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Набор для мыска: нить обходит две спицы, сложенные рядом, по петле на каждую поочерёдно, поэтому мысок начинается закрытым и без шва"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nahodenie na špičku: niť obteká dve ihlice držané vedľa seba, na každú striedavo po jednom očku, takže špička začína uzavretá a bez švu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Začetek za prste: nit obdaja dve igli, ki ju držiš vštric, po ena zanka na vsako izmenično, tako se konica začne zaprta in brez šiva"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En uppläggning för tån: tråden läggs runt två stickor som hålls bredvid varandra, en ögla på varje i tur och ordning, så att tån börjar sluten utan söm"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "கால்விரலுக்கான காஸ்ட் ஆன்: நூல் அருகருகே பிடித்த இரண்டு ஊசிகளைச் சுற்றும், ஒவ்வொன்றிலும் மாறி மாறி ஒரு லூப், அதனால் முனை தையல் இல்லாமல் மூடியபடி தொடங்கும்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "కాలివేళ్ల కోసం కాస్ట్ ఆన్: దారం పక్కపక్కనే పట్టిన రెండు సూదుల చుట్టూ చుడుతుంది, ప్రతిదానిపై వంతుల వారీగా ఒక లూప్, అందువల్ల కొన కుట్టు లేకుండా మూసివేసినట్లు మొదలవుతుంది"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การขึ้นต้นสำหรับปลายเท้า: ด้ายพันรอบไม้ถักสองอันที่ถือเคียงกัน วนห่วงทีละอันสลับกัน ปลายเท้าจึงเริ่มแบบปิดโดยไม่มีตะเข็บ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burun için ilmek atma: ip yan yana tutulan iki şişe sırayla birer ilmekle dolanır, böylece burun dikişsiz ve kapalı başlar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Набір для мисочка: нитка обходить дві спиці, складені поруч, по петлі на кожну по черзі, тож мисок починається закритим і без шва"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پنجے کے لیے کاسٹ آن: دھاگا ساتھ ساتھ پکڑی دو سلائیوں پر لپٹتا ہے، ہر ایک پر باری باری ایک لوپ، اس لیے سرا بغیر جوڑ کے بند شروع ہوتا ہے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cách khởi mũi cho mũi tất: sợi quấn quanh hai kim đặt song song, lần lượt mỗi kim một vòng, nên mũi tất bắt đầu kín và không có đường nối"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚尖起针：线绕在并排拿着的两根针上，轮流在每根针上挂一个线圈，这样脚尖从封闭状态开始，没有接缝"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腳尖起針：線繞在並排拿著的兩根針上，輪流在每根針上掛一個線圈，這樣腳尖從封閉狀態開始，沒有接縫"
+          }
+        }
+      }
+    },
     "A pattern you cast on is yours to keep": {
       "extractionState": "manual",
       "localizations": {
@@ -22244,6 +22525,287 @@
         }
       }
     },
+    "Cable 4 front: slip 2 stitches to a cable needle and hold it in front, knit 2, then knit the 2 from the cable needle": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ضفيرة 4 أمامية: انقل غرزتين إلى إبرة مساعدة واتركها أمام العمل، احِك غرزتين، ثم احِك الغرزتين من الإبرة المساعدة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সামনে ৪ ঘরের কেবল: ২টি ঘর সহায়ক কাঁটায় সরিয়ে সামনে রাখুন, ২টি বুনুন, তারপর সহায়ক কাঁটার ২টি ঘর বুনুন"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trena de 4 al davant: passar 2 punts a una agulla auxiliar i deixar-la al davant, teixir 2 i després teixir els 2 de l’agulla auxiliar"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cop 4 vpředu: přendat 2 oka na pomocnou jehlici a nechat ji vpředu, uplést 2, pak uplést 2 oka z pomocné jehlice"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fletning på 4 foran: løft 2 masker over på en flettepind og lad den ligge foran, strik 2, og strik derefter de 2 fra flettepinden"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zopf 4 nach vorn: 2 Maschen auf eine Zopfnadel abheben und vor die Arbeit legen, 2 Maschen rechts stricken, dann die 2 Maschen von der Zopfnadel rechts stricken"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Κόμπος 4 μπροστά: πέρασε 2 βρόχους σε βοηθητική βελόνα και κράτησέ την μπροστά, πλέξε 2, μετά πλέξε τους 2 από τη βοηθητική βελόνα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trenza de 4 delante: pasar 2 puntos a una aguja auxiliar y dejarla delante, tejer 2 y luego tejer los 2 de la aguja auxiliar"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trenza de 4 delante: pasar 2 puntos a una aguja auxiliar y dejarla delante, tejer 2 y luego tejer los 2 de la aguja auxiliar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palmikko 4 edessä: siirrä 2 silmukkaa palmikkopuikolle ja jätä se eteen, neulo 2, neulo sitten palmikkopuikon 2 silmukkaa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torsade de 4 devant : glisser 2 mailles sur une aiguille à torsades et la laisser devant, tricoter 2 mailles, puis tricoter les 2 mailles de l’aiguille à torsades"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torsade de 4 devant : glisser 2 mailles sur une aiguille à torsades et la laisser devant, tricoter 2 mailles, puis tricoter les 2 mailles de l’aiguille à torsades"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "આગળ 4 ફંદાની વેણી: 2 ફંદા સહાયક સળી પર ઉતારી આગળ રાખો, 2 ગૂંથો, પછી સહાયક સળીના 2 ફંદા ગૂંથો"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "צמה של 4 לפנים: העבר 2 עיניים למסרגת עזר והחזק אותה לפנים, סרוג 2, ואז סרוג את 2 העיניים ממסרגת העזר"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आगे 4 फंदों की गुथी: 2 फंदे सहायक सलाई पर उतारकर आगे रखें, 2 बुनें, फिर सहायक सलाई के 2 फंदे बुनें"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleter od 4 sprijeda: prebaciti 2 petlje na pomoćnu iglu i ostaviti je sprijeda, splesti 2, zatim splesti 2 petlje s pomoćne igle"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elöl vezetett 4 szemes csavarás: 2 szem áthúzása egy segédtűre és elöl tartása, 2 szem kötése, majd a segédtű 2 szemének kötése"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabel 4 depan: geser 2 jerat ke jarum bantu dan tahan di depan, rajut 2, lalu rajut 2 jerat dari jarum bantu"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Treccia di 4 davanti: passare 2 maglie su un ferro ausiliario e tenerlo davanti, lavorare 2 a dritto, poi lavorare le 2 del ferro ausiliario"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手前に4目の交差：2目を補助針に移して手前に置き、2目編み、補助針の2目を編む"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಮುಂದೆ 4 ಹೊಲಿಗೆಯ ಜಡೆ: 2 ಹೊಲಿಗೆಗಳನ್ನು ಸಹಾಯಕ ಸೂಜಿಗೆ ಜಾರಿಸಿ ಮುಂದೆ ಇಡಿ, 2 ಹೆಣೆಯಿರಿ, ನಂತರ ಸಹಾಯಕ ಸೂಜಿಯ 2 ಹೊಲಿಗೆ ಹೆಣೆಯಿರಿ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앞쪽 4코 케이블: 2코를 보조바늘에 옮겨 앞에 두고, 2코를 뜬 다음 보조바늘의 2코를 뜨기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "മുന്നിൽ 4 കണ്ണി പിന്നൽ: 2 കണ്ണികൾ സഹായ സൂചിയിലേക്ക് മാറ്റി മുന്നിൽ വയ്ക്കുക, 2 തുന്നുക, പിന്നെ സഹായ സൂചിയിലെ 2 കണ്ണി തുന്നുക"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पुढे 4 टाक्यांची वेणी: 2 टाके सहायक सुईवर उतरवून पुढे ठेवा, 2 विणा, मग सहायक सुईवरचे 2 टाके विणा"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabel 4 hadapan: gelongsorkan 2 jerat ke jarum bantu dan tahan di hadapan, rajut 2, kemudian rajut 2 jerat dari jarum bantu"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fletting 4 foran: løft 2 masker over på en flettepinne og la den ligge foran, strikk 2, og strikk så de 2 fra flettepinnen"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabel 4 voor: haal 2 steken af op een kabelnaald en laat die voor het werk hangen, brei 2 steken en brei dan de 2 van de kabelnaald"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଆଗରେ 4 ଫାଶର ବେଣୀ: 2 ଫାଶ ସହାୟକ ଛୁଞ୍ଚିକୁ ଓହ୍ଲାଇ ଆଗରେ ରଖନ୍ତୁ, 2 ବୁଣନ୍ତୁ, ତା'ପରେ ସହାୟକ ଛୁଞ୍ଚିର 2 ଫାଶ ବୁଣନ୍ତୁ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਅੱਗੇ 4 ਫੰਦਿਆਂ ਦੀ ਗੁੱਤ: 2 ਫੰਦੇ ਸਹਾਇਕ ਸਲਾਈ ਉੱਤੇ ਉਤਾਰ ਕੇ ਅੱਗੇ ਰੱਖੋ, 2 ਬੁਣੋ, ਫਿਰ ਸਹਾਇਕ ਸਲਾਈ ਦੇ 2 ਫੰਦੇ ਬੁਣੋ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warkocz 4 z przodu: zdjąć 2 oczka na drut pomocniczy i zostawić go z przodu, przerobić 2, potem przerobić 2 oczka z drutu pomocniczego"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trança de 4 na frente: passar 2 pontos para uma agulha de trança e deixá-la na frente, tricotar 2 e depois tricotar os 2 da agulha de trança"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trança de 4 na frente: passar 2 pontos para uma agulha de trança e deixá-la na frente, tricotar 2 e depois tricotar os 2 da agulha de trança"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Împletitură de 4 în față: alunecă 2 ochiuri pe o andrea ajutătoare și ține-o în față, tricotează 2, apoi tricotează cele 2 de pe andreaua ajutătoare"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коса 4 с выносом вперёд: снять 2 петли на вспомогательную спицу и оставить её перед работой, провязать 2, затем провязать 2 петли со вспомогательной спицы"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrkoč 4 vpredu: prehodiť 2 očká na pomocnú ihlicu a nechať ju vpredu, upliesť 2, potom upliesť 2 očká z pomocnej ihlice"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kita 4 spredaj: prenesi 2 zanki na pomožno iglo in jo pusti spredaj, spleti 2, nato spleti 2 zanki s pomožne igle"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fläta 4 fram: lyft 2 maskor på en flätsticka och håll den framför, sticka 2, sticka sedan de 2 från flätstickan"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "முன்னால் 4 கண்ணி பின்னல்: 2 கண்ணிகளை உதவி ஊசிக்கு மாற்றி முன்னால் வை, 2 பின்னு, பிறகு உதவி ஊசியின் 2 கண்ணிகளைப் பின்னு"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ముందు 4 కుట్ల జడ: 2 కుట్లను సహాయక సూదికి మార్చి ముందు ఉంచండి, 2 అల్లండి, తర్వాత సహాయక సూదిలోని 2 కుట్లను అల్లండి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักเปียไขว้ด้านหน้า 4 ห่วง: เลื่อน 2 ห่วงไปที่ไม้ถักเสริมแล้วพักไว้ด้านหน้า ถัก 2 ห่วง แล้วถัก 2 ห่วงจากไม้ถักเสริม"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önde 4'lü örgü: 2 ilmeği yardımcı şişe kaydır ve önde beklet, 2 ilmek ör, sonra yardımcı şişteki 2 ilmeği ör"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коса 4 з винесенням уперед: зняти 2 петлі на допоміжну спицю й залишити її перед роботою, провʼязати 2, потім провʼязати 2 петлі з допоміжної спиці"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آگے 4 ٹانکوں کی چوٹی: 2 ٹانکے مددگار سلائی پر منتقل کر کے آگے رکھیں، 2 بنیں، پھر مددگار سلائی کے 2 ٹانکے بنیں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bím 4 mũi phía trước: trượt 2 mũi sang kim phụ và giữ phía trước, đan 2 mũi, rồi đan 2 mũi từ kim phụ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前交叉 4 针麻花：将 2 针移到麻花针上放在前面，织 2 针，再织麻花针上的 2 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前交叉 4 針麻花：將 2 針移到麻花針上放在前面，織 2 針，再織麻花針上的 2 針"
+          }
+        }
+      }
+    },
     "Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle": {
       "extractionState": "manual",
       "localizations": {
@@ -23083,6 +23645,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "麻花髮帶"
+          }
+        }
+      }
+    },
+    "Cables": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ضفائر"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "কেবল"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trenes"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fletninger"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zöpfe"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Κόμποι"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trenzas"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trenzas"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palmikot"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torsades"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torsades"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "વેણીઓ"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "צמות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "गुथियाँ"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleteri"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Csavarások"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabel"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trecce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "縄編み"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಜಡೆಗಳು"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "케이블 뜨기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "പിന്നലുകൾ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वेण्या"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabel"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fletter"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kabels"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ବେଣୀ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਗੁੱਤਾਂ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warkocze"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tranças"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tranças"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Împletituri"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Косы"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vrkoče"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kite"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flätor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "கேபிள் பின்னல்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "జడలు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลายเปียไขว้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saç Örgüleri"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Коси"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "چوٹیاں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đan bím"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麻花"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麻花"
           }
         }
       }
@@ -38560,6 +39403,287 @@
         }
       }
     },
+    "Fingerless Mitts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قفازات بلا أصابع بإبهام"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "আঙুলকাটা দস্তানা"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitenes sense dits"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rukavice bez prstů"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingerløse handsker"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingerlose Handschuhe"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Γάντια χωρίς δάχτυλα με αντίχειρα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitones sin dedos"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitones sin dedos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sormettomat kämmekkäät"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitaines à pouce"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitaines à pouce"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "આંગળી વગરના હાથમોજાં"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "כפפות ללא אצבעות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बिना उंगली वाले दस्ताने"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rukavice bez prstiju"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ujjatlan kesztyű"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sarung Tangan Tanpa Jari"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guanti senza dita"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "指なし手袋"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಬೆರಳಿಲ್ಲದ ಕೈಗವಸುಗಳು"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손가락 없는 장갑"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "വിരലില്ലാത്ത കയ്യുറകൾ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बिनबोटांचे हातमोजे"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sarung Tangan Tanpa Jari"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingerløse hansker"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vingerloze handschoenen"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଆଙ୍ଗୁଠି ନଥିବା ହାତ ମୋଜା"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਬਿਨਾਂ ਉਂਗਲਾਂ ਵਾਲੇ ਦਸਤਾਨੇ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitenki z kciukiem"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luvas sem dedos"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luvas sem dedos"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mănuși fără degete cu deget mare"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Митенки с большим пальцем"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rukavice bez prstov"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rokavice brez prstov"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fingerlösa vantar"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "விரல் இல்லாத கையுறைகள்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "వేళ్లు లేని చేతి తొడుగులు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถุงมือตัดนิ้ว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parmaksız Eldivenler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мітенки з великим пальцем"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بغیر انگلیوں کے دستانے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Găng tay hở ngón có ngón cái"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "露指手套"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "露指手套"
+          }
+        }
+      }
+    },
     "Finished": {
       "extractionState": "manual",
       "localizations": {
@@ -48957,6 +50081,287 @@
         }
       }
     },
+    "Heel": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الكعب"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "গোড়ালি"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taló"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pata"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hæl"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ferse"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πτέρνα"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talón"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talón"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kantapää"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talon"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talon"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "એડી"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "עקב"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एड़ी"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peta"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sarok"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tumit"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallone"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "かかと"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಹಿಮ್ಮಡಿ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "힐"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ഉപ്പൂറ്റി"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टाच"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tumit"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hæl"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiel"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଗୋଇଠି"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਅੱਡੀ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pięta"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calcanhar"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calcanhar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Călcâi"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пятка"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Päta"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peta"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Häl"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "குதிகால்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "మడమ"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ส้นเท้า"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Topuk"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пʼятка"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ایڑی"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gót"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚跟"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腳跟"
+          }
+        }
+      }
+    },
     "Heel Flap": {
       "extractionState": "manual",
       "localizations": {
@@ -53453,6 +54858,287 @@
         }
       }
     },
+    "Knit 1 through the back loop, so the stitch twists": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احِك غرزة واحدة من الحلقة الخلفية، فتلتف الغرزة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "পিছনের ফাঁস দিয়ে ১টি ঘর বুনুন, ফলে ঘরটি পাক খায়"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teixir 1 punt per darrere, de manera que el punt es torci"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uplést 1 oko za zadní článek, aby se oko zkroutilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strik 1 maske i bagerste maskeled, så masken drejer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Masche rechts verschränkt stricken, sodass sich die Masche dreht"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πλέξε 1 βρόχο από το πίσω σκέλος, ώστε ο βρόχος να στρίψει"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejer 1 punto por la lazada de atrás, para que el punto se tuerza"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejer 1 punto por la lazada de atrás, para que el punto se tuerza"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neulo 1 silmukka takakautta, jolloin silmukka vääntyy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricoter 1 maille à l’endroit par le brin arrière, pour que la maille se torde"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricoter 1 maille à l’endroit par le brin arrière, pour que la maille se torde"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "પાછળના આંટાથી 1 ફંદો ગૂંથો, જેથી ફંદો વળ ખાય"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סרוג עין אחת דרך הלולאה האחורית, כך שהעין מתפתלת"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पीछे की लूप से 1 फंदा बुनें, ताकि फंदा बल खाए"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Splesti 1 petlju desno straga, tako da se petlja uvije"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 szem kötése a szem hátsó szálán, hogy a szem megcsavarodjon"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rajut 1 jerat melalui lengkung belakang, sehingga jerat terpuntir"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lavorare 1 maglia a dritto ritorto, nel filo di dietro, così la maglia si ritorce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向こう側の半目に針を入れて1目編み、目をねじる"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಹಿಂದಿನ ಲೂಪ್ ಮೂಲಕ 1 ಹೊಲಿಗೆ ಹೆಣೆಯಿರಿ, ಇದರಿಂದ ಹೊಲಿಗೆ ತಿರುಚಿಕೊಳ್ಳುತ್ತದೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "뒤쪽 고리에 바늘을 넣어 1코 겉뜨기, 코가 꼬이게 하기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "പിന്നിലെ ലൂപ്പിലൂടെ 1 കണ്ണി തുന്നുക, അങ്ങനെ കണ്ണി പിരിയും"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मागच्या लूपमधून 1 टाका विणा, म्हणजे टाका पिळला जातो"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rajut 1 jerat melalui gelung belakang, supaya jerat berpintal"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strikk 1 maske i bakre maskebue, så masken vrir seg"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brei 1 steek in het achterste lusje, zodat de steek draait"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ପଛ ଲୁପ୍ ଦେଇ 1 ଫାଶ ବୁଣନ୍ତୁ, ଫଳରେ ଫାଶ ମୋଡ଼ି ହୁଏ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਪਿਛਲੇ ਲੂਪ ਰਾਹੀਂ 1 ਫੰਦਾ ਬੁਣੋ, ਤਾਂ ਜੋ ਫੰਦਾ ਵੱਟ ਖਾਵੇ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przerobić 1 oczko za tylną ściankę, aby oczko się skręciło"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotar 1 ponto pela alça de trás, para que o ponto fique torcido"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotar 1 ponto pela alça de trás, para que o ponto fique torcido"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotează 1 ochi prin bucla din spate, ca ochiul să se răsucească"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провязать 1 петлю лицевой за заднюю стенку, чтобы петля перекрутилась"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upliesť 1 očko za zadný článok, aby sa očko skrútilo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spleti 1 zanko od zadaj, da se zanka zasuka"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sticka 1 maska i bakre maskbågen, så att maskan vrids"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "பின்புற லூப் வழியாக 1 கண்ணியைப் பின்னு, கண்ணி முறுக்கிக்கொள்ளும்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "వెనుక లూప్ ద్వారా 1 కుట్టు అల్లండి, కుట్టు మెలిక పడుతుంది"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถัก 1 ห่วงผ่านห่วงด้านหลัง ให้ห่วงบิด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ilmeği arka teli üzerinden ör, ilmek bükülsün"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провʼязати 1 петлю лицьовою за задню стінку, щоб петля перекрутилася"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پچھلے لوپ سے 1 ٹانکا بنیں، تاکہ ٹانکا مڑ جائے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đan 1 mũi qua vòng sau, để mũi bị xoắn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "挑后面的线圈织 1 针下针，使针目扭转"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "挑後面的線圈織 1 針下針，使針目扭轉"
+          }
+        }
+      }
+    },
     "Knit 2 stitches together": {
       "extractionState": "manual",
       "localizations": {
@@ -54011,6 +55697,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "再織一次"
+          }
+        }
+      }
+    },
+    "Knit and purl texture": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملمس الغرز العادية والمقلوبة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সোজা ও উল্টো ঘরের টেক্সচার"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textura de punt del dret i del revés"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vzory z hladkých a obrácených ok"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Struktur med ret og vrang"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechts-links-Strukturen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Υφή με πλεκτούς και ανάποδους βρόχους"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textura de derecho y revés"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textura de derecho y revés"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oikean ja nurjan silmukan kuviot"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texture endroit et envers"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texture endroit et envers"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "સીધા અને ઊંધા ફંદાની રચના"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "מרקם של עיניים ישרות והפוכות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सीधे और उल्टे फंदों की बनावट"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tekstura od desnih i lijevih petlji"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sima és fordított szemekből álló textúra"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tekstur Rajut dan Purl"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texture a dritto e rovescio"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表目と裏目の模様"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ನೇರ ಮತ್ತು ಹಿಮ್ಮುಖ ಹೊಲಿಗೆಯ ರಚನೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "겉뜨기와 안뜨기 질감"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "നേരെയും തിരിച്ചുമുള്ള കണ്ണികളുടെ ഘടന"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सरळ आणि उलट्या टाक्यांची रचना"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tekstur Rajut dan Purl"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Struktur med rett og vrang"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Structuur van rechte en averechtse steken"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ସିଧା ଓ ଓଲଟା ଫାଶର ଗଠନ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਸਿੱਧੇ ਅਤੇ ਪੁੱਠੇ ਫੰਦਿਆਂ ਦੀ ਬਣਤਰ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Struktura z oczek prawych i lewych"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textura de tricô e avesso"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textura de tricô e avesso"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Textură din ochiuri tricotate și de dos"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фактура из лицевых и изнаночных петель"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Štruktúra z hladkých a obrátených ôk"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Struktura iz desnih in levih zank"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Struktur av räta och aviga maskor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "நேர் மற்றும் தலைகீழ்க் கண்ணிகளின் அமைப்பு"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "నేరు మరియు తిరగబడ్డ కుట్ల ఆకృతి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "พื้นผิวห่วงตรงและห่วงกลับ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Düz ve Ters İlmek Dokusu"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фактура з лицьових і виворітних петель"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سیدھے اور الٹے ٹانکوں کی بناوٹ"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Họa tiết mũi xuôi và mũi ngược"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下针与上针的纹理"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下針與上針的紋理"
           }
         }
       }
@@ -55135,6 +57102,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "蕾絲"
+          }
+        }
+      }
+    },
+    "Lace knitting": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حياكة الدانتيل"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "লেস বোনা"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teixit calat"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krajkové pletení"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hulmønsterstrik"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lochmuster"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πλέξιμο δαντέλας"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejido calado"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejido calado"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pitsineule"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricot ajouré"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricot ajouré"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "લેસ ગૂંથણ"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סריגת תחרה"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "लेस बुनाई"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čipkasto pletenje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Csipkekötés"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rajutan Renda"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maglia traforata"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レース編み"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಲೇಸ್ ಹೆಣಿಗೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "레이스 뜨기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ലേസ് തുന്നൽ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "लेस विणकाम"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rajutan Renda"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hullstrikk"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kantbreien"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଲେସ୍ ବୁଣା"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਲੇਸ ਬੁਣਾਈ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dzianina ażurowa"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricô rendado"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricô rendado"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotat dantelat"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ажурное вязание"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čipkové pletenie"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čipkasto pletenje"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spetsstickning"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "லேஸ் பின்னல்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "లేస్ అల్లిక"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักลายลูกไม้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dantel Örgü"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ажурне в’язання"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لیس بُنائی"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đan ren"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "镂空编织"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鏤空編織"
           }
         }
       }
@@ -72856,6 +75104,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "專案"
+          }
+        }
+      }
+    },
+    "Purl 1 through the back loop, so the stitch twists": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احِك غرزة مقلوبة واحدة من الحلقة الخلفية، فتلتف الغرزة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "পিছনের ফাঁস দিয়ে ১টি উল্টো ঘর বুনুন, ফলে ঘরটি পাক খায়"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teixir 1 punt del revés per darrere, de manera que el punt es torci"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uplést 1 oko obráceně za zadní článek, aby se oko zkroutilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strik 1 maske vrang i bagerste maskeled, så masken drejer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Masche links verschränkt stricken, sodass sich die Masche dreht"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πλέξε 1 ανάποδο βρόχο από το πίσω σκέλος, ώστε ο βρόχος να στρίψει"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejer 1 punto del revés por la lazada de atrás, para que el punto se tuerza"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tejer 1 punto del revés por la lazada de atrás, para que el punto se tuerza"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neulo 1 silmukka nurin takakautta, jolloin silmukka vääntyy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricoter 1 maille à l’envers par le brin arrière, pour que la maille se torde"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricoter 1 maille à l’envers par le brin arrière, pour que la maille se torde"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "પાછળના આંટાથી 1 ઊંધો ફંદો ગૂંથો, જેથી ફંદો વળ ખાય"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סרוג עין הפוכה אחת דרך הלולאה האחורית, כך שהעין מתפתלת"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पीछे की लूप से 1 उल्टा फंदा बुनें, ताकि फंदा बल खाए"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Splesti 1 petlju lijevo straga, tako da se petlja uvije"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 szem fordítva kötése a szem hátsó szálán, hogy a szem megcsavarodjon"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purl 1 jerat melalui lengkung belakang, sehingga jerat terpuntir"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lavorare 1 maglia a rovescio ritorto, nel filo di dietro, così la maglia si ritorce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向こう側の半目に針を入れて1目裏編みし、目をねじる"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಹಿಂದಿನ ಲೂಪ್ ಮೂಲಕ 1 ಹಿಮ್ಮುಖ ಹೊಲಿಗೆ ಹೆಣೆಯಿರಿ, ಇದರಿಂದ ಹೊಲಿಗೆ ತಿರುಚಿಕೊಳ್ಳುತ್ತದೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "뒤쪽 고리에 바늘을 넣어 1코 안뜨기, 코가 꼬이게 하기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "പിന്നിലെ ലൂപ്പിലൂടെ 1 തിരിച്ചുള്ള കണ്ണി തുന്നുക, അങ്ങനെ കണ്ണി പിരിയും"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मागच्या लूपमधून 1 उलटा टाका विणा, म्हणजे टाका पिळला जातो"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purl 1 jerat melalui gelung belakang, supaya jerat berpintal"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strikk 1 maske vrang i bakre maskebue, så masken vrir seg"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brei 1 steek averechts in het achterste lusje, zodat de steek draait"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ପଛ ଲୁପ୍ ଦେଇ 1 ଓଲଟା ଫାଶ ବୁଣନ୍ତୁ, ଫଳରେ ଫାଶ ମୋଡ଼ି ହୁଏ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਪਿਛਲੇ ਲੂਪ ਰਾਹੀਂ 1 ਪੁੱਠਾ ਫੰਦਾ ਬੁਣੋ, ਤਾਂ ਜੋ ਫੰਦਾ ਵੱਟ ਖਾਵੇ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przerobić 1 oczko lewe za tylną ściankę, aby oczko się skręciło"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotar 1 ponto no avesso pela alça de trás, para que o ponto fique torcido"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotar 1 ponto no avesso pela alça de trás, para que o ponto fique torcido"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotează 1 ochi de dos prin bucla din spate, ca ochiul să se răsucească"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провязать 1 петлю изнаночной за заднюю стенку, чтобы петля перекрутилась"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upliesť 1 očko obrátene za zadný článok, aby sa očko skrútilo"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spleti 1 zanko levo od zadaj, da se zanka zasuka"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sticka 1 maska avig i bakre maskbågen, så att maskan vrids"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "பின்புற லூப் வழியாக 1 தலைகீழ்க்கண்ணியைப் பின்னு, கண்ணி முறுக்கிக்கொள்ளும்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "వెనుక లూప్ ద్వారా 1 తిరగబడ్డ కుట్టు అల్లండి, కుట్టు మెలిక పడుతుంది"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักห่วงกลับ 1 ห่วงผ่านห่วงด้านหลัง ให้ห่วงบิด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ilmeği arka teli üzerinden ters ör, ilmek bükülsün"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провʼязати 1 петлю виворітною за задню стінку, щоб петля перекрутилася"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پچھلے لوپ سے 1 الٹا ٹانکا بنیں، تاکہ ٹانکا مڑ جائے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đan 1 mũi ngược qua vòng sau, để mũi bị xoắn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "挑后面的线圈织 1 针上针，使针目扭转"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "挑後面的線圈織 1 針上針，使針目扭轉"
           }
         }
       }
@@ -91968,6 +94497,849 @@
         }
       }
     },
+    "Slip 1 knitwise, knit 2 together, then pass the slipped stitch over. It takes away 2 stitches": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انقل غرزة واحدة كما في الحياكة العادية، احِك غرزتين معًا، ثم مرّر الغرزة المنقولة فوقهما. تُنقص غرزتين"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "১টি ঘর সোজার মতো সরান, ২টি ঘর একসাথে বুনুন, তারপর সরানো ঘরটি তার ওপর দিয়ে টেনে নিন। এতে ২টি ঘর কমে"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 punt com per teixir-lo, teixir 2 punts junts i passar-hi per sobre el punt passat. Treu 2 punts"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přendat 1 oko jako na pletení, uplést 2 oka dohromady a přetáhnout přes ně přendané oko. Ubere 2 oka"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for at strikke ret, strik 2 masker sammen, og træk den løftede maske over. Den tager 2 masker væk"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Masche rechts abheben, 2 Maschen zusammenstricken und die abgehobene Masche darüberziehen. Es nimmt 2 Maschen ab"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πέρασε 1 βρόχο ως για πλέξιμο, πλέξε 2 βρόχους μαζί και πέρασε από πάνω τον βρόχο που πέρασες. Αφαιρεί 2 βρόχους"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para tejer, tejer 2 puntos juntos y pasar el punto pasado por encima. Quita 2 puntos"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para tejer, tejer 2 puntos juntos y pasar el punto pasado por encima. Quita 2 puntos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siirrä 1 silmukka oikein neuloen, neulo 2 silmukkaa yhteen ja vedä siirretty silmukka niiden yli. Se vähentää 2 silmukkaa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’endroit, tricoter 2 mailles ensemble, puis passer la maille glissée par-dessus. Cela enlève 2 mailles"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’endroit, tricoter 2 mailles ensemble, puis passer la maille glissée par-dessus. Cela enlève 2 mailles"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ફંદો સીધાની જેમ ઉતારો, 2 ફંદા સાથે ગૂંથો, પછી ઉતારેલો ફંદો તેની ઉપરથી ઉતારો. તે 2 ફંદા ઘટાડે છે"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "העבר עין אחת כאילו לסרוג, סרוג 2 עיניים יחד, ואז משוך את העין שהועברה מעליהן. זה מפחית 2 עיניים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 फंदा सीधे की तरह उतारें, 2 फंदे एक साथ बुनें, फिर उतारे हुए फंदे को उन पर से निकाल दें। यह 2 फंदे घटाता है"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebaciti 1 petlju kao za pletenje, splesti 2 petlje zajedno, pa prebačenu petlju prevući preko njih. Smanjuje za 2 petlje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 szem áthúzása, mintha kötnéd, 2 szem együtt kötése, majd az áthúzott szem áthúzása rajtuk. 2 szemet fogyaszt"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geser 1 jerat seperti merajut, rajut 2 jerat bersama, lalu tarik jerat yang digeser melewatinya. Mengurangi 2 jerat"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passare 1 maglia come per lavorarla a dritto, lavorare 2 maglie insieme a dritto, poi accavallare la maglia passata. Toglie 2 maglie"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1目を表編みのように移し、2目一度に編み、移した目をかぶせる。2目減る"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ಹೊಲಿಗೆಯನ್ನು ನೇರದಂತೆ ಜಾರಿಸಿ, 2 ಹೊಲಿಗೆ ಒಟ್ಟಿಗೆ ಹೆಣೆಯಿರಿ, ನಂತರ ಜಾರಿಸಿದ ಹೊಲಿಗೆಯನ್ನು ಅವುಗಳ ಮೇಲೆ ಎಳೆಯಿರಿ. ಇದು 2 ಹೊಲಿಗೆ ಕಡಿಮೆ ಮಾಡುತ್ತದೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1코를 겉뜨기 하듯 옮기고, 2코 모아뜨기를 한 뒤 옮긴 코를 덮어씌우기. 2코가 줄어든다"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 കണ്ണി നേരെയുള്ളത് പോലെ മാറ്റുക, 2 കണ്ണികൾ ഒരുമിച്ച് തുന്നുക, പിന്നെ മാറ്റിയ കണ്ണി അവയ്ക്ക് മുകളിലൂടെ വലിക്കുക. ഇത് 2 കണ്ണി കുറയ്ക്കുന്നു"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 टाका सरळ टाक्यासारखा उतरवा, 2 टाके एकत्र विणा, मग उतरवलेला टाका त्यांवरून ओढा. यामुळे 2 टाके कमी होतात"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelongsorkan 1 jerat seperti merajut, rajut 2 jerat bersama, kemudian lalukan jerat yang digelongsorkan ke atasnya. Ia mengurangkan 2 jerat"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for å strikke rett, strikk 2 masker sammen, og dra den løftede masken over. Den tar bort 2 masker"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 steek afhalen als voor rechts, 2 steken samenbreien en de afgehaalde steek erover halen. Het neemt 2 steken af"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ଫାଶ ସିଧା ପରି ଓହ୍ଲାନ୍ତୁ, 2 ଫାଶ ଏକାଠି ବୁଣନ୍ତୁ, ତା'ପରେ ଓହ୍ଲାଇଥିବା ଫାଶକୁ ସେଗୁଡ଼ିକ ଉପରେ ଟାଣି ନିଅନ୍ତୁ। ଏହା 2 ଫାଶ କମାଏ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ਫੰਦਾ ਸਿੱਧੇ ਵਾਂਗ ਉਤਾਰੋ, 2 ਫੰਦੇ ਇਕੱਠੇ ਬੁਣੋ, ਫਿਰ ਉਤਾਰਿਆ ਫੰਦਾ ਉਨ੍ਹਾਂ ਉੱਪਰੋਂ ਲੰਘਾ ਦਿਓ। ਇਹ 2 ਫੰਦੇ ਘਟਾਉਂਦਾ ਹੈ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdjąć 1 oczko jak do przerabiania, przerobić 2 oczka razem i przeciągnąć zdjęte oczko przez nie. Zmniejsza o 2 oczka"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para tricotar, tricotar 2 pontos juntos e passar o ponto passado por cima. Tira 2 pontos"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para tricotar, tricotar 2 pontos juntos e passar o ponto passado por cima. Tira 2 pontos"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alunecă 1 ochi ca pentru tricotat, tricotează 2 ochiuri împreună, apoi trage ochiul alunecat peste ele. Scade 2 ochiuri"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снять 1 петлю как для лицевой, провязать 2 петли вместе и протянуть через них снятую петлю. Убавляет 2 петли"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prehodiť 1 očko ako na pletenie, upliesť 2 očká dohromady a prehodené očko pretiahnuť cez ne. Ubudnú 2 očká"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenesi 1 zanko kot za pletenje, spleti 2 zanki skupaj in prenesi zanko čez njiju. Odvzame 2 zanki"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lyft 1 maska som om den skulle stickas rät, sticka 2 maskor ihop och dra den lyfta maskan över. Den tar bort 2 maskor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 கண்ணியை நேர்க்கண்ணி போல் மாற்று, 2 கண்ணிகளை ஒன்றாகப் பின்னு, பிறகு மாற்றிய கண்ணியை அவற்றின் மேல் இழு. இது 2 கண்ணிகளைக் குறைக்கும்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 కుట్టును నేరు కుట్టులా మార్చండి, 2 కుట్లను కలిపి అల్లండి, తర్వాత మార్చిన కుట్టును వాటిపైకి లాగండి. ఇది 2 కుట్లను తగ్గిస్తుంది"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลื่อน 1 ห่วงเหมือนถักห่วงตรง ถัก 2 ห่วงรวมกัน แล้วยกห่วงที่เลื่อนไว้คลุมข้ามไป ลดลง 2 ห่วง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ilmeği düz örer gibi kaydır, 2 ilmeği birlikte ör, sonra kaydırdığın ilmeği üzerlerinden geçir. 2 ilmek azaltır"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняти 1 петлю як для лицьової, провʼязати 2 петлі разом і протягнути через них зняту петлю. Зменшує на 2 петлі"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ٹانکا سیدھے کی طرح منتقل کریں، 2 ٹانکے ایک ساتھ بنیں، پھر منتقل کیا ہوا ٹانکا ان کے اوپر سے گزار دیں۔ یہ 2 ٹانکے کم کرتا ہے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trượt 1 mũi như đan mũi xuôi, đan 2 mũi cùng nhau, rồi kéo mũi đã trượt trùm qua. Bớt 2 mũi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 1 针像织下针一样移过，2 针并为一针，再把移过的针目盖过去。减少 2 针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將 1 針像織下針一樣移過，2 針併為一針，再把移過的針目蓋過去。減少 2 針"
+          }
+        }
+      }
+    },
+    "Slip 1 stitch purlwise with the yarn in back": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انقل غرزة واحدة كما في المقلوبة والخيط في الخلف"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সুতো পিছনে রেখে ১টি ঘর উল্টোর মতো সরান"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 punt com per teixir-lo del revés amb el fil al darrere"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přendat 1 oko jako na obrácené s nití vzadu"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for at strikke vrang med tråden bagved"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Masche links abheben, Faden hinter der Arbeit"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πέρασε 1 βρόχο ως για ανάποδο με το νήμα πίσω"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para el revés con la hebra por detrás"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para el revés con la hebra por detrás"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siirrä 1 silmukka nurin neuloen lanka takana"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’envers, fil derrière"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’envers, fil derrière"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "દોરો પાછળ રાખી 1 ફંદો ઊંધાની જેમ ઉતારો"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "העבר עין אחת כאילו להפוכה כשהחוט מאחור"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "धागा पीछे रखकर 1 फंदा उल्टे की तरह उतारें"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebaciti 1 petlju kao za lijevo, s niti straga"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 szem áthúzása fordítva, a fonal hátul"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geser 1 jerat seperti purl dengan benang di belakang"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passare 1 maglia come per lavorarla a rovescio, con il filo dietro"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "糸を向こう側にして、1目を裏編みのように移す"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ದಾರ ಹಿಂದೆ ಇಟ್ಟು 1 ಹೊಲಿಗೆಯನ್ನು ಹಿಮ್ಮುಖದಂತೆ ಜಾರಿಸಿ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실을 뒤에 두고 1코를 안뜨기 하듯 옮기기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "നൂൽ പിന്നിൽ വച്ച് 1 കണ്ണി തിരിച്ചുള്ളത് പോലെ മാറ്റുക"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "धागा मागे ठेवून 1 टाका उलट्यासारखा उतरवा"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelongsorkan 1 jerat seperti purl dengan benang di belakang"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for å strikke vrang med tråden bak"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 steek afhalen als voor averechts met de draad achter"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ସୂତା ପଛରେ ରଖି 1 ଫାଶ ଓଲଟା ପରି ଓହ୍ଲାନ୍ତୁ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਧਾਗਾ ਪਿੱਛੇ ਰੱਖ ਕੇ 1 ਫੰਦਾ ਪੁੱਠੇ ਵਾਂਗ ਉਤਾਰੋ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdjąć 1 oczko jak do lewego, z nitką z tyłu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para o avesso, com o fio atrás"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para o avesso, com o fio atrás"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alunecă 1 ochi ca pentru dos, cu firul în spate"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снять 1 петлю как для изнаночной, нить за работой"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prehodiť 1 očko ako na obrátené s niťou vzadu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenesi 1 zanko kot za levo, z nitjo zadaj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lyft 1 maska som om den skulle stickas avig, med tråden bakom"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "நூலைப் பின்னால் வைத்து 1 கண்ணியைத் தலைகீழ்க்கண்ணி போல் மாற்று"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "దారం వెనుక ఉంచి 1 కుట్టును తిరగబడినట్లు మార్చండి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลื่อน 1 ห่วงเหมือนถักห่วงกลับโดยให้ด้ายอยู่ด้านหลัง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İp arkada, 1 ilmeği ters örer gibi kaydır"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняти 1 петлю як для виворітної, нитка за роботою"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دھاگا پیچھے رکھ کر 1 ٹانکا الٹے کی طرح منتقل کریں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trượt 1 mũi như đan mũi ngược, sợi ở phía sau"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线放在后面，将 1 针像织上针一样移过"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "線放在後面，將 1 針像織上針一樣移過"
+          }
+        }
+      }
+    },
+    "Slip 1 stitch purlwise with the yarn in front": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انقل غرزة واحدة كما في المقلوبة والخيط في الأمام"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সুতো সামনে রেখে ১টি ঘর উল্টোর মতো সরান"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 punt com per teixir-lo del revés amb el fil al davant"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přendat 1 oko jako na obrácené s nití vpředu"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for at strikke vrang med tråden foran"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Masche links abheben, Faden vor der Arbeit"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πέρασε 1 βρόχο ως για ανάποδο με το νήμα μπροστά"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para el revés con la hebra por delante"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasar 1 punto como para el revés con la hebra por delante"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siirrä 1 silmukka nurin neuloen lanka edessä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’envers, fil devant"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glisser 1 maille comme pour la tricoter à l’envers, fil devant"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "દોરો આગળ રાખી 1 ફંદો ઊંધાની જેમ ઉતારો"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "העבר עין אחת כאילו להפוכה כשהחוט מלפנים"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "धागा आगे रखकर 1 फंदा उल्टे की तरह उतारें"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebaciti 1 petlju kao za lijevo, s niti sprijeda"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 szem áthúzása fordítva, a fonal elöl"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geser 1 jerat seperti purl dengan benang di depan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passare 1 maglia come per lavorarla a rovescio, con il filo davanti"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "糸を手前にして、1目を裏編みのように移す"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ದಾರ ಮುಂದೆ ಇಟ್ಟು 1 ಹೊಲಿಗೆಯನ್ನು ಹಿಮ್ಮುಖದಂತೆ ಜಾರಿಸಿ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실을 앞에 두고 1코를 안뜨기 하듯 옮기기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "നൂൽ മുന്നിൽ വച്ച് 1 കണ്ണി തിരിച്ചുള്ളത് പോലെ മാറ്റുക"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "धागा पुढे ठेवून 1 टाका उलट्यासारखा उतरवा"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelongsorkan 1 jerat seperti purl dengan benang di hadapan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løft 1 maske som for å strikke vrang med tråden foran"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 steek afhalen als voor averechts met de draad voor"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ସୂତା ଆଗରେ ରଖି 1 ଫାଶ ଓଲଟା ପରି ଓହ୍ଲାନ୍ତୁ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਧਾਗਾ ਅੱਗੇ ਰੱਖ ਕੇ 1 ਫੰਦਾ ਪੁੱਠੇ ਵਾਂਗ ਉਤਾਰੋ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdjąć 1 oczko jak do lewego, z nitką z przodu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para o avesso, com o fio na frente"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passar 1 ponto como para o avesso, com o fio na frente"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alunecă 1 ochi ca pentru dos, cu firul în față"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снять 1 петлю как для изнаночной, нить перед работой"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prehodiť 1 očko ako na obrátené s niťou vpredu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenesi 1 zanko kot za levo, z nitjo spredaj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lyft 1 maska som om den skulle stickas avig, med tråden framför"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "நூலை முன்னால் வைத்து 1 கண்ணியைத் தலைகீழ்க்கண்ணி போல் மாற்று"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "దారం ముందు ఉంచి 1 కుట్టును తిరగబడినట్లు మార్చండి"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลื่อน 1 ห่วงเหมือนถักห่วงกลับโดยให้ด้ายอยู่ด้านหน้า"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İp önde, 1 ilmeği ters örer gibi kaydır"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняти 1 петлю як для виворітної, нитка перед роботою"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دھاگا آگے رکھ کر 1 ٹانکا الٹے کی طرح منتقل کریں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trượt 1 mũi như đan mũi ngược, sợi ở phía trước"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线放在前面，将 1 针像织上针一样移过"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "線放在前面，將 1 針像織上針一樣移過"
+          }
+        }
+      }
+    },
     "Slip 2 stitches knitwise one at a time, then knit them together through the back": {
       "extractionState": "manual",
       "localizations": {
@@ -92245,6 +95617,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "將 2 針依序像織下針一樣移過，再從後面一起織"
+          }
+        }
+      }
+    },
+    "Slipped stitches": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "غرز منقولة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "সরানো ঘর"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punts passats"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přendaná oka"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løftede masker"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abgehobene Maschen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Βρόχοι που περνιούνται"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puntos pasados"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puntos pasados"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siirretyt silmukat"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mailles glissées"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mailles glissées"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ઉતારેલા ફંદા"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "עיניים מועברות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उतारे हुए फंदे"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prebačene petlje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Áthúzott szemek"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jerat Geser"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maglie passate"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべり目"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಜಾರಿಸಿದ ಹೊಲಿಗೆಗಳು"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "걸러뜨기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "മാറ്റിയ കണ്ണികൾ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उतरवलेले टाके"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jerat Digelongsor"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Løftede masker"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afgehaalde steken"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଓହ୍ଲାଇଥିବା ଫାଶ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਉਤਾਰੇ ਫੰਦੇ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oczka zdejmowane"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pontos passados"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pontos passados"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochiuri alunecate"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снятые петли"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prehodené očká"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prenesene zanke"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lyfta maskor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "மாற்றிய கண்ணிகள்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "మార్చిన కుట్లు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ห่วงที่เลื่อน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydırılmış İlmekler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняті петлі"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "منتقل کیے گئے ٹانکے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mũi trượt"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "滑针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "滑針"
           }
         }
       }
@@ -105510,6 +109163,287 @@
         }
       }
     },
+    "Toe-Up Socks": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جوارب تُحاك من الأصابع"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "পায়ের আঙুল থেকে বোনা মোজা"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitjons des de la punta"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponožky od špičky"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sokker fra tåen"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Socken von der Spitze"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Κάλτσες από τη μύτη"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calcetines desde la punta"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calcetines desde la punta"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sukat kärjestä alkaen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaussettes de la pointe vers le haut"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaussettes de la pointe vers le haut"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "પંજાથી શરૂ થતા મોજાં"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "גרביים מהאצבעות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अगले सिरे से शुरू होने वाले मोज़े"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čarape od vrha stopala"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zokni az orrától"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaus Kaki dari Ujung Kaki"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calze dalla punta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "つま先から編む靴下"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಕಾಲ್ಬೆರಳಿನಿಂದ ಹೆಣೆಯುವ ಸಾಕ್ಸ್"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "발끝부터 뜨는 양말"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "കാൽവിരൽ അറ്റത്തു നിന്ന് തുന്നുന്ന സോക്സ്"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पंजापासून सुरू होणारे मोजे"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stoking dari Hujung Kaki"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sokker fra tåen"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sokken vanaf de teen"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଆଙ୍ଗୁଠିରୁ ବୁଣା ମୋଜା"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਪੰਜੇ ਤੋਂ ਬੁਣੀਆਂ ਜੁਰਾਬਾਂ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skarpetki od palców"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meias da ponta ao punho"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meias da ponta ao punho"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Șosete de la vârf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Носки от мыска"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponožky od špičky"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nogavice od prstov"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sockor från tån"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "கால்விரலிலிருந்து பின்னும் சாக்ஸ்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "కాలివేలు నుండి అల్లే సాక్స్"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถุงเท้าถักจากปลายเท้า"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burundan Başlayan Çoraplar"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шкарпетки від мисочка"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پنجے سے شروع ہونے والی جرابیں"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tất đan từ ngón chân"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从脚尖向上织的袜子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "從腳尖向上織的襪子"
+          }
+        }
+      }
+    },
     "Top": {
       "extractionState": "manual",
       "localizations": {
@@ -109006,6 +112940,287 @@
           "stringUnit": {
             "state": "translated",
             "value": "把工作線繞成圈扭一下，滑到右針上。每個線圈算 1 針"
+          }
+        }
+      }
+    },
+    "Twisted stitches": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "غرز ملتوية"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "পাক খাওয়া ঘর"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punts torçats"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zkroucená oka"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drejede masker"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verschränkte Maschen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Στριμμένοι βρόχοι"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puntos torcidos"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puntos torcidos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kierretyt silmukat"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mailles torses"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mailles torses"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "વળ ખાધેલા ફંદા"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "עיניים מעוותות"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बल खाए फंदे"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uvijene petlje"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Csavart szemek"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jerat Terpuntir"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maglie ritorte"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ねじり目"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ತಿರುಚಿದ ಹೊಲಿಗೆಗಳು"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "꼬아뜨기"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "പിരിഞ്ഞ കണ്ണികൾ"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पिळलेले टाके"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jerat Berpintal"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vridde masker"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gedraaide steken"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ମୋଡ଼ା ଫାଶ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਵੱਟ ਖਾਧੇ ਫੰਦੇ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oczka skręcone"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pontos torcidos"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pontos torcidos"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochiuri răsucite"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перекрученные петли"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skrútené očká"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasukane zanke"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vridna maskor"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "முறுக்கிய கண்ணிகள்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "మెలిక కుట్లు"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ห่วงบิด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bükülmüş İlmekler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перекручені петлі"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مڑے ہوئے ٹانکے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mũi xoắn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扭针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扭針"
           }
         }
       }

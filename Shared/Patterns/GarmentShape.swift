@@ -82,7 +82,7 @@ enum GarmentShape {
             path.addLine(to: p(0.02, 0.62))
             path.addLine(to: p(0.24, 0.17))
             path.closeSubpath()
-        case .socks:
+        case .socks, .toeUp:
             // One sock seen from the side: the leg, a rounded heel and the foot running out to the toe.
             path.move(to: p(0.3, 0.08))
             path.addLine(to: p(0.58, 0.08))

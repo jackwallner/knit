@@ -116,11 +116,19 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         }
     }
 
-    /// The sample photo's asset name, for the designs that have one.
+    /// The sample photo's asset name, for the designs that carry one in the app.
     var photo: String? {
         switch self {
-        case .builtIn(let design): design.photo
-        case .topical(let topical): topical.bundled ? "sample-\(topical.id)" : nil
+        case .builtIn(let design): design.sitePhoto == nil ? design.photo : nil
+        case .topical(let topical): topical.bundled && topical.photo == nil ? "sample-\(topical.id)" : nil
+        }
+    }
+
+    /// The sample photo on the Ravel site (`PhotoStore`), for a design added after the app shipped.
+    var sitePhoto: String? {
+        switch self {
+        case .builtIn(let design): design.sitePhoto
+        case .topical(let topical): topical.photo
         }
     }
 

@@ -19,6 +19,14 @@ final class SearchTests: XCTestCase {
         XCTAssertTrue(jumpers.allSatisfy { $0.base.shelf == .sweaters }, "a jumper is a sweater")
     }
 
+    /// Every design is found by its own name, and the way knitters write it: "toe up socks".
+    func testEveryDesignIsFoundByItsName() {
+        for design in Design.allCases {
+            XCTAssertTrue(find(design.name).contains { $0.id == design.rawValue }, design.name)
+        }
+        XCTAssertEqual(find("toe up socks").first?.id, Design.toeUpSocks.rawValue)
+    }
+
     func testShelfTagsAreSearched() {
         let tags = [Design.ribbedBeanie.rawValue: ["Holiday"], Design.mittens.rawValue: ["Gift season"]]
         XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue])

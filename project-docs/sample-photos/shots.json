@@ -188,6 +188,14 @@
   "babyBooties": {
    "camera": "sun",
    "scene": "a pair side by side on a changing-table pad"
+  },
+  "toeUpSocks": {
+   "camera": "overcast",
+   "scene": "laid flat side by side on a wooden floor by a window, heels turned to show their shape"
+  },
+  "fingerlessMitts": {
+   "camera": "snap",
+   "scene": "worn on both hands wrapped around a mug of tea on a kitchen table"
   }
  }
 }
