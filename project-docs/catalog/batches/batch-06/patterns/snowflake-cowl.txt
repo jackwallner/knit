@@ -1,0 +1,23 @@
+ok   Ribbed Cowl: 5 sizes x 8 weights
+
+== snowflake-cowl, Snug, DK, 240 yd
+22 in around, 8 in tall
+  About 240 yd of DK weight yarn
+  US 6 · 4 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [140]: Cast on 140 stitches. Join in the round without twisting and place a marker.
+Cowl x56 [140]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== snowflake-cowl, Infinity, DK, 630 yd
+52 in around, 9 in tall
+  About 630 yd of DK weight yarn
+  US 6 · 4 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [328]: Cast on 328 stitches. Join in the round without twisting and place a marker.
+Cowl x63 [328]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

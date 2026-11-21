@@ -1,0 +1,36 @@
+ok   Hot Water Bottle Cover: 5 sizes x 8 weights
+
+== Hot Water Bottle Cover, Small, Worsted, 100 yd
+5.25 in wide and 7.5 in tall below the neck, laid flat, to fit a bottle 5.5 in wide
+  About 100 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  A spare needle in the same size for the bind off
+  2 stitch markers
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neck x1 [24]: Cast on 24 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Neck x24 [24]: *K2, p2; repeat from * around
+Shoulders x1 [24]: K12, place a second marker for the other side, knit to the end
+Shoulders x6 [28 to 48]: K1, M1L, knit to 1 stitch before the marker, M1R, k1, slip the marker, k1, M1L, knit to the last stitch, M1R, k1
+Body x39 [48]: Knit
+Base x1: Turn the cover inside out. Put the 24 stitches before the second marker on one needle and the 24 after it on another, held parallel.
+Base x1: Join the two sides with a three-needle bind off. Turn the cover right side out.
+Finishing x1: Weave in the ends. Empty the bottle, fold it lengthwise and push it in through the neck, then fill it and fold the ribbed neck down over the stopper.
+
+== Hot Water Bottle Cover, Large, Worsted, 210 yd
+8.5 in wide and 11.5 in tall below the neck, laid flat, to fit a bottle 8.5 in wide
+  About 210 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, for the neck
+  US 7 · 4.5 mm 16 in circular needle
+  A spare needle in the same size for the bind off
+  2 stitch markers
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neck x1 [24]: Cast on 24 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Neck x24 [24]: *K2, p2; repeat from * around
+Shoulders x1 [24]: K12, place a second marker for the other side, knit to the end
+Shoulders x13 [28 to 76]: K1, M1L, knit to 1 stitch before the marker, M1R, k1, slip the marker, k1, M1L, knit to the last stitch, M1R, k1. Move the stitches to the 16 in circular needle once they reach around it
+Body x56 [76]: Knit
+Base x1: Turn the cover inside out. Put the 38 stitches before the second marker on one needle and the 38 after it on another, held parallel.
+Base x1: Join the two sides with a three-needle bind off. Turn the cover right side out.
+Finishing x1: Weave in the ends. Empty the bottle, fold it lengthwise and push it in through the neck, then fill it and fold the ribbed neck down over the stopper.
