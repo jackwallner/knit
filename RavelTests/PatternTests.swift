@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 66)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 97)
+        XCTAssertEqual(Design.allCases.count, 67)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 98)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -939,6 +939,22 @@ final class PatternTests: XCTestCase {
     func testBabySocksAskForFingering() {
         let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
         XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
+    /// The bandana is half as deep as it is wide, and its ties are cast on evenly at both ends of the top.
+    func testTheBandanaIsHalfAsDeepAsItIsWide() {
+        for input in inputs(.bandanaKerchief) {
+            for gauge in gauges {
+                let plan = Design.bandanaKerchief.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let point = plan.steps.filter { $0.section == "Point" && !$0.isAction }
+                let base = point.last.flatMap { $0.stitches(after: $0.rows - 1) } ?? 0
+                let rows = point.reduce(0) { $0 + $1.rows }
+                XCTAssertEqual(Double(rows) / (gauge.spi * 2), Double(base) / gauge.spi / 2, accuracy: 0.75, label)
+                let ties = plan.steps.filter { $0.section == "Ties" }.compactMap(\.stitches)
+                XCTAssertEqual((ties.first ?? 0) - base, (ties.dropFirst().first ?? 0) - (ties.first ?? 0), label)
+            }
+        }
     }
 
     /// The bottle cover's neck is narrower than its body, and the shoulders widen it to the body count, which

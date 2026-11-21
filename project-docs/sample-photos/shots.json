@@ -396,6 +396,10 @@
   "bottleCover": {
    "camera": "lamp",
    "scene": "tucked against a pillow on an unmade bed at night"
+  },
+  "bandanaKerchief": {
+   "camera": "sun",
+   "scene": "laid flat on a picnic blanket beside a straw hat"
   }
  }
 }

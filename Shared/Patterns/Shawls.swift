@@ -60,6 +60,33 @@ extension Engines {
 }
 
 extension Engines {
+    /// A bandana: a garter triangle grown from its point, two stitches every other row so it is half as deep
+    /// as it is wide, then stitches cast on at each end of the top edge to knit the ties as one band with it.
+    static func bandanaKerchief(width: Double, ties: Double, gauge g: Gauge) -> PatternPlan {
+        let base = odd(width * g.spi, minimum: 15)
+        let tie = Sizing.stitches(ties, per: g.spi, minimum: 12)
+        let pairs = (base - 3) / 2
+        let band = Sizing.rows(0.6, per: g.spi * 2, even: true, minimum: 4)
+        let total = base + 2 * tie
+        var b = PlanBuilder()
+        b.section = "Point"
+        b.action("Cast on 3 stitches.", stitches: 3)
+        b.work(["K1, M1L, knit to the last stitch, M1R, k1", "Knit"], rows: pairs * 2, stitches: 5, delta: 2)
+        b.section = "Ties"
+        b.row("With the cable cast-on, cast on \(tie) stitches at the start of the row, then knit to the end", stitches: base + tie)
+        b.row("With the cable cast-on, cast on \(tie) stitches at the start of the row, then knit to the end", stitches: total)
+        b.work(["Knit"], rows: band, stitches: total)
+        b.action("Bind off loosely knitwise.")
+        b.section = "Finishing"
+        b.action("Weave in the ends and block the triangle flat. Tie it over the hair or around the neck.")
+        let across = Double(base) / g.spi
+        let deep = Double(pairs * 2) / (g.spi * 2)
+        let bandDeep = Double(band + 2) / (g.spi * 2)
+        let yards = Sizing.yards(squareInches: across * deep / 2 + Double(total) / g.spi * bandDeep, spi: g.spi, factor: 1.3)
+        let needle = Double(total) / g.spi > 30 ? Sizing.cable(40) : Sizing.cable(32)
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(needle) circular needle, worked flat", "Tapestry needle"], finished: "\(Sizing.inches(across)) across the top, \(Sizing.inches(deep + bandDeep)) deep, with ties \(Sizing.inches(Double(tie) / g.spi)) long", gauge: g)
+    }
+
     struct HoodedScarf: Equatable, Sendable {
         var plan: PatternPlan
         var end: Int
