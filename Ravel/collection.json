@@ -375,6 +375,93 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/snowflake-beanie.jpg"
+    },
+    {
+      "id": "broken-rib-cowl",
+      "title": "Broken Rib Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "oat",
+          "hex": "#C9B391"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-cowl.jpg"
+    },
+    {
+      "id": "feather-and-fan-scarf",
+      "title": "Feather and Fan Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#2E6E6A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Lace",
+      "photo": "photos/feather-and-fan-scarf.jpg"
+    },
+    {
+      "id": "double-moss-blanket",
+      "title": "Double Moss Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#9AA88A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-blanket.jpg"
+    },
+    {
+      "id": "basketweave-washcloth",
+      "title": "Basketweave Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "basketweave",
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/basketweave-washcloth.jpg"
     }
   ]
 }

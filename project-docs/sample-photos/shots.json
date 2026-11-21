@@ -240,6 +240,26 @@
   "asymmetricShawl": {
    "camera": "sun",
    "scene": "draped over the back of a weathered wooden porch chair, late afternoon sun raking across it"
+  },
+  "broken-rib-cowl": {
+   "camera": "flash",
+   "scene": "worn bunched around the neck of a person in a dark wool coat, a night street behind, phone flash"
+  },
+  "feather-and-fan-scarf": {
+   "camera": "overcast",
+   "scene": "laid in a loose S across an unmade bed with grey sheets, soft window light"
+  },
+  "double-moss-blanket": {
+   "camera": "snap",
+   "scene": "folded over the arm of a linen sofa, a toddler's toy blurred on the cushion"
+  },
+  "basketweave-washcloth": {
+   "camera": "oldphone",
+   "scene": "on the edge of a white enamel kitchen sink next to a wooden dish brush"
+  },
+  "bandanaCowl": {
+   "camera": "outdoor",
+   "scene": "worn by a person in a denim jacket outdoors on a cold bright day, a brick wall behind, cropped at the chin"
   }
  }
 }

@@ -38,6 +38,15 @@ enum GarmentShape {
             path.addLine(to: p(0.96, 0.3))
             path.addLine(to: p(0.04, 0.62))
             path.closeSubpath()
+        case .bandana:
+            // A ring for the neck, seen from the front, with the knitted point hanging below it.
+            let ring = CGPath(roundedRect: box(0.16, 0.16, 0.68, 0.3), cornerWidth: unit * 0.1, cornerHeight: unit * 0.1, transform: nil)
+            let point = CGMutablePath()
+            point.move(to: p(0.22, 0.38))
+            point.addLine(to: p(0.78, 0.38))
+            point.addLine(to: p(0.5, 0.88))
+            point.closeSubpath()
+            path.addPath(ring.union(point).subtracting(CGPath(ellipseIn: box(0.26, 0.2, 0.48, 0.12), transform: nil)))
         case .slouch:
             path.move(to: p(0.18, 0.76))
             path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))

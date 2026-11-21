@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 48)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 58)
+        XCTAssertEqual(Design.allCases.count, 49)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 63)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -797,6 +797,21 @@ final class PatternTests: XCTestCase {
                 let deep = Double(plan.steps.compactMap(\.stitches).max() ?? 0) / gauge.spi
                 XCTAssertEqual((long * long + deep * deep).squareRoot(), input["wingspan"] ?? 0, accuracy: (input["wingspan"] ?? 0) * 0.05, label)
                 XCTAssertEqual(long / deep, 3, accuracy: 0.3, label)
+            }
+        }
+    }
+
+    /// The point grows to a little under half the round, ends on a wrong-side row, and the neck closes the round.
+    func testTheBandanaPointJoinsTheNeck() {
+        for input in inputs(.bandanaCowl) {
+            for gauge in gauges {
+                let cowl = Engines.bandanaCowl(around: input["around"] ?? 0, height: input["height"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(cowl.stitches % 4, 0, label)
+                XCTAssertTrue((0.3...0.5).contains(Double(cowl.front) / Double(cowl.stitches)), label)
+                let point = cowl.plan.steps.filter { $0.section == "Point" && !$0.isAction }
+                XCTAssertEqual(point.map(\.rows).reduce(0, +) % 2, 0, label)
+                XCTAssertEqual(point.last?.stitches(after: (point.last?.rows ?? 1) - 1), cowl.front, label)
             }
         }
     }

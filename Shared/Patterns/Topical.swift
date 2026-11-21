@@ -36,7 +36,7 @@ struct Topical: Identifiable, Hashable, Sendable {
     /// Shapes a record may build on: the ones colorwork has been taught.
     static let bases: [Design] = [
         .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .chunkyCowl, .earWarmer, .handwarmers,
-        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket,
+        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .washcloth,
     ]
 
     /// The design a cast-on project names: "topical." in front, so it never meets a built-in name.

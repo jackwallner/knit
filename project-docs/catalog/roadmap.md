@@ -63,11 +63,11 @@ cached on the phone, so the app does not carry them.
 | 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | verified: fingering, sport and DK (the 8-stitch repeat moves a 13 in worsted hat 8 percent) |
 | 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | verified (on the Hats shelf) |
 | 14 | Asymmetric Shawl | Shawls & Wraps | Adults, easy | New shape | verified |
-| 15 | Broken Rib Cowl | Scarves & Cowls | Anyone, beginner | Stitch: broken rib on cowl | planned |
-| 16 | Bandana Cowl | Scarves & Cowls | Adults, easy | New shape | planned |
-| 17 | Feather and Fan Scarf | Scarves & Cowls | Adults, easy lace | Stitch: feather and fan on scarf | planned |
-| 18 | Double Moss Blanket | Blankets | Baby to throw, beginner | Stitch: double moss on bordered blanket | planned |
-| 19 | Basketweave Washcloth | Home | Anyone, beginner | Stitch: basketweave on washcloth | planned |
+| 15 | Broken Rib Cowl | Scarves & Cowls | Anyone, beginner | Stitch: broken rib on cowl | verified |
+| 16 | Bandana Cowl | Scarves & Cowls | Adults, easy | New shape | verified |
+| 17 | Feather and Fan Scarf | Scarves & Cowls | Adults, easy lace | Stitch: feather and fan on scarf | verified |
+| 18 | Double Moss Blanket | Blankets | Baby to throw, beginner | Stitch: double moss on bordered blanket | verified |
+| 19 | Basketweave Washcloth | Home | Anyone, beginner | Stitch: basketweave on washcloth | verified |
 | 20 | Arm Warmers | Hands | Adults, easy | New shape | planned |
 | 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | planned |
 | 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | planned |
