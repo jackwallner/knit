@@ -388,6 +388,14 @@
   "color-block-beanie": {
    "camera": "outdoor",
    "scene": "worn on a snowy park bench, set down beside a thermos"
+  },
+  "twisted-rib-scarf": {
+   "camera": "overcast",
+   "scene": "hung over a coat hook by a front door"
+  },
+  "bottleCover": {
+   "camera": "lamp",
+   "scene": "tucked against a pillow on an unmade bed at night"
   }
  }
 }

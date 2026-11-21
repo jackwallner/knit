@@ -102,8 +102,8 @@ cached on the phone, so the app does not carry them.
 | 51 | Feather and Fan Wrap | Shawls & Wraps | Adults, easy lace | Stitch | verified |
 | 52 | Drawstring Pouch | Home | Gift, easy | New shape: top down in the round, eyelets, three-needle bind off, twisted cord | verified |
 | 53 | Color-Block Beanie | Hats | Anyone, easy | Colorwork: contrast brim, one band, a third color to the crown | verified |
-| 54 | Twisted Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
-| 55 | Hot Water Bottle Cover | Home | Gift, easy | New shape | planned |
+| 54 | Twisted Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | verified |
+| 55 | Hot Water Bottle Cover | Home | Gift, easy | New shape: top down, ribbed neck, side increases, three-needle bind off | verified |
 | 56 | Bandana Kerchief | Scarves & Cowls | Adults, beginner | New shape: small triangle with ties | planned |
 | 57 | Snowflake Cowl | Scarves & Cowls | Winter gift, intermediate | Colorwork | planned |
 | 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | planned |

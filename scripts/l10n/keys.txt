@@ -475,3 +475,6 @@ Drawstring Pouch
 Cord
 Color-Block Beanie
 Color Block
+Twisted Rib Scarf
+Hot Water Bottle Cover
+Shoulders

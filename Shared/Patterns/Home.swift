@@ -127,6 +127,39 @@ extension Engines {
         return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(around / 2)) wide, \(Sizing.inches(tall)) tall, laid flat", gauge: g, round: true)
     }
 
+    /// A hot water bottle cover worked in the round from the top down: a ribbed neck that folds over the
+    /// stopper, shoulders widened at both sides, a stockinette body, and a bottom closed with a three-needle
+    /// bind off. The empty bottle folds to go in through the neck.
+    static func bottleCover(width: Double, height: Double, gauge g: Gauge) -> PatternPlan {
+        let body = Sizing.stitches(2 * width, per: g.spi, multiple: 4, minimum: 32)
+        // Room around the stopper: the neck rib stretches over it.
+        let neck = min(body - 8, Sizing.stitches(5.5, per: g.spi, multiple: 4, minimum: 16))
+        let collar = Sizing.rows(4, per: g.rpi, minimum: 8)
+        let shoulders = (body - neck) / 4
+        let rows = max(4, Sizing.rows(height, per: g.rpi) - shoulders)
+        let small = Double(body) / g.spi < 16
+        var b = PlanBuilder()
+        b.section = "Neck"
+        b.action("Cast on \(neck) stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.", stitches: neck)
+        b.work(["*K2, p2; repeat from * around"], rows: collar, stitches: neck)
+        b.section = "Shoulders"
+        b.row("K\(neck / 2), place a second marker for the other side, knit to the end", stitches: neck)
+        b.work(["K1, M1L, knit to 1 stitch before the marker, M1R, k1, slip the marker, k1, M1L, knit to the last stitch, M1R, k1" + (small ? "" : ". Move the stitches to the \(Sizing.cable(16)) circular needle once they reach around it")], rows: shoulders, stitches: neck + 4, delta: 4)
+        b.section = "Body"
+        b.work(["Knit"], rows: rows, stitches: body)
+        b.section = "Base"
+        b.action("Turn the cover inside out. Put the \(body / 2) stitches before the second marker on one needle and the \(body / 2) after it on another, held parallel.")
+        b.action("Join the two sides with a three-needle bind off. Turn the cover right side out.")
+        b.section = "Finishing"
+        b.action("Weave in the ends. Empty the bottle, fold it lengthwise and push it in through the neck, then fill it and fold the ribbed neck down over the stopper.")
+        let tall = Double(shoulders + rows) / g.rpi
+        let yards = Sizing.yards(squareInches: Double(body) / g.spi * tall + Double(neck) / g.spi * Double(collar) / g.rpi, spi: g.spi, factor: 1.15)
+        let needles = small
+            ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "A spare needle in the same size for the bind off"]
+            : ["\(g.needle.label) double-pointed needles, or a long circular for magic loop, for the neck", "\(g.needle.label) \(Sizing.cable(16)) circular needle", "A spare needle in the same size for the bind off"]
+        return pattern(b, estimate: yards, tools: needles + ["2 stitch markers", "Tapestry needle"], finished: "\(Sizing.inches(Double(body) / g.spi / 2)) wide and \(Sizing.inches(tall)) tall below the neck, laid flat, to fit a bottle \(Sizing.inches(width)) wide", gauge: g, round: true)
+    }
+
     /// A placemat in seed stitch, which lies flat and stands up to washing, inside a garter border.
     /// Worked flat from one short edge to the other.
     static func placemat(width: Double, length: Double, gauge g: Gauge) -> PatternPlan {

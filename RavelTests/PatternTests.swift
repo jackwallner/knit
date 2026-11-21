@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 65)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 95)
+        XCTAssertEqual(Design.allCases.count, 66)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 97)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -939,6 +939,23 @@ final class PatternTests: XCTestCase {
     func testBabySocksAskForFingering() {
         let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
         XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
+    /// The bottle cover's neck is narrower than its body, and the shoulders widen it to the body count, which
+    /// halves at the second marker for the bind off.
+    func testTheBottleCoverShouldersReachTheBody() {
+        for input in inputs(.bottleCover) {
+            for gauge in gauges {
+                let plan = Design.bottleCover.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let neck = plan.steps.first?.stitches ?? 0
+                let body = plan.steps.first { $0.section == "Body" }?.stitches ?? 0
+                XCTAssertLessThan(neck, body, label)
+                XCTAssertEqual(neck % 4, 0, label)
+                XCTAssertGreaterThanOrEqual(Double(neck) / gauge.spi, 4.5, label)
+                XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("the \(body / 2) stitches before the second marker") } }, label)
+            }
+        }
     }
 
     /// The pouch has an even number of eyelets, so the cord comes out where it went in, and halves that

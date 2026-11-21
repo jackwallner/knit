@@ -924,6 +924,29 @@
       ],
       "tag": "Color Block",
       "photo": "photos/color-block-beanie.jpg"
+    },
+    {
+      "id": "twisted-rib-scarf",
+      "title": "Twisted Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "twistedRib",
+      "palette": [
+        {
+          "name": "slate",
+          "hex": "#5B6B7A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/twisted-rib-scarf.jpg"
     }
   ]
 }

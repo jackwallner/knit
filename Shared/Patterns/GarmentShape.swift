@@ -132,6 +132,19 @@ enum GarmentShape {
         case .placemat:
             // A mat wider than it is tall, as it lies on the table.
             path.addRoundedRect(in: box(0.08, 0.24, 0.84, 0.54), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
+        case .bottleCover:
+            // A hot water bottle in its cover: a ribbed neck above sloped shoulders and a rounded body.
+            path.move(to: p(0.42, 0.06))
+            path.addLine(to: p(0.58, 0.06))
+            path.addLine(to: p(0.58, 0.24))
+            path.addLine(to: p(0.76, 0.34))
+            path.addLine(to: p(0.76, 0.86))
+            path.addQuadCurve(to: p(0.7, 0.94), control: p(0.76, 0.94))
+            path.addLine(to: p(0.3, 0.94))
+            path.addQuadCurve(to: p(0.24, 0.86), control: p(0.24, 0.94))
+            path.addLine(to: p(0.24, 0.34))
+            path.addLine(to: p(0.42, 0.24))
+            path.closeSubpath()
         case .pouch:
             // A pouch drawn shut: the frill flares above the gathered neck, the body rounds out below it.
             path.move(to: p(0.4, 0.3))
