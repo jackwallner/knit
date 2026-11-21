@@ -764,7 +764,8 @@ enum Engines {
     /// A crew-neck pullover knit from the neck down in one piece. The body and
     /// the sleeves grow at their own rates, so large sizes keep a neck that fits.
     /// `chest` is the finished chest. `wearer` is the chest it was sized from, when the knitter gave one.
-    static func raglan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge, child: Bool = false, short: Bool = false) -> Raglan {
+    /// A `collar` height makes the neckband a turtleneck in k2p2 rib, worn folded in half.
+    static func raglan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge, child: Bool = false, short: Bool = false, collar: Double? = nil) -> Raglan {
         let shape = raglanFit(chest: chest, wearer: wearer, child: child, gauge: g)
         let body = shape.body, sleeve = shape.sleeve, underarm = shape.underarm, panel = shape.panel, sleeveTop = shape.sleeveTop
         let backAtNeck = shape.backAtNeck, sleeveAtNeck = shape.sleeveAtNeck, bodyIncreases = shape.bodyIncreases, sleeveIncreases = shape.sleeveIncreases
@@ -773,9 +774,15 @@ enum Engines {
         let long = child && Double(body) / g.spi < 32 ? 24 : 32
 
         var b = PlanBuilder()
-        b.section = "Neckband"
-        b.action("With the smaller \(Sizing.cable(16)) needle, loosely cast on \(neck) stitches, so the neck stretches over the head. Join in the round without twisting and place a marker.", stitches: neck)
-        b.work(["*K1, p1; repeat from * around"], rows: Sizing.rows(1, per: g.rpi, minimum: 4), stitches: neck)
+        if let collar {
+            b.section = "Collar"
+            b.action("With the smaller \(Sizing.cable(16)) needle, loosely cast on \(neck) stitches, so the collar stretches over the head. Join in the round without twisting and place a marker.", stitches: neck)
+            b.work(["*K2, p2; repeat from * around"], rows: Sizing.rows(collar, per: g.rpi, minimum: 8), stitches: neck)
+        } else {
+            b.section = "Neckband"
+            b.action("With the smaller \(Sizing.cable(16)) needle, loosely cast on \(neck) stitches, so the neck stretches over the head. Join in the round without twisting and place a marker.", stitches: neck)
+            b.work(["*K1, p1; repeat from * around"], rows: Sizing.rows(1, per: g.rpi, minimum: 4), stitches: neck)
+        }
 
         // Short rows across the back and sleeves raise the back of the neck, so the front sits lower
         // at the throat. Each pair turns a little further into the front than the last.
@@ -826,10 +833,10 @@ enum Engines {
 
         let cuff = raglanSleeves(&b, shape, chest: chest, length: sleeveLength, gauge: g, short: short)
         b.section = "Finishing"
-        b.action("Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.")
+        b.action("Weave in the ends, closing any gaps at the underarms. Block to the finished measurements." + (collar == nil ? "" : " Fold the collar down in half to wear it."))
 
         let finishedChest = Double(body) / g.spi
-        let area = finishedChest * (length + depth) + (arm + Double(cuff) / g.spi) * sleeveLength + arm * depth
+        let area = finishedChest * (length + depth) + (arm + Double(cuff) / g.spi) * sleeveLength + arm * depth + Double(neck) / g.spi * (collar ?? 0)
         let fit = wearer.map { ", to fit a \(Sizing.inches($0)) chest with \(Sizing.inches(finishedChest - $0)) of ease" } ?? ""
         let plan = pattern(
             b, estimate: Sizing.yards(squareInches: area, spi: g.spi),

@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 67)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 101)
+        XCTAssertEqual(Design.allCases.count, 68)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 102)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -984,6 +984,20 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(stitches % 8, 0, "\(input) \(gauge.stitches)")
                 XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("yo, k2tog") } })
                 XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("first \(stitches / 2) stitches") } })
+            }
+        }
+    }
+
+    /// The turtleneck's collar is about 7 in of k2p2 rib on a count it divides into, folded in half to wear.
+    func testTheTurtleneckCollarFoldsInHalf() {
+        for input in inputs(.turtleneck) {
+            for gauge in gauges {
+                let plan = Design.turtleneck.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let collar = plan.steps.filter { $0.section == "Collar" && !$0.isAction }
+                XCTAssertEqual((collar.first?.stitches ?? 1) % 4, 0, label)
+                XCTAssertEqual(Double(collar.reduce(0) { $0 + $1.rows }) / gauge.rpi, 7, accuracy: 0.5, label)
+                XCTAssertTrue(plan.steps.last?.text(at: 0).contains("Fold the collar") ?? false, label)
             }
         }
     }

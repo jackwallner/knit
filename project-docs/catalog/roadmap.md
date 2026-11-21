@@ -108,7 +108,7 @@ cached on the phone, so the app does not carry them.
 | 57 | Snowflake Cowl | Scarves & Cowls | Winter gift, intermediate | Colorwork | verified |
 | 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | verified |
 | 59 | Rope Cable Blanket | Blankets | Throw, intermediate | Stitch | verified |
-| 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | planned |
+| 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | verified |
 | 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | planned |
 | 62 | Star Beanie | Hats | Anyone, intermediate | Colorwork | planned |
 | 63 | Shrug | Shawls & Wraps | Adults, easy | New shape | planned |

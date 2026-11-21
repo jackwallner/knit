@@ -412,6 +412,10 @@
   "rope-cable-blanket": {
    "camera": "lamp",
    "scene": "folded over the arm of a leather sofa"
+  },
+  "turtleneck": {
+   "camera": "overcast",
+   "scene": "laid flat on a gray wool blanket beside a pair of leather gloves"
   }
  }
 }

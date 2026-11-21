@@ -243,6 +243,10 @@ enum GarmentShape {
             path.addLine(to: p(0.02, 0.62))
             path.addLine(to: p(0.24, 0.17))
             path.closeSubpath()
+        case .turtleneck:
+            // The sweater with a tall collar folded over at the neck.
+            let collar = CGPath(roundedRect: box(0.37, 0.02, 0.26, 0.16), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            path.addPath(GarmentShape.path(.sweater, in: rect).union(collar))
         case .tee:
             // The sweater with sleeves that stop above the elbow.
             path.move(to: p(0.38, 0.12))
@@ -453,7 +457,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .tee, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
+    var knitsDown: Bool { [.sweater, .tee, .turtleneck, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit
