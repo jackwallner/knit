@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 45)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 53)
+        XCTAssertEqual(Design.allCases.count, 46)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 54)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -751,6 +751,23 @@ final class PatternTests: XCTestCase {
             }
         }
         XCTAssertEqual(LibrarySearch.find("christmas", in: Design.allCases.map { LibraryItem.builtIn($0) }).first?.id, Design.christmasStocking.rawValue)
+    }
+
+    /// Knit straight and square: as tall as it is wide, with a garter frame of the same width all round.
+    @MainActor func testTheWashclothIsSquare() {
+        for input in inputs(.washcloth) {
+            for gauge in gauges {
+                let plan = Design.washcloth.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let side = input["side"] ?? 0
+                XCTAssertEqual(Double(plan.steps[0].stitches ?? 0) / gauge.spi, side, accuracy: 1 / gauge.spi, label)
+                let body = plan.steps.filter { $0.section == "Body" }.map(\.rows).reduce(0, +)
+                let border = plan.steps.filter { $0.section.hasSuffix("Border") && !$0.isAction }.map(\.rows).reduce(0, +)
+                let tall = Double(body) / gauge.rpi + Double(border) / (gauge.spi * 2)
+                XCTAssertEqual(tall, side, accuracy: side * 0.1, label)
+            }
+        }
+        XCTAssertTrue(LibrarySearch.find("dishcloth", in: Design.allCases.map { LibraryItem.builtIn($0) }).contains { $0.id == Design.washcloth.rawValue })
     }
 
     func testMittenThumbGussetAddsUp() {

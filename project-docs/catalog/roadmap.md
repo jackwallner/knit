@@ -57,7 +57,7 @@ cached on the phone, so the app does not carry them.
 | 6 | Twisted Headband | Accessories | Adults, easy | New shape | verified |
 | 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | verified |
 | 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | verified |
-| 9 | Garter Washcloth | Home | Anyone, beginner | New shape: square cloth, base for stitch cloths | planned |
+| 9 | Bordered Washcloth | Home | Anyone, beginner | New shape: square cloth knit straight, garter frame, stockinette middle; base for stitch cloths (renamed: all-garter would be the Dishcloth again) | verified |
 | 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | planned |
 | 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | dropped: both sock designs already knit a leg as short as 2 in, so this would be a size, not a design |
 | 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | planned |

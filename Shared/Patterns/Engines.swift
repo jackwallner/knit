@@ -416,6 +416,28 @@ enum Engines {
         return pattern(b, estimate: yards, yarnNote: ", cotton for a cloth that scrubs", tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(side)) square", gauge: g)
     }
 
+    /// A square cloth knit straight: a narrow garter frame around a stockinette middle, or around a stitch
+    /// pattern when one is given.
+    static func washcloth(side: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedBlanket(stitch, width: side, length: side, gauge: g, border: 0.6, noun: "cloth") }
+        let border = max(3, Int((0.6 * g.spi).rounded()))
+        let caston = Sizing.stitches(side, per: g.spi, minimum: border * 2 + 6)
+        let middle = Sizing.rows(side - 2 * Double(border) / g.spi, per: g.rpi, even: true, minimum: 2)
+        var b = PlanBuilder()
+        b.section = "Bottom Border"
+        b.action("Cast on \(caston) stitches.", stitches: caston)
+        b.work(["Knit"], rows: border * 2, stitches: caston)
+        b.section = "Body"
+        b.work(["Knit", "K\(border), purl to the last \(border) stitches, k\(border)"], rows: middle, stitches: caston)
+        b.section = "Top Border"
+        b.work(["Knit"], rows: border * 2, stitches: caston)
+        b.section = "Finishing"
+        b.action("Bind off loosely. Weave in the ends and block the cloth square.")
+        let long = 2 * Double(border) / g.spi + Double(middle) / g.rpi
+        let yards = Sizing.yards(squareInches: side * long, spi: g.spi, factor: 1.1)
+        return pattern(b, estimate: yards, yarnNote: ", cotton for a cloth that scrubs", tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(Double(caston) / g.spi)) wide, \(Sizing.inches(long)) long", gauge: g)
+    }
+
     // MARK: Accessories
 
     static func earWarmer(head: Double, width: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {

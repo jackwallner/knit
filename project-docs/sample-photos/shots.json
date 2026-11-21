@@ -220,6 +220,10 @@
   "christmasStocking": {
    "camera": "lamp",
    "scene": "hanging by its loop from a hook on a wooden mantel, a little crooked"
+  },
+  "washcloth": {
+   "camera": "overcast",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap, soft window light"
   }
  }
 }

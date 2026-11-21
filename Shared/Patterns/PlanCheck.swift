@@ -91,6 +91,7 @@ enum TopicalCheck {
         case .earWarmer: wanted = head * 0.9
         case .garterScarf, .borderedBlanket: wanted = input["width"] ?? 0
         case .ribbedCowl: wanted = input["around"] ?? 0
+        case .washcloth: wanted = input["side"] ?? 0
         default: return nil
         }
         let room = max(wanted * 0.1, (Double(stitch.multiple) / 2 + 1) / across)

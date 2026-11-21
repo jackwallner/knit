@@ -109,12 +109,14 @@ extension Engines {
     }
 
     /// A blanket with a garter border and its middle in the stitch pattern.
-    static func texturedBlanket(_ stitch: Stitch, width: Double, length: Double, gauge g: Gauge) -> PatternPlan {
-        let border = max(3, Int((1.25 * g.spi).rounded()))
+    static func texturedBlanket(_ stitch: Stitch, width: Double, length: Double, gauge g: Gauge, border edge: Double = 1.25, noun: String = "blanket") -> PatternPlan {
+        let border = max(3, Int((edge * g.spi).rounded()))
         let wanted = Double(2 * border) + (width - Double(2 * border) / g.spi) * spi(stitch, g)
         let caston = stitch.count(near: wanted, flat: true, border: border, repeats: 2)
         let body = stitch.rows(length - 2 * Double(border) / g.spi, rpi: g.rpi, flat: true)
-        guard let texts = stitch.texts(stitches: caston, flat: true, border: border) else { return blanket(bordered: true, width: width, length: length, gauge: g) }
+        guard let texts = stitch.texts(stitches: caston, flat: true, border: border) else {
+            return noun == "blanket" ? blanket(bordered: true, width: width, length: length, gauge: g) : washcloth(side: width, gauge: g)
+        }
 
         var b = PlanBuilder()
         b.section = "Bottom Border"
@@ -125,10 +127,13 @@ extension Engines {
         b.section = "Top Border"
         b.work(["Knit"], rows: border * 2, stitches: caston)
         b.section = "Finishing"
-        b.action("Bind off loosely. Weave in the ends.\(stitch.isLace ? " Block the blanket to open up the lace." : "")")
+        b.action("Bind off loosely. Weave in the ends.\(stitch.isLace ? " Block the \(noun) to open up the lace." : "")")
         let wide = Double(2 * border) / g.spi + Double(caston - 2 * border) / spi(stitch, g)
         let long = 2 * Double(border) / g.spi + Double(body) / (g.rpi * stitch.rowFactor)
         let yards = Sizing.yards(squareInches: wide * long, spi: g.spi, factor: stitch.yarnFactor)
+        if noun != "blanket" {
+            return pattern(b, estimate: yards, yarnNote: ", cotton for a cloth that scrubs", tools: ["\(g.needle.label) needles"] + tools(stitch) + ["Tapestry needle"], finished: "\(Sizing.inches(wide)) wide, \(Sizing.inches(long)) long", gauge: g)
+        }
         return pattern(b, estimate: yards, tools: [longCircular(caston, g, flat: true)] + tools(stitch) + ["Tapestry needle"], finished: "\(Sizing.inches(wide)) wide, \(Sizing.inches(long)) long", gauge: g)
     }
 

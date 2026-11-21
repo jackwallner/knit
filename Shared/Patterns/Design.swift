@@ -33,6 +33,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     case pompomBonnet, beret
     case dropShoulder, keyholeScarf, slippers, babyBooties
     case toeUpSocks, fingerlessMitts, babyCardigan, topDownBeanie, twistedHeadband, poncho, christmasStocking
+    case washcloth
 
     enum Shelf: String, CaseIterable, Identifiable, Sendable {
         case hats = "Hats"
@@ -111,11 +112,18 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .twistedHeadband: "Twisted Headband"
         case .poncho: "Poncho"
         case .christmasStocking: "Christmas Stocking"
+        case .washcloth: "Bordered Washcloth"
         }
     }
 
     /// English words a search should find the design by beyond its name: "christmas" searches as "holiday".
-    var searchWords: String { self == .christmasStocking ? "holiday" : "" }
+    var searchWords: String {
+        switch self {
+        case .christmasStocking: "holiday"
+        case .washcloth: "dishcloth facecloth"
+        default: ""
+        }
+    }
 
     /// The name in the knitter's language. `name` stays English, as the tests and saved plans know it.
     var title: String { Loc.text(name) }
@@ -124,7 +132,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .balaclava, .earflapHat, .cabledBeanie, .pompomBonnet, .beret, .topDownBeanie: .hats
         case .garterScarf, .ribbedScarf, .seedScarf, .ribbedCowl, .seedCowl, .chunkyCowl, .neckScarf, .rectangularWrap, .keyholeScarf, .poncho: .scarves
-        case .borderedBlanket, .garterBlanket, .dishcloth, .basketweaveBlanket, .pillowCover, .marketBag, .christmasStocking: .home
+        case .borderedBlanket, .garterBlanket, .dishcloth, .basketweaveBlanket, .pillowCover, .marketBag, .christmasStocking, .washcloth: .home
         case .earWarmer, .handwarmers, .legWarmers, .triangleShawl, .cableHeadband, .crescentShawl, .mittens, .cuffDownSocks, .slippers, .babyBooties, .toeUpSocks, .fingerlessMitts, .twistedHeadband: .accessories
         case .raglanPullover, .raglanCardigan, .sweaterVest, .kidsRaglan, .dropShoulder, .babyCardigan: .sweaters
         }
@@ -132,7 +140,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
 
     var level: Level {
         switch self {
-        case .garterScarf, .garterBlanket, .ribbedScarf, .seedScarf, .keyholeScarf, .slippers, .twistedHeadband, .poncho: .beginner
+        case .garterScarf, .garterBlanket, .ribbedScarf, .seedScarf, .keyholeScarf, .slippers, .twistedHeadband, .poncho, .washcloth: .beginner
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .borderedBlanket, .earWarmer, .legWarmers, .triangleShawl, .chunkyCowl, .neckScarf, .dishcloth, .handwarmers: .easy
         case .earflapHat, .basketweaveBlanket, .rectangularWrap, .crescentShawl, .marketBag, .pillowCover, .mittens: .easy
         case .pompomBonnet, .beret, .dropShoulder, .babyBooties, .fingerlessMitts, .topDownBeanie: .easy
@@ -174,7 +182,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .neckScarf: .kerchief
         case .balaclava: .hood
         case .borderedBlanket, .garterBlanket: .blanket
-        case .dishcloth: .cloth
+        case .dishcloth, .washcloth: .cloth
         case .earWarmer, .cableHeadband, .twistedHeadband: .band
         case .handwarmers, .fingerlessMitts: .mitts
         case .legWarmers: .tubes
@@ -250,6 +258,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .twistedHeadband: .plum
         case .poncho: .oat
         case .christmasStocking: .madder
+        case .washcloth: .indigo
         }
     }
 
@@ -280,7 +289,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [Measure(key: "around", label: "Around", range: 18...60, step: 1), Measure(key: "height", label: "Height", range: 5...16, step: 0.5)]
         case .borderedBlanket, .garterBlanket, .basketweaveBlanket:
             [Measure(key: "width", label: "Width", range: 20...70, step: 1), Measure(key: "length", label: "Length", range: 20...90, step: 1)]
-        case .dishcloth:
+        case .dishcloth, .washcloth:
             [Measure(key: "side", label: "Side", range: 6...12, step: 0.5)]
         case .earWarmer, .cableHeadband, .twistedHeadband:
             [Measure(key: "head", label: "Head", range: 15...25, step: 0.5), Measure(key: "width", label: "Width", range: 2.5...5, step: 0.25)]
@@ -335,7 +344,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [NamedSize(name: "Snug", values: ["around": 22, "height": 8]), NamedSize(name: "Classic", values: ["around": 26, "height": 10]), NamedSize(name: "Infinity", values: ["around": 52, "height": 9])]
         case .borderedBlanket, .garterBlanket, .basketweaveBlanket:
             [NamedSize(name: "Stroller", values: ["width": 30, "length": 35]), NamedSize(name: "Crib", values: ["width": 36, "length": 45]), NamedSize(name: "Throw", values: ["width": 48, "length": 60])]
-        case .dishcloth:
+        case .dishcloth, .washcloth:
             [("Small", 7), ("Classic", 8.5), ("Large", 10)].map { NamedSize(name: $0.0, values: ["side": $0.1]) }
         case .twistedHeadband:
             [("Child", 20), ("Adult", 22), ("Large", 23.5)].map { NamedSize(name: $0.0, values: ["head": $0.1, "width": 4]) }
@@ -442,6 +451,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .borderedBlanket: return Engines.blanket(bordered: true, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
         case .garterBlanket: return Engines.blanket(bordered: false, width: value("width"), length: value("length"), gauge: gauge, fit: fit)
         case .dishcloth: return Engines.dishcloth(side: value("side"), gauge: gauge)
+        case .washcloth: return Engines.washcloth(side: value("side"), gauge: gauge, fit: fit)
         case .earWarmer: return Engines.earWarmer(head: value("head"), width: value("width"), gauge: gauge, fit: fit)
         case .handwarmers: return Engines.handwarmers(hand: value("hand"), gauge: gauge, fit: fit)
         case .legWarmers: return Engines.legWarmers(calf: value("calf"), length: value("length"), gauge: gauge)
