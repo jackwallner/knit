@@ -31,7 +31,7 @@ struct Topical: Identifiable, Hashable, Sendable {
     static let featureLevel = 2
 
     /// Shapes a stitch pattern can be worked on.
-    static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth, .rectangularWrap]
+    static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth, .rectangularWrap, .handwarmers]
 
     /// Shapes a record may build on: the ones colorwork has been taught.
     static let bases: [Design] = [

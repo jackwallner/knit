@@ -88,14 +88,14 @@ cached on the phone, so the app does not carry them.
 | 37 | Kids' Cardigan | Sweaters | Children 2 to 12, intermediate | New shape: cardigan engine at child sizes | verified |
 | 38 | Linen Stitch Scarf | Scarves & Cowls | Adults, easy | Stitch: linen stitch on scarf | verified |
 | 39 | Baby Socks | Baby | Babies, intermediate | New shape: sock engine at baby sizes | verified |
-| 40 | Waffle Blanket | Blankets | Baby to throw, beginner | Stitch: waffle on bordered blanket | planned |
-| 41 | Mug Cozy | Home | Gift, beginner | New shape | planned |
-| 42 | Houndstooth Beanie | Hats | Adults, intermediate | Colorwork: 4-wide repeat | planned |
-| 43 | Capelet | Shawls & Wraps | Adults, easy | New shape: top-down | planned |
-| 44 | Double Moss Cowl | Scarves & Cowls | Anyone, beginner | Stitch | planned |
-| 45 | Placemat | Home | Anyone, beginner | New shape | planned |
-| 46 | Mini Stocking Ornament | Holiday | Gift, easy | New shape | planned |
-| 47 | Rope Cable Mitts | Hands | Adults, intermediate | Stitch: rope cable on handwarmers | planned |
+| 40 | Waffle Blanket | Blankets | Baby to throw, beginner | Stitch: waffle on bordered blanket | verified |
+| 41 | Mug Cozy | Home | Gift, easy | New shape: seed stitch band buttoned around the handle | verified |
+| 42 | Houndstooth Beanie | Hats | Adults, intermediate | Colorwork: 4-wide repeat | verified |
+| 43 | Capelet | Shawls & Wraps | Adults, easy | New shape: top-down | verified |
+| 44 | Double Moss Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
+| 45 | Placemat | Home | Anyone, beginner | New shape | verified |
+| 46 | Mini Stocking Ornament | Holiday | Gift, easy | New shape | verified |
+| 47 | Rope Cable Mitts | Hands | Adults, intermediate | Stitch: rope cable on handwarmers (stitched mitts get an afterthought thumb) | verified |
 | 48 | Short-Sleeve Raglan Tee | Sweaters | Adults, intermediate | New shape: raglan with short sleeves | planned |
 | 49 | Honeycomb Beanie | Hats | Adults, easy | Stitch | planned |
 | 50 | Waffle Washcloth | Home | Anyone, beginner | Stitch | planned |

@@ -464,6 +464,7 @@ enum Engines {
 
     /// Fingerless mitts with a slit for the thumb, worked as a pair.
     static func handwarmers(hand: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedMitts(stitch, hand: hand, gauge: g) }
         let caston = Sizing.stitches(hand * 0.9, per: g.spi, multiple: lcm(4, fit.multiple), minimum: 16)
         var b = PlanBuilder()
         for mitt in 1...2 {
@@ -942,7 +943,8 @@ enum Engines {
     /// count, and a wedge toe grafted shut. The round starts at the side until the heel, then at the instep.
     /// `stocking` makes one Christmas stocking instead of a pair: knit to its own width, with a deep cuff,
     /// a braided loop to hang it by, and no allowance for a foot to stretch it.
-    static func socks(foot around: Double, length footLength: Double, leg: Double, gauge g: Gauge, stocking: Bool = false) -> Sock {
+    /// `loop` is the length of each strand braided into the hanging loop.
+    static func socks(foot around: Double, length footLength: Double, leg: Double, gauge g: Gauge, stocking: Bool = false, loop: Double = 16) -> Sock {
         // A tenth smaller than the foot, so the sock stays up and does not bag.
         let stitches = Sizing.stitches(stocking ? around : around * 0.9, per: g.spi, multiple: 4, minimum: 16)
         let heel = stitches / 2
@@ -998,7 +1000,7 @@ enum Engines {
         }
         if stocking {
             b.section = "Finishing"
-            b.action("Cut three strands of yarn, each \(Sizing.inches(16)) long. Knot them together at one end, braid them, and knot the other end. Fold the braid in half and sew both knots inside the cuff at the back of the leg, above the heel, so the loop stands above the edge. Weave in the ends.")
+            b.action("Cut three strands of yarn, each \(Sizing.inches(loop)) long. Knot them together at one end, braid them, and knot the other end. Fold the braid in half and sew both knots inside the cuff at the back of the leg, above the heel, so the loop stands above the edge. Weave in the ends.")
         }
         let length = heelBack + Double(afterPickUp + toe.count) / g.rpi
         let yards = Sizing.yards(squareInches: around * (stocking ? 1 : 0.9) * (leg + footLength + 2) * (stocking ? 1 : 2), spi: g.spi, factor: 1.1)

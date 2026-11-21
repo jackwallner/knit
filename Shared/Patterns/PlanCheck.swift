@@ -89,6 +89,7 @@ enum TopicalCheck {
         // The slouch's own body, which a small head at a heavy weight keeps 8 stitches wider than its brim.
         case .slouchHat: wanted = Double(base.plan(measures: input, gauge: g).steps.compactMap(\.stitches).max() ?? 0) / g.spi
         case .earWarmer: wanted = head * 0.9
+        case .handwarmers: wanted = (input["hand"] ?? 0) * 0.9
         case .garterScarf, .borderedBlanket, .rectangularWrap: wanted = input["width"] ?? 0
         case .ribbedCowl: wanted = input["around"] ?? 0
         case .washcloth: wanted = input["side"] ?? 0

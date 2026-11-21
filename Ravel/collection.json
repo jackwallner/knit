@@ -703,6 +703,124 @@
       ],
       "tag": "Texture",
       "photo": "photos/linen-stitch-scarf.jpg"
+    },
+    {
+      "id": "waffle-blanket",
+      "title": "Waffle Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8C9AE"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-blanket.jpg"
+    },
+    {
+      "id": "houndstooth-beanie",
+      "title": "Houndstooth Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "black",
+          "hex": "#2A2A2E"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B."
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/houndstooth-beanie.jpg"
+    },
+    {
+      "id": "double-moss-cowl",
+      "title": "Double Moss Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "mustard",
+          "hex": "#C99A2E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-cowl.jpg"
+    },
+    {
+      "id": "rope-cable-mitts",
+      "title": "Rope Cable Mitts",
+      "base": "handwarmers",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "heather grey",
+          "hex": "#8E8A86"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-mitts.jpg"
     }
   ]
 }

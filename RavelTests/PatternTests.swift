@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 59)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 81)
+        XCTAssertEqual(Design.allCases.count, 63)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 89)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -939,6 +939,20 @@ final class PatternTests: XCTestCase {
     func testBabySocksAskForFingering() {
         let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
         XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
+    /// The capelet's collar pulls over the head, and its hem rib comes out whole.
+    func testTheCapeletCollarPullsOverTheHead() {
+        for input in inputs(.capelet) {
+            for gauge in gauges {
+                let plan = Design.capelet.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertGreaterThanOrEqual(Double(counts.first ?? 0) / gauge.spi, 17.5, label)
+                XCTAssertEqual((counts.last ?? 1) % 4, 0, label)
+                XCTAssertGreaterThan(Double(counts.last ?? 0) / gauge.spi, input["chest"] ?? 0, label)
+            }
+        }
     }
 
     func testMittenThumbGussetAddsUp() {

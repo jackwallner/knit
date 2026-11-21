@@ -163,4 +163,45 @@ extension Engines {
         return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(Sizing.cable(16)) circular needle"] + tools(stitch) + ["Stitch marker", "Tapestry needle"],
                        finished: "\(Sizing.inches(around)) around, to fit a \(Sizing.inches(head)) head, \(Sizing.inches(wide)) wide", gauge: g, round: true)
     }
+
+    /// Fingerless mitts with the stitch pattern all the way around. The thumb is an afterthought: waste yarn
+    /// knit across its stitches marks it, so every round stays in the round and the pattern never breaks.
+    static func texturedMitts(_ stitch: Stitch, hand: Double, gauge g: Gauge) -> PatternPlan {
+        // A k1, p1 rib, so the count needs only an even multiple of the repeat and lands near the hand.
+        let step = Stitch.lcm(stitch.multiple, 2)
+        let caston = stitch.count(near: hand * 0.9 * spi(stitch, g), flat: false, multiple: 2, repeats: (16 + step - 1) / step)
+        let rib = "*K1, p1; repeat from * around"
+        guard caston >= 16, let texts = stitch.texts(stitches: caston, flat: false) else { return handwarmers(hand: hand, gauge: g) }
+        let cuff = Sizing.rows(hand * 0.33, per: g.rpi, minimum: 4)
+        let lower = stitch.rows(hand * 0.2, rpi: g.rpi, flat: false)
+        let upper = stitch.rows(hand * 0.35, rpi: g.rpi, flat: false)
+        let top = Sizing.rows(hand * 0.1, per: g.rpi, minimum: 3)
+        // About a third of the hand around the thumb, picked up from both sides of the waste yarn.
+        let thumb = max(4, Int((hand * 0.18 * g.spi).rounded()))
+        let thumbRounds = Sizing.rows(min(1, hand * 0.12), per: g.rpi, minimum: 3)
+        var b = PlanBuilder()
+        for mitt in 1...2 {
+            let name = "Mitt \(mitt)"
+            b.section = "\(name) · Cuff"
+            b.action("Cast on \(caston) stitches. Join in the round without twisting and place a marker.", stitches: caston)
+            b.work([rib], rows: cuff, stitches: caston)
+            b.section = "\(name) · Hand"
+            b.work(texts, rows: lower, stitches: caston)
+            b.action("With waste yarn, knit the first \(thumb) stitches of the round, then slip them back to the left needle. The next round works them again with the main yarn.")
+            b.section = "\(name) · Upper Hand"
+            b.work(texts, rows: upper, stitches: caston)
+            b.section = "\(name) · Top"
+            b.work([rib], rows: top, stitches: caston)
+            b.action("Bind off loosely in pattern.")
+            b.section = "\(name) · Thumb"
+            b.action("Pick up the \(thumb) stitches below the waste yarn and the \(thumb) above it, then take out the waste yarn. Join the yarn and pick up 1 more stitch at each corner. Place a marker.", stitches: 2 * thumb + 2)
+            b.row("*K\(thumb - 1), k2tog; repeat from * once more", stitches: 2 * thumb)
+            b.work(["*K1, p1; repeat from * around"], rows: thumbRounds, stitches: 2 * thumb)
+            b.action("Bind off loosely in pattern. Weave in the ends, closing any gap at the corners of the thumb.")
+        }
+        let long = Double(cuff + top) / g.rpi + Double(lower + upper) / (g.rpi * stitch.rowFactor)
+        let yards = Sizing.yards(squareInches: hand * long * 2, spi: g.spi, factor: stitch.yarnFactor * 1.15)
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop"] + tools(stitch) + ["Stitch marker", "Waste yarn", "Tapestry needle"],
+                       finished: "\(Sizing.inches(Double(caston) / spi(stitch, g))) around, to fit a \(Sizing.inches(hand)) hand, \(Sizing.inches(long)) long", gauge: g, round: true)
+    }
 }

@@ -97,4 +97,38 @@ extension Engines {
         let plan = pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "A hood \(Sizing.inches(seam)) from the top to the neck, with ends \(Sizing.inches(Double(end) / g.spi)) wide hanging \(Sizing.inches(Double(ends) / rpi)) below it", gauge: g)
         return HoodedScarf(plan: plan, end: end, hood: hood, seam: seam)
     }
+
+    /// A capelet from the top down in the round: a rib collar wide enough to pull over the head, six
+    /// increase rounds spread down the yoke out to the shoulders and arms, and a ribbed hem.
+    static func capelet(chest: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+        let collar = Sizing.stitches(18 + (chest - 28) * 0.1, per: g.spi, multiple: 4, minimum: 48)
+        let hemTarget = Sizing.stitches(chest * 1.3 + 4, per: g.spi)
+        let step = max(4, Int((Double(hemTarget - collar) / 6 / 4).rounded()) * 4)
+        let hem = collar + 6 * step
+        let rib = "*K2, p2; repeat from * around"
+        let collarRounds = Sizing.rows(min(3, length * 0.25), per: g.rpi, minimum: 6)
+        let hemRounds = Sizing.rows(1, per: g.rpi, minimum: 4)
+        let yoke = max(12, Sizing.rows(length, per: g.rpi) - collarRounds - hemRounds)
+        let spacing = yoke / 6
+        var b = PlanBuilder()
+        b.section = "Collar"
+        b.action("Cast on \(collar) stitches loosely. Join in the round without twisting and place a marker.", stitches: collar)
+        b.work([rib], rows: collarRounds, stitches: collar)
+        b.section = "Yoke"
+        var count = collar
+        for index in 0..<6 {
+            b.row(spread(step, over: count), stitches: count + step)
+            count += step
+            b.work(["Knit"], rows: (index == 5 ? yoke - 5 * spacing : spacing) - 1, stitches: count)
+        }
+        b.section = "Hem"
+        b.work([rib], rows: hemRounds, stitches: hem)
+        b.action("Bind off loosely in pattern.")
+        b.section = "Finishing"
+        b.action("Weave in the ends and block the capelet over a towel shaped like your shoulders.")
+        let tall = Double(collarRounds + yoke + hemRounds) / g.rpi
+        let yards = Sizing.yards(squareInches: Double(collar + hem) / 2 / g.spi * tall, spi: g.spi, factor: 1.15)
+        let needles = ["\(g.needle.label) \(Sizing.cable(16)) circular needle for the collar", "\(g.needle.label) \(Sizing.cable(32)) circular needle for when the stitches crowd the short one"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(Double(collar) / g.spi)) around the collar, \(Sizing.inches(Double(hem) / g.spi)) around the hem, \(Sizing.inches(tall)) long, for a \(Sizing.inches(chest)) chest", gauge: g, round: true)
+    }
 }

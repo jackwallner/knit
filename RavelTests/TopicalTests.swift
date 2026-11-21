@@ -43,8 +43,8 @@ final class TopicalTests: XCTestCase {
         XCTAssertNil(parsed(#","requires":3,"stitch":"waffle""#)?.topical, "A newer format is skipped")
         let chart = #","requires":2,"stitch":"waffle","chart":{"placement":"repeat","rows":["AB"]}"#
         XCTAssertNil(parsed(chart, palette: ##"[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}]"##)?.topical, "No chart on a stitch pattern")
-        let mitts = Topical.parse(Data(##"{"designs":[{"id":"moss-mitts","title":"Moss Mitts","base":"handwarmers","requires":2,"stitch":"seed","palette":[{"name":"gray","hex":"#888888"}],"weights":["worsted"],"tag":"New"}]}"##.utf8)).first
-        XCTAssertNil(mitts?.topical, "Handwarmers do not take a stitch pattern yet")
+        let cowl = Topical.parse(Data(##"{"designs":[{"id":"moss-cowl","title":"Moss Cowl","base":"seedCowl","requires":2,"stitch":"seed","palette":[{"name":"gray","hex":"#888888"}],"weights":["worsted"],"tag":"New"}]}"##.utf8)).first
+        XCTAssertNil(cowl?.topical, "The seed cowl does not take a stitch pattern")
     }
 
     /// The same check the script and CI run: every size, both ends of every measurement, every allowed weight.

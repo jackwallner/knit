@@ -68,4 +68,50 @@ extension Engines {
             : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "\(g.needle.label) double-pointed needles, or a long circular for magic loop, for the crown"]
         return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(Double(stitches) / g.spi)) around, to fit a \(Sizing.inches(around)) teapot, \(Sizing.inches(tall)) tall", gauge: g)
     }
+
+    /// A seed stitch band that wraps a mug: worked flat across its height, with a buttonhole at each corner
+    /// of the end, so it buttons over the other end with the handle between the two buttons.
+    static func mugCozy(around: Double, height: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = Sizing.stitches(height, per: g.spi, multiple: 2, extra: 1, minimum: 11)
+        let seed = "*K1, p1; repeat from * to the last stitch, k1"
+        let rate = g.rpi * 1.1
+        // Around the mug, and the ends overlap by the buttons' width.
+        let rows = Sizing.rows(around + 0.75, per: rate, even: true, minimum: 12)
+        var b = PlanBuilder()
+        b.section = "Band"
+        b.action("Cast on \(stitches) stitches.", stitches: stitches)
+        b.work([seed], rows: rows - 3, stitches: stitches)
+        b.row("K1, p1, yo, k2tog, work in seed stitch to the last 4 stitches, yo, k2tog, p1, k1", stitches: stitches)
+        b.work([seed], rows: 2, stitches: stitches)
+        b.action("Bind off in pattern.")
+        b.section = "Finishing"
+        b.action("Weave in the ends. Wrap the band around the mug with the handle between the two buttonholes, the buttonhole end over the cast-on end, and sew a button to the cast-on end under each buttonhole.")
+        let long = Double(rows) / rate
+        let yards = Sizing.yards(squareInches: height * long, spi: g.spi, factor: 1.3)
+        return pattern(b, estimate: yards, yarnNote: ", cotton or wool", tools: ["\(g.needle.label) needles", "2 buttons, about \(Sizing.inches(0.5)) across", "Tapestry needle"], finished: "\(Sizing.inches(Double(stitches) / g.spi)) tall, \(Sizing.inches(long)) long, to wrap a \(Sizing.inches(around)) mug", gauge: g)
+    }
+
+    /// A placemat in seed stitch, which lies flat and stands up to washing, inside a garter border.
+    /// Worked flat from one short edge to the other.
+    static func placemat(width: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+        let border = max(3, Int((0.6 * g.spi).rounded()))
+        // An odd count inside the border, so every seed stitch row starts and ends with a knit.
+        let inside = Sizing.stitches(width - 2 * Double(border) / g.spi, per: g.spi, multiple: 2, extra: 1, minimum: 11)
+        let caston = inside + 2 * border
+        let rate = g.rpi * 1.1
+        let body = Sizing.rows(length - 4 * Double(border) / (g.spi * 2), per: rate, even: true, minimum: 4)
+        var b = PlanBuilder()
+        b.section = "Bottom Border"
+        b.action("Cast on \(caston) stitches.", stitches: caston)
+        b.work(["Knit"], rows: border * 2, stitches: caston)
+        b.section = "Body"
+        b.work(["K\(border), *k1, p1; repeat from * to the last \(border + 1) stitches, k\(border + 1)"], rows: body, stitches: caston)
+        b.section = "Top Border"
+        b.work(["Knit"], rows: border * 2, stitches: caston)
+        b.section = "Finishing"
+        b.action("Bind off loosely. Weave in the ends and block the placemat flat.")
+        let long = 4 * Double(border) / (g.spi * 2) + Double(body) / rate
+        let yards = Sizing.yards(squareInches: width * long, spi: g.spi, factor: 1.25)
+        return pattern(b, estimate: yards, yarnNote: ", cotton so it washes well", tools: [Double(caston) / g.spi > 14 ? "\(g.needle.label) \(Sizing.cable(24)) circular needle, worked flat" : "\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(Double(caston) / g.spi)) by \(Sizing.inches(long))", gauge: g)
+    }
 }

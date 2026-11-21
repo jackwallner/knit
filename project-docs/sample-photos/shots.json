@@ -332,6 +332,38 @@
   "babySocks": {
    "camera": "snap",
    "scene": "a pair laid side by side on a folded white muslin blanket, a wooden teething ring beside them"
+  },
+  "waffle-blanket": {
+   "camera": "overcast",
+   "scene": "draped over the end of a bed with white sheets, soft daylight from a window"
+  },
+  "mugCozy": {
+   "camera": "lamp",
+   "scene": "on a white ceramic mug of coffee on a wooden desk beside an open notebook"
+  },
+  "houndstooth-beanie": {
+   "camera": "outdoor",
+   "scene": "worn by a person in a camel wool coat on a snowy city sidewalk, seen from the front, cropped at the shoulders"
+  },
+  "capelet": {
+   "camera": "outdoor",
+   "scene": "worn over a white blouse by a person standing in a garden in early autumn, seen from the front, cropped at the waist"
+  },
+  "double-moss-cowl": {
+   "camera": "sun",
+   "scene": "worn by a person in a denim jacket in a sunny park, seen from the front, cropped at the chest"
+  },
+  "placemat": {
+   "camera": "overcast",
+   "scene": "under a white plate with a fork and a linen napkin on a wooden dining table"
+  },
+  "miniStocking": {
+   "camera": "lamp",
+   "scene": "hanging from a branch of a lit Christmas tree, warm fairy lights blurred behind"
+  },
+  "rope-cable-mitts": {
+   "camera": "snap",
+   "scene": "worn by hands holding a paper cup of coffee outdoors on a cold morning, close up"
   }
  }
 }

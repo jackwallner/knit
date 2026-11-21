@@ -115,6 +115,23 @@ enum GarmentShape {
                 cuff.closeSubpath()
                 path.addPath(cuff)
             }
+        case .mugCozy:
+            // A band wrapped around a mug, the handle out to the side between two buttons.
+            path.addRoundedRect(in: box(0.16, 0.24, 0.52, 0.56), cornerWidth: unit * 0.04, cornerHeight: unit * 0.04)
+            let handle = CGPath(roundedRect: box(0.62, 0.34, 0.24, 0.34), cornerWidth: unit * 0.12, cornerHeight: unit * 0.12, transform: nil)
+            path.addPath(handle.subtracting(CGPath(roundedRect: box(0.66, 0.42, 0.12, 0.18), cornerWidth: unit * 0.06, cornerHeight: unit * 0.06, transform: nil)).subtracting(CGPath(rect: box(0.6, 0.3, 0.08, 0.42), transform: nil)))
+        case .capelet:
+            // A ribbed collar over a bell that flares out across the shoulders.
+            path.addRoundedRect(in: box(0.38, 0.1, 0.24, 0.14), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02)
+            path.move(to: p(0.38, 0.22))
+            path.addLine(to: p(0.62, 0.22))
+            path.addCurve(to: p(0.92, 0.78), control1: p(0.74, 0.3), control2: p(0.88, 0.5))
+            path.addQuadCurve(to: p(0.08, 0.78), control: p(0.5, 0.88))
+            path.addCurve(to: p(0.38, 0.22), control1: p(0.12, 0.5), control2: p(0.26, 0.3))
+            path.closeSubpath()
+        case .placemat:
+            // A mat wider than it is tall, as it lies on the table.
+            path.addRoundedRect(in: box(0.08, 0.24, 0.84, 0.54), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
         case .coasters:
             // Two round coasters, one resting on the other.
             path.addPath(CGPath(ellipseIn: box(0.1, 0.3, 0.46, 0.46), transform: nil).union(CGPath(ellipseIn: box(0.44, 0.22, 0.46, 0.46), transform: nil)))
