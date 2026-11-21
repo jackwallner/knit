@@ -947,6 +947,91 @@
       ],
       "tag": "Texture",
       "photo": "photos/twisted-rib-scarf.jpg"
+    },
+    {
+      "id": "snowflake-cowl",
+      "title": "Snowflake Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cranberry",
+          "hex": "#9B2335"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B...B...",
+          "...B...B",
+          ".B.B.B..",
+          "..BBB...",
+          "BB.B.BB.",
+          "..BBB...",
+          ".B.B.B..",
+          "...B...B",
+          "B...B..."
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/snowflake-cowl.jpg"
+    },
+    {
+      "id": "broken-rib-beanie",
+      "title": "Broken Rib Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "heather",
+          "hex": "#8C7A8E"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-beanie.jpg"
+    },
+    {
+      "id": "rope-cable-blanket",
+      "title": "Rope Cable Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-blanket.jpg"
     }
   ]
 }

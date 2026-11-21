@@ -400,6 +400,18 @@
   "bandanaKerchief": {
    "camera": "sun",
    "scene": "laid flat on a picnic blanket beside a straw hat"
+  },
+  "snowflake-cowl": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck against a snowy fence line"
+  },
+  "broken-rib-beanie": {
+   "camera": "overcast",
+   "scene": "set on a stack of books by a rainy window"
+  },
+  "rope-cable-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a leather sofa"
   }
  }
 }

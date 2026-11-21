@@ -105,9 +105,9 @@ cached on the phone, so the app does not carry them.
 | 54 | Twisted Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | verified |
 | 55 | Hot Water Bottle Cover | Home | Gift, easy | New shape: top down, ribbed neck, side increases, three-needle bind off | verified |
 | 56 | Bandana Kerchief | Scarves & Cowls | Adults, beginner | New shape: small triangle with ties | verified |
-| 57 | Snowflake Cowl | Scarves & Cowls | Winter gift, intermediate | Colorwork | planned |
-| 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | planned |
-| 59 | Rope Cable Blanket | Blankets | Throw, intermediate | Stitch | planned |
+| 57 | Snowflake Cowl | Scarves & Cowls | Winter gift, intermediate | Colorwork | verified |
+| 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | verified |
+| 59 | Rope Cable Blanket | Blankets | Throw, intermediate | Stitch | verified |
 | 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | planned |
 | 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | planned |
 | 62 | Star Beanie | Hats | Anyone, intermediate | Colorwork | planned |
