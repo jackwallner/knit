@@ -1,0 +1,53 @@
+ok   Capelet: 6 sizes x 8 weights
+
+== Capelet, Small, Worsted, 310 yd
+18.75 in around the collar, 45.25 in around the hem, 10 in long, for a 32 in chest
+  About 310 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle for the collar
+  US 7 · 4.5 mm 32 in circular needle for when the stitches crowd the short one
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Collar x1 [84]: Cast on 84 stitches loosely. Join in the round without twisting and place a marker.
+Collar x15 [84]: *K2, p2; repeat from * around
+Yoke x1 [104]: Work (k5, M1) 4 times, then (k4, M1) 16 times
+Yoke x5 [104]: Knit
+Yoke x1 [124]: Work (k6, M1) 4 times, then (k5, M1) 16 times
+Yoke x5 [124]: Knit
+Yoke x1 [144]: Work (k7, M1) 4 times, then (k6, M1) 16 times
+Yoke x5 [144]: Knit
+Yoke x1 [164]: Work (k8, M1) 4 times, then (k7, M1) 16 times
+Yoke x5 [164]: Knit
+Yoke x1 [184]: Work (k9, M1) 4 times, then (k8, M1) 16 times
+Yoke x5 [184]: Knit
+Yoke x1 [204]: Work (k10, M1) 4 times, then (k9, M1) 16 times
+Yoke x8 [204]: Knit
+Hem x6 [204]: *K2, p2; repeat from * around
+Hem x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block the capelet over a towel shaped like your shoulders.
+
+== Capelet, Extra Large, Worsted, 540 yd
+20.5 in around the collar, 68.5 in around the hem, 12.5 in long, for a 50 in chest
+  About 540 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle for the collar
+  US 7 · 4.5 mm 32 in circular needle for when the stitches crowd the short one
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Collar x1 [92]: Cast on 92 stitches loosely. Join in the round without twisting and place a marker.
+Collar x18 [92]: *K2, p2; repeat from * around
+Yoke x1 [128]: Work (k3, M1) 20 times, then (k2, M1) 16 times
+Yoke x7 [128]: Knit
+Yoke x1 [164]: Work (k4, M1) 20 times, then (k3, M1) 16 times
+Yoke x7 [164]: Knit
+Yoke x1 [200]: Work (k5, M1) 20 times, then (k4, M1) 16 times
+Yoke x7 [200]: Knit
+Yoke x1 [236]: Work (k6, M1) 20 times, then (k5, M1) 16 times
+Yoke x7 [236]: Knit
+Yoke x1 [272]: Work (k7, M1) 20 times, then (k6, M1) 16 times
+Yoke x7 [272]: Knit
+Yoke x1 [308]: Work (k8, M1) 20 times, then (k7, M1) 16 times
+Yoke x10 [308]: Knit
+Hem x6 [308]: *K2, p2; repeat from * around
+Hem x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block the capelet over a towel shaped like your shoulders.

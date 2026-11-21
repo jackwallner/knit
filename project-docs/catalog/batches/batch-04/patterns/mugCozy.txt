@@ -1,0 +1,29 @@
+ok   Mug Cozy: 5 sizes x 8 weights
+
+== Mug Cozy, Small, Worsted, 40 yd
+3 in tall, 10.25 in long, to wrap a 9.5 in mug
+  About 40 yd of worsted weight yarn, cotton or wool
+  US 7 · 4.5 mm needles
+  2 buttons, about 0.5 in across
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Band x1 [13]: Cast on 13 stitches.
+Band x65 [13]: *K1, p1; repeat from * to the last stitch, k1
+Band x1 [13]: K1, p1, yo, k2tog, work in seed stitch to the last 4 stitches, yo, k2tog, p1, k1
+Band x2 [13]: *K1, p1; repeat from * to the last stitch, k1
+Band x1: Bind off in pattern.
+Finishing x1: Weave in the ends. Wrap the band around the mug with the handle between the two buttonholes, the buttonhole end over the cast-on end, and sew a button to the cast-on end under each buttonhole.
+
+== Mug Cozy, Large, Worsted, 60 yd
+3.75 in tall, 13.25 in long, to wrap a 12.5 in mug
+  About 60 yd of worsted weight yarn, cotton or wool
+  US 7 · 4.5 mm needles
+  2 buttons, about 0.5 in across
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Band x1 [17]: Cast on 17 stitches.
+Band x85 [17]: *K1, p1; repeat from * to the last stitch, k1
+Band x1 [17]: K1, p1, yo, k2tog, work in seed stitch to the last 4 stitches, yo, k2tog, p1, k1
+Band x2 [17]: *K1, p1; repeat from * to the last stitch, k1
+Band x1: Bind off in pattern.
+Finishing x1: Weave in the ends. Wrap the band around the mug with the handle between the two buttonholes, the buttonhole end over the cast-on end, and sew a button to the cast-on end under each buttonhole.
