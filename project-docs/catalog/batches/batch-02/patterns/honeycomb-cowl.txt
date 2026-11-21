@@ -1,0 +1,27 @@
+ok   Ribbed Cowl: 5 sizes x 8 weights
+
+== honeycomb-cowl, Snug, Worsted, 200 yd
+22 in around, 8 in tall
+  About 200 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [104]: Cast on 104 stitches. Join in the round without twisting and place a marker.
+Cowl x4 [104]: Purl / Knit
+Cowl x52 [104]: *K1, sl1 wyif; repeat from * around / Knit / *Sl1 wyif, k1; repeat from * around / Knit
+Cowl x4 [104]: Purl / Knit
+Finishing x1: Bind off loosely purlwise. Weave in the ends.
+
+== honeycomb-cowl, Infinity, Worsted, 520 yd
+52 in around, 9.25 in tall
+  About 520 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [246]: Cast on 246 stitches. Join in the round without twisting and place a marker.
+Cowl x4 [246]: Purl / Knit
+Cowl x60 [246]: *K1, sl1 wyif; repeat from * around / Knit / *Sl1 wyif, k1; repeat from * around / Knit
+Cowl x4 [246]: Purl / Knit
+Finishing x1: Bind off loosely purlwise. Weave in the ends.

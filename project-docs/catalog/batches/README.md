@@ -7,3 +7,4 @@ One folder every 10 designs: `contact-sheet.png` (sample photo, drawn preview, t
 | Batch | Designs | App size (Release, iPhone) |
 |---|---|---|
 | 1 | Toe-Up Socks, Fingerless Mitts, Double Moss Scarf, Baby Cardigan, Top-Down Beanie, Twisted Headband, Poncho, Christmas Stocking, Bordered Washcloth, Waffle Beanie | 66 MB app, 48 MB compressed. New designs add code and strings only; their photos load from the site. |
+| 2 | Snowflake Beanie, Baby Knot Hat, Asymmetric Shawl, Broken Rib Cowl, Bandana Cowl, Feather and Fan Scarf, Double Moss Blanket, Basketweave Washcloth, Arm Warmers, Honeycomb Cowl | Same as batch 1 within rounding: code, strings and records only. |

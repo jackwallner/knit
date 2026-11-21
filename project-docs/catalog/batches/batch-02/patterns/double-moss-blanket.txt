@@ -1,0 +1,25 @@
+ok   Bordered Blanket: 5 sizes x 8 weights
+
+== double-moss-blanket, Stroller, Aran, 910 yd
+30 in wide, 35 in long
+  About 910 yd of Aran weight yarn
+  US 9 · 5.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 16 stitches and 22 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [120]: Cast on 120 stitches.
+Bottom Border x10 [120]: Knit
+Body x196 [120]: K5, *k2, p2; repeat from * to the last 7 stitches, k7 / K5, *p2, k2; repeat from * to the last 7 stitches, p2, k5 / K5, *p2, k2; repeat from * to the last 7 stitches, p2, k5 / K5, *k2, p2; repeat from * to the last 7 stitches, k7
+Top Border x10 [120]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== double-moss-blanket, Throw, Aran, 2480 yd
+48 in wide, 60 in long
+  About 2,480 yd of Aran weight yarn
+  US 9 · 5.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 16 stitches and 22 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [192]: Cast on 192 stitches.
+Bottom Border x10 [192]: Knit
+Body x348 [192]: K5, *k2, p2; repeat from * to the last 7 stitches, k7 / K5, *p2, k2; repeat from * to the last 7 stitches, p2, k5 / K5, *p2, k2; repeat from * to the last 7 stitches, p2, k5 / K5, *k2, p2; repeat from * to the last 7 stitches, k7
+Top Border x10 [192]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
