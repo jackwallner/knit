@@ -1,0 +1,21 @@
+ok   Garter Scarf: 5 sizes x 8 weights
+
+== striped-scarf, Child, Worsted, 310 yd
+5 in wide, 48 in long
+  About 310 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [23]: Cast on 23 stitches.
+Scarf x432 [23]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== striped-scarf, Long, Worsted, 760 yd
+8 in wide, 76 in long
+  About 760 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [36]: Cast on 36 stitches.
+Scarf x684 [36]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

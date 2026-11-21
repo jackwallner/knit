@@ -1,0 +1,25 @@
+ok   Bordered Blanket: 5 sizes x 8 weights
+
+== chevron-lace-blanket, Stroller, Worsted, 920 yd
+31 in wide, 35 in long
+  About 920 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [133]: Cast on 133 stitches.
+Bottom Border x12 [133]: Knit
+Body x194 [133]: K7, *yo, k3, sk2p, k3, yo, k1; repeat from * to the last 6 stitches, k6 / K6, purl to the last 6 stitches, k6
+Top Border x12 [133]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the blanket to open up the lace.
+
+== chevron-lace-blanket, Throw, Worsted, 2400 yd
+47.25 in wide, 60 in long
+  About 2,400 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [203]: Cast on 203 stitches.
+Bottom Border x12 [203]: Knit
+Body x344 [203]: K7, *yo, k3, sk2p, k3, yo, k1; repeat from * to the last 6 stitches, k6 / K6, purl to the last 6 stitches, k6
+Top Border x12 [203]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the blanket to open up the lace.
