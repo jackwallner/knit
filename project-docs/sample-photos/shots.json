@@ -384,6 +384,10 @@
   "pouch": {
    "camera": "sun",
    "scene": "standing on a wooden dresser beside a small dish of rings"
+  },
+  "color-block-beanie": {
+   "camera": "outdoor",
+   "scene": "worn on a snowy park bench, set down beside a thermos"
   }
  }
 }

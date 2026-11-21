@@ -885,6 +885,45 @@
       ],
       "tag": "Lace",
       "photo": "photos/feather-and-fan-wrap.jpg"
+    },
+    {
+      "id": "color-block-beanie",
+      "title": "Color-Block Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#E3B5A4"
+        },
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "C",
+          "inches": 2.5
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Color Block",
+      "photo": "photos/color-block-beanie.jpg"
     }
   ]
 }
