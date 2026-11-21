@@ -1,0 +1,39 @@
+ok   Drawstring Pouch: 5 sizes x 8 weights
+
+== Drawstring Pouch, Small, Worsted, 60 yd
+4.5 in wide, 5 in tall, laid flat
+  About 60 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  A spare needle in the same size for the bind off
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Top x1 [40]: Cast on 40 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Top x5 [40]: *K2, p2; repeat from * around
+Top x3 [40]: Knit
+Top x1 [40]: *K2, yo, k2tog; repeat from * around
+Body x21 [40]: Knit
+Base x1: Turn the pouch inside out. Put the first 20 stitches on one needle and the last 20 on another, held parallel.
+Base x1: Join the two sides with a three-needle bind off. Turn the pouch right side out.
+Cord x1: Cut two strands of yarn, each 68.75 in long. Knot them together at both ends, anchor one end and twist the other until the strands kink back on themselves.
+Cord x1: Fold the twisted strands in half and let them twist around each other into a cord about 23 in long. Knot the loose end.
+Finishing x1: Weave in the ends. Weave the cord in and out through the eyelets all the way around, so both ends come out side by side. Pull the cord to close the pouch and tie it in a bow.
+
+== Drawstring Pouch, Large, Worsted, 170 yd
+8 in wide, 10 in tall, laid flat
+  About 170 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle
+  A spare needle in the same size for the bind off
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Top x1 [72]: Cast on 72 stitches. Join in the round without twisting and place a marker.
+Top x5 [72]: *K2, p2; repeat from * around
+Top x3 [72]: Knit
+Top x1 [72]: *K2, yo, k2tog; repeat from * around
+Body x51 [72]: Knit
+Base x1: Turn the pouch inside out. Put the first 36 stitches on one needle and the last 36 on another, held parallel.
+Base x1: Join the two sides with a three-needle bind off. Turn the pouch right side out.
+Cord x1: Cut two strands of yarn, each 90 in long. Knot them together at both ends, anchor one end and twist the other until the strands kink back on themselves.
+Cord x1: Fold the twisted strands in half and let them twist around each other into a cord about 30 in long. Knot the loose end.
+Finishing x1: Weave in the ends. Weave the cord in and out through the eyelets all the way around, so both ends come out side by side. Pull the cord to close the pouch and tie it in a bow.

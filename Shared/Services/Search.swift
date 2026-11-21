@@ -11,7 +11,8 @@ enum LibrarySearch {
         "beanie": "hat", "toque": "hat", "glove": "mitten", "jumper": "sweater",
         "christmas": "holiday", "xmas": "holiday", "present": "gift",
     ]
-    /// Things Ravel has no patterns for. A search for one finds nothing, never a human sweater for a dog.
+    /// Things Ravel has no patterns for. A search for one finds nothing, never a human sweater for a dog,
+    /// unless a design has every word asked for.
     private static let absent: Set<String> = ["dog", "cat", "pet", "puppy", "crochet", "amigurumi", "toy", "doll"]
 
     /// The words that count, each in the form the library uses. An age becomes the size it means.
@@ -33,11 +34,12 @@ enum LibrarySearch {
     static func find(_ query: String, in items: [LibraryItem], tags: [String: [String]] = [:]) -> [LibraryItem] {
         let words = words(query)
         guard !words.isEmpty else { return items }
-        guard absent.isDisjoint(with: words) else { return [] }
         let free = String(localized: "Free", comment: "Label under a design that needs no purchase")
         let read = items.map { item -> (item: LibraryItem, what: String, size: String) in
             let shelf = (tags[item.id] ?? []).flatMap { [$0, Loc.text($0)] }
-            let what = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue] + shelf).joined(separator: " ").lowercased()
+            // A stitch design is found by its stitch and how it is worked: "lace", "cable", "waffle".
+            let stitch = item.techniques.flatMap { [$0, Loc.text($0)] } + (item.stitch.map { [$0.name, Loc.text($0.name)] } ?? [])
+            let what = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.base.searchWords] + shelf + stitch).joined(separator: " ").lowercased()
             // Blankets come in stroller, crib and throw sizes: a baby blanket is one of the first two.
             let baby = item.base.sizes.contains { ["Stroller", "Crib"].contains($0.name) } ? "baby" : ""
             let size = ([item.level.title, item.isFree ? free : "", baby] + item.base.sizes.flatMap { [$0.name, Loc.text($0.name)] }).joined(separator: " ").lowercased()
@@ -48,6 +50,8 @@ enum LibrarySearch {
         }
         let all = read.filter { hits($0, words) == words.count }.map(\.item)
         guard all.isEmpty else { return all }
+        // "Cat ear hat" finds the hat; "cat toy" finds nothing, never a hat.
+        guard absent.isDisjoint(with: words) else { return [] }
         // What is asked for (a cardigan), as against who it is for (a baby): a word no size uses.
         let garments = words.filter { word in read.contains { $0.what.contains(word) } && !read.contains { $0.size.contains(word) } }
         let pool = garments.isEmpty ? read : read.filter { entry in garments.allSatisfy(entry.what.contains) }

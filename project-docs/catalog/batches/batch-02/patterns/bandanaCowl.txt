@@ -1,0 +1,29 @@
+ok   Bandana Cowl: 5 sizes x 8 weights
+
+== Bandana Cowl, Child, Worsted, 110 yd
+20.5 in around, 4 in tall, with a point 6 in deep
+  About 110 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Point x1 [5]: Cast on 5 stitches.
+Point x36 [7 to 41]: K2, M1L, knit to the last 2 stitches, M1R, k2 / K2, purl to the last 2 stitches, k2
+Neck x1 [92]: With the right side facing, knit across the 41 stitches. Cast on 51 stitches with the cable cast-on, then join in the round without twisting and place a marker.
+Neck x24 [92]: *K2, p2; repeat from * around
+Neck x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing the corners where the point meets the neck. Wear it with the point at the front.
+
+== Bandana Cowl, Large, Worsted, 190 yd
+25.75 in around, 5.5 in tall, with a point 7.75 in deep
+  About 190 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Point x1 [5]: Cast on 5 stitches.
+Point x46 [7 to 51]: K2, M1L, knit to the last 2 stitches, M1R, k2 / K2, purl to the last 2 stitches, k2
+Neck x1 [116]: With the right side facing, knit across the 51 stitches. Cast on 65 stitches with the cable cast-on, then join in the round without twisting and place a marker.
+Neck x33 [116]: *K2, p2; repeat from * around
+Neck x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing the corners where the point meets the neck. Wear it with the point at the front.

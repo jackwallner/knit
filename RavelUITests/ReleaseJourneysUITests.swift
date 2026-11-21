@@ -15,6 +15,21 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     // MARK: - Journeys
 
+    /// A shelf shows its first designs in a row; See All opens all of it, older designs included.
+    func testSeeAllOpensTheWholeShelf() {
+        let app = XCUIApplication()
+        QA.launch(app, arguments: ["-SeedDemo"])
+        tab("Patterns", "Muster", in: app)
+        let all = app.buttons["shelf.Hats"]
+        XCTAssertTrue(all.waitForExistence(timeout: 10))
+        all.tap()
+        let design = app.buttons["design.ribbedBeanie"]
+        for _ in 0..<12 where !design.isHittable { app.swipeUp() }
+        QA.checkpoint(app, "library-shelf")
+        design.tap()
+        XCTAssertTrue(app.buttons["design.castOn"].waitForExistence(timeout: 10))
+    }
+
     func testCoreLoopRowsCountAndSurviveRelaunch() {
         let app = XCUIApplication()
         QA.launch(app)

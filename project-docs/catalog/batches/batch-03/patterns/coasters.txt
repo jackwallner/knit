@@ -1,0 +1,43 @@
+ok   Coasters: 5 sizes x 8 weights
+
+== Coasters, Small, Worsted, 80 yd
+4 in across
+  About 80 yd of worsted weight yarn, enough for four. Cotton stands up to a hot mug
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Center x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Center x1 [8]: Knit
+Center x2 [16]: *K1, M1L; repeat from * around / Knit
+Center x2 [24]: *K2, M1L; repeat from * around / Knit
+Center x2 [32]: *K3, M1L; repeat from * around / Knit
+Center x2 [40]: *K4, M1L; repeat from * around / Knit
+Center x2 [48]: *K5, M1L; repeat from * around / Knit
+Edge x1 [48]: Purl
+Edge x1 [56]: *K6, M1L; repeat from * around
+Edge x1 [56]: Purl
+Edge x1: Bind off loosely knitwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center and weave in the ends. Block the coaster flat. Make three more the same way for a set of four.
+
+== Coasters, Large, Worsted, 120 yd
+5 in across
+  About 120 yd of worsted weight yarn, enough for four. Cotton stands up to a hot mug
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Center x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Center x1 [8]: Knit
+Center x2 [16]: *K1, M1L; repeat from * around / Knit
+Center x2 [24]: *K2, M1L; repeat from * around / Knit
+Center x2 [32]: *K3, M1L; repeat from * around / Knit
+Center x2 [40]: *K4, M1L; repeat from * around / Knit
+Center x2 [48]: *K5, M1L; repeat from * around / Knit
+Center x2 [56]: *K6, M1L; repeat from * around / Knit
+Center x2 [64]: *K7, M1L; repeat from * around / Knit
+Edge x1 [64]: Purl
+Edge x1 [72]: *K8, M1L; repeat from * around
+Edge x1 [72]: Purl
+Edge x1: Bind off loosely knitwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center and weave in the ends. Block the coaster flat. Make three more the same way for a set of four.

@@ -1,0 +1,31 @@
+ok   Hooded Scarf: 5 sizes x 8 weights
+
+== Hooded Scarf, Child, Worsted, 560 yd
+A hood 11 in from the top to the neck, with ends 6.75 in wide hanging 18 in below it
+  About 560 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [30]: Cast on 30 stitches.
+Scarf x162 [30]: Knit
+Increase x14 [32 to 44]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Hood x170 [44]: Knit
+Decrease x14 [42 to 30]: K1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit
+Scarf x162 [30]: Knit
+Scarf x1: Bind off loosely.
+Finishing x1: Fold the piece in half across the middle of the hood. Sew the two halves together along one long edge, from the fold down 11 in: that seam is the back of the hood, and the open edge frames the face. Weave in the ends.
+
+== Hooded Scarf, Large, Worsted, 890 yd
+A hood 13 in from the top to the neck, with ends 7.5 in wide hanging 28 in below it
+  About 890 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [34]: Cast on 34 stitches.
+Scarf x252 [34]: Knit
+Increase x18 [36 to 52]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Hood x198 [52]: Knit
+Decrease x18 [50 to 34]: K1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit
+Scarf x252 [34]: Knit
+Scarf x1: Bind off loosely.
+Finishing x1: Fold the piece in half across the middle of the hood. Sew the two halves together along one long edge, from the fold down 13 in: that seam is the back of the hood, and the open edge frames the face. Weave in the ends.

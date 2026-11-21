@@ -1,0 +1,21 @@
+ok   Garter Scarf: 5 sizes x 8 weights
+
+== linen-stitch-scarf, Child, Worsted, 450 yd
+5 in wide, 48 in long
+  About 450 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [30]: Cast on 30 stitches.
+Scarf x490 [30]: *K1, sl1 wyif; repeat from * to the last 2 stitches, k2 / *P1, sl1 wyib; repeat from * to the last 2 stitches, p2
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== linen-stitch-scarf, Long, Worsted, 1140 yd
+8 in wide, 76 in long
+  About 1,140 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [48]: Cast on 48 stitches.
+Scarf x776 [48]: *K1, sl1 wyif; repeat from * to the last 2 stitches, k2 / *P1, sl1 wyib; repeat from * to the last 2 stitches, p2
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

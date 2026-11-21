@@ -1,0 +1,25 @@
+ok   Rectangular Wrap: 5 sizes x 8 weights
+
+== eyelet-lace-wrap, Small, DK, 1000 yd
+16.25 in wide, 59.75 in long
+  About 1,000 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [89]: Cast on 89 stitches.
+Bottom Border x8 [89]: Knit
+Body x408 [89]: Knit / K4, purl to the last 4 stitches, k4 / Knit / K4, purl to the last 4 stitches, k4 / K5, *yo, k2tog; repeat from * to the last 4 stitches, k4 / K4, purl to the last 4 stitches, k4
+Top Border x8 [89]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.
+
+== eyelet-lace-wrap, Wide, DK, 2000 yd
+24.25 in wide, 80.25 in long
+  About 2,000 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [133]: Cast on 133 stitches.
+Bottom Border x8 [133]: Knit
+Body x552 [133]: Knit / K4, purl to the last 4 stitches, k4 / Knit / K4, purl to the last 4 stitches, k4 / K5, *yo, k2tog; repeat from * to the last 4 stitches, k4 / K4, purl to the last 4 stitches, k4
+Top Border x8 [133]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.

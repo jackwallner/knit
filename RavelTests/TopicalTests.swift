@@ -26,6 +26,27 @@ final class TopicalTests: XCTestCase {
 
     // MARK: Records
 
+    /// A stitch pattern is format 2, on a shape that takes one, alone or with stripes but never under a chart.
+    func testAStitchRecordIsReadStrictly() throws {
+        func parsed(_ fields: String, palette: String = ##"[{"name":"gray","hex":"#888888"}]"##) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"moss-hat","title":"Moss Hat","base":"ribbedBeanie","palette":\###(palette),"weights":["worsted"],"tag":"New"\###(fields)}]}"###.utf8)).first
+        }
+        let good = try XCTUnwrap(parsed(#","requires":2,"stitch":"doubleMoss","photo":"photos/moss-hat.jpg""#)?.topical)
+        XCTAssertEqual(good.stitch, .doubleMoss)
+        XCTAssertEqual(good.photo, "photos/moss-hat.jpg")
+        XCTAssertEqual(good.techniques, ["Knit and purl texture"])
+        XCTAssertNil(good.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge).palette, "One yarn writes a plan in one color")
+        XCTAssertNil(parsed(#","stitch":"doubleMoss""#)?.topical, "A stitch needs format 2")
+        XCTAssertNil(parsed(#","requires":2,"stitch":"brioche""#)?.topical, "An unknown stitch is skipped")
+        XCTAssertNil(parsed(#","requires":2""#)?.topical, "One yarn needs a stitch pattern")
+        XCTAssertNil(parsed(#","requires":2,"stitch":"waffle","photo":"https://example.com/a.jpg""#)?.topical, "Photos come from the Ravel site")
+        XCTAssertNil(parsed(#","requires":3,"stitch":"waffle""#)?.topical, "A newer format is skipped")
+        let chart = #","requires":2,"stitch":"waffle","chart":{"placement":"repeat","rows":["AB"]}"#
+        XCTAssertNil(parsed(chart, palette: ##"[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}]"##)?.topical, "No chart on a stitch pattern")
+        let cowl = Topical.parse(Data(##"{"designs":[{"id":"moss-cowl","title":"Moss Cowl","base":"seedCowl","requires":2,"stitch":"seed","palette":[{"name":"gray","hex":"#888888"}],"weights":["worsted"],"tag":"New"}]}"##.utf8)).first
+        XCTAssertNil(cowl?.topical, "The seed cowl does not take a stitch pattern")
+    }
+
     /// The same check the script and CI run: every size, both ends of every measurement, every allowed weight.
     func testEveryPublishedAndDraftRecordPasses() throws {
         let files = try recordFiles()
@@ -49,7 +70,7 @@ final class TopicalTests: XCTestCase {
           {"id":"good-hat","title":"Good Hat","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"stripes":[{"color":"B","inches":1}],"weights":["worsted"],"tag":"New"},
           {"id":"sweater","title":"Sweater","base":"raglanPullover","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"bad-letter","title":"Bad","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"stripes":[{"color":"E","inches":1}],"weights":["worsted"],"tag":"New"},
-          {"id":"future","title":"Future","base":"ribbedBeanie","requires":2,"palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
+          {"id":"future","title":"Future","base":"ribbedBeanie","requires":99,"palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"odd-crown","title":"Odd","base":"ribbedBeanie","crown":"pompom","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"bad-hex","title":"Hex","base":"ribbedBeanie","palette":[{"name":"gray","hex":"grey"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"good-hat","title":"Twice","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"}

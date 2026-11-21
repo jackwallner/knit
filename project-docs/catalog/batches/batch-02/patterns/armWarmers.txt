@@ -1,0 +1,53 @@
+ok   Arm Warmers: 5 sizes x 8 weights
+
+== Arm Warmers, Small, Worsted, 210 yd
+6.25 in around the hand, widening to 9 in at the top, 14 in long
+  About 210 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Arm Warmer 1 · Cuff x1 [28]: Cast on 28 stitches. Join in the round without twisting and place a marker.
+Arm Warmer 1 · Cuff x5 [28]: *K2, p2; repeat from * around
+Arm Warmer 1 · Hand x3 [28]: Knit
+Arm Warmer 1 · Thumb Opening x12 [28]: Knit to the end of the round, turn / K2, purl to the last 2 stitches, k2, turn
+Arm Warmer 1 · Arm x1 [28]: Knit to the end of the round and join in the round again
+Arm Warmer 1 · Arm x8 [28]: Knit
+Arm Warmer 1 · Arm x42 [30 to 40]: K1, M1L, knit to the last stitch, M1R, k1 / Knit / Knit / Knit / Knit / Knit / Knit
+Arm Warmer 1 · Top x13 [40]: *K2, p2; repeat from * around
+Arm Warmer 1 · Top x1: Bind off loosely in pattern. Weave in the ends.
+Arm Warmer 2 · Cuff x1 [28]: Cast on 28 stitches. Join in the round without twisting and place a marker.
+Arm Warmer 2 · Cuff x5 [28]: *K2, p2; repeat from * around
+Arm Warmer 2 · Hand x3 [28]: Knit
+Arm Warmer 2 · Thumb Opening x12 [28]: Knit to the end of the round, turn / K2, purl to the last 2 stitches, k2, turn
+Arm Warmer 2 · Arm x1 [28]: Knit to the end of the round and join in the round again
+Arm Warmer 2 · Arm x8 [28]: Knit
+Arm Warmer 2 · Arm x42 [30 to 40]: K1, M1L, knit to the last stitch, M1R, k1 / Knit / Knit / Knit / Knit / Knit / Knit
+Arm Warmer 2 · Top x13 [40]: *K2, p2; repeat from * around
+Arm Warmer 2 · Top x1: Bind off loosely in pattern. Weave in the ends.
+
+== Arm Warmers, Large, Worsted, 340 yd
+8 in around the hand, widening to 10.75 in at the top, 18 in long
+  About 340 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Arm Warmer 1 · Cuff x1 [36]: Cast on 36 stitches. Join in the round without twisting and place a marker.
+Arm Warmer 1 · Cuff x5 [36]: *K2, p2; repeat from * around
+Arm Warmer 1 · Hand x3 [36]: Knit
+Arm Warmer 1 · Thumb Opening x12 [36]: Knit to the end of the round, turn / K2, purl to the last 2 stitches, k2, turn
+Arm Warmer 1 · Arm x1 [36]: Knit to the end of the round and join in the round again
+Arm Warmer 1 · Arm x6 [36]: Knit
+Arm Warmer 1 · Arm x66 [38 to 48]: K1, M1L, knit to the last stitch, M1R, k1 / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit
+Arm Warmer 1 · Top x15 [48]: *K2, p2; repeat from * around
+Arm Warmer 1 · Top x1: Bind off loosely in pattern. Weave in the ends.
+Arm Warmer 2 · Cuff x1 [36]: Cast on 36 stitches. Join in the round without twisting and place a marker.
+Arm Warmer 2 · Cuff x5 [36]: *K2, p2; repeat from * around
+Arm Warmer 2 · Hand x3 [36]: Knit
+Arm Warmer 2 · Thumb Opening x12 [36]: Knit to the end of the round, turn / K2, purl to the last 2 stitches, k2, turn
+Arm Warmer 2 · Arm x1 [36]: Knit to the end of the round and join in the round again
+Arm Warmer 2 · Arm x6 [36]: Knit
+Arm Warmer 2 · Arm x66 [38 to 48]: K1, M1L, knit to the last stitch, M1R, k1 / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit / Knit
+Arm Warmer 2 · Top x15 [48]: *K2, p2; repeat from * around
+Arm Warmer 2 · Top x1: Bind off loosely in pattern. Weave in the ends.

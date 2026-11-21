@@ -5,17 +5,20 @@ import ImageIO
 import UniformTypeIdentifiers
 
 // Checks topical design records the way the app's tests do and draws a preview of each.
-// Usage: topical-check [--previews <dir>] [--print <id>] <file.json>...
+// Usage: topical-check [--previews <dir>] [--print <id>] [--fit-weights] <file.json>...
+// --fit-weights prints, for each record, every yarn weight it passes at, to set its "weights" from.
 // Exits 1 when any record is unusable or fails at any size and yarn weight.
 
 var files: [String] = []
 var previews: String?
 var printing: String?
+var fitWeights = false
 var arguments = CommandLine.arguments.dropFirst().makeIterator()
 while let argument = arguments.next() {
     switch argument {
     case "--previews": previews = arguments.next()
     case "--print": printing = arguments.next()
+    case "--fit-weights": fitWeights = true
     default: files.append(argument)
     }
 }
@@ -39,6 +42,15 @@ for file in files {
             print("FAIL \(record.id) (\(file))")
             for problem in record.problems { print("  \(problem)") }
             failed = true
+            continue
+        }
+        if fitWeights {
+            let passing = YarnWeight.allCases.filter { weight in
+                var one = Topical(id: topical.id, title: topical.title, base: topical.base, work: topical.work, weights: [weight], tag: topical.tag, starts: nil, ends: nil, isFree: false)
+                one.stitch = topical.stitch
+                return TopicalCheck.problems(one).isEmpty
+            }
+            print("weights \(topical.id): \(passing.map(\.rawValue).joined(separator: " "))")
             continue
         }
         let problems = TopicalCheck.problems(topical)

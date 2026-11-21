@@ -1,0 +1,21 @@
+ok   Garter Scarf: 5 sizes x 8 weights
+
+== twisted-rib-scarf, Child, Worsted, 260 yd
+5 in wide, 48 in long
+  About 260 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [29]: Cast on 29 stitches.
+Scarf x288 [29]: *K1 tbl, p1; repeat from * to the last stitch, k1 tbl / *P1 tbl, k1; repeat from * to the last stitch, p1 tbl
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== twisted-rib-scarf, Long, Worsted, 660 yd
+8 in wide, 76 in long
+  About 660 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [47]: Cast on 47 stitches.
+Scarf x456 [47]: *K1 tbl, p1; repeat from * to the last stitch, k1 tbl / *P1 tbl, k1; repeat from * to the last stitch, p1 tbl
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

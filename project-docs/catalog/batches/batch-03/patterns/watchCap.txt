@@ -1,0 +1,38 @@
+ok   Watch Cap: 8 sizes x 8 weights
+
+== Watch Cap, Baby, Worsted, 120 yd
+14.25 in around, to fit a 16 in head with the rib stretched a little, 7.75 in tall before the brim is folded
+  About 120 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [64]: Cast on 64 stitches. Join in the round without twisting and place a marker.
+Brim x23 [64]: *K2, p2; repeat from * around
+Body x15 [64]: *K2, p2; repeat from * around
+Crown x2 [48]: *K2, p2tog; repeat from * around / *K2, p1; repeat from * around
+Crown x1 [48]: *K2, p1; repeat from * around
+Crown x2 [32]: *K2tog, p1; repeat from * around / *K1, p1; repeat from * around
+Crown x1 [32]: *K1, p1; repeat from * around
+Crown x2 [16]: *K2tog; repeat from * around / Knit
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends. Fold the brim back 2 in to wear it.
+
+== Watch Cap, Large, Worsted, 250 yd
+21.25 in around, to fit a 23.5 in head with the rib stretched a little, 11.5 in tall before the brim is folded
+  About 250 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, for the crown
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [96]: Cast on 96 stitches. Join in the round without twisting and place a marker.
+Brim x34 [96]: *K2, p2; repeat from * around
+Body x26 [96]: *K2, p2; repeat from * around
+Crown x2 [72]: *K2, p2tog; repeat from * around / *K2, p1; repeat from * around
+Crown x1 [72]: *K2, p1; repeat from * around
+Crown x2 [48]: *K2tog, p1; repeat from * around. Change to double-pointed needles when the stitches no longer reach around / *K1, p1; repeat from * around
+Crown x1 [48]: *K1, p1; repeat from * around
+Crown x2 [24]: *K2tog; repeat from * around / Knit
+Crown x1 [12]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 12 stitches and pull tight. Weave in the ends. Fold the brim back 2.75 in to wear it.

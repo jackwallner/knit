@@ -1,0 +1,25 @@
+ok   Bordered Washcloth: 5 sizes x 8 weights
+
+== basketweave-washcloth, Small, Worsted, 60 yd
+7.5 in wide, 7 in long
+  About 60 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [34]: Cast on 34 stitches.
+Bottom Border x6 [34]: Knit
+Body x36 [34]: K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7
+Top Border x6 [34]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== basketweave-washcloth, Large, Worsted, 100 yd
+9.25 in wide, 10.75 in long
+  About 100 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [42]: Cast on 42 stitches.
+Bottom Border x6 [42]: Knit
+Body x60 [42]: K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7 / K3, *p4, k4; repeat from * to the last 7 stitches, p4, k3 / K3, *k4, p4; repeat from * to the last 7 stitches, k7
+Top Border x6 [42]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
