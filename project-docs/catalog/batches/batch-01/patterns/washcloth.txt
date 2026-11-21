@@ -1,0 +1,25 @@
+ok   Bordered Washcloth: 5 sizes x 8 weights
+
+== Bordered Washcloth, Small, Worsted, 50 yd
+7 in wide, 7 in long
+  About 50 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [32]: Cast on 32 stitches.
+Bottom Border x6 [32]: Knit
+Body x34 [32]: Knit / K3, purl to the last 3 stitches, k3
+Top Border x6 [32]: Knit
+Finishing x1: Bind off loosely. Weave in the ends and block the cloth square.
+
+== Bordered Washcloth, Large, Worsted, 100 yd
+10 in wide, 10 in long
+  About 100 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [45]: Cast on 45 stitches.
+Bottom Border x6 [45]: Knit
+Body x52 [45]: Knit / K3, purl to the last 3 stitches, k3
+Top Border x6 [45]: Knit
+Finishing x1: Bind off loosely. Weave in the ends and block the cloth square.

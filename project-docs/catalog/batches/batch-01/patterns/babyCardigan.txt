@@ -1,0 +1,115 @@
+ok   Baby Cardigan: 7 sizes x 8 weights
+
+== Baby Cardigan, 3 Months, DK, 330 yd
+Finished chest 19 in with the bands buttoned, to fit a 16 in chest with 3 in of ease. Body 6 in and sleeve 6 in from the underarm
+  About 330 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  US 4 · 3.5 mm circular needle of the same length, for the ribbing and bands
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  5 buttons, about 0.5 in across
+  4 stitch markers, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [58]: With the smaller needle, cast on 58 stitches.
+Neckband x8 [58]: *K1, p1; repeat from * to the end
+Back Neck x1 [58]: Change to the larger needle. K9 front, place marker, k8 sleeve, place marker, k24 back, place marker, k8 sleeve, place marker, k9 front
+Back Neck x1 [58]: Purl
+Back Neck x1 [58]: Short row: knit to the marker before the last front, turn
+Back Neck x1 [58]: Make a double stitch, then purl to the marker before the last front, turn
+Back Neck x4 [58]: Make a double stitch, knit to the double stitch, knit it as one stitch, k3, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p3, turn
+Back Neck x1 [58]: Make a double stitch, then knit to the end, knitting the double stitch you pass as one stitch
+Back Neck x1 [58]: Purl to the end, purling the last double stitch as one stitch
+Yoke x4 [66 to 74]: Knit to 1 stitch before the marker, M1R, k1, slip the marker. *Inc across; repeat from * 2 more times. K1, M1L, knit to the end / Purl
+Yoke x2 [78]: Knit the front. Inc across the sleeve. Knit the back. Inc across the sleeve. Knit the front / Purl
+Yoke x12 [86 to 126]: Knit to 1 stitch before the marker, M1R, k1, slip the marker. *Inc across; repeat from * 2 more times. K1, M1L, knit to the end / Purl
+Yoke x2 [130]: Knit the front. Inc across the sleeve. Knit the back. Inc across the sleeve. Knit the front / Purl
+Yoke x4 [138 to 146]: Knit to 1 stitch before the marker, M1R, k1, slip the marker. *Inc across; repeat from * 2 more times. K1, M1L, knit to the end / Purl
+Yoke x2 [146]: Knit / Purl
+Divide x1: Knit the 19 front stitches. Slip the 32 stitches of the first sleeve to waste yarn, removing the markers on each side.
+Divide x1: Under the arm, cast on 8 stitches with the backward loop method. Knit the 44 back stitches.
+Divide x1: Slip the 32 stitches of the second sleeve to waste yarn, removing the markers on each side.
+Divide x1 [98]: Under the arm, cast on 8 stitches. Knit the 19 front stitches
+Body x34 [98]: Purl / Knit
+Hem x1 [98]: Change to the smaller needle. *K1, p1; repeat from * to the end
+Hem x7 [98]: *K1, p1; repeat from * to the end
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [32]: Return the 32 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [40]: Pick up and knit 4 stitches, knit the 32 sleeve stitches, then pick up and knit 4 more. Place a marker for the start of the round.
+First Sleeve x11 [40]: Knit
+First Sleeve x20 [38 to 32]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit
+First Sleeve x3 [32]: Knit
+First Sleeve · Cuff x1 [32]: Change to the smaller needles. *K1, p1; repeat from * around
+First Sleeve · Cuff x7 [32]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [32]: Return the 32 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [40]: Pick up and knit 4 stitches, knit the 32 sleeve stitches, then pick up and knit 4 more. Place a marker for the start of the round.
+Second Sleeve x11 [40]: Knit
+Second Sleeve x20 [38 to 32]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit
+Second Sleeve x3 [32]: Knit
+Second Sleeve · Cuff x1 [32]: Change to the smaller needles. *K1, p1; repeat from * around
+Second Sleeve · Cuff x7 [32]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Button Band x1 [65]: With the smaller needle and the right side facing, pick up and knit 65 stitches along the left front edge, from the top of the neckband down to the hem. To button it the other way, work this band on the right front and the buttonhole band on the left.
+Button Band x8 [65]: P1, *k1, p1; repeat from * to the end / K1, *p1, k1; repeat from * to the end
+Button Band x1: Bind off in pattern.
+Buttonhole Band x1 [65]: With the smaller needle and the right side facing, pick up and knit 65 stitches along the right front edge, from the hem up to the top of the neckband.
+Buttonhole Band x3 [65]: P1, *k1, p1; repeat from * to the end / K1, *p1, k1; repeat from * to the end
+Buttonhole Band x1 [65]: Work 2 in rib, then work (k2tog, yo, work 13 in rib) 3 times, then (k2tog, yo, work 12 in rib) once. K2tog, yo, then work the last 2 in rib
+Buttonhole Band x1 [65]: P1, *k1, p1; repeat from * to the end, working each yarn over as a stitch
+Buttonhole Band x3 [65]: K1, *p1, k1; repeat from * to the end / P1, *k1, p1; repeat from * to the end
+Buttonhole Band x1: Bind off in pattern.
+Finishing x1: Sew the 5 buttons to the button band, opposite the buttonholes. Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.
+
+== Baby Cardigan, 24 Months, DK, 530 yd
+Finished chest 23.25 in with the bands buttoned, to fit a 20 in chest with 3.25 in of ease. Body 8.5 in and sleeve 8.5 in from the underarm
+  About 530 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  US 4 · 3.5 mm circular needle of the same length, for the ribbing and bands
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  5 buttons, about 0.5 in across
+  4 stitch markers, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [62]: With the smaller needle, cast on 62 stitches.
+Neckband x8 [62]: *K1, p1; repeat from * to the end
+Back Neck x1 [62]: Change to the larger needle. K10 front, place marker, k8 sleeve, place marker, k26 back, place marker, k8 sleeve, place marker, k10 front
+Back Neck x1 [62]: Purl
+Back Neck x1 [62]: Short row: knit to the marker before the last front, turn
+Back Neck x1 [62]: Make a double stitch, then purl to the marker before the last front, turn
+Back Neck x4 [62]: Make a double stitch, knit to the double stitch, knit it as one stitch, k3, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p3, turn
+Back Neck x1 [62]: Make a double stitch, then knit to the end, knitting the double stitch you pass as one stitch
+Back Neck x1 [62]: Purl to the end, purling the last double stitch as one stitch
+Yoke x30 [70 to 182]: Knit to 1 stitch before the marker, M1R, k1, slip the marker. *Inc across; repeat from * 2 more times. K1, M1L, knit to the end / Purl
+Yoke x4 [182]: Knit / Purl
+Divide x1: Knit the 25 front stitches. Slip the 38 stitches of the first sleeve to waste yarn, removing the markers on each side.
+Divide x1: Under the arm, cast on 8 stitches with the backward loop method. Knit the 56 back stitches.
+Divide x1: Slip the 38 stitches of the second sleeve to waste yarn, removing the markers on each side.
+Divide x1 [122]: Under the arm, cast on 8 stitches. Knit the 25 front stitches
+Body x48 [122]: Purl / Knit
+Hem x1 [122]: Change to the smaller needle. *K1, p1; repeat from * to the end
+Hem x11 [122]: *K1, p1; repeat from * to the end
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [38]: Return the 38 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [46]: Pick up and knit 4 stitches, knit the 38 sleeve stitches, then pick up and knit 4 more. Place a marker for the start of the round.
+First Sleeve x11 [46]: Knit
+First Sleeve x36 [44 to 34]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit / Knit
+First Sleeve x1 [34]: Knit
+First Sleeve · Cuff x1 [34]: Change to the smaller needles. *K1, p1; repeat from * around
+First Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [38]: Return the 38 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [46]: Pick up and knit 4 stitches, knit the 38 sleeve stitches, then pick up and knit 4 more. Place a marker for the start of the round.
+Second Sleeve x11 [46]: Knit
+Second Sleeve x36 [44 to 34]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit / Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve · Cuff x1 [34]: Change to the smaller needles. *K1, p1; repeat from * around
+Second Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Button Band x1 [85]: With the smaller needle and the right side facing, pick up and knit 85 stitches along the left front edge, from the top of the neckband down to the hem. To button it the other way, work this band on the right front and the buttonhole band on the left.
+Button Band x8 [85]: P1, *k1, p1; repeat from * to the end / K1, *p1, k1; repeat from * to the end
+Button Band x1: Bind off in pattern.
+Buttonhole Band x1 [85]: With the smaller needle and the right side facing, pick up and knit 85 stitches along the right front edge, from the hem up to the top of the neckband.
+Buttonhole Band x3 [85]: P1, *k1, p1; repeat from * to the end / K1, *p1, k1; repeat from * to the end
+Buttonhole Band x1 [85]: Work 2 in rib, then work (k2tog, yo, work 18 in rib) 3 times, then (k2tog, yo, work 17 in rib) once. K2tog, yo, then work the last 2 in rib
+Buttonhole Band x1 [85]: P1, *k1, p1; repeat from * to the end, working each yarn over as a stitch
+Buttonhole Band x3 [85]: K1, *p1, k1; repeat from * to the end / P1, *k1, p1; repeat from * to the end
+Buttonhole Band x1: Bind off in pattern.
+Finishing x1: Sew the 5 buttons to the button band, opposite the buttonholes. Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.
