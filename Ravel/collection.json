@@ -332,6 +332,49 @@
       ],
       "tag": "Texture",
       "photo": "photos/waffle-beanie.jpg"
+    },
+    {
+      "id": "snowflake-beanie",
+      "title": "Snowflake Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "...B...B",
+          ".B.B.B..",
+          "..BBB...",
+          "BBB.BBB.",
+          "..BBB...",
+          ".B.B.B..",
+          "...B...B"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/snowflake-beanie.jpg"
     }
   ]
 }

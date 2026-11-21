@@ -228,6 +228,10 @@
   "waffle-beanie": {
    "camera": "snap",
    "scene": "on a wooden bench by a frosty window, a mug of coffee out of focus behind it"
+  },
+  "snowflake-beanie": {
+   "camera": "outdoor",
+   "scene": "worn by a person seen from behind on a snowy trail, pine trees out of focus, flat winter daylight"
   }
  }
 }
