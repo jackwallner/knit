@@ -47,6 +47,17 @@ enum GarmentShape {
             point.addLine(to: p(0.5, 0.88))
             point.closeSubpath()
             path.addPath(ring.union(point).subtracting(CGPath(ellipseIn: box(0.26, 0.2, 0.48, 0.12), transform: nil)))
+        case .sleeves:
+            // A pair of long tubes, narrow at the hand and wider at the top, each with a slit for the thumb.
+            for x in [CGFloat(0.16), 0.56] {
+                let tube = CGMutablePath()
+                tube.move(to: p(x + 0.04, 0.9))
+                tube.addLine(to: p(x, 0.1))
+                tube.addLine(to: p(x + 0.28, 0.1))
+                tube.addLine(to: p(x + 0.24, 0.9))
+                tube.closeSubpath()
+                path.addPath(tube.subtracting(CGPath(roundedRect: box(x + 0.14, 0.72, 0.035, 0.1), cornerWidth: unit * 0.015, cornerHeight: unit * 0.015, transform: nil)))
+            }
         case .slouch:
             path.move(to: p(0.18, 0.76))
             path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))

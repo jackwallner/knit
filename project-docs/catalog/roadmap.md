@@ -68,7 +68,7 @@ cached on the phone, so the app does not carry them.
 | 17 | Feather and Fan Scarf | Scarves & Cowls | Adults, easy lace | Stitch: feather and fan on scarf | verified |
 | 18 | Double Moss Blanket | Blankets | Baby to throw, beginner | Stitch: double moss on bordered blanket | verified |
 | 19 | Basketweave Washcloth | Home | Anyone, beginner | Stitch: basketweave on washcloth | verified |
-| 20 | Arm Warmers | Hands | Adults, easy | New shape | planned |
+| 20 | Arm Warmers | Hands | Adults, easy | New shape | verified |
 | 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | planned |
 | 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | planned |
 | 23 | Honeycomb Cowl | Scarves & Cowls | Adults, easy | Stitch: slip-stitch honeycomb on cowl | planned |

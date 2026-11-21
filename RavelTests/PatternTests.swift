@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 49)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 63)
+        XCTAssertEqual(Design.allCases.count, 50)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 64)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -812,6 +812,23 @@ final class PatternTests: XCTestCase {
                 let point = cowl.plan.steps.filter { $0.section == "Point" && !$0.isAction }
                 XCTAssertEqual(point.map(\.rows).reduce(0, +) % 2, 0, label)
                 XCTAssertEqual(point.last?.stitches(after: (point.last?.rows ?? 1) - 1), cowl.front, label)
+            }
+        }
+    }
+
+    /// The warmer widens from the hand to the arm in pairs, keeping a multiple of 4 for the top rib, and the
+    /// thumb slit hands the work back with the right side facing.
+    func testArmWarmersWidenToTheArm() {
+        for input in inputs(.armWarmers) {
+            for gauge in gauges {
+                let warmers = Engines.armWarmers(wrist: input["wrist"] ?? 0, arm: input["arm"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(warmers.top % 4, 0, label)
+                XCTAssertGreaterThanOrEqual(warmers.top, warmers.hand, label)
+                let slit = warmers.plan.steps.first { $0.section.hasSuffix("Thumb Opening") }
+                XCTAssertEqual((slit?.rows ?? 1) % 2, 0, label)
+                let rows = warmers.plan.steps.filter { $0.section.hasPrefix("Arm Warmer 1") && !$0.isAction }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(rows) / gauge.rpi, input["length"] ?? 0, accuracy: 1, label)
             }
         }
     }

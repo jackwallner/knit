@@ -433,3 +433,7 @@ Double Moss Blanket
 Basketweave Washcloth
 Bandana Cowl
 Point
+Arm Warmers
+Arm Warmer %lld
+Arm
+Wrist

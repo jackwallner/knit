@@ -60,3 +60,54 @@ extension Engines {
         return Mitts(plan: plan, stitches: stitches, increases: increases, gusset: gusset, thumb: thumb)
     }
 }
+
+extension Engines {
+    struct ArmWarmers: Equatable, Sendable {
+        var plan: PatternPlan
+        var hand: Int
+        var top: Int
+    }
+
+    /// Long fingerless warmers from the knuckles to the upper arm: a ribbed edge, a slit for the thumb
+    /// worked flat, then a tube that widens evenly from the wrist to the arm and ends in a deep rib.
+    static func armWarmers(wrist: Double, arm: Double, length: Double, gauge g: Gauge) -> ArmWarmers {
+        // Over the knuckles the hand is about an inch more than the wrist; the warmer hugs it a little.
+        let hand = Sizing.stitches((wrist + 1) * 0.9, per: g.spi, multiple: 4, minimum: 20)
+        let top = max(hand, Sizing.stitches(max(arm, wrist + 1) * 0.9, per: g.spi, multiple: 4, minimum: 20))
+        let edge = Sizing.rows(0.75, per: g.rpi, minimum: 3)
+        let below = Sizing.rows(0.5, per: g.rpi, minimum: 2)
+        let slit = Sizing.rows(1.75, per: g.rpi, even: true, minimum: 4)
+        let above = Sizing.rows(1, per: g.rpi, minimum: 2)
+        let rib = Sizing.rows(min(2.5, length * 0.15), per: g.rpi, minimum: 4)
+        let rest = max(2, Sizing.rows(length, per: g.rpi) - edge - below - slit - above - rib)
+        let increases = (top - hand) / 2
+        let spacing = increases > 0 ? max(1, rest / increases) : 0
+        let straight = rest - spacing * increases
+
+        var b = PlanBuilder()
+        for warmer in 1...2 {
+            let name = "Arm Warmer \(warmer)"
+            b.section = "\(name) · Cuff"
+            b.action("Cast on \(hand) stitches. Join in the round without twisting and place a marker.", stitches: hand)
+            b.work(["*K2, p2; repeat from * around"], rows: edge, stitches: hand)
+            b.section = "\(name) · Hand"
+            b.work(["Knit"], rows: below, stitches: hand)
+            b.section = "\(name) · Thumb Opening"
+            // Two knit stitches at each edge keep the sides of the slit from rolling.
+            b.work(["Knit to the end of the round, turn", "K2, purl to the last 2 stitches, k2, turn"], rows: slit, stitches: hand)
+            b.section = "\(name) · Arm"
+            b.row("Knit to the end of the round and join in the round again", stitches: hand)
+            b.work(["Knit"], rows: above - 1 + straight, stitches: hand)
+            if increases > 0 {
+                b.work(["K1, M1L, knit to the last stitch, M1R, k1"] + Array(repeating: "Knit", count: spacing - 1), rows: spacing * increases, stitches: hand + 2, delta: 2)
+            }
+            b.section = "\(name) · Top"
+            b.work(["*K2, p2; repeat from * around"], rows: rib, stitches: top)
+            b.action("Bind off loosely in pattern. Weave in the ends.")
+        }
+        let long = Double(edge + below + slit + above + rest + rib) / g.rpi
+        let yards = Sizing.yards(squareInches: (wrist + arm) / 2 * long * 2, spi: g.spi, factor: 1.15)
+        let plan = pattern(b, estimate: yards, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(Double(hand) / g.spi)) around the hand, widening to \(Sizing.inches(Double(top) / g.spi)) at the top, \(Sizing.inches(long)) long", gauge: g, round: true)
+        return ArmWarmers(plan: plan, hand: hand, top: top)
+    }
+}

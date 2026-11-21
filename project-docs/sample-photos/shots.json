@@ -260,6 +260,10 @@
   "bandanaCowl": {
    "camera": "outdoor",
    "scene": "worn by a person in a denim jacket outdoors on a cold bright day, a brick wall behind, cropped at the chin"
+  },
+  "armWarmers": {
+   "camera": "snap",
+   "scene": "worn by a person holding a mug at a cafe table, cropped from the shoulder to the hand, daylight from a window"
   }
  }
 }
