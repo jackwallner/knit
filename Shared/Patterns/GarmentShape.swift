@@ -12,7 +12,7 @@ enum GarmentShape {
         let unit = rect.width
         let path = CGMutablePath()
         switch silhouette {
-        case .hat:
+        case .hat, .topDown:
             path.move(to: p(0.16, 0.712))
             path.addCurve(to: p(0.5, 0.1), control1: p(0.14, 0.34), control2: p(0.3, 0.1))
             path.addCurve(to: p(0.84, 0.712), control1: p(0.7, 0.1), control2: p(0.86, 0.34))
@@ -254,7 +254,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent].contains(self) }
+    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent, .topDown].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit

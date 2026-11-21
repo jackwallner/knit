@@ -286,6 +286,30 @@
         "aran"
       ],
       "tag": "Colorwork"
+    },
+    {
+      "id": "double-moss-scarf",
+      "title": "Double Moss Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "rust",
+          "hex": "#A4532F"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-scarf.jpg"
     }
   ]
 }

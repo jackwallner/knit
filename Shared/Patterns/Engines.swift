@@ -1356,8 +1356,9 @@ enum Engines {
     /// The raglan pullover opened down the front: worked flat from the neck down, with the same yoke, the
     /// sleeves in the round, and ribbed bands picked up along the fronts, one with evenly spaced buttonholes.
     /// The bands overlap, so the fronts are cast on a band's width narrower than the pullover's front.
-    static func cardigan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge) -> Cardigan {
-        let fit = raglanFit(chest: chest, wearer: wearer, child: false, gauge: g)
+    /// `baby` cuts it from a baby's measurements instead (`babyFit`).
+    static func cardigan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge, baby: Bool = false) -> Cardigan {
+        let fit = baby ? babyFit(chest: chest, wearer: wearer, gauge: g) : raglanFit(chest: chest, wearer: wearer, child: false, gauge: g)
         let bandRows = Sizing.rows(1, per: g.rpi, even: true, minimum: 4)
         let band = max(2, min(even(Double(bandRows) / g.rpi * g.spi), fit.backAtNeck - 4))
         let frontAtNeck = (fit.backAtNeck - band) / 2
@@ -1433,7 +1434,7 @@ enum Engines {
         let wrong = "P1, *k1, p1; repeat from * to the end", right = "K1, *p1, k1; repeat from * to the end"
         let hole = bandRows / 2 - (bandRows / 2 % 2 == 0 ? 1 : 0)
         b.section = "Button Band"
-        b.action("With the smaller needle and the right side facing, pick up and knit \(pickUp) stitches along the left front edge, from the top of the neckband down to the hem. For a man's closing, work this band on the right front and the buttonhole band on the left.", stitches: pickUp)
+        b.action("With the smaller needle and the right side facing, pick up and knit \(pickUp) stitches along the left front edge, from the top of the neckband down to the hem. \(baby ? "To button it the other way" : "For a man's closing"), work this band on the right front and the buttonhole band on the left.", stitches: pickUp)
         b.work([wrong, right], rows: bandRows, stitches: pickUp)
         b.action("Bind off in pattern.")
         b.section = "Buttonhole Band"

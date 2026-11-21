@@ -51,10 +51,10 @@ cached on the phone, so the app does not carry them.
 |---|---|---|---|---|---|
 | 1 | Toe-Up Socks | Socks & Feet | Adults and children, intermediate | New shape | verified |
 | 2 | Fingerless Mitts with Gusset | Hands | Adults, easy | New shape | verified |
-| 3 | Double Moss Scarf | Scarves & Cowls | Anyone, beginner | Stitch: double moss on scarf | planned |
-| 4 | Baby Cardigan | Baby | Babies 0 to 24 months, easy | New shape: cardigan engine at baby sizes | planned |
-| 5 | Top-Down Beanie | Hats | Adults and children, easy | New shape | planned |
-| 6 | Twisted Headband | Accessories | Adults, easy | New shape | planned |
+| 3 | Double Moss Scarf | Scarves & Cowls | Anyone, beginner | Stitch: double moss on scarf | verified |
+| 4 | Baby Cardigan | Baby | Babies 0 to 24 months, easy | New shape: cardigan engine at baby sizes | verified |
+| 5 | Top-Down Beanie | Hats | Adults and children, easy | New shape | verified |
+| 6 | Twisted Headband | Accessories | Adults, easy | New shape | verified |
 | 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | planned |
 | 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | planned |
 | 9 | Garter Washcloth | Home | Anyone, beginner | New shape: square cloth, base for stitch cloths | planned |

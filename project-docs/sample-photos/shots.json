@@ -196,6 +196,22 @@
   "fingerlessMitts": {
    "camera": "snap",
    "scene": "worn on both hands wrapped around a mug of tea on a kitchen table"
+  },
+  "babyCardigan": {
+   "camera": "lamp",
+   "scene": "laid flat on a changing-table pad, one sleeve folded across the front"
+  },
+  "double-moss-scarf": {
+   "camera": "outdoor",
+   "scene": "wrapped once around someone's neck, seen from the shoulder down, ends hanging"
+  },
+  "topDownBeanie": {
+   "camera": "flash",
+   "scene": "held up by its brim in one hand against a dark kitchen cabinet"
+  },
+  "twistedHeadband": {
+   "camera": "sun",
+   "scene": "worn on someone's head seen from the front, cropped above the eyes, hair loose around it"
   }
  }
 }

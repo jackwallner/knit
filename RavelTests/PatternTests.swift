@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 40)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 47)
+        XCTAssertEqual(Design.allCases.count, 43)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 51)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -704,6 +704,27 @@ final class PatternTests: XCTestCase {
         XCTAssertTrue(sock.plan.abbreviations.contains { $0.term == "M1L" })
     }
 
+    /// The top-down crown is the ribbed beanie's crown read upward, and the brim lands in the hat ease band.
+    func testTopDownBeanieGrowsItsCrownAndFitsTheHead() {
+        for input in inputs(.topDownBeanie) {
+            for gauge in gauges {
+                let hat = Engines.topDownBeanie(head: input["head"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(hat.stitches % 8, 0, label)
+                let crown = rows(hat.plan, "Crown")
+                XCTAssertEqual(crown.count, hat.crownRounds, label)
+                XCTAssertEqual(crown.first?.stitches, 16, label)
+                XCTAssertEqual(crown.last?.stitches, hat.stitches, label)
+                XCTAssertEqual(crown.count, Engines.crownRounds(wedge: hat.stitches / 8).count, label)
+                let brim = rows(hat.plan, "Brim")
+                let head = input["head"] ?? 0
+                let ease = Double(brim.last?.stitches ?? 0) / gauge.spi / head
+                XCTAssertTrue((Engines.hatEase.lowerBound - 0.01...Engines.hatEase.upperBound + 0.01).contains(ease), "\(label): ease \(ease)")
+                XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("8 cast-on stitches") == true, label)
+            }
+        }
+    }
+
     func testMittenThumbGussetAddsUp() {
         for input in inputs(.mittens) {
             for gauge in gauges {
@@ -749,11 +770,12 @@ final class PatternTests: XCTestCase {
     }
 
     func testCardiganFrontsAndBandsMakeTheChest() {
-        let sizes: [Double] = Design.raglanCardigan.sizes.map { $0.values["chest"] ?? 0 } + [26, 62]
-        for chest in sizes {
+        let adults: [Double] = Design.raglanCardigan.sizes.map { $0.values["chest"] ?? 0 } + [26, 62]
+        let babies: [Double] = Design.babyCardigan.sizes.map { $0.values["chest"] ?? 0 } + [14, 24]
+        for (baby, chest) in adults.map({ (false, $0) }) + babies.map({ (true, $0) }) {
             for gauge in gauges {
-                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: 15, sleeve: 18, gauge: gauge)
-                let label = "chest \(chest) gauge \(gauge.stitches)"
+                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: baby ? 7 : 15, sleeve: baby ? 7 : 18, gauge: gauge, baby: baby)
+                let label = "\(baby ? "baby " : "")chest \(chest) gauge \(gauge.stitches)"
                 XCTAssertEqual(c.body + c.band, c.fit.body, label)
                 XCTAssertEqual(2 * c.front + c.fit.panel + 2 * c.fit.underarm, c.body, label)
                 XCTAssertEqual(c.neck, c.fit.backAtNeck + 2 * c.frontAtNeck + 2 * c.fit.sleeveAtNeck, label)
@@ -787,14 +809,21 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(worked.holes, c.buttons, label)
                 XCTAssertEqual(worked.stitches + (gaps.last ?? 0), c.bandPickUp, label)
                 XCTAssertEqual(rows(c.plan, "Back Neck").filter { $0.text.hasSuffix(", turn") }.count % 2, 0, label)
-                // About one button every 3 in.
+                // About one button every 3 in, and every 2 on a baby's.
                 let spacing = Double(c.bandPickUp) / gauge.spi / Double(c.buttons)
-                XCTAssertTrue((2.4...4).contains(spacing), "\(label): \(spacing)")
+                XCTAssertTrue((baby ? 1.2...3.25 : 2.4...4).contains(spacing), "\(label): \(spacing)")
             }
         }
         let plan = Design.raglanCardigan.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
         XCTAssertTrue(plan.finished.contains(Sizing.inches(41)), plan.finished)
         XCTAssertTrue(plan.materials.contains { $0.contains("buttons") })
+        // A baby's neck is cut smaller than a child's raglan would make it: about 10 to 12 in around.
+        for size in Design.babyCardigan.sizes {
+            let gauge = YarnWeight.dk.gauge
+            let c = Engines.cardigan(chest: (size.values["chest"] ?? 0) + Design.sweaterEase, wearer: size.values["chest"], body: 7, sleeve: 7, gauge: gauge, baby: true)
+            XCTAssertTrue((9.5...12.5).contains(Double(c.neck) / gauge.spi), "\(size.name): neck \(Double(c.neck) / gauge.spi)")
+            XCTAssertTrue(c.plan.steps.contains { $0.texts[0].contains("To button it the other way") }, size.name)
+        }
     }
 
     /// Reads a buttonhole row back: the stitches it works up to and through its last hole, and how many holes.
