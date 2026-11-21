@@ -843,6 +843,48 @@
       ],
       "tag": "Texture",
       "photo": "photos/honeycomb-beanie.jpg"
+    },
+    {
+      "id": "waffle-washcloth",
+      "title": "Waffle Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-washcloth.jpg"
+    },
+    {
+      "id": "feather-and-fan-wrap",
+      "title": "Feather and Fan Wrap",
+      "base": "rectangularWrap",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "coral",
+          "hex": "#D9765F"
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Lace",
+      "photo": "photos/feather-and-fan-wrap.jpg"
     }
   ]
 }

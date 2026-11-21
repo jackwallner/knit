@@ -372,6 +372,14 @@
   "honeycomb-beanie": {
    "camera": "overcast",
    "scene": "resting on a weathered wooden bench beside a folded wool blanket"
+  },
+  "waffle-washcloth": {
+   "camera": "lamp",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap"
+  },
+  "feather-and-fan-wrap": {
+   "camera": "outdoor",
+   "scene": "draped over the back of a garden chair in late afternoon light"
   }
  }
 }
