@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 46)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 56)
+        XCTAssertEqual(Design.allCases.count, 47)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 57)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -768,6 +768,22 @@ final class PatternTests: XCTestCase {
             }
         }
         XCTAssertTrue(LibrarySearch.find("dishcloth", in: Design.allCases.map { LibraryItem.builtIn($0) }).contains { $0.id == Design.washcloth.rawValue })
+    }
+
+    /// The knot hat narrows by 8 a round to a tube no more than half the hat, long enough to tie.
+    func testTheKnotHatNarrowsToATube() {
+        for input in inputs(.knotHat) {
+            for gauge in gauges {
+                let hat = Engines.knotHat(head: input["head"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(hat.stitches % 8, 0, label)
+                XCTAssertLessThanOrEqual(hat.tube * 2, hat.stitches, label)
+                XCTAssertGreaterThanOrEqual(hat.tube, 16, label)
+                let tube = hat.plan.steps.last { $0.texts == ["Knit"] && $0.stitches == hat.tube }
+                XCTAssertGreaterThanOrEqual(Double(tube?.rows ?? 0) / gauge.rpi, 3.5, label)
+                XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("knot") == true, label)
+            }
+        }
     }
 
     func testMittenThumbGussetAddsUp() {

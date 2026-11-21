@@ -232,6 +232,10 @@
   "snowflake-beanie": {
    "camera": "outdoor",
    "scene": "worn by a person seen from behind on a snowy trail, pine trees out of focus, flat winter daylight"
+  },
+  "knotHat": {
+   "camera": "lamp",
+   "scene": "lying on a pale crib sheet beside a folded muslin blanket, warm lamp light in the evening"
   }
  }
 }

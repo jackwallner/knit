@@ -18,6 +18,20 @@ enum GarmentShape {
             path.addCurve(to: p(0.84, 0.712), control1: p(0.7, 0.1), control2: p(0.86, 0.34))
             path.closeSubpath()
             path.addRoundedRect(in: box(0.1, 0.7, 0.8, 0.2), cornerWidth: unit * 0.06, cornerHeight: unit * 0.06)
+        case .knot:
+            // A straight baby hat that narrows into a tube tied in a knot on top.
+            let body = CGMutablePath()
+            body.move(to: p(0.2, 0.74))
+            body.addLine(to: p(0.22, 0.44))
+            body.addCurve(to: p(0.44, 0.24), control1: p(0.24, 0.3), control2: p(0.36, 0.25))
+            body.addLine(to: p(0.56, 0.24))
+            body.addCurve(to: p(0.78, 0.44), control1: p(0.64, 0.25), control2: p(0.76, 0.3))
+            body.addLine(to: p(0.8, 0.74))
+            body.closeSubpath()
+            let knot = CGPath(ellipseIn: box(0.38, 0.08, 0.24, 0.19), transform: nil)
+                .union(CGPath(roundedRect: box(0.58, 0.13, 0.16, 0.07), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil))
+            path.addPath(body.union(knot))
+            path.addRoundedRect(in: box(0.16, 0.72, 0.68, 0.16), cornerWidth: unit * 0.05, cornerHeight: unit * 0.05)
         case .slouch:
             path.move(to: p(0.18, 0.76))
             path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))

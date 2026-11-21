@@ -61,7 +61,7 @@ cached on the phone, so the app does not carry them.
 | 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | verified |
 | 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | dropped: both sock designs already knit a leg as short as 2 in, so this would be a size, not a design |
 | 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | verified: fingering, sport and DK (the 8-stitch repeat moves a 13 in worsted hat 8 percent) |
-| 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | planned |
+| 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | verified (on the Hats shelf) |
 | 14 | Asymmetric Shawl | Shawls & Wraps | Adults, easy | New shape | planned |
 | 15 | Broken Rib Cowl | Scarves & Cowls | Anyone, beginner | Stitch: broken rib on cowl | planned |
 | 16 | Bandana Cowl | Scarves & Cowls | Adults, easy | New shape | planned |

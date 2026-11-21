@@ -83,3 +83,53 @@ extension Engines {
         return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "\(Sizing.inches(width)) wide and \(Sizing.inches(Double(rows) / (g.spi * 2))) long before the twist, to fit a \(Sizing.inches(head)) head", gauge: g)
     }
 }
+
+extension Engines {
+    struct Knot: Equatable, Sendable {
+        var plan: PatternPlan
+        var stitches: Int
+        var tube: Int
+    }
+
+    /// A baby's hat with no crown to shape: a ribbed brim, a straight body, a few rounds that halve it, then
+    /// a narrow tube that is tied in a knot on top. The knot is the crown, so it fits a growing head loosely.
+    static func knotHat(head: Double, gauge g: Gauge) -> Knot {
+        let stitches = hatCount(head: head, share: 0.9, spi: g.spi, multiple: 8) ?? Sizing.stitches(head * 0.95, per: g.spi, multiple: 8, minimum: 24)
+        // The tube: half the hat, kept to 8 sections so every decrease round takes one from each.
+        let tube = max(16, stitches / 16 * 8)
+        let brimRounds = Sizing.rows(head * 0.07, per: g.rpi, minimum: 4)
+        let bodyRounds = max(4, Sizing.rows(head * 0.33, per: g.rpi) - brimRounds - 1)
+        var taper: [(text: String, stitches: Int)] = []
+        var count = stitches
+        while count > tube {
+            count -= 8
+            taper.append(("*K\(count / 8 - 1), k2tog; repeat from * around", count))
+            if count > tube { taper.append(("Knit", count)) }
+        }
+        let tubeRounds = Sizing.rows(head * 0.3, per: g.rpi, minimum: 8)
+        let small = Double(stitches) / g.spi < 16
+
+        var b = PlanBuilder()
+        b.section = "Brim"
+        b.action("Cast on \(stitches) stitches with the smaller needle\(small ? "s" : ""). Join in the round without twisting and place a marker.", stitches: stitches)
+        b.work(["*K2, p2; repeat from * around"], rows: brimRounds, stitches: stitches)
+        b.section = "Body"
+        b.row("Change to the larger needle\(small ? "s" : "") and knit", stitches: stitches)
+        b.work(["Knit"], rows: bodyRounds, stitches: stitches)
+        b.section = "Crown"
+        if !taper.isEmpty { taper[0].text += small ? "" : ". Change to double-pointed needles when the stitches no longer reach around" }
+        runs(&b, taper, from: stitches)
+        b.work(["Knit"], rows: tubeRounds, stitches: tube)
+        b.action("Bind off loosely. Weave in the ends.")
+        b.section = "Finishing"
+        b.action("Tie the tube in a loose overhand knot, snug against the top of the hat.")
+
+        let tall = Double(brimRounds + 1 + bodyRounds + taper.count + tubeRounds) / g.rpi
+        let yards = Sizing.yards(squareInches: Double(stitches) / g.spi * tall, spi: g.spi)
+        let needles = small
+            ? ["\(g.ribNeedle.label) double-pointed needles for the brim, or a long circular for magic loop", "\(g.needle.label) double-pointed needles, or a long circular"]
+            : ["\(g.ribNeedle.label) \(Sizing.cable(16)) circular needle for the brim", "\(g.needle.label) \(Sizing.cable(16)) circular needle", "\(g.needle.label) double-pointed needles, or a long circular for magic loop, for the top"]
+        let plan = pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "head", head)), \(Sizing.inches(Double(brimRounds + 1 + bodyRounds + taper.count) / g.rpi)) from the brim to the knot", gauge: g, round: true)
+        return Knot(plan: plan, stitches: stitches, tube: tube)
+    }
+}
