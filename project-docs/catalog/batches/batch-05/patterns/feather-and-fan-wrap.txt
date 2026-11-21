@@ -1,0 +1,25 @@
+ok   Rectangular Wrap: 5 sizes x 8 weights
+
+== feather-and-fan-wrap, Small, Sport, 1130 yd
+16.75 in wide, 60 in long
+  About 1,130 yd of sport weight yarn
+  US 5 · 3.75 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 24 stitches and 32 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [96]: Cast on 96 stitches.
+Bottom Border x10 [96]: Knit
+Body x444 [96]: Knit / K5, purl to the last 5 stitches, k5 / K6, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 6 stitches, k6 / Knit
+Top Border x10 [96]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.
+
+== feather-and-fan-wrap, Wide, Sport, 2080 yd
+23 in wide, 80 in long
+  About 2,080 yd of sport weight yarn
+  US 5 · 3.75 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 24 stitches and 32 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [132]: Cast on 132 stitches.
+Bottom Border x10 [132]: Knit
+Body x596 [132]: Knit / K5, purl to the last 5 stitches, k5 / K6, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 6 stitches, k6 / Knit
+Top Border x10 [132]: Knit
+Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.

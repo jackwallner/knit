@@ -1,0 +1,25 @@
+ok   Placemat: 5 sizes x 8 weights
+
+== Placemat, Small, Worsted, 190 yd
+11 in by 16.25 in
+  About 190 yd of worsted weight yarn, cotton so it washes well
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [49]: Cast on 49 stitches.
+Bottom Border x6 [49]: Knit
+Body x98 [49]: K3, *k1, p1; repeat from * to the last 4 stitches, k4
+Top Border x6 [49]: Knit
+Finishing x1: Bind off loosely. Weave in the ends and block the placemat flat.
+
+== Placemat, Large, Worsted, 300 yd
+14 in by 20 in
+  About 300 yd of worsted weight yarn, cotton so it washes well
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [63]: Cast on 63 stitches.
+Bottom Border x6 [63]: Knit
+Body x124 [63]: K3, *k1, p1; repeat from * to the last 4 stitches, k4
+Top Border x6 [63]: Knit
+Finishing x1: Bind off loosely. Weave in the ends and block the placemat flat.
