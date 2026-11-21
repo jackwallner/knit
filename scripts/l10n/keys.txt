@@ -437,3 +437,4 @@ Arm Warmers
 Arm Warmer %lld
 Arm
 Wrist
+Honeycomb Cowl

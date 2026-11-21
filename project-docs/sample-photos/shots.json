@@ -264,6 +264,10 @@
   "armWarmers": {
    "camera": "snap",
    "scene": "worn by a person holding a mug at a cafe table, cropped from the shoulder to the hand, daylight from a window"
+  },
+  "honeycomb-cowl": {
+   "camera": "lamp",
+   "scene": "draped over a stack of library books on a wooden desk, warm desk lamp at night"
   }
  }
 }

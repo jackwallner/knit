@@ -69,9 +69,9 @@ cached on the phone, so the app does not carry them.
 | 18 | Double Moss Blanket | Blankets | Baby to throw, beginner | Stitch: double moss on bordered blanket | verified |
 | 19 | Basketweave Washcloth | Home | Anyone, beginner | Stitch: basketweave on washcloth | verified |
 | 20 | Arm Warmers | Hands | Adults, easy | New shape | verified |
-| 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | planned |
-| 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | planned |
-| 23 | Honeycomb Cowl | Scarves & Cowls | Adults, easy | Stitch: slip-stitch honeycomb on cowl | planned |
+| 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | dropped: the Kids' Raglan already fits an 18 in chest; a true baby pullover needs a buttoned shoulder for the head (added as a later row) |
+| 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | dropped: the site already publishes a Fir Tree Hat each season (fir-tree-hat) |
+| 23 | Honeycomb Cowl | Scarves & Cowls | Adults, easy | Stitch: slip-stitch honeycomb on cowl | verified |
 | 24 | Watch Cap | Hats | Adults, easy | New shape: deep fold-up rib | planned |
 | 25 | Chevron Lace Blanket | Blankets | Baby to throw, easy lace | Stitch: chevron lace on bordered blanket | planned |
 | 26 | Hooded Scarf | Scarves & Cowls | Adults, easy | New shape | planned |
@@ -209,6 +209,7 @@ cached on the phone, so the app does not carry them.
 | 158 | Diamond Brocade Pillow | Home | Anyone, easy | Stitch | planned |
 | 159 | Broken Rib Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
 | 160 | Double Moss Leg Warmers | Accessories | Anyone, beginner | Stitch | planned |
+| 161 | Baby Pullover | Baby | Babies 3 to 24 months, intermediate | New shape: top-down raglan with a buttoned shoulder opening so it passes over a baby's head (replaces #21) | planned |
 
 ## Already in the library (45)
 

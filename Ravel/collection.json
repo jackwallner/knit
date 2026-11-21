@@ -462,6 +462,28 @@
       ],
       "tag": "Texture",
       "photo": "photos/basketweave-washcloth.jpg"
+    },
+    {
+      "id": "honeycomb-cowl",
+      "title": "Honeycomb Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "mustard",
+          "hex": "#C9962E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-cowl.jpg"
     }
   ]
 }
