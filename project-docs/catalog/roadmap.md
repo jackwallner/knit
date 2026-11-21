@@ -111,7 +111,7 @@ cached on the phone, so the app does not carry them.
 | 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | verified |
 | 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | verified |
 | 62 | Star Beanie | Hats | Anyone, easy | Colorwork: one star sewn on in duplicate stitch | verified |
-| 63 | Shrug | Shawls & Wraps | Adults, easy | New shape | planned |
+| 63 | Shrug | Shawls & Wraps | Adults, easy | New shape: one rectangle cuff to cuff, seamed sleeves, ribbed band around the opening | verified |
 | 64 | Waffle Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
 | 65 | Tote Bag | Home | Anyone, easy | New shape | planned |
 | 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |

@@ -87,6 +87,44 @@ extension Engines {
         return pattern(b, estimate: yards, tools: ["\(g.needle.label) \(needle) circular needle, worked flat", "Tapestry needle"], finished: "\(Sizing.inches(across)) across the top, \(Sizing.inches(deep + bandDeep)) deep, with ties \(Sizing.inches(Double(tie) / g.spi)) long", gauge: g)
     }
 
+    /// A shrug: one rectangle worked flat from cuff to cuff, folded in half and seamed at each end into a
+    /// sleeve, the middle left open across the back. A ribbed band picked up around the opening finishes it.
+    static func shrug(arm: Double, span: Double, sleeve: Double, gauge g: Gauge) -> PatternPlan {
+        let rib = ["K2, *p2, k2; repeat from * to the end", "P2, *k2, p2; repeat from * to the end"]
+        // Room over the upper arm; the cuff hugs the forearm.
+        let body = Sizing.stitches(arm + 2, per: g.spi, multiple: 4, extra: 2, minimum: 30)
+        let cuff = min(body - 4, Sizing.stitches((arm + 2) * 0.75, per: g.spi, multiple: 4, extra: 2, minimum: 26))
+        let seam = min(sleeve, (span - 12) / 2)
+        let cuffRows = Sizing.rows(2, per: g.rpi, even: true, minimum: 6)
+        let rows = max(4, Sizing.rows(span, per: g.rpi, even: true) - 2 * cuffRows - 2)
+        let opening = span - 2 * seam
+        let band = Sizing.stitches(2 * opening, per: g.spi * 0.9, multiple: 4, minimum: 40)
+        var b = PlanBuilder()
+        b.section = "First Cuff"
+        b.action("With the smaller needle, cast on \(cuff) stitches.", stitches: cuff)
+        b.work(rib, rows: cuffRows, stitches: cuff)
+        b.section = "Body"
+        b.row("Change to the larger needle. " + adjusting(cuff, to: body), stitches: body)
+        b.work(["Purl", "Knit"], rows: rows, stitches: body)
+        b.row("Purl", stitches: body)
+        b.section = "Second Cuff"
+        b.row("Change to the smaller needle. " + adjusting(body, to: cuff), stitches: cuff)
+        b.work(rib.reversed(), rows: cuffRows - 1, stitches: cuff)
+        b.action("Bind off loosely in pattern.")
+        b.section = "Sleeves"
+        b.action("Fold the piece in half lengthwise with the right side inside. Starting at one cuff, sew the long edges together for \(Sizing.inches(seam)). Do the same from the other cuff, leaving \(Sizing.inches(opening)) open in the middle for the back.")
+        b.action("Turn the shrug right side out.")
+        b.section = "Band"
+        b.action("With the \(Sizing.cable(Double(band) / g.spi > 36 ? 32 : 24)) circular needle in the smaller size and the right side facing, start at one sleeve seam and pick up and knit \(band) stitches evenly around the opening. Join in the round and place a marker.", stitches: band)
+        b.work(["*K2, p2; repeat from * around"], rows: Sizing.rows(1.5, per: g.rpi, minimum: 6), stitches: band)
+        b.action("Bind off loosely in pattern.")
+        b.section = "Finishing"
+        b.action("Weave in the ends and block the shrug.")
+        let long = Double(2 * cuffRows + rows + 2) / g.rpi
+        let yards = Sizing.yards(squareInches: Double(body) / g.spi * long + Double(band) / g.spi * 1.5, spi: g.spi, factor: 1.15)
+        return pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "\(g.ribNeedle.label) needles for the cuffs, and a circular needle in that size for the band", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(long)) from cuff to cuff, \(Sizing.inches(Double(body) / g.spi)) around the upper arm, with sleeves \(Sizing.inches(seam)) long", gauge: g)
+    }
+
     struct HoodedScarf: Equatable, Sendable {
         var plan: PatternPlan
         var end: Int

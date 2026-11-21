@@ -428,6 +428,10 @@
   "waffle-cowl": {
    "camera": "overcast",
    "scene": "worn bunched around the neck with a wool coat collar"
+  },
+  "shrug": {
+   "camera": "sun",
+   "scene": "worn over a sleeveless summer dress, seen from the back in a garden"
   }
  }
 }

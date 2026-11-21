@@ -132,6 +132,17 @@ enum GarmentShape {
         case .placemat:
             // A mat wider than it is tall, as it lies on the table.
             path.addRoundedRect(in: box(0.08, 0.24, 0.84, 0.54), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
+        case .shrug:
+            // Two sleeves joined across the back, the ribbed band around the opening between them.
+            path.move(to: p(0.02, 0.56))
+            path.addLine(to: p(0.16, 0.26))
+            path.addQuadCurve(to: p(0.84, 0.26), control: p(0.5, 0.12))
+            path.addLine(to: p(0.98, 0.56))
+            path.addLine(to: p(0.88, 0.62))
+            path.addLine(to: p(0.72, 0.42))
+            path.addQuadCurve(to: p(0.28, 0.42), control: p(0.5, 0.62))
+            path.addLine(to: p(0.12, 0.62))
+            path.closeSubpath()
         case .tieKerchief:
             // A triangle hanging from a band that runs out into a tie at each side.
             path.move(to: p(0.02, 0.3))
