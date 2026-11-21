@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 47)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 57)
+        XCTAssertEqual(Design.allCases.count, 48)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 58)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -782,6 +782,21 @@ final class PatternTests: XCTestCase {
                 let tube = hat.plan.steps.last { $0.texts == ["Knit"] && $0.stitches == hat.tube }
                 XCTAssertGreaterThanOrEqual(Double(tube?.rows ?? 0) / gauge.rpi, 3.5, label)
                 XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("knot") == true, label)
+            }
+        }
+    }
+
+    /// One edge grows a stitch every sixth row, so the slope comes out at the wingspan asked for, three times the depth.
+    func testTheAsymmetricShawlSlopesToItsWingspan() {
+        for input in inputs(.asymmetricShawl) {
+            for gauge in gauges {
+                let plan = Design.asymmetricShawl.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let rows = plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)
+                let long = Double(rows) / (gauge.spi * 2)
+                let deep = Double(plan.steps.compactMap(\.stitches).max() ?? 0) / gauge.spi
+                XCTAssertEqual((long * long + deep * deep).squareRoot(), input["wingspan"] ?? 0, accuracy: (input["wingspan"] ?? 0) * 0.05, label)
+                XCTAssertEqual(long / deep, 3, accuracy: 0.3, label)
             }
         }
     }

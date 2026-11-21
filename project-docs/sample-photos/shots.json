@@ -236,6 +236,10 @@
   "knotHat": {
    "camera": "lamp",
    "scene": "lying on a pale crib sheet beside a folded muslin blanket, warm lamp light in the evening"
+  },
+  "asymmetricShawl": {
+   "camera": "sun",
+   "scene": "draped over the back of a weathered wooden porch chair, late afternoon sun raking across it"
   }
  }
 }

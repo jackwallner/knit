@@ -32,6 +32,12 @@ enum GarmentShape {
                 .union(CGPath(roundedRect: box(0.58, 0.13, 0.16, 0.07), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil))
             path.addPath(body.union(knot))
             path.addRoundedRect(in: box(0.16, 0.72, 0.68, 0.16), cornerWidth: unit * 0.05, cornerHeight: unit * 0.05)
+        case .asymmetric:
+            // A long, shallow triangle: the straight edge across the top, the end on the left, the slope below.
+            path.move(to: p(0.04, 0.3))
+            path.addLine(to: p(0.96, 0.3))
+            path.addLine(to: p(0.04, 0.62))
+            path.closeSubpath()
         case .slouch:
             path.move(to: p(0.18, 0.76))
             path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))
