@@ -89,6 +89,32 @@ enum GarmentShape {
             path.addLine(to: p(0.82, 0.34))
             path.addLine(to: p(0.82, 0.86))
             path.closeSubpath()
+        case .teaCozy:
+            // A dome over the pot, a gap low at each side for the spout and handle, a pompom on top.
+            let dome = CGMutablePath()
+            dome.move(to: p(0.1, 0.88))
+            dome.addLine(to: p(0.1, 0.56))
+            dome.addCurve(to: p(0.5, 0.18), control1: p(0.1, 0.3), control2: p(0.28, 0.18))
+            dome.addCurve(to: p(0.9, 0.56), control1: p(0.72, 0.18), control2: p(0.9, 0.3))
+            dome.addLine(to: p(0.9, 0.88))
+            dome.closeSubpath()
+            var whole: CGPath = dome.subtracting(CGPath(roundedRect: box(0.06, 0.6, 0.1, 0.3), cornerWidth: unit * 0.04, cornerHeight: unit * 0.04, transform: nil))
+            whole = whole.subtracting(CGPath(roundedRect: box(0.84, 0.6, 0.1, 0.3), cornerWidth: unit * 0.04, cornerHeight: unit * 0.04, transform: nil))
+            whole = whole.union(CGPath(ellipseIn: box(0.43, 0.08, 0.14, 0.14), transform: nil))
+            path.addPath(whole)
+        case .bootCuffs:
+            // A pair of cuffs, each a short tube flared a little at the top.
+            for x in [CGFloat(0.08), 0.54] {
+                let cuff = CGMutablePath()
+                cuff.move(to: p(x + 0.04, 0.84))
+                cuff.addLine(to: p(x + 0.02, 0.42))
+                cuff.addLine(to: p(x, 0.18))
+                cuff.addLine(to: p(x + 0.38, 0.18))
+                cuff.addLine(to: p(x + 0.36, 0.42))
+                cuff.addLine(to: p(x + 0.34, 0.84))
+                cuff.closeSubpath()
+                path.addPath(cuff)
+            }
         case .coasters:
             // Two round coasters, one resting on the other.
             path.addPath(CGPath(ellipseIn: box(0.1, 0.3, 0.46, 0.46), transform: nil).union(CGPath(ellipseIn: box(0.44, 0.22, 0.46, 0.46), transform: nil)))

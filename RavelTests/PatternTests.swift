@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 55)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 75)
+        XCTAssertEqual(Design.allCases.count, 59)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 81)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -905,6 +905,42 @@ final class PatternTests: XCTestCase {
         }
     }
 
+    /// The tea cozy's two sides end on a wrong-side row, join into one round and close to 8 stitches.
+    func testTheTeaCozySidesJoinOverThePot() {
+        for input in inputs(.teaCozy) {
+            for gauge in gauges {
+                let plan = Design.teaCozy.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                for side in ["First Side", "Second Side"] {
+                    let rows = plan.steps.filter { $0.section == side && !$0.isAction }.map(\.rows).reduce(0, +)
+                    XCTAssertEqual(rows % 2, 0, "\(label) \(side)")
+                }
+                let half = plan.steps.first?.stitches ?? 0
+                XCTAssertEqual(plan.steps.first { $0.section == "Top" }?.stitches, half * 2, label)
+                XCTAssertEqual(plan.steps.last { $0.stitches != nil }?.stitches, 8, label)
+            }
+        }
+    }
+
+    /// A boot cuff is one tube to the height asked for: rib, seed stitch, rib.
+    func testBootCuffsReachTheirHeight() {
+        for input in inputs(.bootCuffs) {
+            for gauge in gauges {
+                let plan = Design.bootCuffs.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(Set(plan.steps.compactMap(\.stitches)).count, 1, label)
+                let rounds = plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(rounds) / gauge.rpi, max(input["height"] ?? 0, 8 / gauge.rpi), accuracy: 2 / gauge.rpi, label)
+            }
+        }
+    }
+
+    /// Baby socks name the yarn to buy, fingering, not the lace weight their firm gauge reads as.
+    func testBabySocksAskForFingering() {
+        let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
+        XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
     func testMittenThumbGussetAddsUp() {
         for input in inputs(.mittens) {
             for gauge in gauges {
@@ -952,10 +988,11 @@ final class PatternTests: XCTestCase {
     func testCardiganFrontsAndBandsMakeTheChest() {
         let adults: [Double] = Design.raglanCardigan.sizes.map { $0.values["chest"] ?? 0 } + [26, 62]
         let babies: [Double] = Design.babyCardigan.sizes.map { $0.values["chest"] ?? 0 } + [14, 24]
-        for (baby, chest) in adults.map({ (false, $0) }) + babies.map({ (true, $0) }) {
+        let children: [Double] = Design.kidsCardigan.sizes.map { $0.values["chest"] ?? 0 } + [18, 34]
+        for (baby, child, chest) in adults.map({ (false, false, $0) }) + babies.map({ (true, false, $0) }) + children.map({ (false, true, $0) }) {
             for gauge in gauges {
-                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: baby ? 7 : 15, sleeve: baby ? 7 : 18, gauge: gauge, baby: baby)
-                let label = "\(baby ? "baby " : "")chest \(chest) gauge \(gauge.stitches)"
+                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: baby ? 7 : child ? 11 : 15, sleeve: baby ? 7 : child ? 12 : 18, gauge: gauge, baby: baby, child: child)
+                let label = "\(baby ? "baby " : child ? "child " : "")chest \(chest) gauge \(gauge.stitches)"
                 XCTAssertEqual(c.body + c.band, c.fit.body, label)
                 XCTAssertEqual(2 * c.front + c.fit.panel + 2 * c.fit.underarm, c.body, label)
                 XCTAssertEqual(c.neck, c.fit.backAtNeck + 2 * c.frontAtNeck + 2 * c.fit.sleeveAtNeck, label)

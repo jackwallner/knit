@@ -628,6 +628,81 @@
       ],
       "tag": "Lace",
       "photo": "photos/eyelet-lace-wrap.jpg"
+    },
+    {
+      "id": "striped-beanie",
+      "title": "Striped Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#B5542F"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        },
+        {
+          "color": "C",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-beanie.jpg"
+    },
+    {
+      "id": "linen-stitch-scarf",
+      "title": "Linen Stitch Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#8A9A7B"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-scarf.jpg"
     }
   ]
 }

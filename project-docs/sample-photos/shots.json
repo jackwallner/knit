@@ -308,6 +308,30 @@
   "eyelet-lace-wrap": {
    "camera": "lamp",
    "scene": "folded over the arm of a linen armchair, a book on the seat, warm lamplight"
+  },
+  "teaCozy": {
+   "camera": "lamp",
+   "scene": "on a round brown teapot on a kitchen table, two cups beside it, warm morning light"
+  },
+  "bootCuffs": {
+   "camera": "outdoor",
+   "scene": "worn with tall brown leather boots on a person standing on fallen leaves, seen from the knees down"
+  },
+  "striped-beanie": {
+   "camera": "snap",
+   "scene": "worn by a person on a ferry deck, grey sea behind, seen from the front, cropped at the shoulders"
+  },
+  "kidsCardigan": {
+   "camera": "overcast",
+   "scene": "worn buttoned by a child of about six sitting on wooden porch steps, seen from the front, cropped at the knees"
+  },
+  "linen-stitch-scarf": {
+   "camera": "flash",
+   "scene": "laid flat on a dark slate floor next to a pair of leather gloves"
+  },
+  "babySocks": {
+   "camera": "snap",
+   "scene": "a pair laid side by side on a folded white muslin blanket, a wooden teething ring beside them"
   }
  }
 }

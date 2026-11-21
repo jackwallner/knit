@@ -82,12 +82,12 @@ cached on the phone, so the app does not carry them.
 | 31 | Cat Ear Hat | Hats | Children and adults, easy | New shape: tube closed flat at the top with a three-needle bind off | verified |
 | 32 | Seeded Rib Beanie | Hats | Adults, easy | Stitch: seeded rib on ribbed beanie | verified |
 | 33 | Eyelet Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch: eyelet rows on wrap (the wrap now takes a stitch) | verified |
-| 34 | Tea Cozy | Home | Gift, easy | New shape | planned |
-| 35 | Boot Cuffs | Socks & Feet | Adults, beginner | New shape | planned |
-| 36 | Striped Beanie | Hats | Anyone, easy | Colorwork | planned |
-| 37 | Kids' Cardigan | Sweaters | Children 2 to 12, intermediate | New shape: cardigan engine at child sizes | planned |
-| 38 | Linen Stitch Scarf | Scarves & Cowls | Adults, easy | Stitch: linen stitch on scarf | planned |
-| 39 | Baby Socks | Baby | Babies, intermediate | New shape: sock engine at baby sizes | planned |
+| 34 | Tea Cozy | Home | Gift, easy | New shape: two flat sides joined in the round over the lid | verified |
+| 35 | Boot Cuffs | Socks & Feet | Adults, beginner | New shape: rib inside the boot, seed stitch above | verified |
+| 36 | Striped Beanie | Hats | Anyone, easy | Colorwork | verified |
+| 37 | Kids' Cardigan | Sweaters | Children 2 to 12, intermediate | New shape: cardigan engine at child sizes | verified |
+| 38 | Linen Stitch Scarf | Scarves & Cowls | Adults, easy | Stitch: linen stitch on scarf | verified |
+| 39 | Baby Socks | Baby | Babies, intermediate | New shape: sock engine at baby sizes | verified |
 | 40 | Waffle Blanket | Blankets | Baby to throw, beginner | Stitch: waffle on bordered blanket | planned |
 | 41 | Mug Cozy | Home | Gift, beginner | New shape | planned |
 | 42 | Houndstooth Beanie | Hats | Adults, intermediate | Colorwork: 4-wide repeat | planned |

@@ -8,4 +8,4 @@ One folder every 10 designs: `contact-sheet.png` (sample photo, drawn preview, t
 |---|---|---|
 | 1 | Toe-Up Socks, Fingerless Mitts, Double Moss Scarf, Baby Cardigan, Top-Down Beanie, Twisted Headband, Poncho, Christmas Stocking, Bordered Washcloth, Waffle Beanie | 66 MB app, 48 MB compressed. New designs add code and strings only; their photos load from the site. |
 | 2 | Snowflake Beanie, Baby Knot Hat, Asymmetric Shawl, Broken Rib Cowl, Bandana Cowl, Feather and Fan Scarf, Double Moss Blanket, Basketweave Washcloth, Arm Warmers, Honeycomb Cowl | 66 MB app, 48 MB compressed: unchanged, since it adds code, strings and records only. |
-| 3 | Watch Cap, Chevron Lace Blanket, Hooded Scarf, Striped Scarf, Coasters, Rope Cable Scarf, Baby Mittens, Cat Ear Hat, Seeded Rib Beanie, Eyelet Lace Wrap | Measuring. |
+| 3 | Watch Cap, Chevron Lace Blanket, Hooded Scarf, Striped Scarf, Coasters, Rope Cable Scarf, Baby Mittens, Cat Ear Hat, Seeded Rib Beanie, Eyelet Lace Wrap | 66 MB app, 48 MB compressed: up 0.1 MB, code, strings and records. |

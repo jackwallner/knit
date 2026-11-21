@@ -141,4 +141,28 @@ extension Engines {
         let yards = Sizing.yards(squareInches: (hand + 0.5) * long * 2, spi: g.spi, factor: 1.15)
         return pattern(b, estimate: yards, tools: ["\(g.ribNeedle.label) double-pointed needles for the cuff, or a long circular for magic loop", "\(g.needle.label) double-pointed needles for the hand, or a long circular", "Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "hand", hand)), \(Sizing.inches(long)) from the cuff to the tip", gauge: g, round: true)
     }
+
+    /// Boot cuffs, worked in the round: a rib that sits inside the boot, then seed stitch that shows above it,
+    /// or folds down over the top, since seed stitch looks the same from both sides. Written for one.
+    static func bootCuff(calf: Double, height: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = Sizing.stitches(calf * 0.9, per: g.spi, multiple: 4, minimum: 32)
+        let edge = Sizing.rows(0.5, per: g.rpi, minimum: 3)
+        let leg = Sizing.rows(height * 0.45, per: g.rpi, minimum: 4)
+        let cuff = Sizing.rows(height, per: g.rpi, even: true, minimum: 8) - leg - edge
+        let rib = "*K2, p2; repeat from * around"
+        var b = PlanBuilder()
+        b.section = "Leg"
+        b.action("Cast on \(stitches) stitches loosely. Join in the round without twisting and place a marker.", stitches: stitches)
+        b.work([rib], rows: leg, stitches: stitches)
+        b.section = "Cuff"
+        b.work(["*K1, p1; repeat from * around", "*P1, k1; repeat from * around"], rows: max(2, cuff), stitches: stitches)
+        b.section = "Edge"
+        b.work([rib], rows: edge, stitches: stitches)
+        b.action("Bind off loosely in pattern.")
+        b.section = "Finishing"
+        b.action("Weave in the ends. Make a second cuff the same way. Wear the rib inside the boot, with the seed stitch above it or folded down over the top.")
+        let tall = Double(leg + max(2, cuff) + edge) / g.rpi
+        let yards = Sizing.yards(squareInches: calf * 0.9 * tall * 2, spi: g.spi, factor: 1.25)
+        return pattern(b, estimate: yards, tools: [Double(stitches) / g.spi < 16 ? "\(g.needle.label) double-pointed needles, or a long circular for magic loop" : "\(g.needle.label) \(Sizing.cable(16)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "calf", calf)) with the rib stretched a little, \(Sizing.inches(tall)) tall", gauge: g, round: true)
+    }
 }
