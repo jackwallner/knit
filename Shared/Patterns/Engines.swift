@@ -675,14 +675,16 @@ enum Engines {
     }
 
     /// Both sleeves of a top-down raglan, from the held stitches to the cuff, in the round. Returns the cuff count.
-    static func raglanSleeves(_ b: inout PlanBuilder, _ fit: RaglanFit, chest: Double, length sleeveLength: Double, gauge g: Gauge) -> Int {
+    static func raglanSleeves(_ b: inout PlanBuilder, _ fit: RaglanFit, chest: Double, length sleeveLength: Double, gauge g: Gauge, short: Bool = false) -> Int {
         let sleeve = fit.sleeve, sleeveTop = fit.sleeveTop, underarm = fit.underarm
-        let cuffRounds = Sizing.rows(min(2, sleeveLength * 0.2), per: g.rpi, minimum: 4)
-        let straight = Sizing.rows(1.5, per: g.rpi)
-        let sleeveRounds = max(straight + 2, Sizing.rows(sleeveLength, per: g.rpi) - cuffRounds)
+        // A `short` sleeve stops above the elbow in a narrow band, a little narrower than the upper arm.
+        let cuffRounds = short ? Sizing.rows(0.75, per: g.rpi, minimum: 3) : Sizing.rows(min(2, sleeveLength * 0.2), per: g.rpi, minimum: 4)
+        let straight = Sizing.rows(short ? min(1.5, sleeveLength / 2) : 1.5, per: g.rpi)
+        let sleeveRounds = max(straight + (short ? 0 : 2), Sizing.rows(sleeveLength, per: g.rpi) - cuffRounds)
         // A cuff no wider than 10.5 in, reached with decreases at least 4 rounds apart: a short sleeve
         // keeps the stitches it has no room to lose, where packing the decreases would make a funnel.
-        let wanted = max(0, (sleeve - even(min(chest * 0.14 + 3, 10.5) * g.spi, minimum: 8)) / 2)
+        let opening = short ? even(Double(sleeve) * 0.88) : even(min(chest * 0.14 + 3, 10.5) * g.spi, minimum: 8)
+        let wanted = max(0, (sleeve - opening) / 2)
         let decreases = min(wanted, max(0, (sleeveRounds - straight) / 4))
         let spacing = decreases > 0 ? (sleeveRounds - straight) / decreases : 0
         let cuff = sleeve - 2 * decreases
@@ -695,7 +697,7 @@ enum Engines {
                 b.work(["K1, k2tog, knit to the last 3 stitches, ssk, k1"] + Array(repeating: "Knit", count: spacing - 1), rows: decreases * spacing, stitches: sleeve - 2, delta: -2)
             }
             b.work(["Knit"], rows: sleeveRounds - straight - decreases * spacing, stitches: cuff)
-            b.section = "\(name) · Cuff"
+            b.section = "\(name) · \(short ? "Band" : "Cuff")"
             b.row("Change to the smaller needles. *K1, p1; repeat from * around", stitches: cuff)
             b.work(["*K1, p1; repeat from * around"], rows: cuffRounds - 1, stitches: cuff)
             b.action("Bind off loosely in pattern.")
@@ -762,7 +764,7 @@ enum Engines {
     /// A crew-neck pullover knit from the neck down in one piece. The body and
     /// the sleeves grow at their own rates, so large sizes keep a neck that fits.
     /// `chest` is the finished chest. `wearer` is the chest it was sized from, when the knitter gave one.
-    static func raglan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge, child: Bool = false) -> Raglan {
+    static func raglan(chest: Double, wearer: Double? = nil, body length: Double, sleeve sleeveLength: Double, gauge g: Gauge, child: Bool = false, short: Bool = false) -> Raglan {
         let shape = raglanFit(chest: chest, wearer: wearer, child: child, gauge: g)
         let body = shape.body, sleeve = shape.sleeve, underarm = shape.underarm, panel = shape.panel, sleeveTop = shape.sleeveTop
         let backAtNeck = shape.backAtNeck, sleeveAtNeck = shape.sleeveAtNeck, bodyIncreases = shape.bodyIncreases, sleeveIncreases = shape.sleeveIncreases
@@ -822,7 +824,7 @@ enum Engines {
         b.work(["*K1, p1; repeat from * around"], rows: hem - 1, stitches: body)
         b.action("Bind off loosely in pattern.")
 
-        let cuff = raglanSleeves(&b, shape, chest: chest, length: sleeveLength, gauge: g)
+        let cuff = raglanSleeves(&b, shape, chest: chest, length: sleeveLength, gauge: g, short: short)
         b.section = "Finishing"
         b.action("Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.")
 

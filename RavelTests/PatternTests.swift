@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 63)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 89)
+        XCTAssertEqual(Design.allCases.count, 64)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 90)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -939,6 +939,24 @@ final class PatternTests: XCTestCase {
     func testBabySocksAskForFingering() {
         let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
         XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
+    /// The tee's sleeves stop above the elbow in a narrow band, and they barely taper, so they do not pull in.
+    func testTheTeeSleevesEndInABand() {
+        for input in inputs(.raglanTee) {
+            for gauge in gauges {
+                let plan = Design.raglanTee.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let sleeve = plan.steps.filter { $0.section == "First Sleeve" }
+                let band = plan.steps.filter { $0.section == "First Sleeve · Band" }
+                XCTAssertFalse(band.isEmpty, label)
+                XCTAssertLessThanOrEqual(Double(band.filter { !$0.isAction }.reduce(0) { $0 + $1.rows }) / gauge.rpi, 1.1, label)
+                let widest = sleeve.compactMap(\.stitches).max() ?? 0, narrowest = band.compactMap(\.stitches).min() ?? 0
+                XCTAssertGreaterThanOrEqual(Double(narrowest), Double(widest) * 0.8, label)
+                let worked = (sleeve + band).filter { !$0.isAction }.reduce(0) { $0 + $1.rows }
+                XCTAssertEqual(Double(worked) / gauge.rpi, input["sleeve"] ?? 0, accuracy: 0.75, label)
+            }
+        }
     }
 
     /// The capelet's collar pulls over the head, and its hem rib comes out whole.

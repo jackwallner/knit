@@ -210,6 +210,21 @@ enum GarmentShape {
             path.addLine(to: p(0.02, 0.62))
             path.addLine(to: p(0.24, 0.17))
             path.closeSubpath()
+        case .tee:
+            // The sweater with sleeves that stop above the elbow.
+            path.move(to: p(0.38, 0.12))
+            path.addCurve(to: p(0.62, 0.12), control1: p(0.44, 0.2), control2: p(0.56, 0.2))
+            path.addLine(to: p(0.76, 0.17))
+            path.addLine(to: p(0.9, 0.4))
+            path.addLine(to: p(0.78, 0.48))
+            path.addLine(to: p(0.74, 0.42))
+            path.addLine(to: p(0.74, 0.9))
+            path.addLine(to: p(0.26, 0.9))
+            path.addLine(to: p(0.26, 0.42))
+            path.addLine(to: p(0.22, 0.48))
+            path.addLine(to: p(0.1, 0.4))
+            path.addLine(to: p(0.24, 0.17))
+            path.closeSubpath()
         case .socks, .toeUp:
             // One sock seen from the side: the leg, a rounded heel and the foot running out to the toe.
             path.move(to: p(0.3, 0.08))
@@ -405,7 +420,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
+    var knitsDown: Bool { [.sweater, .tee, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit

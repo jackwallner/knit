@@ -96,7 +96,7 @@ cached on the phone, so the app does not carry them.
 | 45 | Placemat | Home | Anyone, beginner | New shape | verified |
 | 46 | Mini Stocking Ornament | Holiday | Gift, easy | New shape | verified |
 | 47 | Rope Cable Mitts | Hands | Adults, intermediate | Stitch: rope cable on handwarmers (stitched mitts get an afterthought thumb) | verified |
-| 48 | Short-Sleeve Raglan Tee | Sweaters | Adults, intermediate | New shape: raglan with short sleeves | planned |
+| 48 | Short-Sleeve Raglan Tee | Sweaters | Adults, intermediate | New shape: raglan with short sleeves, DK, a narrow band at the sleeve | verified |
 | 49 | Honeycomb Beanie | Hats | Adults, easy | Stitch | planned |
 | 50 | Waffle Washcloth | Home | Anyone, beginner | Stitch | planned |
 | 51 | Feather and Fan Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |

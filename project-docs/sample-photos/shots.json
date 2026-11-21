@@ -364,6 +364,10 @@
   "rope-cable-mitts": {
    "camera": "snap",
    "scene": "worn by hands holding a paper cup of coffee outdoors on a cold morning, close up"
+  },
+  "raglanTee": {
+   "camera": "sun",
+   "scene": "laid flat on a sunlit linen bedspread beside a folded pair of sunglasses"
   }
  }
 }

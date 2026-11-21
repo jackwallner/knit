@@ -51,6 +51,12 @@ final class SearchTests: XCTestCase {
         XCTAssertEqual(find("ornament").map(\.id), [ornament])
     }
 
+    func testATeeIsFoundByWhatPeopleCallIt() {
+        for query in ["tee", "t-shirt", "short sleeve", "summer top"] {
+            XCTAssertEqual(find(query).first?.id, Design.raglanTee.rawValue, query)
+        }
+    }
+
     func testNothingForWhatRavelDoesNotHave() {
         for query in ["dog sweater", "crochet hat", "cat toy", "amigurumi"] {
             XCTAssertTrue(find(query).isEmpty, query)
