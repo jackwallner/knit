@@ -821,6 +821,28 @@
       ],
       "tag": "Cables",
       "photo": "photos/rope-cable-mitts.jpg"
+    },
+    {
+      "id": "honeycomb-beanie",
+      "title": "Honeycomb Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-beanie.jpg"
     }
   ]
 }

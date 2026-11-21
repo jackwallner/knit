@@ -57,6 +57,12 @@ final class SearchTests: XCTestCase {
         }
     }
 
+    func testAStitchAndAShapeFindTheDesignWithBoth() {
+        let all = library + TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        XCTAssertEqual(LibrarySearch.find("honeycomb hat", in: all).first?.id, "topical.honeycomb-beanie")
+        XCTAssertEqual(LibrarySearch.find("honeycomb cowl", in: all).first?.id, "topical.honeycomb-cowl")
+    }
+
     func testNothingForWhatRavelDoesNotHave() {
         for query in ["dog sweater", "crochet hat", "cat toy", "amigurumi"] {
             XCTAssertTrue(find(query).isEmpty, query)

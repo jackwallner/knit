@@ -368,6 +368,10 @@
   "raglanTee": {
    "camera": "sun",
    "scene": "laid flat on a sunlit linen bedspread beside a folded pair of sunglasses"
+  },
+  "honeycomb-beanie": {
+   "camera": "overcast",
+   "scene": "resting on a weathered wooden bench beside a folded wool blanket"
   }
  }
 }
