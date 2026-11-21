@@ -109,10 +109,10 @@ cached on the phone, so the app does not carry them.
 | 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | verified |
 | 59 | Rope Cable Blanket | Blankets | Throw, intermediate | Stitch | verified |
 | 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | verified |
-| 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | planned |
-| 62 | Star Beanie | Hats | Anyone, intermediate | Colorwork | planned |
+| 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | verified |
+| 62 | Star Beanie | Hats | Anyone, easy | Colorwork: one star sewn on in duplicate stitch | verified |
 | 63 | Shrug | Shawls & Wraps | Adults, easy | New shape | planned |
-| 64 | Waffle Cowl | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 64 | Waffle Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
 | 65 | Tote Bag | Home | Anyone, easy | New shape | planned |
 | 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 67 | Baby Cocoon | Baby | Newborn, easy | New shape | planned |

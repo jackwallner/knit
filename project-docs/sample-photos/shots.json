@@ -416,6 +416,18 @@
   "turtleneck": {
    "camera": "overcast",
    "scene": "laid flat on a gray wool blanket beside a pair of leather gloves"
+  },
+  "linen-stitch-washcloth": {
+   "camera": "sun",
+   "scene": "folded on a wooden bath tray beside a sprig of eucalyptus"
+  },
+  "star-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a dusk sky on a frosty evening"
+  },
+  "waffle-cowl": {
+   "camera": "overcast",
+   "scene": "worn bunched around the neck with a wool coat collar"
   }
  }
 }

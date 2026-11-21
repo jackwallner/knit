@@ -1032,6 +1032,90 @@
       ],
       "tag": "Cables",
       "photo": "photos/rope-cable-blanket.jpg"
+    },
+    {
+      "id": "linen-stitch-washcloth",
+      "title": "Linen Stitch Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "denim",
+          "hex": "#4F6D8F"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-washcloth.jpg"
+    },
+    {
+      "id": "waffle-cowl",
+      "title": "Waffle Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "rose",
+          "hex": "#C98A8E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-cowl.jpg"
+    },
+    {
+      "id": "star-beanie",
+      "title": "Star Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "gold",
+          "hex": "#D9A93F"
+        }
+      ],
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "....B....",
+          "....B....",
+          "...BBB...",
+          "...BBB...",
+          "BBBBBBBBB",
+          ".BBBBBBB.",
+          "..BBBBB..",
+          "..BBBBB..",
+          ".BBBBBBB.",
+          ".BBB.BBB.",
+          "BB.....BB",
+          "B.......B"
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/star-beanie.jpg"
     }
   ]
 }
