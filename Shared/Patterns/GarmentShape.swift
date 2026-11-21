@@ -132,6 +132,16 @@ enum GarmentShape {
         case .placemat:
             // A mat wider than it is tall, as it lies on the table.
             path.addRoundedRect(in: box(0.08, 0.24, 0.84, 0.54), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
+        case .pouch:
+            // A pouch drawn shut: the frill flares above the gathered neck, the body rounds out below it.
+            path.move(to: p(0.4, 0.3))
+            path.addLine(to: p(0.26, 0.14))
+            path.addLine(to: p(0.74, 0.14))
+            path.addLine(to: p(0.6, 0.3))
+            path.addCurve(to: p(0.74, 0.9), control1: p(0.8, 0.36), control2: p(0.84, 0.9))
+            path.addLine(to: p(0.26, 0.9))
+            path.addCurve(to: p(0.4, 0.3), control1: p(0.16, 0.9), control2: p(0.2, 0.36))
+            path.closeSubpath()
         case .coasters:
             // Two round coasters, one resting on the other.
             path.addPath(CGPath(ellipseIn: box(0.1, 0.3, 0.46, 0.46), transform: nil).union(CGPath(ellipseIn: box(0.44, 0.22, 0.46, 0.46), transform: nil)))

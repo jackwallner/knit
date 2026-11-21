@@ -380,6 +380,10 @@
   "feather-and-fan-wrap": {
    "camera": "outdoor",
    "scene": "draped over the back of a garden chair in late afternoon light"
+  },
+  "pouch": {
+   "camera": "sun",
+   "scene": "standing on a wooden dresser beside a small dish of rings"
   }
  }
 }

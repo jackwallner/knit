@@ -91,6 +91,42 @@ extension Engines {
         return pattern(b, estimate: yards, yarnNote: ", cotton or wool", tools: ["\(g.needle.label) needles", "2 buttons, about \(Sizing.inches(0.5)) across", "Tapestry needle"], finished: "\(Sizing.inches(Double(stitches) / g.spi)) tall, \(Sizing.inches(long)) long, to wrap a \(Sizing.inches(around)) mug", gauge: g)
     }
 
+    /// A drawstring pouch worked in the round from the top down: a ribbed frill, a round of eyelets for the
+    /// cord, a stockinette body, and a flat bottom closed with a three-needle bind off.
+    static func pouch(width: Double, height: Double, gauge g: Gauge) -> PatternPlan {
+        // An even number of eyelets, so the cord woven in and out of them comes out where it went in.
+        let stitches = Sizing.stitches(2 * width, per: g.spi, multiple: 8, minimum: 24)
+        let around = Double(stitches) / g.spi
+        let frill = Sizing.rows(0.75, per: g.rpi, minimum: 3)
+        let gap = Sizing.rows(0.5, per: g.rpi, minimum: 2)
+        let body = Sizing.rows(height, per: g.rpi, minimum: 6) - frill - gap - 1
+        // Once around through the eyelets with ends long enough to pull it shut and tie a bow.
+        let cord = around + 14
+        let small = around < 16
+        var b = PlanBuilder()
+        b.section = "Top"
+        b.action("Cast on \(stitches) stitches\(small ? " and divide them over double-pointed needles, or use a long circular for magic loop" : ""). Join in the round without twisting and place a marker.", stitches: stitches)
+        b.work(["*K2, p2; repeat from * around"], rows: frill, stitches: stitches)
+        b.work(["Knit"], rows: gap, stitches: stitches)
+        b.row("*K2, yo, k2tog; repeat from * around", stitches: stitches)
+        b.section = "Body"
+        b.work(["Knit"], rows: body, stitches: stitches)
+        b.section = "Base"
+        b.action("Turn the pouch inside out. Put the first \(stitches / 2) stitches on one needle and the last \(stitches / 2) on another, held parallel.")
+        b.action("Join the two sides with a three-needle bind off. Turn the pouch right side out.")
+        b.section = "Cord"
+        b.action("Cut two strands of yarn, each \(Sizing.inches(cord * 3)) long. Knot them together at both ends, anchor one end and twist the other until the strands kink back on themselves.")
+        b.action("Fold the twisted strands in half and let them twist around each other into a cord about \(Sizing.inches(cord)) long. Knot the loose end.")
+        b.section = "Finishing"
+        b.action("Weave in the ends. Weave the cord in and out through the eyelets all the way around, so both ends come out side by side. Pull the cord to close the pouch and tie it in a bow.")
+        let tall = Double(frill + gap + 1 + body) / g.rpi
+        let yards = Int((Double(Sizing.yards(squareInches: around * tall, spi: g.spi, factor: 1.15)) / 10 + 6 * cord / 360).rounded(.up)) * 10
+        let needles = small
+            ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "A spare needle in the same size for the bind off"]
+            : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "A spare needle in the same size for the bind off"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(around / 2)) wide, \(Sizing.inches(tall)) tall, laid flat", gauge: g, round: true)
+    }
+
     /// A placemat in seed stitch, which lies flat and stands up to washing, inside a garter border.
     /// Worked flat from one short edge to the other.
     static func placemat(width: Double, length: Double, gauge g: Gauge) -> PatternPlan {
