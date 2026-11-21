@@ -212,6 +212,10 @@
   "twistedHeadband": {
    "camera": "sun",
    "scene": "worn on someone's head seen from the front, cropped above the eyes, hair loose around it"
+  },
+  "poncho": {
+   "camera": "outdoor",
+   "scene": "worn by someone standing on a porch, seen from the chest down to the knees, the V point hanging at the front"
   }
  }
 }

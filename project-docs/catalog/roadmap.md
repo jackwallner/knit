@@ -55,7 +55,7 @@ cached on the phone, so the app does not carry them.
 | 4 | Baby Cardigan | Baby | Babies 0 to 24 months, easy | New shape: cardigan engine at baby sizes | verified |
 | 5 | Top-Down Beanie | Hats | Adults and children, easy | New shape | verified |
 | 6 | Twisted Headband | Accessories | Adults, easy | New shape | verified |
-| 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | planned |
+| 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | verified |
 | 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | planned |
 | 9 | Garter Washcloth | Home | Anyone, beginner | New shape: square cloth, base for stitch cloths | planned |
 | 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | planned |

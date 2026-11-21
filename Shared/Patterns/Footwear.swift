@@ -73,3 +73,32 @@ extension Engines {
         return rounds
     }
 }
+
+extension Engines {
+    /// The classic two-rectangle poncho: two panels, each twice as long as it is wide, in stockinette with
+    /// garter edges. The short end of each is sewn to the long side of the other, which makes a V at the
+    /// front and back and leaves the neck open.
+    static func poncho(width: Double, gauge g: Gauge) -> PatternPlan {
+        let border = max(3, Int((0.75 * g.spi).rounded()))
+        let stitches = Sizing.stitches(width, per: g.spi, minimum: 2 * border + 6)
+        let ridges = Sizing.rows(0.75, per: g.spi, minimum: 2)
+        let length = width * 2
+        let edge = 2 * ridges
+        let body = max(2, Sizing.rows(length, per: g.rpi, even: true) - 2 * edge)
+        var b = PlanBuilder()
+        for panel in 1...2 {
+            b.section = "Panel \(panel)"
+            b.action("Cast on \(stitches) stitches.", stitches: stitches)
+            b.work(["Knit"], rows: edge, stitches: stitches)
+            b.work(["Knit", "K\(border), purl to the last \(border) stitches, k\(border)"], rows: body, stitches: stitches)
+            b.work(["Knit"], rows: edge, stitches: stitches)
+            b.action("Bind off loosely. Weave in the ends.")
+        }
+        b.section = "Finishing"
+        b.action("Block both panels to \(Sizing.inches(width)) by \(Sizing.inches(length)). Hold each with its right side facing you and its cast-on edge at the bottom: its left side is the long edge on your left.")
+        b.action("Sew the cast-on edge of Panel 2 along the top half of Panel 1's left side, from the bound-off corner down to the middle.")
+        b.action("Sew the cast-on edge of Panel 1 along the top half of Panel 2's left side the same way. Each panel's end is now sewn to the side of the other, and the two free halves of the sides frame the neck. Weave in the ends.")
+        let yards = Sizing.yards(squareInches: width * length * 2, spi: g.spi, factor: 1.05)
+        return pattern(b, estimate: yards, tools: [longCircular(stitches, g, flat: true), "Tapestry needle"], finished: "Two panels, each \(Sizing.inches(width)) by \(Sizing.inches(length)), sewn into a poncho that hangs about \(Sizing.inches(width * 1.4)) from the neck to the point", gauge: g)
+    }
+}

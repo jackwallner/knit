@@ -147,6 +147,16 @@ enum GarmentShape {
             path.addPath(whole)
         case .wrap:
             path.addRoundedRect(in: box(0.22, 0.07, 0.56, 0.86), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02)
+        case .poncho:
+            // Laid flat from the front: shoulders sloping out from the neck to a point at the center.
+            let cape = CGMutablePath()
+            cape.move(to: p(0.04, 0.4))
+            cape.addLine(to: p(0.34, 0.14))
+            cape.addLine(to: p(0.66, 0.14))
+            cape.addLine(to: p(0.96, 0.4))
+            cape.addLine(to: p(0.5, 0.92))
+            cape.closeSubpath()
+            path.addPath(cape.subtracting(CGPath(ellipseIn: box(0.37, 0.07, 0.26, 0.16), transform: nil)))
         case .crescent:
             path.move(to: p(0.03, 0.28))
             path.addQuadCurve(to: p(0.97, 0.28), control: p(0.5, 1.0))

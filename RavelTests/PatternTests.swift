@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 43)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 51)
+        XCTAssertEqual(Design.allCases.count, 44)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 52)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -721,6 +721,19 @@ final class PatternTests: XCTestCase {
                 let ease = Double(brim.last?.stitches ?? 0) / gauge.spi / head
                 XCTAssertTrue((Engines.hatEase.lowerBound - 0.01...Engines.hatEase.upperBound + 0.01).contains(ease), "\(label): ease \(ease)")
                 XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("8 cast-on stitches") == true, label)
+            }
+        }
+    }
+
+    /// Each poncho panel is twice as long as it is wide, so each end covers half the other's side.
+    func testPonchoPanelsAreTwiceAsLongAsWide() {
+        for input in inputs(.poncho) {
+            for gauge in gauges {
+                let plan = Design.poncho.plan(measures: input, gauge: gauge)
+                let width = Double(plan.steps[0].stitches ?? 0) / gauge.spi
+                let long = Double(rows(plan, "Panel 1").count) / gauge.rpi
+                XCTAssertEqual(long / width, 2, accuracy: 0.25, "\(input) \(gauge.stitches)")
+                XCTAssertEqual(rows(plan, "Panel 1").count % 2, 0)
             }
         }
     }

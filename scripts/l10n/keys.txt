@@ -418,3 +418,5 @@ Texture
 Colorwork
 Top-Down Beanie
 Twisted Headband
+Poncho
+Panel %lld
