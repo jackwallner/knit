@@ -310,6 +310,28 @@
       ],
       "tag": "Texture",
       "photo": "photos/double-moss-scarf.jpg"
+    },
+    {
+      "id": "waffle-beanie",
+      "title": "Waffle Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "moss",
+          "hex": "#6B7A3A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-beanie.jpg"
     }
   ]
 }

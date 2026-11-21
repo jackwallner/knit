@@ -25,6 +25,18 @@ final class SearchTests: XCTestCase {
             XCTAssertTrue(find(design.name).contains { $0.id == design.rawValue }, design.name)
         }
         XCTAssertEqual(find("toe up socks").first?.id, Design.toeUpSocks.rawValue)
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        for item in collection {
+            XCTAssertTrue(LibrarySearch.find(item.title, in: collection).contains { $0.id == item.id }, item.title)
+        }
+    }
+
+    /// A stitch design is found by its stitch, even when the name leaves it out.
+    func testStitchDesignsAreFoundByTheirStitch() {
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        XCTAssertTrue(LibrarySearch.find("waffle", in: collection).contains { $0.id == "topical.waffle-beanie" })
+        XCTAssertTrue(LibrarySearch.find("moss", in: collection).contains { $0.id == "topical.double-moss-scarf" })
+        XCTAssertTrue(LibrarySearch.find("texture", in: collection).contains { $0.id == "topical.waffle-beanie" })
     }
 
     func testShelfTagsAreSearched() {

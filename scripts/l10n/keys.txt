@@ -422,3 +422,4 @@ Poncho
 Panel %lld
 Christmas Stocking
 Bordered Washcloth
+Waffle Beanie

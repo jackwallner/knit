@@ -116,6 +116,14 @@ enum LibraryItem: Hashable, Identifiable, Sendable {
         }
     }
 
+    /// The stitch pattern a design is worked in, if it has one.
+    var stitch: Stitch? {
+        switch self {
+        case .builtIn: nil
+        case .topical(let topical): topical.stitch
+        }
+    }
+
     /// The sample photo's asset name, for the designs that carry one in the app.
     var photo: String? {
         switch self {

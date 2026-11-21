@@ -58,7 +58,7 @@ cached on the phone, so the app does not carry them.
 | 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | verified |
 | 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | verified |
 | 9 | Bordered Washcloth | Home | Anyone, beginner | New shape: square cloth knit straight, garter frame, stockinette middle; base for stitch cloths (renamed: all-garter would be the Dishcloth again) | verified |
-| 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | planned |
+| 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | verified |
 | 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | dropped: both sock designs already knit a leg as short as 2 in, so this would be a size, not a design |
 | 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | planned |
 | 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | planned |
