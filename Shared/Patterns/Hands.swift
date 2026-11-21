@@ -110,4 +110,35 @@ extension Engines {
         let plan = pattern(b, estimate: yards, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "Stitch marker", "Tapestry needle"], finished: "\(Sizing.inches(Double(hand) / g.spi)) around the hand, widening to \(Sizing.inches(Double(top) / g.spi)) at the top, \(Sizing.inches(long)) long", gauge: g, round: true)
         return ArmWarmers(plan: plan, hand: hand, top: top)
     }
+
+    /// Thumbless mittens for a baby, as a pair: a long rib cuff that stays on, a plain hand and a gathered top
+    /// with nothing to graft. A multiple of 4 so the top closes in three even rounds.
+    static func babyMittens(hand: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = Sizing.stitches(hand + 0.5, per: g.spi, multiple: 4, minimum: 16)
+        let cuff = Sizing.rows(hand * 0.4, per: g.rpi, minimum: 6)
+        let top: [(text: String, stitches: Int)] = [
+            ("*K2, k2tog; repeat from * around", stitches * 3 / 4),
+            ("Knit", stitches * 3 / 4),
+            ("*K1, k2tog; repeat from * around", stitches / 2),
+            ("*K2tog; repeat from * around", stitches / 4),
+        ]
+        // From the top of the cuff, at the wrist, to the fingertips, with a quarter inch to spare.
+        let handRounds = max(2, Sizing.rows(length + 0.25, per: g.rpi) - top.count)
+        var b = PlanBuilder()
+        for mitten in 1...2 {
+            let name = "Mitten \(mitten)"
+            b.section = "\(name) · Cuff"
+            b.action("Cast on \(stitches) stitches with the smaller needles. Join in the round without twisting and place a marker.", stitches: stitches)
+            b.work(["*K1, p1; repeat from * around"], rows: cuff, stitches: stitches)
+            b.section = "\(name) · Hand"
+            b.row("Change to the larger needles and knit", stitches: stitches)
+            b.work(["Knit"], rows: handRounds - 1, stitches: stitches)
+            b.section = "\(name) · Top"
+            runs(&b, top, from: stitches)
+            b.action("Cut the yarn, thread it through the last \(stitches / 4) stitches and pull tight. Weave in the ends.")
+        }
+        let long = Double(cuff + handRounds + top.count) / g.rpi
+        let yards = Sizing.yards(squareInches: (hand + 0.5) * long * 2, spi: g.spi, factor: 1.15)
+        return pattern(b, estimate: yards, tools: ["\(g.ribNeedle.label) double-pointed needles for the cuff, or a long circular for magic loop", "\(g.needle.label) double-pointed needles for the hand, or a long circular", "Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "hand", hand)), \(Sizing.inches(long)) from the cuff to the tip", gauge: g, round: true)
+    }
 }

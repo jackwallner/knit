@@ -31,12 +31,12 @@ struct Topical: Identifiable, Hashable, Sendable {
     static let featureLevel = 2
 
     /// Shapes a stitch pattern can be worked on.
-    static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth]
+    static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth, .rectangularWrap]
 
     /// Shapes a record may build on: the ones colorwork has been taught.
     static let bases: [Design] = [
         .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .chunkyCowl, .earWarmer, .handwarmers,
-        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .washcloth,
+        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .washcloth, .rectangularWrap,
     ]
 
     /// The design a cast-on project names: "topical." in front, so it never meets a built-in name.
@@ -102,7 +102,7 @@ extension Design {
     var isFlat: Bool {
         switch self {
         case .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .dishcloth, .triangleShawl, .neckScarf, .cableHeadband: true
-        case .washcloth, .asymmetricShawl: true
+        case .washcloth, .asymmetricShawl, .hoodedScarf: true
         case .basketweaveBlanket, .rectangularWrap, .crescentShawl: true
         default: false
         }

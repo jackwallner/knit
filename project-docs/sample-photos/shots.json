@@ -268,6 +268,46 @@
   "honeycomb-cowl": {
    "camera": "lamp",
    "scene": "draped over a stack of library books on a wooden desk, warm desk lamp at night"
+  },
+  "watchCap": {
+   "camera": "outdoor",
+   "scene": "worn by a person on a windy harbor dock, boats and grey water behind, overcast"
+  },
+  "chevron-lace-blanket": {
+   "camera": "overcast",
+   "scene": "spread over the end of a white iron crib with a sheepskin rug below, soft grey window light"
+  },
+  "hoodedScarf": {
+   "camera": "snap",
+   "scene": "worn by a person walking on a leafy autumn sidewalk, seen from the front, hood up, cropped at the waist"
+  },
+  "striped-scarf": {
+   "camera": "overcast",
+   "scene": "draped over the back of a wooden kitchen chair, soft window light"
+  },
+  "coasters": {
+   "camera": "lamp",
+   "scene": "stacked on a wooden coffee table beside a mug of tea, warm evening lamplight"
+  },
+  "rope-cable-scarf": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck of a person in a dark wool coat on a cold city street, cropped at the chest"
+  },
+  "babyMittens": {
+   "camera": "snap",
+   "scene": "lying on a white cotton crib sheet next to a baby's folded knit hat"
+  },
+  "catHat": {
+   "camera": "sun",
+   "scene": "worn by a smiling child on a sunny playground, seen from the front, cropped at the shoulders"
+  },
+  "seeded-rib-beanie": {
+   "camera": "overcast",
+   "scene": "worn by a person in a rain jacket by a harbor railing, seen from the side, cropped at the shoulders"
+  },
+  "eyelet-lace-wrap": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a linen armchair, a book on the seat, warm lamplight"
   }
  }
 }

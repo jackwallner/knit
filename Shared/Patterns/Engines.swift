@@ -1236,7 +1236,8 @@ enum Engines {
     }
 
     /// A stole in moss stitch, two rows of k1, p1 rib then two of the reverse, inside garter edges.
-    static func wrap(width: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+    static func wrap(width: Double, length: Double, gauge g: Gauge, fit: Fit = .plain) -> PatternPlan {
+        if let stitch = fit.stitch { return texturedBlanket(stitch, width: width, length: length, gauge: g, border: 0.75, noun: "wrap") }
         let edge = max(3, Int((0.75 * g.spi).rounded()))
         let middle = even(width * g.spi - Double(2 * edge), minimum: 10)
         let caston = middle + 2 * edge

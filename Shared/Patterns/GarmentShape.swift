@@ -58,6 +58,51 @@ enum GarmentShape {
                 tube.closeSubpath()
                 path.addPath(tube.subtracting(CGPath(roundedRect: box(x + 0.14, 0.72, 0.035, 0.1), cornerWidth: unit * 0.015, cornerHeight: unit * 0.015, transform: nil)))
             }
+        case .watch:
+            // A rib hat with its deep brim folded back: a shorter dome over a tall band.
+            path.move(to: p(0.18, 0.6))
+            path.addCurve(to: p(0.5, 0.12), control1: p(0.16, 0.3), control2: p(0.31, 0.12))
+            path.addCurve(to: p(0.82, 0.6), control1: p(0.69, 0.12), control2: p(0.84, 0.3))
+            path.closeSubpath()
+            path.addRoundedRect(in: box(0.12, 0.58, 0.76, 0.3), cornerWidth: unit * 0.05, cornerHeight: unit * 0.05)
+        case .babyMittens:
+            // A pair of thumbless mittens, each a round-topped pouch on a long cuff.
+            for x in [CGFloat(0.1), 0.56] {
+                let hand = CGMutablePath()
+                hand.move(to: p(x, 0.62))
+                hand.addLine(to: p(x, 0.34))
+                hand.addQuadCurve(to: p(x + 0.17, 0.1), control: p(x, 0.1))
+                hand.addQuadCurve(to: p(x + 0.34, 0.34), control: p(x + 0.34, 0.1))
+                hand.addLine(to: p(x + 0.34, 0.62))
+                hand.closeSubpath()
+                let cuff = CGPath(roundedRect: box(x + 0.03, 0.58, 0.28, 0.3), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+                path.addPath(hand.union(cuff))
+            }
+        case .catHat:
+            // A square hat worn: straight sides, a flat top and a corner standing up at each side.
+            path.move(to: p(0.18, 0.86))
+            path.addLine(to: p(0.18, 0.34))
+            path.addLine(to: p(0.2, 0.12))
+            path.addLine(to: p(0.36, 0.26))
+            path.addQuadCurve(to: p(0.64, 0.26), control: p(0.5, 0.22))
+            path.addLine(to: p(0.8, 0.12))
+            path.addLine(to: p(0.82, 0.34))
+            path.addLine(to: p(0.82, 0.86))
+            path.closeSubpath()
+        case .coasters:
+            // Two round coasters, one resting on the other.
+            path.addPath(CGPath(ellipseIn: box(0.1, 0.3, 0.46, 0.46), transform: nil).union(CGPath(ellipseIn: box(0.44, 0.22, 0.46, 0.46), transform: nil)))
+        case .hoodedScarf:
+            // A hood seen from the front, open around the face, with a scarf end hanging from each side.
+            let hood = CGMutablePath()
+            hood.move(to: p(0.16, 0.6))
+            hood.addCurve(to: p(0.5, 0.06), control1: p(0.1, 0.24), control2: p(0.28, 0.06))
+            hood.addCurve(to: p(0.84, 0.6), control1: p(0.72, 0.06), control2: p(0.9, 0.24))
+            hood.closeSubpath()
+            var whole: CGPath = hood.subtracting(CGPath(ellipseIn: box(0.3, 0.22, 0.4, 0.44), transform: nil))
+            whole = whole.union(CGPath(roundedRect: box(0.16, 0.5, 0.16, 0.46), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02, transform: nil))
+            whole = whole.union(CGPath(roundedRect: box(0.68, 0.5, 0.16, 0.46), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02, transform: nil))
+            path.addPath(whole)
         case .slouch:
             path.move(to: p(0.18, 0.76))
             path.addCurve(to: p(0.66, 0.08), control1: p(0.04, 0.3), control2: p(0.36, 0.04))

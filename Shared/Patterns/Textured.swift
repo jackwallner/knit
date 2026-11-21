@@ -115,7 +115,11 @@ extension Engines {
         let caston = stitch.count(near: wanted, flat: true, border: border, repeats: 2)
         let body = stitch.rows(length - 2 * Double(border) / g.spi, rpi: g.rpi, flat: true)
         guard let texts = stitch.texts(stitches: caston, flat: true, border: border) else {
-            return noun == "blanket" ? blanket(bordered: true, width: width, length: length, gauge: g) : washcloth(side: width, gauge: g)
+            switch noun {
+            case "cloth": return washcloth(side: width, gauge: g)
+            case "wrap": return wrap(width: width, length: length, gauge: g)
+            default: return blanket(bordered: true, width: width, length: length, gauge: g)
+            }
         }
 
         var b = PlanBuilder()
@@ -131,7 +135,7 @@ extension Engines {
         let wide = Double(2 * border) / g.spi + Double(caston - 2 * border) / spi(stitch, g)
         let long = 2 * Double(border) / g.spi + Double(body) / (g.rpi * stitch.rowFactor)
         let yards = Sizing.yards(squareInches: wide * long, spi: g.spi, factor: stitch.yarnFactor)
-        if noun != "blanket" {
+        if noun == "cloth" {
             return pattern(b, estimate: yards, yarnNote: ", cotton for a cloth that scrubs", tools: ["\(g.needle.label) needles"] + tools(stitch) + ["Tapestry needle"], finished: "\(Sizing.inches(wide)) wide, \(Sizing.inches(long)) long", gauge: g)
         }
         return pattern(b, estimate: yards, tools: [longCircular(caston, g, flat: true)] + tools(stitch) + ["Tapestry needle"], finished: "\(Sizing.inches(wide)) wide, \(Sizing.inches(long)) long", gauge: g)

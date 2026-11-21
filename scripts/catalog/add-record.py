@@ -9,6 +9,8 @@ from pathlib import Path
 
 PATH = Path(__file__).resolve().parents[2] / "Ravel" / "collection.json"
 record = json.loads(sys.argv[1])
+# A record added after the first release shows its photo from the site.
+record.setdefault("photo", f"photos/{record['id']}.jpg")
 data = json.loads(PATH.read_text())
 data["designs"] = [r for r in data["designs"] if r["id"] != record["id"]] + [record]
 PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")

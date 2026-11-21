@@ -72,16 +72,16 @@ cached on the phone, so the app does not carry them.
 | 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | dropped: the Kids' Raglan already fits an 18 in chest; a true baby pullover needs a buttoned shoulder for the head (added as a later row) |
 | 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | dropped: the site already publishes a Fir Tree Hat each season (fir-tree-hat) |
 | 23 | Honeycomb Cowl | Scarves & Cowls | Adults, easy | Stitch: slip-stitch honeycomb on cowl | verified |
-| 24 | Watch Cap | Hats | Adults, easy | New shape: deep fold-up rib | planned |
-| 25 | Chevron Lace Blanket | Blankets | Baby to throw, easy lace | Stitch: chevron lace on bordered blanket | planned |
-| 26 | Hooded Scarf | Scarves & Cowls | Adults, easy | New shape | planned |
-| 27 | Striped Scarf | Scarves & Cowls | Anyone, beginner | Colorwork: wide stripes on garter scarf | planned |
-| 28 | Coasters | Home | Gift, beginner | New shape | planned |
-| 29 | Rope Cable Scarf | Scarves & Cowls | Adults, intermediate | Stitch: rope cable on scarf | planned |
-| 30 | Baby Mittens | Baby | Babies, easy | New shape: thumbless | planned |
-| 31 | Square Cat Hat | Hats | Children and adults, beginner | New shape: tube seamed flat at the top | planned |
-| 32 | Seeded Rib Beanie | Hats | Adults, easy | Stitch: seeded rib on ribbed beanie | planned |
-| 33 | Eyelet Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch: eyelet rows on wrap | planned |
+| 24 | Watch Cap | Hats | Adults, easy | New shape: deep fold-up rib | verified |
+| 25 | Chevron Lace Blanket | Blankets | Baby to throw, easy lace | Stitch: chevron lace on bordered blanket | verified |
+| 26 | Hooded Scarf | Scarves & Cowls | Adults, easy | New shape | verified |
+| 27 | Striped Scarf | Scarves & Cowls | Anyone, beginner | Colorwork: wide stripes on garter scarf | verified |
+| 28 | Coasters | Home | Gift, easy | New shape: round, center out | verified |
+| 29 | Rope Cable Scarf | Scarves & Cowls | Adults, intermediate | Stitch: rope cable on scarf | verified |
+| 30 | Baby Mittens | Baby | Babies, easy | New shape: thumbless | verified |
+| 31 | Cat Ear Hat | Hats | Children and adults, easy | New shape: tube closed flat at the top with a three-needle bind off | verified |
+| 32 | Seeded Rib Beanie | Hats | Adults, easy | Stitch: seeded rib on ribbed beanie | verified |
+| 33 | Eyelet Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch: eyelet rows on wrap (the wrap now takes a stitch) | verified |
 | 34 | Tea Cozy | Home | Gift, easy | New shape | planned |
 | 35 | Boot Cuffs | Socks & Feet | Adults, beginner | New shape | planned |
 | 36 | Striped Beanie | Hats | Anyone, easy | Colorwork | planned |

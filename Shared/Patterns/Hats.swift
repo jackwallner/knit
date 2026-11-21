@@ -133,3 +133,71 @@ extension Engines {
         return Knot(plan: plan, stitches: stitches, tube: tube)
     }
 }
+
+extension Engines {
+    /// A hat in k2, p2 rib from the brim to the crown, knit long enough to fold the brim back double over
+    /// the ears. The crown decreases inside the rib, k2, p2 to k2, p1 to k1, p1, so it never breaks pattern.
+    static func watchCap(head: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = hatCount(head: head, share: 0.9, spi: g.spi, multiple: 8) ?? Sizing.stitches(head * 0.95, per: g.spi, multiple: 8, minimum: 24)
+        let fold = min(3, max(1.5, head * 0.12))
+        let crown: [(text: String, stitches: Int)] = [
+            ("*K2, p2tog; repeat from * around", stitches * 3 / 4),
+            ("*K2, p1; repeat from * around", stitches * 3 / 4),
+            ("*K2, p1; repeat from * around", stitches * 3 / 4),
+            ("*K2tog, p1; repeat from * around", stitches / 2),
+            ("*K1, p1; repeat from * around", stitches / 2),
+            ("*K1, p1; repeat from * around", stitches / 2),
+            ("*K2tog; repeat from * around", stitches / 4),
+            ("Knit", stitches / 4),
+            ("*K2tog; repeat from * around", stitches / 8),
+        ]
+        let height = head * 0.37 + fold
+        let ribRounds = max(8, Sizing.rows(height, per: g.rpi) - crown.count)
+        let small = Double(stitches) / g.spi < 16
+        var b = PlanBuilder()
+        b.section = "Brim"
+        b.action("Cast on \(stitches) stitches. Join in the round without twisting and place a marker.", stitches: stitches)
+        let brim = Sizing.rows(fold * 2, per: g.rpi, minimum: 8)
+        b.work(["*K2, p2; repeat from * around"], rows: brim, stitches: stitches)
+        b.section = "Body"
+        b.work(["*K2, p2; repeat from * around"], rows: max(2, ribRounds - brim), stitches: stitches)
+        b.section = "Crown"
+        var rounds = crown
+        if !small { rounds[3].text += ". Change to double-pointed needles when the stitches no longer reach around" }
+        runs(&b, rounds, from: stitches)
+        b.section = "Finishing"
+        b.action("Cut the yarn, thread it through the last \(stitches / 8) stitches and pull tight. Weave in the ends. Fold the brim back \(Sizing.inches(fold)) to wear it.")
+        let yards = Sizing.yards(squareInches: head * 0.9 * height, spi: g.spi, factor: 1.2)
+        let needles = small
+            ? ["\(g.needle.label) double-pointed needles, or a long circular for magic loop"]
+            : ["\(g.needle.label) \(Sizing.cable(16)) circular needle", "\(g.needle.label) double-pointed needles, or a long circular for magic loop, for the crown"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "head", head)) with the rib stretched a little, \(Sizing.inches(height)) tall before the brim is folded", gauge: g, round: true)
+    }
+
+    /// A hat with no crown: a rib brim and a plain tube, closed straight across the top with a three-needle
+    /// bind off. Worn, the two top corners stand up as ears.
+    static func catHat(head: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = hatCount(head: head, share: 0.9, spi: g.spi, multiple: 4) ?? Sizing.stitches(head * 0.95, per: g.spi, multiple: 4, minimum: 24)
+        // Taller than a beanie by the corner each ear takes.
+        let height = head * 0.37 + 0.75
+        let brim = Sizing.rows(min(1.75, head * 0.08), per: g.rpi, minimum: 4)
+        let body = max(4, Sizing.rows(height, per: g.rpi) - brim)
+        let small = Double(stitches) / g.spi < 16
+        var b = PlanBuilder()
+        b.section = "Brim"
+        b.action("Cast on \(stitches) stitches with the smaller needle\(small ? "s" : ""). Join in the round without twisting and place a marker.", stitches: stitches)
+        b.work(["*K2, p2; repeat from * around"], rows: brim, stitches: stitches)
+        b.section = "Body"
+        b.row("Change to the larger needle\(small ? "s" : "") and knit", stitches: stitches)
+        b.work(["Knit"], rows: body - 1, stitches: stitches)
+        b.section = "Top"
+        b.action("Turn the hat inside out. Put the first \(stitches / 2) stitches on one needle and the last \(stitches / 2) on another, so the start of the round sits at one side, and join them with a three-needle bind off.")
+        b.section = "Finishing"
+        b.action("Turn the hat right side out and weave in the ends. For rounder ears, wrap yarn tightly around each top corner \(Sizing.inches(1)) down and knot it inside.")
+        let yards = Sizing.yards(squareInches: Double(stitches) / g.spi * height, spi: g.spi, factor: 1.15)
+        let needles = small
+            ? ["\(g.ribNeedle.label) double-pointed needles for the brim, or a long circular for magic loop", "\(g.needle.label) double-pointed needles, or a long circular", "A spare needle of the same size for the bind off"]
+            : ["\(g.ribNeedle.label) \(Sizing.cable(16)) circular needle for the brim", "\(g.needle.label) \(Sizing.cable(16)) circular needle", "A spare \(g.needle.label) needle for the bind off"]
+        return pattern(b, estimate: yards, tools: needles + ["Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "head", head)), \(Sizing.inches(height)) from the brim to the top edge", gauge: g, round: true)
+    }
+}

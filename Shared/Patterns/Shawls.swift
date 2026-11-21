@@ -58,3 +58,43 @@ extension Engines {
         return Bandana(plan: plan, stitches: stitches, front: front)
     }
 }
+
+extension Engines {
+    struct HoodedScarf: Equatable, Sendable {
+        var plan: PatternPlan
+        var end: Int
+        var hood: Int
+        var seam: Double
+    }
+
+    /// One long garter piece: a scarf end, a wider middle for the hood, and the other end. Folded in half and
+    /// seamed along one edge of the middle, the seam runs down the back of the head and the ends hang in front.
+    static func hoodedScarf(head: Double, length: Double, gauge g: Gauge) -> HoodedScarf {
+        let end = Sizing.stitches(min(7.5, head * 0.33), per: g.spi, minimum: 12)
+        // From the face to the back of the neck, about half the head around; even, so it widens in pairs.
+        let hood = max(end + 4, end + Sizing.stitches(head * 0.5 - Double(end) / g.spi, per: g.spi, multiple: 2))
+        let rpi = g.spi * 2
+        let seam = head * 0.55
+        let ends = Sizing.rows(length, per: rpi, even: true, minimum: 20)
+        let hoodRows = Sizing.rows(seam * 2, per: rpi, even: true) - (hood - end) * 2
+        var b = PlanBuilder()
+        b.section = "Scarf"
+        b.action("Cast on \(end) stitches.", stitches: end)
+        b.work(["Knit"], rows: ends, stitches: end)
+        b.section = "Increase"
+        b.work(["K1, kfb, knit to the last 2 stitches, kfb, k1", "Knit"], rows: hood - end, stitches: end + 2, delta: 2)
+        b.section = "Hood"
+        b.work(["Knit"], rows: max(4, hoodRows), stitches: hood)
+        b.section = "Decrease"
+        b.work(["K1, ssk, knit to the last 3 stitches, k2tog, k1", "Knit"], rows: hood - end, stitches: hood - 2, delta: -2)
+        b.section = "Scarf"
+        b.work(["Knit"], rows: ends, stitches: end)
+        b.action("Bind off loosely.")
+        b.section = "Finishing"
+        b.action("Fold the piece in half across the middle of the hood. Sew the two halves together along one long edge, from the fold down \(Sizing.inches(seam)): that seam is the back of the hood, and the open edge frames the face. Weave in the ends.")
+        let total = Double(2 * ends) / rpi * Double(end) / g.spi + Double(2 * (hood - end) + max(4, hoodRows)) / rpi * Double(hood) / g.spi
+        let yards = Sizing.yards(squareInches: total, spi: g.spi, factor: 1.25)
+        let plan = pattern(b, estimate: yards, tools: ["\(g.needle.label) needles", "Tapestry needle"], finished: "A hood \(Sizing.inches(seam)) from the top to the neck, with ends \(Sizing.inches(Double(end) / g.spi)) wide hanging \(Sizing.inches(Double(ends) / rpi)) below it", gauge: g)
+        return HoodedScarf(plan: plan, end: end, hood: hood, seam: seam)
+    }
+}

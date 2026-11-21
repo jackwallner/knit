@@ -438,3 +438,17 @@ Arm Warmer %lld
 Arm
 Wrist
 Honeycomb Cowl
+Watch Cap
+Chevron Lace Blanket
+Hooded Scarf
+Hood
+Striped Scarf
+Coasters
+Center
+Edge
+Across
+Rope Cable Scarf
+Baby Mittens
+Cat Ear Hat
+Seeded Rib Beanie
+Eyelet Lace Wrap

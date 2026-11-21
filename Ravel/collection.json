@@ -484,6 +484,150 @@
       ],
       "tag": "Texture",
       "photo": "photos/honeycomb-cowl.jpg"
+    },
+    {
+      "id": "chevron-lace-blanket",
+      "title": "Chevron Lace Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "chevronLace",
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#E2B8B0"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Lace",
+      "photo": "photos/chevron-lace-blanket.jpg"
+    },
+    {
+      "id": "striped-scarf",
+      "title": "Striped Scarf",
+      "base": "garterScarf",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 3
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "C",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-scarf.jpg"
+    },
+    {
+      "id": "rope-cable-scarf",
+      "title": "Rope Cable Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#E9DFCB"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-scarf.jpg"
+    },
+    {
+      "id": "seeded-rib-beanie",
+      "title": "Seeded Rib Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#2F6B73"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-beanie.jpg"
+    },
+    {
+      "id": "eyelet-lace-wrap",
+      "title": "Eyelet Lace Wrap",
+      "base": "rectangularWrap",
+      "requires": 2,
+      "stitch": "eyelet",
+      "palette": [
+        {
+          "name": "dusty blue",
+          "hex": "#8FA3B8"
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Lace",
+      "photo": "photos/eyelet-lace-wrap.jpg"
     }
   ]
 }

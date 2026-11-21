@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 50)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 65)
+        XCTAssertEqual(Design.allCases.count, 55)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 75)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -829,6 +829,78 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual((slit?.rows ?? 1) % 2, 0, label)
                 let rows = warmers.plan.steps.filter { $0.section.hasPrefix("Arm Warmer 1") && !$0.isAction }.map(\.rows).reduce(0, +)
                 XCTAssertEqual(Double(rows) / gauge.rpi, input["length"] ?? 0, accuracy: 1, label)
+            }
+        }
+    }
+
+    /// The watch cap stays in rib to the top: every round before the crown is k2, p2, and the crown keeps
+    /// a rib of its own until the last two rounds.
+    func testTheWatchCapIsRibbedToTheCrown() {
+        for input in inputs(.watchCap) {
+            for gauge in gauges {
+                let plan = Design.watchCap.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual((plan.steps[0].stitches ?? 0) % 8, 0, label)
+                XCTAssertTrue(plan.steps.filter { ["Brim", "Body"].contains($0.section) && !$0.isAction }.allSatisfy { $0.texts == ["*K2, p2; repeat from * around"] }, label)
+                let tall = Double(plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)) / gauge.rpi
+                XCTAssertGreaterThan(tall, (input["head"] ?? 0) * 0.37 + 1, label)
+            }
+        }
+    }
+
+    /// The hood is twice the seam long and about half the head deep, and the piece narrows back to the scarf.
+    func testTheHoodedScarfHasAHoodToSeam() {
+        for input in inputs(.hoodedScarf) {
+            for gauge in gauges {
+                let scarf = Engines.hoodedScarf(head: input["head"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let middle = scarf.plan.steps.filter { ["Increase", "Hood", "Decrease"].contains($0.section) }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(middle) / (gauge.spi * 2), scarf.seam * 2, accuracy: 4 / gauge.spi, label)
+                XCTAssertEqual(Double(scarf.hood) / gauge.spi, (input["head"] ?? 0) * 0.5, accuracy: max(1, 4 / gauge.spi), label)
+                XCTAssertEqual(scarf.plan.steps.last { $0.section == "Scarf" && !$0.isAction }?.stitches, scarf.end, label)
+            }
+        }
+    }
+
+    /// A coaster grows by eight stitches every other round to the size asked for, so it lies flat.
+    func testTheCoasterGrowsToItsSize() {
+        for input in inputs(.coasters) {
+            for gauge in gauges {
+                let plan = Design.coasters.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.first, 8, label)
+                XCTAssertTrue(counts.allSatisfy { $0 % 8 == 0 }, label)
+                let across = Double(counts.max() ?? 0) / (Double.pi * gauge.spi)
+                XCTAssertEqual(across, input["diameter"] ?? 0, accuracy: max(0.5, 8 / (Double.pi * gauge.spi)), label)
+            }
+        }
+    }
+
+    /// A baby mitten has no thumb: the hand is one tube to a top gathered to a quarter of its stitches.
+    func testBabyMittensGatherAtTheTop() {
+        for input in inputs(.babyMittens) {
+            for gauge in gauges {
+                let plan = Design.babyMittens.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.max(), counts.first, label)
+                XCTAssertEqual(counts.last, (counts.first ?? 0) / 4, label)
+                XCTAssertFalse(plan.steps.contains { $0.section.contains("Thumb") }, label)
+            }
+        }
+    }
+
+    /// The cat ear hat keeps every stitch to the top, where its halves meet in a three-needle bind off.
+    func testTheCatEarHatClosesFlat() {
+        for input in inputs(.catHat) {
+            for gauge in gauges {
+                let plan = Design.catHat.plan(measures: input, gauge: gauge)
+                let counts = Set(plan.steps.compactMap(\.stitches))
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.count, 1, label)
+                XCTAssertEqual((counts.first ?? 1) % 4, 0, label)
+                XCTAssertTrue(plan.steps.contains { step in step.texts.contains { $0.contains("three-needle bind off") } }, label)
             }
         }
     }
