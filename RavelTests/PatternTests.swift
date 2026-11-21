@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 44)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 52)
+        XCTAssertEqual(Design.allCases.count, 45)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 53)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -736,6 +736,21 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(rows(plan, "Panel 1").count % 2, 0)
             }
         }
+    }
+
+    /// One stocking, not a pair, as wide as asked, with a loop to hang it by.
+    @MainActor func testTheStockingIsOneSockWithALoop() {
+        for input in inputs(.christmasStocking) {
+            for gauge in gauges {
+                let plan = Design.christmasStocking.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertFalse(plan.steps.contains { $0.section.hasPrefix("Sock") }, label)
+                XCTAssertEqual(plan.steps.filter { $0.texts[0].hasPrefix("Cast on") }.count, 1, label)
+                XCTAssertEqual(Double(plan.steps[0].stitches ?? 0) / gauge.spi, input["around"] ?? 0, accuracy: 4.5 / gauge.spi, label)
+                XCTAssertTrue(plan.steps.last?.texts[0].contains("braid") == true, label)
+            }
+        }
+        XCTAssertEqual(LibrarySearch.find("christmas", in: Design.allCases.map { LibraryItem.builtIn($0) }).first?.id, Design.christmasStocking.rawValue)
     }
 
     func testMittenThumbGussetAddsUp() {

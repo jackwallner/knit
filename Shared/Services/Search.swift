@@ -37,7 +37,7 @@ enum LibrarySearch {
         let free = String(localized: "Free", comment: "Label under a design that needs no purchase")
         let read = items.map { item -> (item: LibraryItem, what: String, size: String) in
             let shelf = (tags[item.id] ?? []).flatMap { [$0, Loc.text($0)] }
-            let what = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue] + shelf).joined(separator: " ").lowercased()
+            let what = ([item.title, item.name, item.base.shelf.title, item.base.shelf.rawValue, item.base.searchWords] + shelf).joined(separator: " ").lowercased()
             // Blankets come in stroller, crib and throw sizes: a baby blanket is one of the first two.
             let baby = item.base.sizes.contains { ["Stroller", "Crib"].contains($0.name) } ? "baby" : ""
             let size = ([item.level.title, item.isFree ? free : "", baby] + item.base.sizes.flatMap { [$0.name, Loc.text($0.name)] }).joined(separator: " ").lowercased()

@@ -216,6 +216,10 @@
   "poncho": {
    "camera": "outdoor",
    "scene": "worn by someone standing on a porch, seen from the chest down to the knees, the V point hanging at the front"
+  },
+  "christmasStocking": {
+   "camera": "lamp",
+   "scene": "hanging by its loop from a hook on a wooden mantel, a little crooked"
   }
  }
 }

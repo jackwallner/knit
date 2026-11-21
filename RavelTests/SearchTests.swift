@@ -29,11 +29,13 @@ final class SearchTests: XCTestCase {
 
     func testShelfTagsAreSearched() {
         let tags = [Design.ribbedBeanie.rawValue: ["Holiday"], Design.mittens.rawValue: ["Gift season"]]
-        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue])
-        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue])
+        // The Christmas Stocking is a holiday design by its own name, tag or not.
+        let stocking = Design.christmasStocking.rawValue
+        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking])
+        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking])
         XCTAssertEqual(find("gifts", tags: tags).map(\.id), [Design.mittens.rawValue])
         XCTAssertEqual(find("a present", tags: tags).map(\.id), [Design.mittens.rawValue])
-        XCTAssertTrue(find("christmas").isEmpty, "no tag, no match")
+        XCTAssertEqual(find("christmas").map(\.id), [stocking], "no tag, no match")
     }
 
     func testNothingForWhatRavelDoesNotHave() {

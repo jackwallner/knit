@@ -918,9 +918,11 @@ enum Engines {
     /// Cuff-down socks, worked as a pair: a ribbed cuff and plain leg, a slip-stitch heel flap over half the
     /// stitches, a round heel turn, gusset stitches picked up along the flap and decreased back to the foot
     /// count, and a wedge toe grafted shut. The round starts at the side until the heel, then at the instep.
-    static func socks(foot around: Double, length footLength: Double, leg: Double, gauge g: Gauge) -> Sock {
+    /// `stocking` makes one Christmas stocking instead of a pair: knit to its own width, with a deep cuff,
+    /// a braided loop to hang it by, and no allowance for a foot to stretch it.
+    static func socks(foot around: Double, length footLength: Double, leg: Double, gauge g: Gauge, stocking: Bool = false) -> Sock {
         // A tenth smaller than the foot, so the sock stays up and does not bag.
-        let stitches = Sizing.stitches(around * 0.9, per: g.spi, multiple: 4, minimum: 16)
+        let stitches = Sizing.stitches(stocking ? around : around * 0.9, per: g.spi, multiple: 4, minimum: 16)
         let heel = stitches / 2
         let flapRows = heel
         let turn = heelTurn(heel)
@@ -929,12 +931,12 @@ enum Engines {
         let gusset = (turn.left + 2 * pickedUp - heel) / 2
         let toeEnd = wedgeEnd(stitches)
         let toe = wedge(from: stitches, to: toeEnd)
-        let cuff = Sizing.rows(min(1.5, leg * 0.3), per: g.rpi, minimum: 4)
+        let cuff = Sizing.rows(stocking ? min(3, leg * 0.2) : min(1.5, leg * 0.3), per: g.rpi, minimum: 4)
         let legRounds = max(2, Sizing.rows(leg, per: g.rpi) - cuff)
         // The foot is knit 5 percent short and stretches to fit. It is measured from the back of the heel,
         // which sits a heel turn's depth behind the picked-up edge.
         let heelBack = Double(turn.rows.count) / g.rpi
-        let afterPickUp = max(gusset, Sizing.rows(footLength * 0.95 - heelBack - Double(toe.count) / g.rpi, per: g.rpi))
+        let afterPickUp = max(gusset, Sizing.rows(footLength * (stocking ? 1 : 0.95) - heelBack - Double(toe.count) / g.rpi, per: g.rpi))
         // Gusset decreases every other round, and every round at the start when the foot is too short for that.
         let packed = max(0, 2 * gusset - afterPickUp)
         let picked = turn.left + 2 * pickedUp + heel
@@ -949,31 +951,38 @@ enum Engines {
         let footRounds = afterPickUp - gussetRounds.count
 
         var b = PlanBuilder()
-        for sock in 1...2 {
+        for sock in 1...(stocking ? 1 : 2) {
             let name = "Sock \(sock)"
-            b.section = "\(name) · Cuff"
+            func part(_ section: String) -> String { stocking ? section : "\(name) · \(section)" }
+            b.section = part("Cuff")
             b.action("Cast on \(stitches) stitches. Join in the round without twisting and place a marker.", stitches: stitches)
             b.work(["*K2, p2; repeat from * around"], rows: cuff, stitches: stitches)
-            b.section = "\(name) · Leg"
+            b.section = part("Leg")
             b.work(["Knit"], rows: legRounds, stitches: stitches)
-            b.section = "\(name) · Heel Flap"
+            b.section = part("Heel Flap")
             b.action("The heel flap is worked back and forth over the first \(heel) stitches of the round. Leave the other \(heel) on their needle for the instep.")
             b.work(["*Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn", "Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn"], rows: flapRows, stitches: heel)
-            b.section = "\(name) · Heel Turn"
+            b.section = part("Heel Turn")
             runs(&b, turn.rows.enumerated().map { ($1, heel - 1 - $0) }, from: heel)
-            b.section = "\(name) · Gusset"
+            b.section = part("Gusset")
             b.action("With the right side facing, knit across the \(turn.left) heel stitches, then pick up and knit \(pickedUp) stitches along the edge of the flap, one in each slipped stitch and one in the corner.")
             b.action("Place a marker for the new start of the round. Knit the \(heel) instep stitches and place a marker. Pick up and knit \(pickedUp) stitches along the other edge of the flap the same way, then knit to the start of the round.", stitches: picked)
             runs(&b, gussetRounds, from: picked)
-            b.section = "\(name) · Foot"
+            b.section = part("Foot")
             b.work(["Knit"], rows: footRounds, stitches: stitches)
-            b.section = "\(name) · Toe"
+            b.section = part("Toe")
             runs(&b, toe, from: stitches)
             b.action("Cut the yarn, leaving a \(Sizing.inches(12)) tail. Put the \(toeEnd / 2) instep stitches on one needle and the \(toeEnd / 2) sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.")
         }
+        if stocking {
+            b.section = "Finishing"
+            b.action("Cut three strands of yarn, each \(Sizing.inches(16)) long. Knot them together at one end, braid them, and knot the other end. Fold the braid in half and sew both knots inside the cuff at the back of the leg, above the heel, so the loop stands above the edge. Weave in the ends.")
+        }
         let length = heelBack + Double(afterPickUp + toe.count) / g.rpi
-        let yards = Sizing.yards(squareInches: around * 0.9 * (leg + footLength + 2) * 2, spi: g.spi, factor: 1.1)
-        let plan = pattern(b, estimate: yards, yarnNote: ", wool with a little nylon wears longest", tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "2 stitch markers", "Tapestry needle"], finished: "\(fits(stitches, g, "foot", around)). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(cuff + legRounds) / g.rpi)) from the cuff to the heel", gauge: g, round: true)
+        let yards = Sizing.yards(squareInches: around * (stocking ? 1 : 0.9) * (leg + footLength + 2) * (stocking ? 1 : 2), spi: g.spi, factor: 1.1)
+        let finished = stocking ? "\(Sizing.inches(Double(stitches) / g.spi / 2)) wide laid flat" : fits(stitches, g, "foot", around)
+        let needle = stocking && Double(stitches) / g.spi >= 16 ? "\(g.needle.label) \(Sizing.cable(16)) circular needle, with double-pointed needles or a long circular for magic loop for the heel and toe" : "\(g.needle.label) double-pointed needles, or a long circular for magic loop"
+        let plan = pattern(b, estimate: yards, yarnNote: stocking ? "" : ", wool with a little nylon wears longest", tools: [needle, "2 stitch markers", "Tapestry needle"], finished: "\(finished). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(cuff + legRounds) / g.rpi)) from the cuff to the heel", gauge: g, round: true)
         return Sock(plan: plan, stitches: stitches, heel: heel, flapRows: flapRows, turned: turn.left, pickedUp: pickedUp, gussetDecreases: gusset, toe: toeEnd)
     }
 

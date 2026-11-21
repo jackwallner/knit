@@ -92,6 +92,19 @@ enum GarmentShape {
             path.addLine(to: p(0.44, 0.88))
             path.addCurve(to: p(0.3, 0.64), control1: p(0.34, 0.88), control2: p(0.29, 0.78))
             path.closeSubpath()
+        case .stocking:
+            // A stocking hung by its loop: a deep cuff over a leg, the heel to the left and the toe out to the right.
+            let leg = CGMutablePath()
+            leg.move(to: p(0.28, 0.12))
+            leg.addLine(to: p(0.6, 0.12))
+            leg.addLine(to: p(0.6, 0.52))
+            leg.addLine(to: p(0.78, 0.56))
+            leg.addCurve(to: p(0.8, 0.9), control1: p(0.95, 0.58), control2: p(0.97, 0.9))
+            leg.addLine(to: p(0.42, 0.9))
+            leg.addCurve(to: p(0.28, 0.64), control1: p(0.32, 0.9), control2: p(0.26, 0.78))
+            leg.closeSubpath()
+            let cuff = CGPath(roundedRect: box(0.24, 0.06, 0.4, 0.16), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            path.addPath(leg.union(cuff))
         case .mittens:
             // A pair, thumbs toward each other. Each thumb merges into its hand, so the outline has no seam.
             for (x, thumb) in [(CGFloat(0.08), CGFloat(0.31)), (0.6, 0.0)] {
@@ -264,7 +277,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent, .topDown].contains(self) }
+    var knitsDown: Bool { [.sweater, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit
