@@ -301,6 +301,28 @@ final class TopicalTests: XCTestCase {
         XCTAssertLessThan(flat.steps.filter { $0.section == "Body" && $0.texts[0].contains("sage") }.count, colored.count, "Without tile a chart is placed once")
     }
 
+    /// Socks and sweaters take stripes and nothing else: a stripe changes a row's yarn, never its count.
+    func testShapedGarmentsTakeStripesOnly() throws {
+        func parsed(base: String, _ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"stripe-test","title":"Stripe Test","base":"\###(base)","palette":[{"name":"navy","hex":"#27374F"},{"name":"cream","hex":"#EEE6D6"}],"weights":["dk"],"tag":"Stripes"\###(fields)}]}"###.utf8)).first
+        }
+        let stripes = #","brim":"A","stripes":[{"color":"B","inches":1},{"color":"A","inches":1}],"repeatStripes":true"#
+        for base in Topical.stripeBases {
+            let good = try XCTUnwrap(parsed(base: base.rawValue, stripes)?.topical, base.rawValue)
+            let measures = good.base.defaultSize.values
+            let plain = good.base.plan(measures: measures, gauge: YarnWeight.dk.gauge)
+            let painted = good.plan(measures: measures, gauge: YarnWeight.dk.gauge)
+            XCTAssertEqual(painted.steps.reduce(0) { $0 + ($1.isAction ? 0 : $1.rows) }, plain.steps.reduce(0) { $0 + ($1.isAction ? 0 : $1.rows) }, "\(base) keeps every row")
+            XCTAssertEqual(peakStitches(painted), peakStitches(plain), "\(base) keeps every count")
+            XCTAssertNil(parsed(base: base.rawValue, #","brim":"A","chart":{"placement":"repeat","rows":["B.B."]}"#)?.topical, "\(base) takes no chart")
+            XCTAssertNil(parsed(base: base.rawValue, #","brim":"A""#)?.topical, "\(base) needs stripes")
+        }
+    }
+
+    private func peakStitches(_ plan: PatternPlan) -> Int {
+        plan.steps.compactMap { step in (0..<max(1, step.rows)).compactMap { step.stitches(after: $0) }.max() }.max() ?? 0
+    }
+
     // MARK: Saved plans
 
     func testAColorPlanSurvivesSaving() throws {

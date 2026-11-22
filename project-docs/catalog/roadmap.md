@@ -188,7 +188,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 97 | Bath Mat | Home | Anyone, beginner | New shape | verified |
 | 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | verified |
 | 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | planned |
-| 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | held: raglan is not a base colorwork has been taught |
+| 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | verified |
 | 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | verified |
 | 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
@@ -214,7 +214,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | verified |
 | 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
 | 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
-| 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | held: vest is not a base colorwork has been taught |
+| 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | verified |
 | 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | verified |
 | 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
@@ -223,7 +223,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 132 | Double Moss Wrap | Shawls & Wraps | Adults, beginner | Stitch | dropped: the Rectangular Wrap is already a moss stole, and the wrap shape takes no stitch |
 | 133 | Broken Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
-| 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | held: pillow is not a base colorwork has been taught |
+| 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | verified |
 | 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
 | 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | planned |
 | 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | verified |
@@ -231,7 +231,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 140 | Linen Stitch Wrap | Shawls & Wraps | Adults, easy | Stitch | planned |
 | 141 | Double Moss Mitts | Hands | Anyone, easy | Stitch | planned |
 | 142 | Chevron Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |
-| 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | held: drop-shoulder is not a base colorwork has been taught |
+| 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | verified |
 | 144 | Seeded Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | planned |
 | 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape: top-down V-neck raglan, boxy, deep ribbed hem, three-quarter sleeves, one band with buttons below the V | verified (built ahead of its rank) |
@@ -242,7 +242,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 151 | Eyelet Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 152 | Pixie Hat | Baby | Babies and children, easy | New shape: pointed top | verified |
 | 153 | Bucket Hat | Hats | Child to adult large, easy | New shape: top-down flat crown, purl-ridge folds, straight sides, a brim that widens by half, garter edge | verified (built ahead of its rank) |
-| 154 | Striped Socks | Socks & Feet | Anyone, intermediate | Colorwork: socks taught stripes | held: socks are not a base colorwork has been taught |
+| 154 | Striped Socks | Socks & Feet | Anyone, intermediate | Colorwork: socks taught stripes | verified |
 | 155 | Lace Socks | Socks & Feet | Adults, intermediate | Stitch: lace leg | planned |
 | 156 | Rib Socks | Socks & Feet | Anyone, intermediate | Stitch: ribbed leg | planned |
 | 157 | Hurdle Stitch Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |

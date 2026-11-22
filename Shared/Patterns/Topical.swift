@@ -40,6 +40,10 @@ struct Topical: Identifiable, Hashable, Sendable {
         .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .washcloth, .rectangularWrap,
     ]
 
+    /// Shapes that take stripes and nothing else: a stripe only changes the yarn of a row, never a count, so the
+    /// shaping of a sock or a sweater stays as the engine wrote it. No chart, no crown, no stitch pattern.
+    static let stripeBases: [Design] = [.cuffDownSocks, .toeUpSocks, .raglanPullover, .sweaterVest, .dropShoulder, .pillowCover]
+
     /// The design a cast-on project names: "topical." in front, so it never meets a built-in name.
     var designRaw: String { "topical.\(id)" }
 
@@ -204,7 +208,10 @@ extension Topical {
         check((r.requires ?? 1) <= featureLevel, "Needs record format \(r.requires ?? 1); this build reads \(featureLevel)")
 
         let base = Design(rawValue: r.base)
-        check(base.map(bases.contains) ?? false, "\(r.base) is not a shape colorwork can use")
+        let stripesOnly = base.map(stripeBases.contains) ?? false
+        check((base.map(bases.contains) ?? false) || stripesOnly, "\(r.base) is not a shape colorwork can use")
+        check(!stripesOnly || (r.chart == nil && r.stitch == nil && r.crown == nil), "\(r.base) takes stripes only")
+        check(!stripesOnly || !(r.stripes ?? []).isEmpty, "\(r.base) needs stripes")
 
         let stitch = r.stitch.flatMap(Stitch.init(rawValue:))
         check(r.stitch == nil || stitch != nil, "Stitch \(r.stitch ?? "") is not one this build knows")
@@ -288,7 +295,7 @@ extension Topical {
         if let s = starts ?? nil, let e = ends ?? nil { check(s < e, "The design ends before it starts") }
 
         guard problems.isEmpty, let base else { return Parsed(id: r.id, topical: nil, problems: problems) }
-        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, ear: ear, rim: rim)
+        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, ear: ear, rim: rim, plainEdges: stripesOnly)
         let order = YarnWeight.allCases
         var topical = Topical(
             id: r.id, title: title, base: base, work: work,

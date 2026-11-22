@@ -99,6 +99,12 @@ enum TopicalCheck {
         return abs(measured - wanted) <= room ? nil : "\(widest) stitches make \(measured.formatted(.number.precision(.fractionLength(1)))) in where \(wanted.formatted(.number.precision(.fractionLength(1)))) in was asked for"
     }
 
+    /// The most stitches on the needle at any row. A step that shapes every cycle states only its first count, so
+    /// count each row: a plan with its colors painted in splits those steps and must read the same as the plain one.
+    private static func peak(_ plan: PatternPlan) -> Int? {
+        plan.steps.compactMap { step in (0..<max(1, step.rows)).compactMap { step.stitches(after: $0) }.max() }.max()
+    }
+
     static func problems(_ topical: Topical) -> [String] {
         var problems: [String] = []
         let words = ([topical.title, topical.tag, topical.id] + topical.work.palette.map(\.name)).joined(separator: " ").lowercased()
@@ -114,7 +120,7 @@ enum TopicalCheck {
                 // A chart repeat may round the stitch count, but never far from the size asked for.
                 let plain = topical.base.plan(measures: input, gauge: gauge)
                 // A stitch pattern changes the count on purpose (ribs draw in, lace opens out): `stitchFit` checks it.
-                if topical.stitch == nil, let sized = result.plan.steps.compactMap(\.stitches).max(), let wanted = plain.steps.compactMap(\.stitches).max(), wanted > 0 {
+                if topical.stitch == nil, let sized = peak(result.plan), let wanted = peak(plain), wanted > 0 {
                     let off = abs(Double(sized - wanted)) / Double(wanted)
                     if off > 0.05 { problems.append("\(label): the chart repeat moves the fit \(Int((off * 100).rounded())) percent (\(wanted) to \(sized) stitches)") }
                 }

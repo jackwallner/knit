@@ -60,6 +60,9 @@ struct Colorwork: Equatable, Hashable, Sendable {
     var ear: Int?
     /// The color of the rim picked up around each ear. Nil works it in the main color.
     var rim: Int?
+    /// Stripes stay out of ribbed edgings (hems, cuffs, bands) wherever they fall in the pattern: they keep the
+    /// brim's color, or the main one. On for shapes that take stripes only, where the edging comes last as well as first.
+    var plainEdges = false
 
     static func letter(_ index: Int) -> String { String(UnicodeScalar(UInt8(65 + index))) }
 
@@ -94,6 +97,10 @@ enum Painter {
         /// Part of the edging the piece starts with: its first stretch of texture, below the main fabric.
         var brim = false
         var trim = Trim.none
+        /// A wrong-side row of flat work, where a new yarn would show its tail on the face: a stripe waits for the next right-side row.
+        var wrongSide = false
+        /// A ribbed row: knit and purl stitches in a repeat, as an edging has.
+        var textured = false
     }
 
     /// Small pieces knit apart and sewn on (a section named "... Ear"): the main color, with the rim
@@ -116,14 +123,19 @@ enum Painter {
         // The yarn of each row from the stripes, then the chart over them.
         var lift: [Int: Int] = [:]
         if work.brim != nil { for row in rows where row.brim { lift[row.piece, default: 0] += 1 } }
-        let color = rows.map { row in
+        let scheduled = rows.map { row in
             switch row.trim {
             case .ear: return work.ear ?? 0
             case .rim: return work.rim ?? 0
             case .none: break
             }
             if let brim = work.brim, row.brim { return brim }
+            if work.plainEdges, row.textured { return work.brim ?? 0 }
             return stripeColor(at: row.index - (lift[row.piece] ?? 0), even: even[row.piece] ?? false, work: work, rate: rate)
+        }
+        var color = scheduled
+        for at in rows.indices.dropFirst() where rows[at].wrongSide && rows[at - 1].piece == rows[at].piece && rows[at - 1].trim == rows[at].trim && scheduled[at] != color[at - 1] {
+            color[at] = color[at - 1]
         }
         var cells: [Int: [Int]] = [:]
         if let chart = work.chart, chart.width > 0, chart.height > 0 {
@@ -253,10 +265,12 @@ enum Painter {
         var rows: [Row] = []
         var piece = -1, index = 0, round = false, last = 0
         var firstKnit = true, pickedUp = false
+        // Rows into the current stretch of flat work in one section: the first is a right-side row.
+        var flatRun = 0, flatSection = ""
         for (s, step) in plan.steps.enumerated() {
             if step.isAction {
                 let text = step.texts[0]
-                if text.range(of: "^(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil {
+                if text.range(of: "^(With [^,]+, )?(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil {
                     piece += 1
                     index = 0
                     round = text.contains("Join in the round")
@@ -276,7 +290,11 @@ enum Painter {
                 let stitches = step.stitches(after: r) ?? last
                 let flat = !round || text.hasSuffix("turn")
                 let chartable = flat ? border > 0 : (text == "Knit" && step.delta == 0)
-                rows.append(Row(step: s, row: r, text: text, stitches: stitches, piece: max(0, piece), index: index, flat: flat, chartable: chartable && trim == .none, border: border, brim: brim, trim: trim))
+                if !flat || step.section != flatSection { flatRun = 0 }
+                flatSection = step.section
+                let wrong = flat && flatRun % 2 == 1
+                if flat { flatRun += 1 }
+                rows.append(Row(step: s, row: r, text: text, stitches: stitches, piece: max(0, piece), index: index, flat: flat, chartable: chartable && trim == .none, border: border, brim: brim, trim: trim, wrongSide: wrong, textured: text.range(of: #"\bk\d+, \*?p\d+\b|\bp\d+, \*?k\d+\b|in rib"#, options: [.regularExpression, .caseInsensitive]) != nil))
                 index += 1
                 last = stitches
             }
@@ -500,7 +518,7 @@ enum Painter {
         for (s, step) in steps.enumerated() {
             guard let mine = byStep[s] else {
                 var action = step
-                if action.isAction, action.texts[0].range(of: "^(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil {
+                if action.isAction, action.texts[0].range(of: "^(With [^,]+, )?(Loosely )?cast on", options: [.regularExpression, .caseInsensitive]) != nil {
                     // The cast on is in the color of the piece's first row.
                     let first = rows.firstIndex { $0.piece == castOn && $0.index == 0 }.map { colors[$0] } ?? 0
                     if let range = action.texts[0].range(of: " stitches") { action.texts[0].replaceSubrange(range, with: " stitches in \(names[first])") }

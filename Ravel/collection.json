@@ -1915,6 +1915,204 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/checkerboard-blanket.jpg"
+    },
+    {
+      "id": "striped-socks",
+      "title": "Striped Socks",
+      "base": "cuffDownSocks",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#27374F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-socks.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-raglan",
+      "title": "Striped Raglan",
+      "base": "raglanPullover",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#27374F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1
+        },
+        {
+          "color": "A",
+          "inches": 1
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-raglan.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-vest",
+      "title": "Striped Vest",
+      "base": "sweaterVest",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3A3A3F"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D1A03A"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-vest.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-drop-shoulder",
+      "title": "Striped Drop-Shoulder",
+      "base": "dropShoulder",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8C9AE"
+        },
+        {
+          "name": "rust",
+          "hex": "#B5543A"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "C",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-drop-shoulder.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-pillow",
+      "title": "Striped Pillow",
+      "base": "pillowCover",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "dusty blue",
+          "hex": "#7E9BB5"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": false,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-pillow.jpg"
     }
   ]
 }

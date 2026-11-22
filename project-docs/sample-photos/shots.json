@@ -596,6 +596,26 @@
   "checkerboard-blanket": {
    "camera": "lamp",
    "scene": "folded over the arm of a sofa"
+  },
+  "striped-socks": {
+   "camera": "lamp",
+   "scene": "side by side on a wooden floor"
+  },
+  "striped-raglan": {
+   "camera": "overcast",
+   "scene": "laid flat on a pale wooden floor, with no person"
+  },
+  "striped-vest": {
+   "camera": "snap",
+   "scene": "laid flat on a linen bedspread, with no person"
+  },
+  "striped-drop-shoulder": {
+   "camera": "outdoor",
+   "scene": "laid flat on a gray stone terrace, with no person"
+  },
+  "striped-pillow": {
+   "camera": "flash",
+   "scene": "on a sofa cushion in a living room"
   }
  }
 }
