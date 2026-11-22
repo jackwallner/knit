@@ -576,6 +576,10 @@
   "nordic-band-beanie": {
    "camera": "outdoor",
    "scene": "held up against a dusk sky on a frosty evening"
+  },
+  "fair-isle-band-cowl": {
+   "camera": "lamp",
+   "scene": "draped over a wooden chair"
   }
  }
 }

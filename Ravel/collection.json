@@ -1696,6 +1696,47 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/nordic-band-beanie.jpg"
+    },
+    {
+      "id": "fair-isle-band-cowl",
+      "title": "Fair Isle Band Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B.B.B.B.",
+          ".C.C.C.C",
+          "B.B.B.B.",
+          "........",
+          "BB..BB..",
+          ".BB..BB.",
+          "BB..BB..",
+          "........"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/fair-isle-band-cowl.jpg"
     }
   ]
 }

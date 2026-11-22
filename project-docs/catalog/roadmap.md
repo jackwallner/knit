@@ -187,7 +187,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
 | 104 | Chevron Lace Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |
-| 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | planned |
+| 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
 | 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | planned |
 | 108 | Tree Ornament | Holiday | Gift, beginner | New shape | verified (built as Bauble Ornament) |
 | 109 | Double Moss Slouch Hat | Hats | Adults, beginner | Stitch | planned |
