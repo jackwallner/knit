@@ -480,6 +480,10 @@
   "tableRunner": {
    "camera": "overcast",
    "scene": "down the middle of a wooden dining table set with plates and a jug of flowers"
+  },
+  "ruana": {
+   "camera": "outdoor",
+   "scene": "worn draped over the shoulders, seen from the back and side, walking on a misty coastal path, face not shown"
   }
  }
 }

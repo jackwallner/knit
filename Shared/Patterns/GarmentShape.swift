@@ -377,6 +377,24 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .ruana:
+            // A wide wrap hanging from the shoulders, open down the middle of the front from the neck.
+            let wrap = CGMutablePath()
+            wrap.move(to: p(0.3, 0.12))
+            wrap.addQuadCurve(to: p(0.7, 0.12), control: p(0.5, 0.2))
+            wrap.addQuadCurve(to: p(0.94, 0.4), control: p(0.9, 0.16))
+            wrap.addLine(to: p(0.94, 0.9))
+            wrap.addLine(to: p(0.06, 0.9))
+            wrap.addLine(to: p(0.06, 0.4))
+            wrap.addQuadCurve(to: p(0.3, 0.12), control: p(0.1, 0.16))
+            wrap.closeSubpath()
+            let opening = CGMutablePath()
+            opening.move(to: p(0.44, 0.15))
+            opening.addLine(to: p(0.56, 0.15))
+            opening.addLine(to: p(0.51, 0.9))
+            opening.addLine(to: p(0.49, 0.9))
+            opening.closeSubpath()
+            path.addPath(wrap.subtracting(opening))
         case .runner:
             // A long runner seen from above, pointed at each end, with a tassel hanging from each point.
             path.move(to: p(0.12, 0.5))

@@ -163,7 +163,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 79 | Table Runner | Home | Anyone, beginner | New shape: garter, knit point to point, a tassel at each point | verified |
 | 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | planned |
 | 81 | Waffle Mitts | Hands | Adults, easy | Stitch | planned |
-| 82 | Ruana | Shawls & Wraps | Adults, easy | New shape | planned |
+| 82 | Ruana | Shawls & Wraps | Adults, easy | New shape: one seed stitch piece, back then two fronts split by one bound-off stitch (on the Scarves & Cowls shelf) | verified |
 | 83 | Basketweave Beanie | Hats | Anyone, easy | Stitch | planned |
 | 84 | Feather and Fan Blanket | Blankets | Baby to throw, easy lace | Stitch | planned |
 | 85 | Scrunchie | Accessories | Gift, beginner | New shape | planned |
