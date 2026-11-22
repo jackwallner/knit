@@ -377,6 +377,17 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .bauble:
+            // A round bauble hanging from a loop, its wedge lines curving from top to bottom.
+            let ball = CGPath(ellipseIn: box(0.2, 0.26, 0.6, 0.6), transform: nil)
+            let lines = CGMutablePath()
+            for x in [CGFloat(0.36), 0.64] {
+                lines.move(to: p(0.5, 0.26))
+                lines.addQuadCurve(to: p(0.5, 0.86), control: p(x, 0.56))
+            }
+            let seams = lines.copy(strokingWithWidth: unit * 0.012, lineCap: .butt, lineJoin: .miter, miterLimit: 1)
+            let loop = CGPath(ellipseIn: box(0.44, 0.1, 0.12, 0.18), transform: nil).subtracting(CGPath(ellipseIn: box(0.46, 0.12, 0.08, 0.14), transform: nil))
+            path.addPath(ball.subtracting(seams).union(loop))
         case .laptopSleeve:
             // A flat sleeve with its flap folded down over the front and buttoned.
             let sleeve = CGPath(roundedRect: box(0.1, 0.24, 0.8, 0.56), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)

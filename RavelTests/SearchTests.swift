@@ -40,6 +40,7 @@ final class SearchTests: XCTestCase {
         XCTAssertEqual(find("bath mat").first?.id, Design.bathMat.rawValue)
         XCTAssertEqual(find("bathroom rug").first?.id, Design.bathMat.rawValue)
         XCTAssertEqual(find("laptop").first?.id, Design.laptopSleeve.rawValue)
+        XCTAssertEqual(find("bauble").first?.id, Design.bauble.rawValue)
         let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
         for item in collection {
             XCTAssertTrue(LibrarySearch.find(item.title, in: collection).contains { $0.id == item.id }, item.title)
@@ -56,14 +57,14 @@ final class SearchTests: XCTestCase {
 
     func testShelfTagsAreSearched() {
         let tags = [Design.ribbedBeanie.rawValue: ["Holiday"], Design.mittens.rawValue: ["Gift season"]]
-        // The Christmas Stocking and the ornament are holiday designs by their own words, tag or not.
-        let stocking = Design.christmasStocking.rawValue, ornament = Design.miniStocking.rawValue
-        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament])
-        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament])
+        // The Christmas Stocking and the ornaments are holiday designs by their own words, tag or not.
+        let stocking = Design.christmasStocking.rawValue, ornament = Design.miniStocking.rawValue, bauble = Design.bauble.rawValue
+        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament, bauble])
+        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament, bauble])
         XCTAssertEqual(find("gifts", tags: tags).map(\.id), [Design.mittens.rawValue])
         XCTAssertEqual(find("a present", tags: tags).map(\.id), [Design.mittens.rawValue])
-        XCTAssertEqual(find("christmas").map(\.id), [stocking, ornament], "no tag, no match")
-        XCTAssertEqual(find("ornament").map(\.id), [ornament])
+        XCTAssertEqual(find("christmas").map(\.id), [stocking, ornament, bauble], "no tag, no match")
+        XCTAssertEqual(find("ornament").map(\.id), [ornament, bauble])
     }
 
     func testATeeIsFoundByWhatPeopleCallIt() {

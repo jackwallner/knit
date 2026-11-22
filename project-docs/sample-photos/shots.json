@@ -504,6 +504,10 @@
   "laptopSleeve": {
    "camera": "outdoor",
    "scene": "a cafe table outside with a coffee cup, overcast afternoon"
+  },
+  "bauble": {
+   "camera": "flash",
+   "scene": "a decorated Christmas tree at night, string lights glowing"
   }
  }
 }

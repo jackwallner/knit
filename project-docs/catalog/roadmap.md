@@ -189,7 +189,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |
 | 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | planned |
 | 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | planned |
-| 108 | Tree Ornament | Holiday | Gift, beginner | New shape | planned |
+| 108 | Tree Ornament | Holiday | Gift, beginner | New shape | verified (built as Bauble Ornament) |
 | 109 | Double Moss Slouch Hat | Hats | Adults, beginner | Stitch | planned |
 | 110 | Button Neck Warmer | Accessories | Adults, easy | New shape | planned |
 | 111 | Wave Beanie | Hats | Anyone, intermediate | Colorwork | planned |
