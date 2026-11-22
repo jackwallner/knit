@@ -1,17 +1,28 @@
-ok   Ribbed Beanie: 8 sizes x 8 weights
+ok   snowflake-beanie: Snowflake Beanie, 8 sizes x 3 weights
 
 == snowflake-beanie, Baby, Sport, 100 yd
 14.75 in around, to fit a 16 in head
-  About 100 yd of sport weight yarn
+  Navy, color A: about 60 yd of sport weight yarn
+  Cream, color B: about 40 yd of sport weight yarn
   US 3 · 3.25 mm double-pointed needles for the brim, or a long circular for magic loop
   US 5 · 3.75 mm double-pointed needles for the body, or a long circular for magic loop
   Stitch marker
   Tapestry needle
   Gauge: 24 stitches and 32 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Brim x1 [88]: Cast on 88 stitches with the smaller needle. Join in the round without twisting and place a marker.
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Brim x1 [88]: Cast on 88 stitches in cream with the smaller needle. Join in the round without twisting and place a marker.
 Brim x12 [88]: *K2, p2; repeat from * around
-Body x1 [88]: Change to the larger needle and knit
-Body x19 [88]: Knit
+Body x1 [88]: With navy, change to the larger needle and knit
+Body x4 [88]: Knit
+Body x1 [88]: *K1 cream, k3 navy, k1 cream, k3 navy; repeat from * around
+Body x1 [88]: *K2 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy; repeat from * around
+Body x1 [88]: *K3 navy, k3 cream, k2 navy; repeat from * around
+Body x1 [88]: *K1 navy, k3 cream, k1 navy, k3 cream; repeat from * around
+Body x1 [88]: *K3 navy, k3 cream, k2 navy; repeat from * around
+Body x1 [88]: *K2 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy; repeat from * around
+Body x1 [88]: *K1 cream, k3 navy, k1 cream, k3 navy; repeat from * around
+Body x1 [88]: With navy, knit
+Body x7 [88]: Knit
 Crown x1 [80]: *K9, k2tog; repeat from * around
 Crown x1 [80]: Knit
 Crown x1 [72]: *K8, k2tog; repeat from * around
@@ -31,17 +42,28 @@ Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight
 
 == snowflake-beanie, Large, Sport, 210 yd
 21.25 in around, to fit a 23.5 in head
-  About 210 yd of sport weight yarn
+  Navy, color A: about 140 yd of sport weight yarn
+  Cream, color B: about 70 yd of sport weight yarn
   US 3 · 3.25 mm 16 in circular needle for the brim
   US 5 · 3.75 mm 16 in circular needle for the body
   Double-pointed needles in the larger size for the crown
   Stitch marker
   Tapestry needle
   Gauge: 24 stitches and 32 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Brim x1 [128]: Cast on 128 stitches with the smaller needle. Join in the round without twisting and place a marker.
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Brim x1 [128]: Cast on 128 stitches in cream with the smaller needle. Join in the round without twisting and place a marker.
 Brim x17 [128]: *K2, p2; repeat from * around
-Body x1 [128]: Change to the larger needle and knit
-Body x29 [128]: Knit
+Body x1 [128]: With navy, change to the larger needle and knit
+Body x4 [128]: Knit
+Body x1 [128]: *K1 cream, k3 navy, k1 cream, k3 navy; repeat from * around
+Body x1 [128]: *K2 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy; repeat from * around
+Body x1 [128]: *K3 navy, k3 cream, k2 navy; repeat from * around
+Body x1 [128]: *K1 navy, k3 cream, k1 navy, k3 cream; repeat from * around
+Body x1 [128]: *K3 navy, k3 cream, k2 navy; repeat from * around
+Body x1 [128]: *K2 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy; repeat from * around
+Body x1 [128]: *K1 cream, k3 navy, k1 cream, k3 navy; repeat from * around
+Body x1 [128]: With navy, knit
+Body x17 [128]: Knit
 Crown x1 [120]: *K14, k2tog; repeat from * around
 Crown x1 [120]: Knit
 Crown x1 [112]: *K13, k2tog; repeat from * around

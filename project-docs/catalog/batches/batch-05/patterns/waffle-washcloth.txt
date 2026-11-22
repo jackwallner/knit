@@ -1,4 +1,4 @@
-ok   Bordered Washcloth: 5 sizes x 8 weights
+ok   waffle-washcloth: Waffle Washcloth, 5 sizes x 3 weights
 
 == waffle-washcloth, Small, Worsted, 60 yd
 7.25 in wide, 7.25 in long

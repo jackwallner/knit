@@ -1,4 +1,4 @@
-ok   Ribbed Beanie: 8 sizes x 8 weights
+ok   seeded-rib-beanie: Seeded Rib Beanie, 8 sizes x 7 weights
 
 == seeded-rib-beanie, Baby, Worsted, 90 yd
 14.75 in around, to fit a 16 in head

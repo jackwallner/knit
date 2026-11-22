@@ -1,4 +1,4 @@
-ok   Ribbed Beanie: 8 sizes x 8 weights
+ok   broken-rib-beanie: Broken Rib Beanie, 8 sizes x 7 weights
 
 == broken-rib-beanie, Baby, Worsted, 90 yd
 14.5 in around, to fit a 16 in head

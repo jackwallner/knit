@@ -1,4 +1,4 @@
-ok   Garter Scarf: 5 sizes x 8 weights
+ok   double-moss-scarf: Double Moss Scarf, 5 sizes x 7 weights
 
 == double-moss-scarf, Child, Worsted, 230 yd
 5 in wide, 48 in long

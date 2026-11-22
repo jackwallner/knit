@@ -1,8 +1,8 @@
-ok   Ribbed Cowl: 5 sizes x 8 weights
+ok   honeycomb-cowl: Honeycomb Cowl, 5 sizes x 5 weights
 
-== honeycomb-cowl, Snug, Worsted, 200 yd
+== honeycomb-cowl, Snug, Worsted, 180 yd
 22 in around, 8 in tall
-  About 200 yd of worsted weight yarn
+  About 180 yd of worsted weight yarn
   US 7 · 4.5 mm 24 in circular needle
   Stitch marker
   Tapestry needle
@@ -13,9 +13,9 @@ Cowl x52 [104]: *K1, sl1 wyif; repeat from * around / Knit / *Sl1 wyif, k1; repe
 Cowl x4 [104]: Purl / Knit
 Finishing x1: Bind off loosely purlwise. Weave in the ends.
 
-== honeycomb-cowl, Infinity, Worsted, 520 yd
+== honeycomb-cowl, Infinity, Worsted, 470 yd
 52 in around, 9.25 in tall
-  About 520 yd of worsted weight yarn
+  About 470 yd of worsted weight yarn
   US 7 · 4.5 mm 40 in circular needle
   Stitch marker
   Tapestry needle

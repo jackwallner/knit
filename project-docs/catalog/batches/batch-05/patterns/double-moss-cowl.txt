@@ -1,23 +1,23 @@
-ok   Ribbed Cowl: 5 sizes x 8 weights
+ok   double-moss-cowl: Double Moss Cowl, 5 sizes x 6 weights
 
-== double-moss-cowl, Snug, Aran, 160 yd
-22 in around, 8 in tall
-  About 160 yd of Aran weight yarn
-  US 9 · 5.5 mm 24 in circular needle
+== double-moss-cowl, Snug, Worsted, 170 yd
+22.25 in around, 8 in tall
+  About 170 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
   Stitch marker
   Tapestry needle
-  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Cowl x1 [88]: Cast on 88 stitches. Join in the round without twisting and place a marker.
-Cowl x48 [88]: *K2, p2; repeat from * around / *K2, p2; repeat from * around / *P2, k2; repeat from * around / *P2, k2; repeat from * around
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [100]: Cast on 100 stitches. Join in the round without twisting and place a marker.
+Cowl x52 [100]: *K2, p2; repeat from * around / *K2, p2; repeat from * around / *P2, k2; repeat from * around / *P2, k2; repeat from * around
 Finishing x1: Bind off loosely in pattern. Weave in the ends.
 
-== double-moss-cowl, Infinity, Aran, 420 yd
-52 in around, 9.25 in tall
-  About 420 yd of Aran weight yarn
-  US 9 · 5.5 mm 40 in circular needle
+== double-moss-cowl, Infinity, Worsted, 470 yd
+52.5 in around, 9 in tall
+  About 470 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
   Stitch marker
   Tapestry needle
-  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Cowl x1 [208]: Cast on 208 stitches. Join in the round without twisting and place a marker.
-Cowl x56 [208]: *K2, p2; repeat from * around / *K2, p2; repeat from * around / *P2, k2; repeat from * around / *P2, k2; repeat from * around
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [236]: Cast on 236 stitches. Join in the round without twisting and place a marker.
+Cowl x60 [236]: *K2, p2; repeat from * around / *K2, p2; repeat from * around / *P2, k2; repeat from * around / *P2, k2; repeat from * around
 Finishing x1: Bind off loosely in pattern. Weave in the ends.

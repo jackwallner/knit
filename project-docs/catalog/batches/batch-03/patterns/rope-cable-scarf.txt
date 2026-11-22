@@ -1,4 +1,4 @@
-ok   Garter Scarf: 5 sizes x 8 weights
+ok   rope-cable-scarf: Rope Cable Scarf, 5 sizes x 7 weights
 
 == rope-cable-scarf, Child, Worsted, 250 yd
 4.75 in wide, 48 in long

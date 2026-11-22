@@ -45,6 +45,39 @@ Prompts are queued in `project-docs/sample-photos/subjects.json` and `shots.json
 until Jack says yes to the image tool. New photos are served from the site (`docs/photos/<id>.jpg`) and
 cached on the phone, so the app does not carry them.
 
+## The knitter's read (2026-11-21)
+
+All 61 designs added on this branch were read as printed, at their smallest and largest size, by a knitter
+checking counts, row parity, wording and needles. 30 were read in this session (batches 1 to 3 and Toe-Up
+Socks); the other 31 by a Sonnet reviewer, every finding then checked against the printed pattern here.
+The printed patterns are in each batch's `patterns/` folder.
+
+Fixed:
+- Basketweave stops after a whole band of blocks, so the Large washcloth comes out square.
+- Linen stitch yardage counts its slipped stitches, which use about a quarter of the yarn of a knit one.
+- Shawls sit with the wraps in Scarves, the Shrug with Sweaters.
+- Snowflake Cowl: the tip rows of the flake sat one stitch off its center; now symmetric.
+- Star Beanie: a motif sewn on a solid hat said "over the navy stripe" and counted rib rounds as "navy
+  under it"; it now says "over the navy fabric" and the round it starts on above the cast on.
+- Color-Block Beanie (and every record): yarn the plain shape needs beyond the counted rows went to color A,
+  the crown on this hat (30 yd blush, 30 mustard); it now goes to the yarn that works the most (20 and 40).
+- Houndstooth Beanie (and every chart): the plain round after a two-color chart said "Knit" without the
+  yarn; it now says "With cream, knit".
+- Drawings show each design's stitch texture.
+
+Checked and left as is:
+- Rope Cable Mitts: the afterthought thumb opens under part of a cable, but the stitches above it stay live,
+  so the cable crosses on as written.
+- Needle lengths: a 32 in circular holds the largest raglan, turtleneck and capelet (about 65 in around).
+- Snowflake Cowl "22 in around": the ribbed edges set the size; the stockinette chart band sits a little
+  wider, as stranded bands do.
+- Baby Socks gusset wording and the glossary terms (inc across, C4F, M1L, sl1 wyif) are standard.
+- Christmas Stocking decreases its gusset every round, Striped Scarf's end bands are deeper than its
+  stripes, Rope Cable Scarf crosses on row 1: deliberate and knit as written.
+
+Follow-ups: a pattern-stitch gauge line for the linen designs (their fabric is much denser than the
+stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `finest:`.
+
 ## The list
 
 | # | Design | Category | For | Build | Status |
@@ -143,7 +176,7 @@ cached on the phone, so the app does not carry them.
 | 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
 | 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | planned |
 | 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | planned |
-| 95 | Gloves | Hands | Adults, intermediate | New shape | planned |
+| 95 | Gloves | Hands | Adults, intermediate | New shape: mitt gusset, then five fingers split from the hand | verified (built ahead of its rank: new shapes first while the colorwork and stitch rows wait for Jack) |
 | 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |
 | 97 | Bath Mat | Home | Anyone, beginner | New shape | planned |
 | 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | planned |

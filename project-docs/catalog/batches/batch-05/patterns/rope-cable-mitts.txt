@@ -1,4 +1,4 @@
-ok   Handwarmers: 5 sizes x 8 weights
+ok   rope-cable-mitts: Rope Cable Mitts, 5 sizes x 6 weights
 
 == rope-cable-mitts, Small, Worsted, 100 yd
 5.5 in around, to fit a 6.5 in hand, 5.75 in long

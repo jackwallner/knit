@@ -1,4 +1,4 @@
-ok   Rectangular Wrap: 5 sizes x 8 weights
+ok   eyelet-lace-wrap: Eyelet Lace Wrap, 5 sizes x 6 weights
 
 == eyelet-lace-wrap, Small, DK, 1000 yd
 16.25 in wide, 59.75 in long

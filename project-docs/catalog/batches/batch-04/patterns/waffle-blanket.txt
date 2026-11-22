@@ -1,25 +1,25 @@
-ok   Bordered Blanket: 5 sizes x 8 weights
+ok   waffle-blanket: Waffle Blanket, 5 sizes x 6 weights
 
-== waffle-blanket, Stroller, Aran, 970 yd
-30 in wide, 34.75 in long
-  About 970 yd of Aran weight yarn
-  US 9 · 5.5 mm circular needle, 32 in or longer, worked flat
+== waffle-blanket, Stroller, Worsted, 1080 yd
+30.25 in wide, 35.25 in long
+  About 1,080 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
   Tapestry needle
-  Gauge: 16 stitches and 22 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Bottom Border x1 [125]: Cast on 125 stitches.
-Bottom Border x10 [125]: Knit
-Body x204 [125]: K5, *p1, k2; repeat from * to the last 6 stitches, p1, k5 / K5, *k1, p2; repeat from * to the last 6 stitches, k6 / K5, *p1, k2; repeat from * to the last 6 stitches, p1, k5 / Knit
-Top Border x10 [125]: Knit
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [142]: Cast on 142 stitches.
+Bottom Border x12 [142]: Knit
+Body x224 [142]: K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / K6, *k1, p2; repeat from * to the last 7 stitches, k7 / K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / Knit
+Top Border x12 [142]: Knit
 Finishing x1: Bind off loosely. Weave in the ends.
 
-== waffle-blanket, Throw, Aran, 2640 yd
-47.75 in wide, 60 in long
-  About 2,640 yd of Aran weight yarn
-  US 9 · 5.5 mm 40 in circular needle, worked flat
+== waffle-blanket, Throw, Worsted, 2910 yd
+48 in wide, 60 in long
+  About 2,910 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
   Tapestry needle
-  Gauge: 16 stitches and 22 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Bottom Border x1 [200]: Cast on 200 stitches.
-Bottom Border x10 [200]: Knit
-Body x364 [200]: K5, *p1, k2; repeat from * to the last 6 stitches, p1, k5 / K5, *k1, p2; repeat from * to the last 6 stitches, k6 / K5, *p1, k2; repeat from * to the last 6 stitches, p1, k5 / Knit
-Top Border x10 [200]: Knit
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [226]: Cast on 226 stitches.
+Bottom Border x12 [226]: Knit
+Body x396 [226]: K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / K6, *k1, p2; repeat from * to the last 7 stitches, k7 / K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / Knit
+Top Border x12 [226]: Knit
 Finishing x1: Bind off loosely. Weave in the ends.

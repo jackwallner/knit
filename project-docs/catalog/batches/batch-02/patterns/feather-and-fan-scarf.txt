@@ -1,25 +1,25 @@
-ok   Garter Scarf: 5 sizes x 8 weights
+ok   feather-and-fan-scarf: Feather and Fan Scarf, 5 sizes x 5 weights
 
-== feather-and-fan-scarf, Child, DK, 300 yd
-6 in wide, 47.75 in long
-  About 300 yd of DK weight yarn
-  US 6 · 4 mm needles
+== feather-and-fan-scarf, Child, Worsted, 190 yd
+4.5 in wide, 48.25 in long
+  About 190 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
   Tapestry needle
-  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Scarf x1 [32]: Cast on 32 stitches.
-Scarf x8 [32]: Knit
-Scarf x308 [32]: Knit / K3, purl to the last 3 stitches, k3 / K4, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 4 stitches, k4 / Knit
-Scarf x8 [32]: Knit
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [20]: Cast on 20 stitches.
+Scarf x6 [20]: Knit
+Scarf x268 [20]: Knit / K3, purl to the last 3 stitches, k3 / K4, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 4 stitches, k4 / Knit
+Scarf x6 [20]: Knit
 Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.
 
-== feather-and-fan-scarf, Long, DK, 660 yd
-8.25 in wide, 76 in long
-  About 660 yd of DK weight yarn
-  US 6 · 4 mm needles
+== feather-and-fan-scarf, Long, Worsted, 480 yd
+7.5 in wide, 75.75 in long
+  About 480 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
   Tapestry needle
-  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Scarf x1 [44]: Cast on 44 stitches.
-Scarf x8 [44]: Knit
-Scarf x496 [44]: Knit / K3, purl to the last 3 stitches, k3 / K4, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 4 stitches, k4 / Knit
-Scarf x8 [44]: Knit
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [32]: Cast on 32 stitches.
+Scarf x6 [32]: Knit
+Scarf x424 [32]: Knit / K3, purl to the last 3 stitches, k3 / K4, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 4 stitches, k4 / Knit
+Scarf x6 [32]: Knit
 Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.

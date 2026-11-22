@@ -1,25 +1,25 @@
-ok   Rectangular Wrap: 5 sizes x 8 weights
+ok   feather-and-fan-wrap: Feather and Fan Wrap, 5 sizes x 5 weights
 
-== feather-and-fan-wrap, Small, Sport, 1130 yd
-16.75 in wide, 60 in long
-  About 1,130 yd of sport weight yarn
-  US 5 · 3.75 mm circular needle, 32 in or longer, worked flat
+== feather-and-fan-wrap, Small, DK, 970 yd
+15.5 in wide, 59.75 in long
+  About 970 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
   Tapestry needle
-  Gauge: 24 stitches and 32 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Bottom Border x1 [96]: Cast on 96 stitches.
-Bottom Border x10 [96]: Knit
-Body x444 [96]: Knit / K5, purl to the last 5 stitches, k5 / K6, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 6 stitches, k6 / Knit
-Top Border x10 [96]: Knit
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [82]: Cast on 82 stitches.
+Bottom Border x8 [82]: Knit
+Body x388 [82]: Knit / K4, purl to the last 4 stitches, k4 / K5, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 5 stitches, k5 / Knit
+Top Border x8 [82]: Knit
 Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.
 
-== feather-and-fan-wrap, Wide, Sport, 2080 yd
-23 in wide, 80 in long
-  About 2,080 yd of sport weight yarn
-  US 5 · 3.75 mm circular needle, 32 in or longer, worked flat
+== feather-and-fan-wrap, Wide, DK, 2050 yd
+24.75 in wide, 80.25 in long
+  About 2,050 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
   Tapestry needle
-  Gauge: 24 stitches and 32 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Bottom Border x1 [132]: Cast on 132 stitches.
-Bottom Border x10 [132]: Knit
-Body x596 [132]: Knit / K5, purl to the last 5 stitches, k5 / K6, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 6 stitches, k6 / Knit
-Top Border x10 [132]: Knit
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [130]: Cast on 130 stitches.
+Bottom Border x8 [130]: Knit
+Body x524 [130]: Knit / K4, purl to the last 4 stitches, k4 / K5, *k2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * to the last 5 stitches, k5 / Knit
+Top Border x8 [130]: Knit
 Finishing x1: Bind off loosely. Weave in the ends. Block the wrap to open up the lace.

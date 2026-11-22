@@ -1,4 +1,4 @@
-ok   Garter Scarf: 5 sizes x 8 weights
+ok   twisted-rib-scarf: Twisted Rib Scarf, 5 sizes x 6 weights
 
 == twisted-rib-scarf, Child, Worsted, 260 yd
 5 in wide, 48 in long

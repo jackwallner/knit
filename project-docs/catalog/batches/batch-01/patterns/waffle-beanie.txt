@@ -1,4 +1,4 @@
-ok   Ribbed Beanie: 8 sizes x 8 weights
+ok   waffle-beanie: Waffle Beanie, 8 sizes x 5 weights
 
 == waffle-beanie, Baby, Worsted, 90 yd
 14 in around, to fit a 16 in head

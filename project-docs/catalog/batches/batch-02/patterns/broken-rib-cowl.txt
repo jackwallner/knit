@@ -1,23 +1,23 @@
-ok   Ribbed Cowl: 5 sizes x 8 weights
+ok   broken-rib-cowl: Broken Rib Cowl, 5 sizes x 6 weights
 
-== broken-rib-cowl, Snug, Aran, 150 yd
+== broken-rib-cowl, Snug, Worsted, 170 yd
 21.75 in around, 8 in tall
-  About 150 yd of Aran weight yarn
-  US 9 · 5.5 mm 24 in circular needle
+  About 170 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
   Stitch marker
   Tapestry needle
-  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Cowl x1 [96]: Cast on 96 stitches. Join in the round without twisting and place a marker.
-Cowl x44 [96]: Knit / *K1, p1; repeat from * around
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [108]: Cast on 108 stitches. Join in the round without twisting and place a marker.
+Cowl x48 [108]: Knit / *K1, p1; repeat from * around
 Finishing x1: Bind off loosely in pattern. Weave in the ends.
 
-== broken-rib-cowl, Infinity, Aran, 400 yd
-51.75 in around, 9 in tall
-  About 400 yd of Aran weight yarn
-  US 9 · 5.5 mm 40 in circular needle
+== broken-rib-cowl, Infinity, Worsted, 440 yd
+52 in around, 9 in tall
+  About 440 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
   Stitch marker
   Tapestry needle
-  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Cowl x1 [228]: Cast on 228 stitches. Join in the round without twisting and place a marker.
-Cowl x50 [228]: Knit / *K1, p1; repeat from * around
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [258]: Cast on 258 stitches. Join in the round without twisting and place a marker.
+Cowl x54 [258]: Knit / *K1, p1; repeat from * around
 Finishing x1: Bind off loosely in pattern. Weave in the ends.

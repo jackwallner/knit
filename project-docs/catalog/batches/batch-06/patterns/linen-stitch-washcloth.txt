@@ -1,8 +1,8 @@
-ok   Bordered Washcloth: 5 sizes x 8 weights
+ok   linen-stitch-washcloth: Linen Stitch Washcloth, 5 sizes x 3 weights
 
-== linen-stitch-washcloth, Small, Worsted, 90 yd
+== linen-stitch-washcloth, Small, Worsted, 60 yd
 7 in wide, 7 in long
-  About 90 yd of worsted weight yarn, cotton for a cloth that scrubs
+  About 60 yd of worsted weight yarn, cotton for a cloth that scrubs
   US 7 · 4.5 mm needles
   Tapestry needle
   Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
@@ -12,9 +12,9 @@ Body x58 [40]: K3, *k1, sl1 wyif; repeat from * to the last 5 stitches, k5 / K3,
 Top Border x6 [40]: Knit
 Finishing x1: Bind off loosely. Weave in the ends.
 
-== linen-stitch-washcloth, Large, Worsted, 180 yd
+== linen-stitch-washcloth, Large, Worsted, 120 yd
 10 in wide, 10 in long
-  About 180 yd of worsted weight yarn, cotton for a cloth that scrubs
+  About 120 yd of worsted weight yarn, cotton for a cloth that scrubs
   US 7 · 4.5 mm needles
   Tapestry needle
   Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge

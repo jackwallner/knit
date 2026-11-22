@@ -1,21 +1,149 @@
-ok   Garter Scarf: 5 sizes x 8 weights
+ok   striped-scarf: Striped Scarf, 5 sizes x 8 weights
 
 == striped-scarf, Child, Worsted, 310 yd
 5 in wide, 48 in long
-  About 310 yd of worsted weight yarn
+  Charcoal, color A: about 130 yd of worsted weight yarn
+  Mustard, color B: about 120 yd of worsted weight yarn
+  Cream, color C: about 60 yd of worsted weight yarn
   US 7 · 4.5 mm needles
   Tapestry needle
   Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Scarf x1 [23]: Cast on 23 stitches.
-Scarf x432 [23]: Knit
+Scarf x1 [23]: Cast on 23 stitches in charcoal.
+Scarf x28 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x27 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x27 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x27 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x27 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x27 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With cream, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With mustard, knit
+Scarf x13 [23]: Knit
+Scarf x1 [23]: With charcoal, knit
+Scarf x11 [23]: Knit
 Finishing x1: Bind off loosely. Weave in the ends.
 
-== striped-scarf, Long, Worsted, 760 yd
+== striped-scarf, Long, Worsted, 770 yd
 8 in wide, 76 in long
-  About 760 yd of worsted weight yarn
+  Charcoal, color A: about 310 yd of worsted weight yarn
+  Mustard, color B: about 300 yd of worsted weight yarn
+  Cream, color C: about 160 yd of worsted weight yarn
   US 7 · 4.5 mm needles
   Tapestry needle
   Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
-Scarf x1 [36]: Cast on 36 stitches.
-Scarf x684 [36]: Knit
+Scarf x1 [36]: Cast on 36 stitches in charcoal.
+Scarf x28 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With charcoal, knit
+Scarf x27 [36]: Knit
+Scarf x1 [36]: With mustard, knit
+Scarf x13 [36]: Knit
+Scarf x1 [36]: With cream, knit
+Scarf x11 [36]: Knit
 Finishing x1: Bind off loosely. Weave in the ends.
