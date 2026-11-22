@@ -368,6 +368,15 @@ enum GarmentShape {
             path.addLine(to: p(0.26, 0.58))
             path.closeSubpath()
             path.addPath(CGPath(rect: box(0.25, 0.56, 0.5, 0.014), transform: nil))
+        case .tote:
+            // A square bag with a strap arching over it, its ends sewn on below the garter band.
+            let body = CGPath(roundedRect: box(0.14, 0.4, 0.72, 0.52), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            let strap = CGPath(ellipseIn: box(0.27, 0.08, 0.46, 0.64), transform: nil).subtracting(CGPath(ellipseIn: box(0.33, 0.14, 0.34, 0.52), transform: nil))
+            path.addPath(body.union(strap))
+            path.addPath(CGPath(rect: box(0.14, 0.47, 0.72, 0.014), transform: nil))
+            for x in [CGFloat(0.27), 0.67] {
+                path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
+            }
         case .babyPullover:
             // The sweater with two buttons on one shoulder, where the neck opens.
             let holes = CGMutablePath()

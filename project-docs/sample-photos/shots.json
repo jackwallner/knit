@@ -456,6 +456,10 @@
   "bucketHat": {
    "camera": "sun",
    "scene": "on a sunlit wooden bench by a garden path"
+  },
+  "toteBag": {
+   "camera": "overcast",
+   "scene": "hanging from a wooden chair back in a bright kitchen"
   }
  }
 }
