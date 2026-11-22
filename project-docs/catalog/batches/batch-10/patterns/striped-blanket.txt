@@ -1,0 +1,157 @@
+ok   striped-blanket: Striped Blanket, 5 sizes x 8 weights
+
+== striped-blanket, Stroller, Worsted, 930 yd
+30 in wide, 35 in long
+  Cream, color A: about 320 yd of worsted weight yarn
+  Dusty Blue, color B: about 210 yd of worsted weight yarn
+  Mustard, color C: about 200 yd of worsted weight yarn
+  Sage, color D: about 200 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [135]: Cast on 135 stitches in dusty blue.
+Bottom Border x12 [135]: Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With mustard, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With sage, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With dusty blue, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With mustard, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With sage, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With dusty blue, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With mustard, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With sage, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With dusty blue, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With mustard, knit
+Body x11 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With cream, knit
+Body x5 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [135]: With sage, knit
+Body x7 [135]: K6, purl to the last 6 stitches, k6 / Knit
+Top Border x4 [135]: Knit
+Top Border x1 [135]: With cream, knit
+Top Border x5 [135]: Knit
+Top Border x1 [135]: With dusty blue, knit
+Top Border x1 [135]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== striped-blanket, Throw, Worsted, 2550 yd
+48 in wide, 60 in long
+  Cream, color A: about 900 yd of worsted weight yarn
+  Dusty Blue, color B: about 560 yd of worsted weight yarn
+  Mustard, color C: about 560 yd of worsted weight yarn
+  Sage, color D: about 530 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [216]: Cast on 216 stitches in dusty blue.
+Bottom Border x12 [216]: Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With sage, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With dusty blue, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x5 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With mustard, knit
+Body x11 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Body x1 [216]: With cream, knit
+Body x1 [216]: K6, purl to the last 6 stitches, k6 / Knit
+Top Border x4 [216]: Knit
+Top Border x1 [216]: With sage, knit
+Top Border x7 [216]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

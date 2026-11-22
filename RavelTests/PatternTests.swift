@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["babyCocoon", "tubeSocks", "scrunchie", "bathMat", "color-block-scarf", "striped-mitts", "babyMittens", "catHat", "houndstooth-beanie", "striped-beanie", "striped-scarf", "bootCuffs", "panda-beanie", "checkerboard-blanket", "striped-socks", "striped-raglan", "striped-vest", "striped-drop-shoulder", "striped-pillow"]
+    static let awaitingPhoto: Set<String> = []
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 

@@ -1,0 +1,522 @@
+ok   striped-drop-shoulder: Striped Drop-Shoulder, 11 sizes x 3 weights
+
+== striped-drop-shoulder, XS, DK, 1230 yd
+Finished chest 38.5 in, to fit a 30 in chest with 8.5 in of ease. 22.25 in from the hem to the shoulder
+  Oatmeal, color A: about 680 yd of DK weight yarn
+  Rust, color B: about 280 yd of DK weight yarn
+  Sage, color C: about 270 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  US 4 · 3.5 mm needles for the ribbing
+  US 4 · 3.5 mm 16 in circular needle for the neckband
+  4 locking stitch markers, a stitch marker, tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Back x1 [106]: With the smaller needles, cast on 106 stitches in oatmeal.
+Back x16 [106]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Back x1: Change to the larger needles.
+Back x1 [106]: With rust, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With sage, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With rust, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With sage, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With rust, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With sage, knit
+Back x11 [106]: Purl / Knit
+Back x1 [106]: With oatmeal, knit
+Back x7 [106]: Purl / Knit
+Back x1: Bind off all 106 stitches.
+Front x1 [106]: With the smaller needles, cast on 106 stitches in oatmeal.
+Front x16 [106]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Front x1: Change to the larger needles.
+Front x1 [106]: With rust, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With oatmeal, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With sage, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With oatmeal, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With rust, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With oatmeal, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With sage, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With oatmeal, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With rust, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With oatmeal, knit
+Front x11 [106]: Purl / Knit
+Front x1 [106]: With sage, knit
+Front x1 [106]: Purl / Knit
+Front · First Side x2 [42]: Knit 42 stitches and turn, leaving the other 64 on the needle for the second side / Purl to the end
+Front · First Side x1 [41]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [41]: Purl to the end
+Front · First Side x1 [40]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [40]: Purl to the end
+Front · First Side x1 [39]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [39]: Purl to the end
+Front · First Side x1 [38]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [38]: Purl to the end
+Front · First Side x1 [37]: With oatmeal, knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [37]: Purl to the end
+Front · First Side x1 [36]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [36]: Purl to the end
+Front · First Side x1 [35]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [35]: Purl to the end
+Front · First Side x1 [34]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [34]: Purl to the end
+Front · First Side x1: Bind off the 34 shoulder stitches.
+Front · Second Side x1 [64]: With the right side facing, join new yarn at the neck edge of the 64 stitches left.
+Front · Second Side x2 [42]: Bind off 22 stitches, knit to the end / Purl to the end
+Front · Second Side x1 [41]: K1, ssk, knit to the end
+Front · Second Side x1 [41]: Purl to the end
+Front · Second Side x1 [40]: With rust, k1, ssk, knit to the end
+Front · Second Side x1 [40]: Purl to the end
+Front · Second Side x1 [39]: K1, ssk, knit to the end
+Front · Second Side x1 [39]: Purl to the end
+Front · Second Side x1 [38]: K1, ssk, knit to the end
+Front · Second Side x1 [38]: Purl to the end
+Front · Second Side x1 [37]: K1, ssk, knit to the end
+Front · Second Side x1 [37]: Purl to the end
+Front · Second Side x1 [36]: K1, ssk, knit to the end
+Front · Second Side x1 [36]: Purl to the end
+Front · Second Side x1 [35]: K1, ssk, knit to the end
+Front · Second Side x1 [35]: Purl to the end
+Front · Second Side x1 [34]: With oatmeal, k1, ssk, knit to the end
+Front · Second Side x1 [34]: Purl to the end
+Front · Second Side x1: Bind off the 34 shoulder stitches.
+First Sleeve x1 [34]: With the smaller needles, cast on 34 stitches in oatmeal.
+First Sleeve x14 [34]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+First Sleeve x1: Change to the larger needles.
+First Sleeve x1 [36]: With rust, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [36]: Purl
+First Sleeve x1 [38]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [38]: Purl
+First Sleeve x1 [40]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [40]: Purl
+First Sleeve x1 [42]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [42]: Purl
+First Sleeve x1 [44]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [44]: Purl
+First Sleeve x1 [46]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [46]: Purl
+First Sleeve x1 [48]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [48]: Purl
+First Sleeve x1 [50]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [50]: Purl
+First Sleeve x1 [52]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [52]: Purl
+First Sleeve x1 [54]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [54]: Purl
+First Sleeve x1 [56]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [56]: Purl
+First Sleeve x1 [58]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [58]: Purl
+First Sleeve x1 [60]: With sage, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [60]: Purl
+First Sleeve x1 [62]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [62]: Purl
+First Sleeve x1 [64]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [64]: Purl
+First Sleeve x1 [66]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [66]: Purl
+First Sleeve x1 [68]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [68]: Purl
+First Sleeve x1 [70]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [70]: Purl
+First Sleeve x1 [72]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [72]: Purl
+First Sleeve x1 [74]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [74]: Purl
+First Sleeve x1 [76]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [76]: Purl
+First Sleeve x1 [78]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [78]: Purl
+First Sleeve x1 [80]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [80]: Purl
+First Sleeve x1 [82]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [82]: Purl
+First Sleeve x1 [84]: With rust, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [84]: Purl
+First Sleeve x1 [86]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [86]: Purl
+First Sleeve x1 [88]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [88]: Purl
+First Sleeve x1 [90]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [90]: Purl
+First Sleeve x4 [90]: Knit / Purl
+First Sleeve x1 [90]: With oatmeal, knit
+First Sleeve x11 [90]: Purl / Knit
+First Sleeve x1 [90]: With sage, knit
+First Sleeve x11 [90]: Purl / Knit
+First Sleeve x1 [90]: With oatmeal, knit
+First Sleeve x3 [90]: Purl / Knit
+First Sleeve x1: Bind off all 90 stitches loosely.
+Second Sleeve x1 [34]: With the smaller needles, cast on 34 stitches in oatmeal.
+Second Sleeve x14 [34]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Second Sleeve x1: Change to the larger needles.
+Second Sleeve x1 [36]: With rust, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [36]: Purl
+Second Sleeve x1 [38]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [38]: Purl
+Second Sleeve x1 [40]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [40]: Purl
+Second Sleeve x1 [42]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [42]: Purl
+Second Sleeve x1 [44]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [44]: Purl
+Second Sleeve x1 [46]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [46]: Purl
+Second Sleeve x1 [48]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [48]: Purl
+Second Sleeve x1 [50]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [50]: Purl
+Second Sleeve x1 [52]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [52]: Purl
+Second Sleeve x1 [54]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [54]: Purl
+Second Sleeve x1 [56]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [56]: Purl
+Second Sleeve x1 [58]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [58]: Purl
+Second Sleeve x1 [60]: With sage, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [60]: Purl
+Second Sleeve x1 [62]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [62]: Purl
+Second Sleeve x1 [64]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [64]: Purl
+Second Sleeve x1 [66]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [66]: Purl
+Second Sleeve x1 [68]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [68]: Purl
+Second Sleeve x1 [70]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [70]: Purl
+Second Sleeve x1 [72]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [72]: Purl
+Second Sleeve x1 [74]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [74]: Purl
+Second Sleeve x1 [76]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [76]: Purl
+Second Sleeve x1 [78]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [78]: Purl
+Second Sleeve x1 [80]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [80]: Purl
+Second Sleeve x1 [82]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [82]: Purl
+Second Sleeve x1 [84]: With rust, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [84]: Purl
+Second Sleeve x1 [86]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [86]: Purl
+Second Sleeve x1 [88]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [88]: Purl
+Second Sleeve x1 [90]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [90]: Purl
+Second Sleeve x4 [90]: Knit / Purl
+Second Sleeve x1 [90]: With oatmeal, knit
+Second Sleeve x11 [90]: Purl / Knit
+Second Sleeve x1 [90]: With sage, knit
+Second Sleeve x11 [90]: Purl / Knit
+Second Sleeve x1 [90]: With oatmeal, knit
+Second Sleeve x3 [90]: Purl / Knit
+Second Sleeve x1: Bind off all 90 stitches loosely.
+Neckband x1: Sew the shoulder seams, 34 stitches on each side.
+Neckband x1 [104]: With the smaller 16 in circular needle and the right side facing, start at the left shoulder seam. Pick up and knit 22 stitches down the left side of the neck, 22 across the front, 22 up the right side and 38 across the back. Join in the round and place a marker.
+Neckband x5 [104]: *K1, p1; repeat from * around
+Neckband x1: Bind off loosely in pattern.
+Finishing x1: Place a marker on each side edge of the front and the back, 8.25 in below the shoulder seam. Sew the bound-off top of each sleeve between the markers, with its middle at the shoulder seam. Sew each side and sleeve seam in one line from the hem to the cuff. Weave in the ends and block.
+
+== striped-drop-shoulder, 5X, DK, 2570 yd
+Finished chest 70.5 in, to fit a 62 in chest with 8.5 in of ease. 29.75 in from the hem to the shoulder
+  Oatmeal, color A: about 1,500 yd of DK weight yarn
+  Rust, color B: about 590 yd of DK weight yarn
+  Sage, color C: about 480 yd of DK weight yarn
+  US 6 · 4 mm circular needle, 32 in or longer, worked flat
+  US 4 · 3.5 mm needles for the ribbing
+  US 4 · 3.5 mm 16 in circular needle for the neckband
+  4 locking stitch markers, a stitch marker, tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Back x1 [194]: With the smaller needles, cast on 194 stitches in oatmeal.
+Back x18 [194]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Back x1: Change to the larger needles.
+Back x1 [194]: With rust, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With sage, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With rust, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With sage, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With rust, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With sage, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With rust, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With sage, knit
+Back x11 [194]: Purl / Knit
+Back x1 [194]: With oatmeal, knit
+Back x9 [194]: Purl / Knit
+Back x1: Bind off all 194 stitches.
+Front x1 [194]: With the smaller needles, cast on 194 stitches in oatmeal.
+Front x18 [194]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Front x1: Change to the larger needles.
+Front x1 [194]: With rust, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With sage, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With rust, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With sage, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With rust, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With sage, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With rust, knit
+Front x11 [194]: Purl / Knit
+Front x1 [194]: With oatmeal, knit
+Front x11 [194]: Purl / Knit
+Front · First Side x1 [82]: With sage, knit 82 stitches and turn, leaving the other 112 on the needle for the second side
+Front · First Side x1 [82]: Purl to the end
+Front · First Side x1 [81]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [81]: Purl to the end
+Front · First Side x1 [80]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [80]: Purl to the end
+Front · First Side x1 [79]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [79]: Purl to the end
+Front · First Side x1 [78]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [78]: Purl to the end
+Front · First Side x1 [77]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [77]: Purl to the end
+Front · First Side x1 [76]: With oatmeal, knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [76]: Purl to the end
+Front · First Side x1 [75]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [75]: Purl to the end
+Front · First Side x1 [74]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [74]: Purl to the end
+Front · First Side x1 [73]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [73]: Purl to the end
+Front · First Side x1 [72]: Knit to the last 3 stitches, k2tog, k1
+Front · First Side x1 [72]: Purl to the end
+Front · First Side x1: Bind off the 72 shoulder stitches.
+Front · Second Side x1 [112]: With the right side facing, join new yarn at the neck edge of the 112 stitches left.
+Front · Second Side x2 [82]: Bind off 30 stitches, knit to the end / Purl to the end
+Front · Second Side x1 [81]: With rust, k1, ssk, knit to the end
+Front · Second Side x1 [81]: Purl to the end
+Front · Second Side x1 [80]: K1, ssk, knit to the end
+Front · Second Side x1 [80]: Purl to the end
+Front · Second Side x1 [79]: K1, ssk, knit to the end
+Front · Second Side x1 [79]: Purl to the end
+Front · Second Side x1 [78]: K1, ssk, knit to the end
+Front · Second Side x1 [78]: Purl to the end
+Front · Second Side x1 [77]: K1, ssk, knit to the end
+Front · Second Side x1 [77]: Purl to the end
+Front · Second Side x1 [76]: K1, ssk, knit to the end
+Front · Second Side x1 [76]: Purl to the end
+Front · Second Side x1 [75]: With oatmeal, k1, ssk, knit to the end
+Front · Second Side x1 [75]: Purl to the end
+Front · Second Side x1 [74]: K1, ssk, knit to the end
+Front · Second Side x1 [74]: Purl to the end
+Front · Second Side x1 [73]: K1, ssk, knit to the end
+Front · Second Side x1 [73]: Purl to the end
+Front · Second Side x1 [72]: K1, ssk, knit to the end
+Front · Second Side x1 [72]: Purl to the end
+Front · Second Side x1: Bind off the 72 shoulder stitches.
+First Sleeve x1 [50]: With the smaller needles, cast on 50 stitches in oatmeal.
+First Sleeve x18 [50]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+First Sleeve x1: Change to the larger needles.
+First Sleeve x1 [52]: With rust, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [52]: Purl
+First Sleeve x1 [54]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [54]: Purl
+First Sleeve x1 [56]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [56]: Purl
+First Sleeve x1 [58]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [58]: Purl
+First Sleeve x1 [60]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [60]: Purl
+First Sleeve x1 [62]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [62]: Purl
+First Sleeve x1 [64]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [64]: Purl
+First Sleeve x1 [66]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [66]: Purl
+First Sleeve x1 [68]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [68]: Purl
+First Sleeve x1 [70]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [70]: Purl
+First Sleeve x1 [72]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [72]: Purl
+First Sleeve x1 [74]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [74]: Purl
+First Sleeve x1 [76]: With sage, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [76]: Purl
+First Sleeve x1 [78]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [78]: Purl
+First Sleeve x1 [80]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [80]: Purl
+First Sleeve x1 [82]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [82]: Purl
+First Sleeve x1 [84]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [84]: Purl
+First Sleeve x1 [86]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [86]: Purl
+First Sleeve x1 [88]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [88]: Purl
+First Sleeve x1 [90]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [90]: Purl
+First Sleeve x1 [92]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [92]: Purl
+First Sleeve x1 [94]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [94]: Purl
+First Sleeve x1 [96]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [96]: Purl
+First Sleeve x1 [98]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [98]: Purl
+First Sleeve x1 [100]: With rust, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [100]: Purl
+First Sleeve x1 [102]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [102]: Purl
+First Sleeve x1 [104]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [104]: Purl
+First Sleeve x1 [106]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [106]: Purl
+First Sleeve x1 [108]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [108]: Purl
+First Sleeve x1 [110]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [110]: Purl
+First Sleeve x1 [112]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [112]: Purl
+First Sleeve x1 [114]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [114]: Purl
+First Sleeve x1 [116]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [116]: Purl
+First Sleeve x1 [118]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [118]: Purl
+First Sleeve x1 [120]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [120]: Purl
+First Sleeve x1 [122]: K1, m1, knit to the last stitch, m1, k1
+First Sleeve x1 [122]: Purl
+First Sleeve x1: Bind off all 122 stitches loosely.
+Second Sleeve x1 [50]: With the smaller needles, cast on 50 stitches in oatmeal.
+Second Sleeve x18 [50]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Second Sleeve x1: Change to the larger needles.
+Second Sleeve x1 [52]: With rust, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [52]: Purl
+Second Sleeve x1 [54]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [54]: Purl
+Second Sleeve x1 [56]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [56]: Purl
+Second Sleeve x1 [58]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [58]: Purl
+Second Sleeve x1 [60]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [60]: Purl
+Second Sleeve x1 [62]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [62]: Purl
+Second Sleeve x1 [64]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [64]: Purl
+Second Sleeve x1 [66]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [66]: Purl
+Second Sleeve x1 [68]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [68]: Purl
+Second Sleeve x1 [70]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [70]: Purl
+Second Sleeve x1 [72]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [72]: Purl
+Second Sleeve x1 [74]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [74]: Purl
+Second Sleeve x1 [76]: With sage, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [76]: Purl
+Second Sleeve x1 [78]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [78]: Purl
+Second Sleeve x1 [80]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [80]: Purl
+Second Sleeve x1 [82]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [82]: Purl
+Second Sleeve x1 [84]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [84]: Purl
+Second Sleeve x1 [86]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [86]: Purl
+Second Sleeve x1 [88]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [88]: Purl
+Second Sleeve x1 [90]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [90]: Purl
+Second Sleeve x1 [92]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [92]: Purl
+Second Sleeve x1 [94]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [94]: Purl
+Second Sleeve x1 [96]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [96]: Purl
+Second Sleeve x1 [98]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [98]: Purl
+Second Sleeve x1 [100]: With rust, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [100]: Purl
+Second Sleeve x1 [102]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [102]: Purl
+Second Sleeve x1 [104]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [104]: Purl
+Second Sleeve x1 [106]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [106]: Purl
+Second Sleeve x1 [108]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [108]: Purl
+Second Sleeve x1 [110]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [110]: Purl
+Second Sleeve x1 [112]: With oatmeal, k1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [112]: Purl
+Second Sleeve x1 [114]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [114]: Purl
+Second Sleeve x1 [116]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [116]: Purl
+Second Sleeve x1 [118]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [118]: Purl
+Second Sleeve x1 [120]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [120]: Purl
+Second Sleeve x1 [122]: K1, m1, knit to the last stitch, m1, k1
+Second Sleeve x1 [122]: Purl
+Second Sleeve x1: Bind off all 122 stitches loosely.
+Neckband x1: Sew the shoulder seams, 72 stitches on each side.
+Neckband x1 [134]: With the smaller 16 in circular needle and the right side facing, start at the left shoulder seam. Pick up and knit 27 stitches down the left side of the neck, 30 across the front, 27 up the right side and 50 across the back. Join in the round and place a marker.
+Neckband x5 [134]: *K1, p1; repeat from * around
+Neckband x1: Bind off loosely in pattern.
+Finishing x1: Place a marker on each side edge of the front and the back, 11 in below the shoulder seam. Sew the bound-off top of each sleeve between the markers, with its middle at the shoulder seam. Sew each side and sleeve seam in one line from the hem to the cuff. Weave in the ends and block.

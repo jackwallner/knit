@@ -1,0 +1,37 @@
+ok   Bunting: 5 sizes x 8 weights
+
+== Bunting, Small, Worsted, 140 yd
+8 flags, each 4.75 in wide and 5 in long, on a cord with ties at both ends
+  About 140 yd of worsted weight yarn, cotton or wool, in one color or several
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Flag x1 [21]: Cast on 21 stitches.
+Flag x2 [21]: Knit
+Flag x1 [21]: K1, *yo, k2tog; repeat from * to the end. These eyelets carry the cord
+Flag x3 [21]: Knit
+Flag x36 [19 to 3]: K1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit / Knit / Knit
+Flag x1 [1]: Slip 1, k2tog, pass the slipped stitch over
+Flag x1: Cut the yarn and pull it through the last stitch. Weave in the ends.
+Flag x1: Make 7 more flags the same way, 8 in all.
+Cord x1: Cut two strands of yarn, each 234 in long. Knot them together at both ends, anchor one end and twist the other until the strands kink back on themselves.
+Cord x1: Fold the twisted strands in half and let them twist around each other into a cord about 78 in long. Knot the loose end.
+Finishing x1: Block the flags flat. Leaving 15 in of cord free at each end for tying, weave the cord in and out through the eyelets of each flag in turn, about 1 in apart.
+
+== Bunting, Large, Worsted, 470 yd
+11 flags, each 8.25 in wide and 8.5 in long, on a cord with ties at both ends
+  About 470 yd of worsted weight yarn, cotton or wool, in one color or several
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Flag x1 [37]: Cast on 37 stitches.
+Flag x2 [37]: Knit
+Flag x1 [37]: K1, *yo, k2tog; repeat from * to the end. These eyelets carry the cord
+Flag x3 [37]: Knit
+Flag x68 [35 to 3]: K1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit / Knit / Knit
+Flag x1 [1]: Slip 1, k2tog, pass the slipped stitch over
+Flag x1: Cut the yarn and pull it through the last stitch. Weave in the ends.
+Flag x1: Make 10 more flags the same way, 11 in all.
+Cord x1: Cut two strands of yarn, each 414 in long. Knot them together at both ends, anchor one end and twist the other until the strands kink back on themselves.
+Cord x1: Fold the twisted strands in half and let them twist around each other into a cord about 138 in long. Knot the loose end.
+Finishing x1: Block the flags flat. Leaving 15 in of cord free at each end for tying, weave the cord in and out through the eyelets of each flag in turn, about 1 in apart.

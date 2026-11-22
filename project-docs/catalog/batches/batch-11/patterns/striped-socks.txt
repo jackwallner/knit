@@ -1,0 +1,359 @@
+ok   striped-socks: Striped Socks, 6 sizes x 3 weights
+
+== striped-socks, Child, Fingering, 220 yd
+5.75 in around, to fit a 6.5 in foot. The foot is 6.75 in from the back of the heel to the tip of the toe, and the leg 4 in from the cuff to the heel
+  Navy, color A: about 150 yd of fingering weight yarn
+  Cream, color B: about 70 yd of fingering weight yarn
+  US 3 · 3.25 mm double-pointed needles, or a long circular for magic loop
+  2 stitch markers
+  Tapestry needle
+  Gauge: 28 stitches and 36 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Sock 1 · Cuff x1 [40]: Cast on 40 stitches in navy. Join in the round without twisting and place a marker.
+Sock 1 · Cuff x11 [40]: *K2, p2; repeat from * around
+Sock 1 · Leg x1 [40]: With cream, knit
+Sock 1 · Leg x4 [40]: Knit
+Sock 1 · Leg x1 [40]: With navy, knit
+Sock 1 · Leg x4 [40]: Knit
+Sock 1 · Leg x1 [40]: With cream, knit
+Sock 1 · Leg x4 [40]: Knit
+Sock 1 · Leg x1 [40]: With navy, knit
+Sock 1 · Leg x4 [40]: Knit
+Sock 1 · Leg x1 [40]: With cream, knit
+Sock 1 · Leg x4 [40]: Knit
+Sock 1 · Heel Flap x1: The heel flap is worked back and forth over the first 20 stitches of the round. Leave the other 20 on their needle for the instep.
+Sock 1 · Heel Flap x1 [20]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x5 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [20]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x3 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [20]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x5 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [20]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x3 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Turn x1 [19]: With navy, slip 1 purlwise, k9, ssk, k1, turn
+Sock 1 · Heel Turn x1 [18]: Slip 1 purlwise, p1, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [17]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [16]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [15]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [14]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [13]: With cream, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [12]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [11]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Sock 1 · Heel Turn x1 [10]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Sock 1 · Gusset x1: With the right side facing, knit across the 10 heel stitches, then pick up and knit 11 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Sock 1 · Gusset x1 [52]: Place a marker for the new start of the round. Knit the 20 instep stitches and place a marker. Pick up and knit 11 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Sock 1 · Gusset x1 [50]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [50]: Knit
+Sock 1 · Gusset x1 [48]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [48]: Knit
+Sock 1 · Gusset x1 [46]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [46]: With cream, knit
+Sock 1 · Gusset x1 [44]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [44]: Knit
+Sock 1 · Gusset x1 [42]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [42]: Knit
+Sock 1 · Gusset x1 [40]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [40]: Knit
+Sock 1 · Foot x3 [40]: Knit
+Sock 1 · Foot x1 [40]: With cream, knit
+Sock 1 · Foot x4 [40]: Knit
+Sock 1 · Foot x1 [40]: With navy, knit
+Sock 1 · Foot x4 [40]: Knit
+Sock 1 · Foot x1 [40]: With cream, knit
+Sock 1 · Foot x4 [40]: Knit
+Sock 1 · Foot x1 [40]: With navy, knit
+Sock 1 · Foot x4 [40]: Knit
+Sock 1 · Foot x1 [40]: With cream, knit
+Sock 1 · Foot x3 [40]: Knit
+Sock 1 · Toe x1 [36]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [36]: With navy, knit
+Sock 1 · Toe x1 [32]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [32]: Knit
+Sock 1 · Toe x1 [28]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [28]: Knit
+Sock 1 · Toe x1 [24]: With cream, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [24]: Knit
+Sock 1 · Toe x1 [20]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x2 [16 to 12]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1: Cut the yarn, leaving a 12 in tail. Put the 6 instep stitches on one needle and the 6 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.
+Sock 2 · Cuff x1 [40]: Cast on 40 stitches in navy. Join in the round without twisting and place a marker.
+Sock 2 · Cuff x11 [40]: *K2, p2; repeat from * around
+Sock 2 · Leg x1 [40]: With cream, knit
+Sock 2 · Leg x4 [40]: Knit
+Sock 2 · Leg x1 [40]: With navy, knit
+Sock 2 · Leg x4 [40]: Knit
+Sock 2 · Leg x1 [40]: With cream, knit
+Sock 2 · Leg x4 [40]: Knit
+Sock 2 · Leg x1 [40]: With navy, knit
+Sock 2 · Leg x4 [40]: Knit
+Sock 2 · Leg x1 [40]: With cream, knit
+Sock 2 · Leg x4 [40]: Knit
+Sock 2 · Heel Flap x1: The heel flap is worked back and forth over the first 20 stitches of the round. Leave the other 20 on their needle for the instep.
+Sock 2 · Heel Flap x1 [20]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x5 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [20]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x3 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [20]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x5 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [20]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x3 [20]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Turn x1 [19]: With navy, slip 1 purlwise, k9, ssk, k1, turn
+Sock 2 · Heel Turn x1 [18]: Slip 1 purlwise, p1, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [17]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [16]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [15]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [14]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [13]: With cream, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [12]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [11]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Sock 2 · Heel Turn x1 [10]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Sock 2 · Gusset x1: With the right side facing, knit across the 10 heel stitches, then pick up and knit 11 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Sock 2 · Gusset x1 [52]: Place a marker for the new start of the round. Knit the 20 instep stitches and place a marker. Pick up and knit 11 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Sock 2 · Gusset x1 [50]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [50]: Knit
+Sock 2 · Gusset x1 [48]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [48]: Knit
+Sock 2 · Gusset x1 [46]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [46]: With cream, knit
+Sock 2 · Gusset x1 [44]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [44]: Knit
+Sock 2 · Gusset x1 [42]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [42]: Knit
+Sock 2 · Gusset x1 [40]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [40]: Knit
+Sock 2 · Foot x3 [40]: Knit
+Sock 2 · Foot x1 [40]: With cream, knit
+Sock 2 · Foot x4 [40]: Knit
+Sock 2 · Foot x1 [40]: With navy, knit
+Sock 2 · Foot x4 [40]: Knit
+Sock 2 · Foot x1 [40]: With cream, knit
+Sock 2 · Foot x4 [40]: Knit
+Sock 2 · Foot x1 [40]: With navy, knit
+Sock 2 · Foot x4 [40]: Knit
+Sock 2 · Foot x1 [40]: With cream, knit
+Sock 2 · Foot x3 [40]: Knit
+Sock 2 · Toe x1 [36]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [36]: With navy, knit
+Sock 2 · Toe x1 [32]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [32]: Knit
+Sock 2 · Toe x1 [28]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [28]: Knit
+Sock 2 · Toe x1 [24]: With cream, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [24]: Knit
+Sock 2 · Toe x1 [20]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x2 [16 to 12]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1: Cut the yarn, leaving a 12 in tail. Put the 6 instep stitches on one needle and the 6 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.
+
+== striped-socks, Large, Fingering, 460 yd
+8 in around, to fit a 9 in foot. The foot is 10 in from the back of the heel to the tip of the toe, and the leg 7 in from the cuff to the heel
+  Navy, color A: about 300 yd of fingering weight yarn
+  Cream, color B: about 160 yd of fingering weight yarn
+  US 3 · 3.25 mm double-pointed needles, or a long circular for magic loop
+  2 stitch markers
+  Tapestry needle
+  Gauge: 28 stitches and 36 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Sock 1 · Cuff x1 [56]: Cast on 56 stitches in navy. Join in the round without twisting and place a marker.
+Sock 1 · Cuff x14 [56]: *K2, p2; repeat from * around
+Sock 1 · Leg x1 [56]: With cream, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With navy, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With cream, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With navy, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With cream, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With navy, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With cream, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With navy, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With cream, knit
+Sock 1 · Leg x4 [56]: Knit
+Sock 1 · Leg x1 [56]: With navy, knit
+Sock 1 · Leg x3 [56]: Knit
+Sock 1 · Heel Flap x1: The heel flap is worked back and forth over the first 28 stitches of the round. Leave the other 28 on their needle for the instep.
+Sock 1 · Heel Flap x2 [28]: *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn / Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn
+Sock 1 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x5 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x5 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Flap x1 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 1 · Heel Turn x1 [27]: Slip 1 purlwise, k15, ssk, k1, turn
+Sock 1 · Heel Turn x1 [26]: Slip 1 purlwise, p5, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [25]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [24]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [23]: With cream, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [22]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [21]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [20]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [19]: With navy, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 1 · Heel Turn x1 [18]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 1 · Heel Turn x1 [17]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Sock 1 · Heel Turn x1 [16]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Sock 1 · Gusset x1: With the right side facing, knit across the 16 heel stitches, then pick up and knit 15 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Sock 1 · Gusset x1 [74]: Place a marker for the new start of the round. Knit the 28 instep stitches and place a marker. Pick up and knit 15 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Sock 1 · Gusset x1 [72]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [72]: With cream, knit
+Sock 1 · Gusset x1 [70]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [70]: Knit
+Sock 1 · Gusset x1 [68]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [68]: Knit
+Sock 1 · Gusset x1 [66]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [66]: Knit
+Sock 1 · Gusset x1 [64]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [64]: Knit
+Sock 1 · Gusset x1 [62]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [62]: With cream, knit
+Sock 1 · Gusset x1 [60]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [60]: Knit
+Sock 1 · Gusset x1 [58]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [58]: Knit
+Sock 1 · Gusset x1 [56]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Gusset x1 [56]: Knit
+Sock 1 · Foot x3 [56]: Knit
+Sock 1 · Foot x1 [56]: With cream, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With navy, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With cream, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With navy, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With cream, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With navy, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With cream, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With navy, knit
+Sock 1 · Foot x4 [56]: Knit
+Sock 1 · Foot x1 [56]: With cream, knit
+Sock 1 · Toe x1 [52]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [52]: Knit
+Sock 1 · Toe x1 [48]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [48]: Knit
+Sock 1 · Toe x1 [44]: With navy, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [44]: Knit
+Sock 1 · Toe x1 [40]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [40]: Knit
+Sock 1 · Toe x1 [36]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [36]: With cream, knit
+Sock 1 · Toe x1 [32]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [32]: Knit
+Sock 1 · Toe x1 [28]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [24]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [20]: With navy, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1 [16]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 1 · Toe x1: Cut the yarn, leaving a 12 in tail. Put the 8 instep stitches on one needle and the 8 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.
+Sock 2 · Cuff x1 [56]: Cast on 56 stitches in navy. Join in the round without twisting and place a marker.
+Sock 2 · Cuff x14 [56]: *K2, p2; repeat from * around
+Sock 2 · Leg x1 [56]: With cream, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With navy, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With cream, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With navy, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With cream, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With navy, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With cream, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With navy, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With cream, knit
+Sock 2 · Leg x4 [56]: Knit
+Sock 2 · Leg x1 [56]: With navy, knit
+Sock 2 · Leg x3 [56]: Knit
+Sock 2 · Heel Flap x1: The heel flap is worked back and forth over the first 28 stitches of the round. Leave the other 28 on their needle for the instep.
+Sock 2 · Heel Flap x2 [28]: *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn / Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn
+Sock 2 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x5 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x5 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: With cream, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x3 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: With navy, *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Flap x1 [28]: Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn / *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn
+Sock 2 · Heel Turn x1 [27]: Slip 1 purlwise, k15, ssk, k1, turn
+Sock 2 · Heel Turn x1 [26]: Slip 1 purlwise, p5, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [25]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [24]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [23]: With cream, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [22]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [21]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [20]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [19]: With navy, slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Sock 2 · Heel Turn x1 [18]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Sock 2 · Heel Turn x1 [17]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Sock 2 · Heel Turn x1 [16]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Sock 2 · Gusset x1: With the right side facing, knit across the 16 heel stitches, then pick up and knit 15 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Sock 2 · Gusset x1 [74]: Place a marker for the new start of the round. Knit the 28 instep stitches and place a marker. Pick up and knit 15 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Sock 2 · Gusset x1 [72]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [72]: With cream, knit
+Sock 2 · Gusset x1 [70]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [70]: Knit
+Sock 2 · Gusset x1 [68]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [68]: Knit
+Sock 2 · Gusset x1 [66]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [66]: Knit
+Sock 2 · Gusset x1 [64]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [64]: Knit
+Sock 2 · Gusset x1 [62]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [62]: With cream, knit
+Sock 2 · Gusset x1 [60]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [60]: Knit
+Sock 2 · Gusset x1 [58]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [58]: Knit
+Sock 2 · Gusset x1 [56]: With navy, knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Gusset x1 [56]: Knit
+Sock 2 · Foot x3 [56]: Knit
+Sock 2 · Foot x1 [56]: With cream, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With navy, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With cream, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With navy, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With cream, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With navy, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With cream, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With navy, knit
+Sock 2 · Foot x4 [56]: Knit
+Sock 2 · Foot x1 [56]: With cream, knit
+Sock 2 · Toe x1 [52]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [52]: Knit
+Sock 2 · Toe x1 [48]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [48]: Knit
+Sock 2 · Toe x1 [44]: With navy, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [44]: Knit
+Sock 2 · Toe x1 [40]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [40]: Knit
+Sock 2 · Toe x1 [36]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [36]: With cream, knit
+Sock 2 · Toe x1 [32]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [32]: Knit
+Sock 2 · Toe x1 [28]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [24]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [20]: With navy, k1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1 [16]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Sock 2 · Toe x1: Cut the yarn, leaving a 12 in tail. Put the 8 instep stitches on one needle and the 8 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.

@@ -1,0 +1,65 @@
+ok   striped-cowl: Striped Cowl, 5 sizes x 8 weights
+
+== striped-cowl, Snug, Worsted, 200 yd
+22 in around, 8 in tall
+  Navy, color A: about 100 yd of worsted weight yarn
+  Cream, color B: about 60 yd of worsted weight yarn
+  Rust, color C: about 40 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [112]: Cast on 112 stitches in cream. Join in the round without twisting and place a marker.
+Cowl x5 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With rust, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With cream, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With rust, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With cream, knit
+Cowl x4 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x2 [112]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== striped-cowl, Infinity, Worsted, 520 yd
+52 in around, 9 in tall
+  Navy, color A: about 270 yd of worsted weight yarn
+  Cream, color B: about 130 yd of worsted weight yarn
+  Rust, color C: about 120 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [268]: Cast on 268 stitches in cream. Join in the round without twisting and place a marker.
+Cowl x5 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With navy, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With rust, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With navy, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With cream, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With navy, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With rust, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With navy, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With cream, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With navy, knit
+Cowl x4 [268]: *K2, p2; repeat from * around
+Cowl x1 [268]: With rust, knit
+Cowl x3 [268]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

@@ -1,0 +1,327 @@
+ok   striped-vest: Striped Vest, 11 sizes x 3 weights
+
+== striped-vest, XS, DK, 720 yd
+Finished chest 32.75 in, to fit a 30 in chest with 2.75 in of ease. 14 in from the hem to the underarm and 7.75 in from the underarm to the shoulder
+  Charcoal, color A: about 490 yd of DK weight yarn
+  Mustard, color B: about 230 yd of DK weight yarn
+  US 6 · 4 mm 24 in circular needle
+  US 4 · 3.5 mm circular needles, 16 in and 24 in, for the ribbing
+  2 stitch markers, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Hem x1 [180]: Cast on 180 stitches in charcoal with the smaller needle. Join in the round without twisting and place a marker at the side.
+Hem x18 [180]: *K2, p2; repeat from * around
+Body x1 [180]: With mustard, change to the larger needle and knit
+Body x6 [180]: Knit
+Body x1 [180]: With charcoal, knit
+Body x10 [180]: Knit
+Body x1 [180]: With mustard, knit
+Body x6 [180]: Knit
+Body x1 [180]: With charcoal, knit
+Body x10 [180]: Knit
+Body x1 [180]: With mustard, knit
+Body x6 [180]: Knit
+Body x1 [180]: With charcoal, knit
+Body x10 [180]: Knit
+Body x1 [180]: With mustard, knit
+Body x6 [180]: Knit
+Body x1 [180]: With charcoal, knit
+Body x10 [180]: Knit
+Body x1 [180]: With mustard, knit
+Body x6 [180]: Knit
+Body x1 [180]: With charcoal, knit
+Body x1: The first 90 stitches of the round are the front. Slip the other 90, the back, to waste yarn, and place a marker at the middle of the front: the V starts here. The front is worked first, back and forth.
+Front · First Side x2 [39]: Leave the other 45 stitches for the second side. Bind off 5 stitches, then knit to 3 stitches before the middle marker, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x4 [37 to 35]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [34]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [32]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [31]: With mustard, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [31]: Purl to the end, turn
+Front · First Side x2 [31]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [30]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [30]: Purl to the end, turn
+Front · First Side x1 [29]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [29]: Purl to the end, turn
+Front · First Side x1 [28]: With charcoal, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [28]: Purl to the end, turn
+Front · First Side x2 [28]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x4 [27 to 26]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [26]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [25]: With mustard, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [25]: Purl to the end, turn
+Front · First Side x1 [24]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [24]: Purl to the end, turn
+Front · First Side x1 [23]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [23]: Purl to the end, turn
+Front · First Side x2 [23]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [22]: With charcoal, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [22]: Purl to the end, turn
+Front · First Side x1 [21]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [21]: Purl to the end, turn
+Front · First Side x2 [21]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x4 [20 to 19]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [19]: With mustard, knit to the end, turn
+Front · First Side x7 [19]: Purl to the end, turn / Knit to the end, turn
+Front · First Side x1: Bind off the 19 shoulder stitches.
+Front · Second Side x1 [45]: With the right side facing, join new yarn at the middle marker.
+Front · Second Side x1 [44]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [39]: Bind off 5 stitches, purl to the end, turn
+Front · Second Side x4 [37 to 35]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [34]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [32]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x1 [31]: With mustard, k1, ssk, knit to the end, turn
+Front · Second Side x1 [31]: Purl to the end, turn
+Front · Second Side x2 [31]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [30]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [30]: Purl to the end, turn
+Front · Second Side x1 [29]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [29]: Purl to the end, turn
+Front · Second Side x1 [28]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [28]: Purl to the end, turn
+Front · Second Side x2 [28]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x4 [27 to 26]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x2 [26]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [25]: With mustard, k1, ssk, knit to the end, turn
+Front · Second Side x1 [25]: Purl to the end, turn
+Front · Second Side x1 [24]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [24]: Purl to the end, turn
+Front · Second Side x1 [23]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [23]: Purl to the end, turn
+Front · Second Side x2 [23]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [22]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [22]: Purl to the end, turn
+Front · Second Side x1 [21]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [21]: Purl to the end, turn
+Front · Second Side x2 [21]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x4 [20 to 19]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [19]: With mustard, knit to the end, turn
+Front · Second Side x7 [19]: Purl to the end, turn / Knit to the end, turn
+Front · Second Side x1: Bind off the 19 shoulder stitches.
+Back x1 [90]: Return the 90 back stitches to the needle. With the right side facing, join new yarn at the underarm.
+Back x1 [85]: With charcoal, bind off 5 stitches, knit to the end, turn
+Back x1 [80]: Bind off 5 stitches, purl to the end, turn
+Back x8 [78 to 72]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Back x1 [72]: With mustard, knit to the end, turn
+Back x7 [72]: Purl to the end, turn / Knit to the end, turn
+Back x1 [72]: With charcoal, knit to the end, turn
+Back x9 [72]: Purl to the end, turn / Knit to the end, turn
+Back x1 [72]: With mustard, knit to the end, turn
+Back x7 [72]: Purl to the end, turn / Knit to the end, turn
+Back x1 [72]: With charcoal, knit to the end, turn
+Back x9 [72]: Purl to the end, turn / Knit to the end, turn
+Back x1 [72]: With mustard, knit to the end, turn
+Back x7 [72]: Purl to the end, turn / Knit to the end, turn
+Back x1: Bind off all 72 stitches.
+Finishing x1: Sew the shoulders: the first and last 19 stitches of the back to the front shoulders. The 34 stitches between them are the back neck.
+Neck Edging x1 [120]: With the smaller 16 in needle and the right side facing, start at the left shoulder seam. Pick up and knit 42 stitches down the left side of the V, 1 at its point, 42 up the right side and 35 across the back neck. Join in the round and place a marker. Mark the stitch at the point.
+Neck Edging x1 [118]: With charcoal, knit
+Neck Edging x4 [116 to 110]: Knit the knits and purl the purls to 1 stitch before the marked stitch. Slip 2 together knitwise, k1, pass the 2 slipped stitches over. Knit the knits and purl the purls to the end
+Neck Edging x1: Bind off loosely in pattern.
+First Armhole x1 [86]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 86 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+First Armhole x5 [86]: *K1, p1; repeat from * around
+First Armhole x1: Bind off loosely in pattern.
+Second Armhole x1 [86]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 86 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+Second Armhole x5 [86]: *K1, p1; repeat from * around
+Second Armhole x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block to the finished measurements.
+
+== striped-vest, 5X, DK, 1840 yd
+Finished chest 64.75 in, to fit a 62 in chest with 2.75 in of ease. 17.5 in from the hem to the underarm and 11.75 in from the underarm to the shoulder
+  Charcoal, color A: about 1,330 yd of DK weight yarn
+  Mustard, color B: about 510 yd of DK weight yarn
+  US 6 · 4 mm 40 in circular needle
+  US 4 · 3.5 mm circular needles, 16 in and 32 in, for the ribbing
+  2 stitch markers, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Hem x1 [356]: Cast on 356 stitches in charcoal with the smaller needle. Join in the round without twisting and place a marker at the side.
+Hem x18 [356]: *K2, p2; repeat from * around
+Body x1 [356]: With mustard, change to the larger needle and knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x10 [356]: Knit
+Body x1 [356]: With mustard, knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x10 [356]: Knit
+Body x1 [356]: With mustard, knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x10 [356]: Knit
+Body x1 [356]: With mustard, knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x10 [356]: Knit
+Body x1 [356]: With mustard, knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x10 [356]: Knit
+Body x1 [356]: With mustard, knit
+Body x6 [356]: Knit
+Body x1 [356]: With charcoal, knit
+Body x7 [356]: Knit
+Body x1: The first 178 stitches of the round are the front. Slip the other 178, the back, to waste yarn, and place a marker at the middle of the front: the V starts here. The front is worked first, back and forth.
+Front · First Side x2 [67]: Leave the other 89 stitches for the second side. Bind off 21 stitches, then knit to 3 stitches before the middle marker, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [65]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [64]: With mustard, k1, ssk, knit to the end, turn
+Front · First Side x1 [64]: Purl to the end, turn
+Front · First Side x2 [62]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [61]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [59]: With charcoal, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [59]: Purl to the end, turn
+Front · First Side x1 [57]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [57]: Purl to the end, turn
+Front · First Side x2 [56]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [54]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [53]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [51]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [50]: With mustard, k1, ssk, knit to the end, turn
+Front · First Side x1 [50]: Purl to the end, turn
+Front · First Side x4 [48 to 46]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [45]: With charcoal, k1, ssk, knit to the end, turn
+Front · First Side x1 [45]: Purl to the end, turn
+Front · First Side x2 [43]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [42]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [40]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [39]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [37]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [37]: Purl to the end, turn
+Front · First Side x1 [35]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [35]: Purl to the end, turn
+Front · First Side x2 [34]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [33]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x1 [33]: With charcoal, knit to the end, turn
+Front · First Side x1 [33]: Purl to the end, turn / Knit to the end, turn
+Front · First Side x4 [32 to 31]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [31]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [30]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [30]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [29]: With mustard, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [29]: Purl to the end, turn
+Front · First Side x2 [29]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [28]: Knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [28]: Purl to the end, turn
+Front · First Side x1 [27]: With charcoal, knit to the last 3 stitches, k2tog, k1, turn
+Front · First Side x1 [27]: Purl to the end, turn
+Front · First Side x2 [27]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [26]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [26]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x2 [25]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · First Side x2 [25]: Knit to the end, turn / Purl to the end, turn
+Front · First Side x1 [25]: With mustard, knit to the end, turn
+Front · First Side x5 [25]: Purl to the end, turn / Knit to the end, turn
+Front · First Side x1: Bind off the 25 shoulder stitches.
+Front · Second Side x1 [89]: With the right side facing, join new yarn at the middle marker.
+Front · Second Side x1 [88]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [67]: Bind off 21 stitches, purl to the end, turn
+Front · Second Side x2 [65]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [64]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [62]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [61]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x1 [59]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · Second Side x1 [59]: Purl to the end, turn
+Front · Second Side x1 [57]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · Second Side x1 [57]: Purl to the end, turn
+Front · Second Side x2 [56]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [54]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x1 [53]: With charcoal, knit to the last 3 stitches, k2tog, k1, turn
+Front · Second Side x1 [53]: Purl to the end, turn
+Front · Second Side x2 [51]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [50]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x4 [48 to 46]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [45]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x1 [43]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Front · Second Side x1 [43]: Purl to the end, turn
+Front · Second Side x2 [42]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [40]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x1 [39]: With charcoal, knit to the last 3 stitches, k2tog, k1, turn
+Front · Second Side x1 [39]: Purl to the end, turn
+Front · Second Side x4 [37 to 35]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [34]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Side x2 [33]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x2 [33]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [32]: With mustard, k1, ssk, knit to the end, turn
+Front · Second Side x1 [32]: Purl to the end, turn
+Front · Second Side x1 [31]: K1, ssk, knit to the end, turn
+Front · Second Side x1 [31]: Purl to the end, turn
+Front · Second Side x2 [31]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [30]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [30]: Purl to the end, turn
+Front · Second Side x2 [30]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x2 [29]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x2 [29]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x4 [28 to 27]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [27]: With mustard, knit to the end, turn
+Front · Second Side x1 [27]: Purl to the end, turn / Knit to the end, turn
+Front · Second Side x2 [26]: K1, ssk, knit to the end, turn / Purl to the end, turn
+Front · Second Side x2 [26]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1 [25]: With charcoal, k1, ssk, knit to the end, turn
+Front · Second Side x1 [25]: Purl to the end, turn
+Front · Second Side x8 [25]: Knit to the end, turn / Purl to the end, turn
+Front · Second Side x1: Bind off the 25 shoulder stitches.
+Back x1 [178]: Return the 178 back stitches to the needle. With the right side facing, join new yarn at the underarm.
+Back x1 [157]: Bind off 21 stitches, knit to the end, turn
+Back x1 [136]: Bind off 21 stitches, purl to the end, turn
+Back x1 [134]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [134]: Purl to the end, turn
+Back x1 [132]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [132]: Purl to the end, turn
+Back x1 [130]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [130]: Purl to the end, turn
+Back x1 [128]: With charcoal, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [128]: Purl to the end, turn
+Back x1 [126]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [126]: Purl to the end, turn
+Back x1 [124]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [124]: Purl to the end, turn
+Back x1 [122]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [122]: Purl to the end, turn
+Back x1 [120]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [120]: Purl to the end, turn
+Back x1 [118]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [118]: Purl to the end, turn
+Back x1 [116]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [116]: Purl to the end, turn
+Back x1 [114]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [114]: Purl to the end, turn
+Back x1 [112]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [112]: Purl to the end, turn
+Back x1 [110]: With charcoal, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [110]: Purl to the end, turn
+Back x1 [108]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [108]: Purl to the end, turn
+Back x1 [106]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [106]: Purl to the end, turn
+Back x1 [104]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [104]: Purl to the end, turn
+Back x1 [102]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [102]: Purl to the end, turn
+Back x1 [100]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [100]: Purl to the end, turn
+Back x1 [98]: With mustard, k1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [98]: Purl to the end, turn
+Back x1 [96]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [96]: Purl to the end, turn
+Back x1 [94]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn
+Back x1 [94]: Purl to the end, turn
+Back x1 [94]: With charcoal, knit to the end, turn
+Back x11 [94]: Purl to the end, turn / Knit to the end, turn
+Back x1 [94]: With mustard, knit to the end, turn
+Back x5 [94]: Purl to the end, turn / Knit to the end, turn
+Back x1 [94]: With charcoal, knit to the end, turn
+Back x11 [94]: Purl to the end, turn / Knit to the end, turn
+Back x1 [94]: With mustard, knit to the end, turn
+Back x5 [94]: Purl to the end, turn / Knit to the end, turn
+Back x1 [94]: With charcoal, knit to the end, turn
+Back x1 [94]: Purl to the end, turn / Knit to the end, turn
+Back x1: Bind off all 94 stitches.
+Finishing x1: Sew the shoulders: the first and last 25 stitches of the back to the front shoulders. The 44 stitches between them are the back neck.
+Neck Edging x1 [170]: With the smaller 16 in needle and the right side facing, start at the left shoulder seam. Pick up and knit 62 stitches down the left side of the V, 1 at its point, 62 up the right side and 45 across the back neck. Join in the round and place a marker. Mark the stitch at the point.
+Neck Edging x1 [168]: *K1, p1; repeat from * to 1 stitch before the marked stitch, ending k1. Slip 2 together knitwise, k1, pass the 2 slipped stitches over. *K1, p1; repeat from * to the end
+Neck Edging x4 [166 to 160]: Knit the knits and purl the purls to 1 stitch before the marked stitch. Slip 2 together knitwise, k1, pass the 2 slipped stitches over. Knit the knits and purl the purls to the end
+Neck Edging x1: Bind off loosely in pattern.
+First Armhole x1 [158]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 158 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+First Armhole x5 [158]: *K1, p1; repeat from * around
+First Armhole x1: Bind off loosely in pattern.
+Second Armhole x1 [158]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 158 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+Second Armhole x5 [158]: *K1, p1; repeat from * around
+Second Armhole x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block to the finished measurements.

@@ -1,0 +1,609 @@
+ok   striped-raglan: Striped Raglan, 11 sizes x 3 weights
+
+== striped-raglan, XS, Worsted, 960 yd
+Finished chest 33 in, to fit a 30 in chest with 3 in of ease. Body 14 in and sleeve 17 in from the underarm
+  Navy, color A: about 530 yd of worsted weight yarn
+  Cream, color B: about 430 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needles, 16 in and 32 in
+  US 5 · 3.75 mm circular needles, 16 in and 32 in, for the ribbing
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  4 stitch markers, waste yarn, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [80]: With the smaller 16 in needle, loosely cast on 80 stitches in navy, so the neck stretches over the head. Join in the round without twisting and place a marker.
+Neckband x6 [80]: *K1, p1; repeat from * around
+Back Neck x1 [80]: With cream, change to the larger needle. K10 sleeve, place marker, k30 front, place marker, k10 sleeve, place marker, k30 back
+Back Neck x1 [80]: Short row: knit to the marker before the front, turn
+Back Neck x1 [80]: Make a double stitch, then purl to the marker on the other side of the front, turn
+Back Neck x4 [80]: Make a double stitch, knit to the double stitch, knit it as one stitch, k2, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p2, turn
+Back Neck x1 [80]: With navy, make a double stitch, then knit to the start of the round
+Back Neck x1 [80]: Knit 1 round, knitting each double stitch as one stitch
+Yoke x1 [88]: *Inc across; repeat from * 3 more times
+Yoke x1 [88]: Knit
+Yoke x1 [96]: *Inc across; repeat from * 3 more times
+Yoke x1 [96]: With cream, knit
+Yoke x1 [104]: *Inc across; repeat from * 3 more times
+Yoke x1 [104]: Knit
+Yoke x2 [112]: *Inc across; repeat from * 3 more times. Move the stitches to the 32 in needle / Knit
+Yoke x1 [120]: *Inc across; repeat from * 3 more times
+Yoke x1 [120]: With navy, knit
+Yoke x1 [128]: *Inc across; repeat from * 3 more times
+Yoke x1 [128]: Knit
+Yoke x1 [136]: *Inc across; repeat from * 3 more times
+Yoke x1 [136]: Knit
+Yoke x1 [144]: *Inc across; repeat from * 3 more times
+Yoke x1 [144]: With cream, knit
+Yoke x1 [152]: *Inc across; repeat from * 3 more times
+Yoke x1 [152]: Knit
+Yoke x1 [160]: *Inc across; repeat from * 3 more times
+Yoke x1 [160]: Knit
+Yoke x1 [168]: *Inc across; repeat from * 3 more times
+Yoke x1 [168]: With navy, knit
+Yoke x1 [176]: *Inc across; repeat from * 3 more times
+Yoke x1 [176]: Knit
+Yoke x1 [184]: *Inc across; repeat from * 3 more times
+Yoke x1 [184]: Knit
+Yoke x1 [192]: *Inc across; repeat from * 3 more times
+Yoke x1 [192]: With cream, knit
+Yoke x1 [200]: *Inc across; repeat from * 3 more times
+Yoke x1 [200]: Knit
+Yoke x1 [208]: *Inc across; repeat from * 3 more times
+Yoke x1 [208]: Knit
+Yoke x1 [216]: *Inc across; repeat from * 3 more times
+Yoke x1 [216]: With navy, knit
+Yoke x5 [216]: Knit
+Yoke x1 [216]: With cream, knit
+Yoke x5 [216]: Knit
+Yoke x1 [216]: With navy, knit
+Divide x1: Slip the 44 stitches of the first sleeve to waste yarn, removing the markers on each side.
+Divide x1: Under the arm, cast on 10 stitches with the backward loop method. Knit the 64 front stitches.
+Divide x1: Slip the 44 stitches of the second sleeve to waste yarn, removing the markers on each side.
+Divide x1 [148]: Under the arm, cast on 10 stitches. Knit the 64 back stitches. Place a marker here for the new start of the round
+Body x4 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x5 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x5 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x5 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x5 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x5 [148]: Knit
+Body x1 [148]: With cream, knit
+Body x5 [148]: Knit
+Body x1 [148]: With navy, knit
+Body x1 [148]: Knit
+Hem x1 [148]: Change to the smaller needle. *K1, p1; repeat from * around
+Hem x11 [148]: *K1, p1; repeat from * around
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [44]: Return the 44 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [54]: Pick up and knit 5 stitches, knit the 44 sleeve stitches, then pick up and knit 5 more. Place a marker for the start of the round.
+First Sleeve x4 [54]: Knit
+First Sleeve x1 [54]: With cream, knit
+First Sleeve x4 [54]: Knit
+First Sleeve x1 [52]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [52]: With navy, knit
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: With cream, knit
+First Sleeve x1 [50]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [50]: With navy, knit
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [50]: Knit
+First Sleeve x1 [48]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [48]: With cream, knit
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [48]: Knit
+First Sleeve x1 [46]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [46]: With navy, knit
+First Sleeve x1 [46]: Knit
+First Sleeve x1 [46]: Knit
+First Sleeve x1 [46]: Knit
+First Sleeve x1 [46]: Knit
+First Sleeve x1 [46]: Knit
+First Sleeve x1 [46]: With cream, knit
+First Sleeve x1 [44]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [44]: With navy, knit
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [44]: Knit
+First Sleeve x1 [42]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [42]: With cream, knit
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [42]: Knit
+First Sleeve x1 [40]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [40]: With navy, knit
+First Sleeve x1 [40]: Knit
+First Sleeve x1 [40]: Knit
+First Sleeve x1 [40]: Knit
+First Sleeve x1 [40]: Knit
+First Sleeve x1 [40]: Knit
+First Sleeve x1 [40]: With cream, knit
+First Sleeve x1 [38]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [38]: With navy, knit
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [38]: Knit
+First Sleeve x1 [36]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [36]: With cream, knit
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [36]: Knit
+First Sleeve x1 [34]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [34]: With navy, knit
+First Sleeve x1 [34]: Knit
+First Sleeve x1 [34]: Knit
+First Sleeve x1 [34]: Knit
+First Sleeve x1 [34]: Knit
+First Sleeve x1 [34]: Knit
+First Sleeve x1 [34]: With cream, knit
+First Sleeve x1 [34]: Knit
+First Sleeve · Cuff x1 [34]: With navy, knit
+First Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [44]: Return the 44 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [54]: Pick up and knit 5 stitches, knit the 44 sleeve stitches, then pick up and knit 5 more. Place a marker for the start of the round.
+Second Sleeve x1 [54]: With cream, knit
+Second Sleeve x3 [54]: Knit
+Second Sleeve x1 [54]: With navy, knit
+Second Sleeve x4 [54]: Knit
+Second Sleeve x1 [52]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [52]: With cream, knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: With navy, knit
+Second Sleeve x1 [50]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [50]: With cream, knit
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [50]: Knit
+Second Sleeve x1 [48]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [48]: With navy, knit
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [48]: Knit
+Second Sleeve x1 [46]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [46]: With cream, knit
+Second Sleeve x1 [46]: Knit
+Second Sleeve x1 [46]: Knit
+Second Sleeve x1 [46]: Knit
+Second Sleeve x1 [46]: Knit
+Second Sleeve x1 [46]: Knit
+Second Sleeve x1 [46]: With navy, knit
+Second Sleeve x1 [44]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [44]: With cream, knit
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [44]: Knit
+Second Sleeve x1 [42]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [42]: With navy, knit
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [42]: Knit
+Second Sleeve x1 [40]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [40]: With cream, knit
+Second Sleeve x1 [40]: Knit
+Second Sleeve x1 [40]: Knit
+Second Sleeve x1 [40]: Knit
+Second Sleeve x1 [40]: Knit
+Second Sleeve x1 [40]: Knit
+Second Sleeve x1 [40]: With navy, knit
+Second Sleeve x1 [38]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [38]: With cream, knit
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [38]: Knit
+Second Sleeve x1 [36]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [36]: With navy, knit
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [36]: Knit
+Second Sleeve x1 [34]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [34]: With cream, knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve x1 [34]: With navy, knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve · Cuff x1 [34]: Change to the smaller needles. *K1, p1; repeat from * around
+Second Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.
+
+== striped-raglan, 5X, Worsted, 2380 yd
+Finished chest 65 in, to fit a 62 in chest with 3 in of ease. Body 17.5 in and sleeve 20 in from the underarm
+  Navy, color A: about 1,380 yd of worsted weight yarn
+  Cream, color B: about 1,000 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needles, 16 in and 32 in
+  US 5 · 3.75 mm circular needles, 16 in and 32 in, for the ribbing
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  4 stitch markers, waste yarn, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [96]: With the smaller 16 in needle, loosely cast on 96 stitches in navy, so the neck stretches over the head. Join in the round without twisting and place a marker.
+Neckband x6 [96]: *K1, p1; repeat from * around
+Back Neck x1 [96]: With cream, change to the larger needle. K10 sleeve, place marker, k38 front, place marker, k10 sleeve, place marker, k38 back
+Back Neck x1 [96]: Short row: knit to the marker before the front, turn
+Back Neck x1 [96]: Make a double stitch, then purl to the marker on the other side of the front, turn
+Back Neck x4 [96]: Make a double stitch, knit to the double stitch, knit it as one stitch, k2, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p2, turn
+Back Neck x1 [96]: With navy, make a double stitch, then knit to the start of the round
+Back Neck x1 [96]: Knit 1 round, knitting each double stitch as one stitch
+Yoke x1 [104]: *Inc across; repeat from * 3 more times
+Yoke x1 [108]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [116]: *Inc across; repeat from * 3 more times. Move the stitches to the 32 in needle
+Yoke x1 [120]: With cream, knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [128]: *Inc across; repeat from * 3 more times
+Yoke x1 [132]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [140]: *Inc across; repeat from * 3 more times
+Yoke x1 [144]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [152]: *Inc across; repeat from * 3 more times
+Yoke x1 [156]: With navy, knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [164]: *Inc across; repeat from * 3 more times
+Yoke x1 [168]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [176]: *Inc across; repeat from * 3 more times
+Yoke x1 [180]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [188]: *Inc across; repeat from * 3 more times
+Yoke x1 [192]: With cream, knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [200]: *Inc across; repeat from * 3 more times
+Yoke x1 [204]: Knit the sleeve. Inc across the front. Knit the sleeve. Inc across the back
+Yoke x1 [212]: *Inc across; repeat from * 3 more times
+Yoke x1 [212]: Knit
+Yoke x1 [220]: *Inc across; repeat from * 3 more times
+Yoke x1 [220]: With navy, knit
+Yoke x1 [228]: *Inc across; repeat from * 3 more times
+Yoke x1 [228]: Knit
+Yoke x1 [236]: *Inc across; repeat from * 3 more times
+Yoke x1 [236]: Knit
+Yoke x1 [244]: *Inc across; repeat from * 3 more times
+Yoke x1 [244]: With cream, knit
+Yoke x1 [252]: *Inc across; repeat from * 3 more times
+Yoke x1 [252]: Knit
+Yoke x1 [260]: *Inc across; repeat from * 3 more times
+Yoke x1 [260]: Knit
+Yoke x1 [268]: *Inc across; repeat from * 3 more times
+Yoke x1 [268]: With navy, knit
+Yoke x1 [276]: *Inc across; repeat from * 3 more times
+Yoke x1 [276]: Knit
+Yoke x1 [284]: *Inc across; repeat from * 3 more times
+Yoke x1 [284]: Knit
+Yoke x1 [292]: *Inc across; repeat from * 3 more times
+Yoke x1 [292]: With cream, knit
+Yoke x1 [300]: *Inc across; repeat from * 3 more times
+Yoke x1 [300]: Knit
+Yoke x1 [308]: *Inc across; repeat from * 3 more times
+Yoke x1 [308]: Knit
+Yoke x1 [316]: *Inc across; repeat from * 3 more times
+Yoke x1 [316]: With navy, knit
+Yoke x1 [324]: *Inc across; repeat from * 3 more times
+Yoke x1 [324]: Knit
+Yoke x1 [332]: *Inc across; repeat from * 3 more times
+Yoke x1 [332]: Knit
+Yoke x1 [340]: *Inc across; repeat from * 3 more times
+Yoke x1 [340]: With cream, knit
+Yoke x1 [348]: *Inc across; repeat from * 3 more times
+Yoke x1 [348]: Knit
+Yoke x1 [356]: *Inc across; repeat from * 3 more times
+Yoke x1 [356]: Knit
+Yoke x1 [364]: *Inc across; repeat from * 3 more times
+Yoke x1 [364]: With navy, knit
+Yoke x1 [372]: *Inc across; repeat from * 3 more times
+Yoke x1 [372]: Knit
+Yoke x1 [380]: *Inc across; repeat from * 3 more times
+Yoke x1 [380]: Knit
+Yoke x1 [388]: *Inc across; repeat from * 3 more times
+Yoke x1 [388]: With cream, knit
+Yoke x1 [396]: *Inc across; repeat from * 3 more times
+Yoke x1 [396]: Knit
+Yoke x1 [404]: *Inc across; repeat from * 3 more times
+Yoke x1 [404]: Knit
+Yoke x1 [412]: *Inc across; repeat from * 3 more times
+Yoke x1 [412]: With navy, knit
+Divide x1: Slip the 80 stitches of the first sleeve to waste yarn, removing the markers on each side.
+Divide x1: Under the arm, cast on 20 stitches with the backward loop method. Knit the 126 front stitches.
+Divide x1: Slip the 80 stitches of the second sleeve to waste yarn, removing the markers on each side.
+Divide x1 [292]: Under the arm, cast on 20 stitches. Knit the 126 back stitches. Place a marker here for the new start of the round
+Body x4 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x5 [292]: Knit
+Body x1 [292]: With navy, knit
+Body x5 [292]: Knit
+Body x1 [292]: With cream, knit
+Body x4 [292]: Knit
+Hem x1 [292]: With navy, knit
+Hem x11 [292]: *K1, p1; repeat from * around
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [80]: Return the 80 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [100]: Pick up and knit 10 stitches, knit the 80 sleeve stitches, then pick up and knit 10 more. Place a marker for the start of the round.
+First Sleeve x1 [100]: With cream, knit
+First Sleeve x1 [100]: With navy, knit
+First Sleeve x5 [100]: Knit
+First Sleeve x1 [100]: With cream, knit
+First Sleeve x1 [100]: Knit
+First Sleeve x1 [98]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [98]: Knit
+First Sleeve x1 [98]: Knit
+First Sleeve x1 [98]: Knit
+First Sleeve x1 [96]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [96]: Knit
+First Sleeve x1 [96]: Knit
+First Sleeve x1 [96]: Knit
+First Sleeve x1 [94]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [94]: Knit
+First Sleeve x1 [94]: With cream, knit
+First Sleeve x1 [94]: Knit
+First Sleeve x1 [92]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [92]: Knit
+First Sleeve x1 [92]: Knit
+First Sleeve x1 [92]: Knit
+First Sleeve x1 [90]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [90]: Knit
+First Sleeve x1 [90]: Knit
+First Sleeve x1 [90]: Knit
+First Sleeve x1 [88]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [88]: Knit
+First Sleeve x1 [88]: With cream, knit
+First Sleeve x1 [88]: Knit
+First Sleeve x1 [86]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [86]: Knit
+First Sleeve x1 [86]: Knit
+First Sleeve x1 [86]: Knit
+First Sleeve x1 [84]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [84]: Knit
+First Sleeve x1 [84]: Knit
+First Sleeve x1 [84]: Knit
+First Sleeve x1 [82]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [82]: Knit
+First Sleeve x1 [82]: With cream, knit
+First Sleeve x1 [82]: Knit
+First Sleeve x1 [80]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [80]: Knit
+First Sleeve x1 [80]: Knit
+First Sleeve x1 [80]: Knit
+First Sleeve x1 [78]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [78]: Knit
+First Sleeve x1 [78]: Knit
+First Sleeve x1 [78]: Knit
+First Sleeve x1 [76]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [76]: Knit
+First Sleeve x1 [76]: With cream, knit
+First Sleeve x1 [76]: Knit
+First Sleeve x1 [74]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [74]: Knit
+First Sleeve x1 [74]: Knit
+First Sleeve x1 [74]: Knit
+First Sleeve x1 [72]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [72]: Knit
+First Sleeve x1 [72]: Knit
+First Sleeve x1 [72]: Knit
+First Sleeve x1 [70]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [70]: Knit
+First Sleeve x1 [70]: With cream, knit
+First Sleeve x1 [70]: Knit
+First Sleeve x1 [68]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [68]: Knit
+First Sleeve x1 [68]: Knit
+First Sleeve x1 [68]: Knit
+First Sleeve x1 [66]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [66]: Knit
+First Sleeve x1 [66]: Knit
+First Sleeve x1 [66]: Knit
+First Sleeve x1 [64]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [64]: Knit
+First Sleeve x1 [64]: With cream, knit
+First Sleeve x1 [64]: Knit
+First Sleeve x1 [62]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [62]: Knit
+First Sleeve x1 [62]: Knit
+First Sleeve x1 [62]: Knit
+First Sleeve x1 [60]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [60]: Knit
+First Sleeve x1 [60]: Knit
+First Sleeve x1 [60]: Knit
+First Sleeve x1 [58]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [58]: Knit
+First Sleeve x1 [58]: With cream, knit
+First Sleeve x1 [58]: Knit
+First Sleeve x1 [56]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [56]: Knit
+First Sleeve x1 [56]: Knit
+First Sleeve x1 [56]: Knit
+First Sleeve x1 [54]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [54]: Knit
+First Sleeve x1 [54]: Knit
+First Sleeve x1 [54]: Knit
+First Sleeve x1 [52]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+First Sleeve x1 [52]: Knit
+First Sleeve x1 [52]: With cream, knit
+First Sleeve x1 [52]: Knit
+First Sleeve x3 [52]: Knit
+First Sleeve · Cuff x1 [52]: With navy, knit
+First Sleeve · Cuff x11 [52]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [80]: Return the 80 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [100]: Pick up and knit 10 stitches, knit the 80 sleeve stitches, then pick up and knit 10 more. Place a marker for the start of the round.
+Second Sleeve x1 [100]: With cream, knit
+Second Sleeve x1 [100]: With navy, knit
+Second Sleeve x5 [100]: Knit
+Second Sleeve x1 [100]: With cream, knit
+Second Sleeve x1 [100]: Knit
+Second Sleeve x1 [98]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [98]: Knit
+Second Sleeve x1 [98]: Knit
+Second Sleeve x1 [98]: Knit
+Second Sleeve x1 [96]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [96]: Knit
+Second Sleeve x1 [96]: Knit
+Second Sleeve x1 [96]: Knit
+Second Sleeve x1 [94]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [94]: Knit
+Second Sleeve x1 [94]: With cream, knit
+Second Sleeve x1 [94]: Knit
+Second Sleeve x1 [92]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [92]: Knit
+Second Sleeve x1 [92]: Knit
+Second Sleeve x1 [92]: Knit
+Second Sleeve x1 [90]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [90]: Knit
+Second Sleeve x1 [90]: Knit
+Second Sleeve x1 [90]: Knit
+Second Sleeve x1 [88]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [88]: Knit
+Second Sleeve x1 [88]: With cream, knit
+Second Sleeve x1 [88]: Knit
+Second Sleeve x1 [86]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [86]: Knit
+Second Sleeve x1 [86]: Knit
+Second Sleeve x1 [86]: Knit
+Second Sleeve x1 [84]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [84]: Knit
+Second Sleeve x1 [84]: Knit
+Second Sleeve x1 [84]: Knit
+Second Sleeve x1 [82]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [82]: Knit
+Second Sleeve x1 [82]: With cream, knit
+Second Sleeve x1 [82]: Knit
+Second Sleeve x1 [80]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [80]: Knit
+Second Sleeve x1 [80]: Knit
+Second Sleeve x1 [80]: Knit
+Second Sleeve x1 [78]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [78]: Knit
+Second Sleeve x1 [78]: Knit
+Second Sleeve x1 [78]: Knit
+Second Sleeve x1 [76]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [76]: Knit
+Second Sleeve x1 [76]: With cream, knit
+Second Sleeve x1 [76]: Knit
+Second Sleeve x1 [74]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [74]: Knit
+Second Sleeve x1 [74]: Knit
+Second Sleeve x1 [74]: Knit
+Second Sleeve x1 [72]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [72]: Knit
+Second Sleeve x1 [72]: Knit
+Second Sleeve x1 [72]: Knit
+Second Sleeve x1 [70]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [70]: Knit
+Second Sleeve x1 [70]: With cream, knit
+Second Sleeve x1 [70]: Knit
+Second Sleeve x1 [68]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [68]: Knit
+Second Sleeve x1 [68]: Knit
+Second Sleeve x1 [68]: Knit
+Second Sleeve x1 [66]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [66]: Knit
+Second Sleeve x1 [66]: Knit
+Second Sleeve x1 [66]: Knit
+Second Sleeve x1 [64]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [64]: Knit
+Second Sleeve x1 [64]: With cream, knit
+Second Sleeve x1 [64]: Knit
+Second Sleeve x1 [62]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [62]: Knit
+Second Sleeve x1 [62]: Knit
+Second Sleeve x1 [62]: Knit
+Second Sleeve x1 [60]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [60]: Knit
+Second Sleeve x1 [60]: Knit
+Second Sleeve x1 [60]: Knit
+Second Sleeve x1 [58]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [58]: Knit
+Second Sleeve x1 [58]: With cream, knit
+Second Sleeve x1 [58]: Knit
+Second Sleeve x1 [56]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [56]: Knit
+Second Sleeve x1 [56]: Knit
+Second Sleeve x1 [56]: Knit
+Second Sleeve x1 [54]: With navy, k1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [54]: Knit
+Second Sleeve x1 [54]: Knit
+Second Sleeve x1 [54]: Knit
+Second Sleeve x1 [52]: K1, k2tog, knit to the last 3 stitches, ssk, k1
+Second Sleeve x1 [52]: Knit
+Second Sleeve x1 [52]: With cream, knit
+Second Sleeve x1 [52]: Knit
+Second Sleeve x3 [52]: Knit
+Second Sleeve · Cuff x1 [52]: With navy, knit
+Second Sleeve · Cuff x11 [52]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.

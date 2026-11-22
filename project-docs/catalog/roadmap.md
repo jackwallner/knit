@@ -50,7 +50,7 @@ them. A design whose photo is not accepted stays in `awaitingPhoto` in `PatternT
 
 Reject a photo for any eye, nose or mouth in frame (the back of a head, hair or forehead is fine), for a second knitted item, or for stripes whose count, order or widths differ from the record (count them against the drawing), and for a yarn that hides the stitch.
 
-Accepted on my read, waiting for the peer's: batches 1 and 2 (accepted by the peer), and batches 3 and 4 except six redone after review: Cat Ear Hat, Houndstooth Beanie (faces), Baby Mittens (second item), Striped Beanie, Striped Scarf (stripe order and widths), Boot Cuffs (fuzzy yarn hid the stitch) (2026-11-21).
+Accepted on my read, waiting for the peer's: batches 1 and 2 (accepted by the peer). Every other design has a photo checked against the rules above (2026-11-21). The six the peer sent back (Cat Ear Hat, Houndstooth Beanie, Baby Mittens, Striped Beanie, Striped Scarf, Boot Cuffs) were redone on the second try and pass. Pulled for a second knitted item in frame and redone: Baby Cocoon, Tube Socks, Bath Mat, Scrunchie (third try), and two for color or stripe width, Color-Block Scarf and Striped Mitts. The Floor Pouf photo is rounder than its drawing.
 
 ## The knitter's read (2026-11-21)
 
