@@ -571,8 +571,8 @@ final class PatternTests: XCTestCase {
         text.components(separatedBy: CharacterSet.decimalDigits.inverted).compactMap { Int($0) }
     }
 
-    /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
-    /// and every design added since. Raise both counts with each one.
+    /// 93 shapes with 85 colorwork and stitch-pattern designs bundled on them: the 178 the store listing and
+    /// the site promise. Raise the counts here, in the listing and on the site with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
         XCTAssertEqual(Design.allCases.count, 93)
         XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 178)

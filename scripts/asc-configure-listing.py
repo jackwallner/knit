@@ -18,29 +18,8 @@ APP_NAME = "Ravel"
 AGE_TEMPLATE_BUNDLE_ID = os.environ.get(
     "ASC_AGE_TEMPLATE_BUNDLE_ID", "com.jackwallner.vitals"
 )
-REVIEW_NOTES = """Ravel is a knitting companion. There is no account of any kind, so no demo account is needed, and the app works with no network.
-
-WHAT A FRESH INSTALL SHOWS
-Three tabs: Projects, Patterns and Stash.
-1. Projects: tap + to cast on a project. Inside a project, a tap anywhere counts a row and the fabric on screen grows a row with it. A project can hold the knitter's own pattern (a PDF from Files, or photos of a printed pattern), with a row marker over the page.
-2. Patterns: a library of 20 patterns (hats, scarves, cowls, blankets, a shawl, a pullover and more). Open one, pick a size or enter measurements, pick a yarn weight or enter a gauge, and the stitch counts and yardage are rewritten for that knitter. "Cast On" starts a guided project that shows one instruction at a time.
-3. Stash: a list of the knitter's yarn and needles.
-
-WHAT IS FREE
-Projects, the row counter, importing PDFs and photos and the stash are free with no limits. Two patterns are free: Garter Scarf and Dishcloth.
-
-RAVEL PATTERNS (the only purchase)
-Unlocks the other 18 patterns. Three ways to buy, all unlocking the same thing:
-- com.jackwallner.knit.yearly, auto-renewing, one-week free trial
-- com.jackwallner.knit.monthly, auto-renewing, one-week free trial
-- com.jackwallner.knit.lifetime, non-consumable, paid once
-To reach the paywall: Patterns tab, open any pattern that is not marked Free (for example Raglan Pullover), tap "Unlock Patterns". The paywall shows each price before the purchase button, with Restore, Terms and Privacy at the bottom. A pattern someone has already cast on stays in their projects if a subscription ends.
-
-WHERE THE PATTERNS COME FROM
-Every pattern is written by the app's own sizing code, on the device, from the measurements and gauge the knitter enters. Nothing is downloaded and no third-party patterns or content are included.
-
-PRIVACY
-Projects, counts, PDFs and the stash stay on the device. RevenueCat receives an anonymous app user id and purchase state to manage the subscription. No tracking, no ads."""
+# One copy of the notes: the file fastlane also uploads.
+REVIEW_NOTES = (Path(__file__).resolve().parent.parent / "fastlane/metadata/review_information/notes.txt").read_text().strip()
 
 
 def review_phone() -> str:
