@@ -377,6 +377,22 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .bunting:
+            // A sagging cord with triangle flags hanging from it.
+            let cord = CGMutablePath()
+            cord.move(to: p(0.04, 0.2))
+            cord.addQuadCurve(to: p(0.96, 0.2), control: p(0.5, 0.4))
+            path.addPath(cord.copy(strokingWithWidth: unit * 0.014, lineCap: .round, lineJoin: .round, miterLimit: 1))
+            for k in 0..<5 {
+                let left = 0.06 + CGFloat(k) * 0.18, right = left + 0.17
+                func sag(_ x: CGFloat) -> CGFloat { let t = (x - 0.04) / 0.92; return 0.2 + 2 * t * (1 - t) * 0.2 }
+                let flag = CGMutablePath()
+                flag.move(to: p(left, sag(left)))
+                flag.addLine(to: p(right, sag(right)))
+                flag.addLine(to: p((left + right) / 2, sag((left + right) / 2) + 0.4))
+                flag.closeSubpath()
+                path.addPath(flag)
+            }
         case .cowlHood:
             // A hood seen from the front, the face opening framed by its edge, a ribbed cowl below.
             let hood = CGMutablePath()

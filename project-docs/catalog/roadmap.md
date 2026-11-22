@@ -209,7 +209,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | planned |
 | 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
-| 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | planned |
+| 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | verified |
 | 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | planned |
 | 130 | Chevron Lace Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
 | 131 | Snowflake Mittens | Hands | Winter gift, intermediate | Colorwork: mittens taught colorwork | planned |

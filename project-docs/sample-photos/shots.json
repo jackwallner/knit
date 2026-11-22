@@ -520,6 +520,10 @@
   "cowlHood": {
    "camera": "overcast",
    "scene": "a windswept beach in winter, grey overcast light"
+  },
+  "bunting": {
+   "camera": "sun",
+   "scene": "a sunny nursery wall above a crib, afternoon light through the window"
   }
  }
 }
