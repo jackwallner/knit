@@ -536,3 +536,4 @@ Second End
 Cowl Hood
 Bunting
 Flag
+Pixie Hat

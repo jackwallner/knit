@@ -233,7 +233,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 149 | Waffle Leg Warmers | Accessories | Adults, beginner | Stitch | planned |
 | 150 | Honeycomb Pillow | Home | Anyone, easy | Stitch | planned |
 | 151 | Eyelet Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
-| 152 | Pixie Hat | Baby | Babies and children, easy | New shape: pointed top | planned |
+| 152 | Pixie Hat | Baby | Babies and children, easy | New shape: pointed top | verified |
 | 153 | Bucket Hat | Hats | Child to adult large, easy | New shape: top-down flat crown, purl-ridge folds, straight sides, a brim that widens by half, garter edge | verified (built ahead of its rank) |
 | 154 | Striped Socks | Socks & Feet | Anyone, intermediate | Colorwork: socks taught stripes | planned |
 | 155 | Lace Socks | Socks & Feet | Adults, intermediate | Stitch: lace leg | planned |

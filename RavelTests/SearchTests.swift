@@ -48,6 +48,8 @@ final class SearchTests: XCTestCase {
         XCTAssertEqual(find("snood").first?.id, Design.cowlHood.rawValue)
         XCTAssertEqual(find("bunting").first?.id, Design.bunting.rawValue)
         XCTAssertEqual(find("garland").first?.id, Design.bunting.rawValue)
+        XCTAssertEqual(find("pixie hat").first?.id, Design.pixieHat.rawValue)
+        XCTAssertEqual(find("elf hat").first?.id, Design.pixieHat.rawValue)
         let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
         for item in collection {
             XCTAssertTrue(LibrarySearch.find(item.title, in: collection).contains { $0.id == item.id }, item.title)

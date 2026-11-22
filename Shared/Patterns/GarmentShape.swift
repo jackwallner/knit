@@ -377,6 +377,23 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .pixie:
+            // A tall hat narrowing to a long point that flops to one side, a tassel at the tip, a ribbed brim.
+            let hat = CGMutablePath()
+            hat.move(to: p(0.24, 0.8))
+            hat.addLine(to: p(0.24, 0.56))
+            hat.addCurve(to: p(0.86, 0.2), control1: p(0.26, 0.24), control2: p(0.6, 0.1))
+            hat.addCurve(to: p(0.76, 0.8), control1: p(0.66, 0.3), control2: p(0.76, 0.42))
+            hat.closeSubpath()
+            let brim = CGPath(roundedRect: box(0.2, 0.74, 0.6, 0.14), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            let ribs = CGMutablePath()
+            for x in stride(from: CGFloat(0.27), through: 0.74, by: 0.068) { ribs.addRect(box(x - 0.006, 0.77, 0.012, 0.08)) }
+            let tassel = CGMutablePath()
+            tassel.move(to: p(0.86, 0.2))
+            tassel.addLine(to: p(0.82, 0.36))
+            tassel.addLine(to: p(0.92, 0.36))
+            tassel.closeSubpath()
+            path.addPath(hat.union(tassel).union(brim.subtracting(ribs)))
         case .bunting:
             // A sagging cord with triangle flags hanging from it.
             let cord = CGMutablePath()

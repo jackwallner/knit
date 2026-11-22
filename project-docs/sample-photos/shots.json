@@ -524,6 +524,10 @@
   "bunting": {
    "camera": "sun",
    "scene": "a sunny nursery wall above a crib, afternoon light through the window"
+  },
+  "pixieHat": {
+   "camera": "snap",
+   "scene": "a toddler's play mat in a bright living room, daylight"
   }
  }
 }
