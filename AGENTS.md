@@ -56,7 +56,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 ## App-specific notes
 - Store name: "Ravel: Knitting Patterns". Metadata in `fastlane/metadata/en-US`. Site (GitHub Pages, `/docs`): `https://jackwallner.github.io/knit/`.
 - Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, or back at the project list after a visit of 20 or more rows, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in the Projects tab's menu.
-- `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py`, `asc-setup-lifetime-iap.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon.
+- `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py`, `asc-setup-lifetime-iap.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon (stockinette in mixed oranges). `AppIcon-Ball`, `AppIcon-Beanie` and `AppIcon-Needles` are in the build only so the store can test them against it (Product Page Optimization); they are pictures, not drawn by the script, and nothing in the app switches icons.
 - Non-site docs go in `project-docs/<category>/`, because `docs/` is the published site. The 2026-11-13 pre-release audit and its findings ledger are in `project-docs/audit/`.
 
 ---
