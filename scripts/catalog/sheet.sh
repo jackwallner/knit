@@ -16,10 +16,12 @@ out="project-docs/catalog/batches/batch-$(printf %02d "$batch")"
 mkdir -p "$out/patterns"
 LANG=en_US.UTF-8 "$binary" "$out/contact-sheet.png" "$@"
 for id in "$@"; do
-  record=$(python3 -c "import json,sys; d=[r for r in json.load(open('Ravel/collection.json'))['designs'] if r['id']==sys.argv[1]]; print(d[0]['base'], d[0].get('stitch',''), d[0]['weights'][len(d[0]['weights'])//2]) if d else print('')" "$id")
-  if [[ -n "$record" ]]; then
-    read -r base stitch weight <<<"$record"
-    scripts/catalog/inspect.sh "$base" $stitch "$weight" | sed "s/== [^,]*,/== $id,/" > "$out/patterns/$id.txt"
+  one="$build/record-$id.json"
+  python3 -c "import json,sys; d=[r for r in json.load(open('Ravel/collection.json'))['designs'] if r['id']==sys.argv[1]]; d and json.dump({'designs': d}, open(sys.argv[2], 'w'))" "$id" "$one"
+  if [[ -s "$one" ]]; then
+    # A record prints in its own colors and stitch, at its smallest and largest size.
+    PREVIEWS="$build" scripts/topical-check.sh --print "$id" "$one" | grep -v "^ *preview \|checked, all pass" > "$out/patterns/$id.txt"
+    rm -f "$one"
   else
     scripts/catalog/inspect.sh "$id" > "$out/patterns/$id.txt"
   fi

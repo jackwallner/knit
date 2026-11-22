@@ -69,13 +69,18 @@ for file in files {
 print(failed ? "\(checked) checked, failures above" : "\(checked) checked, all pass")
 exit(failed ? 1 : 0)
 
+/// The pattern in its own colors at the smallest and the largest size, as a knitter reads it.
 func printPattern(_ topical: Topical) {
-    let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: topical.defaultWeight.gauge)
-    print("\n\(topical.title), \(topical.base.defaultSize.name), \(topical.defaultWeight.label)\n\(plan.finished)")
-    for line in plan.materials { print("  \(line)") }
-    for step in plan.steps {
-        let count = step.stitches.map { " [\($0)]" } ?? ""
-        print("\(step.section) x\(step.rows)\(count): \(step.texts.joined(separator: " / "))")
+    let sizes = topical.base.sizes
+    for size in [sizes.first, sizes.count > 1 ? sizes.last : nil].compactMap({ $0 }) {
+        let plan = topical.plan(measures: size.values, gauge: topical.defaultWeight.gauge)
+        print("\n== \(topical.id), \(size.name), \(topical.defaultWeight.label), \(plan.yards) yd\n\(plan.finished)")
+        for line in plan.materials { print("  \(line)") }
+        for step in plan.steps {
+            let end = step.stitches(after: step.rows - 1)
+            let count = step.stitches.map { " [\($0)\(end.map { $0 == step.stitches ? "" : " to \($0)" } ?? "")]" } ?? ""
+            print("\(step.section) x\(step.rows)\(count): \(step.texts.joined(separator: " / "))")
+        }
     }
 }
 
