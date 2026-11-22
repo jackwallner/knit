@@ -154,16 +154,16 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 63 | Shrug | Shawls & Wraps | Adults, easy | New shape: one rectangle cuff to cuff, seamed sleeves, ribbed band around the opening | verified |
 | 64 | Waffle Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
 | 65 | Tote Bag | Home | Anyone, easy | New shape: solid cotton tote on a garter base, slipped-stitch creases at the corners, garter band, straps sewn outside | verified |
-| 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | verified, photographed (batch 12) |
 | 67 | Baby Cocoon | Baby | Newborn, easy | New shape: bottom-up circle base, straight body, deep folded k2, p2 rib (on the Blankets & Home shelf) | verified |
 | 68 | Garter Ridge Beanie | Hats | Anyone, beginner | Stitch | planned |
 | 69 | Striped Blanket | Blankets | Baby to throw, beginner | Colorwork | verified |
 | 70 | Tube Socks | Socks & Feet | Anyone, easy | New shape: spiral rib, no heel, wedge toe (on the Accessories shelf) | verified |
-| 71 | Honeycomb Blanket | Blankets | Throw, easy | Stitch | planned |
+| 71 | Honeycomb Blanket | Blankets | Throw, easy | Stitch | verified, photographed (batch 12) |
 | 72 | Mushroom Beanie | Hats | Anyone, intermediate | Colorwork | verified |
-| 73 | Double Moss Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
+| 73 | Double Moss Ear Warmer | Accessories | Anyone, beginner | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 74 | Knit Basket | Home | Anyone, easy | New shape: round base from the center out, garter sides, two handle slots below the rim | verified |
-| 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | verified, photographed (batch 12) |
 | 76 | Kids' Vest | Sweaters | Children 2 to 12, intermediate | New shape: V-neck vest cut from the child sizes (armhole, cross back and neck) | verified |
 | 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 78 | Seeded Rib Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
@@ -172,10 +172,10 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 81 | Waffle Mitts | Hands | Adults, easy | Stitch | planned |
 | 82 | Ruana | Shawls & Wraps | Adults, easy | New shape: one seed stitch piece, back then two fronts split by one bound-off stitch (on the Scarves & Cowls shelf) | verified |
 | 83 | Basketweave Beanie | Hats | Anyone, easy | Stitch | planned |
-| 84 | Feather and Fan Blanket | Blankets | Baby to throw, easy lace | Stitch | planned |
+| 84 | Feather and Fan Blanket | Blankets | Baby to throw, easy lace | Stitch | verified, photographed (batch 12) |
 | 85 | Scrunchie | Accessories | Gift, beginner | New shape: stockinette strip folded around a hair elastic and gathered | verified |
 | 86 | Striped Cowl | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
-| 87 | Mistake Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 87 | Mistake Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | verified, photographed (batch 12) |
 | 88 | Floor Pouf | Home | Anyone, easy | New shape | verified |
 | 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | verified |
 | 90 | Rope Cable Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
@@ -187,21 +187,21 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |
 | 97 | Bath Mat | Home | Anyone, beginner | New shape | verified |
 | 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | verified |
-| 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | planned |
+| 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | verified |
 | 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | verified |
 | 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
 | 104 | Chevron Lace Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
-| 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |
+| 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
-| 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | planned |
+| 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | verified, photographed (batch 12) |
 | 108 | Tree Ornament | Holiday | Gift, beginner | New shape | verified (built as Bauble Ornament) |
 | 109 | Double Moss Slouch Hat | Hats | Adults, beginner | Stitch | planned |
 | 110 | Button Neck Warmer | Accessories | Adults, easy | New shape | verified |
 | 111 | Wave Beanie | Hats | Anyone, intermediate | Colorwork | verified |
-| 112 | Waffle Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
-| 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | planned |
+| 112 | Waffle Ear Warmer | Accessories | Anyone, beginner | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
+| 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | verified, photographed (batch 12) |
 | 114 | Draft Stopper | Home | Anyone, beginner | New shape | verified |
 | 115 | Seed Stitch Beanie | Hats | Anyone, beginner | Stitch | planned |
 | 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
@@ -209,10 +209,10 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 118 | Hood | Accessories | Adults, easy | New shape | verified (built as Cowl Hood) |
 | 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 120 | Honeycomb Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
-| 121 | Double Moss Pillow | Home | Anyone, beginner | Stitch | planned |
+| 121 | Double Moss Pillow | Home | Anyone, beginner | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 122 | Reindeer Beanie | Holiday | Gift, intermediate | Colorwork | verified |
 | 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | verified |
-| 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
+| 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | verified, photographed (batch 12) |
 | 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | verified |
 | 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
@@ -225,9 +225,9 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | verified |
 | 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
-| 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | planned |
+| 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | verified, photographed (batch 12) |
 | 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | verified |
-| 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | planned |
+| 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 140 | Linen Stitch Wrap | Shawls & Wraps | Adults, easy | Stitch | planned |
 | 141 | Double Moss Mitts | Hands | Anyone, easy | Stitch | planned |
 | 142 | Chevron Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |
@@ -237,8 +237,8 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape: top-down V-neck raglan, boxy, deep ribbed hem, three-quarter sleeves, one band with buttons below the V | verified (built ahead of its rank) |
 | 147 | Yoke Sweater | Sweaters | Adults, intermediate | New shape: circular yoke in four rings, each marked by a purl ridge, on the raglan pullover's fit | verified (built ahead of its rank) |
 | 148 | Tank Top | Sweaters | Adults, intermediate | New shape: in the round to the underarms, then front and back flat with scoop necks and narrow straps | verified (built ahead of its rank) |
-| 149 | Waffle Leg Warmers | Accessories | Adults, beginner | Stitch | planned |
-| 150 | Honeycomb Pillow | Home | Anyone, easy | Stitch | planned |
+| 149 | Waffle Leg Warmers | Accessories | Adults, beginner | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
+| 150 | Honeycomb Pillow | Home | Anyone, easy | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 151 | Eyelet Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 152 | Pixie Hat | Baby | Babies and children, easy | New shape: pointed top | verified |
 | 153 | Bucket Hat | Hats | Child to adult large, easy | New shape: top-down flat crown, purl-ridge folds, straight sides, a brim that widens by half, garter edge | verified (built ahead of its rank) |
@@ -246,9 +246,9 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 155 | Lace Socks | Socks & Feet | Adults, intermediate | Stitch: lace leg | planned |
 | 156 | Rib Socks | Socks & Feet | Anyone, intermediate | Stitch: ribbed leg | planned |
 | 157 | Hurdle Stitch Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
-| 158 | Diamond Brocade Pillow | Home | Anyone, easy | Stitch | planned |
-| 159 | Broken Rib Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
-| 160 | Double Moss Leg Warmers | Accessories | Anyone, beginner | Stitch | planned |
+| 158 | Diamond Brocade Pillow | Home | Anyone, easy | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
+| 159 | Broken Rib Blanket | Blankets | Baby to throw, beginner | Stitch | verified, photographed (batch 12) |
+| 160 | Double Moss Leg Warmers | Accessories | Anyone, beginner | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
 | 161 | Baby Pullover | Baby | Babies 3 to 24 months, intermediate | New shape: top-down raglan with a buttoned shoulder opening so it passes over a baby's head (replaces #21) | verified (built ahead of its rank, on the Sweaters shelf with the Baby Cardigan) |
 
 ## Already in the library (45)

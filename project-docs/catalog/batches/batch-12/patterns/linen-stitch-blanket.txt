@@ -1,0 +1,25 @@
+ok   linen-stitch-blanket: Linen Stitch Blanket, 5 sizes x 5 weights
+
+== linen-stitch-blanket, Stroller, Worsted, 1260 yd
+30 in wide, 35 in long
+  About 1,260 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [178]: Cast on 178 stitches.
+Bottom Border x12 [178]: Knit
+Body x330 [178]: K6, *k1, sl1 wyif; repeat from * to the last 8 stitches, k8 / K6, *p1, sl1 wyib; repeat from * to the last 8 stitches, p2, k6
+Top Border x12 [178]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== linen-stitch-blanket, Throw, Worsted, 3420 yd
+48 in wide, 60 in long
+  About 3,420 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [288]: Cast on 288 stitches.
+Bottom Border x12 [288]: Knit
+Body x584 [288]: K6, *k1, sl1 wyif; repeat from * to the last 8 stitches, k8 / K6, *p1, sl1 wyib; repeat from * to the last 8 stitches, p2, k6
+Top Border x12 [288]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

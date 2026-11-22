@@ -1,0 +1,25 @@
+ok   diamond-brocade-scarf: Diamond Brocade Scarf, 5 sizes x 4 weights
+
+== diamond-brocade-scarf, Child, Worsted, 220 yd
+5 in wide, 48 in long
+  About 220 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [23]: Cast on 23 stitches.
+Scarf x6 [23]: Knit
+Scarf x280 [23]: K7, *p1, k7; repeat from * to the last 8 stitches, p1, k7 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K3, *p1, k7; repeat from * to the last 4 stitches, p1, k3 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3
+Scarf x6 [23]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends.
+
+== diamond-brocade-scarf, Long, Worsted, 590 yd
+8.75 in wide, 76 in long
+  About 590 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [39]: Cast on 39 stitches.
+Scarf x6 [39]: Knit
+Scarf x448 [39]: K7, *p1, k7; repeat from * to the last 8 stitches, p1, k7 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K3, *p1, k7; repeat from * to the last 4 stitches, p1, k3 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3
+Scarf x6 [39]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends.

@@ -2113,6 +2113,226 @@
       ],
       "tag": "Stripes",
       "photo": "photos/striped-pillow.jpg"
+    },
+    {
+      "id": "honeycomb-blanket",
+      "title": "Honeycomb Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "sky",
+          "hex": "#8FB4CC"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-blanket.jpg"
+    },
+    {
+      "id": "feather-and-fan-blanket",
+      "title": "Feather and Fan Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "lavender",
+          "hex": "#A99BC4"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/feather-and-fan-blanket.jpg"
+    },
+    {
+      "id": "linen-stitch-blanket",
+      "title": "Linen Stitch Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "flax",
+          "hex": "#CDBB93"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-blanket.jpg"
+    },
+    {
+      "id": "diamond-brocade-blanket",
+      "title": "Diamond Brocade Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "slate",
+          "hex": "#5F6F7F"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-blanket.jpg"
+    },
+    {
+      "id": "garter-ridge-blanket",
+      "title": "Garter Ridge Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "garterRidge",
+      "palette": [
+        {
+          "name": "moss",
+          "hex": "#7A8B52"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/garter-ridge-blanket.jpg"
+    },
+    {
+      "id": "seeded-rib-blanket",
+      "title": "Seeded Rib Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "clay",
+          "hex": "#B87A5C"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-blanket.jpg"
+    },
+    {
+      "id": "broken-rib-blanket",
+      "title": "Broken Rib Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#3F7F83"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-blanket.jpg"
+    },
+    {
+      "id": "diamond-brocade-scarf",
+      "title": "Diamond Brocade Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "plum",
+          "hex": "#6E4A6A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-scarf.jpg"
+    },
+    {
+      "id": "chevron-lace-scarf",
+      "title": "Chevron Lace Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "chevronLace",
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#D9A5A0"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/chevron-lace-scarf.jpg"
+    },
+    {
+      "id": "mistake-rib-scarf",
+      "title": "Mistake Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "mistakeRib",
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#4A4D52"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/mistake-rib-scarf.jpg"
     }
   ]
 }

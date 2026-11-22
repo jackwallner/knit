@@ -616,6 +616,46 @@
   "striped-pillow": {
    "camera": "flash",
    "scene": "on a sofa cushion in a living room"
+  },
+  "honeycomb-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a gray sofa, a lamp glowing behind it"
+  },
+  "feather-and-fan-blanket": {
+   "camera": "overcast",
+   "scene": "spread over the end of a white crib, soft grey window light"
+  },
+  "linen-stitch-blanket": {
+   "camera": "snap",
+   "scene": "folded on a wooden bench in an entryway, a shoe partly in view"
+  },
+  "diamond-brocade-blanket": {
+   "camera": "sun",
+   "scene": "draped over a chair by a window"
+  },
+  "garter-ridge-blanket": {
+   "camera": "overcast",
+   "scene": "laid flat on a white bed, soft daylight"
+  },
+  "seeded-rib-blanket": {
+   "camera": "flash",
+   "scene": "folded at the foot of a bed at night"
+  },
+  "broken-rib-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a leather sofa"
+  },
+  "diamond-brocade-scarf": {
+   "camera": "outdoor",
+   "scene": "hung over a wooden fence rail on an overcast day"
+  },
+  "chevron-lace-scarf": {
+   "camera": "overcast",
+   "scene": "laid in a loose S across an unmade bed with white sheets"
+  },
+  "mistake-rib-scarf": {
+   "camera": "flash",
+   "scene": "laid flat on a dark slate floor next to leather gloves"
   }
  }
 }

@@ -1,0 +1,25 @@
+ok   seeded-rib-blanket: Seeded Rib Blanket, 5 sizes x 5 weights
+
+== seeded-rib-blanket, Stroller, Worsted, 1080 yd
+30.25 in wide, 35 in long
+  About 1,080 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [155]: Cast on 155 stitches.
+Bottom Border x12 [155]: Knit
+Body x204 [155]: K6, *k3, p1; repeat from * to the last 9 stitches, k9 / K7, *p1, k3; repeat from * to the last 8 stitches, p1, k7
+Top Border x12 [155]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== seeded-rib-blanket, Throw, Worsted, 2920 yd
+48 in wide, 60.25 in long
+  About 2,920 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [247]: Cast on 247 stitches.
+Bottom Border x12 [247]: Knit
+Body x362 [247]: K6, *k3, p1; repeat from * to the last 9 stitches, k9 / K7, *p1, k3; repeat from * to the last 8 stitches, p1, k7
+Top Border x12 [247]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

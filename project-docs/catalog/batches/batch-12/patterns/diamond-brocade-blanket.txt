@@ -1,0 +1,25 @@
+ok   diamond-brocade-blanket: Diamond Brocade Blanket, 5 sizes x 5 weights
+
+== diamond-brocade-blanket, Stroller, Worsted, 910 yd
+29.5 in wide, 34.75 in long
+  About 910 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [133]: Cast on 133 stitches.
+Bottom Border x12 [133]: Knit
+Body x192 [133]: K10, *p1, k7; repeat from * to the last 11 stitches, p1, k10 / K6, p3, *k1, p1, k1, p5; repeat from * to the last 12 stitches, k1, p1, k1, p3, k6 / K8, *p1, k3; repeat from * to the last 9 stitches, p1, k8 / K6, p1, *k1, p5, k1, p1; repeat from * to the last 6 stitches, k6 / K6, *p1, k7; repeat from * to the last 7 stitches, p1, k6 / K6, p1, *k1, p5, k1, p1; repeat from * to the last 6 stitches, k6 / K8, *p1, k3; repeat from * to the last 9 stitches, p1, k8 / K6, p3, *k1, p1, k1, p5; repeat from * to the last 12 stitches, k1, p1, k1, p3, k6
+Top Border x12 [133]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== diamond-brocade-blanket, Throw, Worsted, 2510 yd
+47.25 in wide, 60 in long
+  About 2,510 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [213]: Cast on 213 stitches.
+Bottom Border x12 [213]: Knit
+Body x344 [213]: K10, *p1, k7; repeat from * to the last 11 stitches, p1, k10 / K6, p3, *k1, p1, k1, p5; repeat from * to the last 12 stitches, k1, p1, k1, p3, k6 / K8, *p1, k3; repeat from * to the last 9 stitches, p1, k8 / K6, p1, *k1, p5, k1, p1; repeat from * to the last 6 stitches, k6 / K6, *p1, k7; repeat from * to the last 7 stitches, p1, k6 / K6, p1, *k1, p5, k1, p1; repeat from * to the last 6 stitches, k6 / K8, *p1, k3; repeat from * to the last 9 stitches, p1, k8 / K6, p3, *k1, p1, k1, p5; repeat from * to the last 12 stitches, k1, p1, k1, p3, k6
+Top Border x12 [213]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

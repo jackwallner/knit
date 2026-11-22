@@ -1,0 +1,25 @@
+ok   chevron-lace-scarf: Chevron Lace Scarf, 5 sizes x 5 weights
+
+== chevron-lace-scarf, Child, Worsted, 160 yd
+4 in wide, 48 in long
+  About 160 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [17]: Cast on 17 stitches.
+Scarf x6 [17]: Knit
+Scarf x280 [17]: K4, *yo, k3, sk2p, k3, yo, k1; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3
+Scarf x6 [17]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.
+
+== chevron-lace-scarf, Long, Worsted, 550 yd
+8.5 in wide, 76 in long
+  About 550 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [37]: Cast on 37 stitches.
+Scarf x6 [37]: Knit
+Scarf x448 [37]: K4, *yo, k3, sk2p, k3, yo, k1; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3
+Scarf x6 [37]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.
