@@ -61,7 +61,8 @@ final class StitchTests: XCTestCase {
                         let plan = base.plan(measures: input, gauge: weight.gauge, fit: fit)
                         XCTAssertEqual(PlanCheck.problems(plan), [], "\(stitch) \(base) \(input) \(weight)")
                         let rows = Set([stitch.flat.count, stitch.round.count])
-                        XCTAssertTrue(plan.steps.contains { rows.contains($0.texts.count) && $0.rows % $0.texts.count == 0 && !$0.isAction }, "\(stitch) \(base): no whole repeats of the stitch")
+                        let bands = Set([stitch.band(flat: true), stitch.band(flat: false)])
+                        XCTAssertTrue(plan.steps.contains { step in rows.contains(step.texts.count) && bands.contains { step.rows % $0 == 0 } && !step.isAction }, "\(stitch) \(base): no whole repeats of the stitch")
                     }
                 }
             }
@@ -73,7 +74,7 @@ final class StitchTests: XCTestCase {
         for stitch in Stitch.allCases {
             for inches in stride(from: 1.0, through: 30, by: 3.5) {
                 XCTAssertEqual(stitch.rows(inches, rpi: 6, flat: true) % 2, 0, "\(stitch)")
-                XCTAssertEqual(stitch.rows(inches, rpi: 6, flat: true) % stitch.flat.count, 0, "\(stitch)")
+                XCTAssertEqual(stitch.rows(inches, rpi: 6, flat: true) % stitch.band(flat: true), 0, "\(stitch)")
             }
         }
     }

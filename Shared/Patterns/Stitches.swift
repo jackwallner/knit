@@ -227,8 +227,12 @@ enum Stitch: String, CaseIterable, Sendable {
 
     /// Rows for `inches` of fabric at a stockinette row gauge, in whole repeats (at least one), and an
     /// even count when flat so the last row is a wrong-side row.
+    /// The rows a piece may stop after: a whole repeat, or for basketweave any band of blocks, so a square
+    /// piece comes out square and can end on the band it began with.
+    func band(flat: Bool) -> Int { self == .basketweave ? 6 : (flat ? self.flat : round).count }
+
     func rows(_ inches: Double, rpi: Double, flat: Bool) -> Int {
-        let height = (flat ? self.flat : round).count
+        let height = band(flat: flat)
         let repeats = max(1, Int((inches * rpi * rowFactor / Double(height)).rounded()))
         var total = repeats * height
         if flat, total % 2 == 1 { total += height }
