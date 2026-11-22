@@ -219,7 +219,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | verified |
 | 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
 | 130 | Chevron Lace Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
-| 131 | Snowflake Mittens | Hands | Winter gift, intermediate | Colorwork: mittens taught colorwork | held: mittens are not a base colorwork has been taught |
+| 131 | Snowflake Mittens | Hands | Winter gift, intermediate | Colorwork: mittens taught colorwork | dropped: built and checked on the mittens (motif on the back of the hand, duplicate stitch), but the smallest size (4.5 in hand, 3.5 in long) has only 6 hand rounds, so a 7-round snowflake does not fit; a 5-round one passes every check and reads as a bow tie in the preview |
 | 132 | Double Moss Wrap | Shawls & Wraps | Adults, beginner | Stitch | dropped: the Rectangular Wrap is already a moss stole, and the wrap shape takes no stitch |
 | 133 | Broken Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
