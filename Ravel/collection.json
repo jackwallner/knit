@@ -1445,6 +1445,59 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/heart-cowl.jpg"
+    },
+    {
+      "id": "houndstooth-cowl",
+      "title": "Houndstooth Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        },
+        {
+          "name": "brown",
+          "hex": "#7A5536"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/houndstooth-cowl.jpg"
     }
   ]
 }

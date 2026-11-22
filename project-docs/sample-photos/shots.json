@@ -556,6 +556,10 @@
   "heart-cowl": {
    "camera": "oldphone",
    "scene": "draped over a chair back"
+  },
+  "houndstooth-cowl": {
+   "camera": "lamp",
+   "scene": "on a coat hook by a door"
   }
  }
 }
