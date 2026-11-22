@@ -516,6 +516,10 @@
   "draftStopper": {
    "camera": "lamp",
    "scene": "the bottom of a wooden front door on a hallway floor, cozy evening lamp light"
+  },
+  "cowlHood": {
+   "camera": "overcast",
+   "scene": "a windswept beach in winter, grey overcast light"
   }
  }
 }

@@ -377,6 +377,22 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .cowlHood:
+            // A hood seen from the front, the face opening framed by its edge, a ribbed cowl below.
+            let hood = CGMutablePath()
+            hood.move(to: p(0.22, 0.66))
+            hood.addCurve(to: p(0.5, 0.08), control1: p(0.16, 0.36), control2: p(0.26, 0.08))
+            hood.addCurve(to: p(0.78, 0.66), control1: p(0.74, 0.08), control2: p(0.84, 0.36))
+            hood.closeSubpath()
+            let face = CGMutablePath()
+            face.move(to: p(0.34, 0.66))
+            face.addCurve(to: p(0.5, 0.2), control1: p(0.3, 0.4), control2: p(0.36, 0.2))
+            face.addCurve(to: p(0.66, 0.66), control1: p(0.64, 0.2), control2: p(0.7, 0.4))
+            face.closeSubpath()
+            let cowl = CGPath(roundedRect: box(0.2, 0.62, 0.6, 0.28), cornerWidth: unit * 0.04, cornerHeight: unit * 0.04, transform: nil)
+            let ribs = CGMutablePath()
+            for x in stride(from: CGFloat(0.27), through: 0.74, by: 0.068) { ribs.addRect(box(x - 0.006, 0.68, 0.012, 0.18)) }
+            path.addPath(hood.subtracting(face).union(cowl.subtracting(ribs)))
         case .draftStopper:
             // A long stuffed tube lying flat, rounded at both ends, purl ridges ringing it.
             let tube = CGPath(roundedRect: box(0.04, 0.42, 0.92, 0.16), cornerWidth: unit * 0.08, cornerHeight: unit * 0.08, transform: nil)
