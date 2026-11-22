@@ -656,6 +656,46 @@
   "mistake-rib-scarf": {
    "camera": "flash",
    "scene": "laid flat on a dark slate floor next to leather gloves"
+  },
+  "garter-ridge-scarf": {
+   "camera": "sun",
+   "scene": "hung over the back of a wooden chair by a window"
+  },
+  "honeycomb-scarf": {
+   "camera": "lamp",
+   "scene": "draped over a stack of library books on a desk, warm lamplight"
+  },
+  "broken-rib-scarf": {
+   "camera": "snap",
+   "scene": "hanging on a coat hook by a front door, a coat sleeve partly in view"
+  },
+  "waffle-scarf": {
+   "camera": "overcast",
+   "scene": "laid on a wooden table beside a mug"
+  },
+  "seeded-rib-scarf": {
+   "camera": "oldphone",
+   "scene": "draped over a radiator cover"
+  },
+  "eyelet-lace-scarf": {
+   "camera": "outdoor",
+   "scene": "hung over a garden gate in flat daylight"
+  },
+  "hurdle-stitch-scarf": {
+   "camera": "flash",
+   "scene": "laid flat on a dark wooden floor"
+  },
+  "seeded-rib-cowl": {
+   "camera": "overcast",
+   "scene": "worn bunched around the neck of a person in a gray wool coat, cropped at the chest, on a cold street"
+  },
+  "rope-cable-cowl": {
+   "camera": "lamp",
+   "scene": "laid flat on a wooden table, lying as a flattened loop, the ribbed bottom edge at the lower side of the frame and the ribbed top edge at the upper side"
+  },
+  "chevron-lace-cowl": {
+   "camera": "sun",
+   "scene": "draped over the back of a wooden chair in a sunny room"
   }
  }
 }

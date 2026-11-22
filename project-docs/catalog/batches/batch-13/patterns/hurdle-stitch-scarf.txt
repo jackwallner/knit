@@ -1,0 +1,21 @@
+ok   hurdle-stitch-scarf: Hurdle Stitch Scarf, 5 sizes x 6 weights
+
+== hurdle-stitch-scarf, Child, Worsted, 270 yd
+5 in wide, 48 in long
+  About 270 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [24]: Cast on 24 stitches.
+Scarf x360 [24]: Knit / Knit / *K1, p1; repeat from * to the end / *K1, p1; repeat from * to the end
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== hurdle-stitch-scarf, Long, Worsted, 670 yd
+8 in wide, 76.25 in long
+  About 670 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [38]: Cast on 38 stitches.
+Scarf x572 [38]: Knit / Knit / *K1, p1; repeat from * to the end / *K1, p1; repeat from * to the end
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

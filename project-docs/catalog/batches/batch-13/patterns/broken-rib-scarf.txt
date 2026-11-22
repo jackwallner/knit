@@ -1,0 +1,21 @@
+ok   broken-rib-scarf: Broken Rib Scarf, 5 sizes x 6 weights
+
+== broken-rib-scarf, Child, Worsted, 230 yd
+5 in wide, 48 in long
+  About 230 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [25]: Cast on 25 stitches.
+Scarf x288 [25]: Knit / *P1, k1; repeat from * to the last stitch, p1
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== broken-rib-scarf, Long, Worsted, 560 yd
+8 in wide, 76 in long
+  About 560 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [39]: Cast on 39 stitches.
+Scarf x456 [39]: Knit / *P1, k1; repeat from * to the last stitch, p1
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

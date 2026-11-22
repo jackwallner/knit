@@ -1,0 +1,25 @@
+ok   eyelet-lace-scarf: Eyelet Lace Scarf, 5 sizes x 5 weights
+
+== eyelet-lace-scarf, Child, Worsted, 210 yd
+5 in wide, 48.25 in long
+  About 210 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [23]: Cast on 23 stitches.
+Scarf x6 [23]: Knit
+Scarf x282 [23]: Knit / K3, purl to the last 3 stitches, k3 / Knit / K3, purl to the last 3 stitches, k3 / K4, *yo, k2tog; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3
+Scarf x6 [23]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.
+
+== eyelet-lace-scarf, Long, Worsted, 530 yd
+8.25 in wide, 76.25 in long
+  About 530 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [37]: Cast on 37 stitches.
+Scarf x6 [37]: Knit
+Scarf x450 [37]: Knit / K3, purl to the last 3 stitches, k3 / Knit / K3, purl to the last 3 stitches, k3 / K4, *yo, k2tog; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3
+Scarf x6 [37]: Knit
+Finishing x1: Bind off loosely knitwise. Weave in the ends. Block the scarf to open up the lace.
