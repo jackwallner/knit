@@ -1521,15 +1521,19 @@ enum Engines {
     /// A V-neck sweater vest knit in the round from the hem to the underarms, then the front and back worked
     /// flat. The V starts at the underarm, its two sides worked one after the other, and the armholes are cut
     /// in narrower than a sweater's. Shoulders are sewn; the armholes and the mitred V get k1, p1 rib.
-    static func vest(chest: Double, wearer: Double? = nil, body length: Double, gauge g: Gauge) -> Vest {
+    /// `child` cuts the armhole and shoulders from the Craft Yarn Council child sizes instead.
+    static func vest(chest: Double, wearer: Double? = nil, body length: Double, gauge g: Gauge, child: Bool = false) -> Vest {
         let worn = wearer ?? chest - Design.sweaterEase
         let body = Sizing.stitches(chest, per: g.spi, multiple: 4)
         let piece = body / 2
         // A vest's armhole runs an inch deeper than a sweater's, and its shoulders an inch and a quarter
         // narrower than the Craft Yarn Council cross back.
-        let rows = Sizing.rows(worn * 0.125 + 3.75, per: g.rpi, even: true)
-        let neck = even(min(8, chest * 0.1 + 3) * g.spi, minimum: 4)
-        let shoulders = max(min(even((min(18.5, worn * 0.2 + 8.5) - 1.25) * g.spi), piece - 4), neck + 4)
+        // A child's vest armhole runs half an inch deeper than the child's raglan, its shoulders an inch inside
+        // the child cross back (9.25 in at a 21 in chest to 12 in at 30 in).
+        let rows = Sizing.rows(child ? worn * 0.25 + 0.25 : worn * 0.125 + 3.75, per: g.rpi, even: true)
+        let neck = even(min(8, chest * 0.1 + (child ? 2.5 : 3)) * g.spi, minimum: 4)
+        let across = child ? worn * 0.3 + 1.85 : min(18.5, worn * 0.2 + 8.5) - 1.25
+        let shoulders = max(min(even(across * g.spi), piece - 4), neck + 4)
         let shoulder = (shoulders - neck) / 2
         let armhole = (piece - shoulders) / 2
         let boundOff = (armhole + 1) / 2
@@ -1628,9 +1632,10 @@ enum Engines {
         let ease = wearer.map { ", to fit a \(Sizing.inches($0)) chest with \(Sizing.inches(finishedChest - $0)) of ease" } ?? ""
         let yards = Sizing.yards(squareInches: finishedChest * (length + depth * 0.8) + 4 * depth, spi: g.spi)
         // The body needle must be shorter than the body is around.
-        let long = finishedChest < 34 ? 24 : 32
+        let long = child && finishedChest < 26 ? 16 : finishedChest < 34 ? 24 : 32
         let needle = finishedChest > 45 ? longCircular(body, g, flat: false) : "\(g.needle.label) \(Sizing.cable(long)) circular needle"
-        let plan = pattern(b, estimate: yards, tools: [needle, "\(g.ribNeedle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(long)), for the ribbing", "2 stitch markers, waste yarn, tapestry needle"], finished: "Finished chest \(Sizing.inches(finishedChest))\(ease). \(Sizing.inches(length)) from the hem to the underarm and \(Sizing.inches(depth)) from the underarm to the shoulder", gauge: g, round: true)
+        let rib = long == 16 ? "\(g.ribNeedle.label) \(Sizing.cable(16)) circular needle, for the ribbing" : "\(g.ribNeedle.label) circular needles, \(Sizing.cable(16)) and \(Sizing.cable(long)), for the ribbing"
+        let plan = pattern(b, estimate: yards, tools: [needle, rib, "2 stitch markers, waste yarn, tapestry needle"], finished: "Finished chest \(Sizing.inches(finishedChest))\(ease). \(Sizing.inches(length)) from the hem to the underarm and \(Sizing.inches(depth)) from the underarm to the shoulder", gauge: g, round: true)
         return Vest(plan: plan, body: body, piece: piece, shoulders: shoulders, shoulder: shoulder, neck: neck, armholeRows: rows, boundOff: boundOff, armholeDecreases: decreases, neckDecreases: narrow)
     }
 }
