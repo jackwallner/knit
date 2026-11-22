@@ -213,14 +213,8 @@ enum GarmentShape {
             path.closeSubpath()
             path.addRoundedRect(in: box(0.14, 0.74, 0.72, 0.15), cornerWidth: unit * 0.05, cornerHeight: unit * 0.05)
         case .scarf:
-            // A long strip with fringe at both ends. The strands meet the strip edge to edge, never overlapping,
-            // so the even-odd fill leaves no gaps.
-            path.addRoundedRect(in: box(0.33, 0.13, 0.34, 0.72), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02)
-            for index in 0..<5 {
-                let x = 0.355 + CGFloat(index) * 0.065
-                path.addRect(box(x, 0.04, 0.03, 0.09))
-                path.addRect(box(x, 0.85, 0.03, 0.09))
-            }
+            // A long strip with plain ends: no scarf pattern in the library adds fringe.
+            path.addRoundedRect(in: box(0.33, 0.06, 0.34, 0.88), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02)
         case .cowl:
             path.addEllipse(in: box(0.08, 0.2, 0.84, 0.62))
             path.addEllipse(in: box(0.26, 0.26, 0.48, 0.2))
