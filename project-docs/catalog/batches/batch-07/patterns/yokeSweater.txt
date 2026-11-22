@@ -1,0 +1,103 @@
+ok   Yoke Sweater: 11 sizes x 8 weights
+
+== Yoke Sweater, XS, Worsted, 980 yd
+Finished chest 33 in, to fit a 30 in chest with 3 in of ease. Body 14 in and sleeve 17 in from the underarm
+  About 980 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needles, 16 in and 32 in
+  US 5 · 3.75 mm circular needles, 16 in and 32 in, for the ribbing
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  Stitch marker, waste yarn, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [80]: With the smaller 16 in needle, loosely cast on 80 stitches, so the neck stretches over the head. Join in the round without twisting and place a marker for the start of the round, at the center back.
+Neckband x6 [80]: *K1, p1; repeat from * around
+Back Neck x1 [80]: Change to the larger needle. Short row: k25, turn
+Back Neck x1 [80]: Make a double stitch, then purl back past the marker and 25 stitches more, turn
+Back Neck x4 [80]: Make a double stitch, knit to the double stitch, knit it as one stitch, k2, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p2, turn
+Back Neck x1 [80]: Make a double stitch, then knit to the marker
+Back Neck x1 [80]: Knit 1 round, knitting each double stitch as one stitch
+Yoke x7 [80]: Knit
+Yoke x1 [102]: Knit, increasing 22 evenly: work (k4, M1) 14 times, then (k3, M1) 8 times
+Yoke x1 [102]: Purl
+Yoke x9 [102]: Knit
+Yoke x1 [132]: Knit, increasing 30 evenly: work (k4, M1) 12 times, then (k3, M1) 18 times. Move the stitches to the 32 in needle
+Yoke x1 [132]: Purl
+Yoke x8 [132]: Knit
+Yoke x1 [168]: Knit, increasing 36 evenly: work (k4, M1) 24 times, then (k3, M1) 12 times
+Yoke x1 [168]: Purl
+Yoke x9 [168]: Knit
+Yoke x1 [216]: Knit, increasing 48 evenly: work (k4, M1) 24 times, then (k3, M1) 24 times
+Yoke x1 [216]: Purl
+Yoke x8 [216]: Knit
+Divide x1 [148]: K32 back stitches. Slip the next 44 stitches to waste yarn for the first sleeve and cast on 10 stitches under the arm with the backward loop method. K64 front stitches. Slip the next 44 stitches to waste yarn for the second sleeve and cast on 10 more. Knit the last 32 back stitches
+Body x72 [148]: Knit
+Hem x1 [148]: Change to the smaller needle. *K1, p1; repeat from * around
+Hem x11 [148]: *K1, p1; repeat from * around
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [44]: Return the 44 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [54]: Pick up and knit 5 stitches, knit the 44 sleeve stitches, then pick up and knit 5 more. Place a marker for the start of the round.
+First Sleeve x9 [54]: Knit
+First Sleeve x80 [52 to 34]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit / Knit / Knit / Knit
+First Sleeve x1 [34]: Knit
+First Sleeve · Cuff x1 [34]: Change to the smaller needles. *K1, p1; repeat from * around
+First Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [44]: Return the 44 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [54]: Pick up and knit 5 stitches, knit the 44 sleeve stitches, then pick up and knit 5 more. Place a marker for the start of the round.
+Second Sleeve x9 [54]: Knit
+Second Sleeve x80 [52 to 34]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit / Knit / Knit / Knit / Knit
+Second Sleeve x1 [34]: Knit
+Second Sleeve · Cuff x1 [34]: Change to the smaller needles. *K1, p1; repeat from * around
+Second Sleeve · Cuff x11 [34]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.
+
+== Yoke Sweater, 5X, Worsted, 2420 yd
+Finished chest 65 in, to fit a 62 in chest with 3 in of ease. Body 17.5 in and sleeve 20 in from the underarm
+  About 2,420 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needles, 16 in and 32 in
+  US 5 · 3.75 mm circular needles, 16 in and 32 in, for the ribbing
+  Double-pointed needles in both sizes for the sleeves, or a long circular for magic loop
+  Stitch marker, waste yarn, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Neckband x1 [96]: With the smaller 16 in needle, loosely cast on 96 stitches, so the neck stretches over the head. Join in the round without twisting and place a marker for the start of the round, at the center back.
+Neckband x6 [96]: *K1, p1; repeat from * around
+Back Neck x1 [96]: Change to the larger needle. Short row: k29, turn
+Back Neck x1 [96]: Make a double stitch, then purl back past the marker and 29 stitches more, turn
+Back Neck x4 [96]: Make a double stitch, knit to the double stitch, knit it as one stitch, k2, turn / Make a double stitch, purl to the double stitch, purl it as one stitch, p2, turn
+Back Neck x1 [96]: Make a double stitch, then knit to the marker
+Back Neck x1 [96]: Knit 1 round, knitting each double stitch as one stitch
+Yoke x10 [96]: Knit
+Yoke x1 [138]: Knit, increasing 42 evenly: work (k3, M1) 12 times, then (k2, M1) 30 times. Move the stitches to the 32 in needle
+Yoke x1 [138]: Purl
+Yoke x14 [138]: Knit
+Yoke x1 [198]: Knit, increasing 60 evenly: work (k3, M1) 18 times, then (k2, M1) 42 times
+Yoke x1 [198]: Purl
+Yoke x14 [198]: Knit
+Yoke x1 [286]: Knit, increasing 88 evenly: work (k3, M1) 22 times, then (k2, M1) 66 times
+Yoke x1 [286]: Purl
+Yoke x14 [286]: Knit
+Yoke x1 [412]: Knit, increasing 126 evenly: work (k3, M1) 34 times, then (k2, M1) 92 times
+Yoke x1 [412]: Purl
+Yoke x13 [412]: Knit
+Divide x1 [292]: K63 back stitches. Slip the next 80 stitches to waste yarn for the first sleeve and cast on 20 stitches under the arm with the backward loop method. K126 front stitches. Slip the next 80 stitches to waste yarn for the second sleeve and cast on 20 more. Knit the last 63 back stitches
+Body x93 [292]: Knit
+Hem x1 [292]: Change to the smaller needle. *K1, p1; repeat from * around
+Hem x11 [292]: *K1, p1; repeat from * around
+Hem x1: Bind off loosely in pattern.
+First Sleeve x1 [80]: Return the 80 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+First Sleeve x1 [100]: Pick up and knit 10 stitches, knit the 80 sleeve stitches, then pick up and knit 10 more. Place a marker for the start of the round.
+First Sleeve x9 [100]: Knit
+First Sleeve x96 [98 to 52]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit
+First Sleeve x3 [52]: Knit
+First Sleeve · Cuff x1 [52]: Change to the smaller needles. *K1, p1; repeat from * around
+First Sleeve · Cuff x11 [52]: *K1, p1; repeat from * around
+First Sleeve · Cuff x1: Bind off loosely in pattern.
+Second Sleeve x1 [80]: Return the 80 held sleeve stitches to the larger needles. Join new yarn at the middle of the underarm.
+Second Sleeve x1 [100]: Pick up and knit 10 stitches, knit the 80 sleeve stitches, then pick up and knit 10 more. Place a marker for the start of the round.
+Second Sleeve x9 [100]: Knit
+Second Sleeve x96 [98 to 52]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit / Knit / Knit
+Second Sleeve x3 [52]: Knit
+Second Sleeve · Cuff x1 [52]: Change to the smaller needles. *K1, p1; repeat from * around
+Second Sleeve · Cuff x11 [52]: *K1, p1; repeat from * around
+Second Sleeve · Cuff x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends, closing any gaps at the underarms. Block to the finished measurements.

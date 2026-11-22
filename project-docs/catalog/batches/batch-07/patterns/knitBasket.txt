@@ -1,0 +1,55 @@
+ok   Knit Basket: 5 sizes x 8 weights
+
+== Knit Basket, Small, Bulky, 100 yd
+5.75 in across the base and 4 in tall, with two handle slots 2.5 in wide
+  About 100 yd of bulky weight yarn, cotton or a firm wool, knit tightly so the sides stand
+  US 10.5 · 6.5 mm double-pointed needles, or a long circular for magic loop, and a 16 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 14 stitches and 20 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Base x1 [8]: Knit
+Base x2 [16]: *K1, M1L; repeat from * around / Knit
+Base x2 [24]: *K2, M1L; repeat from * around / Knit
+Base x2 [32]: *K3, M1L; repeat from * around / Knit
+Base x2 [40]: *K4, M1L; repeat from * around / Knit
+Base x2 [48]: *K5, M1L; repeat from * around / Knit
+Base x2 [56]: *K6, M1L; repeat from * around / Knit
+Base x2 [64]: *K7, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Sides x1 [64]: Purl. The ridge turns the base up into the sides
+Sides x18 [64]: Knit / Purl
+Sides x1 [46]: K11, bind off the next 9 stitches, knit until there are 23 stitches after the gap, bind off the next 9 stitches and knit to the end
+Sides x1 [64]: Purl to the first gap, cast on 9 stitches over it with the backward loop method, purl to the next gap, cast on 9 stitches over it and purl to the end
+Sides x7 [64]: Knit / Purl
+Sides x1: Bind off loosely purlwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center of the base and weave in the ends. Wet the basket, stand it over a can or box about 6 in across, and let it dry in shape.
+
+== Knit Basket, Large, Bulky, 290 yd
+10.25 in across the base and 7.25 in tall, with two handle slots 2.5 in wide
+  About 290 yd of bulky weight yarn, cotton or a firm wool, knit tightly so the sides stand
+  US 10.5 · 6.5 mm double-pointed needles, or a long circular for magic loop, and 16 in and 24 in circular needles
+  Stitch marker
+  Tapestry needle
+  Gauge: 14 stitches and 20 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Base x1 [8]: Knit
+Base x2 [16]: *K1, M1L; repeat from * around / Knit
+Base x2 [24]: *K2, M1L; repeat from * around / Knit
+Base x2 [32]: *K3, M1L; repeat from * around / Knit
+Base x2 [40]: *K4, M1L; repeat from * around / Knit
+Base x2 [48]: *K5, M1L; repeat from * around / Knit
+Base x2 [56]: *K6, M1L; repeat from * around / Knit
+Base x2 [64]: *K7, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Base x2 [72]: *K8, M1L; repeat from * around / Knit
+Base x2 [80]: *K9, M1L; repeat from * around / Knit
+Base x2 [88]: *K10, M1L; repeat from * around / Knit
+Base x2 [96]: *K11, M1L; repeat from * around / Knit
+Base x2 [104]: *K12, M1L; repeat from * around / Knit
+Base x2 [112]: *K13, M1L; repeat from * around. Move the stitches to the 24 in needle / Knit
+Sides x1 [112]: Purl. The ridge turns the base up into the sides
+Sides x40 [112]: Knit / Purl
+Sides x1 [94]: K23, bind off the next 9 stitches, knit until there are 47 stitches after the gap, bind off the next 9 stitches and knit to the end
+Sides x1 [112]: Purl to the first gap, cast on 9 stitches over it with the backward loop method, purl to the next gap, cast on 9 stitches over it and purl to the end
+Sides x7 [112]: Knit / Purl
+Sides x1: Bind off loosely purlwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center of the base and weave in the ends. Wet the basket, stand it over a can or box about 10 in across, and let it dry in shape.

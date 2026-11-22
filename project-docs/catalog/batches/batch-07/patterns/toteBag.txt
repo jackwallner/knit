@@ -1,0 +1,45 @@
+ok   Tote Bag: 5 sizes x 8 weights
+
+== Tote Bag, Small, Worsted, 430 yd
+A base 12 in wide and 4 in deep, 11 in tall, with handles 14 in long between the ends sewn on, stretching to about 16 in
+  About 430 yd of worsted weight yarn, cotton or linen so the bag holds its shape
+  US 7 · 4.5 mm 24 in circular needle
+  4 stitch markers, one in a different color
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [54]: Cast on 54 stitches.
+Base x36 [54]: Knit
+Body x1 [144]: Do not turn. Place a marker, pick up and knit 18 stitches along the side of the base, one in each garter ridge, place a marker, pick up and knit 54 along the cast-on edge, place a marker, pick up and knit 18 along the other side, and place the marker in a different color for the start of the round. Join in the round. A marker now sits at each corner.
+Body x2 [144]: *Slip 1 purlwise with the yarn in back, knit to the next marker; repeat from * around. The slipped stitches crease the corners / Knit
+Body x58 [144]: *Slip 1 purlwise with the yarn in back, knit to the next marker; repeat from * around / Knit
+Band x10 [144]: Purl / Knit
+Band x1: Bind off loosely purlwise.
+First Handle x1 [6]: Cast on 6 stitches.
+First Handle x162 [6]: Knit
+First Handle x1: Bind off, leaving a long tail to sew with.
+Second Handle x1 [6]: Cast on 6 stitches.
+Second Handle x162 [6]: Knit
+Second Handle x1: Bind off, leaving a long tail to sew with.
+Finishing x1: Flatten the bag so the creases sit at its sides. Lay the last 2 in of each end of one handle flat on the outside of the front, from the top edge down over the band, each end 2.75 in from a side. Sew around the edges of each end, through both layers. Sew the other handle to the back the same way. Weave in the ends.
+
+== Tote Bag, Large, Worsted, 740 yd
+A base 16 in wide and 5.25 in deep, 15 in tall, with handles 21.25 in long between the ends sewn on, stretching to about 24 in
+  About 740 yd of worsted weight yarn, cotton or linen so the bag holds its shape
+  US 7 · 4.5 mm 24 in circular needle
+  4 stitch markers, one in a different color
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [72]: Cast on 72 stitches.
+Base x48 [72]: Knit
+Body x1 [192]: Do not turn. Place a marker, pick up and knit 24 stitches along the side of the base, one in each garter ridge, place a marker, pick up and knit 72 along the cast-on edge, place a marker, pick up and knit 24 along the other side, and place the marker in a different color for the start of the round. Join in the round. A marker now sits at each corner.
+Body x2 [192]: *Slip 1 purlwise with the yarn in back, knit to the next marker; repeat from * around. The slipped stitches crease the corners / Knit
+Body x82 [192]: *Slip 1 purlwise with the yarn in back, knit to the next marker; repeat from * around / Knit
+Band x10 [192]: Purl / Knit
+Band x1: Bind off loosely purlwise.
+First Handle x1 [6]: Cast on 6 stitches.
+First Handle x228 [6]: Knit
+First Handle x1: Bind off, leaving a long tail to sew with.
+Second Handle x1 [6]: Cast on 6 stitches.
+Second Handle x228 [6]: Knit
+Second Handle x1: Bind off, leaving a long tail to sew with.
+Finishing x1: Flatten the bag so the creases sit at its sides. Lay the last 2 in of each end of one handle flat on the outside of the front, from the top edge down over the band, each end 3.5 in from a side. Sew around the edges of each end, through both layers. Sew the other handle to the back the same way. Weave in the ends.

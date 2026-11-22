@@ -1,0 +1,116 @@
+ok   Tank Top: 11 sizes x 8 weights
+
+== Tank Top, XS, DK, 600 yd
+Finished chest 32 in, to fit a 30 in chest with 2 in of ease. 13 in from the hem to the underarm and 7.5 in from the underarm to the shoulder
+  About 600 yd of DK weight yarn
+  US 6 · 4 mm 24 in circular needle
+  US 4 · 3.5 mm circular needles, 16 in and 24 in, for the ribbing
+  Stitch marker, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Hem x1 [176]: Cast on 176 stitches with the smaller needle. Join in the round without twisting and place a marker at the side.
+Hem x7 [176]: *K1, p1; repeat from * around
+Body x1 [176]: Change to the larger needle and knit
+Body x83 [176]: Knit
+Body x1: The first 88 stitches of the round are the front. Slip the other 88, the back, to waste yarn. The front is worked first, back and forth.
+Front x1 [83]: Bind off 5 stitches, knit to the end, turn
+Front x1 [78]: Bind off 5 stitches, purl to the end, turn
+Front x10 [76 to 68]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front x10 [68]: Knit to the end, turn / Purl to the end, turn
+Front x1 [21]: K21, bind off the next 26 stitches, knit to the end. Work the 21 stitches just knit first, on their own, turn
+Front · First Strap x1 [21]: Purl to the neck, turn
+Front · First Strap x24 [20 to 9]: K1, ssk, knit to the end, turn / Purl to the neck, turn
+Front · First Strap x4 [9]: Knit to the end, turn / Purl to the neck, turn
+Front · First Strap x1: Bind off the 9 strap stitches.
+Front · Second Strap x1 [21]: With the wrong side facing, join new yarn at the neck edge of the other side.
+Front · Second Strap x1 [21]: Purl to the end, turn
+Front · Second Strap x24 [20 to 9]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Strap x4 [9]: Knit to the end, turn / Purl to the end, turn
+Front · Second Strap x1: Bind off the 9 strap stitches.
+Back x1 [88]: Return the 88 back stitches to the needle. With the right side facing, join new yarn at the underarm.
+Back x1 [83]: Bind off 5 stitches, knit to the end, turn
+Back x1 [78]: Bind off 5 stitches, purl to the end, turn
+Back x10 [76 to 68]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Back x28 [68]: Knit to the end, turn / Purl to the end, turn
+Back x1 [14]: K14, bind off the next 40 stitches, knit to the end. Work the 14 stitches just knit first, on their own, turn
+Back · First Strap x1 [14]: Purl to the neck, turn
+Back · First Strap x10 [13 to 9]: K1, ssk, knit to the end, turn / Purl to the neck, turn
+Back · First Strap x1: Bind off the 9 strap stitches.
+Back · Second Strap x1 [14]: With the wrong side facing, join new yarn at the neck edge of the other side.
+Back · Second Strap x1 [14]: Purl to the end, turn
+Back · Second Strap x10 [13 to 9]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Back · Second Strap x1: Bind off the 9 strap stitches.
+Finishing x1: Sew the front straps to the back straps at the shoulders.
+Neck Edging x1 [134]: With the smaller 16 in needle and the right side facing, start at the left shoulder seam. Pick up and knit 74 stitches around the front neck to the other shoulder seam, then 60 around the back neck. Join in the round and place a marker.
+Neck Edging x4 [134]: *K1, p1; repeat from * around
+Neck Edging x1: Bind off loosely in pattern.
+First Armhole x1 [80]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 80 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+First Armhole x4 [80]: *K1, p1; repeat from * around
+First Armhole x1: Bind off loosely in pattern.
+Second Armhole x1 [80]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 80 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+Second Armhole x4 [80]: *K1, p1; repeat from * around
+Second Armhole x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block to the finished measurements.
+
+== Tank Top, 5X, DK, 1580 yd
+Finished chest 64 in, to fit a 62 in chest with 2 in of ease. 16.5 in from the hem to the underarm and 10.5 in from the underarm to the shoulder
+  About 1,580 yd of DK weight yarn
+  US 6 · 4 mm 40 in circular needle
+  US 4 · 3.5 mm circular needles, 16 in and 32 in, for the ribbing
+  Stitch marker, waste yarn, tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Hem x1 [352]: Cast on 352 stitches with the smaller needle. Join in the round without twisting and place a marker at the side.
+Hem x7 [352]: *K1, p1; repeat from * around
+Body x1 [352]: Change to the larger needle and knit
+Body x108 [352]: Knit
+Body x1: The first 176 stitches of the round are the front. Slip the other 176, the back, to waste yarn. The front is worked first, back and forth.
+Front x1 [170]: Bind off 6 stitches, knit to the end, turn
+Front x1 [164]: Bind off 6 stitches, purl to the end, turn
+Front x1 [158]: Bind off 6 stitches, knit to the end, turn
+Front x1 [152]: Bind off 6 stitches, purl to the end, turn
+Front x1 [147]: Bind off 5 stitches, knit to the end, turn
+Front x1 [142]: Bind off 5 stitches, purl to the end, turn
+Front x1 [137]: Bind off 5 stitches, knit to the end, turn
+Front x1 [132]: Bind off 5 stitches, purl to the end, turn
+Front x20 [130 to 92]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / P1, p2tog, purl to the last 3 stitches, ssp, p1, turn
+Front x2 [90]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front x1 [30]: K30, bind off the next 30 stitches, knit to the end. Work the 30 stitches just knit first, on their own, turn
+Front · First Strap x1 [30]: Purl to the neck, turn
+Front · First Strap x30 [29 to 15]: K1, ssk, knit to the end, turn / Purl to the neck, turn
+Front · First Strap x12 [15]: Knit to the end, turn / Purl to the neck, turn
+Front · First Strap x1: Bind off the 15 strap stitches.
+Front · Second Strap x1 [30]: With the wrong side facing, join new yarn at the neck edge of the other side.
+Front · Second Strap x1 [30]: Purl to the end, turn
+Front · Second Strap x30 [29 to 15]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Front · Second Strap x12 [15]: Knit to the end, turn / Purl to the end, turn
+Front · Second Strap x1: Bind off the 15 strap stitches.
+Back x1 [176]: Return the 176 back stitches to the needle. With the right side facing, join new yarn at the underarm.
+Back x1 [170]: Bind off 6 stitches, knit to the end, turn
+Back x1 [164]: Bind off 6 stitches, purl to the end, turn
+Back x1 [158]: Bind off 6 stitches, knit to the end, turn
+Back x1 [152]: Bind off 6 stitches, purl to the end, turn
+Back x1 [147]: Bind off 5 stitches, knit to the end, turn
+Back x1 [142]: Bind off 5 stitches, purl to the end, turn
+Back x1 [137]: Bind off 5 stitches, knit to the end, turn
+Back x1 [132]: Bind off 5 stitches, purl to the end, turn
+Back x20 [130 to 92]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / P1, p2tog, purl to the last 3 stitches, ssp, p1, turn
+Back x2 [90]: K1, ssk, knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Back x32 [90]: Knit to the end, turn / Purl to the end, turn
+Back x1 [20]: K20, bind off the next 50 stitches, knit to the end. Work the 20 stitches just knit first, on their own, turn
+Back · First Strap x1 [20]: Purl to the neck, turn
+Back · First Strap x10 [19 to 15]: K1, ssk, knit to the end, turn / Purl to the neck, turn
+Back · First Strap x1: Bind off the 15 strap stitches.
+Back · Second Strap x1 [20]: With the wrong side facing, join new yarn at the neck edge of the other side.
+Back · Second Strap x1 [20]: Purl to the end, turn
+Back · Second Strap x10 [19 to 15]: Knit to the last 3 stitches, k2tog, k1, turn / Purl to the end, turn
+Back · Second Strap x1: Bind off the 15 strap stitches.
+Finishing x1: Sew the front straps to the back straps at the shoulders.
+Neck Edging x1 [168]: With the smaller 16 in needle and the right side facing, start at the left shoulder seam. Pick up and knit 98 stitches around the front neck to the other shoulder seam, then 70 around the back neck. Join in the round and place a marker.
+Neck Edging x4 [168]: *K1, p1; repeat from * around
+Neck Edging x1: Bind off loosely in pattern.
+First Armhole x1 [142]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 142 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+First Armhole x4 [142]: *K1, p1; repeat from * around
+First Armhole x1: Bind off loosely in pattern.
+Second Armhole x1 [142]: With the smaller 16 in needle or double-pointed needles and the right side facing, pick up and knit 142 stitches around the armhole, starting at the middle of the underarm. Join in the round and place a marker.
+Second Armhole x4 [142]: *K1, p1; repeat from * around
+Second Armhole x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block to the finished measurements.
