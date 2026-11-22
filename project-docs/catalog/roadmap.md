@@ -167,7 +167,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 83 | Basketweave Beanie | Hats | Anyone, easy | Stitch | planned |
 | 84 | Feather and Fan Blanket | Blankets | Baby to throw, easy lace | Stitch | planned |
 | 85 | Scrunchie | Accessories | Gift, beginner | New shape: stockinette strip folded around a hair elastic and gathered | verified |
-| 86 | Striped Cowl | Scarves & Cowls | Anyone, beginner | Colorwork | planned |
+| 86 | Striped Cowl | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
 | 87 | Mistake Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 88 | Floor Pouf | Home | Anyone, easy | New shape | verified |
 | 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | verified |

@@ -548,6 +548,10 @@
   "strawberry-beanie": {
    "camera": "snap",
    "scene": "on a wooden stool by a window"
+  },
+  "striped-cowl": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck on a gray morning walk"
   }
  }
 }

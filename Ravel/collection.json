@@ -1350,6 +1350,57 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/strawberry-beanie.jpg"
+    },
+    {
+      "id": "striped-cowl",
+      "title": "Striped Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        },
+        {
+          "color": "C",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-cowl.jpg"
     }
   ]
 }
