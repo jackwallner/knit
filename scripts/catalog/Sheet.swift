@@ -89,6 +89,20 @@ struct Sheet {
             context.fill(drawBox)
         }
         context.restoreGState()
+        // Sewn-on ears, drawn as the app's Garment does: the rim color, then the ear's own inside it.
+        if item.silhouette == .ears, let picture = Picture(plan, silhouette: item.silhouette), let ear = picture.ear, ear < palette.count {
+            let rim = picture.rim.flatMap { palette.indices.contains($0) ? $0 : nil } ?? ear
+            context.saveGState()
+            context.translateBy(x: 0, y: drawBox.minY * 2 + drawBox.height)
+            context.scaleBy(x: 1, y: -1)
+            defer { context.restoreGState() }
+            for box in GarmentShape.ears(in: drawBox) {
+                context.setFillColor(color(palette[rim]))
+                context.fillEllipse(in: box)
+                context.setFillColor(color(palette[ear]))
+                context.fillEllipse(in: GarmentShape.earInside(box))
+            }
+        }
 
         let left = card.minX + 540
         var y = card.maxY - 60

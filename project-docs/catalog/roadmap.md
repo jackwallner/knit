@@ -260,3 +260,6 @@ Neck Scarf, Rectangular Wrap. Home: Bordered, Garter and Basketweave Blankets, D
 Cover, Market Bag. Accessories: Ear Warmer, Handwarmers, Heart Mitts, Leg Warmers, Triangle and Crescent
 Shawls, Cabled Headband, Mittens, Cuff-Down Socks, Slippers, Baby Booties. Sweaters: Raglan Pullover,
 Raglan Cardigan, Sweater Vest, Kids' Raglan, Drop-Shoulder Sweater.
+
+### Photo redos, 2026-11-21 (review of batches 5 to 11)
+Photos checked against the drawing, which comes from the plan. Redone: Bunting (one marigold, not three colors), Zigzag Beanie (a tall band of cream zigzags), Striped Blanket (about 16 narrow stripes), Striped Pillow (cream with blue on the lower half), Striped Drop-Shoulder (thin stripes), Striped Socks (navy and cream), plus Checkerboard Blanket (squares 2.7 times too big), Snowflake Cowl (band 2.7 times too tall) and Panda Beanie (face 4 times too big). The Double Moss Cowl photo was cropped to lose the chin. The Panda drawing was the wrong side: the contact sheet did not draw sewn-on ears, now fixed in `scripts/catalog/Sheet.swift`. Each stripe prompt now states the stripe count and order from the plan, and the result is counted before it is accepted.
