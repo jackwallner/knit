@@ -8,7 +8,7 @@ enum LibrarySearch {
                                                 "men", "man", "mens", "women", "woman", "womens"]
     private static let same = [
         "kid": "child", "children": "child", "toddler": "child", "newborn": "baby", "infant": "baby",
-        "beanie": "hat", "toque": "hat", "glove": "mitten", "jumper": "sweater",
+        "beanie": "hat", "toque": "hat", "jumper": "sweater",
         "christmas": "holiday", "xmas": "holiday", "present": "gift",
     ]
     /// Things Ravel has no patterns for. A search for one finds nothing, never a human sweater for a dog,

@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 69)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 106)
+        XCTAssertEqual(Design.allCases.count, 70)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 107)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -1099,6 +1099,31 @@ final class PatternTests: XCTestCase {
                 XCTAssertTrue(rows(mitts.plan, "Mitt 1 · Top").allSatisfy { $0.stitches == mitts.stitches }, label)
                 XCTAssertEqual(rows(mitts.plan, "Mitt 1 · Thumb").last?.stitches, mitts.thumb, label)
                 XCTAssertTrue(mitts.plan.steps.last?.texts[0].hasPrefix("Bind off") == true, label)
+            }
+        }
+    }
+
+    /// Each finger starts from the stitches it takes from the hand plus the ones picked up and cast on
+    /// between fingers, so together they hand back the whole glove, and each closes on half its stitches.
+    func testGloveFingersShareTheHand() {
+        for input in inputs(.gloves) {
+            for gauge in gauges {
+                let plan = Engines.gloves(hand: input["hand"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let cast = plan.steps[0].stitches ?? 0
+                let fingers = ["Index", "Middle", "Ring", "Little"].map { name in
+                    plan.steps.filter { $0.section == "Glove 1 · \(name) Finger" }
+                }
+                let starts = fingers.map { $0.first?.stitches ?? 0 }
+                // Index, ring and little finger each gain 2 between fingers; the middle gains 4.
+                XCTAssertEqual(starts.reduce(0, +) - 10, cast + 2, label)
+                // Without what each gains between fingers (the ring also holds the 2 cast on over the little finger).
+                XCTAssertGreaterThanOrEqual(starts[0] - 2, starts[2] - 4, label)
+                XCTAssertLessThanOrEqual(starts[3] - 2, starts[2] - 4, label)
+                for (finger, start) in zip(fingers, starts) {
+                    XCTAssertTrue(finger.filter { $0.texts == ["Knit"] }.allSatisfy { $0.stitches == start }, label)
+                    XCTAssertEqual(finger.last(where: { !$0.isAction })?.stitches, start / 2, label)
+                }
             }
         }
     }

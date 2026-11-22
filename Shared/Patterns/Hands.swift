@@ -166,3 +166,93 @@ extension Engines {
         return pattern(b, estimate: yards, tools: [Double(stitches) / g.spi < 16 ? "\(g.needle.label) double-pointed needles, or a long circular for magic loop" : "\(g.needle.label) \(Sizing.cable(16)) circular needle", "Stitch marker", "Tapestry needle"], finished: "\(fits(stitches, g, "calf", calf)) with the rib stretched a little, \(Sizing.inches(tall)) tall", gauge: g, round: true)
     }
 }
+
+extension Engines {
+    /// Gloves as a pair, worked from the cuff up in the round. The thumb grows from a gusset at the side, as
+    /// on the mitts, so either glove fits either hand. The little finger is set aside a little lower than the
+    /// others, the way a hand is shaped; then the index, middle and ring fingers are worked in turn, each
+    /// casting on 2 stitches toward the next finger and picking those 2 up again, so no hole opens between them.
+    /// `hand` is around the knuckles, `length` from the wrist to the tip of the middle finger.
+    static func gloves(hand: Double, length: Double, gauge g: Gauge) -> PatternPlan {
+        let stitches = Sizing.stitches(hand * 0.95, per: g.spi, multiple: 4, minimum: 16)
+        let half = stitches / 2
+        // Each side of the hand shared out across the four fingers: the index widest, the little finger narrowest.
+        let index = max(2, Int((Double(half) * 0.3).rounded()))
+        let little = max(1, Int((Double(half) * 0.2).rounded()))
+        let middle = (half - index - little + 1) / 2
+        let ring = half - index - little - middle
+        let upper = stitches - 2 * little + 2
+        let increases = max(2, Int(((Double(stitches) * 0.36 - 2) / 2).rounded()))
+        let gusset = 1 + 2 * increases
+        let thumb = gusset + 1
+
+        let cuff = Sizing.rows(min(2.5, length * 0.33), per: g.rpi, minimum: 4)
+        let before = Sizing.rows(0.25, per: g.rpi, minimum: 1)
+        let gussetRounds = max(2 * increases, Sizing.rows(length * 0.28, per: g.rpi))
+        let spacing = min(4, max(2, gussetRounds / increases))
+        let extra = max(0, gussetRounds - spacing * increases)
+        // The little finger starts a quarter inch or so below the others.
+        let step = Sizing.rows(max(0.25, length * 0.06), per: g.rpi, minimum: 2)
+        let palm = Sizing.rows(length * 0.57, per: g.rpi)
+        let below = before + 1 + spacing * increases + extra + 1
+        let handRounds = max(1, palm - below - 1 - step)
+        // Each finger from its base, counting the round that sets it up and the round that closes it.
+        func rounds(_ share: Double) -> Int { max(4, Sizing.rows(length * share, per: g.rpi)) }
+        let fingers: [(name: String, stitches: Int, rounds: Int)] = [
+            ("Index Finger", 2 * index + 2, rounds(0.38)),
+            ("Middle Finger", 2 * middle + 4, rounds(0.43)),
+            ("Ring Finger", 2 * ring + 4, rounds(0.39)),
+            ("Little Finger", 2 * little + 2, rounds(0.31)),
+        ]
+        let thumbRounds = rounds(0.31)
+
+        var b = PlanBuilder()
+        for glove in 1...2 {
+            let name = "Glove \(glove)"
+            b.section = "\(name) · Cuff"
+            b.action("Cast on \(stitches) stitches with the smaller needles. Join in the round without twisting and place a marker.", stitches: stitches)
+            b.work(["*K2, p2; repeat from * around"], rows: cuff, stitches: stitches)
+            b.section = "\(name) · Thumb Gusset"
+            b.row("Change to the larger needles and knit", stitches: stitches)
+            b.work(["Knit"], rows: before - 1, stitches: stitches)
+            b.row("K1, place a thumb marker, knit to the end. The stitch before the thumb marker is the gusset", stitches: stitches)
+            b.work(["M1L, knit to the thumb marker, M1R, slip the marker, knit to the end"] + Array(repeating: "Knit", count: spacing - 1), rows: spacing * increases, stitches: stitches + 2, delta: 2)
+            b.work(["Knit"], rows: extra, stitches: stitches + 2 * increases)
+            b.row("Slip the \(gusset) gusset stitches to waste yarn and take out the thumb marker. Cast on 1 stitch over the gap with the backward loop method, then knit to the end. The round now starts at the thumb side", stitches: stitches)
+            b.section = "\(name) · Hand"
+            b.work(["Knit"], rows: handRounds, stitches: stitches)
+            b.row("K\(half - little). Slip the next \(2 * little) stitches to waste yarn for the little finger, cast on 2 stitches over the gap with the backward loop method, then knit to the end", stitches: upper)
+            b.work(["Knit"], rows: step, stitches: upper)
+
+            for (number, finger) in fingers.enumerated() {
+                b.section = "\(name) · \(finger.name)"
+                switch number {
+                case 0:
+                    b.row("K\(index). Slip the next \(upper - 2 * index) stitches to waste yarn for the other fingers, cast on 2 stitches over the gap with the backward loop method, then knit the last \(index) stitches of the round", stitches: finger.stitches)
+                case 1:
+                    b.action("Return the next \(middle) stitches from the front and the \(middle) facing them on the back to the needles. Join new yarn, pick up and knit 2 stitches in the stitches cast on at the base of the index finger, knit the \(middle) front stitches, cast on 2 stitches with the backward loop method, then knit the \(middle) back stitches.", stitches: finger.stitches)
+                case 2:
+                    b.action("Return the last \(2 * ring + 2) held stitches to the needles: \(ring) from the front, the 2 cast on over the little finger, and \(ring) from the back. Join new yarn, pick up and knit 2 stitches in the stitches cast on at the base of the middle finger, then knit the \(2 * ring + 2) stitches.", stitches: finger.stitches)
+                default:
+                    b.action("Return the \(2 * little) held little finger stitches to the needles. Join new yarn, knit them, then pick up and knit 2 stitches in the stitches cast on over the gap.", stitches: finger.stitches)
+                }
+                b.work(["Knit"], rows: finger.rounds - 2, stitches: finger.stitches)
+                b.row("*K2tog; repeat from * around", stitches: finger.stitches / 2)
+                b.action("Cut the yarn, thread it through the \(finger.stitches / 2) stitches and pull tight.")
+            }
+
+            b.section = "\(name) · Thumb"
+            // Three picked up at the gap, then two taken away, so the base of the thumb closes without a hole.
+            b.action("Return the \(gusset) held thumb stitches to the larger needles. Join new yarn at the gap and pick up and knit 3 stitches: one in the corner, one in the stitch cast on over the gap, and one in the other corner. Place a marker for the start of the round.", stitches: thumb + 2)
+            b.row("Knit to the last 4 stitches, k2tog, k2tog", stitches: thumb)
+            b.work(["Knit"], rows: thumbRounds - 3, stitches: thumb)
+            b.row("*K2tog; repeat from * around", stitches: thumb / 2)
+            b.action("Cut the yarn, thread it through the \(thumb / 2) stitches and pull tight. Weave in the ends, closing any gaps between the fingers and at the base of the thumb.")
+        }
+        let tip = Double(cuff + palm + fingers[1].rounds) / g.rpi
+        let yards = Sizing.yards(squareInches: hand * tip * 1.3 * 2, spi: g.spi, factor: 1.1)
+        let tools = ["\(g.ribNeedle.label) double-pointed needles for the cuff, or a long circular for magic loop", "\(g.needle.label) double-pointed needles for the hand and fingers, or a long circular", "2 stitch markers, waste yarn", "Tapestry needle"]
+        let finished = "\(fits(stitches, g, "hand", hand)), \(Sizing.inches(Double(palm + fingers[1].rounds) / g.rpi)) from the wrist to the tip of the middle finger, with a \(Sizing.inches(Double(cuff) / g.rpi)) cuff"
+        return pattern(b, estimate: yards, tools: tools, finished: finished, gauge: g, round: true)
+    }
+}

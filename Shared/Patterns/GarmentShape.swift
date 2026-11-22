@@ -132,6 +132,22 @@ enum GarmentShape {
         case .placemat:
             // A mat wider than it is tall, as it lies on the table.
             path.addRoundedRect(in: box(0.08, 0.24, 0.84, 0.54), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03)
+        case .gloves:
+            // A pair, thumbs inward: a palm and cuff, four fingers of a hand's lengths, and the thumb at the side.
+            for (x, inward) in [(CGFloat(0.1), CGFloat(1)), (0.56, -1)] {
+                func round(_ r: CGRect, _ c: CGFloat) -> CGPath { CGPath(roundedRect: r, cornerWidth: unit * c, cornerHeight: unit * c, transform: nil) }
+                var glove = round(box(x, 0.46, 0.3, 0.42), 0.05)
+                // Little, ring, middle, index, from the outer edge in.
+                let lengths: [CGFloat] = [0.17, 0.23, 0.26, 0.22]
+                for (n, long) in lengths.enumerated() {
+                    let slot = inward > 0 ? CGFloat(n) : CGFloat(3 - n)
+                    let drop: CGFloat = n == 0 ? 0.05 : 0
+                    glove = glove.union(round(box(x + 0.012 + slot * 0.072, 0.5 + drop - long, 0.06, long + 0.04), 0.03))
+                }
+                let side = inward > 0 ? x + 0.24 : x - 0.04
+                glove = glove.union(round(box(side, 0.5, 0.1, 0.2), 0.045))
+                path.addPath(glove)
+            }
         case .shrug:
             // Two sleeves joined across the back, the ribbed band around the opening between them.
             path.move(to: p(0.02, 0.56))

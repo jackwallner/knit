@@ -492,3 +492,9 @@ Cuff to Cuff
 First Cuff
 Second Cuff
 Sleeves
+Gloves
+Glove %lld
+Index Finger
+Middle Finger
+Ring Finger
+Little Finger

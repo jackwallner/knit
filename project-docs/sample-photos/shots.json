@@ -432,6 +432,10 @@
   "shrug": {
    "camera": "sun",
    "scene": "worn over a sleeveless summer dress, seen from the back in a garden"
+  },
+  "gloves": {
+   "camera": "outdoor",
+   "scene": "worn on both hands holding a bare winter branch outside, overcast sky"
   }
  }
 }
