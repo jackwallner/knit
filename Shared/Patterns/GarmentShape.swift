@@ -377,6 +377,23 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .pouf:
+            // A squat round cushion seen from the side: the top's oval, bulging sides and rib lines down them.
+            let body = CGMutablePath()
+            body.move(to: p(0.1, 0.36))
+            body.addQuadCurve(to: p(0.1, 0.7), control: p(0.06, 0.53))
+            body.addQuadCurve(to: p(0.9, 0.7), control: p(0.5, 0.92))
+            body.addQuadCurve(to: p(0.9, 0.36), control: p(0.94, 0.53))
+            body.addQuadCurve(to: p(0.1, 0.36), control: p(0.5, 0.14))
+            body.closeSubpath()
+            let cuts = CGMutablePath()
+            cuts.addEllipse(in: box(0.14, 0.27, 0.72, 0.17))
+            for x in stride(from: CGFloat(0.2), through: 0.8, by: 0.1) {
+                let drop = 0.06 * (1 - pow((x - 0.5) / 0.4, 2))
+                cuts.addRect(box(x - 0.006, 0.47 + drop, 0.012, 0.18))
+            }
+            path.addPath(body.subtracting(cuts))
+            path.addPath(CGPath(ellipseIn: box(0.17, 0.3, 0.66, 0.11), transform: nil))
         case .scrunchie:
             // A gathered ring: puffs all the way round a small hole.
             var ring: CGPath = CGPath(ellipseIn: box(0.16, 0.16, 0.68, 0.68), transform: nil)

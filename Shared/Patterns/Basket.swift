@@ -44,7 +44,7 @@ extension Engines {
         let radius = wide / (2 * Double.pi)
         let tall = Double(1 + below + 2 + rest) / garter
         let area = Double.pi * radius * radius + wide * tall * 1.25
-        let needles = wide >= 30 ? "\(Sizing.cable(16)) and \(Sizing.cable(24)) circular needles" : wide >= 17 ? "a \(Sizing.cable(16)) circular needle" : ""
+        let needles = discNeedles(around, g)
         let plan = pattern(
             b, estimate: Sizing.yards(squareInches: area, spi: g.spi),
             yarnNote: ", cotton or a firm wool, knit tightly so the sides stand",
