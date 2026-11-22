@@ -1784,6 +1784,55 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/flower-beanie.jpg"
+    },
+    {
+      "id": "reindeer-beanie",
+      "title": "Reindeer Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "brown",
+          "hex": "#7A5536"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "D.D.....D.D",
+          ".D.D...D.D.",
+          "..DD...DD..",
+          "...BBBBB...",
+          "..BBBBBBB..",
+          ".BBBBBBBBB.",
+          "..B.BBB.B..",
+          "..BBBBBBB..",
+          "...BBBBB...",
+          "....BCB...."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/reindeer-beanie.jpg"
     }
   ]
 }

@@ -584,6 +584,10 @@
   "flower-beanie": {
    "camera": "sun",
    "scene": "worn by someone sitting on a park bench in spring"
+  },
+  "reindeer-beanie": {
+   "camera": "flash",
+   "scene": "on a Christmas-card shelf beside pine branches"
   }
  }
 }
