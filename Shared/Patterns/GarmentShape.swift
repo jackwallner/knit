@@ -377,6 +377,17 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .basket:
+            // A round basket seen from the side: the rim's oval opening, straight sides and two handle slots.
+            let body = CGMutablePath()
+            body.addEllipse(in: box(0.16, 0.2, 0.68, 0.2))
+            body.addRect(box(0.16, 0.3, 0.68, 0.5))
+            let shell = CGPath(ellipseIn: box(0.16, 0.7, 0.68, 0.2), transform: nil).union(body)
+            let cuts = CGMutablePath()
+            cuts.addEllipse(in: box(0.21, 0.235, 0.58, 0.13))
+            cuts.addPath(CGPath(roundedRect: box(0.25, 0.42, 0.13, 0.06), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil))
+            cuts.addPath(CGPath(roundedRect: box(0.62, 0.42, 0.13, 0.06), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil))
+            path.addPath(shell.subtracting(cuts))
         case .cocoon:
             // A long pod closed in a round at the bottom, the rib folded down over its top a little wider.
             let pod = CGMutablePath()

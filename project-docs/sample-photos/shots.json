@@ -468,6 +468,10 @@
   "tubeSocks": {
    "camera": "snap",
    "scene": "laid flat as a pair on a wooden floor beside slippers"
+  },
+  "knitBasket": {
+   "camera": "overcast",
+   "scene": "on a shelf holding rolled yarn skeins, beside a window"
   }
  }
 }

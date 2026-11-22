@@ -7,19 +7,7 @@ extension Engines {
     static func bucketHat(head: Double, gauge g: Gauge) -> PatternPlan {
         // A bucket hat sits on the head without stretching: its band is the head around.
         let around = max(48, Int((head * g.spi / 8).rounded()) * 8)
-        var crown: [(text: String, stitches: Int)] = []
-        var count = 8
-        var moved = false
-        while count < around {
-            count += 8
-            var text = "*K\(count / 8 - 1), M1L; repeat from * around"
-            if !moved, Double(count) / g.spi >= 17 {
-                text += ". Move the stitches to the \(Sizing.cable(16)) needle"
-                moved = true
-            }
-            crown.append((text, count))
-            crown.append(("Knit", count))
-        }
+        let crown = disc(to: around, gauge: g)
 
         var b = PlanBuilder()
         b.section = "Crown"
