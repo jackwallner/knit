@@ -1737,6 +1737,53 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/fair-isle-band-cowl.jpg"
+    },
+    {
+      "id": "flower-beanie",
+      "title": "Flower Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "pink",
+          "hex": "#E3A1AE"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        }
+      ],
+      "brim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "..BBB..",
+          ".BBCBB.",
+          "BBCCCBB",
+          ".BBCBB.",
+          "..BBB..",
+          "...D...",
+          ".DDDDD.",
+          "..DDD.."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/flower-beanie.jpg"
     }
   ]
 }

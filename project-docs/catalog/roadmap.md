@@ -200,7 +200,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
 | 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | planned |
 | 118 | Hood | Accessories | Adults, easy | New shape | verified (built as Cowl Hood) |
-| 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | planned |
+| 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 120 | Honeycomb Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 121 | Double Moss Pillow | Home | Anyone, beginner | Stitch | planned |
 | 122 | Reindeer Beanie | Holiday | Gift, intermediate | Colorwork | planned |

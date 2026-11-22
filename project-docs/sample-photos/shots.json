@@ -580,6 +580,10 @@
   "fair-isle-band-cowl": {
    "camera": "lamp",
    "scene": "draped over a wooden chair"
+  },
+  "flower-beanie": {
+   "camera": "sun",
+   "scene": "worn by someone sitting on a park bench in spring"
   }
  }
 }
