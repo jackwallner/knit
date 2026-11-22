@@ -1,0 +1,21 @@
+ok   mistake-rib-scarf: Mistake Rib Scarf, 5 sizes x 6 weights
+
+== mistake-rib-scarf, Child, Worsted, 250 yd
+5 in wide, 48 in long
+  About 250 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [27]: Cast on 27 stitches.
+Scarf x302 [27]: *K2, p2; repeat from * to the last 3 stitches, k2, p1 / *K2, p2; repeat from * to the last 3 stitches, k2, p1
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== mistake-rib-scarf, Long, Worsted, 630 yd
+8 in wide, 75.75 in long
+  About 630 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [43]: Cast on 43 stitches.
+Scarf x478 [43]: *K2, p2; repeat from * to the last 3 stitches, k2, p1 / *K2, p2; repeat from * to the last 3 stitches, k2, p1
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

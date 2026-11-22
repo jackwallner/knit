@@ -2113,6 +2113,578 @@
       ],
       "tag": "Stripes",
       "photo": "photos/striped-pillow.jpg"
+    },
+    {
+      "id": "honeycomb-blanket",
+      "title": "Honeycomb Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "sky",
+          "hex": "#8FB4CC"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-blanket.jpg"
+    },
+    {
+      "id": "feather-and-fan-blanket",
+      "title": "Feather and Fan Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "lavender",
+          "hex": "#A99BC4"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/feather-and-fan-blanket.jpg"
+    },
+    {
+      "id": "linen-stitch-blanket",
+      "title": "Linen Stitch Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "flax",
+          "hex": "#CDBB93"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-blanket.jpg"
+    },
+    {
+      "id": "diamond-brocade-blanket",
+      "title": "Diamond Brocade Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "slate",
+          "hex": "#5F6F7F"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-blanket.jpg"
+    },
+    {
+      "id": "garter-ridge-blanket",
+      "title": "Garter Ridge Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "garterRidge",
+      "palette": [
+        {
+          "name": "moss",
+          "hex": "#7A8B52"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/garter-ridge-blanket.jpg"
+    },
+    {
+      "id": "seeded-rib-blanket",
+      "title": "Seeded Rib Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "clay",
+          "hex": "#B87A5C"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-blanket.jpg"
+    },
+    {
+      "id": "broken-rib-blanket",
+      "title": "Broken Rib Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#3F7F83"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-blanket.jpg"
+    },
+    {
+      "id": "diamond-brocade-scarf",
+      "title": "Diamond Brocade Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "plum",
+          "hex": "#6E4A6A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-scarf.jpg"
+    },
+    {
+      "id": "chevron-lace-scarf",
+      "title": "Chevron Lace Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "chevronLace",
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#D9A5A0"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/chevron-lace-scarf.jpg"
+    },
+    {
+      "id": "mistake-rib-scarf",
+      "title": "Mistake Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "mistakeRib",
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#4A4D52"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/mistake-rib-scarf.jpg"
+    },
+    {
+      "id": "garter-ridge-scarf",
+      "title": "Garter Ridge Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "garterRidge",
+      "palette": [
+        {
+          "name": "forest",
+          "hex": "#3E6B4F"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/garter-ridge-scarf.jpg"
+    },
+    {
+      "id": "honeycomb-scarf",
+      "title": "Honeycomb Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "amber",
+          "hex": "#C1812B"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-scarf.jpg"
+    },
+    {
+      "id": "broken-rib-scarf",
+      "title": "Broken Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "denim",
+          "hex": "#4F6D8F"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-scarf.jpg"
+    },
+    {
+      "id": "waffle-scarf",
+      "title": "Waffle Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "cranberry",
+          "hex": "#9B2D3A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-scarf.jpg"
+    },
+    {
+      "id": "seeded-rib-scarf",
+      "title": "Seeded Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "stone",
+          "hex": "#9A948A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-scarf.jpg"
+    },
+    {
+      "id": "eyelet-lace-scarf",
+      "title": "Eyelet Lace Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "eyelet",
+      "palette": [
+        {
+          "name": "mint",
+          "hex": "#A8CDB5"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/eyelet-lace-scarf.jpg"
+    },
+    {
+      "id": "hurdle-stitch-scarf",
+      "title": "Hurdle Stitch Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "hurdle",
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#2B3A55"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/hurdle-stitch-scarf.jpg"
+    },
+    {
+      "id": "seeded-rib-cowl",
+      "title": "Seeded Rib Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "wine",
+          "hex": "#7A2E45"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-cowl.jpg"
+    },
+    {
+      "id": "rope-cable-cowl",
+      "title": "Rope Cable Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "ivory",
+          "hex": "#EDE6D3"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/rope-cable-cowl.jpg"
+    },
+    {
+      "id": "chevron-lace-cowl",
+      "title": "Chevron Lace Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "chevronLace",
+      "palette": [
+        {
+          "name": "aqua",
+          "hex": "#7FB8B2"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/chevron-lace-cowl.jpg"
+    },
+    {
+      "id": "basketweave-cowl",
+      "title": "Basketweave Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "basketweave",
+      "palette": [
+        {
+          "name": "cocoa",
+          "hex": "#6B4A3A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/basketweave-cowl.jpg"
+    },
+    {
+      "id": "feather-and-fan-cowl",
+      "title": "Feather and Fan Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "coral",
+          "hex": "#E0806A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/feather-and-fan-cowl.jpg"
+    },
+    {
+      "id": "linen-stitch-cowl",
+      "title": "Linen Stitch Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "olive",
+          "hex": "#6B7040"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-cowl.jpg"
+    },
+    {
+      "id": "honeycomb-washcloth",
+      "title": "Honeycomb Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "butter",
+          "hex": "#E8D28A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-washcloth.jpg"
+    },
+    {
+      "id": "diamond-brocade-washcloth",
+      "title": "Diamond Brocade Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "seafoam",
+          "hex": "#9CC9BF"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-washcloth.jpg"
+    },
+    {
+      "id": "garter-ridge-washcloth",
+      "title": "Garter Ridge Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "garterRidge",
+      "palette": [
+        {
+          "name": "terracotta",
+          "hex": "#C0694A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/garter-ridge-washcloth.jpg"
     }
   ]
 }

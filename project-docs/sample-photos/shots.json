@@ -616,6 +616,110 @@
   "striped-pillow": {
    "camera": "flash",
    "scene": "on a sofa cushion in a living room"
+  },
+  "honeycomb-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a gray sofa, a lamp glowing behind it"
+  },
+  "feather-and-fan-blanket": {
+   "camera": "overcast",
+   "scene": "spread over the end of a white crib, soft grey window light"
+  },
+  "linen-stitch-blanket": {
+   "camera": "snap",
+   "scene": "folded on a wooden bench in an entryway, a shoe partly in view"
+  },
+  "diamond-brocade-blanket": {
+   "camera": "sun",
+   "scene": "draped over a chair by a window"
+  },
+  "garter-ridge-blanket": {
+   "camera": "overcast",
+   "scene": "laid flat on a white bed, soft daylight"
+  },
+  "seeded-rib-blanket": {
+   "camera": "flash",
+   "scene": "folded at the foot of a bed at night"
+  },
+  "broken-rib-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a leather sofa"
+  },
+  "diamond-brocade-scarf": {
+   "camera": "overcast",
+   "scene": "laid flat and straight on a pale wooden floor, photographed from above at a slight angle"
+  },
+  "chevron-lace-scarf": {
+   "camera": "overcast",
+   "scene": "laid in a loose S across an unmade bed with white sheets"
+  },
+  "mistake-rib-scarf": {
+   "camera": "overcast",
+   "scene": "laid flat on a pale oak table beside a window in bright even daylight"
+  },
+  "garter-ridge-scarf": {
+   "camera": "sun",
+   "scene": "hung over the back of a wooden chair by a window"
+  },
+  "honeycomb-scarf": {
+   "camera": "lamp",
+   "scene": "draped over a stack of library books on a desk, warm lamplight"
+  },
+  "broken-rib-scarf": {
+   "camera": "snap",
+   "scene": "hanging on a coat hook by a front door, a coat sleeve partly in view"
+  },
+  "waffle-scarf": {
+   "camera": "overcast",
+   "scene": "laid on a wooden table beside a mug"
+  },
+  "seeded-rib-scarf": {
+   "camera": "oldphone",
+   "scene": "draped over a radiator cover"
+  },
+  "eyelet-lace-scarf": {
+   "camera": "outdoor",
+   "scene": "hung over a garden gate in flat daylight"
+  },
+  "hurdle-stitch-scarf": {
+   "camera": "flash",
+   "scene": "laid flat on a dark wooden floor"
+  },
+  "seeded-rib-cowl": {
+   "camera": "overcast",
+   "scene": "worn bunched around the neck of a person in a gray wool coat, cropped at the chest, on a cold street"
+  },
+  "rope-cable-cowl": {
+   "camera": "lamp",
+   "scene": "laid flat on a wooden table, lying as a flattened loop, the ribbed bottom edge at the lower side of the frame and the ribbed top edge at the upper side"
+  },
+  "chevron-lace-cowl": {
+   "camera": "sun",
+   "scene": "draped over the back of a wooden chair in a sunny room"
+  },
+  "basketweave-cowl": {
+   "camera": "lamp",
+   "scene": "worn around the neck of a person in a flannel shirt, cropped at the chest, indoors in the evening"
+  },
+  "feather-and-fan-cowl": {
+   "camera": "overcast",
+   "scene": "lying on a white duvet, soft grey window light"
+  },
+  "linen-stitch-cowl": {
+   "camera": "snap",
+   "scene": "worn by a person in a rain jacket, cropped at the chest, a bus stop blurred behind"
+  },
+  "honeycomb-washcloth": {
+   "camera": "sun",
+   "scene": "folded on a wooden bath tray beside a sprig of eucalyptus"
+  },
+  "diamond-brocade-washcloth": {
+   "camera": "oldphone",
+   "scene": "on the edge of a white enamel kitchen sink"
+  },
+  "garter-ridge-washcloth": {
+   "camera": "lamp",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap"
   }
  }
 }

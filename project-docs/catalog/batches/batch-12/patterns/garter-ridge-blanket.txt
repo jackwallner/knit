@@ -1,0 +1,25 @@
+ok   garter-ridge-blanket: Garter Ridge Blanket, 5 sizes x 5 weights
+
+== garter-ridge-blanket, Stroller, Worsted, 980 yd
+30 in wide, 35 in long
+  About 980 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [135]: Cast on 135 stitches.
+Bottom Border x12 [135]: Knit
+Body x204 [135]: Knit / K6, purl to the last 6 stitches, k6 / Knit / K6, purl to the last 6 stitches, k6 / K6, purl to the last 6 stitches, k6 / Knit
+Top Border x12 [135]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== garter-ridge-blanket, Throw, Worsted, 2660 yd
+48 in wide, 59.75 in long
+  About 2,660 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [216]: Cast on 216 stitches.
+Bottom Border x12 [216]: Knit
+Body x360 [216]: Knit / K6, purl to the last 6 stitches, k6 / Knit / K6, purl to the last 6 stitches, k6 / K6, purl to the last 6 stitches, k6 / Knit
+Top Border x12 [216]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

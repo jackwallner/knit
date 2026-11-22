@@ -1,0 +1,23 @@
+ok   seeded-rib-cowl: Seeded Rib Cowl, 5 sizes x 5 weights
+
+== seeded-rib-cowl, Snug, Worsted, 180 yd
+21.75 in around, 8 in tall
+  About 180 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [112]: Cast on 112 stitches. Join in the round without twisting and place a marker.
+Cowl x50 [112]: *K3, p1; repeat from * around / *P1, k1, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== seeded-rib-cowl, Infinity, Worsted, 460 yd
+51.75 in around, 9 in tall
+  About 460 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [268]: Cast on 268 stitches. Join in the round without twisting and place a marker.
+Cowl x56 [268]: *K3, p1; repeat from * around / *P1, k1, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

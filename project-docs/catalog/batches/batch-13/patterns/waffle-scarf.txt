@@ -1,0 +1,21 @@
+ok   waffle-scarf: Waffle Scarf, 5 sizes x 6 weights
+
+== waffle-scarf, Child, Worsted, 260 yd
+5.25 in wide, 48 in long
+  About 260 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [25]: Cast on 25 stitches.
+Scarf x332 [25]: *P1, k2; repeat from * to the last stitch, p1 / *K1, p2; repeat from * to the last stitch, k1 / *P1, k2; repeat from * to the last stitch, p1 / Knit
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== waffle-scarf, Long, Worsted, 610 yd
+7.75 in wide, 76 in long
+  About 610 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [37]: Cast on 37 stitches.
+Scarf x524 [37]: *P1, k2; repeat from * to the last stitch, p1 / *K1, p2; repeat from * to the last stitch, k1 / *P1, k2; repeat from * to the last stitch, p1 / Knit
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

@@ -560,3 +560,29 @@ Striped Raglan
 Striped Vest
 Striped Drop-Shoulder
 Striped Pillow
+Honeycomb Blanket
+Feather and Fan Blanket
+Linen Stitch Blanket
+Diamond Brocade Blanket
+Garter Ridge Blanket
+Seeded Rib Blanket
+Broken Rib Blanket
+Diamond Brocade Scarf
+Chevron Lace Scarf
+Mistake Rib Scarf
+Garter Ridge Scarf
+Honeycomb Scarf
+Broken Rib Scarf
+Waffle Scarf
+Seeded Rib Scarf
+Eyelet Lace Scarf
+Hurdle Stitch Scarf
+Seeded Rib Cowl
+Rope Cable Cowl
+Chevron Lace Cowl
+Basketweave Cowl
+Feather and Fan Cowl
+Linen Stitch Cowl
+Honeycomb Washcloth
+Diamond Brocade Washcloth
+Garter Ridge Washcloth

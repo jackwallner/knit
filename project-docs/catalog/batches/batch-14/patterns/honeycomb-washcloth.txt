@@ -1,0 +1,25 @@
+ok   honeycomb-washcloth: Honeycomb Washcloth, 5 sizes x 3 weights
+
+== honeycomb-washcloth, Small, Worsted, 50 yd
+7 in wide, 7 in long
+  About 50 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [33]: Cast on 33 stitches.
+Bottom Border x6 [33]: Knit
+Body x40 [33]: K4, *sl1 wyif, k1; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3 / K5, *sl1 wyif, k1; repeat from * to the last 4 stitches, k4 / K3, purl to the last 3 stitches, k3
+Top Border x6 [33]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== honeycomb-washcloth, Large, Worsted, 100 yd
+10 in wide, 10.25 in long
+  About 100 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [47]: Cast on 47 stitches.
+Bottom Border x6 [47]: Knit
+Body x64 [47]: K4, *sl1 wyif, k1; repeat from * to the last 3 stitches, k3 / K3, purl to the last 3 stitches, k3 / K5, *sl1 wyif, k1; repeat from * to the last 4 stitches, k4 / K3, purl to the last 3 stitches, k3
+Top Border x6 [47]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

@@ -1,0 +1,25 @@
+ok   rope-cable-cowl: Rope Cable Cowl, 5 sizes x 5 weights
+
+== rope-cable-cowl, Snug, Worsted, 190 yd
+22.25 in around, 8 in tall
+  About 190 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Cable needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [120]: Cast on 120 stitches. Join in the round without twisting and place a marker.
+Cowl x48 [120]: *P2, C4F; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== rope-cable-cowl, Infinity, Worsted, 500 yd
+52.25 in around, 9 in tall
+  About 500 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Cable needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [282]: Cast on 282 stitches. Join in the round without twisting and place a marker.
+Cowl x54 [282]: *P2, C4F; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around / *P2, k4; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
