@@ -358,6 +358,16 @@ enum GarmentShape {
             opening.addLine(to: p(0.492, 0.42))
             opening.closeSubpath()
             path.addPath(GarmentShape.path(.sweater, in: rect).subtracting(opening))
+        case .bucket:
+            // A rounded crown, straight sides and a brim sloping out all round.
+            path.move(to: p(0.3, 0.3))
+            path.addQuadCurve(to: p(0.7, 0.3), control: p(0.5, 0.16))
+            path.addLine(to: p(0.74, 0.58))
+            path.addLine(to: p(0.94, 0.74))
+            path.addQuadCurve(to: p(0.06, 0.74), control: p(0.5, 0.84))
+            path.addLine(to: p(0.26, 0.58))
+            path.closeSubpath()
+            path.addPath(CGPath(rect: box(0.25, 0.56, 0.5, 0.014), transform: nil))
         case .babyPullover:
             // The sweater with two buttons on one shoulder, where the neck opens.
             let holes = CGMutablePath()

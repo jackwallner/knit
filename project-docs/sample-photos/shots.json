@@ -452,6 +452,10 @@
   "babyPullover": {
    "camera": "snap",
    "scene": "on a baby sitting up on a soft blanket on the floor, seen from the front"
+  },
+  "bucketHat": {
+   "camera": "sun",
+   "scene": "on a sunlit wooden bench by a garden path"
   }
  }
 }
