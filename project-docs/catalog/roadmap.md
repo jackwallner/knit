@@ -158,7 +158,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 74 | Knit Basket | Home | Anyone, easy | New shape: round base from the center out, garter sides, two handle slots below the rim | verified |
 | 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 76 | Kids' Vest | Sweaters | Children 2 to 12, intermediate | New shape: V-neck vest cut from the child sizes (armhole, cross back and neck) | verified |
-| 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | planned |
+| 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 78 | Seeded Rib Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 79 | Table Runner | Home | Anyone, beginner | New shape: garter, knit point to point, a tassel at each point | verified |
 | 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | planned |

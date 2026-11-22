@@ -528,6 +528,10 @@
   "pixieHat": {
    "camera": "snap",
    "scene": "a toddler's play mat in a bright living room, daylight"
+  },
+  "polka-dot-beanie": {
+   "camera": "flash",
+   "scene": "lying flat on a wooden kitchen table"
   }
  }
 }
