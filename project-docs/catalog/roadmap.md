@@ -48,7 +48,7 @@ shape or edging, or for an AI tell; three failed tries means no photo. New photo
 (`docs/photos/<id>.jpg`, committed on this branch only) and cached on the phone, so the app does not carry
 them. A design whose photo is not accepted stays in `awaitingPhoto` in `PatternTests` and shows its drawing.
 
-Accepted on my read, waiting for the peer's: batch 1 (2026-11-21).
+Accepted on my read, waiting for the peer's: batches 1 and 2 (2026-11-21).
 
 ## The knitter's read (2026-11-21)
 
