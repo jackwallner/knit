@@ -989,6 +989,17 @@ final class PatternTests: XCTestCase {
     }
 
     /// The shrug's sleeve seams leave at least a foot open across the back, and its cuff and band rib come out whole.
+    /// The drawn texture matches the stitch it stands for: one repeat wide and one repeat of rounds high.
+    func testEveryStitchDrawsOneRepeatOfItsFace() {
+        for stitch in Stitch.allCases {
+            XCTAssertEqual(stitch.face.count, stitch.round.count, stitch.name)
+            for row in stitch.face {
+                XCTAssertEqual(row.count, stitch.multiple, stitch.name)
+                XCTAssertTrue(row.allSatisfy("kptfoc".contains), stitch.name)
+            }
+        }
+    }
+
     func testTheShrugLeavesTheBackOpen() {
         for input in inputs(.shrug) {
             for gauge in gauges {

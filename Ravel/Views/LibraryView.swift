@@ -231,7 +231,7 @@ struct DesignTile: View {
                     .overlay { Image(uiImage: image).resizable().scaledToFill().accessibilityHidden(true) }
                     .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
             } else {
-                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview, stitch: item.stitch)
                     .padding(14)
                     .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
                     // Decorative like the photo: the title under it names the tile.
@@ -367,7 +367,7 @@ struct DesignView: View {
                     .accessibilityLabel(Text(verbatim: item.title))
                     .accessibilityAddTraits(.isImage)
             } else {
-                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan, stitch: item.stitch)
                     .frame(height: height)
                     .task { if let path = item.sitePhoto { await PhotoStore.shared.load(path) } }
             }

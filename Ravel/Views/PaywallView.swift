@@ -95,7 +95,7 @@ struct PaywallView: View {
     private var lead: some View {
         if let topical = TopicalStore.shared.items.first(where: { !$0.isFree }) {
             let item = LibraryItem.topical(topical)
-            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
+            Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview, stitch: item.stitch)
         } else {
             Garment(silhouette: .hat, yarn: .spruce)
         }

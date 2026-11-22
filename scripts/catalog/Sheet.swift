@@ -82,6 +82,8 @@ struct Sheet {
                     context.fill(CGRect(x: box.minX + CGFloat(c) * cw, y: box.minY + CGFloat(r) * ch, width: cw + 0.5, height: ch + 0.5))
                 }
             }
+        } else if let stitch = item.stitch {
+            texture(stitch, shade: palette[0], in: drawBox, context: context)
         } else {
             context.setFillColor(color(palette[0]))
             context.fill(drawBox)
@@ -108,6 +110,37 @@ struct Sheet {
         y -= 21
         let weights = item.weights.count == YarnWeight.allCases.count ? "Every weight, lace to super bulky" : item.weights.map(\.label).joined(separator: ", ")
         text(weights, size: 14, at: CGPoint(x: left, y: y), in: context)
+    }
+
+    /// The stitch pattern's texture, drawn the way the app's `Garment` draws it.
+    static func texture(_ stitch: Stitch, shade: Shade, in box: CGRect, context: CGContext) {
+        let rgb = shade.rgb ?? (0.5, 0.5, 0.5)
+        func scaled(_ f: Double) -> CGColor { CGColor(srgbRed: rgb.red * f, green: rgb.green * f, blue: rgb.blue * f, alpha: 1) }
+        let w = max(5, box.width / 16)
+        context.saveGState()
+        context.translateBy(x: box.minX, y: box.minY)
+        context.setFillColor(scaled(0.55))
+        context.fill(CGRect(origin: .zero, size: box.size))
+        context.setLineCap(.round)
+        func strand(_ path: CGPath, _ f: Double, _ width: CGFloat) {
+            for (color, line) in [(scaled(0.55), width + max(1, w * 0.1)), (scaled(f), width)] {
+                context.addPath(path)
+                context.setStrokeColor(color)
+                context.setLineWidth(line)
+                context.strokePath()
+            }
+        }
+        for row in StitchTexture.rows(stitch, in: box.size, stitch: w) {
+            strand(row.left, 1, w * StitchTexture.leg)
+            strand(row.right, 0.9, w * StitchTexture.leg)
+            strand(row.bumps, 0.9, w * StitchTexture.bump)
+            context.addPath(row.holes)
+            context.setFillColor(CGColor(gray: 0, alpha: 0.45))
+            context.fillPath()
+            strand(row.floats, 1, w * StitchTexture.leg * 0.8)
+            strand(row.cables, 1, w * StitchTexture.cable)
+        }
+        context.restoreGState()
     }
 
     static func color(_ shade: Shade) -> CGColor {
