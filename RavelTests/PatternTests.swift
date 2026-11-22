@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf", "babyBib"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf", "babyBib", "bathMat"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 85)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 122)
+        XCTAssertEqual(Design.allCases.count, 86)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 123)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -1371,6 +1371,22 @@ final class PatternTests: XCTestCase {
                 let garter = gauge.spi * 2
                 let neckFront = Double(bib.width - 2 * bib.strap) / gauge.spi
                 XCTAssertGreaterThanOrEqual(neckFront + 2 * Double(bib.strapRows) / garter, width + 4.5, "\(input)")
+            }
+        }
+    }
+
+    func testBathMatGrowsToItsSize() {
+        for input in inputs(.bathMat) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0, length = input["length"] ?? 0
+                let mat = Engines.bathMat(width: width, length: length, gauge: gauge)
+                let body = rows(mat.plan, "Body")
+                XCTAssertEqual(body.filter { $0.text.hasPrefix("*M1L") }.count, mat.increaseRounds, "\(input)")
+                XCTAssertEqual(body.last?.stitches, mat.finalStitches, "\(input)")
+                // The garter rounds out from the middle make the width; the stitches along a side make the length.
+                let across = Double(2 * mat.increaseRounds + 1) / (gauge.spi * 2) * 2
+                XCTAssertEqual(across, width, accuracy: 1.5, "\(input)")
+                XCTAssertEqual(Double(mat.middle + 2 + 2 * mat.increaseRounds) / gauge.spi, max(length, width), accuracy: 1.5, "\(input)")
             }
         }
     }

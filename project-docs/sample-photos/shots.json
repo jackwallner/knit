@@ -496,6 +496,10 @@
   "babyBib": {
    "camera": "overcast",
    "scene": "a nursery changing table by a window, soft daylight"
+  },
+  "bathMat": {
+   "camera": "snap",
+   "scene": "a white tiled bathroom floor beside a tub, bright morning light"
   }
  }
 }

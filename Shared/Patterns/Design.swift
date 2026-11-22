@@ -33,7 +33,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     case pompomBonnet, beret
     case dropShoulder, keyholeScarf, slippers, babyBooties
     case toeUpSocks, fingerlessMitts, babyCardigan, topDownBeanie, twistedHeadband, poncho, christmasStocking
-    case washcloth, knotHat, asymmetricShawl, bandanaCowl, armWarmers, watchCap, hoodedScarf, coasters, babyMittens, catHat, teaCozy, bootCuffs, kidsCardigan, babySocks, mugCozy, capelet, placemat, miniStocking, raglanTee, pouch, bottleCover, bandanaKerchief, turtleneck, shrug, gloves, yokeSweater, tankTop, croppedCardigan, babyPullover, bucketHat, toteBag, babyCocoon, tubeSocks, knitBasket, kidsVest, tableRunner, ruana, scrunchie, floorPouf, babyBib
+    case washcloth, knotHat, asymmetricShawl, bandanaCowl, armWarmers, watchCap, hoodedScarf, coasters, babyMittens, catHat, teaCozy, bootCuffs, kidsCardigan, babySocks, mugCozy, capelet, placemat, miniStocking, raglanTee, pouch, bottleCover, bandanaKerchief, turtleneck, shrug, gloves, yokeSweater, tankTop, croppedCardigan, babyPullover, bucketHat, toteBag, babyCocoon, tubeSocks, knitBasket, kidsVest, tableRunner, ruana, scrunchie, floorPouf, babyBib, bathMat
 
     enum Shelf: String, CaseIterable, Identifiable, Sendable {
         case hats = "Hats"
@@ -60,7 +60,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case hat, slouch, scarf, cowl, blanket, cloth, band, mitts, tubes, shawl, sweater, hood, kerchief, ears
         case socks, mittens, cardigan, vest, earflap, wrap, crescent, bag, pillow, bonnet, beret
         case dropShoulder, keyhole, slipper
-        case toeUp, topDown, poncho, stocking, knot, asymmetric, bandana, sleeves, watch, hoodedScarf, coasters, babyMittens, catHat, teaCozy, bootCuffs, mugCozy, capelet, placemat, tee, pouch, bottleCover, tieKerchief, turtleneck, shrug, gloves, yoke, tank, cropped, babyPullover, bucket, tote, cocoon, tubeSock, basket, runner, ruana, scrunchie, pouf, bib
+        case toeUp, topDown, poncho, stocking, knot, asymmetric, bandana, sleeves, watch, hoodedScarf, coasters, babyMittens, catHat, teaCozy, bootCuffs, mugCozy, capelet, placemat, tee, pouch, bottleCover, tieKerchief, turtleneck, shrug, gloves, yoke, tank, cropped, babyPullover, bucket, tote, cocoon, tubeSock, basket, runner, ruana, scrunchie, pouf, bib, bathMat
     }
 
     var id: String { rawValue }
@@ -120,6 +120,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .scrunchie: "Scrunchie"
         case .floorPouf: "Floor Pouf"
         case .babyBib: "Baby Bib"
+        case .bathMat: "Bath Mat"
         case .christmasStocking: "Christmas Stocking"
         case .miniStocking: "Mini Stocking Ornament"
         case .washcloth: "Bordered Washcloth"
@@ -183,6 +184,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .scrunchie: "scrunchie hair tie ponytail elastic"
         case .floorPouf: "pouf pouffe ottoman footstool floor cushion seat"
         case .babyBib: "bib feeding drool newborn infant toddler"
+        case .bathMat: "bathroom rug shower mat"
         default: ""
         }
     }
@@ -194,7 +196,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .balaclava, .earflapHat, .cabledBeanie, .pompomBonnet, .beret, .topDownBeanie, .knotHat, .watchCap, .catHat, .bucketHat: .hats
         case .garterScarf, .ribbedScarf, .seedScarf, .ribbedCowl, .seedCowl, .chunkyCowl, .neckScarf, .rectangularWrap, .keyholeScarf, .poncho, .bandanaCowl, .capelet, .hoodedScarf, .bandanaKerchief, .triangleShawl, .crescentShawl, .asymmetricShawl, .ruana: .scarves
-        case .borderedBlanket, .garterBlanket, .dishcloth, .basketweaveBlanket, .pillowCover, .marketBag, .christmasStocking, .washcloth, .coasters, .teaCozy, .mugCozy, .placemat, .miniStocking, .pouch, .bottleCover, .toteBag, .babyCocoon, .knitBasket, .tableRunner, .floorPouf: .home
+        case .borderedBlanket, .garterBlanket, .dishcloth, .basketweaveBlanket, .pillowCover, .marketBag, .christmasStocking, .washcloth, .coasters, .teaCozy, .mugCozy, .placemat, .miniStocking, .pouch, .bottleCover, .toteBag, .babyCocoon, .knitBasket, .tableRunner, .floorPouf, .bathMat: .home
         case .earWarmer, .handwarmers, .legWarmers, .cableHeadband, .mittens, .cuffDownSocks, .slippers, .babyBooties, .toeUpSocks, .babySocks, .fingerlessMitts, .twistedHeadband, .armWarmers, .babyMittens, .bootCuffs, .gloves, .tubeSocks, .scrunchie, .babyBib: .accessories
         case .raglanPullover, .raglanCardigan, .sweaterVest, .kidsRaglan, .dropShoulder, .babyCardigan, .kidsCardigan, .raglanTee, .turtleneck, .shrug, .yokeSweater, .tankTop, .croppedCardigan, .babyPullover, .kidsVest: .sweaters
         }
@@ -204,7 +206,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .garterScarf, .garterBlanket, .ribbedScarf, .seedScarf, .keyholeScarf, .slippers, .twistedHeadband, .poncho, .washcloth, .bootCuffs, .placemat, .bandanaKerchief, .tableRunner, .scrunchie, .babyBib: .beginner
         case .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .borderedBlanket, .earWarmer, .legWarmers, .triangleShawl, .chunkyCowl, .neckScarf, .dishcloth, .handwarmers: .easy
-        case .earflapHat, .basketweaveBlanket, .rectangularWrap, .crescentShawl, .marketBag, .pillowCover, .mittens, .floorPouf: .easy
+        case .earflapHat, .basketweaveBlanket, .rectangularWrap, .crescentShawl, .marketBag, .pillowCover, .mittens, .floorPouf, .bathMat: .easy
         case .pompomBonnet, .beret, .dropShoulder, .babyBooties, .fingerlessMitts, .topDownBeanie, .knotHat, .asymmetricShawl, .bandanaCowl, .armWarmers, .watchCap, .coasters, .hoodedScarf, .babyMittens, .catHat, .teaCozy, .mugCozy, .capelet, .miniStocking, .pouch, .bottleCover, .shrug, .bucketHat, .toteBag, .babyCocoon, .tubeSocks, .knitBasket, .ruana: .easy
         case .raglanPullover, .cableHeadband, .balaclava, .raglanTee, .turtleneck, .yokeSweater, .tankTop, .croppedCardigan, .babyPullover: .intermediate
         case .cuffDownSocks, .raglanCardigan, .sweaterVest, .kidsRaglan, .cabledBeanie, .toeUpSocks, .babyCardigan, .christmasStocking, .kidsCardigan, .babySocks, .gloves, .kidsVest: .intermediate
@@ -275,6 +277,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .scrunchie: .scrunchie
         case .floorPouf: .pouf
         case .babyBib: .bib
+        case .bathMat: .bathMat
         case .christmasStocking, .miniStocking: .stocking
         case .knotHat: .knot
         case .asymmetricShawl: .asymmetric
@@ -361,6 +364,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .scrunchie: .madder
         case .floorPouf: .charcoal
         case .babyBib: .marigold
+        case .bathMat: .indigo
         case .christmasStocking: .madder
         case .miniStocking: .spruce
         case .raglanTee: .moss
@@ -411,7 +415,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .cuffDownSocks, .crescentShawl, .toeUpSocks, .babySocks: .fingering
         // Chunky is #5 bulky to most knitters.
         case .chunkyCowl, .dropShoulder, .babyCocoon, .knitBasket, .ruana: .bulky
-        case .floorPouf: .superBulky
+        case .floorPouf, .bathMat: .superBulky
         default: .worsted
         }
     }
@@ -434,6 +438,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [Measure(key: "calf", label: "Calf", range: 10...20, step: 0.5), Measure(key: "height", label: "Height", range: 4...9, step: 0.5)]
         case .mugCozy:
             [Measure(key: "around", label: "Around", range: 8...15, step: 0.25), Measure(key: "height", label: "Height", range: 2...5, step: 0.25)]
+        case .bathMat:
+            [Measure(key: "width", label: "Width", range: 16...28, step: 1), Measure(key: "length", label: "Length", range: 22...40, step: 1)]
         case .babyBib:
             [Measure(key: "width", label: "Width", range: 5.5...10, step: 0.5), Measure(key: "length", label: "Length", range: 5...10, step: 0.5)]
         case .floorPouf:
@@ -564,6 +570,8 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
             [("Small", 5.5, 7.5), ("Classic", 7.5, 10), ("Large", 8.5, 11.5)].map { NamedSize(name: $0.0, values: ["width": $0.1, "height": $0.2]) }
         case .pouch:
             [("Small", 4, 5), ("Medium", 6, 7), ("Large", 8, 10)].map { NamedSize(name: $0.0, values: ["width": $0.1, "height": $0.2]) }
+        case .bathMat:
+            [("Small", 17, 24), ("Classic", 20, 30), ("Large", 24, 36)].map { NamedSize(name: $0.0, values: ["width": $0.1, "length": $0.2]) }
         case .babyBib:
             [("Newborn", 6, 6), ("6 Months", 7, 7), ("Toddler", 8, 8)].map { NamedSize(name: $0.0, values: ["width": $0.1, "length": $0.2]) }
         case .floorPouf:
@@ -699,13 +707,13 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
     /// Rows to the inch of the design's main fabric: garter packs two rows into each ridge.
     func rowsPerInch(_ g: Gauge) -> Double {
         switch self {
-        case .garterScarf, .garterBlanket, .chunkyCowl, .keyholeScarf, .slippers, .babyBooties, .twistedHeadband, .asymmetricShawl, .hoodedScarf, .bandanaKerchief, .tableRunner, .babyBib: g.spi * 2
+        case .garterScarf, .garterBlanket, .chunkyCowl, .keyholeScarf, .slippers, .babyBooties, .twistedHeadband, .asymmetricShawl, .hoodedScarf, .bandanaKerchief, .tableRunner, .babyBib, .bathMat: g.spi * 2
         case .seedScarf, .seedCowl, .ruana: g.rpi * 1.1
         default: g.rpi
         }
     }
 
-    var isGarter: Bool { [.garterScarf, .garterBlanket, .chunkyCowl, .keyholeScarf, .slippers, .babyBooties, .twistedHeadband, .asymmetricShawl, .hoodedScarf, .bandanaKerchief, .tableRunner, .babyBib].contains(self) }
+    var isGarter: Bool { [.garterScarf, .garterBlanket, .chunkyCowl, .keyholeScarf, .slippers, .babyBooties, .twistedHeadband, .asymmetricShawl, .hoodedScarf, .bandanaKerchief, .tableRunner, .babyBib, .bathMat].contains(self) }
 
     func plan(measures: [String: Double], gauge: Gauge, fit: Engines.Fit = .plain) -> PatternPlan {
         var values = defaultSize.values
@@ -732,6 +740,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .bandanaKerchief: return Engines.bandanaKerchief(width: value("width"), ties: value("ties"), gauge: gauge)
         case .bottleCover: return Engines.bottleCover(width: value("width"), height: value("height"), gauge: gauge)
         case .pouch: return Engines.pouch(width: value("width"), height: value("height"), gauge: gauge)
+        case .bathMat: return Engines.bathMat(width: value("width"), length: value("length"), gauge: gauge).plan
         case .babyBib: return Engines.babyBib(width: value("width"), length: value("length"), gauge: gauge).plan
         case .floorPouf: return Engines.pouf(diameter: value("diameter"), height: value("height"), gauge: gauge).plan
         case .scrunchie: return Engines.scrunchie(width: value("width"), length: value("length"), gauge: gauge)

@@ -377,6 +377,16 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .bathMat:
+            // A rectangle knit out from a line at its middle: ridges ring it and the mitered corners run inward.
+            let mat = CGPath(roundedRect: box(0.08, 0.22, 0.84, 0.56), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            let lines = CGMutablePath()
+            for inset in [CGFloat(0.07), 0.14, 0.21] {
+                let outer = box(0.08 + inset, 0.22 + inset, 0.84 - 2 * inset, 0.56 - 2 * inset)
+                lines.addPath(CGPath(rect: outer, transform: nil).subtracting(CGPath(rect: outer.insetBy(dx: unit * 0.012, dy: unit * 0.012), transform: nil)))
+            }
+            lines.addRect(box(0.36, 0.494, 0.28, 0.012))
+            path.addPath(mat.subtracting(lines))
         case .bib:
             // A bib: a rounded-cornered panel with the neck scooped out, two straps rising to meet at the top.
             let bib = CGMutablePath()
