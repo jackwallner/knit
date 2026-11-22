@@ -512,6 +512,10 @@
   "buttonNeckWarmer": {
    "camera": "outdoor",
    "scene": "a snowy park path, cold bright winter morning"
+  },
+  "draftStopper": {
+   "camera": "lamp",
+   "scene": "the bottom of a wooden front door on a hallway floor, cozy evening lamp light"
   }
  }
 }

@@ -195,7 +195,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 111 | Wave Beanie | Hats | Anyone, intermediate | Colorwork | planned |
 | 112 | Waffle Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
 | 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | planned |
-| 114 | Draft Stopper | Home | Anyone, beginner | New shape | planned |
+| 114 | Draft Stopper | Home | Anyone, beginner | New shape | verified |
 | 115 | Seed Stitch Beanie | Hats | Anyone, beginner | Stitch | planned |
 | 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | planned |
 | 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | planned |

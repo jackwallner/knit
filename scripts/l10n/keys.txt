@@ -530,3 +530,6 @@ Flap
 Bauble Ornament
 Button Neck Warmer
 Buttonholes
+Draft Stopper
+First End
+Second End

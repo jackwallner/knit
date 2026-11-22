@@ -377,6 +377,12 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .draftStopper:
+            // A long stuffed tube lying flat, rounded at both ends, purl ridges ringing it.
+            let tube = CGPath(roundedRect: box(0.04, 0.42, 0.92, 0.16), cornerWidth: unit * 0.08, cornerHeight: unit * 0.08, transform: nil)
+            let ridges = CGMutablePath()
+            for x in stride(from: CGFloat(0.16), through: 0.84, by: 0.085) { ridges.addRect(box(x - 0.006, 0.42, 0.012, 0.16)) }
+            path.addPath(tube.subtracting(ridges))
         case .neckWarmer:
             // A band wrapped into a ring, seen from the front, its end overlapping and held by three buttons.
             let band = CGMutablePath()
