@@ -540,6 +540,10 @@
   "wave-beanie": {
    "camera": "overcast",
    "scene": "worn by someone standing at a bus stop"
+  },
+  "mushroom-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a mossy garden wall"
   }
  }
 }

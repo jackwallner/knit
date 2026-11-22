@@ -153,7 +153,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 69 | Striped Blanket | Blankets | Baby to throw, beginner | Colorwork | planned |
 | 70 | Tube Socks | Socks & Feet | Anyone, easy | New shape: spiral rib, no heel, wedge toe (on the Accessories shelf) | verified |
 | 71 | Honeycomb Blanket | Blankets | Throw, easy | Stitch | planned |
-| 72 | Mushroom Beanie | Hats | Anyone, intermediate | Colorwork | planned |
+| 72 | Mushroom Beanie | Hats | Anyone, intermediate | Colorwork | verified |
 | 73 | Double Moss Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
 | 74 | Knit Basket | Home | Anyone, easy | New shape: round base from the center out, garter sides, two handle slots below the rim | verified |
 | 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |

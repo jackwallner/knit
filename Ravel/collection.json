@@ -1260,6 +1260,51 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/wave-beanie.jpg"
+    },
+    {
+      "id": "mushroom-beanie",
+      "title": "Mushroom Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "...BBBBB...",
+          "..BBCBBBB..",
+          ".BBBBBBBCB.",
+          ".BCBBBBBBB.",
+          "BBBBBCBBBBB",
+          "BBBBBBBBBBB",
+          ".BBBBBBBBB.",
+          "....CCC....",
+          "....CCC....",
+          "...CCCCC..."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/mushroom-beanie.jpg"
     }
   ]
 }
