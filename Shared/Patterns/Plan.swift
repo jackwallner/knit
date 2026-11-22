@@ -420,14 +420,32 @@ enum Sizing {
     }
 
     /// Yardage counted from the rows a pattern actually writes: every stitch takes about 4.3 times its
-    /// own width in yarn, and 15 percent is added for the swatch, the ends and a loose hand.
+    /// own width in yarn, and 15 percent is added for the swatch, the ends and a loose hand. A slipped
+    /// stitch is not knitted: it takes only the strand carried past it, about a quarter of a stitch's yarn.
     static func yards(worked steps: [Step], spi: Double) -> Int {
-        var stitches = 0
+        var stitches = 0.0
         for step in steps where !step.isAction {
-            for row in 0..<step.rows { stitches += step.stitches(after: row) ?? 0 }
+            let slipped = step.texts.map(slippedShare)
+            for row in 0..<step.rows {
+                stitches += Double(step.stitches(after: row) ?? 0) * (1 - 0.75 * slipped[row % slipped.count])
+            }
         }
-        let raw = Double(stitches) * 4.3 / spi / 36 * 1.15
+        let raw = stitches * 4.3 / spi / 36 * 1.15
         return max(10, Int((raw / 10).rounded(.up)) * 10)
+    }
+
+    /// The share of a row's repeat ("*K1, sl1 wyif; repeat ...") that is slipped stitches.
+    static func slippedShare(_ text: String) -> Double {
+        guard text.contains("sl1 wy"), let star = text.firstIndex(of: "*"),
+              let end = text[star...].firstIndex(of: ";") else { return 0 }
+        var total = 0, slipped = 0
+        for part in text[text.index(after: star)..<end].lowercased().split(separator: ",") {
+            let token = part.trimmingCharacters(in: .whitespaces)
+            let count = Int(token.drop { !$0.isNumber }.prefix { $0.isNumber }) ?? 1
+            total += count
+            if token.hasPrefix("sl") { slipped += count }
+        }
+        return total > 0 ? Double(slipped) / Double(total) : 0
     }
 
     /// A length, in the units this knitter measures in. Patterns are sized in inches underneath.
