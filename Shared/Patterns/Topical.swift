@@ -28,7 +28,8 @@ struct Topical: Identifiable, Hashable, Sendable {
     /// The newest record format this build reads. A record that needs more is skipped, so a feature added
     /// later can never be misread by an older app.
     /// 2: `stitch`, a stitch pattern for the shape's fabric, and records of one color.
-    static let featureLevel = 2
+    /// 3: `ear`, the color of the ear crown's ears.
+    static let featureLevel = 3
 
     /// Shapes a stitch pattern can be worked on.
     static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth, .rectangularWrap, .handwarmers]
@@ -134,6 +135,7 @@ extension Topical {
         var palette: [Shade]
         var brim: String?
         var rim: String?
+        var ear: String?
         var stripes: [Stripe]?
         var repeatStripes: Bool?
         var chart: Chart?
@@ -269,6 +271,10 @@ extension Topical {
         let rim = r.rim.flatMap(color)
         check(r.rim == nil || rim != nil, "Rim color \(r.rim ?? "") is not in the palette")
         check(r.rim == nil || ears, "A rim needs the ear crown")
+        let ear = r.ear.flatMap(color)
+        check(r.ear == nil || ear != nil, "Ear color \(r.ear ?? "") is not in the palette")
+        check(r.ear == nil || ears, "An ear color needs the ear crown")
+        check(r.ear == nil || (r.requires ?? 1) >= 3, "An ear color needs record format 3")
 
         let weights = r.weights.compactMap(YarnWeight.init(rawValue:))
         check(!weights.isEmpty && weights.count == r.weights.count, "Weights must name yarn weights: \(r.weights.joined(separator: ", "))")
@@ -277,7 +283,7 @@ extension Topical {
         if let s = starts ?? nil, let e = ends ?? nil { check(s < e, "The design ends before it starts") }
 
         guard problems.isEmpty, let base else { return Parsed(id: r.id, topical: nil, problems: problems) }
-        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, rim: rim)
+        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, ear: ear, rim: rim)
         let order = YarnWeight.allCases
         var topical = Topical(
             id: r.id, title: title, base: base, work: work,

@@ -186,7 +186,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 95 | Gloves | Hands | Adults, intermediate | New shape: mitt gusset, then five fingers split from the hand | verified (built ahead of its rank: new shapes first while the colorwork and stitch rows wait for Jack) |
 | 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |
 | 97 | Bath Mat | Home | Anyone, beginner | New shape | verified |
-| 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | held: the ear crown knits the ears in the main color, so a cream hat cannot have black ears and the face patches alone do not read as a panda |
+| 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | verified |
 | 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | planned |
 | 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | held: raglan is not a base colorwork has been taught |
 | 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |

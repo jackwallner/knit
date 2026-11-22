@@ -54,6 +54,8 @@ struct Colorwork: Equatable, Hashable, Sendable {
     var repeatsStripes = false
     var chart: Chart?
     var ears = false
+    /// The color of the ears themselves. Nil works them in the main color.
+    var ear: Int?
     /// The color of the rim picked up around each ear. Nil works it in the main color.
     var rim: Int?
 
@@ -114,7 +116,7 @@ enum Painter {
         if work.brim != nil { for row in rows where row.brim { lift[row.piece, default: 0] += 1 } }
         let color = rows.map { row in
             switch row.trim {
-            case .ear: return 0
+            case .ear: return work.ear ?? 0
             case .rim: return work.rim ?? 0
             case .none: break
             }

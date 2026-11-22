@@ -1833,6 +1833,46 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/reindeer-beanie.jpg"
+    },
+    {
+      "id": "panda-beanie",
+      "title": "Panda Beanie",
+      "base": "ribbedBeanie",
+      "requires": 3,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "black",
+          "hex": "#2A2A2E"
+        }
+      ],
+      "crown": "ears",
+      "ear": "B",
+      "rim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "BBBB...BBBB",
+          "BBBBB.BBBBB",
+          "BB.BB.BB.BB",
+          "BBBBB.BBBBB",
+          ".BBB...BBB.",
+          "....BBB....",
+          ".....B....."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/panda-beanie.jpg"
     }
   ]
 }

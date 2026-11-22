@@ -588,6 +588,10 @@
   "reindeer-beanie": {
    "camera": "flash",
    "scene": "on a Christmas-card shelf beside pine branches"
+  },
+  "panda-beanie": {
+   "camera": "snap",
+   "scene": "on a wooden stool by a window"
   }
  }
 }

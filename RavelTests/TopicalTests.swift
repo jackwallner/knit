@@ -40,7 +40,7 @@ final class TopicalTests: XCTestCase {
         XCTAssertNil(parsed(#","requires":2,"stitch":"brioche""#)?.topical, "An unknown stitch is skipped")
         XCTAssertNil(parsed(#","requires":2""#)?.topical, "One yarn needs a stitch pattern")
         XCTAssertNil(parsed(#","requires":2,"stitch":"waffle","photo":"https://example.com/a.jpg""#)?.topical, "Photos come from the Ravel site")
-        XCTAssertNil(parsed(#","requires":3,"stitch":"waffle""#)?.topical, "A newer format is skipped")
+        XCTAssertNil(parsed(#","requires":4,"stitch":"waffle""#)?.topical, "A newer format is skipped")
         let chart = #","requires":2,"stitch":"waffle","chart":{"placement":"repeat","rows":["AB"]}"#
         XCTAssertNil(parsed(chart, palette: ##"[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}]"##)?.topical, "No chart on a stitch pattern")
         let cowl = Topical.parse(Data(##"{"designs":[{"id":"moss-cowl","title":"Moss Cowl","base":"seedCowl","requires":2,"stitch":"seed","palette":[{"name":"gray","hex":"#888888"}],"weights":["worsted"],"tag":"New"}]}"##.utf8)).first
@@ -266,6 +266,23 @@ final class TopicalTests: XCTestCase {
             XCTAssertFalse(plan.steps.contains { $0.texts.contains { $0.contains("three-needle") } })
             XCTAssertEqual(PlanCheck.problems(plan), [], "\(weight)")
         }
+    }
+
+    /// An ear color is format 3, needs the ear crown and a palette letter; the ears and their rim are knit in it.
+    func testEarsTakeTheirOwnColor() throws {
+        func parsed(_ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"panda-hat","title":"Panda Hat","base":"ribbedBeanie","palette":[{"name":"cream","hex":"#EEE6D6"},{"name":"black","hex":"#2A2A2E"}],"weights":["worsted"],"tag":"New"\###(fields)}]}"###.utf8)).first
+        }
+        let good = try XCTUnwrap(parsed(#","requires":3,"crown":"ears","ear":"B","rim":"B""#)?.topical)
+        let plan = good.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge)
+        for ear in ["First Ear", "Second Ear"] {
+            XCTAssertTrue(plan.steps.first { $0.section == ear }?.texts[0].hasSuffix("in black.") == true, ear)
+        }
+        XCTAssertNil(parsed(#","crown":"ears","ear":"B""#)?.topical, "An ear color needs format 3")
+        XCTAssertNil(parsed(#","requires":3,"ear":"B""#)?.topical, "An ear color needs the ear crown")
+        XCTAssertNil(parsed(#","requires":3,"crown":"ears","ear":"C""#)?.topical, "The ear color is in the palette")
+        let plain = try XCTUnwrap(parsed(#","crown":"ears""#)?.topical)
+        XCTAssertFalse(plain.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge).steps.contains { $0.texts.contains { $0.contains("black") } }, "No ear color leaves the ears in the main color")
     }
 
     // MARK: Saved plans
