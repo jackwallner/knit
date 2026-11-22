@@ -24,7 +24,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(all.waitForExistence(timeout: 10))
         all.tap()
         let design = app.buttons["design.ribbedBeanie"]
-        for _ in 0..<12 where !design.isHittable { app.swipeUp() }
+        scrollTo(design, in: app)
         QA.checkpoint(app, "library-shelf")
         design.tap()
         XCTAssertTrue(app.buttons["design.castOn"].waitForExistence(timeout: 10))
@@ -232,11 +232,14 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
         // The library is lazy: a tile further down is not built until it is near the screen.
-        // Large text puts one tile a row, so the library runs long.
+        // Large text puts one tile a row, so a shelf of forty designs runs twenty screens long.
+        let window = app.windows.firstMatch
         _ = element.waitForExistence(timeout: 15)
-        // Slow swipes: a fast fling over the tall photo tiles carries a tile past the screen between checks.
+        // Flings until the tile is built, then slow drags: a fling over the tall photo tiles carries a
+        // tile past the screen between checks, so the slow drags follow it whichever way it went.
+        for _ in 0..<60 where !element.exists { drag(window, up: true, fling: true) }
         for _ in 0..<40 where !(element.exists && element.isHittable) {
-            app.windows.firstMatch.swipeUp(velocity: .slow)
+            drag(window, up: !element.exists || element.frame.midY > window.frame.midY, fling: false)
         }
         // A swipe keeps scrolling after the finger lifts: tap only once the tile has stopped moving.
         var frame = element.frame
@@ -246,6 +249,14 @@ final class ReleaseJourneysUITests: XCTestCase {
             frame = element.frame
         }
         XCTAssertTrue(element.isHittable)
+    }
+
+    /// Scrolls by dragging between two points of the window. XCTest's own swipes land rotated on the
+    /// unfolded Duo, where they never scroll the page.
+    private func drag(_ window: XCUIElement, up: Bool, fling: Bool) {
+        let from = window.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: up ? 0.7 : 0.3))
+        let to = window.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: up ? 0.3 : 0.7))
+        from.press(forDuration: 0.05, thenDragTo: to, withVelocity: fling ? .fast : .slow, thenHoldForDuration: fling ? 0 : 0.2)
     }
 
     private func expect(_ element: XCUIElement, reads label: String, _ german: String, file: StaticString = #filePath, line: UInt = #line) {
