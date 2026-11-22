@@ -476,6 +476,10 @@
   "kidsVest": {
    "camera": "outdoor",
    "scene": "folded on a wooden bench in a schoolyard in autumn light, no child"
+  },
+  "tableRunner": {
+   "camera": "overcast",
+   "scene": "down the middle of a wooden dining table set with plates and a jug of flowers"
   }
  }
 }

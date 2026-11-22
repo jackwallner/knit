@@ -377,6 +377,23 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .runner:
+            // A long runner seen from above, pointed at each end, with a tassel hanging from each point.
+            path.move(to: p(0.12, 0.5))
+            path.addLine(to: p(0.26, 0.36))
+            path.addLine(to: p(0.74, 0.36))
+            path.addLine(to: p(0.88, 0.5))
+            path.addLine(to: p(0.74, 0.64))
+            path.addLine(to: p(0.26, 0.64))
+            path.closeSubpath()
+            for (tip, out) in [(CGFloat(0.12), CGFloat(-1)), (0.88, 1)] {
+                path.addEllipse(in: box(tip + out * 0.025 - 0.02, 0.48, 0.04, 0.04))
+                path.move(to: p(tip + out * 0.04, 0.49))
+                path.addLine(to: p(tip + out * 0.1, 0.44))
+                path.addLine(to: p(tip + out * 0.1, 0.56))
+                path.addLine(to: p(tip + out * 0.04, 0.51))
+                path.closeSubpath()
+            }
         case .basket:
             // A round basket seen from the side: the rim's oval opening, straight sides and two handle slots.
             let body = CGMutablePath()
