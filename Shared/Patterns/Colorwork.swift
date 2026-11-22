@@ -39,6 +39,8 @@ struct Colorwork: Equatable, Hashable, Sendable {
         /// Embroidered over the finished fabric in duplicate stitch, not knitted in: for a small motif on a
         /// round, where knitting it would carry a second yarn all the way around for a few stitches.
         var duplicate = false
+        /// Repeats up the whole stretch of stockinette as well as across it, so a flat piece is covered.
+        var tiled = false
 
         var width: Int { rows.first?.count ?? 0 }
         var height: Int { rows.count }
@@ -128,9 +130,25 @@ enum Painter {
             for piece in Set(rows.map(\.piece)).sorted() {
                 let mine = rows.indices.filter { rows[$0].piece == piece }
                 guard mine.contains(where: { rows[$0].trim == .none }) else { continue }
-                guard let start = place(chart, rows: rows, indices: mine, lift: lift[piece] ?? 0, work: work, rate: rate, even: even[piece] ?? false, issues: &issues) else { continue }
-                for (offset, line) in chart.rows.reversed().enumerated() {
-                    let at = mine[start + offset]
+                var lines: [(at: Int, line: [Int])] = []
+                if chart.tiled {
+                    // The chart repeats up the longest stretch of stockinette, from its first row to its last.
+                    var best = 0..<0, run = 0
+                    for (offset, at) in mine.enumerated() {
+                        run = rows[at].chartable ? run + 1 : 0
+                        if run > best.count { best = (offset - run + 1)..<(offset + 1) }
+                    }
+                    guard best.count >= chart.height else {
+                        issues.append("The \(chart.height)-row chart does not fit the rows of plain stockinette")
+                        continue
+                    }
+                    let bottomUp = Array(chart.rows.reversed())
+                    lines = best.enumerated().map { (mine[$1], bottomUp[$0 % chart.height]) }
+                } else {
+                    guard let start = place(chart, rows: rows, indices: mine, lift: lift[piece] ?? 0, work: work, rate: rate, even: even[piece] ?? false, issues: &issues) else { continue }
+                    lines = chart.rows.reversed().enumerated().map { (mine[start + $0], $1) }
+                }
+                for (at, line) in lines {
                     let row = rows[at]
                     if let filled = fill(line, row: row, under: color[at], placement: chart.placement, issues: &issues) {
                         if !chart.duplicate, let longest = longestFloat(filled, around: !row.flat && chart.placement == .repeating), longest > float {

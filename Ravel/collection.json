@@ -1873,6 +1873,48 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/panda-beanie.jpg"
+    },
+    {
+      "id": "checkerboard-blanket",
+      "title": "Checkerboard Blanket",
+      "base": "borderedBlanket",
+      "requires": 3,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "tile": true,
+        "rows": [
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/checkerboard-blanket.jpg"
     }
   ]
 }

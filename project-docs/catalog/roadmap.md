@@ -181,7 +181,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 90 | Rope Cable Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
 | 91 | Baby Bib | Baby | Babies, beginner | New shape | verified |
 | 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
-| 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | held: a chart is placed once, so a blanket-wide checkerboard cannot be written without an engine that repeats a chart down the piece |
+| 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | verified |
 | 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | planned |
 | 95 | Gloves | Hands | Adults, intermediate | New shape: mitt gusset, then five fingers split from the hand | verified (built ahead of its rank: new shapes first while the colorwork and stitch rows wait for Jack) |
 | 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |

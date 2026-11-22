@@ -592,6 +592,10 @@
   "panda-beanie": {
    "camera": "snap",
    "scene": "on a wooden stool by a window"
+  },
+  "checkerboard-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a sofa"
   }
  }
 }

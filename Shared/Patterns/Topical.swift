@@ -28,7 +28,7 @@ struct Topical: Identifiable, Hashable, Sendable {
     /// The newest record format this build reads. A record that needs more is skipped, so a feature added
     /// later can never be misread by an older app.
     /// 2: `stitch`, a stitch pattern for the shape's fabric, and records of one color.
-    /// 3: `ear`, the color of the ear crown's ears.
+    /// 3: `ear`, the color of the ear crown's ears, and `tile`, a chart repeated up a flat piece.
     static let featureLevel = 3
 
     /// Shapes a stitch pattern can be worked on.
@@ -125,6 +125,8 @@ extension Topical {
             var rows: [String]
             /// "duplicate" sews the chart on afterward. Builds that do not know it knit the chart in.
             var stitch: String?
+            /// Repeats the chart up a flat piece as well as across it.
+            var tile: Bool?
         }
 
         var id: String
@@ -257,7 +259,10 @@ extension Topical {
             if let stripe = c.stripe { check(stripe >= 0 && stripe < stripes.count, "The chart sits on stripe \(stripe), which does not exist") }
             check(c.stitch == nil || c.stitch == "duplicate", "Chart stitch \(c.stitch ?? "") is not one this build knows")
             check(c.stitch == nil || placement == .motif, "Only a motif can be worked in duplicate stitch")
-            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe, duplicate: c.stitch == "duplicate") }
+            check(c.tile != true || (r.requires ?? 1) >= 3, "A tiled chart needs record format 3")
+            check(c.tile != true || (placement == .repeating && base == .borderedBlanket), "Only a repeat chart on the bordered blanket can tile")
+            check(c.tile != true || c.stripe == nil, "A tiled chart covers the piece, so it has no stripe")
+            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe, duplicate: c.stitch == "duplicate", tiled: c.tile == true) }
         }
 
         var ears = false

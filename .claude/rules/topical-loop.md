@@ -79,6 +79,8 @@ plan (palette and silhouette included), so changing or removing a record never t
 - `crown: "ears"`: two small rounded ears, knit flat in color A, rimmed in garter and sewn to an ordinary
   crown. Beanies only. `rim` colors the rim (the pale edge that makes a raccoon or bear read at a glance).
   `ear` (record format 3, so `requires: 3`) colors the ears themselves, for a black-eared panda on a cream hat.
+  `tile` (format 3, a `repeat` chart on the bordered blanket only, no `stripe`) also repeats the chart up the blanket's
+  stockinette, for a checkerboard.
 - `weights`: only the weights the check passes at. Floats are capped at about 1.25 in and never more than
   5 stitches (4 at bulky). Every run of a color, the ground's included, must be 5 or fewer, so a repeat 8 wide
   cannot have a 1-stitch point or a tier wider than 5: use a 4-wide repeat for small pointed motifs. Every plan

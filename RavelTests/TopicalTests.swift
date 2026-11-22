@@ -285,6 +285,22 @@ final class TopicalTests: XCTestCase {
         XCTAssertFalse(plain.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge).steps.contains { $0.texts.contains { $0.contains("black") } }, "No ear color leaves the ears in the main color")
     }
 
+    func testATiledChartRepeatsDownTheBlanket() throws {
+        func parsed(base: String = "borderedBlanket", _ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"check-blanket","title":"Check Blanket","base":"\###(base)","palette":[{"name":"cream","hex":"#EEE6D6"},{"name":"sage","hex":"#9AAE8C"}],"weights":["worsted"],"tag":"New","chart":{"placement":"repeat","rows":["BBBBB.....","BBBBB.....",".....BBBBB",".....BBBBB"]\###(fields)},"requires":3}]}"###.utf8)).first
+        }
+        let tiled = try XCTUnwrap(parsed(#","tile":true"#)?.topical)
+        let plan = tiled.plan(measures: tiled.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
+        let body = plan.steps.filter { $0.section == "Body" }
+        let colored = body.filter { $0.texts[0].contains("sage") }
+        XCTAssertGreaterThan(colored.count, 20, "The squares repeat down the blanket, not once")
+        XCTAssertEqual(body.first?.texts[0].contains("sage"), true, "The squares start at the bottom of the body")
+        XCTAssertNil(parsed(base: "ribbedBeanie", #","tile":true"#)?.topical, "Only the blanket can tile")
+        let untiled = try XCTUnwrap(parsed("")?.topical)
+        let flat = untiled.plan(measures: untiled.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
+        XCTAssertLessThan(flat.steps.filter { $0.section == "Body" && $0.texts[0].contains("sage") }.count, colored.count, "Without tile a chart is placed once")
+    }
+
     // MARK: Saved plans
 
     func testAColorPlanSurvivesSaving() throws {

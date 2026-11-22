@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf", "babyBib", "bathMat", "laptopSleeve", "bauble", "buttonNeckWarmer", "draftStopper", "cowlHood", "bunting", "pixieHat", "polka-dot-beanie", "zigzag-beanie", "wave-beanie", "mushroom-beanie", "strawberry-beanie", "striped-cowl", "heart-cowl", "houndstooth-cowl", "striped-blanket", "color-block-scarf", "striped-mitts", "nordic-band-beanie", "fair-isle-band-cowl", "flower-beanie", "reindeer-beanie", "babyMittens", "catHat", "houndstooth-beanie", "striped-beanie", "striped-scarf", "bootCuffs", "panda-beanie"]
+    static let awaitingPhoto: Set<String> = ["double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf", "babyBib", "bathMat", "laptopSleeve", "bauble", "buttonNeckWarmer", "draftStopper", "cowlHood", "bunting", "pixieHat", "polka-dot-beanie", "zigzag-beanie", "wave-beanie", "mushroom-beanie", "strawberry-beanie", "striped-cowl", "heart-cowl", "houndstooth-cowl", "striped-blanket", "color-block-scarf", "striped-mitts", "nordic-band-beanie", "fair-isle-band-cowl", "flower-beanie", "reindeer-beanie", "babyMittens", "catHat", "houndstooth-beanie", "striped-beanie", "striped-scarf", "bootCuffs", "panda-beanie", "checkerboard-blanket"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -575,7 +575,7 @@ final class PatternTests: XCTestCase {
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
         XCTAssertEqual(Design.allCases.count, 93)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 146)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 147)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
