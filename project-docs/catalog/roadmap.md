@@ -219,7 +219,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | planned |
 | 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
 | 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | planned |
-| 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | planned |
+| 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | verified |
 | 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | planned |
 | 140 | Linen Stitch Wrap | Shawls & Wraps | Adults, easy | Stitch | planned |
 | 141 | Double Moss Mitts | Hands | Anyone, easy | Stitch | planned |

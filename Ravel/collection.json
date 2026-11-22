@@ -1603,6 +1603,53 @@
       ],
       "tag": "Color Block",
       "photo": "photos/color-block-scarf.jpg"
+    },
+    {
+      "id": "striped-mitts",
+      "title": "Striped Mitts",
+      "base": "handwarmers",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        },
+        {
+          "color": "C",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-mitts.jpg"
     }
   ]
 }

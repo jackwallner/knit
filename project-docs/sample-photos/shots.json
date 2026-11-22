@@ -568,6 +568,10 @@
   "color-block-scarf": {
    "camera": "overcast",
    "scene": "laid out flat on a wooden floor"
+  },
+  "striped-mitts": {
+   "camera": "overcast",
+   "scene": "worn holding a cup of tea at a table"
   }
  }
 }
