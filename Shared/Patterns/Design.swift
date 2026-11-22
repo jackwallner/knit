@@ -716,10 +716,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
         case .kidsCardigan: return Engines.cardigan(chest: value("chest") + Self.sweaterEase, wearer: value("chest"), body: value("body"), sleeve: value("sleeve"), gauge: gauge, child: true).plan
         case .kidsRaglan: return Engines.raglan(chest: value("chest") + Self.sweaterEase, wearer: value("chest"), body: value("body"), sleeve: value("sleeve"), gauge: gauge, child: true).plan
         case .babySocks:
-            var plan = Engines.socks(foot: value("foot"), length: value("footLength"), leg: value("leg"), gauge: gauge).plan
-            // Knit firmer than the label, so the yarn to buy is fingering, not the lace its gauge suggests.
-            if gauge == self.gauge(for: .fingering) { plan.materials[0] = "About \(Sizing.yardage(plan.yards)) of fingering weight yarn, wool with a little nylon wears longest" }
-            return plan
+            return Engines.socks(foot: value("foot"), length: value("footLength"), leg: value("leg"), gauge: gauge).plan
         case .cuffDownSocks: return Engines.socks(foot: value("foot"), length: value("footLength"), leg: value("leg"), gauge: gauge).plan
         case .mittens: return Engines.mittens(hand: value("hand"), length: value("handLength"), gauge: gauge).plan
         case .earflapHat: return Engines.earflapHat(head: value("head"), gauge: gauge)

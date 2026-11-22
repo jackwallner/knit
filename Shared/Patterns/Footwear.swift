@@ -51,11 +51,7 @@ extension Engines {
         }
         let length = Double(1 + toe.count + footRounds + 1 + heelDepth) / g.rpi
         let yards = Sizing.yards(squareInches: around * 0.9 * (leg + footLength + 2) * 2, spi: g.spi, factor: 1.1)
-        var plan = pattern(b, estimate: yards, yarnNote: ", wool with a little nylon wears longest", tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "A needle 2 sizes larger for the bind off", "2 stitch markers", "Smooth waste yarn in a contrasting color", "Tapestry needle"], finished: "\(fits(stitches, g, "foot", around)). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(legRounds + cuff) / g.rpi)) from the heel to the cuff", gauge: g, round: true)
-        // Socks are knit firmer than the label says, so the yarn to buy is fingering, not the lace its gauge suggests.
-        if g == Design.toeUpSocks.gauge(for: .fingering) {
-            plan.materials[0] = "About \(Sizing.yardage(plan.yards)) of fingering weight yarn, wool with a little nylon wears longest"
-        }
+        let plan = pattern(b, estimate: yards, yarnNote: ", wool with a little nylon wears longest", finest: .fingering, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "A needle 2 sizes larger for the bind off", "2 stitch markers", "Smooth waste yarn in a contrasting color", "Tapestry needle"], finished: "\(fits(stitches, g, "foot", around)). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(legRounds + cuff) / g.rpi)) from the heel to the cuff", gauge: g, round: true)
         return ToeUp(plan: plan, stitches: stitches, toe: toeStart, footRounds: footRounds, heelRounds: heel.count)
     }
 

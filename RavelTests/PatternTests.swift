@@ -1463,6 +1463,20 @@ final class PatternTests: XCTestCase {
         XCTAssertEqual(Design.cuffDownSocks.plan(measures: Design.cuffDownSocks.defaultSize.values, gauge: gauge).steps[0].stitches, 56)
     }
 
+    /// The yarn line names the weight the knitter picked, at the gauge the design knits it at: the firm
+    /// sock gauge once read as lace. Socks never ask for lace weight, which would not wear.
+    func testTheYarnLineNamesTheWeightChosen() {
+        for design in Design.allCases {
+            for picked in YarnWeight.allCases {
+                let plan = design.plan(measures: design.defaultSize.values, gauge: design.gauge(for: picked))
+                // Socks are knit firmer than the label: lace gauge in a sock still means fingering yarn.
+                let weight = [.cuffDownSocks, .toeUpSocks, .babySocks].contains(design) && picked == .lace ? .fingering : picked
+                let name = weight == .dk || weight == .aran ? weight.label : weight.label.lowercased()
+                XCTAssertTrue(plan.materials[0].contains("of \(name) weight yarn"), "\(design.rawValue) \(picked.rawValue): \(plan.materials[0])")
+            }
+        }
+    }
+
     func testBasketweaveStartsAndEndsOnTheSameBlock() {
         for input in inputs(.basketweaveBlanket) {
             for gauge in gauges {
