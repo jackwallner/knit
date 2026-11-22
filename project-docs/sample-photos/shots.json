@@ -484,6 +484,10 @@
   "ruana": {
    "camera": "outdoor",
    "scene": "worn draped over the shoulders, seen from the back and side, walking on a misty coastal path, face not shown"
+  },
+  "scrunchie": {
+   "camera": "snap",
+   "scene": "on a bathroom shelf beside a hairbrush and a small mirror"
   }
  }
 }

@@ -377,6 +377,15 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .scrunchie:
+            // A gathered ring: puffs all the way round a small hole.
+            var ring: CGPath = CGPath(ellipseIn: box(0.16, 0.16, 0.68, 0.68), transform: nil)
+            for k in 0..<18 {
+                let angle = Double(k) / 18 * 2 * Double.pi
+                let x = 0.5 + 0.33 * cos(angle), y = 0.5 + 0.33 * sin(angle)
+                ring = ring.union(CGPath(ellipseIn: box(x - 0.08, y - 0.08, 0.16, 0.16), transform: nil))
+            }
+            path.addPath(ring.subtracting(CGPath(ellipseIn: box(0.33, 0.33, 0.34, 0.34), transform: nil)))
         case .ruana:
             // A wide wrap hanging from the shoulders, open down the middle of the front from the neck.
             let wrap = CGMutablePath()

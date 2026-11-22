@@ -519,3 +519,5 @@ Second Point
 Ruana
 First Front
 Second Front
+Scrunchie
+Strip
