@@ -436,6 +436,10 @@
   "gloves": {
    "camera": "outdoor",
    "scene": "worn on both hands holding a bare winter branch outside, overcast sky"
+  },
+  "yokeSweater": {
+   "camera": "lamp",
+   "scene": "worn by an adult seated in an armchair by a window, hands in the lap"
   }
  }
 }
