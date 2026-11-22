@@ -184,7 +184,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | planned |
 | 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | planned |
-| 103 | Laptop Sleeve | Home | Anyone, easy | New shape | planned |
+| 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
 | 104 | Chevron Lace Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |
 | 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | planned |

@@ -377,6 +377,18 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .laptopSleeve:
+            // A flat sleeve with its flap folded down over the front and buttoned.
+            let sleeve = CGPath(roundedRect: box(0.1, 0.24, 0.8, 0.56), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
+            let flap = CGMutablePath()
+            flap.move(to: p(0.1, 0.24))
+            flap.addLine(to: p(0.9, 0.24))
+            flap.addLine(to: p(0.9, 0.42))
+            flap.addLine(to: p(0.1, 0.42))
+            flap.closeSubpath()
+            let edge = CGPath(rect: box(0.1, 0.42, 0.8, 0.014), transform: nil)
+            let button = CGPath(ellipseIn: box(0.465, 0.33, 0.07, 0.07), transform: nil)
+            path.addPath(sleeve.subtracting(edge).subtracting(button))
         case .bathMat:
             // A rectangle knit out from a line at its middle: ridges ring it and the mitered corners run inward.
             let mat = CGPath(roundedRect: box(0.08, 0.22, 0.84, 0.56), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)

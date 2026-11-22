@@ -500,6 +500,10 @@
   "bathMat": {
    "camera": "snap",
    "scene": "a white tiled bathroom floor beside a tub, bright morning light"
+  },
+  "laptopSleeve": {
+   "camera": "outdoor",
+   "scene": "a cafe table outside with a coffee cup, overcast afternoon"
   }
  }
 }
