@@ -1,0 +1,57 @@
+ok   Bauble Ornament: 5 sizes x 8 weights
+
+== Bauble Ornament, Small, Worsted, 20 yd
+About 2.5 in across, stuffed
+  About 20 yd of worsted weight yarn, wool or a wool blend, in a bright color
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  A handful of polyester fiberfill
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Top x1 [6]: Leaving a 10 in tail, cast on 6 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Top x2 [12]: *K1, M1L; repeat from * around / Knit
+Top x1 [12]: Knit
+Top x2 [18]: *K2, M1L; repeat from * around / Knit
+Top x1 [24]: *K3, M1L; repeat from * around
+Top x2 [30]: *K4, M1L; repeat from * around / Knit
+Top x1 [30]: Knit
+Top x1 [36]: *K5, M1L; repeat from * around
+Bottom x5 [36]: Knit
+Bottom x2 [30]: *K4, k2tog; repeat from * around / Knit
+Bottom x1 [30]: Knit
+Bottom x1 [24]: *K3, k2tog; repeat from * around
+Bottom x2 [18]: *K2, k2tog; repeat from * around. Stuff the bauble firmly, and keep adding stuffing as it closes / Knit
+Bottom x1 [12]: *K1, k2tog; repeat from * around
+Bottom x1 [6]: K2tog around
+Finishing x1: Cut the yarn, thread it through the last 6 stitches, pull it snug and fasten off. Thread the cast-on tail through the cast-on stitches and pull it snug to close the top, then bring it out at the top and tie it into a loop about 2 in long to hang the bauble by. Weave in the other end.
+
+== Bauble Ornament, Large, Worsted, 60 yd
+About 3.75 in across, stuffed
+  About 60 yd of worsted weight yarn, wool or a wool blend, in a bright color
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  A handful of polyester fiberfill
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Top x1 [6]: Leaving a 10 in tail, cast on 6 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Top x2 [12]: *K1, M1L; repeat from * around / Knit
+Top x1 [12]: Knit
+Top x2 [18]: *K2, M1L; repeat from * around / Knit
+Top x1 [24]: *K3, M1L; repeat from * around
+Top x2 [30]: *K4, M1L; repeat from * around / Knit
+Top x2 [36]: *K5, M1L; repeat from * around / Knit
+Top x2 [42]: *K6, M1L; repeat from * around / Knit
+Top x2 [48]: *K7, M1L; repeat from * around / Knit
+Top x1 [48]: Knit
+Top x1 [54]: *K8, M1L; repeat from * around
+Bottom x7 [54]: Knit
+Bottom x2 [48]: *K7, k2tog; repeat from * around / Knit
+Bottom x1 [48]: Knit
+Bottom x2 [42]: *K6, k2tog; repeat from * around / Knit
+Bottom x2 [36]: *K5, k2tog; repeat from * around / Knit
+Bottom x2 [30]: *K4, k2tog; repeat from * around / Knit
+Bottom x1 [24]: *K3, k2tog; repeat from * around. Stuff the bauble firmly, and keep adding stuffing as it closes
+Bottom x2 [18]: *K2, k2tog; repeat from * around / Knit
+Bottom x1 [12]: *K1, k2tog; repeat from * around
+Bottom x1 [6]: K2tog around
+Finishing x1: Cut the yarn, thread it through the last 6 stitches, pull it snug and fasten off. Thread the cast-on tail through the cast-on stitches and pull it snug to close the top, then bring it out at the top and tie it into a loop about 2 in long to hang the bauble by. Weave in the other end.

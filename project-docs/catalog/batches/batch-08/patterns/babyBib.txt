@@ -1,0 +1,45 @@
+ok   Baby Bib: 5 sizes x 8 weights
+
+== Baby Bib, Newborn, Worsted, 70 yd
+6 in wide and 6 in from the hem to the neck, with straps that button behind the neck
+  About 70 yd of worsted weight yarn, cotton, which soaks up spills and washes well
+  US 7 · 4.5 mm needles
+  A button about 0.5 in across
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom x1 [21]: Cast on 21 stitches.
+Bottom x6 [23 to 27]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Body x48 [27]: Knit
+Body x1 [9]: With the right side facing, k9, bind off the next 9 stitches for the neck, and knit to the end. Work the 9 stitches after the gap first, leaving the others on the needle
+First Strap x4 [9 to 7]: Knit / K1, k2tog, knit to the end
+First Strap x32 [7]: Knit
+First Strap x1 [7]: K2, yo, k2tog, knit to the end. This is the buttonhole
+First Strap x3 [7]: Knit
+First Strap x1: Bind off.
+Second Strap x1 [9]: With the wrong side facing, join the yarn at the neck edge of the other 9 stitches.
+Second Strap x4 [9 to 7]: Knit / Knit to the last 3 stitches, ssk, k1
+Second Strap x36 [7]: Knit
+Second Strap x1: Bind off.
+Finishing x1: Weave in the ends. Sew the button to the end of the second strap, so the straps overlap behind the neck and the button meets the buttonhole.
+
+== Baby Bib, Toddler, Worsted, 100 yd
+8 in wide and 8 in from the hem to the neck, with straps that button behind the neck
+  About 100 yd of worsted weight yarn, cotton, which soaks up spills and washes well
+  US 7 · 4.5 mm needles
+  A button about 0.5 in across
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom x1 [30]: Cast on 30 stitches.
+Bottom x6 [32 to 36]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Body x66 [36]: Knit
+Body x1 [11]: With the right side facing, k11, bind off the next 14 stitches for the neck, and knit to the end. Work the 11 stitches after the gap first, leaving the others on the needle
+First Strap x6 [11 to 8]: Knit / K1, k2tog, knit to the end
+First Strap x30 [8]: Knit
+First Strap x1 [8]: K3, yo, k2tog, knit to the end. This is the buttonhole
+First Strap x3 [8]: Knit
+First Strap x1: Bind off.
+Second Strap x1 [11]: With the wrong side facing, join the yarn at the neck edge of the other 11 stitches.
+Second Strap x6 [11 to 8]: Knit / Knit to the last 3 stitches, ssk, k1
+Second Strap x34 [8]: Knit
+Second Strap x1: Bind off.
+Finishing x1: Weave in the ends. Sew the button to the end of the second strap, so the straps overlap behind the neck and the button meets the buttonhole.

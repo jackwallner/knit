@@ -1,0 +1,42 @@
+ok   Bath Mat: 5 sizes x 8 weights
+
+== Bath Mat, Small, Super Bulky, 290 yd
+16.75 in by 24 in
+  About 290 yd of super bulky weight yarn, cotton, which soaks up water and washes hot
+  US 13 · 9 mm double-pointed needles, or a long circular for magic loop, and 16 in, 24 in, 32 in and 40 in circular needles as the mat grows
+  4 stitch markers, one a different color
+  Tapestry needle
+  Gauge: 10 stitches and 14 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Middle x1 [40]: Leaving a 14.5 in tail, cast on 40 stitches. Join in the round without twisting and place markers to divide the round into 4 sections of 18, 2, 18 and 2 stitches, a different color marker at the start of the round.
+Body x2 [48]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 16 in needle / Purl
+Body x6 [56 to 72]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [80]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 24 in needle / Purl
+Body x8 [88 to 112]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [120]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 32 in needle / Purl
+Body x10 [128 to 160]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [168]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 40 in needle / Purl
+Body x8 [176 to 200]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x1 [200]: Knit
+Body x1: Bind off loosely purlwise.
+Finishing x1: Flatten the cast-on ring into a straight line down the middle of the mat, with the two short sections at its ends, and sew its two halves together with the cast-on tail. Weave in the ends and block the mat flat.
+
+== Bath Mat, Large, Super Bulky, 610 yd
+24 in by 36 in
+  About 610 yd of super bulky weight yarn, cotton, which soaks up water and washes hot
+  US 13 · 9 mm 16 in circular needle, and 24 in, 32 in, 40 in and 60 in circular needles as the mat grows
+  4 stitch markers, one a different color
+  Tapestry needle
+  Gauge: 10 stitches and 14 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Middle x1 [64]: Leaving a 21.5 in tail, cast on 64 stitches. Join in the round without twisting and place markers to divide the round into 4 sections of 30, 2, 30 and 2 stitches, a different color marker at the start of the round.
+Body x2 [72]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [80]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 24 in needle / Purl
+Body x8 [88 to 112]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [120]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 32 in needle / Purl
+Body x10 [128 to 160]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [168]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 40 in needle / Purl
+Body x16 [176 to 232]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x2 [240]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around. Move the stitches to the 60 in needle / Purl
+Body x14 [248 to 296]: *M1L, knit to the next marker, M1R, slip the marker; repeat from * around / Purl
+Body x1 [296]: Knit
+Body x1: Bind off loosely purlwise.
+Finishing x1: Flatten the cast-on ring into a straight line down the middle of the mat, with the two short sections at its ends, and sew its two halves together with the cast-on tail. Weave in the ends and block the mat flat.

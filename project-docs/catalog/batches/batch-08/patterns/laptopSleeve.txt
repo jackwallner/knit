@@ -1,0 +1,39 @@
+ok   Laptop Sleeve: 5 sizes x 8 weights
+
+== Laptop Sleeve, Small, Worsted, 190 yd
+10.75 in wide and 7.5 in deep inside, with a 2.5 in flap
+  About 190 yd of worsted weight yarn, a sturdy wool or wool blend
+  US 7 · 4.5 mm 16 in circular needle, and a spare needle in the same size for the bind off
+  A button about 0.75 in across
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Flap x1 [48]: Cast on 48 stitches. This edge is the tip of the flap.
+Flap x4 [48]: *K1, p1; repeat from * to the end / *P1, k1; repeat from * to the end
+Flap x1 [45]: Work 22 stitches in pattern, bind off the next 3 stitches for the buttonhole and work in pattern to the end
+Flap x1 [48]: Work in pattern to the gap, cast on 3 stitches over it with the backward loop method and work in pattern to the end
+Flap x10 [48]: *K1, p1; repeat from * to the end / *P1, k1; repeat from * to the end
+Body x1 [96]: With the right side facing, work across the flap in pattern, then cast on 48 stitches for the front. Join in the round without twisting and place a marker. The flap stitches are now the back
+Body x50 [96]: *P1, k1; repeat from * around / *K1, p1; repeat from * around
+Bottom x1: Turn the sleeve inside out. Put the 48 back stitches on one needle and the 48 front stitches on another, held parallel.
+Bottom x1: Join them with a three-needle bind off, and turn the sleeve right side out.
+Finishing x1: Weave in the ends. Fold the flap over the front, mark where the buttonhole falls and sew the button there.
+
+== Laptop Sleeve, Large, Worsted, 360 yd
+14.75 in wide and 10.25 in deep inside, with a 3.75 in flap
+  About 360 yd of worsted weight yarn, a sturdy wool or wool blend
+  US 7 · 4.5 mm 16 in circular needle, and a spare needle in the same size for the bind off
+  A button about 0.75 in across
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Flap x1 [66]: Cast on 66 stitches. This edge is the tip of the flap.
+Flap x4 [66]: *K1, p1; repeat from * to the end / *P1, k1; repeat from * to the end
+Flap x1 [63]: Work 31 stitches in pattern, bind off the next 3 stitches for the buttonhole and work in pattern to the end
+Flap x1 [66]: Work in pattern to the gap, cast on 3 stitches over it with the backward loop method and work in pattern to the end
+Flap x18 [66]: *K1, p1; repeat from * to the end / *P1, k1; repeat from * to the end
+Body x1 [132]: With the right side facing, work across the flap in pattern, then cast on 66 stitches for the front. Join in the round without twisting and place a marker. The flap stitches are now the back
+Body x68 [132]: *P1, k1; repeat from * around / *K1, p1; repeat from * around
+Bottom x1: Turn the sleeve inside out. Put the 66 back stitches on one needle and the 66 front stitches on another, held parallel.
+Bottom x1: Join them with a three-needle bind off, and turn the sleeve right side out.
+Finishing x1: Weave in the ends. Fold the flap over the front, mark where the buttonhole falls and sew the button there.
