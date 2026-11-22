@@ -331,6 +331,7 @@ extension PatternPlan {
         ("k2tog", "Knit 2 stitches together"),
         ("ssk", "Slip 2 stitches knitwise one at a time, then knit them together through the back"),
         ("p2tog", "Purl 2 stitches together"),
+        ("ssp", "Slip 2 stitches knitwise one at a time, return them to the left needle, then purl them together through the back"),
         ("yo", "Yarn over"),
         ("duplicate stitch", "Sewn over a finished knit stitch with a tapestry needle, following its two legs, so it looks knitted in"),
         ("M1", "Make 1: lift the bar between the stitches and knit it through the back"),

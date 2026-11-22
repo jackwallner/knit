@@ -440,6 +440,10 @@
   "yokeSweater": {
    "camera": "lamp",
    "scene": "worn by an adult seated in an armchair by a window, hands in the lap"
+  },
+  "tankTop": {
+   "camera": "sun",
+   "scene": "worn by an adult outdoors on a sunny porch, arms bare, over light linen trousers"
   }
  }
 }

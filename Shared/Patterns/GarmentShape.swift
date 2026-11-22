@@ -274,6 +274,18 @@ enum GarmentShape {
             // The sweater with a tall collar folded over at the neck.
             let collar = CGPath(roundedRect: box(0.37, 0.02, 0.26, 0.16), cornerWidth: unit * 0.03, cornerHeight: unit * 0.03, transform: nil)
             path.addPath(GarmentShape.path(.sweater, in: rect).union(collar))
+        case .tank:
+            // Narrow straps over a scoop neck, armholes cut deep for a bare arm.
+            path.move(to: p(0.35, 0.08))
+            path.addLine(to: p(0.41, 0.08))
+            path.addCurve(to: p(0.59, 0.08), control1: p(0.41, 0.36), control2: p(0.59, 0.36))
+            path.addLine(to: p(0.65, 0.08))
+            path.addQuadCurve(to: p(0.76, 0.44), control: p(0.65, 0.38))
+            path.addLine(to: p(0.77, 0.92))
+            path.addLine(to: p(0.23, 0.92))
+            path.addLine(to: p(0.24, 0.44))
+            path.addQuadCurve(to: p(0.35, 0.08), control: p(0.35, 0.38))
+            path.closeSubpath()
         case .yoke:
             // The sweater with ridges ringing the round yoke.
             path.addPath(GarmentShape.path(.sweater, in: rect))
