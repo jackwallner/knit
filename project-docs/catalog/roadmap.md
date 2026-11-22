@@ -48,7 +48,9 @@ shape or edging, or for an AI tell; three failed tries means no photo. New photo
 (`docs/photos/<id>.jpg`, committed on this branch only) and cached on the phone, so the app does not carry
 them. A design whose photo is not accepted stays in `awaitingPhoto` in `PatternTests` and shows its drawing.
 
-Accepted on my read, waiting for the peer's: batches 1, 2 and 4, and nine of batch 3 (Baby Mittens shows a stray hat and is being retried) (2026-11-21).
+Reject a photo for any eye, nose or mouth in frame (the back of a head, hair or forehead is fine), for a second knitted item, or for stripes whose count, order or widths differ from the record (count them against the drawing), and for a yarn that hides the stitch.
+
+Accepted on my read, waiting for the peer's: batches 1 and 2 (accepted by the peer), and batches 3 and 4 except six redone after review: Cat Ear Hat, Houndstooth Beanie (faces), Baby Mittens (second item), Striped Beanie, Striped Scarf (stripe order and widths), Boot Cuffs (fuzzy yarn hid the stitch) (2026-11-21).
 
 ## The knitter's read (2026-11-21)
 
