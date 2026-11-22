@@ -1,0 +1,33 @@
+ok   Tube Socks: 6 sizes x 8 weights
+
+== Tube Socks, Child, DK, 180 yd
+5.5 in around unstretched, to fit a 6 in foot, and 14.25 in from the cuff to the toe
+  About 180 yd of DK weight yarn
+  US 6 · 4 mm double-pointed needles, or a long circular for magic loop
+  2 stitch markers
+  Tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cuff x1 [30]: Cast on 30 stitches loosely and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Cuff x12 [30]: *K3, p3; repeat from * around
+Spiral Rib x78 [30]: *K3, p3; repeat from * around / *K3, p3; repeat from * around / *K3, p3; repeat from * around / *K3, p3; repeat from * around. Remove the marker, k1 and place the marker again, so the rib moves one stitch to the left
+Toe x1 [30]: Knit 15 stitches for the top of the foot and place a marker. Knit the last 15 for the sole
+Toe x6 [26 to 18]: *K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker; repeat from * once more / Knit
+Toe x2 [14 to 10]: *K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker; repeat from * once more
+Toe x1: Put the 5 stitches of the top on one needle and the 5 of the sole on another, removing the markers. Cut the yarn, leaving a 12 in tail, and graft the toe shut with Kitchener stitch.
+Finishing x1: Weave in the ends and make a second sock the same way. The socks have no heel: the spiral rib settles around the heel as they are worn.
+
+== Tube Socks, Large, DK, 440 yd
+8.75 in around unstretched, to fit a 9.5 in foot, and 22.25 in from the cuff to the toe
+  About 440 yd of DK weight yarn
+  US 6 · 4 mm double-pointed needles, or a long circular for magic loop
+  2 stitch markers
+  Tapestry needle
+  Gauge: 22 stitches and 28 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cuff x1 [48]: Cast on 48 stitches loosely and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Cuff x14 [48]: *K3, p3; repeat from * around
+Spiral Rib x125 [48]: *K3, p3; repeat from * around / *K3, p3; repeat from * around / *K3, p3; repeat from * around / *K3, p3; repeat from * around. Remove the marker, k1 and place the marker again, so the rib moves one stitch to the left
+Toe x1 [48]: Knit 24 stitches for the top of the foot and place a marker. Knit the last 24 for the sole
+Toe x12 [44 to 24]: *K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker; repeat from * once more / Knit
+Toe x3 [20 to 12]: *K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker; repeat from * once more
+Toe x1: Put the 6 stitches of the top on one needle and the 6 of the sole on another, removing the markers. Cut the yarn, leaving a 12 in tail, and graft the toe shut with Kitchener stitch.
+Finishing x1: Weave in the ends and make a second sock the same way. The socks have no heel: the spiral rib settles around the heel as they are worn.

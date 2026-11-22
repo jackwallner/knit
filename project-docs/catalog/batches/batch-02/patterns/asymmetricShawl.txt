@@ -1,0 +1,23 @@
+ok   Asymmetric Shawl: 5 sizes x 8 weights
+
+== Asymmetric Shawl, Small, DK, 570 yd
+45.75 in along the straight edge, 15 in deep at the end
+  About 570 yd of DK weight yarn
+  US 6 · 4 mm 24 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Shawl x1 [3]: Cast on 3 stitches.
+Shawl x480 [4 to 83]: K1, kfb, knit to the end / Knit / Knit / Knit / Knit / Knit
+Shawl x22 [83]: Knit
+Finishing x1: Bind off all 83 stitches loosely. Weave in the ends and block the shawl flat.
+
+== Asymmetric Shawl, Large, DK, 1250 yd
+68.25 in along the straight edge, 22.75 in deep at the end
+  About 1,250 yd of DK weight yarn
+  US 6 · 4 mm 24 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Shawl x1 [3]: Cast on 3 stitches.
+Shawl x732 [4 to 125]: K1, kfb, knit to the end / Knit / Knit / Knit / Knit / Knit
+Shawl x20 [125]: Knit
+Finishing x1: Bind off all 125 stitches loosely. Weave in the ends and block the shawl flat.

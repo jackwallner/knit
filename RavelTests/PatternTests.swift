@@ -18,8 +18,31 @@ final class PatternTests: XCTestCase {
     }
 
     /// Every built-in design page has its knitted sample photo in the app.
+    /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
+    static let awaitingPhoto: Set<String> = []
+
+    private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
+
+    /// Every design page has its knitted sample: in the app for the designs 1.0 shipped, on the site for the rest.
     func testEveryDesignHasASamplePhoto() {
-        for design in Design.allCases { XCTAssertNotNil(UIImage(named: design.photo), "\(design) has no sample photo") }
+        for design in Design.allCases {
+            if let path = design.sitePhoto {
+                let onSite = FileManager.default.fileExists(atPath: Self.root.appending(path: "docs/\(path)").path)
+                XCTAssertTrue(onSite || Self.awaitingPhoto.contains(design.rawValue), "\(design) has no photo at docs/\(path)")
+                XCTAssertNil(UIImage(named: design.photo), "\(design) carries a photo the site should serve")
+            } else {
+                XCTAssertNotNil(UIImage(named: design.photo), "\(design) has no sample photo")
+            }
+        }
+    }
+
+    /// A site photo path has to pass the store's own check, or the photo never loads and the drawing stays.
+    @MainActor func testEverySitePhotoPathIsAllowed() {
+        for design in Design.allCases {
+            guard let path = design.sitePhoto else { continue }
+            XCTAssertTrue(PhotoStore.isAllowed(path), "\(design): \(path)")
+        }
+        XCTAssertEqual(Design.floorPouf.sitePhoto, "photos/floor-pouf.jpg")
     }
 
     /// The colorwork collection ships inside the app: every record loads, has its photo and a name in every language.
@@ -30,7 +53,12 @@ final class PatternTests: XCTestCase {
         let keys = strings?["strings"] as? [String: Any] ?? [:]
         for topical in collection {
             let item = LibraryItem.topical(topical)
-            XCTAssertNotNil(item.photo.flatMap { UIImage(named: $0) }, "\(topical.id) has no sample photo")
+            if let path = topical.photo {
+                let onSite = FileManager.default.fileExists(atPath: Self.root.appending(path: "docs/\(path)").path)
+                XCTAssertTrue(onSite || Self.awaitingPhoto.contains(topical.id), "\(topical.id) has no photo at docs/\(path)")
+            } else {
+                XCTAssertNotNil(item.photo.flatMap { UIImage(named: $0) }, "\(topical.id) has no sample photo")
+            }
             XCTAssertNotNil(keys[topical.title], "\(topical.title) is not translated")
             XCTAssertNil(topical.ends, "\(topical.id) is part of the library and never ends")
         }
@@ -392,7 +420,7 @@ final class PatternTests: XCTestCase {
     func testRoundPiecesSayRound() {
         everyPlan { design, input, gauge, plan in
             let label = "\(design.rawValue) \(input) \(gauge.stitches)"
-            let round = plan.steps[0].texts[0].contains("Join in the round")
+            let round = ["Join in the round", "Work in the round"].contains(where: plan.steps[0].texts[0].contains)
             let gaugeLine = plan.materials.last { $0.hasPrefix("Gauge") } ?? ""
             XCTAssertTrue(gaugeLine.contains(round ? " rounds over" : " rows over"), "\(label): \(gaugeLine)")
             guard round else { return }
@@ -543,10 +571,11 @@ final class PatternTests: XCTestCase {
         text.components(separatedBy: CharacterSet.decimalDigits.inverted).compactMap { Int($0) }
     }
 
-    /// 38 shapes of its own and 7 colorwork designs bundled on them: the 45 the store listing promises.
-    @MainActor func testTheLibraryHoldsFortyFiveDesigns() {
-        XCTAssertEqual(Design.allCases.count, 38)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 45)
+    /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
+    /// and every design added since. Raise both counts with each one.
+    @MainActor func testTheLibraryHoldsEveryDesign() {
+        XCTAssertEqual(Design.allCases.count, 93)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 152)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -654,6 +683,391 @@ final class PatternTests: XCTestCase {
         XCTAssertTrue(sock.plan.abbreviations.contains { $0.term == "p2tog" })
     }
 
+    func testToeUpSocksGrowToTheFootAndCloseAtTheHeel() {
+        for input in inputs(.toeUpSocks) {
+            for gauge in gauges {
+                let sock = Engines.toeUpSocks(foot: input["foot"] ?? 0, length: input["footLength"] ?? 0, leg: input["leg"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let plan = sock.plan
+                XCTAssertEqual(sock.stitches % 4, 0, label)
+                XCTAssertEqual(sock.toe, Engines.wedgeEnd(sock.stitches), label)
+                XCTAssertEqual(plan.steps.first?.stitches, sock.toe, label)
+                XCTAssertTrue(plan.steps[0].texts[0].contains("Judy's magic cast-on, \(sock.toe / 2) on each"), label)
+                XCTAssertEqual(rows(plan, "Sock 1 · Toe").last?.stitches, sock.stitches, label)
+                XCTAssertTrue(rows(plan, "Sock 1 · Foot").allSatisfy { $0.stitches == sock.stitches }, label)
+                XCTAssertTrue(rows(plan, "Sock 1 · Foot").last?.text.contains("knit the \(sock.stitches / 2) sole stitches") == true, label)
+                let heel = plan.steps.filter { $0.section == "Sock 1 · Heel" }
+                XCTAssertEqual(heel.compactMap(\.stitches).first, sock.stitches + 2, label)
+                XCTAssertEqual(rows(plan, "Sock 1 · Heel").last?.stitches, sock.toe, label)
+                XCTAssertTrue(heel.last?.texts[0].contains("the \(sock.toe / 2) stitches on each side") == true, label)
+                XCTAssertEqual(plan.steps.filter { $0.section.hasPrefix("Sock 1") }.map(\.texts), plan.steps.filter { $0.section.hasPrefix("Sock 2") }.map(\.texts), label)
+            }
+        }
+        // A medium sock fits its foot from the back of the heel to the toe, within a round or two.
+        let gauge = Design.toeUpSocks.gauge(for: .fingering)
+        let sock = Engines.toeUpSocks(foot: 8, length: 9.5, leg: 6.5, gauge: gauge)
+        let rounds = ["Sock 1 · Toe", "Sock 1 · Foot", "Sock 1 · Heel"].map { rows(sock.plan, $0).count }.reduce(0, +)
+        XCTAssertEqual(Double(rounds) / gauge.rpi, 9.5 * 0.95, accuracy: 0.3)
+        XCTAssertTrue(sock.plan.materials[0].contains("fingering weight"), sock.plan.materials[0])
+        XCTAssertTrue(sock.plan.abbreviations.contains { $0.term == "Judy's magic cast-on" })
+        XCTAssertTrue(sock.plan.abbreviations.contains { $0.term == "M1L" })
+    }
+
+    /// The top-down crown is the ribbed beanie's crown read upward, and the brim lands in the hat ease band.
+    func testTopDownBeanieGrowsItsCrownAndFitsTheHead() {
+        for input in inputs(.topDownBeanie) {
+            for gauge in gauges {
+                let hat = Engines.topDownBeanie(head: input["head"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(hat.stitches % 8, 0, label)
+                let crown = rows(hat.plan, "Crown")
+                XCTAssertEqual(crown.count, hat.crownRounds, label)
+                XCTAssertEqual(crown.first?.stitches, 16, label)
+                XCTAssertEqual(crown.last?.stitches, hat.stitches, label)
+                XCTAssertEqual(crown.count, Engines.crownRounds(wedge: hat.stitches / 8).count, label)
+                let brim = rows(hat.plan, "Brim")
+                let head = input["head"] ?? 0
+                let ease = Double(brim.last?.stitches ?? 0) / gauge.spi / head
+                XCTAssertTrue((Engines.hatEase.lowerBound - 0.01...Engines.hatEase.upperBound + 0.01).contains(ease), "\(label): ease \(ease)")
+                XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("8 cast-on stitches") == true, label)
+            }
+        }
+    }
+
+    /// Each poncho panel is twice as long as it is wide, so each end covers half the other's side.
+    func testPonchoPanelsAreTwiceAsLongAsWide() {
+        for input in inputs(.poncho) {
+            for gauge in gauges {
+                let plan = Design.poncho.plan(measures: input, gauge: gauge)
+                let width = Double(plan.steps[0].stitches ?? 0) / gauge.spi
+                let long = Double(rows(plan, "Panel 1").count) / gauge.rpi
+                XCTAssertEqual(long / width, 2, accuracy: 0.25, "\(input) \(gauge.stitches)")
+                XCTAssertEqual(rows(plan, "Panel 1").count % 2, 0)
+            }
+        }
+    }
+
+    /// One stocking, not a pair, as wide as asked, with a loop to hang it by.
+    @MainActor func testTheStockingIsOneSockWithALoop() {
+        for input in inputs(.christmasStocking) {
+            for gauge in gauges {
+                let plan = Design.christmasStocking.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertFalse(plan.steps.contains { $0.section.hasPrefix("Sock") }, label)
+                XCTAssertEqual(plan.steps.filter { $0.texts[0].hasPrefix("Cast on") }.count, 1, label)
+                XCTAssertEqual(Double(plan.steps[0].stitches ?? 0) / gauge.spi, input["around"] ?? 0, accuracy: 4.5 / gauge.spi, label)
+                XCTAssertTrue(plan.steps.last?.texts[0].contains("braid") == true, label)
+            }
+        }
+        XCTAssertEqual(LibrarySearch.find("christmas", in: Design.allCases.map { LibraryItem.builtIn($0) }).first?.id, Design.christmasStocking.rawValue)
+    }
+
+    /// Knit straight and square: as tall as it is wide, with a garter frame of the same width all round.
+    @MainActor func testTheWashclothIsSquare() {
+        for input in inputs(.washcloth) {
+            for gauge in gauges {
+                let plan = Design.washcloth.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let side = input["side"] ?? 0
+                XCTAssertEqual(Double(plan.steps[0].stitches ?? 0) / gauge.spi, side, accuracy: 1 / gauge.spi, label)
+                let body = plan.steps.filter { $0.section == "Body" }.map(\.rows).reduce(0, +)
+                let border = plan.steps.filter { $0.section.hasSuffix("Border") && !$0.isAction }.map(\.rows).reduce(0, +)
+                let tall = Double(body) / gauge.rpi + Double(border) / (gauge.spi * 2)
+                XCTAssertEqual(tall, side, accuracy: side * 0.1, label)
+            }
+        }
+        XCTAssertTrue(LibrarySearch.find("dishcloth", in: Design.allCases.map { LibraryItem.builtIn($0) }).contains { $0.id == Design.washcloth.rawValue })
+    }
+
+    /// The knot hat narrows by 8 a round to a tube no more than half the hat, long enough to tie.
+    func testTheKnotHatNarrowsToATube() {
+        for input in inputs(.knotHat) {
+            for gauge in gauges {
+                let hat = Engines.knotHat(head: input["head"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(hat.stitches % 8, 0, label)
+                XCTAssertLessThanOrEqual(hat.tube * 2, hat.stitches, label)
+                XCTAssertGreaterThanOrEqual(hat.tube, 16, label)
+                let tube = hat.plan.steps.last { $0.texts == ["Knit"] && $0.stitches == hat.tube }
+                XCTAssertGreaterThanOrEqual(Double(tube?.rows ?? 0) / gauge.rpi, 3.5, label)
+                XCTAssertTrue(hat.plan.steps.last?.texts[0].contains("knot") == true, label)
+            }
+        }
+    }
+
+    /// One edge grows a stitch every sixth row, so the slope comes out at the wingspan asked for, three times the depth.
+    func testTheAsymmetricShawlSlopesToItsWingspan() {
+        for input in inputs(.asymmetricShawl) {
+            for gauge in gauges {
+                let plan = Design.asymmetricShawl.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let rows = plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)
+                let long = Double(rows) / (gauge.spi * 2)
+                let deep = Double(plan.steps.compactMap(\.stitches).max() ?? 0) / gauge.spi
+                XCTAssertEqual((long * long + deep * deep).squareRoot(), input["wingspan"] ?? 0, accuracy: (input["wingspan"] ?? 0) * 0.05, label)
+                XCTAssertEqual(long / deep, 3, accuracy: 0.3, label)
+            }
+        }
+    }
+
+    /// The point grows to a little under half the round, ends on a wrong-side row, and the neck closes the round.
+    func testTheBandanaPointJoinsTheNeck() {
+        for input in inputs(.bandanaCowl) {
+            for gauge in gauges {
+                let cowl = Engines.bandanaCowl(around: input["around"] ?? 0, height: input["height"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(cowl.stitches % 4, 0, label)
+                XCTAssertTrue((0.3...0.5).contains(Double(cowl.front) / Double(cowl.stitches)), label)
+                let point = cowl.plan.steps.filter { $0.section == "Point" && !$0.isAction }
+                XCTAssertEqual(point.map(\.rows).reduce(0, +) % 2, 0, label)
+                XCTAssertEqual(point.last?.stitches(after: (point.last?.rows ?? 1) - 1), cowl.front, label)
+            }
+        }
+    }
+
+    /// The warmer widens from the hand to the arm in pairs, keeping a multiple of 4 for the top rib, and the
+    /// thumb slit hands the work back with the right side facing.
+    func testArmWarmersWidenToTheArm() {
+        for input in inputs(.armWarmers) {
+            for gauge in gauges {
+                let warmers = Engines.armWarmers(wrist: input["wrist"] ?? 0, arm: input["arm"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(warmers.top % 4, 0, label)
+                XCTAssertGreaterThanOrEqual(warmers.top, warmers.hand, label)
+                let slit = warmers.plan.steps.first { $0.section.hasSuffix("Thumb Opening") }
+                XCTAssertEqual((slit?.rows ?? 1) % 2, 0, label)
+                let rows = warmers.plan.steps.filter { $0.section.hasPrefix("Arm Warmer 1") && !$0.isAction }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(rows) / gauge.rpi, input["length"] ?? 0, accuracy: 1, label)
+            }
+        }
+    }
+
+    /// The watch cap stays in rib to the top: every round before the crown is k2, p2, and the crown keeps
+    /// a rib of its own until the last two rounds.
+    func testTheWatchCapIsRibbedToTheCrown() {
+        for input in inputs(.watchCap) {
+            for gauge in gauges {
+                let plan = Design.watchCap.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual((plan.steps[0].stitches ?? 0) % 8, 0, label)
+                XCTAssertTrue(plan.steps.filter { ["Brim", "Body"].contains($0.section) && !$0.isAction }.allSatisfy { $0.texts == ["*K2, p2; repeat from * around"] }, label)
+                let tall = Double(plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)) / gauge.rpi
+                XCTAssertGreaterThan(tall, (input["head"] ?? 0) * 0.37 + 1, label)
+            }
+        }
+    }
+
+    /// The hood is twice the seam long and about half the head deep, and the piece narrows back to the scarf.
+    func testTheHoodedScarfHasAHoodToSeam() {
+        for input in inputs(.hoodedScarf) {
+            for gauge in gauges {
+                let scarf = Engines.hoodedScarf(head: input["head"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let middle = scarf.plan.steps.filter { ["Increase", "Hood", "Decrease"].contains($0.section) }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(middle) / (gauge.spi * 2), scarf.seam * 2, accuracy: 4 / gauge.spi, label)
+                XCTAssertEqual(Double(scarf.hood) / gauge.spi, (input["head"] ?? 0) * 0.5, accuracy: max(1, 4 / gauge.spi), label)
+                XCTAssertEqual(scarf.plan.steps.last { $0.section == "Scarf" && !$0.isAction }?.stitches, scarf.end, label)
+            }
+        }
+    }
+
+    /// A coaster grows by eight stitches every other round to the size asked for, so it lies flat.
+    func testTheCoasterGrowsToItsSize() {
+        for input in inputs(.coasters) {
+            for gauge in gauges {
+                let plan = Design.coasters.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.first, 8, label)
+                XCTAssertTrue(counts.allSatisfy { $0 % 8 == 0 }, label)
+                let across = Double(counts.max() ?? 0) / (Double.pi * gauge.spi)
+                XCTAssertEqual(across, input["diameter"] ?? 0, accuracy: max(0.5, 8 / (Double.pi * gauge.spi)), label)
+            }
+        }
+    }
+
+    /// A baby mitten has no thumb: the hand is one tube to a top gathered to a quarter of its stitches.
+    func testBabyMittensGatherAtTheTop() {
+        for input in inputs(.babyMittens) {
+            for gauge in gauges {
+                let plan = Design.babyMittens.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.max(), counts.first, label)
+                XCTAssertEqual(counts.last, (counts.first ?? 0) / 4, label)
+                XCTAssertFalse(plan.steps.contains { $0.section.contains("Thumb") }, label)
+            }
+        }
+    }
+
+    /// The cat ear hat keeps every stitch to the top, where its halves meet in a three-needle bind off.
+    func testTheCatEarHatClosesFlat() {
+        for input in inputs(.catHat) {
+            for gauge in gauges {
+                let plan = Design.catHat.plan(measures: input, gauge: gauge)
+                let counts = Set(plan.steps.compactMap(\.stitches))
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(counts.count, 1, label)
+                XCTAssertEqual((counts.first ?? 1) % 4, 0, label)
+                XCTAssertTrue(plan.steps.contains { step in step.texts.contains { $0.contains("three-needle bind off") } }, label)
+            }
+        }
+    }
+
+    /// The tea cozy's two sides end on a wrong-side row, join into one round and close to 8 stitches.
+    func testTheTeaCozySidesJoinOverThePot() {
+        for input in inputs(.teaCozy) {
+            for gauge in gauges {
+                let plan = Design.teaCozy.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                for side in ["First Side", "Second Side"] {
+                    let rows = plan.steps.filter { $0.section == side && !$0.isAction }.map(\.rows).reduce(0, +)
+                    XCTAssertEqual(rows % 2, 0, "\(label) \(side)")
+                }
+                let half = plan.steps.first?.stitches ?? 0
+                XCTAssertEqual(plan.steps.first { $0.section == "Top" }?.stitches, half * 2, label)
+                XCTAssertEqual(plan.steps.last { $0.stitches != nil }?.stitches, 8, label)
+            }
+        }
+    }
+
+    /// A boot cuff is one tube to the height asked for: rib, seed stitch, rib.
+    func testBootCuffsReachTheirHeight() {
+        for input in inputs(.bootCuffs) {
+            for gauge in gauges {
+                let plan = Design.bootCuffs.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(Set(plan.steps.compactMap(\.stitches)).count, 1, label)
+                let rounds = plan.steps.filter { !$0.isAction }.map(\.rows).reduce(0, +)
+                XCTAssertEqual(Double(rounds) / gauge.rpi, max(input["height"] ?? 0, 8 / gauge.rpi), accuracy: 2 / gauge.rpi, label)
+            }
+        }
+    }
+
+    /// Baby socks name the yarn to buy, fingering, not the lace weight their firm gauge reads as.
+    func testBabySocksAskForFingering() {
+        let plan = Design.babySocks.plan(measures: Design.babySocks.defaultSize.values, gauge: Design.babySocks.gauge(for: .fingering))
+        XCTAssertTrue(plan.materials[0].contains("fingering weight"), plan.materials[0])
+    }
+
+    /// The bandana is half as deep as it is wide, and its ties are cast on evenly at both ends of the top.
+    func testTheBandanaIsHalfAsDeepAsItIsWide() {
+        for input in inputs(.bandanaKerchief) {
+            for gauge in gauges {
+                let plan = Design.bandanaKerchief.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let point = plan.steps.filter { $0.section == "Point" && !$0.isAction }
+                let base = point.last.flatMap { $0.stitches(after: $0.rows - 1) } ?? 0
+                let rows = point.reduce(0) { $0 + $1.rows }
+                XCTAssertEqual(Double(rows) / (gauge.spi * 2), Double(base) / gauge.spi / 2, accuracy: 0.75, label)
+                let ties = plan.steps.filter { $0.section == "Ties" }.compactMap(\.stitches)
+                XCTAssertEqual((ties.first ?? 0) - base, (ties.dropFirst().first ?? 0) - (ties.first ?? 0), label)
+            }
+        }
+    }
+
+    /// The bottle cover's neck is narrower than its body, and the shoulders widen it to the body count, which
+    /// halves at the second marker for the bind off.
+    func testTheBottleCoverShouldersReachTheBody() {
+        for input in inputs(.bottleCover) {
+            for gauge in gauges {
+                let plan = Design.bottleCover.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let neck = plan.steps.first?.stitches ?? 0
+                let body = plan.steps.first { $0.section == "Body" }?.stitches ?? 0
+                XCTAssertLessThan(neck, body, label)
+                XCTAssertEqual(neck % 4, 0, label)
+                XCTAssertGreaterThanOrEqual(Double(neck) / gauge.spi, 4.5, label)
+                XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("the \(body / 2) stitches before the second marker") } }, label)
+            }
+        }
+    }
+
+    /// The pouch has an even number of eyelets, so the cord comes out where it went in, and halves that
+    /// close the bottom with a three-needle bind off.
+    func testThePouchCordComesOutWhereItWentIn() {
+        for input in inputs(.pouch) {
+            for gauge in gauges {
+                let plan = Design.pouch.plan(measures: input, gauge: gauge)
+                let stitches = plan.steps.first?.stitches ?? 0
+                XCTAssertEqual(stitches % 8, 0, "\(input) \(gauge.stitches)")
+                XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("yo, k2tog") } })
+                XCTAssertTrue(plan.steps.contains { $0.texts.contains { $0.contains("first \(stitches / 2) stitches") } })
+            }
+        }
+    }
+
+    /// The shrug's sleeve seams leave at least a foot open across the back, and its cuff and band rib come out whole.
+    /// The drawn texture matches the stitch it stands for: one repeat wide and one repeat of rounds high.
+    func testEveryStitchDrawsOneRepeatOfItsFace() {
+        for stitch in Stitch.allCases {
+            XCTAssertEqual(stitch.face.count, stitch.round.count, stitch.name)
+            for row in stitch.face {
+                XCTAssertEqual(row.count, stitch.multiple, stitch.name)
+                XCTAssertTrue(row.allSatisfy("kptfoc".contains), stitch.name)
+            }
+        }
+    }
+
+    func testTheShrugLeavesTheBackOpen() {
+        for input in inputs(.shrug) {
+            for gauge in gauges {
+                let plan = Design.shrug.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(((plan.steps.first?.stitches ?? 0) - 2) % 4, 0, label)
+                XCTAssertEqual((plan.steps.first { $0.section == "Band" }?.stitches ?? 1) % 4, 0, label)
+                let seam = input["sleeve"] ?? 0, span = input["span"] ?? 0
+                XCTAssertGreaterThanOrEqual(span - 2 * min(seam, (span - 12) / 2), 12, label)
+            }
+        }
+    }
+
+    /// The turtleneck's collar is about 7 in of k2p2 rib on a count it divides into, folded in half to wear.
+    func testTheTurtleneckCollarFoldsInHalf() {
+        for input in inputs(.turtleneck) {
+            for gauge in gauges {
+                let plan = Design.turtleneck.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let collar = plan.steps.filter { $0.section == "Collar" && !$0.isAction }
+                XCTAssertEqual((collar.first?.stitches ?? 1) % 4, 0, label)
+                XCTAssertEqual(Double(collar.reduce(0) { $0 + $1.rows }) / gauge.rpi, 7, accuracy: 0.5, label)
+                XCTAssertTrue(plan.steps.last?.text(at: 0).contains("Fold the collar") ?? false, label)
+            }
+        }
+    }
+
+    /// The tee's sleeves stop above the elbow in a narrow band, and they barely taper, so they do not pull in.
+    func testTheTeeSleevesEndInABand() {
+        for input in inputs(.raglanTee) {
+            for gauge in gauges {
+                let plan = Design.raglanTee.plan(measures: input, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let sleeve = plan.steps.filter { $0.section == "First Sleeve" }
+                let band = plan.steps.filter { $0.section == "First Sleeve · Band" }
+                XCTAssertFalse(band.isEmpty, label)
+                XCTAssertLessThanOrEqual(Double(band.filter { !$0.isAction }.reduce(0) { $0 + $1.rows }) / gauge.rpi, 1.1, label)
+                let widest = sleeve.compactMap(\.stitches).max() ?? 0, narrowest = band.compactMap(\.stitches).min() ?? 0
+                XCTAssertGreaterThanOrEqual(Double(narrowest), Double(widest) * 0.8, label)
+                let worked = (sleeve + band).filter { !$0.isAction }.reduce(0) { $0 + $1.rows }
+                XCTAssertEqual(Double(worked) / gauge.rpi, input["sleeve"] ?? 0, accuracy: 0.75, label)
+            }
+        }
+    }
+
+    /// The capelet's collar pulls over the head, and its hem rib comes out whole.
+    func testTheCapeletCollarPullsOverTheHead() {
+        for input in inputs(.capelet) {
+            for gauge in gauges {
+                let plan = Design.capelet.plan(measures: input, gauge: gauge)
+                let counts = plan.steps.compactMap(\.stitches)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertGreaterThanOrEqual(Double(counts.first ?? 0) / gauge.spi, 17.5, label)
+                XCTAssertEqual((counts.last ?? 1) % 4, 0, label)
+                XCTAssertGreaterThan(Double(counts.last ?? 0) / gauge.spi, input["chest"] ?? 0, label)
+            }
+        }
+    }
+
     func testMittenThumbGussetAddsUp() {
         for input in inputs(.mittens) {
             for gauge in gauges {
@@ -677,12 +1091,433 @@ final class PatternTests: XCTestCase {
         }
     }
 
-    func testCardiganFrontsAndBandsMakeTheChest() {
-        let sizes: [Double] = Design.raglanCardigan.sizes.map { $0.values["chest"] ?? 0 } + [26, 62]
-        for chest in sizes {
+    func testFingerlessMittsGrowAThumbAndEndAtTheKnuckles() {
+        for input in inputs(.fingerlessMitts) {
             for gauge in gauges {
-                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: 15, sleeve: 18, gauge: gauge)
-                let label = "chest \(chest) gauge \(gauge.stitches)"
+                let mitts = Engines.fingerlessMitts(hand: input["hand"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(mitts.stitches % 4, 0, label)
+                XCTAssertEqual(mitts.gusset, 1 + 2 * mitts.increases, label)
+                XCTAssertEqual(mitts.thumb % 2, 0, "\(label): the thumb rib needs an even count")
+                let ratio = Double(mitts.thumb) / Double(mitts.stitches)
+                XCTAssertTrue((0.3...0.45).contains(ratio), "\(label): thumb \(ratio)")
+                let gusset = rows(mitts.plan, "Mitt 1 · Thumb Gusset")
+                XCTAssertEqual(gusset.filter { $0.text.hasPrefix("M1L") }.count, mitts.increases, label)
+                XCTAssertEqual(gusset[gusset.count - 2].stitches, mitts.stitches - 1 + mitts.gusset, label)
+                XCTAssertEqual(gusset.last?.stitches, mitts.stitches, label)
+                XCTAssertTrue(rows(mitts.plan, "Mitt 1 · Top").allSatisfy { $0.stitches == mitts.stitches }, label)
+                XCTAssertEqual(rows(mitts.plan, "Mitt 1 · Thumb").last?.stitches, mitts.thumb, label)
+                XCTAssertTrue(mitts.plan.steps.last?.texts[0].hasPrefix("Bind off") == true, label)
+            }
+        }
+    }
+
+    /// Each finger starts from the stitches it takes from the hand plus the ones picked up and cast on
+    /// between fingers, so together they hand back the whole glove, and each closes on half its stitches.
+    func testGloveFingersShareTheHand() {
+        for input in inputs(.gloves) {
+            for gauge in gauges {
+                let plan = Engines.gloves(hand: input["hand"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let cast = plan.steps[0].stitches ?? 0
+                let fingers = ["Index", "Middle", "Ring", "Little"].map { name in
+                    plan.steps.filter { $0.section == "Glove 1 · \(name) Finger" }
+                }
+                let starts = fingers.map { $0.first?.stitches ?? 0 }
+                // Index, ring and little finger each gain 2 between fingers; the middle gains 4.
+                XCTAssertEqual(starts.reduce(0, +) - 10, cast + 2, label)
+                // Without what each gains between fingers (the ring also holds the 2 cast on over the little finger).
+                XCTAssertGreaterThanOrEqual(starts[0] - 2, starts[2] - 4, label)
+                XCTAssertLessThanOrEqual(starts[3] - 2, starts[2] - 4, label)
+                for (finger, start) in zip(fingers, starts) {
+                    XCTAssertTrue(finger.filter { $0.texts == ["Knit"] }.allSatisfy { $0.stitches == start }, label)
+                    XCTAssertEqual(finger.last(where: { !$0.isAction })?.stitches, start / 2, label)
+                }
+            }
+        }
+    }
+
+    /// The round yoke grows in four rings, never more than doubling in one, and divides into a body and two
+    /// sleeves that use every stitch it ends on.
+    func testYokeRingsReachTheUnderarm() {
+        for input in inputs(.yokeSweater) {
+            for gauge in gauges {
+                let chest = input["chest"] ?? 0
+                let yoke = Engines.yokeSweater(chest: chest + Design.sweaterEase, wearer: chest, body: input["body"] ?? 0, sleeve: input["sleeve"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(yoke.rings.count, 4, label)
+                for (before, after) in zip([yoke.neck] + yoke.rings, yoke.rings) {
+                    XCTAssertGreaterThan(after, before, label)
+                    XCTAssertLessThanOrEqual(after, 2 * before, label)
+                }
+                XCTAssertEqual(yoke.rings.last, yoke.body - 2 * yoke.underarm + 2 * yoke.sleeveTop, label)
+                XCTAssertEqual(rows(yoke.plan, "Yoke").filter { $0.text == "Purl" }.count, 4, label)
+            }
+        }
+    }
+
+    /// Every strap of the tank ends on the same count, the front neck dips deeper than the back, and no
+    /// armhole is ever bound off more than about 1.5 in in one row.
+    func testTankStrapsMatchAndTheFrontNeckDips() {
+        for input in inputs(.tankTop) {
+            for gauge in gauges {
+                let chest = input["chest"] ?? 0
+                let tank = Engines.tank(chest: chest + 2, wearer: chest, body: input["body"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let straps = ["Front · First Strap", "Front · Second Strap", "Back · First Strap", "Back · Second Strap"].map { section in
+                    tank.plan.steps.filter { $0.section == section }
+                }
+                for strap in straps {
+                    let last = strap.last(where: { !$0.isAction })
+                    XCTAssertEqual(last.flatMap { $0.stitches(after: $0.rows - 1) }, tank.strap, label)
+                    XCTAssertEqual(strap.last?.texts[0], "Bind off the \(tank.strap) strap stitches.", label)
+                }
+                XCTAssertGreaterThan(straps[0].reduce(0) { $0 + $1.rows }, straps[2].reduce(0) { $0 + $1.rows }, label)
+                XCTAssertEqual((tank.frontNeck + tank.backNeck) % 2, 0, label)
+                for step in tank.plan.steps where step.texts[0].hasPrefix("Bind off ") && step.texts[0].contains("stitches, ") {
+                    XCTAssertLessThanOrEqual(numbers(step.texts[0])[0], Int((1.5 * gauge.spi).rounded()) + 1, label)
+                }
+            }
+        }
+    }
+
+    /// The cropped cardigan's fronts start narrow and widen at the neck edge through the yoke, ending as wide
+    /// as the crew cardigan's, and every buttonhole sits below the V.
+    func testCroppedCardiganOpensInAV() {
+        for input in inputs(.croppedCardigan) {
+            for gauge in gauges {
+                let chest = input["chest"] ?? 0
+                let c = Engines.croppedCardigan(chest: chest + 5, wearer: chest, body: input["body"] ?? 0, sleeve: input["sleeve"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertGreaterThanOrEqual(c.frontAtNeck, 2, label)
+                let yoke = rows(c.plan, "Yoke")
+                XCTAssertEqual(yoke.filter { $0.text.hasPrefix("K1, M1L, ") }.count, c.neckIncreases, label)
+                XCTAssertEqual(c.band % 2, 1, label)
+                let band = c.plan.steps.filter { $0.section == "Front Band" }
+                let straight = numbers(band[0].texts[0])[0]
+                let holes = band.first { $0.texts[0].contains("K2tog, yo") }?.texts[0] ?? ""
+                // The rib after the last hole runs past the end of the straight right front.
+                XCTAssertGreaterThan(numbers(holes).last ?? 0, c.band - straight, "\(label): \(holes)")
+            }
+        }
+    }
+
+    /// The baby pullover's neck opening is worked flat for an even number of rows, so the round that joins it
+    /// starts on the right side, and the two buttonholes sit inside its band.
+    func testBabyPulloverOpensAtTheShoulder() {
+        for input in inputs(.babyPullover) {
+            for gauge in gauges {
+                let chest = input["chest"] ?? 0
+                let p = Engines.babyPullover(chest: chest + Design.sweaterEase, wearer: chest, body: input["body"] ?? 0, sleeve: input["sleeve"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(p.flatRows % 2, 0, label)
+                let worked = p.plan.steps.filter { !$0.isAction }.flatMap { step in (0..<step.rows).map { step.text(at: $0) } }
+                let join = worked.firstIndex { $0.contains("Join in the round to close the opening") }
+                XCTAssertEqual(join.map { $0 + 1 }, p.flatRows, label)
+                XCTAssertEqual(p.band % 2, 1, label)
+                let holes = try? XCTUnwrap(p.plan.steps.first { $0.texts[0].contains("K2tog, yo") })
+                // Rib, two stitches for each hole (the 2 of k2tog), rib: together the whole band.
+                XCTAssertEqual(numbers(holes?.texts[0] ?? "").reduce(0, +), p.band, label)
+            }
+        }
+    }
+
+    /// The bucket hat's crown grows to the band and no further, and its brim widens by half.
+    func testBucketHatCrownMeetsTheBandAndTheBrimFlares() {
+        for input in inputs(.bucketHat) {
+            for gauge in gauges {
+                let plan = Engines.bucketHat(head: input["head"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let band = rows(plan, "Sides").map(\.stitches)
+                XCTAssertEqual(Set(band).count, 1, label)
+                XCTAssertEqual(rows(plan, "Crown").last?.stitches, band.first, label)
+                let edge = rows(plan, "Edge").map(\.stitches)
+                let flare = Double(edge.first ?? 0) / Double(band.first ?? 1)
+                XCTAssertTrue((1.4...1.6).contains(flare), "\(label): \(flare)")
+            }
+        }
+    }
+
+    /// The tote picks up one stitch per garter ridge along each end of its base, so the body sits square on it,
+    /// and both straps match.
+    func testToteBodyPicksUpAroundTheBase() {
+        for input in inputs(.toteBag) {
+            for gauge in gauges {
+                let t = Engines.tote(width: input["width"] ?? 0, height: input["height"] ?? 0, handle: input["handle"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let base = rows(t.plan, "Base")
+                XCTAssertEqual(base.count, 2 * t.side, label)
+                XCTAssertEqual(t.around, 2 * t.base + 2 * t.side, label)
+                XCTAssertEqual(Set(rows(t.plan, "Body").map(\.stitches) + rows(t.plan, "Band").map(\.stitches)), [t.around], label)
+                XCTAssertEqual(rows(t.plan, "First Handle").count, rows(t.plan, "Second Handle").count, label)
+                XCTAssertEqual(rows(t.plan, "First Handle").count, t.strapRows, label)
+            }
+        }
+    }
+
+    /// The cocoon's base circle grows to the body's count, and its rib is in whole k2, p2 repeats.
+    func testCocoonBaseMeetsTheBody() {
+        for input in inputs(.babyCocoon) {
+            for gauge in gauges {
+                let plan = Engines.cocoon(around: input["around"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let body = rows(plan, "Body").map(\.stitches)
+                XCTAssertEqual(rows(plan, "Base").last?.stitches, body.first, label)
+                XCTAssertEqual(Set(body + rows(plan, "Top").map(\.stitches)).count, 1, label)
+                XCTAssertEqual((body.first ?? 1) % 4, 0, label)
+            }
+        }
+    }
+
+    /// The tube sock's rib is in whole k3, p3 repeats, and its toe narrows evenly to the stitches grafted shut.
+    func testTubeSockToeNarrowsToTheGraft() {
+        for input in inputs(.tubeSocks) {
+            for gauge in gauges {
+                let t = Engines.tubeSocks(foot: input["foot"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(t.stitches % 6, 0, label)
+                let toe = rows(t.plan, "Toe").map(\.stitches)
+                XCTAssertEqual(toe.count, 1 + t.toeRounds, label)
+                XCTAssertEqual(toe.last, t.left, label)
+                XCTAssertTrue(t.left >= 8 && t.left % 2 == 0, label)
+                XCTAssertTrue(toe.dropLast().allSatisfy { $0 / 2 >= 6 }, label)
+            }
+        }
+    }
+
+    /// The basket's base grows to the sides' count, and its two handle slots sit opposite each other and are
+    /// cast on again in full.
+    func testBasketSlotsSitOppositeAndClose() {
+        for input in inputs(.knitBasket) {
+            for gauge in gauges {
+                let bk = Engines.basket(diameter: input["diameter"] ?? 0, height: input["height"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let sides = rows(bk.plan, "Sides")
+                XCTAssertEqual(rows(bk.plan, "Base").last?.stitches, bk.around, label)
+                XCTAssertEqual(sides.count, bk.sideRounds, label)
+                XCTAssertEqual(sides.filter { $0.stitches == bk.around - 2 * bk.handle }.count, 1, label)
+                XCTAssertEqual(sides.last?.stitches, bk.around, label)
+                let slot = sides.first { $0.text.contains("bind off") }?.text ?? ""
+                let n = numbers(slot)
+                XCTAssertEqual(n[1] + n[2], bk.around / 2, label)
+            }
+        }
+    }
+
+    /// The runner's two points mirror each other: from 3 stitches to the width, and from the width back to 3.
+    func testRunnerPointsMirror() {
+        for input in inputs(.tableRunner) {
+            for gauge in gauges {
+                let r = Engines.runner(width: input["width"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let first = rows(r.plan, "First Point").map(\.stitches)
+                let second = rows(r.plan, "Second Point").map(\.stitches)
+                XCTAssertEqual(r.width % 2, 1, label)
+                XCTAssertEqual(first.last, r.width, label)
+                XCTAssertEqual(Set(rows(r.plan, "Body").map(\.stitches)), [r.width], label)
+                XCTAssertEqual(first.count, second.count, label)
+                XCTAssertEqual(second.dropLast().last, 3, label)
+                XCTAssertEqual(second.last, 1, label)
+            }
+        }
+    }
+
+    /// The ruana's two fronts take every back stitch but the one bound off between them, are worked as long
+    /// as the back, and split on a right-side row.
+    func testRuanaFrontsMatchTheBack() {
+        for input in inputs(.ruana) {
+            for gauge in gauges {
+                let r = Engines.ruana(width: input["width"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(2 * r.front + 1, r.stitches, label)
+                XCTAssertEqual(r.front % 2, 1, label)
+                XCTAssertEqual(r.backRows % 2, 0, label)
+                XCTAssertEqual(rows(r.plan, "Back").count, r.backRows, label)
+                XCTAssertEqual(rows(r.plan, "First Front").count, r.backRows, label)
+                XCTAssertEqual(rows(r.plan, "Second Front").count, r.backRows - 1, label)
+            }
+        }
+    }
+
+    /// The scrunchie strip ends on a wrong-side row, so it is bound off from the right side, and is long
+    /// enough to gather around the elastic.
+    func testScrunchieStripGathers() {
+        for input in inputs(.scrunchie) {
+            for gauge in gauges {
+                let plan = Engines.scrunchie(width: input["width"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let strip = rows(plan, "Strip")
+                XCTAssertEqual(strip.count % 2, 0, "\(input)")
+                XCTAssertGreaterThanOrEqual(Double(strip.count) / gauge.rpi, 1.5 * 2 * Double.pi, "\(input)")
+            }
+        }
+    }
+
+    func testPoufBottomMirrorsTheTop() {
+        for input in inputs(.floorPouf) {
+            for gauge in gauges {
+                let pouf = Engines.pouf(diameter: input["diameter"] ?? 0, height: input["height"] ?? 0, gauge: gauge)
+                // The bottom takes off, 8 at a time, exactly what the top put on, and ends on 8 stitches.
+                XCTAssertEqual(pouf.bottom.last?.stitches, 8, "\(input)")
+                XCTAssertEqual(pouf.bottom.filter { $0.text != "Knit" }.count, pouf.around / 8 - 1, "\(input)")
+                XCTAssertEqual(pouf.around % 4, 0, "\(input)")
+                XCTAssertEqual(pouf.bottom.filter { $0.text.contains("Stuff") }.count, 1, "\(input)")
+                let tall = Double(pouf.sideRounds + 2) / gauge.rpi
+                XCTAssertEqual(tall, input["height"] ?? 0, accuracy: 1 / gauge.rpi + 0.01, "\(input)")
+            }
+        }
+    }
+
+    func testBibStrapsMatchAndReachAroundTheNeck() {
+        for input in inputs(.babyBib) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0
+                let bib = Engines.babyBib(width: width, length: input["length"] ?? 0, gauge: gauge)
+                let first = rows(bib.plan, "First Strap"), second = rows(bib.plan, "Second Strap")
+                XCTAssertEqual(first.count, second.count, "\(input)")
+                XCTAssertEqual(first.count, bib.strapRows, "\(input)")
+                XCTAssertGreaterThanOrEqual(bib.strap, 4, "\(input)")
+                // Both straps and the front of the neck go at least once around a baby's neck.
+                let garter = gauge.spi * 2
+                let neckFront = Double(bib.width - 2 * bib.strap) / gauge.spi
+                XCTAssertGreaterThanOrEqual(neckFront + 2 * Double(bib.strapRows) / garter, width + 4.5, "\(input)")
+            }
+        }
+    }
+
+    func testBathMatGrowsToItsSize() {
+        for input in inputs(.bathMat) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0, length = input["length"] ?? 0
+                let mat = Engines.bathMat(width: width, length: length, gauge: gauge)
+                let body = rows(mat.plan, "Body")
+                XCTAssertEqual(body.filter { $0.text.hasPrefix("*M1L") }.count, mat.increaseRounds, "\(input)")
+                XCTAssertEqual(body.last?.stitches, mat.finalStitches, "\(input)")
+                // The garter rounds out from the middle make the width; the stitches along a side make the length.
+                let across = Double(2 * mat.increaseRounds + 1) / (gauge.spi * 2) * 2
+                XCTAssertEqual(across, width, accuracy: 1.5, "\(input)")
+                XCTAssertEqual(Double(mat.middle + 2 + 2 * mat.increaseRounds) / gauge.spi, max(length, width), accuracy: 1.5, "\(input)")
+            }
+        }
+    }
+
+    func testLaptopSleeveFitsTheLaptop() {
+        for input in inputs(.laptopSleeve) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0, height = input["height"] ?? 0
+                let sleeve = Engines.laptopSleeve(width: width, height: height, gauge: gauge)
+                XCTAssertEqual(sleeve.half % 2, 0, "\(input)")
+                XCTAssertEqual(sleeve.flapRows % 2, 0, "\(input)")
+                XCTAssertGreaterThanOrEqual(Double(sleeve.half) / gauge.spi, width, "\(input)")
+                XCTAssertGreaterThanOrEqual(Double(sleeve.bodyRounds) / (gauge.rpi * 1.1), height, "\(input)")
+                // The flap's first row after the buttonhole and the body's first round alternate the seed stitch.
+                let flap = rows(sleeve.plan, "Flap"), body = rows(sleeve.plan, "Body")
+                XCTAssertTrue(flap.last?.text.hasPrefix("*P1") ?? false, "\(input)")
+                XCTAssertTrue(body[1].text.hasPrefix("*P1"), "\(input)")
+            }
+        }
+    }
+
+    func testBaubleRisesAndFallsLikeASphere() {
+        for input in inputs(.bauble) {
+            for gauge in gauges {
+                let bauble = Engines.bauble(diameter: input["diameter"] ?? 0, gauge: gauge)
+                // Counts climb to the middle, never dip, then fall back to 6 and never rise.
+                let peak = bauble.rounds.firstIndex(of: bauble.around) ?? -1
+                XCTAssertGreaterThanOrEqual(peak, 0, "\(input)")
+                XCTAssertEqual(bauble.rounds.last, 6, "\(input)")
+                for (a, b) in zip(bauble.rounds, bauble.rounds.dropFirst()) { XCTAssertLessThanOrEqual(abs(b - a), 6, "\(input)") }
+                XCTAssertEqual(Array(bauble.rounds[...peak]), bauble.rounds[...peak].sorted(), "\(input)")
+                XCTAssertEqual(Array(bauble.rounds[peak...]), bauble.rounds[peak...].sorted(by: >), "\(input)")
+            }
+        }
+    }
+
+    func testNeckWarmerButtonholesFitAcross() {
+        for input in inputs(.buttonNeckWarmer) {
+            for gauge in gauges {
+                let neck = input["neck"] ?? 0
+                let warmer = Engines.buttonNeckWarmer(neck: neck, height: input["height"] ?? 0, gauge: gauge)
+                XCTAssertEqual(warmer.stitches % 2, 1, "\(input)")
+                let used = 2 * warmer.edge + warmer.holes * warmer.hole + (warmer.holes - 1) * warmer.gap
+                XCTAssertLessThanOrEqual(used, warmer.stitches, "\(input)")
+                XCTAssertGreaterThanOrEqual(warmer.edge, 2, "\(input)")
+                // The band reaches around the neck with room left to overlap under the buttons.
+                XCTAssertGreaterThanOrEqual(Double(warmer.rows) / (gauge.rpi * 1.1), neck + 3, "\(input)")
+                XCTAssertEqual(rows(warmer.plan, "Band").count + rows(warmer.plan, "Buttonholes").count, warmer.rows, "\(input)")
+            }
+        }
+    }
+
+    func testDraftStopperEndsMirror() {
+        for input in inputs(.draftStopper) {
+            for gauge in gauges {
+                let length = input["length"] ?? 0
+                let stopper = Engines.draftStopper(length: length, around: input["around"] ?? 0, gauge: gauge)
+                let first = rows(stopper.plan, "First End"), second = rows(stopper.plan, "Second End")
+                XCTAssertEqual(first.last?.stitches, stopper.around, "\(input)")
+                XCTAssertEqual(second.last?.stitches, 6, "\(input)")
+                XCTAssertEqual(first.filter { $0.text.contains("M1L") }.count, second.filter { $0.text.contains("k2tog") || $0.text.hasPrefix("K2tog") }.count, "\(input)")
+                XCTAssertEqual(rows(stopper.plan, "Body").last?.text, "Purl", "\(input)")
+                let long = Double(stopper.bodyRounds + 2 * stopper.endRounds) / gauge.rpi
+                XCTAssertEqual(long, length, accuracy: 1.5, "\(input)")
+            }
+        }
+    }
+
+    func testCowlHoodFoldsEvenlyAndFitsOverTheHead() {
+        for input in inputs(.cowlHood) {
+            for gauge in gauges {
+                let head = input["head"] ?? 0
+                let hood = Engines.cowlHood(head: head, height: input["height"] ?? 0, gauge: gauge)
+                XCTAssertEqual(hood.around % 4, 0, "\(input)")
+                XCTAssertEqual(hood.hood % 2, 0, "\(input)")
+                XCTAssertEqual(hood.hood + hood.front, hood.around, "\(input)")
+                // The hood ends on a right side row, so the yarn sits at the face edge for the bind off.
+                XCTAssertEqual(hood.hoodRows % 2, 0, "\(input)")
+                XCTAssertGreaterThanOrEqual(Double(hood.around) / gauge.spi, head, "\(input)")
+            }
+        }
+    }
+
+    func testBuntingFlagsComeToAPointAndFillTheLength() {
+        for input in inputs(.bunting) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0, length = input["length"] ?? 0
+                let bunting = Engines.bunting(width: width, length: length, gauge: gauge)
+                let flag = rows(bunting.plan, "Flag")
+                XCTAssertEqual(bunting.width % 2, 1, "\(input)")
+                XCTAssertEqual(bunting.spacing % 2, 0, "\(input)")
+                XCTAssertEqual(flag.last?.stitches, 1, "\(input)")
+                XCTAssertEqual(flag.dropLast().last?.stitches, 3, "\(input)")
+                // The flags and the gaps between them fill the length without running past it.
+                let span = Double(bunting.flags) * Double(bunting.width) / gauge.spi + Double(bunting.flags - 1)
+                XCTAssertLessThanOrEqual(span, max(length, 3 * (Double(bunting.width) / gauge.spi + 1)) + 3, "\(input)")
+            }
+        }
+    }
+
+    func testPixieHatPointTapersToFour() {
+        for input in inputs(.pixieHat) {
+            for gauge in gauges {
+                let head = input["head"] ?? 0
+                let hat = Engines.pixieHat(head: head, gauge: gauge)
+                let point = rows(hat.plan, "Point")
+                XCTAssertEqual(hat.stitches % 4, 0, "\(input)")
+                XCTAssertEqual(point.last?.stitches, 4, "\(input)")
+                XCTAssertEqual(point.filter { $0.text.hasPrefix("*Knit to 2") }.count, hat.stitches / 4 - 1, "\(input)")
+                XCTAssertLessThan(Double(hat.stitches) / gauge.spi, head, "\(input)")
+            }
+        }
+    }
+
+    func testCardiganFrontsAndBandsMakeTheChest() {
+        let adults: [Double] = Design.raglanCardigan.sizes.map { $0.values["chest"] ?? 0 } + [26, 62]
+        let babies: [Double] = Design.babyCardigan.sizes.map { $0.values["chest"] ?? 0 } + [14, 24]
+        let children: [Double] = Design.kidsCardigan.sizes.map { $0.values["chest"] ?? 0 } + [18, 34]
+        for (baby, child, chest) in adults.map({ (false, false, $0) }) + babies.map({ (true, false, $0) }) + children.map({ (false, true, $0) }) {
+            for gauge in gauges {
+                let c = Engines.cardigan(chest: chest + Design.sweaterEase, wearer: chest, body: baby ? 7 : child ? 11 : 15, sleeve: baby ? 7 : child ? 12 : 18, gauge: gauge, baby: baby, child: child)
+                let label = "\(baby ? "baby " : child ? "child " : "")chest \(chest) gauge \(gauge.stitches)"
                 XCTAssertEqual(c.body + c.band, c.fit.body, label)
                 XCTAssertEqual(2 * c.front + c.fit.panel + 2 * c.fit.underarm, c.body, label)
                 XCTAssertEqual(c.neck, c.fit.backAtNeck + 2 * c.frontAtNeck + 2 * c.fit.sleeveAtNeck, label)
@@ -716,14 +1551,21 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(worked.holes, c.buttons, label)
                 XCTAssertEqual(worked.stitches + (gaps.last ?? 0), c.bandPickUp, label)
                 XCTAssertEqual(rows(c.plan, "Back Neck").filter { $0.text.hasSuffix(", turn") }.count % 2, 0, label)
-                // About one button every 3 in.
+                // About one button every 3 in, and every 2 on a baby's.
                 let spacing = Double(c.bandPickUp) / gauge.spi / Double(c.buttons)
-                XCTAssertTrue((2.4...4).contains(spacing), "\(label): \(spacing)")
+                XCTAssertTrue((baby ? 1.2...3.25 : 2.4...4).contains(spacing), "\(label): \(spacing)")
             }
         }
         let plan = Design.raglanCardigan.plan(measures: [:], gauge: YarnWeight.worsted.gauge)
         XCTAssertTrue(plan.finished.contains(Sizing.inches(41)), plan.finished)
         XCTAssertTrue(plan.materials.contains { $0.contains("buttons") })
+        // A baby's neck is cut smaller than a child's raglan would make it: about 10 to 12 in around.
+        for size in Design.babyCardigan.sizes {
+            let gauge = YarnWeight.dk.gauge
+            let c = Engines.cardigan(chest: (size.values["chest"] ?? 0) + Design.sweaterEase, wearer: size.values["chest"], body: 7, sleeve: 7, gauge: gauge, baby: true)
+            XCTAssertTrue((9.5...12.5).contains(Double(c.neck) / gauge.spi), "\(size.name): neck \(Double(c.neck) / gauge.spi)")
+            XCTAssertTrue(c.plan.steps.contains { $0.texts[0].contains("To button it the other way") }, size.name)
+        }
     }
 
     /// Reads a buttonhole row back: the stitches it works up to and through its last hole, and how many holes.
@@ -741,11 +1583,11 @@ final class PatternTests: XCTestCase {
     }
 
     func testVestShapingAddsUp() {
-        for input in inputs(.sweaterVest) {
+        for (child, input) in inputs(.sweaterVest).map({ (false, $0) }) + inputs(.kidsVest).map({ (true, $0) }) {
             for gauge in gauges {
                 let chest = input["chest"] ?? 0
-                let v = Engines.vest(chest: chest + Design.sweaterEase, wearer: chest, body: input["body"] ?? 0, gauge: gauge)
-                let label = "\(input) \(gauge.stitches)"
+                let v = Engines.vest(chest: chest + Design.sweaterEase, wearer: chest, body: input["body"] ?? 0, gauge: gauge, child: child)
+                let label = "\(child ? "child " : "")\(input) \(gauge.stitches)"
                 XCTAssertEqual(2 * v.piece, v.body, label)
                 XCTAssertEqual(2 * v.shoulder + v.neck, v.shoulders, label)
                 XCTAssertGreaterThanOrEqual(v.shoulder, 2, label)
@@ -842,7 +1684,8 @@ final class PatternTests: XCTestCase {
         for design in Design.allCases {
             for picked in YarnWeight.allCases {
                 let plan = design.plan(measures: design.defaultSize.values, gauge: design.gauge(for: picked))
-                let weight = design == .cuffDownSocks && picked == .lace ? .fingering : picked
+                // Socks are knit firmer than the label: lace gauge in a sock still means fingering yarn.
+                let weight = [.cuffDownSocks, .toeUpSocks, .babySocks].contains(design) && picked == .lace ? .fingering : picked
                 let name = weight == .dk || weight == .aran ? weight.label : weight.label.lowercased()
                 XCTAssertTrue(plan.materials[0].contains("of \(name) weight yarn"), "\(design.rawValue) \(picked.rawValue): \(plan.materials[0])")
             }

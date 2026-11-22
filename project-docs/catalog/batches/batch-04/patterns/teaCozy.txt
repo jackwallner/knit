@@ -1,0 +1,66 @@
+ok   Tea Cozy: 5 sizes x 8 weights
+
+== Tea Cozy, Small, Worsted, 120 yd
+19.5 in around, to fit a 20 in teapot, 6.25 in tall
+  About 120 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, for the crown
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Side x1 [44]: Cast on 44 stitches.
+First Side x6 [44]: *K2, p2; repeat from * to the end
+First Side x14 [44]: Knit / Purl
+First Side x1: Cut the yarn and leave the stitches on the needle.
+Second Side x1 [44]: Cast on 44 stitches.
+Second Side x6 [44]: *K2, p2; repeat from * to the end
+Second Side x14 [44]: Knit / Purl
+Second Side x1: Leave the stitches on the needle and keep the yarn attached.
+Top x1 [88]: Knit across the second side, then across the first side. Join in the round and place a marker
+Top x1 [88]: Knit
+Crown x2 [80]: *K9, k2tog; repeat from * around / Knit
+Crown x2 [72]: *K8, k2tog; repeat from * around / Knit
+Crown x2 [64]: *K7, k2tog; repeat from * around. Change to double-pointed needles / Knit
+Crown x2 [56]: *K6, k2tog; repeat from * around / Knit
+Crown x2 [48]: *K5, k2tog; repeat from * around / Knit
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends. The gap at one side is for the spout, the other for the handle.
+
+== Tea Cozy, Large, Worsted, 260 yd
+28.5 in around, to fit a 30 in teapot, 8.75 in tall
+  About 260 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, for the crown
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Side x1 [64]: Cast on 64 stitches.
+First Side x6 [64]: *K2, p2; repeat from * to the end
+First Side x22 [64]: Knit / Purl
+First Side x1: Cut the yarn and leave the stitches on the needle.
+Second Side x1 [64]: Cast on 64 stitches.
+Second Side x6 [64]: *K2, p2; repeat from * to the end
+Second Side x22 [64]: Knit / Purl
+Second Side x1: Leave the stitches on the needle and keep the yarn attached.
+Top x1 [128]: Knit across the second side, then across the first side. Join in the round and place a marker
+Top x1 [128]: Knit
+Crown x2 [120]: *K14, k2tog; repeat from * around / Knit
+Crown x2 [112]: *K13, k2tog; repeat from * around / Knit
+Crown x2 [104]: *K12, k2tog; repeat from * around / Knit
+Crown x2 [96]: *K11, k2tog; repeat from * around / Knit
+Crown x2 [88]: *K10, k2tog; repeat from * around / Knit
+Crown x2 [80]: *K9, k2tog; repeat from * around / Knit
+Crown x2 [72]: *K8, k2tog; repeat from * around / Knit
+Crown x2 [64]: *K7, k2tog; repeat from * around. Change to double-pointed needles / Knit
+Crown x1 [56]: *K6, k2tog; repeat from * around
+Crown x1 [48]: *K5, k2tog; repeat from * around
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends. The gap at one side is for the spout, the other for the handle.

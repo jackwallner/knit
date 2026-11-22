@@ -5,17 +5,20 @@ import ImageIO
 import UniformTypeIdentifiers
 
 // Checks topical design records the way the app's tests do and draws a preview of each.
-// Usage: topical-check [--previews <dir>] [--print <id>] <file.json>...
+// Usage: topical-check [--previews <dir>] [--print <id>] [--fit-weights] <file.json>...
+// --fit-weights prints, for each record, every yarn weight it passes at, to set its "weights" from.
 // Exits 1 when any record is unusable or fails at any size and yarn weight.
 
 var files: [String] = []
 var previews: String?
 var printing: String?
+var fitWeights = false
 var arguments = CommandLine.arguments.dropFirst().makeIterator()
 while let argument = arguments.next() {
     switch argument {
     case "--previews": previews = arguments.next()
     case "--print": printing = arguments.next()
+    case "--fit-weights": fitWeights = true
     default: files.append(argument)
     }
 }
@@ -41,6 +44,15 @@ for file in files {
             failed = true
             continue
         }
+        if fitWeights {
+            let passing = YarnWeight.allCases.filter { weight in
+                var one = Topical(id: topical.id, title: topical.title, base: topical.base, work: topical.work, weights: [weight], tag: topical.tag, starts: nil, ends: nil, isFree: false)
+                one.stitch = topical.stitch
+                return TopicalCheck.problems(one).isEmpty
+            }
+            print("weights \(topical.id): \(passing.map(\.rawValue).joined(separator: " "))")
+            continue
+        }
         let problems = TopicalCheck.problems(topical)
         if problems.isEmpty {
             print("ok   \(topical.id): \(topical.title), \(TopicalCheck.inputs(for: topical.base).count) sizes x \(topical.weights.count) weights")
@@ -57,13 +69,18 @@ for file in files {
 print(failed ? "\(checked) checked, failures above" : "\(checked) checked, all pass")
 exit(failed ? 1 : 0)
 
+/// The pattern in its own colors at the smallest and the largest size, as a knitter reads it.
 func printPattern(_ topical: Topical) {
-    let plan = topical.plan(measures: topical.base.defaultSize.values, gauge: topical.defaultWeight.gauge)
-    print("\n\(topical.title), \(topical.base.defaultSize.name), \(topical.defaultWeight.label)\n\(plan.finished)")
-    for line in plan.materials { print("  \(line)") }
-    for step in plan.steps {
-        let count = step.stitches.map { " [\($0)]" } ?? ""
-        print("\(step.section) x\(step.rows)\(count): \(step.texts.joined(separator: " / "))")
+    let sizes = topical.base.sizes
+    for size in [sizes.first, sizes.count > 1 ? sizes.last : nil].compactMap({ $0 }) {
+        let plan = topical.plan(measures: size.values, gauge: topical.defaultWeight.gauge)
+        print("\n== \(topical.id), \(size.name), \(topical.defaultWeight.label), \(plan.yards) yd\n\(plan.finished)")
+        for line in plan.materials { print("  \(line)") }
+        for step in plan.steps {
+            let end = step.stitches(after: step.rows - 1)
+            let count = step.stitches.map { " [\($0)\(end.map { $0 == step.stitches ? "" : " to \($0)" } ?? "")]" } ?? ""
+            print("\(step.section) x\(step.rows)\(count): \(step.texts.joined(separator: " / "))")
+        }
     }
 }
 

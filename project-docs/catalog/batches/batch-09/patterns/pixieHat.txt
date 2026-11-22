@@ -1,0 +1,31 @@
+ok   Pixie Hat: 8 sizes x 8 weights
+
+== Pixie Hat, Newborn, Worsted, 90 yd
+12.5 in around and 10.5 in from the brim to the tip, to fit a 13.5 in head
+  About 90 yd of worsted weight yarn, soft and machine washable
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  4 stitch markers, one a different color
+  A piece of card for the tassel
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [56]: Cast on 56 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Brim x6 [56]: *K2, p2; repeat from * around
+Body x17 [56]: Knit
+Body x1 [56]: *K14, place a marker; repeat from * 2 more times, and knit to the end. The start of the round marker is the fourth
+Point x39 [52 to 4]: *Knit to 2 stitches before the next marker, k2tog; repeat from * around / Knit / Knit
+Finishing x1: Cut the yarn, thread it through the last 4 stitches, pull it snug and fasten off. Make a tassel about 2 in long and sew it to the tip. Weave in the ends.
+
+== Pixie Hat, Child, Worsted, 180 yd
+17.75 in around and 15.25 in from the brim to the tip, to fit a 19.5 in head
+  About 180 yd of worsted weight yarn, soft and machine washable
+  US 7 · 4.5 mm 16 in circular needle, and double-pointed needles for the point
+  4 stitch markers, one a different color
+  A piece of card for the tassel
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [80]: Cast on 80 stitches on the circular needle. Join in the round without twisting and place a marker.
+Brim x8 [80]: *K2, p2; repeat from * around
+Body x25 [80]: Knit
+Body x1 [80]: *K20, place a marker; repeat from * 2 more times, and knit to the end. The start of the round marker is the fourth
+Point x57 [76 to 4]: *Knit to 2 stitches before the next marker, k2tog; repeat from * around / Knit / Knit
+Finishing x1: Cut the yarn, thread it through the last 4 stitches, pull it snug and fasten off. Make a tassel about 3 in long and sew it to the tip. Weave in the ends.

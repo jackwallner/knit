@@ -1,0 +1,29 @@
+ok   Cowl Hood: 5 sizes x 8 weights
+
+== Cowl Hood, Small, Aran, 320 yd
+A cowl 23 in around, and a hood 11.75 in from the cowl to the crown, to fit a 20.5 in head
+  About 320 yd of Aran weight yarn, soft wool or a wool blend
+  US 9 · 5.5 mm 16 in circular needle, and a spare needle in the same size for the bind off
+  Stitch marker
+  Tapestry needle
+  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [92]: Cast on 92 stitches loosely. Join in the round without twisting and place a marker. The marker is the center front.
+Cowl x22 [92]: *K2, p2; repeat from * around
+Cowl x1 [82]: Work in rib until 5 stitches remain in the round, bind off the next 10 stitches for the front opening, removing the marker as you pass it, and knit to the gap. Turn
+Hood x64 [82]: K3, purl to the last 3 stitches, k3 / Knit
+Hood x1: Fold the hood in half with the right sides together, so the two face edges meet, 41 stitches on each needle. Join the top with a three-needle bind off, starting at the face edge.
+Finishing x1: Turn the hood right side out and weave in the ends.
+
+== Cowl Hood, Large, Aran, 410 yd
+A cowl 26 in around, and a hood 13.5 in from the cowl to the crown, to fit a 23.5 in head
+  About 410 yd of Aran weight yarn, soft wool or a wool blend
+  US 9 · 5.5 mm 16 in circular needle, and a spare needle in the same size for the bind off
+  Stitch marker
+  Tapestry needle
+  Gauge: 16 stitches and 22 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [104]: Cast on 104 stitches loosely. Join in the round without twisting and place a marker. The marker is the center front.
+Cowl x25 [104]: *K2, p2; repeat from * around
+Cowl x1 [94]: Work in rib until 5 stitches remain in the round, bind off the next 10 stitches for the front opening, removing the marker as you pass it, and knit to the gap. Turn
+Hood x74 [94]: K3, purl to the last 3 stitches, k3 / Knit
+Hood x1: Fold the hood in half with the right sides together, so the two face edges meet, 47 stitches on each needle. Join the top with a three-needle bind off, starting at the face edge.
+Finishing x1: Turn the hood right side out and weave in the ends.

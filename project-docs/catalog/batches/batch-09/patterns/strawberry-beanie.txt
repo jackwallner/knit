@@ -1,0 +1,84 @@
+ok   strawberry-beanie: Strawberry Beanie, 8 sizes x 4 weights
+
+== strawberry-beanie, Baby, Worsted, 80 yd
+14.25 in around, to fit a 16 in head
+  Cream, color A: about 50 yd of worsted weight yarn
+  Red, color B: about 20 yd of worsted weight yarn
+  Green, color C: about 10 yd of worsted weight yarn
+  US 5 · 3.75 mm double-pointed needles for the brim, or a long circular for magic loop
+  US 7 · 4.5 mm double-pointed needles for the body, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [64]: Cast on 64 stitches in red with the smaller needle. Join in the round without twisting and place a marker.
+Brim x9 [64]: *K2, p2; repeat from * around
+Body x1 [64]: With cream, change to the larger needle and knit
+Body x15 [64]: Knit
+Crown x1 [56]: *K6, k2tog; repeat from * around
+Crown x1 [56]: Knit
+Crown x1 [48]: *K5, k2tog; repeat from * around
+Crown x1 [48]: Knit
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [40]: Knit
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [32]: Knit
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: With red and green and a tapestry needle, work the chart in duplicate stitch over the cream stripe: 10 rounds high and 9 stitches wide. It covers stitches 13 to 21 of the round, counted from the marker, with 3 rounds of cream under it.
+Finishing x1: Chart round 1, the bottom one, left to right: skip 4, 1 red, skip 4.
+Finishing x1: Chart round 2, left to right: skip 3, 3 red, skip 3.
+Finishing x1: Chart round 3, left to right: skip 2, 2 red, skip 1, 2 red, skip 2.
+Finishing x1: Chart round 4, left to right: skip 1, 7 red, skip 1.
+Finishing x1: Chart round 5, left to right: 3 red, skip 1, 1 red, skip 1, 3 red.
+Finishing x1: Chart round 6, left to right: 9 red.
+Finishing x1: Chart round 7, left to right: 2 red, skip 1, 3 red, skip 1, 2 red.
+Finishing x1: Chart round 8, left to right: skip 1, 7 red, skip 1.
+Finishing x1: Chart round 9, left to right: skip 3, 3 green, skip 3.
+Finishing x1: Chart round 10, left to right: skip 2, 1 green, skip 1, 1 green, skip 1, 1 green, skip 2.
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.
+
+== strawberry-beanie, Large, Worsted, 160 yd
+21.25 in around, to fit a 23.5 in head
+  Cream, color A: about 110 yd of worsted weight yarn
+  Red, color B: about 40 yd of worsted weight yarn
+  Green, color C: about 10 yd of worsted weight yarn
+  US 5 · 3.75 mm 16 in circular needle for the brim
+  US 7 · 4.5 mm 16 in circular needle for the body
+  Double-pointed needles in the larger size for the crown
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [96]: Cast on 96 stitches in red with the smaller needle. Join in the round without twisting and place a marker.
+Brim x13 [96]: *K2, p2; repeat from * around
+Body x1 [96]: With cream, change to the larger needle and knit
+Body x21 [96]: Knit
+Crown x1 [88]: *K10, k2tog; repeat from * around
+Crown x1 [88]: Knit
+Crown x1 [80]: *K9, k2tog; repeat from * around
+Crown x1 [80]: Knit
+Crown x1 [72]: *K8, k2tog; repeat from * around
+Crown x1 [72]: Knit
+Crown x1 [64]: *K7, k2tog; repeat from * around
+Crown x1 [64]: Knit
+Crown x1 [56]: *K6, k2tog; repeat from * around. Change to double-pointed needles when the stitches no longer reach around
+Crown x1 [56]: Knit
+Crown x1 [48]: *K5, k2tog; repeat from * around
+Crown x1 [48]: Knit
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: With red and green and a tapestry needle, work the chart in duplicate stitch over the cream stripe: 10 rounds high and 9 stitches wide. It covers stitches 21 to 29 of the round, counted from the marker, with 6 rounds of cream under it.
+Finishing x1: Chart round 1, the bottom one, left to right: skip 4, 1 red, skip 4.
+Finishing x1: Chart round 2, left to right: skip 3, 3 red, skip 3.
+Finishing x1: Chart round 3, left to right: skip 2, 2 red, skip 1, 2 red, skip 2.
+Finishing x1: Chart round 4, left to right: skip 1, 7 red, skip 1.
+Finishing x1: Chart round 5, left to right: 3 red, skip 1, 1 red, skip 1, 3 red.
+Finishing x1: Chart round 6, left to right: 9 red.
+Finishing x1: Chart round 7, left to right: 2 red, skip 1, 3 red, skip 1, 2 red.
+Finishing x1: Chart round 8, left to right: skip 1, 7 red, skip 1.
+Finishing x1: Chart round 9, left to right: skip 3, 3 green, skip 3.
+Finishing x1: Chart round 10, left to right: skip 2, 1 green, skip 1, 1 green, skip 1, 1 green, skip 2.
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.

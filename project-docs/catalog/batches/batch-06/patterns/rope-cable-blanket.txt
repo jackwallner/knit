@@ -1,0 +1,27 @@
+ok   rope-cable-blanket: Rope Cable Blanket, 5 sizes x 5 weights
+
+== rope-cable-blanket, Stroller, Worsted, 1090 yd
+29.75 in wide, 34.75 in long
+  About 1,090 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Cable needle
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [158]: Cast on 158 stitches.
+Bottom Border x12 [158]: Knit
+Body x192 [158]: K6, *p2, C4F; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8 / K6, *p2, k4; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8 / K6, *p2, k4; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8
+Top Border x12 [158]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== rope-cable-blanket, Throw, Worsted, 2990 yd
+47.5 in wide, 59.75 in long
+  About 2,990 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Cable needle
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [254]: Cast on 254 stitches.
+Bottom Border x12 [254]: Knit
+Body x342 [254]: K6, *p2, C4F; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8 / K6, *p2, k4; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8 / K6, *p2, k4; repeat from * to the last 8 stitches, p2, k6 / K6, *k2, p4; repeat from * to the last 8 stitches, k8
+Top Border x12 [254]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

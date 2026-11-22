@@ -1,0 +1,567 @@
+ok   checkerboard-blanket: Checkerboard Blanket, 5 sizes x 4 weights
+
+== checkerboard-blanket, Stroller, Worsted, 1070 yd
+30 in wide, 35 in long
+  Cream, color A: about 630 yd of worsted weight yarn
+  Sage, color B: about 440 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Bottom Border x1 [135]: Cast on 135 stitches in cream.
+Bottom Border x12 [135]: Knit
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [135]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 7 stitches, k7 cream
+Body x1 [135]: K6 cream, p1 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Top Border x1 [135]: With cream, knit
+Top Border x11 [135]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== checkerboard-blanket, Throw, Worsted, 2920 yd
+48 in wide, 60 in long
+  Cream, color A: about 1,630 yd of worsted weight yarn
+  Sage, color B: about 1,290 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Bottom Border x1 [216]: Cast on 216 stitches in cream.
+Bottom Border x12 [216]: Knit
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 sage, k5 cream; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 cream, p5 sage; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Body x1 [216]: K8 cream, *k5 cream, k5 sage; repeat from * to the last 8 stitches, k8 cream
+Body x1 [216]: K6 cream, p2 cream, *p5 sage, p5 cream; repeat from * to the last 8 stitches, p2 cream, k6 cream
+Top Border x1 [216]: With cream, knit
+Top Border x11 [216]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

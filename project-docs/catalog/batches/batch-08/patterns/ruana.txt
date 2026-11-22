@@ -1,0 +1,35 @@
+ok   Ruana: 5 sizes x 8 weights
+
+== Ruana, Small, Bulky, 1480 yd
+44.25 in across the back and 22.25 in from the shoulders to the hem, front and back
+  About 1,480 yd of bulky weight yarn, soft wool or a wool blend
+  US 10.5 · 6.5 mm circular needle, 32 in or longer, worked flat
+  Waste yarn
+  Tapestry needle
+  Gauge: 14 stitches and 20 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Back x1 [155]: Cast on 155 stitches loosely.
+Back x122 [155]: K1, *p1, k1; repeat from * to the end
+First Front x1 [77]: With the right side facing, k1, *p1, k1; repeat from * until 77 stitches are on the right needle, and slip them to waste yarn for the second front. P1, k1, pass the purl stitch over to bind it off, then *p1, k1; repeat from * to the end
+First Front x121 [77]: K1, *p1, k1; repeat from * to the end
+First Front x1: Bind off loosely in pattern.
+Second Front x1 [77]: Return the 77 stitches of the second front to the needle. With the wrong side facing, join new yarn at the opening.
+Second Front x121 [77]: K1, *p1, k1; repeat from * to the end
+Second Front x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block flat. Worn with the opening at the front, the back falls from the shoulders and the fronts hang down each side.
+
+== Ruana, Large, Bulky, 2400 yd
+56.75 in across the back and 28 in from the shoulders to the hem, front and back
+  About 2,400 yd of bulky weight yarn, soft wool or a wool blend
+  US 10.5 · 6.5 mm 40 in circular needle, worked flat
+  Waste yarn
+  Tapestry needle
+  Gauge: 14 stitches and 20 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Back x1 [199]: Cast on 199 stitches loosely.
+Back x154 [199]: K1, *p1, k1; repeat from * to the end
+First Front x1 [99]: With the right side facing, k1, *p1, k1; repeat from * until 99 stitches are on the right needle, and slip them to waste yarn for the second front. P1, k1, pass the purl stitch over to bind it off, then *p1, k1; repeat from * to the end
+First Front x153 [99]: K1, *p1, k1; repeat from * to the end
+First Front x1: Bind off loosely in pattern.
+Second Front x1 [99]: Return the 99 stitches of the second front to the needle. With the wrong side facing, join new yarn at the opening.
+Second Front x153 [99]: K1, *p1, k1; repeat from * to the end
+Second Front x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block flat. Worn with the opening at the front, the back falls from the shoulders and the fronts hang down each side.

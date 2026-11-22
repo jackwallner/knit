@@ -1,0 +1,29 @@
+ok   Bandana Kerchief: 5 sizes x 8 weights
+
+== Bandana Kerchief, Child, DK, 150 yd
+16.25 in across the top, 8.75 in deep, with ties 9 in long
+  About 150 yd of DK weight yarn
+  US 6 · 4 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Point x1 [3]: Cast on 3 stitches.
+Point x86 [5 to 89]: K1, M1L, knit to the last stitch, M1R, k1 / Knit
+Ties x1 [139]: With the cable cast-on, cast on 50 stitches at the start of the row, then knit to the end
+Ties x1 [189]: With the cable cast-on, cast on 50 stitches at the start of the row, then knit to the end
+Ties x8 [189]: Knit
+Ties x1: Bind off loosely knitwise.
+Finishing x1: Weave in the ends and block the triangle flat. Tie it over the hair or around the neck.
+
+== Bandana Kerchief, Large, DK, 310 yd
+25 in across the top, 13 in deep, with ties 13 in long
+  About 310 yd of DK weight yarn
+  US 6 · 4 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 22 stitches and 28 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Point x1 [3]: Cast on 3 stitches.
+Point x134 [5 to 137]: K1, M1L, knit to the last stitch, M1R, k1 / Knit
+Ties x1 [209]: With the cable cast-on, cast on 72 stitches at the start of the row, then knit to the end
+Ties x1 [281]: With the cable cast-on, cast on 72 stitches at the start of the row, then knit to the end
+Ties x8 [281]: Knit
+Ties x1: Bind off loosely knitwise.
+Finishing x1: Weave in the ends and block the triangle flat. Tie it over the hair or around the neck.

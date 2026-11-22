@@ -1,0 +1,47 @@
+ok   Shrug: 7 sizes x 8 weights
+
+== Shrug, S, Worsted, 660 yd
+48 in from cuff to cuff, 13 in around the upper arm, with sleeves 14 in long
+  About 660 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  US 5 · 3.75 mm needles for the cuffs, and a circular needle in that size for the band
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Cuff x1 [42]: With the smaller needle, cast on 42 stitches.
+First Cuff x12 [42]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Body x1 [58]: Change to the larger needle. Knit, increasing 16 evenly: work (k3, M1) 10 times, then (k2, M1) 6 times
+Body x262 [58]: Purl / Knit
+Body x1 [58]: Purl
+Second Cuff x1 [42]: Change to the smaller needle. Knit, decreasing 16 evenly: work (k2, k2tog) 10 times, then (k1, k2tog) 6 times
+Second Cuff x11 [42]: P2, *k2, p2; repeat from * to the end / K2, *p2, k2; repeat from * to the end
+Second Cuff x1: Bind off loosely in pattern.
+Sleeves x1: Fold the piece in half lengthwise with the right side inside. Starting at one cuff, sew the long edges together for 14 in. Do the same from the other cuff, leaving 20 in open in the middle for the back.
+Sleeves x1: Turn the shrug right side out.
+Band x1 [164]: With the 32 in circular needle in the smaller size and the right side facing, start at one sleeve seam and pick up and knit 164 stitches evenly around the opening. Join in the round and place a marker.
+Band x9 [164]: *K2, p2; repeat from * around
+Band x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block the shrug.
+
+== Shrug, 2X, Worsted, 1280 yd
+62 in from cuff to cuff, 20 in around the upper arm, with sleeves 17 in long
+  About 1,280 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  US 5 · 3.75 mm needles for the cuffs, and a circular needle in that size for the band
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Cuff x1 [66]: With the smaller needle, cast on 66 stitches.
+First Cuff x12 [66]: K2, *p2, k2; repeat from * to the end / P2, *k2, p2; repeat from * to the end
+Body x1 [90]: Change to the larger needle. Knit, increasing 24 evenly: work (k3, M1) 18 times, then (k2, M1) 6 times
+Body x346 [90]: Purl / Knit
+Body x1 [90]: Purl
+Second Cuff x1 [66]: Change to the smaller needle. Knit, decreasing 24 evenly: work (k2, k2tog) 18 times, then (k1, k2tog) 6 times
+Second Cuff x11 [66]: P2, *k2, p2; repeat from * to the end / K2, *p2, k2; repeat from * to the end
+Second Cuff x1: Bind off loosely in pattern.
+Sleeves x1: Fold the piece in half lengthwise with the right side inside. Starting at one cuff, sew the long edges together for 17 in. Do the same from the other cuff, leaving 28 in open in the middle for the back.
+Sleeves x1: Turn the shrug right side out.
+Band x1 [228]: With the 32 in circular needle in the smaller size and the right side facing, start at one sleeve seam and pick up and knit 228 stitches evenly around the opening. Join in the round and place a marker.
+Band x9 [228]: *K2, p2; repeat from * around
+Band x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends and block the shrug.

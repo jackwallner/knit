@@ -1,0 +1,41 @@
+ok   Poncho: 6 sizes x 8 weights
+
+== Poncho, Child, Worsted, 430 yd
+Two panels, each 11 in by 22 in, sewn into a poncho that hangs about 15.5 in from the neck to the point
+  About 430 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Panel 1 x1 [50]: Cast on 50 stitches.
+Panel 1 x6 [50]: Knit
+Panel 1 x120 [50]: Knit / K3, purl to the last 3 stitches, k3
+Panel 1 x6 [50]: Knit
+Panel 1 x1: Bind off loosely. Weave in the ends.
+Panel 2 x1 [50]: Cast on 50 stitches.
+Panel 2 x6 [50]: Knit
+Panel 2 x120 [50]: Knit / K3, purl to the last 3 stitches, k3
+Panel 2 x6 [50]: Knit
+Panel 2 x1: Bind off loosely. Weave in the ends.
+Finishing x1: Block both panels to 11 in by 22 in. Hold each with its right side facing you and its cast-on edge at the bottom: its left side is the long edge on your left.
+Finishing x1: Sew the cast-on edge of Panel 2 along the top half of Panel 1's left side, from the bound-off corner down to the middle.
+Finishing x1: Sew the cast-on edge of Panel 1 along the top half of Panel 2's left side the same way. Each panel's end is now sewn to the side of the other, and the two free halves of the sides frame the neck. Weave in the ends.
+
+== Poncho, Large, Worsted, 1280 yd
+Two panels, each 19 in by 38 in, sewn into a poncho that hangs about 26.5 in from the neck to the point
+  About 1,280 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Panel 1 x1 [86]: Cast on 86 stitches.
+Panel 1 x6 [86]: Knit
+Panel 1 x216 [86]: Knit / K3, purl to the last 3 stitches, k3
+Panel 1 x6 [86]: Knit
+Panel 1 x1: Bind off loosely. Weave in the ends.
+Panel 2 x1 [86]: Cast on 86 stitches.
+Panel 2 x6 [86]: Knit
+Panel 2 x216 [86]: Knit / K3, purl to the last 3 stitches, k3
+Panel 2 x6 [86]: Knit
+Panel 2 x1: Bind off loosely. Weave in the ends.
+Finishing x1: Block both panels to 19 in by 38 in. Hold each with its right side facing you and its cast-on edge at the bottom: its left side is the long edge on your left.
+Finishing x1: Sew the cast-on edge of Panel 2 along the top half of Panel 1's left side, from the bound-off corner down to the middle.
+Finishing x1: Sew the cast-on edge of Panel 1 along the top half of Panel 2's left side the same way. Each panel's end is now sewn to the side of the other, and the two free halves of the sides frame the neck. Weave in the ends.

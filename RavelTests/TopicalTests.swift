@@ -26,6 +26,27 @@ final class TopicalTests: XCTestCase {
 
     // MARK: Records
 
+    /// A stitch pattern is format 2, on a shape that takes one, alone or with stripes but never under a chart.
+    func testAStitchRecordIsReadStrictly() throws {
+        func parsed(_ fields: String, palette: String = ##"[{"name":"gray","hex":"#888888"}]"##) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"moss-hat","title":"Moss Hat","base":"ribbedBeanie","palette":\###(palette),"weights":["worsted"],"tag":"New"\###(fields)}]}"###.utf8)).first
+        }
+        let good = try XCTUnwrap(parsed(#","requires":2,"stitch":"doubleMoss","photo":"photos/moss-hat.jpg""#)?.topical)
+        XCTAssertEqual(good.stitch, .doubleMoss)
+        XCTAssertEqual(good.photo, "photos/moss-hat.jpg")
+        XCTAssertEqual(good.techniques, ["Knit and purl texture"])
+        XCTAssertNil(good.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge).palette, "One yarn writes a plan in one color")
+        XCTAssertNil(parsed(#","stitch":"doubleMoss""#)?.topical, "A stitch needs format 2")
+        XCTAssertNil(parsed(#","requires":2,"stitch":"brioche""#)?.topical, "An unknown stitch is skipped")
+        XCTAssertNil(parsed(#","requires":2""#)?.topical, "One yarn needs a stitch pattern")
+        XCTAssertNil(parsed(#","requires":2,"stitch":"waffle","photo":"https://example.com/a.jpg""#)?.topical, "Photos come from the Ravel site")
+        XCTAssertNil(parsed(#","requires":4,"stitch":"waffle""#)?.topical, "A newer format is skipped")
+        let chart = #","requires":2,"stitch":"waffle","chart":{"placement":"repeat","rows":["AB"]}"#
+        XCTAssertNil(parsed(chart, palette: ##"[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}]"##)?.topical, "No chart on a stitch pattern")
+        let cowl = Topical.parse(Data(##"{"designs":[{"id":"moss-cowl","title":"Moss Cowl","base":"seedCowl","requires":2,"stitch":"seed","palette":[{"name":"gray","hex":"#888888"}],"weights":["worsted"],"tag":"New"}]}"##.utf8)).first
+        XCTAssertNil(cowl?.topical, "The seed cowl does not take a stitch pattern")
+    }
+
     /// The same check the script and CI run: every size, both ends of every measurement, every allowed weight.
     func testEveryPublishedAndDraftRecordPasses() throws {
         let files = try recordFiles()
@@ -49,7 +70,7 @@ final class TopicalTests: XCTestCase {
           {"id":"good-hat","title":"Good Hat","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"stripes":[{"color":"B","inches":1}],"weights":["worsted"],"tag":"New"},
           {"id":"sweater","title":"Sweater","base":"raglanPullover","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"bad-letter","title":"Bad","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"stripes":[{"color":"E","inches":1}],"weights":["worsted"],"tag":"New"},
-          {"id":"future","title":"Future","base":"ribbedBeanie","requires":2,"palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
+          {"id":"future","title":"Future","base":"ribbedBeanie","requires":99,"palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"odd-crown","title":"Odd","base":"ribbedBeanie","crown":"pompom","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"bad-hex","title":"Hex","base":"ribbedBeanie","palette":[{"name":"gray","hex":"grey"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"},
           {"id":"good-hat","title":"Twice","base":"ribbedBeanie","palette":[{"name":"gray","hex":"#888888"},{"name":"black","hex":"#222222"}],"weights":["worsted"],"tag":"New"}
@@ -245,6 +266,61 @@ final class TopicalTests: XCTestCase {
             XCTAssertFalse(plan.steps.contains { $0.texts.contains { $0.contains("three-needle") } })
             XCTAssertEqual(PlanCheck.problems(plan), [], "\(weight)")
         }
+    }
+
+    /// An ear color is format 3, needs the ear crown and a palette letter; the ears and their rim are knit in it.
+    func testEarsTakeTheirOwnColor() throws {
+        func parsed(_ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"panda-hat","title":"Panda Hat","base":"ribbedBeanie","palette":[{"name":"cream","hex":"#EEE6D6"},{"name":"black","hex":"#2A2A2E"}],"weights":["worsted"],"tag":"New"\###(fields)}]}"###.utf8)).first
+        }
+        let good = try XCTUnwrap(parsed(#","requires":3,"crown":"ears","ear":"B","rim":"B""#)?.topical)
+        let plan = good.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge)
+        for ear in ["First Ear", "Second Ear"] {
+            XCTAssertTrue(plan.steps.first { $0.section == ear }?.texts[0].hasSuffix("in black.") == true, ear)
+        }
+        XCTAssertNil(parsed(#","crown":"ears","ear":"B""#)?.topical, "An ear color needs format 3")
+        XCTAssertNil(parsed(#","requires":3,"ear":"B""#)?.topical, "An ear color needs the ear crown")
+        XCTAssertNil(parsed(#","requires":3,"crown":"ears","ear":"C""#)?.topical, "The ear color is in the palette")
+        let plain = try XCTUnwrap(parsed(#","crown":"ears""#)?.topical)
+        XCTAssertFalse(plain.plan(measures: ["head": 22], gauge: YarnWeight.worsted.gauge).steps.contains { $0.texts.contains { $0.contains("black") } }, "No ear color leaves the ears in the main color")
+    }
+
+    func testATiledChartRepeatsDownTheBlanket() throws {
+        func parsed(base: String = "borderedBlanket", _ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"check-blanket","title":"Check Blanket","base":"\###(base)","palette":[{"name":"cream","hex":"#EEE6D6"},{"name":"sage","hex":"#9AAE8C"}],"weights":["worsted"],"tag":"New","chart":{"placement":"repeat","rows":["BBBBB.....","BBBBB.....",".....BBBBB",".....BBBBB"]\###(fields)},"requires":3}]}"###.utf8)).first
+        }
+        let tiled = try XCTUnwrap(parsed(#","tile":true"#)?.topical)
+        let plan = tiled.plan(measures: tiled.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
+        let body = plan.steps.filter { $0.section == "Body" }
+        let colored = body.filter { $0.texts[0].contains("sage") }
+        XCTAssertGreaterThan(colored.count, 20, "The squares repeat down the blanket, not once")
+        XCTAssertEqual(body.first?.texts[0].contains("sage"), true, "The squares start at the bottom of the body")
+        XCTAssertNil(parsed(base: "ribbedBeanie", #","tile":true"#)?.topical, "Only the blanket can tile")
+        let untiled = try XCTUnwrap(parsed("")?.topical)
+        let flat = untiled.plan(measures: untiled.base.defaultSize.values, gauge: YarnWeight.worsted.gauge)
+        XCTAssertLessThan(flat.steps.filter { $0.section == "Body" && $0.texts[0].contains("sage") }.count, colored.count, "Without tile a chart is placed once")
+    }
+
+    /// Socks and sweaters take stripes and nothing else: a stripe changes a row's yarn, never its count.
+    func testShapedGarmentsTakeStripesOnly() throws {
+        func parsed(base: String, _ fields: String) -> Topical.Parsed? {
+            Topical.parse(Data(###"{"designs":[{"id":"stripe-test","title":"Stripe Test","base":"\###(base)","palette":[{"name":"navy","hex":"#27374F"},{"name":"cream","hex":"#EEE6D6"}],"weights":["dk"],"tag":"Stripes"\###(fields)}]}"###.utf8)).first
+        }
+        let stripes = #","brim":"A","stripes":[{"color":"B","inches":1},{"color":"A","inches":1}],"repeatStripes":true"#
+        for base in Topical.stripeBases {
+            let good = try XCTUnwrap(parsed(base: base.rawValue, stripes)?.topical, base.rawValue)
+            let measures = good.base.defaultSize.values
+            let plain = good.base.plan(measures: measures, gauge: YarnWeight.dk.gauge)
+            let painted = good.plan(measures: measures, gauge: YarnWeight.dk.gauge)
+            XCTAssertEqual(painted.steps.reduce(0) { $0 + ($1.isAction ? 0 : $1.rows) }, plain.steps.reduce(0) { $0 + ($1.isAction ? 0 : $1.rows) }, "\(base) keeps every row")
+            XCTAssertEqual(peakStitches(painted), peakStitches(plain), "\(base) keeps every count")
+            XCTAssertNil(parsed(base: base.rawValue, #","brim":"A","chart":{"placement":"repeat","rows":["B.B."]}"#)?.topical, "\(base) takes no chart")
+            XCTAssertNil(parsed(base: base.rawValue, #","brim":"A""#)?.topical, "\(base) needs stripes")
+        }
+    }
+
+    private func peakStitches(_ plan: PatternPlan) -> Int {
+        plan.steps.compactMap { step in (0..<max(1, step.rows)).compactMap { step.stitches(after: $0) }.max() }.max() ?? 0
     }
 
     // MARK: Saved plans

@@ -1,0 +1,157 @@
+ok   striped-mitts: Striped Mitts, 5 sizes x 4 weights
+
+== striped-mitts, Small, Worsted, 90 yd
+6.25 in around, to fit a 6.5 in hand, 6.75 in long
+  Charcoal, color A: about 50 yd of worsted weight yarn
+  Cream, color B: about 20 yd of worsted weight yarn
+  Mustard, color C: about 20 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Mitt 1 · Cuff x1 [28]: Cast on 28 stitches in cream. Join in the round without twisting and place a marker.
+Mitt 1 · Cuff x3 [28]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [28]: With charcoal, knit
+Mitt 1 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [28]: With mustard, knit
+Mitt 1 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [28]: With charcoal, knit
+Mitt 1 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [28]: With cream, knit
+Mitt 1 · Hand x2 [28]: Knit
+Mitt 1 · Hand x1 [28]: With charcoal, knit
+Mitt 1 · Hand x2 [28]: Knit
+Mitt 1 · Hand x1 [28]: With mustard, knit
+Mitt 1 · Hand x2 [28]: Knit
+Mitt 1 · Thumb Opening x1 [28]: With charcoal, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x3 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [28]: With cream, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [28]: With charcoal, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x3 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Upper Hand x1 [28]: With mustard, knit to the end of the round and join in the round again
+Mitt 1 · Upper Hand x1 [28]: Knit
+Mitt 1 · Upper Hand x1 [28]: With charcoal, knit
+Mitt 1 · Upper Hand x2 [28]: Knit
+Mitt 1 · Upper Hand x1 [28]: With cream, knit
+Mitt 1 · Top x2 [28]: *K2, p2; repeat from * around
+Mitt 1 · Top x1 [28]: With charcoal, knit
+Mitt 1 · Top x1 [28]: *K2, p2; repeat from * around
+Mitt 1 · Top x1: Bind off loosely in pattern. Weave in the ends.
+Mitt 2 · Cuff x1 [28]: Cast on 28 stitches in cream. Join in the round without twisting and place a marker.
+Mitt 2 · Cuff x3 [28]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [28]: With charcoal, knit
+Mitt 2 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [28]: With mustard, knit
+Mitt 2 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [28]: With charcoal, knit
+Mitt 2 · Cuff x2 [28]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [28]: With cream, knit
+Mitt 2 · Hand x2 [28]: Knit
+Mitt 2 · Hand x1 [28]: With charcoal, knit
+Mitt 2 · Hand x2 [28]: Knit
+Mitt 2 · Hand x1 [28]: With mustard, knit
+Mitt 2 · Hand x2 [28]: Knit
+Mitt 2 · Thumb Opening x1 [28]: With charcoal, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x3 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [28]: With cream, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [28]: With charcoal, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x3 [28]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Upper Hand x1 [28]: With mustard, knit to the end of the round and join in the round again
+Mitt 2 · Upper Hand x1 [28]: Knit
+Mitt 2 · Upper Hand x1 [28]: With charcoal, knit
+Mitt 2 · Upper Hand x2 [28]: Knit
+Mitt 2 · Upper Hand x1 [28]: With cream, knit
+Mitt 2 · Top x2 [28]: *K2, p2; repeat from * around
+Mitt 2 · Top x1 [28]: With charcoal, knit
+Mitt 2 · Top x1 [28]: *K2, p2; repeat from * around
+Mitt 2 · Top x1: Bind off loosely in pattern. Weave in the ends.
+
+== striped-mitts, Large, Worsted, 150 yd
+8 in around, to fit a 8.5 in hand, 8.75 in long
+  Charcoal, color A: about 80 yd of worsted weight yarn
+  Cream, color B: about 40 yd of worsted weight yarn
+  Mustard, color C: about 30 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Mitt 1 · Cuff x1 [36]: Cast on 36 stitches in cream. Join in the round without twisting and place a marker.
+Mitt 1 · Cuff x3 [36]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [36]: With charcoal, knit
+Mitt 1 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [36]: With mustard, knit
+Mitt 1 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [36]: With charcoal, knit
+Mitt 1 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [36]: With cream, knit
+Mitt 1 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Cuff x1 [36]: With charcoal, knit
+Mitt 1 · Cuff x1 [36]: *K2, p2; repeat from * around
+Mitt 1 · Hand x1 [36]: Knit
+Mitt 1 · Hand x1 [36]: With mustard, knit
+Mitt 1 · Hand x2 [36]: Knit
+Mitt 1 · Hand x1 [36]: With charcoal, knit
+Mitt 1 · Hand x2 [36]: Knit
+Mitt 1 · Hand x1 [36]: With cream, knit
+Mitt 1 · Hand x2 [36]: Knit
+Mitt 1 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x3 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: With mustard, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x3 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: With cream, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 1 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 1 · Upper Hand x1 [36]: Knit to the end of the round and join in the round again
+Mitt 1 · Upper Hand x1 [36]: With mustard, knit
+Mitt 1 · Upper Hand x2 [36]: Knit
+Mitt 1 · Upper Hand x1 [36]: With charcoal, knit
+Mitt 1 · Upper Hand x2 [36]: Knit
+Mitt 1 · Upper Hand x1 [36]: With cream, knit
+Mitt 1 · Top x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Top x1 [36]: With charcoal, knit
+Mitt 1 · Top x2 [36]: *K2, p2; repeat from * around
+Mitt 1 · Top x1: Bind off loosely in pattern. Weave in the ends.
+Mitt 2 · Cuff x1 [36]: Cast on 36 stitches in cream. Join in the round without twisting and place a marker.
+Mitt 2 · Cuff x3 [36]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [36]: With charcoal, knit
+Mitt 2 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [36]: With mustard, knit
+Mitt 2 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [36]: With charcoal, knit
+Mitt 2 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [36]: With cream, knit
+Mitt 2 · Cuff x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Cuff x1 [36]: With charcoal, knit
+Mitt 2 · Cuff x1 [36]: *K2, p2; repeat from * around
+Mitt 2 · Hand x1 [36]: Knit
+Mitt 2 · Hand x1 [36]: With mustard, knit
+Mitt 2 · Hand x2 [36]: Knit
+Mitt 2 · Hand x1 [36]: With charcoal, knit
+Mitt 2 · Hand x2 [36]: Knit
+Mitt 2 · Hand x1 [36]: With cream, knit
+Mitt 2 · Hand x2 [36]: Knit
+Mitt 2 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x3 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: With mustard, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x3 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: With cream, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: With charcoal, knit to the end of the round, turn
+Mitt 2 · Thumb Opening x1 [36]: K2, purl to the last 2 stitches, k2, turn / Knit to the end of the round, turn
+Mitt 2 · Upper Hand x1 [36]: Knit to the end of the round and join in the round again
+Mitt 2 · Upper Hand x1 [36]: With mustard, knit
+Mitt 2 · Upper Hand x2 [36]: Knit
+Mitt 2 · Upper Hand x1 [36]: With charcoal, knit
+Mitt 2 · Upper Hand x2 [36]: Knit
+Mitt 2 · Upper Hand x1 [36]: With cream, knit
+Mitt 2 · Top x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Top x1 [36]: With charcoal, knit
+Mitt 2 · Top x2 [36]: *K2, p2; repeat from * around
+Mitt 2 · Top x1: Bind off loosely in pattern. Weave in the ends.

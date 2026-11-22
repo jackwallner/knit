@@ -188,6 +188,434 @@
   "babyBooties": {
    "camera": "sun",
    "scene": "a pair side by side on a changing-table pad"
+  },
+  "toeUpSocks": {
+   "camera": "overcast",
+   "scene": "laid flat side by side on a wooden floor by a window, heels turned to show their shape"
+  },
+  "fingerlessMitts": {
+   "camera": "snap",
+   "scene": "worn on both hands wrapped around a mug of tea on a kitchen table"
+  },
+  "babyCardigan": {
+   "camera": "lamp",
+   "scene": "laid flat on a changing-table pad, one sleeve folded across the front"
+  },
+  "double-moss-scarf": {
+   "camera": "outdoor",
+   "scene": "wrapped once around someone's neck, seen from the shoulder down, ends hanging"
+  },
+  "topDownBeanie": {
+   "camera": "flash",
+   "scene": "held up by its brim in one hand against a dark kitchen cabinet"
+  },
+  "twistedHeadband": {
+   "camera": "sun",
+   "scene": "worn on someone's head seen from the front, cropped above the eyes, hair loose around it"
+  },
+  "poncho": {
+   "camera": "outdoor",
+   "scene": "worn by someone standing on a porch, seen from the chest down to the knees, the V point hanging at the front"
+  },
+  "christmasStocking": {
+   "camera": "lamp",
+   "scene": "hanging by its loop from a hook on a wooden mantel, a little crooked"
+  },
+  "washcloth": {
+   "camera": "overcast",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap, soft window light"
+  },
+  "waffle-beanie": {
+   "camera": "snap",
+   "scene": "on a wooden bench by a frosty window, a mug of coffee out of focus behind it"
+  },
+  "snowflake-beanie": {
+   "camera": "outdoor",
+   "scene": "worn by a person seen from behind on a snowy trail, pine trees out of focus, flat winter daylight"
+  },
+  "knotHat": {
+   "camera": "lamp",
+   "scene": "lying on a pale crib sheet beside a folded muslin blanket, warm lamp light in the evening"
+  },
+  "asymmetricShawl": {
+   "camera": "sun",
+   "scene": "draped over the back of a weathered wooden porch chair, late afternoon sun raking across it"
+  },
+  "broken-rib-cowl": {
+   "camera": "flash",
+   "scene": "worn bunched around the neck of a person in a dark wool coat, a night street behind, phone flash"
+  },
+  "feather-and-fan-scarf": {
+   "camera": "overcast",
+   "scene": "laid in a loose S across an unmade bed with grey sheets, soft window light"
+  },
+  "double-moss-blanket": {
+   "camera": "snap",
+   "scene": "folded over the arm of a linen sofa, a toddler's toy blurred on the cushion"
+  },
+  "basketweave-washcloth": {
+   "camera": "oldphone",
+   "scene": "on the edge of a white enamel kitchen sink next to a wooden dish brush"
+  },
+  "bandanaCowl": {
+   "camera": "outdoor",
+   "scene": "worn by a person in a denim jacket outdoors on a cold bright day, a brick wall behind, cropped at the chin"
+  },
+  "armWarmers": {
+   "camera": "snap",
+   "scene": "worn by a person holding a mug at a cafe table, cropped from the shoulder to the hand, daylight from a window"
+  },
+  "honeycomb-cowl": {
+   "camera": "lamp",
+   "scene": "draped over a stack of library books on a wooden desk, warm desk lamp at night"
+  },
+  "watchCap": {
+   "camera": "outdoor",
+   "scene": "worn by a person on a windy harbor dock, boats and grey water behind, overcast"
+  },
+  "chevron-lace-blanket": {
+   "camera": "overcast",
+   "scene": "spread over the end of a white iron crib with a sheepskin rug below, soft grey window light"
+  },
+  "hoodedScarf": {
+   "camera": "snap",
+   "scene": "worn by a person walking on a leafy autumn sidewalk, seen from the front, hood up, cropped at the waist"
+  },
+  "striped-scarf": {
+   "camera": "overcast",
+   "scene": "draped over the back of a wooden kitchen chair, soft window light"
+  },
+  "coasters": {
+   "camera": "lamp",
+   "scene": "stacked on a wooden coffee table beside a mug of tea, warm evening lamplight"
+  },
+  "rope-cable-scarf": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck of a person in a dark wool coat on a cold city street, cropped at the chest"
+  },
+  "babyMittens": {
+   "camera": "snap",
+   "scene": "lying alone on a white cotton crib sheet, nothing else in the frame"
+  },
+  "catHat": {
+   "camera": "sun",
+   "scene": "worn by a child seen from behind on a sunny playground, only the back of the head and the two ears visible, cropped at the shoulders"
+  },
+  "seeded-rib-beanie": {
+   "camera": "overcast",
+   "scene": "worn by a person in a rain jacket by a harbor railing, seen from the side, cropped at the shoulders"
+  },
+  "eyelet-lace-wrap": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a linen armchair, a book on the seat, warm lamplight"
+  },
+  "teaCozy": {
+   "camera": "lamp",
+   "scene": "on a round brown teapot on a kitchen table, two cups beside it, warm morning light"
+  },
+  "bootCuffs": {
+   "camera": "outdoor",
+   "scene": "worn with tall brown leather boots on a person standing on fallen leaves, seen from the knees down"
+  },
+  "striped-beanie": {
+   "camera": "snap",
+   "scene": "worn by a person on a ferry deck, grey sea behind, seen from behind, the back of the head only, cropped at the shoulders"
+  },
+  "kidsCardigan": {
+   "camera": "overcast",
+   "scene": "worn buttoned by a child of about six sitting on wooden porch steps, seen from the front, cropped at the knees"
+  },
+  "linen-stitch-scarf": {
+   "camera": "flash",
+   "scene": "laid flat on a dark slate floor next to a pair of leather gloves"
+  },
+  "babySocks": {
+   "camera": "snap",
+   "scene": "a pair laid side by side on a folded white muslin blanket, a wooden teething ring beside them"
+  },
+  "waffle-blanket": {
+   "camera": "overcast",
+   "scene": "draped over the end of a bed with white sheets, soft daylight from a window"
+  },
+  "mugCozy": {
+   "camera": "lamp",
+   "scene": "on a white ceramic mug of coffee on a wooden desk beside an open notebook"
+  },
+  "houndstooth-beanie": {
+   "camera": "outdoor",
+   "scene": "worn by a person in a camel wool coat on a snowy city sidewalk, seen from behind, hair and the back of the head only, cropped at the shoulders"
+  },
+  "capelet": {
+   "camera": "outdoor",
+   "scene": "worn over a white blouse by a person standing in a garden in early autumn, seen from the front, cropped at the waist"
+  },
+  "double-moss-cowl": {
+   "camera": "sun",
+   "scene": "worn by a person in a denim jacket in a sunny park, seen from the front, cropped at the chest"
+  },
+  "placemat": {
+   "camera": "overcast",
+   "scene": "under a white plate with a fork and a linen napkin on a wooden dining table"
+  },
+  "miniStocking": {
+   "camera": "lamp",
+   "scene": "hanging from a branch of a lit Christmas tree, warm fairy lights blurred behind"
+  },
+  "rope-cable-mitts": {
+   "camera": "snap",
+   "scene": "worn by hands holding a paper cup of coffee outdoors on a cold morning, close up"
+  },
+  "raglanTee": {
+   "camera": "sun",
+   "scene": "laid flat on a sunlit linen bedspread beside a folded pair of sunglasses"
+  },
+  "honeycomb-beanie": {
+   "camera": "overcast",
+   "scene": "resting on a weathered wooden bench beside a folded wool blanket"
+  },
+  "waffle-washcloth": {
+   "camera": "lamp",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap"
+  },
+  "feather-and-fan-wrap": {
+   "camera": "outdoor",
+   "scene": "draped over the back of a garden chair in late afternoon light"
+  },
+  "pouch": {
+   "camera": "sun",
+   "scene": "standing on a wooden dresser beside a small dish of rings"
+  },
+  "color-block-beanie": {
+   "camera": "outdoor",
+   "scene": "worn on a snowy park bench, set down beside a thermos"
+  },
+  "twisted-rib-scarf": {
+   "camera": "overcast",
+   "scene": "hung over a coat hook by a front door"
+  },
+  "bottleCover": {
+   "camera": "lamp",
+   "scene": "tucked against a pillow on an unmade bed at night"
+  },
+  "bandanaKerchief": {
+   "camera": "sun",
+   "scene": "laid flat on a picnic blanket beside a straw hat"
+  },
+  "snowflake-cowl": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck against a snowy fence line"
+  },
+  "broken-rib-beanie": {
+   "camera": "overcast",
+   "scene": "set on a stack of books by a rainy window"
+  },
+  "rope-cable-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a leather sofa"
+  },
+  "turtleneck": {
+   "camera": "overcast",
+   "scene": "laid flat on a gray wool blanket beside a pair of leather gloves"
+  },
+  "linen-stitch-washcloth": {
+   "camera": "sun",
+   "scene": "folded on a wooden bath tray beside a sprig of eucalyptus"
+  },
+  "star-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a dusk sky on a frosty evening"
+  },
+  "waffle-cowl": {
+   "camera": "overcast",
+   "scene": "worn bunched around the neck with a wool coat collar"
+  },
+  "shrug": {
+   "camera": "sun",
+   "scene": "worn over a sleeveless summer dress, seen from the back in a garden"
+  },
+  "gloves": {
+   "camera": "outdoor",
+   "scene": "worn on both hands holding a bare winter branch outside, overcast sky"
+  },
+  "yokeSweater": {
+   "camera": "lamp",
+   "scene": "worn by an adult seated in an armchair by a window, hands in the lap"
+  },
+  "tankTop": {
+   "camera": "sun",
+   "scene": "worn by an adult outdoors on a sunny porch, arms bare, over light linen trousers"
+  },
+  "croppedCardigan": {
+   "camera": "overcast",
+   "scene": "worn by an adult over a white tee and high-waisted jeans, standing by a brick wall"
+  },
+  "babyPullover": {
+   "camera": "snap",
+   "scene": "on a baby sitting up on a soft blanket on the floor, seen from the front"
+  },
+  "bucketHat": {
+   "camera": "sun",
+   "scene": "on a sunlit wooden bench by a garden path"
+  },
+  "toteBag": {
+   "camera": "overcast",
+   "scene": "hanging from a wooden chair back in a bright kitchen"
+  },
+  "babyCocoon": {
+   "camera": "lamp",
+   "scene": "on a cream knit blanket in a softly lit nursery, empty, no baby"
+  },
+  "tubeSocks": {
+   "camera": "snap",
+   "scene": "laid flat as a pair on a wooden floor beside slippers"
+  },
+  "knitBasket": {
+   "camera": "overcast",
+   "scene": "on a shelf holding rolled yarn skeins, beside a window"
+  },
+  "kidsVest": {
+   "camera": "outdoor",
+   "scene": "folded on a wooden bench in a schoolyard in autumn light, no child"
+  },
+  "tableRunner": {
+   "camera": "overcast",
+   "scene": "down the middle of a wooden dining table set with plates and a jug of flowers"
+  },
+  "ruana": {
+   "camera": "outdoor",
+   "scene": "worn draped over the shoulders, seen from the back and side, walking on a misty coastal path, face not shown"
+  },
+  "scrunchie": {
+   "camera": "snap",
+   "scene": "on a bathroom shelf beside a hairbrush and a small mirror"
+  },
+  "floorPouf": {
+   "camera": "lamp",
+   "scene": "a living room floor beside a sofa, warm evening lamp light"
+  },
+  "babyBib": {
+   "camera": "overcast",
+   "scene": "a nursery changing table by a window, soft daylight"
+  },
+  "bathMat": {
+   "camera": "snap",
+   "scene": "a white tiled bathroom floor beside a tub, bright morning light"
+  },
+  "laptopSleeve": {
+   "camera": "outdoor",
+   "scene": "a cafe table outside with a coffee cup, overcast afternoon"
+  },
+  "bauble": {
+   "camera": "flash",
+   "scene": "a decorated Christmas tree at night, string lights glowing"
+  },
+  "buttonNeckWarmer": {
+   "camera": "outdoor",
+   "scene": "a snowy park path, cold bright winter morning"
+  },
+  "draftStopper": {
+   "camera": "lamp",
+   "scene": "the bottom of a wooden front door on a hallway floor, cozy evening lamp light"
+  },
+  "cowlHood": {
+   "camera": "overcast",
+   "scene": "a windswept beach in winter, grey overcast light"
+  },
+  "bunting": {
+   "camera": "sun",
+   "scene": "a sunny nursery wall above a crib, afternoon light through the window"
+  },
+  "pixieHat": {
+   "camera": "snap",
+   "scene": "a toddler's play mat in a bright living room, daylight"
+  },
+  "polka-dot-beanie": {
+   "camera": "flash",
+   "scene": "lying flat on a wooden kitchen table"
+  },
+  "zigzag-beanie": {
+   "camera": "lamp",
+   "scene": "laid on a couch cushion"
+  },
+  "wave-beanie": {
+   "camera": "overcast",
+   "scene": "worn by someone standing at a bus stop"
+  },
+  "mushroom-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a mossy garden wall"
+  },
+  "strawberry-beanie": {
+   "camera": "snap",
+   "scene": "on a wooden stool by a window"
+  },
+  "striped-cowl": {
+   "camera": "outdoor",
+   "scene": "worn loosely around the neck on a gray morning walk"
+  },
+  "heart-cowl": {
+   "camera": "oldphone",
+   "scene": "draped over a chair back"
+  },
+  "houndstooth-cowl": {
+   "camera": "lamp",
+   "scene": "on a coat hook by a door"
+  },
+  "striped-blanket": {
+   "camera": "flash",
+   "scene": "folded over the arm of a sofa"
+  },
+  "color-block-scarf": {
+   "camera": "overcast",
+   "scene": "laid out flat on a wooden floor"
+  },
+  "striped-mitts": {
+   "camera": "overcast",
+   "scene": "worn holding a cup of tea at a table"
+  },
+  "nordic-band-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a dusk sky on a frosty evening"
+  },
+  "fair-isle-band-cowl": {
+   "camera": "lamp",
+   "scene": "draped over a wooden chair"
+  },
+  "flower-beanie": {
+   "camera": "sun",
+   "scene": "worn by someone sitting on a park bench in spring"
+  },
+  "reindeer-beanie": {
+   "camera": "flash",
+   "scene": "on a Christmas-card shelf beside pine branches"
+  },
+  "panda-beanie": {
+   "camera": "snap",
+   "scene": "on a wooden stool by a window"
+  },
+  "checkerboard-blanket": {
+   "camera": "lamp",
+   "scene": "folded over the arm of a sofa"
+  },
+  "striped-socks": {
+   "camera": "lamp",
+   "scene": "side by side on a wooden floor"
+  },
+  "striped-raglan": {
+   "camera": "overcast",
+   "scene": "laid flat on a pale wooden floor, with no person"
+  },
+  "striped-vest": {
+   "camera": "snap",
+   "scene": "laid flat on a linen bedspread, with no person"
+  },
+  "striped-drop-shoulder": {
+   "camera": "outdoor",
+   "scene": "laid flat on a gray stone terrace, with no person"
+  },
+  "striped-pillow": {
+   "camera": "flash",
+   "scene": "on a sofa cushion in a living room"
   }
  }
 }

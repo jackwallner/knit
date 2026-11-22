@@ -1,0 +1,51 @@
+ok   fair-isle-band-cowl: Fair Isle Band Cowl, 5 sizes x 4 weights
+
+== fair-isle-band-cowl, Snug, Worsted, 200 yd
+22 in around, 8 in tall
+  Navy, color A: about 170 yd of worsted weight yarn
+  Cream, color B: about 20 yd of worsted weight yarn
+  Mustard, color C: about 10 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [112]: Cast on 112 stitches in navy. Join in the round without twisting and place a marker.
+Cowl x18 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: Knit
+Cowl x1 [112]: *K8 navy; repeat from * around
+Cowl x1 [112]: *K2 navy, k2 cream, k2 navy, k2 cream; repeat from * around
+Cowl x1 [112]: *K1 navy, k2 cream, k2 navy, k2 cream, k1 navy; repeat from * around
+Cowl x1 [112]: *K2 navy, k2 cream, k2 navy, k2 cream; repeat from * around
+Cowl x1 [112]: *K8 navy; repeat from * around
+Cowl x1 [112]: *K1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream; repeat from * around
+Cowl x1 [112]: *K1 mustard, k1 navy, k1 mustard, k1 navy, k1 mustard, k1 navy, k1 mustard, k1 navy; repeat from * around
+Cowl x1 [112]: *K1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream; repeat from * around
+Cowl x1 [112]: With navy, knit
+Cowl x18 [112]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== fair-isle-band-cowl, Infinity, Worsted, 520 yd
+52 in around, 9 in tall
+  Navy, color A: about 480 yd of worsted weight yarn
+  Cream, color B: about 30 yd of worsted weight yarn
+  Mustard, color C: about 10 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [272]: Cast on 272 stitches in navy. Join in the round without twisting and place a marker.
+Cowl x22 [272]: *K2, p2; repeat from * around
+Cowl x1 [272]: Knit
+Cowl x1 [272]: *K8 navy; repeat from * around
+Cowl x1 [272]: *K2 navy, k2 cream, k2 navy, k2 cream; repeat from * around
+Cowl x1 [272]: *K1 navy, k2 cream, k2 navy, k2 cream, k1 navy; repeat from * around
+Cowl x1 [272]: *K2 navy, k2 cream, k2 navy, k2 cream; repeat from * around
+Cowl x1 [272]: *K8 navy; repeat from * around
+Cowl x1 [272]: *K1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream; repeat from * around
+Cowl x1 [272]: *K1 mustard, k1 navy, k1 mustard, k1 navy, k1 mustard, k1 navy, k1 mustard, k1 navy; repeat from * around
+Cowl x1 [272]: *K1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream, k1 navy, k1 cream; repeat from * around
+Cowl x1 [272]: With navy, knit
+Cowl x22 [272]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

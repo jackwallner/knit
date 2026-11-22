@@ -1,0 +1,63 @@
+ok   heart-cowl: Heart Cowl, 5 sizes x 4 weights
+
+== heart-cowl, Snug, Worsted, 200 yd
+22 in around, 8 in tall
+  Cream, color A: about 170 yd of worsted weight yarn
+  Red, color B: about 30 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [108]: Cast on 108 stitches in cream. Join in the round without twisting and place a marker.
+Cowl x14 [108]: *K2, p2; repeat from * around
+Cowl x1 [108]: Knit
+Cowl x1 [108]: *K6 cream; repeat from * around
+Cowl x1 [108]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [108]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [108]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [108]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [108]: *K6 cream; repeat from * around
+Cowl x1 [108]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [108]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [108]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [108]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [108]: *K6 cream; repeat from * around
+Cowl x1 [108]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [108]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [108]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [108]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [108]: With cream, knit
+Cowl x14 [108]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== heart-cowl, Infinity, Worsted, 520 yd
+52 in around, 9 in tall
+  Cream, color A: about 460 yd of worsted weight yarn
+  Red, color B: about 60 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [264]: Cast on 264 stitches in cream. Join in the round without twisting and place a marker.
+Cowl x18 [264]: *K2, p2; repeat from * around
+Cowl x1 [264]: Knit
+Cowl x1 [264]: *K6 cream; repeat from * around
+Cowl x1 [264]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [264]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [264]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [264]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [264]: *K6 cream; repeat from * around
+Cowl x1 [264]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [264]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [264]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [264]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [264]: *K6 cream; repeat from * around
+Cowl x1 [264]: *K3 cream, k1 red, k2 cream; repeat from * around
+Cowl x1 [264]: *K2 cream, k3 red, k1 cream; repeat from * around
+Cowl x1 [264]: *K1 cream, k5 red; repeat from * around
+Cowl x1 [264]: *K2 cream, k1 red, k1 cream, k1 red, k1 cream; repeat from * around
+Cowl x1 [264]: With cream, knit
+Cowl x18 [264]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

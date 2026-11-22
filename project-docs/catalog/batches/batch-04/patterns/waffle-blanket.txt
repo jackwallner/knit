@@ -1,0 +1,25 @@
+ok   waffle-blanket: Waffle Blanket, 5 sizes x 6 weights
+
+== waffle-blanket, Stroller, Worsted, 1080 yd
+30.25 in wide, 35.25 in long
+  About 1,080 yd of worsted weight yarn
+  US 7 · 4.5 mm circular needle, 32 in or longer, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [142]: Cast on 142 stitches.
+Bottom Border x12 [142]: Knit
+Body x224 [142]: K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / K6, *k1, p2; repeat from * to the last 7 stitches, k7 / K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / Knit
+Top Border x12 [142]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== waffle-blanket, Throw, Worsted, 2910 yd
+48 in wide, 60 in long
+  About 2,910 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle, worked flat
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [226]: Cast on 226 stitches.
+Bottom Border x12 [226]: Knit
+Body x396 [226]: K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / K6, *k1, p2; repeat from * to the last 7 stitches, k7 / K6, *p1, k2; repeat from * to the last 7 stitches, p1, k6 / Knit
+Top Border x12 [226]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

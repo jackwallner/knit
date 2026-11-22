@@ -5,6 +5,7 @@
 #   scripts/topical-check.sh file.json ...        just these files
 #   PREVIEWS=dir scripts/topical-check.sh         previews somewhere else (default project-docs/topical/previews)
 #   scripts/topical-check.sh --print <id> ...     also print that design's pattern at its default size
+#   scripts/topical-check.sh --fit-weights f.json  list the yarn weights each record passes at
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -21,6 +22,7 @@ files=()
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --print) args+=(--print "$2"); shift 2 ;;
+    --fit-weights) args+=(--fit-weights); shift ;;
     *) files+=("$1"); shift ;;
   esac
 done

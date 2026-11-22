@@ -1,0 +1,59 @@
+ok   waffle-beanie: Waffle Beanie, 8 sizes x 5 weights
+
+== waffle-beanie, Baby, Worsted, 90 yd
+14 in around, to fit a 16 in head
+  About 90 yd of worsted weight yarn
+  US 5 · 3.75 mm double-pointed needles for the brim, or a long circular for magic loop
+  US 7 · 4.5 mm double-pointed needles for the body, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [66]: Cast on 66 stitches with the smaller needle. Join in the round without twisting and place a marker.
+Brim x9 [66]: *K1, p1; repeat from * around
+Body x1 [66]: Change to the larger needle and knit
+Body x16 [66]: *P1, k2; repeat from * around / *P1, k2; repeat from * around / *P1, k2; repeat from * around / Purl
+Body x1 [64]: Knit, decreasing 2 evenly: work (k31, k2tog) 2 times
+Crown x1 [56]: *K6, k2tog; repeat from * around
+Crown x1 [56]: Knit
+Crown x1 [48]: *K5, k2tog; repeat from * around
+Crown x1 [48]: Knit
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [40]: Knit
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [32]: Knit
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.
+
+== waffle-beanie, Large, Worsted, 180 yd
+20.25 in around, to fit a 23.5 in head
+  About 180 yd of worsted weight yarn
+  US 5 · 3.75 mm 16 in circular needle for the brim
+  US 7 · 4.5 mm 16 in circular needle for the body
+  Double-pointed needles in the larger size for the crown
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Brim x1 [96]: Cast on 96 stitches with the smaller needle. Join in the round without twisting and place a marker.
+Brim x13 [96]: *K2, p2; repeat from * around
+Body x1 [96]: Change to the larger needle and knit
+Body x24 [96]: *P1, k2; repeat from * around / *P1, k2; repeat from * around / *P1, k2; repeat from * around / Purl
+Crown x1 [88]: *K10, k2tog; repeat from * around
+Crown x1 [88]: Knit
+Crown x1 [80]: *K9, k2tog; repeat from * around
+Crown x1 [80]: Knit
+Crown x1 [72]: *K8, k2tog; repeat from * around
+Crown x1 [72]: Knit
+Crown x1 [64]: *K7, k2tog; repeat from * around
+Crown x1 [64]: Knit
+Crown x1 [56]: *K6, k2tog; repeat from * around. Change to double-pointed needles when the stitches no longer reach around
+Crown x1 [56]: Knit
+Crown x1 [48]: *K5, k2tog; repeat from * around
+Crown x1 [48]: Knit
+Crown x1 [40]: *K4, k2tog; repeat from * around
+Crown x1 [32]: *K3, k2tog; repeat from * around
+Crown x1 [24]: *K2, k2tog; repeat from * around
+Crown x1 [16]: *K1, k2tog; repeat from * around
+Crown x1 [8]: *K2tog; repeat from * around
+Finishing x1: Cut the yarn, thread it through the last 8 stitches and pull tight. Weave in the ends.

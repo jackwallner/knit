@@ -1,0 +1,33 @@
+ok   Table Runner: 5 sizes x 8 weights
+
+== Table Runner, Small, Worsted, 460 yd
+12.25 in wide and 36 in from point to point, after blocking
+  About 460 yd of worsted weight yarn, cotton or linen washes best
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  A piece of card for the tassels
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Point x1 [3]: Cast on 3 stitches.
+First Point x1 [3]: Knit
+First Point x52 [5 to 55]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Body x218 [55]: Knit
+Second Point x52 [53 to 3]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit
+Second Point x1 [1]: Slip 1, k2tog, pass the slipped stitch over
+Second Point x1: Cut the yarn and pull it through the last stitch.
+Finishing x1: Weave in the ends. Make two tassels about 3.5 in long and sew one to each point. Block flat, pinning the points.
+
+== Table Runner, Long, Worsted, 1300 yd
+16.25 in wide and 72 in from point to point, after blocking
+  About 1,300 yd of worsted weight yarn, cotton or linen washes best
+  US 7 · 4.5 mm 24 in circular needle, worked flat
+  Tapestry needle
+  A piece of card for the tassels
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First Point x1 [3]: Cast on 3 stitches.
+First Point x1 [3]: Knit
+First Point x70 [5 to 73]: K1, kfb, knit to the last 2 stitches, kfb, k1 / Knit
+Body x506 [73]: Knit
+Second Point x70 [71 to 3]: K1, k2tog, knit to the last 3 stitches, ssk, k1 / Knit
+Second Point x1 [1]: Slip 1, k2tog, pass the slipped stitch over
+Second Point x1: Cut the yarn and pull it through the last stitch.
+Finishing x1: Weave in the ends. Make two tassels about 4 in long and sew one to each point. Block flat, pinning the points.

@@ -1,0 +1,29 @@
+ok   Boot Cuffs: 5 sizes x 8 weights
+
+== Boot Cuffs, Small, Worsted, 140 yd
+10.75 in around, to fit a 12 in calf with the rib stretched a little, 6 in tall
+  About 140 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Leg x1 [48]: Cast on 48 stitches loosely. Join in the round without twisting and place a marker.
+Leg x16 [48]: *K2, p2; repeat from * around
+Cuff x17 [48]: *K1, p1; repeat from * around / *P1, k1; repeat from * around
+Edge x3 [48]: *K2, p2; repeat from * around
+Edge x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends. Make a second cuff the same way. Wear the rib inside the boot, with the seed stitch above it or folded down over the top.
+
+== Boot Cuffs, Large, Worsted, 240 yd
+14.25 in around, to fit a 16 in calf with the rib stretched a little, 7.75 in tall
+  About 240 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Leg x1 [64]: Cast on 64 stitches loosely. Join in the round without twisting and place a marker.
+Leg x20 [64]: *K2, p2; repeat from * around
+Cuff x23 [64]: *K1, p1; repeat from * around / *P1, k1; repeat from * around
+Edge x3 [64]: *K2, p2; repeat from * around
+Edge x1: Bind off loosely in pattern.
+Finishing x1: Weave in the ends. Make a second cuff the same way. Wear the rib inside the boot, with the seed stitch above it or folded down over the top.

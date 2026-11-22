@@ -8,6 +8,10 @@ struct Topical: Identifiable, Hashable, Sendable {
     let title: String
     let base: Design
     let work: Colorwork
+    /// The stitch pattern the shape's main fabric is worked in. Nil keeps the shape's own fabric.
+    var stitch: Stitch?
+    /// The sample photo on the Ravel site, for a record that has one: a path under `photos/`.
+    var photo: String?
     /// The yarn weights the chart was proven to fit at every size.
     let weights: [YarnWeight]
     let tag: String
@@ -23,24 +27,39 @@ struct Topical: Identifiable, Hashable, Sendable {
 
     /// The newest record format this build reads. A record that needs more is skipped, so a feature added
     /// later can never be misread by an older app.
-    static let featureLevel = 1
+    /// 2: `stitch`, a stitch pattern for the shape's fabric, and records of one color.
+    /// 3: `ear`, the color of the ear crown's ears, and `tile`, a chart repeated up a flat piece.
+    static let featureLevel = 3
+
+    /// Shapes a stitch pattern can be worked on.
+    static let stitchBases: [Design] = [.ribbedBeanie, .slouchHat, .garterScarf, .ribbedCowl, .borderedBlanket, .earWarmer, .washcloth, .rectangularWrap, .handwarmers]
 
     /// Shapes a record may build on: the ones colorwork has been taught.
     static let bases: [Design] = [
         .ribbedBeanie, .slouchHat, .rolledBrimHat, .ribbedCowl, .seedCowl, .chunkyCowl, .earWarmer, .handwarmers,
-        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket,
+        .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .washcloth, .rectangularWrap,
     ]
+
+    /// Shapes that take stripes and nothing else: a stripe only changes the yarn of a row, never a count, so the
+    /// shaping of a sock or a sweater stays as the engine wrote it. No chart, no crown, no stitch pattern.
+    static let stripeBases: [Design] = [.cuffDownSocks, .toeUpSocks, .raglanPullover, .sweaterVest, .dropShoulder, .pillowCover]
 
     /// The design a cast-on project names: "topical." in front, so it never meets a built-in name.
     var designRaw: String { "topical.\(id)" }
 
     var silhouette: Design.Silhouette { work.ears ? .ears : base.silhouette }
 
-    var level: Design.Level { work.chart == nil ? base.level : .intermediate }
+    var level: Design.Level {
+        if work.chart != nil { return .intermediate }
+        let order: [Design.Level] = [.beginner, .easy, .intermediate]
+        let levels = [base.level] + (stitch.map { [$0.level] } ?? [])
+        return levels.max { order.firstIndex(of: $0)! < order.firstIndex(of: $1)! } ?? base.level
+    }
 
     /// What the knitter will do beyond the shape's own stitches, in the order they meet it.
     var techniques: [String] {
         var all: [String] = []
+        if let stitch { all.append(stitch.technique) }
         if !work.stripes.isEmpty { all.append("Stripes") }
         if let chart = work.chart { all.append(chart.duplicate ? "Duplicate stitch" : "Stranded colorwork") }
         if work.ears { all.append("Sewn-on ears") }
@@ -52,6 +71,7 @@ struct Topical: Identifiable, Hashable, Sendable {
     var fit: Engines.Fit {
         var fit = Engines.Fit()
         fit.ears = work.ears
+        fit.stitch = stitch
         guard let chart = work.chart else { return fit }
         if chart.placement == .repeating, !base.isFlat { fit.multiple = chart.width }
         // A shape that is all texture gets a band of stockinette for the chart, a round above and below it.
@@ -65,6 +85,12 @@ struct Topical: Identifiable, Hashable, Sendable {
 
     func painted(measures: [String: Double], gauge: Gauge) -> Painter.Result {
         let plain = base.plan(measures: measures, gauge: gauge, fit: fit)
+        // One yarn and no stripes: a stitch pattern alone, so the plan stays a plan in one color.
+        if work.palette.count == 1, work.stripes.isEmpty, work.chart == nil, !work.ears {
+            var single = plain
+            single.silhouette = silhouette.rawValue
+            return Painter.Result(plan: single, issues: [])
+        }
         var result = Painter.paint(plain, with: work, gauge: gauge, rate: base.rowsPerInch(gauge), float: Self.longestFloat(gauge), garter: base.isGarter)
         result.plan.silhouette = silhouette.rawValue
         return result
@@ -81,6 +107,7 @@ extension Design {
     var isFlat: Bool {
         switch self {
         case .garterScarf, .ribbedScarf, .seedScarf, .borderedBlanket, .garterBlanket, .dishcloth, .triangleShawl, .neckScarf, .cableHeadband: true
+        case .washcloth, .asymmetricShawl, .hoodedScarf: true
         case .basketweaveBlanket, .rectangularWrap, .crescentShawl: true
         default: false
         }
@@ -102,6 +129,8 @@ extension Topical {
             var rows: [String]
             /// "duplicate" sews the chart on afterward. Builds that do not know it knit the chart in.
             var stitch: String?
+            /// Repeats the chart up a flat piece as well as across it.
+            var tile: Bool?
         }
 
         var id: String
@@ -112,6 +141,7 @@ extension Topical {
         var palette: [Shade]
         var brim: String?
         var rim: String?
+        var ear: String?
         var stripes: [Stripe]?
         var repeatStripes: Bool?
         var chart: Chart?
@@ -121,6 +151,10 @@ extension Topical {
         var ends: String?
         var free: Bool?
         var revision: Int?
+        /// A `Stitch` raw value (format 2).
+        var stitch: String?
+        /// "photos/<id>.jpg" on the Ravel site. Builds that do not know it draw the design instead.
+        var photo: String?
     }
 
     struct Listing: Codable, Sendable {
@@ -174,9 +208,21 @@ extension Topical {
         check((r.requires ?? 1) <= featureLevel, "Needs record format \(r.requires ?? 1); this build reads \(featureLevel)")
 
         let base = Design(rawValue: r.base)
-        check(base.map(bases.contains) ?? false, "\(r.base) is not a shape colorwork can use")
+        let stripesOnly = base.map(stripeBases.contains) ?? false
+        check((base.map(bases.contains) ?? false) || stripesOnly, "\(r.base) is not a shape colorwork can use")
+        check(!stripesOnly || (r.chart == nil && r.stitch == nil && r.crown == nil), "\(r.base) takes stripes only")
+        check(!stripesOnly || !(r.stripes ?? []).isEmpty, "\(r.base) needs stripes")
 
-        check((2...4).contains(r.palette.count), "The palette has 2 to 4 colors")
+        let stitch = r.stitch.flatMap(Stitch.init(rawValue:))
+        check(r.stitch == nil || stitch != nil, "Stitch \(r.stitch ?? "") is not one this build knows")
+        check(r.stitch == nil || (r.requires ?? 1) >= 2, "A stitch pattern needs record format 2")
+        check(r.stitch == nil || base.map(stitchBases.contains) ?? false, "\(r.base) is not a shape a stitch pattern can use")
+        check(r.stitch == nil || r.chart == nil, "A chart goes on stockinette, not on a stitch pattern")
+        check((stitch == nil ? 2 : 1)...4 ~= r.palette.count, stitch == nil ? "The palette has 2 to 4 colors" : "The palette has 1 to 4 colors")
+        if let photo = r.photo {
+            // A replaced photo takes a new name ("-2"), so a phone that cached the old one fetches it.
+            check(photo.range(of: "^photos/\(r.id)(-[0-9]+)?\\.jpg$", options: .regularExpression) != nil, "A photo is photos/\(r.id).jpg on the Ravel site")
+        }
         for shade in r.palette {
             check(shade.name.range(of: "^[a-z][a-z ]{1,11}$", options: .regularExpression) != nil, "Color names are 2 to 12 lowercase letters: \(shade.name)")
             check(shade.rgb != nil, "\(shade.hex) is not a #RRGGBB color")
@@ -220,7 +266,10 @@ extension Topical {
             if let stripe = c.stripe { check(stripe >= 0 && stripe < stripes.count, "The chart sits on stripe \(stripe), which does not exist") }
             check(c.stitch == nil || c.stitch == "duplicate", "Chart stitch \(c.stitch ?? "") is not one this build knows")
             check(c.stitch == nil || placement == .motif, "Only a motif can be worked in duplicate stitch")
-            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe, duplicate: c.stitch == "duplicate") }
+            check(c.tile != true || (r.requires ?? 1) >= 3, "A tiled chart needs record format 3")
+            check(c.tile != true || (placement == .repeating && base == .borderedBlanket), "Only a repeat chart on the bordered blanket can tile")
+            check(c.tile != true || c.stripe == nil, "A tiled chart covers the piece, so it has no stripe")
+            if let placement { chart = Colorwork.Chart(placement: placement, rows: cells, stripe: c.stripe, duplicate: c.stitch == "duplicate", tiled: c.tile == true) }
         }
 
         var ears = false
@@ -234,6 +283,10 @@ extension Topical {
         let rim = r.rim.flatMap(color)
         check(r.rim == nil || rim != nil, "Rim color \(r.rim ?? "") is not in the palette")
         check(r.rim == nil || ears, "A rim needs the ear crown")
+        let ear = r.ear.flatMap(color)
+        check(r.ear == nil || ear != nil, "Ear color \(r.ear ?? "") is not in the palette")
+        check(r.ear == nil || ears, "An ear color needs the ear crown")
+        check(r.ear == nil || (r.requires ?? 1) >= 3, "An ear color needs record format 3")
 
         let weights = r.weights.compactMap(YarnWeight.init(rawValue:))
         check(!weights.isEmpty && weights.count == r.weights.count, "Weights must name yarn weights: \(r.weights.joined(separator: ", "))")
@@ -242,7 +295,7 @@ extension Topical {
         if let s = starts ?? nil, let e = ends ?? nil { check(s < e, "The design ends before it starts") }
 
         guard problems.isEmpty, let base else { return Parsed(id: r.id, topical: nil, problems: problems) }
-        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, rim: rim)
+        let work = Colorwork(palette: r.palette, brim: brim, stripes: stripes, repeatsStripes: r.repeatStripes ?? false, chart: chart, ears: ears, ear: ear, rim: rim, plainEdges: stripesOnly)
         let order = YarnWeight.allCases
         var topical = Topical(
             id: r.id, title: title, base: base, work: work,
@@ -250,6 +303,8 @@ extension Topical {
             starts: starts ?? nil, ends: ends ?? nil, isFree: r.free ?? false
         )
         topical.revision = max(0, r.revision ?? 0)
+        topical.stitch = stitch
+        topical.photo = r.photo
         return Parsed(id: r.id, topical: topical, problems: [])
     }
 }

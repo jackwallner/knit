@@ -1,0 +1,44 @@
+ok   Baby Cocoon: 4 sizes x 8 weights
+
+== Baby Cocoon, Newborn, Bulky, 200 yd
+18.25 in around and 17 in long with the rib unfolded
+  About 200 yd of bulky weight yarn, soft and machine washable
+  US 10.5 · 6.5 mm double-pointed needles, or a long circular for magic loop, and a 16 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 14 stitches and 20 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Base x1 [8]: Knit
+Base x2 [16]: *K1, M1L; repeat from * around / Knit
+Base x2 [24]: *K2, M1L; repeat from * around / Knit
+Base x2 [32]: *K3, M1L; repeat from * around / Knit
+Base x2 [40]: *K4, M1L; repeat from * around / Knit
+Base x2 [48]: *K5, M1L; repeat from * around / Knit
+Base x2 [56]: *K6, M1L; repeat from * around / Knit
+Base x2 [64]: *K7, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Body x53 [64]: Knit
+Top x17 [64]: *K2, p2; repeat from * around
+Top x1: Bind off loosely in pattern, so the top stretches over the shoulders.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the bottom and weave in the ends. Fold the rib down to the outside.
+
+== Baby Cocoon, 3 Months, Bulky, 270 yd
+20.5 in around and 20 in long with the rib unfolded
+  About 270 yd of bulky weight yarn, soft and machine washable
+  US 10.5 · 6.5 mm double-pointed needles, or a long circular for magic loop, and a 16 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 14 stitches and 20 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Base x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Base x1 [8]: Knit
+Base x2 [16]: *K1, M1L; repeat from * around / Knit
+Base x2 [24]: *K2, M1L; repeat from * around / Knit
+Base x2 [32]: *K3, M1L; repeat from * around / Knit
+Base x2 [40]: *K4, M1L; repeat from * around / Knit
+Base x2 [48]: *K5, M1L; repeat from * around / Knit
+Base x2 [56]: *K6, M1L; repeat from * around / Knit
+Base x2 [64]: *K7, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Base x2 [72]: *K8, M1L; repeat from * around / Knit
+Body x64 [72]: Knit
+Top x20 [72]: *K2, p2; repeat from * around
+Top x1: Bind off loosely in pattern, so the top stretches over the shoulders.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the bottom and weave in the ends. Fold the rib down to the outside.

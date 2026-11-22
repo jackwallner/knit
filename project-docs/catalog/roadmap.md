@@ -1,0 +1,265 @@
+# Catalog roadmap: 45 designs to about 200 (2026-11-20)
+
+Ledger for the `catalog` branch. Each row's status moves planned, built, verified, photographed; or dropped
+with the reason. "Verified" means every check below passed and the design is committed; "photographed" also
+needs its photo accepted twice (my read, then a Sonnet judge that has not seen my verdict).
+
+## Where the ranking comes from
+
+- Ravelry top 100 (Aug 2026): neckwear 27, hats 26, socks 25, sweaters 16 (`project-docs/research/2026-11-popular-designs.md`).
+- Etsy bestsellers read 2026-11-17: beginner sweaters, hoods, triangle scarves, slippers, booties, simple beanies, baby cardigans and textured blankets (same file).
+- Craft-fair sellers: beanies, cowls, ear warmers and dishcloth sets outsell big pieces (same file).
+- Knitter research 2026-11-20 (`project-docs/audit/raw/2026-11-20-fable/research-knitters.md`): gift knitters pay for children's sizes in Nov and Dec; accessories are free everywhere, so they fill the catalog but sell nothing alone.
+- A web look on 2026-11-20 found no newer category counts than these.
+
+Gaps in the 45 the list fills first: toe-up and ankle socks, mitts with a thumb gusset, baby cardigan and
+sweater, baby hats and mittens, a top-down hat, headbands, shawl shapes beyond the triangle and crescent,
+ponchos and capelets, home items (washcloths, coasters, cozies, bags), holiday pieces, and the classic
+stitch patterns (double moss, broken rib, waffle, honeycomb, linen, rope cable, feather and fan, chevron and
+eyelet lace, seeded rib) across scarves, cowls, hats, blankets and cloths.
+
+## How each gets built
+
+- **New shape**: a `Design` case and an engine in `Shared/Patterns`, so it needs a build.
+- **Stitch**: a stitch pattern from `Shared/Patterns/Stitches.swift` worked over an existing shape's main
+  fabric, as a record (`"stitch"`, record format 2). The stitch is engine code; which shape wears it is data.
+- **Colorwork**: a chart or stripes on a shape in `Topical.bases`, as a record (format 1).
+
+A recolor of an existing design is never added. Seed stitch already has a scarf and a cowl, so the moss
+family here is double moss (2 by 2), which reads as a small check, not as seed.
+
+## Checks every design passes
+
+`PatternTests` and `TopicalTests` (every size, both ends of every measurement, every allowed weight);
+`scripts/topical-check.sh` for records; `scripts/catalog/golden.sh --check` (the 2,229 plans of the 45
+existing designs, hashed at commit 598a5fb, must not change); a read of the printed pattern at the smallest
+and largest size; the title in every listing language; `LibrarySearch` finding it under the words a knitter
+types.
+
+Fisherman's rib was left out of the stitch set: it is worked into the row below, which the fabric check
+cannot prove, so the four rows planned for it became seeded rib (2026-11-20).
+
+## Photos
+
+Prompts are queued in `project-docs/sample-photos/subjects.json` and `shots.json`. Jack said yes
+(2026-11-21) to Codex's image tool under the ChatGPT sign-in, which costs nothing; it stops at any credit
+prompt. Each image is read next to the design's drawing and rejected for a wrong stitch, color count, motif,
+shape or edging, or for an AI tell; three failed tries means no photo. New photos are served from the site
+(`docs/photos/<id>.jpg`, committed on this branch only) and cached on the phone, so the app does not carry
+them. A design whose photo is not accepted stays in `awaitingPhoto` in `PatternTests` and shows its drawing.
+
+Reject a photo for any eye, nose or mouth in frame (the back of a head, hair or forehead is fine), for a second knitted item, or for stripes whose count, order or widths differ from the record (count them against the drawing), and for a yarn that hides the stitch.
+
+Accepted on my read, waiting for the peer's: batches 1 and 2 (accepted by the peer). Every other design has a photo checked against the rules above (2026-11-21). The six the peer sent back (Cat Ear Hat, Houndstooth Beanie, Baby Mittens, Striped Beanie, Striped Scarf, Boot Cuffs) were redone on the second try and pass. Pulled for a second knitted item in frame and redone: Baby Cocoon, Tube Socks, Bath Mat, Scrunchie (third try), and two for color or stripe width, Color-Block Scarf and Striped Mitts. The Floor Pouf photo is rounder than its drawing.
+
+## The knitter's read (2026-11-21)
+
+All 61 designs added on this branch were read as printed, at their smallest and largest size, by a knitter
+checking counts, row parity, wording and needles. 30 were read in this session (batches 1 to 3 and Toe-Up
+Socks); the other 31 by a Sonnet reviewer, every finding then checked against the printed pattern here.
+The printed patterns are in each batch's `patterns/` folder.
+
+Fixed:
+- Basketweave stops after a whole band of blocks, so the Large washcloth comes out square.
+- Linen stitch yardage counts its slipped stitches, which use about a quarter of the yarn of a knit one.
+- Shawls sit with the wraps in Scarves, the Shrug with Sweaters.
+- Snowflake Cowl: the tip rows of the flake sat one stitch off its center; now symmetric.
+- Star Beanie: a motif sewn on a solid hat said "over the navy stripe" and counted rib rounds as "navy
+  under it"; it now says "over the navy fabric" and the round it starts on above the cast on.
+- Color-Block Beanie (and every record): yarn the plain shape needs beyond the counted rows went to color A,
+  the crown on this hat (30 yd blush, 30 mustard); it now goes to the yarn that works the most (20 and 40).
+- Houndstooth Beanie (and every chart): the plain round after a two-color chart said "Knit" without the
+  yarn; it now says "With cream, knit".
+- Drawings show each design's stitch texture.
+
+Checked and left as is:
+- Rope Cable Mitts: the afterthought thumb opens under part of a cable, but the stitches above it stay live,
+  so the cable crosses on as written.
+- Needle lengths: a 32 in circular holds the largest raglan, turtleneck and capelet (about 65 in around).
+- Snowflake Cowl "22 in around": the ribbed edges set the size; the stockinette chart band sits a little
+  wider, as stranded bands do.
+- Baby Socks gusset wording and the glossary terms (inc across, C4F, M1L, sl1 wyif) are standard.
+- Christmas Stocking decreases its gusset every round, Striped Scarf's end bands are deeper than its
+  stripes, Rope Cable Scarf crosses on row 1: deliberate and knit as written.
+
+Follow-ups: a pattern-stitch gauge line for the linen designs (their fabric is much denser than the
+stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `finest:`.
+
+## The list
+
+| # | Design | Category | For | Build | Status |
+|---|---|---|---|---|---|
+| 1 | Toe-Up Socks | Socks & Feet | Adults and children, intermediate | New shape | verified |
+| 2 | Fingerless Mitts with Gusset | Hands | Adults, easy | New shape | verified |
+| 3 | Double Moss Scarf | Scarves & Cowls | Anyone, beginner | Stitch: double moss on scarf | verified |
+| 4 | Baby Cardigan | Baby | Babies 0 to 24 months, easy | New shape: cardigan engine at baby sizes | verified |
+| 5 | Top-Down Beanie | Hats | Adults and children, easy | New shape | verified |
+| 6 | Twisted Headband | Accessories | Adults, easy | New shape | verified |
+| 7 | Poncho | Shawls & Wraps | Adults and children, beginner | New shape: two rectangles | verified |
+| 8 | Christmas Stocking | Holiday | Gift, easy | New shape: sock engine at stocking scale | verified |
+| 9 | Bordered Washcloth | Home | Anyone, beginner | New shape: square cloth knit straight, garter frame, stockinette middle; base for stitch cloths (renamed: all-garter would be the Dishcloth again) | verified |
+| 10 | Waffle Beanie | Hats | Adults and children, easy | Stitch: waffle on ribbed beanie | verified |
+| 11 | Ankle Socks | Socks & Feet | Adults, intermediate | New shape | dropped: both sock designs already knit a leg as short as 2 in, so this would be a size, not a design |
+| 12 | Snowflake Beanie | Hats | Winter gift, intermediate | Colorwork: chart on ribbed beanie | verified: fingering, sport and DK (the 8-stitch repeat moves a 13 in worsted hat 8 percent) |
+| 13 | Baby Knot Hat | Baby | Newborn to toddler, easy | New shape | verified (on the Hats shelf) |
+| 14 | Asymmetric Shawl | Shawls & Wraps | Adults, easy | New shape | verified |
+| 15 | Broken Rib Cowl | Scarves & Cowls | Anyone, beginner | Stitch: broken rib on cowl | verified |
+| 16 | Bandana Cowl | Scarves & Cowls | Adults, easy | New shape | verified |
+| 17 | Feather and Fan Scarf | Scarves & Cowls | Adults, easy lace | Stitch: feather and fan on scarf | verified |
+| 18 | Double Moss Blanket | Blankets | Baby to throw, beginner | Stitch: double moss on bordered blanket | verified |
+| 19 | Basketweave Washcloth | Home | Anyone, beginner | Stitch: basketweave on washcloth | verified |
+| 20 | Arm Warmers | Hands | Adults, easy | New shape | verified |
+| 21 | Baby Sweater | Baby | Babies 0 to 24 months, easy | New shape: raglan at baby sizes | dropped: the Kids' Raglan already fits an 18 in chest; a true baby pullover needs a buttoned shoulder for the head (added as a later row) |
+| 22 | Fir Tree Beanie | Holiday | Gift, intermediate | Colorwork | dropped: the site already publishes a Fir Tree Hat each season (fir-tree-hat) |
+| 23 | Honeycomb Cowl | Scarves & Cowls | Adults, easy | Stitch: slip-stitch honeycomb on cowl | verified |
+| 24 | Watch Cap | Hats | Adults, easy | New shape: deep fold-up rib | verified |
+| 25 | Chevron Lace Blanket | Blankets | Baby to throw, easy lace | Stitch: chevron lace on bordered blanket | verified |
+| 26 | Hooded Scarf | Scarves & Cowls | Adults, easy | New shape | verified |
+| 27 | Striped Scarf | Scarves & Cowls | Anyone, beginner | Colorwork: wide stripes on garter scarf | verified |
+| 28 | Coasters | Home | Gift, easy | New shape: round, center out | verified |
+| 29 | Rope Cable Scarf | Scarves & Cowls | Adults, intermediate | Stitch: rope cable on scarf | verified |
+| 30 | Baby Mittens | Baby | Babies, easy | New shape: thumbless | verified |
+| 31 | Cat Ear Hat | Hats | Children and adults, easy | New shape: tube closed flat at the top with a three-needle bind off | verified |
+| 32 | Seeded Rib Beanie | Hats | Adults, easy | Stitch: seeded rib on ribbed beanie | verified |
+| 33 | Eyelet Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch: eyelet rows on wrap (the wrap now takes a stitch) | verified |
+| 34 | Tea Cozy | Home | Gift, easy | New shape: two flat sides joined in the round over the lid | verified |
+| 35 | Boot Cuffs | Socks & Feet | Adults, beginner | New shape: rib inside the boot, seed stitch above | verified |
+| 36 | Striped Beanie | Hats | Anyone, easy | Colorwork | verified |
+| 37 | Kids' Cardigan | Sweaters | Children 2 to 12, intermediate | New shape: cardigan engine at child sizes | verified |
+| 38 | Linen Stitch Scarf | Scarves & Cowls | Adults, easy | Stitch: linen stitch on scarf | verified |
+| 39 | Baby Socks | Baby | Babies, intermediate | New shape: sock engine at baby sizes | verified |
+| 40 | Waffle Blanket | Blankets | Baby to throw, beginner | Stitch: waffle on bordered blanket | verified |
+| 41 | Mug Cozy | Home | Gift, easy | New shape: seed stitch band buttoned around the handle | verified |
+| 42 | Houndstooth Beanie | Hats | Adults, intermediate | Colorwork: 4-wide repeat | verified |
+| 43 | Capelet | Shawls & Wraps | Adults, easy | New shape: top-down | verified |
+| 44 | Double Moss Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
+| 45 | Placemat | Home | Anyone, beginner | New shape | verified |
+| 46 | Mini Stocking Ornament | Holiday | Gift, easy | New shape | verified |
+| 47 | Rope Cable Mitts | Hands | Adults, intermediate | Stitch: rope cable on handwarmers (stitched mitts get an afterthought thumb) | verified |
+| 48 | Short-Sleeve Raglan Tee | Sweaters | Adults, intermediate | New shape: raglan with short sleeves, DK, a narrow band at the sleeve | verified |
+| 49 | Honeycomb Beanie | Hats | Adults, easy | Stitch | verified |
+| 50 | Waffle Washcloth | Home | Anyone, beginner | Stitch | verified |
+| 51 | Feather and Fan Wrap | Shawls & Wraps | Adults, easy lace | Stitch | verified |
+| 52 | Drawstring Pouch | Home | Gift, easy | New shape: top down in the round, eyelets, three-needle bind off, twisted cord | verified |
+| 53 | Color-Block Beanie | Hats | Anyone, easy | Colorwork: contrast brim, one band, a third color to the crown | verified |
+| 54 | Twisted Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | verified |
+| 55 | Hot Water Bottle Cover | Home | Gift, easy | New shape: top down, ribbed neck, side increases, three-needle bind off | verified |
+| 56 | Bandana Kerchief | Scarves & Cowls | Adults, beginner | New shape: small triangle with ties | verified |
+| 57 | Snowflake Cowl | Scarves & Cowls | Winter gift, intermediate | Colorwork | verified |
+| 58 | Broken Rib Beanie | Hats | Anyone, beginner | Stitch | verified |
+| 59 | Rope Cable Blanket | Blankets | Throw, intermediate | Stitch | verified |
+| 60 | Turtleneck Pullover | Sweaters | Adults, intermediate | New shape: raglan with a tall collar | verified |
+| 61 | Linen Stitch Washcloth | Home | Anyone, easy | Stitch | verified |
+| 62 | Star Beanie | Hats | Anyone, intermediate | Colorwork: one star sewn on in duplicate stitch | verified |
+| 63 | Shrug | Shawls & Wraps | Adults, easy | New shape: one rectangle cuff to cuff, seamed sleeves, ribbed band around the opening | verified |
+| 64 | Waffle Cowl | Scarves & Cowls | Anyone, beginner | Stitch | verified |
+| 65 | Tote Bag | Home | Anyone, easy | New shape: solid cotton tote on a garter base, slipped-stitch creases at the corners, garter band, straps sewn outside | verified |
+| 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 67 | Baby Cocoon | Baby | Newborn, easy | New shape: bottom-up circle base, straight body, deep folded k2, p2 rib (on the Blankets & Home shelf) | verified |
+| 68 | Garter Ridge Beanie | Hats | Anyone, beginner | Stitch | planned |
+| 69 | Striped Blanket | Blankets | Baby to throw, beginner | Colorwork | verified |
+| 70 | Tube Socks | Socks & Feet | Anyone, easy | New shape: spiral rib, no heel, wedge toe (on the Accessories shelf) | verified |
+| 71 | Honeycomb Blanket | Blankets | Throw, easy | Stitch | planned |
+| 72 | Mushroom Beanie | Hats | Anyone, intermediate | Colorwork | verified |
+| 73 | Double Moss Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
+| 74 | Knit Basket | Home | Anyone, easy | New shape: round base from the center out, garter sides, two handle slots below the rim | verified |
+| 75 | Chevron Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 76 | Kids' Vest | Sweaters | Children 2 to 12, intermediate | New shape: V-neck vest cut from the child sizes (armhole, cross back and neck) | verified |
+| 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | verified |
+| 78 | Seeded Rib Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 79 | Table Runner | Home | Anyone, beginner | New shape: garter, knit point to point, a tassel at each point | verified |
+| 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | verified |
+| 81 | Waffle Mitts | Hands | Adults, easy | Stitch | planned |
+| 82 | Ruana | Shawls & Wraps | Adults, easy | New shape: one seed stitch piece, back then two fronts split by one bound-off stitch (on the Scarves & Cowls shelf) | verified |
+| 83 | Basketweave Beanie | Hats | Anyone, easy | Stitch | planned |
+| 84 | Feather and Fan Blanket | Blankets | Baby to throw, easy lace | Stitch | planned |
+| 85 | Scrunchie | Accessories | Gift, beginner | New shape: stockinette strip folded around a hair elastic and gathered | verified |
+| 86 | Striped Cowl | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
+| 87 | Mistake Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 88 | Floor Pouf | Home | Anyone, easy | New shape | verified |
+| 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | verified |
+| 90 | Rope Cable Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
+| 91 | Baby Bib | Baby | Babies, beginner | New shape | verified |
+| 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
+| 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | verified |
+| 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | planned |
+| 95 | Gloves | Hands | Adults, intermediate | New shape: mitt gusset, then five fingers split from the hand | verified (built ahead of its rank: new shapes first while the colorwork and stitch rows wait for Jack) |
+| 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |
+| 97 | Bath Mat | Home | Anyone, beginner | New shape | verified |
+| 98 | Panda Beanie | Hats | Children, intermediate | Colorwork: ear crown | verified |
+| 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | planned |
+| 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | verified |
+| 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | verified |
+| 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
+| 104 | Chevron Lace Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |
+| 106 | Fair Isle Band Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
+| 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | planned |
+| 108 | Tree Ornament | Holiday | Gift, beginner | New shape | verified (built as Bauble Ornament) |
+| 109 | Double Moss Slouch Hat | Hats | Adults, beginner | Stitch | planned |
+| 110 | Button Neck Warmer | Accessories | Adults, easy | New shape | verified |
+| 111 | Wave Beanie | Hats | Anyone, intermediate | Colorwork | verified |
+| 112 | Waffle Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
+| 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | planned |
+| 114 | Draft Stopper | Home | Anyone, beginner | New shape | verified |
+| 115 | Seed Stitch Beanie | Hats | Anyone, beginner | Stitch | planned |
+| 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
+| 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | planned |
+| 118 | Hood | Accessories | Adults, easy | New shape | verified (built as Cowl Hood) |
+| 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | verified |
+| 120 | Honeycomb Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 121 | Double Moss Pillow | Home | Anyone, beginner | Stitch | planned |
+| 122 | Reindeer Beanie | Holiday | Gift, intermediate | Colorwork | verified |
+| 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | verified |
+| 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
+| 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | verified |
+| 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | verified |
+| 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
+| 130 | Chevron Lace Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
+| 131 | Snowflake Mittens | Hands | Winter gift, intermediate | Colorwork: mittens taught colorwork | dropped: built and checked on the mittens (motif on the back of the hand, duplicate stitch), but the smallest size (4.5 in hand, 3.5 in long) has only 6 hand rounds, so a 7-round snowflake does not fit; a 5-round one passes every check and reads as a bow tie in the preview |
+| 132 | Double Moss Wrap | Shawls & Wraps | Adults, beginner | Stitch | dropped: the Rectangular Wrap is already a moss stole, and the wrap shape takes no stitch |
+| 133 | Broken Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | verified |
+| 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
+| 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | planned |
+| 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | verified |
+| 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | planned |
+| 140 | Linen Stitch Wrap | Shawls & Wraps | Adults, easy | Stitch | planned |
+| 141 | Double Moss Mitts | Hands | Anyone, easy | Stitch | planned |
+| 142 | Chevron Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |
+| 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | verified |
+| 144 | Seeded Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | planned |
+| 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape: top-down V-neck raglan, boxy, deep ribbed hem, three-quarter sleeves, one band with buttons below the V | verified (built ahead of its rank) |
+| 147 | Yoke Sweater | Sweaters | Adults, intermediate | New shape: circular yoke in four rings, each marked by a purl ridge, on the raglan pullover's fit | verified (built ahead of its rank) |
+| 148 | Tank Top | Sweaters | Adults, intermediate | New shape: in the round to the underarms, then front and back flat with scoop necks and narrow straps | verified (built ahead of its rank) |
+| 149 | Waffle Leg Warmers | Accessories | Adults, beginner | Stitch | planned |
+| 150 | Honeycomb Pillow | Home | Anyone, easy | Stitch | planned |
+| 151 | Eyelet Lace Scarf | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 152 | Pixie Hat | Baby | Babies and children, easy | New shape: pointed top | verified |
+| 153 | Bucket Hat | Hats | Child to adult large, easy | New shape: top-down flat crown, purl-ridge folds, straight sides, a brim that widens by half, garter edge | verified (built ahead of its rank) |
+| 154 | Striped Socks | Socks & Feet | Anyone, intermediate | Colorwork: socks taught stripes | verified |
+| 155 | Lace Socks | Socks & Feet | Adults, intermediate | Stitch: lace leg | planned |
+| 156 | Rib Socks | Socks & Feet | Anyone, intermediate | Stitch: ribbed leg | planned |
+| 157 | Hurdle Stitch Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
+| 158 | Diamond Brocade Pillow | Home | Anyone, easy | Stitch | planned |
+| 159 | Broken Rib Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
+| 160 | Double Moss Leg Warmers | Accessories | Anyone, beginner | Stitch | planned |
+| 161 | Baby Pullover | Baby | Babies 3 to 24 months, intermediate | New shape: top-down raglan with a buttoned shoulder opening so it passes over a baby's head (replaces #21) | verified (built ahead of its rank, on the Sweaters shelf with the Baby Cardigan) |
+
+## Already in the library (45)
+
+Hats: Ribbed Beanie, Slouch Hat, Rolled Brim Hat, Balaclava, Earflap Hat, Cabled Beanie, Pompom Bonnet,
+Beret, Heart, Cherry, Checkerboard, Diamond and Bear Beanies, Round Raccoon Beanie (site). Scarves and
+cowls: Garter, Ribbed, Seed Stitch and Keyhole Scarves, Ribbed, Seed Stitch, Chunky and Checkerboard Cowls,
+Neck Scarf, Rectangular Wrap. Home: Bordered, Garter and Basketweave Blankets, Diagonal Dishcloth, Pillow
+Cover, Market Bag. Accessories: Ear Warmer, Handwarmers, Heart Mitts, Leg Warmers, Triangle and Crescent
+Shawls, Cabled Headband, Mittens, Cuff-Down Socks, Slippers, Baby Booties. Sweaters: Raglan Pullover,
+Raglan Cardigan, Sweater Vest, Kids' Raglan, Drop-Shoulder Sweater.
+
+### Photo redos, 2026-11-21 (review of batches 5 to 11)
+Photos checked against the drawing, which comes from the plan. Redone: Bunting (one marigold, not three colors), Zigzag Beanie (a tall band of cream zigzags), Striped Blanket (about 16 narrow stripes), Striped Pillow (cream with blue on the lower half), Striped Drop-Shoulder (thin stripes), Striped Socks (navy and cream), plus Checkerboard Blanket (squares 2.7 times too big), Snowflake Cowl (band 2.7 times too tall) and Panda Beanie (face 4 times too big). The Double Moss Cowl photo was cropped to lose the chin. The Panda drawing was the wrong side: the contact sheet did not draw sewn-on ears, now fixed in `scripts/catalog/Sheet.swift`. Each stripe prompt now states the stripe count and order from the plan, and the result is counted before it is accepted.

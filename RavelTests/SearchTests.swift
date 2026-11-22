@@ -19,13 +19,83 @@ final class SearchTests: XCTestCase {
         XCTAssertTrue(jumpers.allSatisfy { $0.base.shelf == .sweaters }, "a jumper is a sweater")
     }
 
+    /// Every design is found by its own name, and the way knitters write it: "toe up socks".
+    func testEveryDesignIsFoundByItsName() {
+        for design in Design.allCases {
+            XCTAssertTrue(find(design.name).contains { $0.id == design.rawValue }, design.name)
+        }
+        XCTAssertEqual(find("toe up socks").first?.id, Design.toeUpSocks.rawValue)
+        XCTAssertEqual(find("winter gloves").first?.id, Design.gloves.rawValue)
+        XCTAssertEqual(find("tote").first?.id, Design.toteBag.rawValue)
+        XCTAssertEqual(find("tube socks").first?.id, Design.tubeSocks.rawValue)
+        XCTAssertEqual(find("cocoon").first?.id, Design.babyCocoon.rawValue)
+        XCTAssertEqual(find("basket").first?.id, Design.knitBasket.rawValue)
+        XCTAssertEqual(find("vest for a 6 year old").first?.id, Design.kidsVest.rawValue)
+        XCTAssertEqual(find("table runner").first?.id, Design.tableRunner.rawValue)
+        XCTAssertEqual(find("ruana").first?.id, Design.ruana.rawValue)
+        XCTAssertEqual(find("scrunchie").first?.id, Design.scrunchie.rawValue)
+        XCTAssertEqual(find("pouf").first?.id, Design.floorPouf.rawValue)
+        XCTAssertEqual(find("ottoman").first?.id, Design.floorPouf.rawValue)
+        XCTAssertEqual(find("bib").first?.id, Design.babyBib.rawValue)
+        XCTAssertEqual(find("bath mat").first?.id, Design.bathMat.rawValue)
+        XCTAssertEqual(find("bathroom rug").first?.id, Design.bathMat.rawValue)
+        XCTAssertEqual(find("laptop").first?.id, Design.laptopSleeve.rawValue)
+        XCTAssertEqual(find("bauble").first?.id, Design.bauble.rawValue)
+        XCTAssertEqual(find("neck warmer").first?.id, Design.buttonNeckWarmer.rawValue)
+        XCTAssertEqual(find("draft stopper").first?.id, Design.draftStopper.rawValue)
+        XCTAssertEqual(find("draught excluder").first?.id, Design.draftStopper.rawValue)
+        XCTAssertEqual(find("cowl hood").first?.id, Design.cowlHood.rawValue)
+        XCTAssertEqual(find("snood").first?.id, Design.cowlHood.rawValue)
+        XCTAssertEqual(find("bunting").first?.id, Design.bunting.rawValue)
+        XCTAssertEqual(find("garland").first?.id, Design.bunting.rawValue)
+        XCTAssertEqual(find("pixie hat").first?.id, Design.pixieHat.rawValue)
+        XCTAssertEqual(find("elf hat").first?.id, Design.pixieHat.rawValue)
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        for item in collection {
+            XCTAssertTrue(LibrarySearch.find(item.title, in: collection).contains { $0.id == item.id }, item.title)
+        }
+    }
+
+    /// A colorwork design is found by the thing it shows, and by its tag.
+    func testColorworkDesignsAreFoundByTheirMotif() {
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        for (words, id) in [("mushroom", "mushroom-beanie"), ("polka dot", "polka-dot-beanie"), ("strawberry", "strawberry-beanie"),
+                            ("reindeer", "reindeer-beanie"), ("flower", "flower-beanie"), ("heart cowl", "heart-cowl"),
+                            ("striped blanket", "striped-blanket"), ("zigzag", "zigzag-beanie"), ("wave", "wave-beanie")] {
+            XCTAssertTrue(LibrarySearch.find(words, in: collection).contains { $0.id == "topical.\(id)" }, words)
+        }
+    }
+
+    /// A stitch design is found by its stitch, even when the name leaves it out.
+    func testStitchDesignsAreFoundByTheirStitch() {
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        XCTAssertTrue(LibrarySearch.find("waffle", in: collection).contains { $0.id == "topical.waffle-beanie" })
+        XCTAssertTrue(LibrarySearch.find("moss", in: collection).contains { $0.id == "topical.double-moss-scarf" })
+        XCTAssertTrue(LibrarySearch.find("texture", in: collection).contains { $0.id == "topical.waffle-beanie" })
+    }
+
     func testShelfTagsAreSearched() {
         let tags = [Design.ribbedBeanie.rawValue: ["Holiday"], Design.mittens.rawValue: ["Gift season"]]
-        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue])
-        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue])
+        // The Christmas Stocking and the ornaments are holiday designs by their own words, tag or not.
+        let stocking = Design.christmasStocking.rawValue, ornament = Design.miniStocking.rawValue, bauble = Design.bauble.rawValue
+        XCTAssertEqual(find("christmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament, bauble])
+        XCTAssertEqual(find("xmas", tags: tags).map(\.id), [Design.ribbedBeanie.rawValue, stocking, ornament, bauble])
         XCTAssertEqual(find("gifts", tags: tags).map(\.id), [Design.mittens.rawValue])
         XCTAssertEqual(find("a present", tags: tags).map(\.id), [Design.mittens.rawValue])
-        XCTAssertTrue(find("christmas").isEmpty, "no tag, no match")
+        XCTAssertEqual(find("christmas").map(\.id), [stocking, ornament, bauble], "no tag, no match")
+        XCTAssertEqual(find("ornament").map(\.id), [ornament, bauble])
+    }
+
+    func testATeeIsFoundByWhatPeopleCallIt() {
+        for query in ["tee", "t-shirt", "short sleeve", "summer top"] {
+            XCTAssertEqual(find(query).first?.id, Design.raglanTee.rawValue, query)
+        }
+    }
+
+    func testAStitchAndAShapeFindTheDesignWithBoth() {
+        let all = library + TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        XCTAssertEqual(LibrarySearch.find("honeycomb hat", in: all).first?.id, "topical.honeycomb-beanie")
+        XCTAssertEqual(LibrarySearch.find("honeycomb cowl", in: all).first?.id, "topical.honeycomb-cowl")
     }
 
     func testNothingForWhatRavelDoesNotHave() {

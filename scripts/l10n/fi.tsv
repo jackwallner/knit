@@ -392,3 +392,171 @@
 392	Kiinni ommellut korvat
 393	Ommellaan valmiin oikean silmukan päälle villaneulalla sen kahta jalkaa seuraten, jolloin se näyttää neulotulta
 394	Laskuri lukitusnäytölle
+395	Sukat kärjestä alkaen
+396	Kantapää
+397	Aloitus kärkeä varten: lanka kiertyy kahden vierekkäin pidetyn puikon ympäri, silmukka vuorotellen kummallekin, joten kärki alkaa suljettuna ilman saumaa
+398	Siirrä 1 silmukka nurin neuloen lanka edessä
+399	Siirrä 1 silmukka nurin neuloen lanka takana
+400	Neulo 1 silmukka takakautta, jolloin silmukka vääntyy
+401	Neulo 1 silmukka nurin takakautta, jolloin silmukka vääntyy
+402	Siirrä 1 silmukka oikein neuloen, neulo 2 silmukkaa yhteen ja vedä siirretty silmukka niiden yli. Se vähentää 2 silmukkaa
+403	Palmikko 4 edessä: siirrä 2 silmukkaa palmikkopuikolle ja jätä se eteen, neulo 2, neulo sitten palmikkopuikon 2 silmukkaa
+404	Siirretyt silmukat
+405	Kierretyt silmukat
+406	Pitsineule
+407	Palmikot
+408	Oikean ja nurjan silmukan kuviot
+409	Sormettomat kämmekkäät
+410	Vauvan neuletakki
+411	3 kk
+412	6 kk
+413	12 kk
+414	18 kk
+415	24 kk
+416	Nurjalla ja oikealla ruudutettu huivi
+417	Pintakuvio
+418	Kirjoneule
+419	Pipo päälaesta alkaen
+420	Kiertopanta
+421	Poncho
+422	Kappale %lld
+423	Joulusukka
+424	Reunustettu pesulappu
+425	Vohvelineulepipo
+426	Näytä kaikki
+427	Lumihiutalepipo
+428	Vauvan solmupipo
+429	Epäsymmetrinen huivi
+430	Katkoribbikauluri
+431	Höyhen- ja viuhkakuvioinen huivi
+432	Nurjalla ja oikealla ruudutettu tapeitto
+433	Koripunontapesulappu
+434	Bandana-kauluri
+435	Kärki
+436	Käsivarsien lämmittimet
+437	Lämmitin %lld
+438	Käsivarsi
+439	Ranne
+440	Hunajakennokauluri
+441	Merimiespipo
+442	Siksak-pitsipeitto
+443	Hupullinen kaulahuivi
+444	Huppu
+445	Raidallinen kaulahuivi
+446	Lasinaluset
+447	Keskusta
+448	Reuna
+449	Halkaisija
+450	Palmikkokaulahuivi
+451	Vauvan lapaset
+452	Kissankorvapipo
+453	Helmiresoripipo
+454	Reikäneulehartiahuivi
+455	Teekannun myssy
+456	Saapasvarren lämmittimet
+457	Raidallinen pipo
+458	Lasten neuletakki
+459	Pellavaneulekaulahuivi
+460	Vauvan sukat
+461	Vohvelipeitto
+462	Mukinlämmitin
+463	Kukonaskelpipo
+464	Olkaviitta
+465	Kaulus
+466	Tuplahelmineuletuubihuivi
+467	Tabletti
+468	Minisukka-koriste
+469	Palmikkokämmekkäät
+470	Lyhythihainen raglanpaita
+471	Hunajakennopipo
+472	Vohvelineulepesulappu
+473	Höyhen- ja viuhkakuvioinen hartiahuivi
+474	Kiristysnauhapussi
+475	Nauha
+476	Värilohkopipo
+477	Värilohkot
+478	Kierretty joustinneulehuivi
+479	Lämpöpullon suojus
+480	Olkapäät
+481	Bandaanahuivi
+482	Lumihiutalekauluri
+483	Katkoribbipipo
+484	Palmikkopeitto
+485	Poolopaita
+486	Pellavaneulepesulappu
+487	Tähtipipo
+488	Vohvelineulekauluri
+489	Bolero
+490	Olkavarsi
+491	Hihansuusta hihansuuhun
+492	Ensimmäinen hihansuu
+493	Toinen hihansuu
+494	Hihat
+495	Sormikkaat
+496	Sormikas %lld
+497	Etusormi
+498	Keskisormi
+499	Nimetön
+500	Pikkusormi
+501	Kaarrokeneule
+502	Hihaton toppi
+503	Ensimmäinen olkain
+504	Toinen olkain
+505	Lyhyt neuletakki
+506	Etureuna
+507	Vauvan neulepusero
+508	Kalastajahattu
+509	Sivut
+510	Kangaskassi
+511	Vauvan kotelo
+512	Putkisukat
+513	Kierrejoustin
+514	Neulottu kori
+515	Lasten liivi
+516	Kaitaliina
+517	Ensimmäinen kärki
+518	Toinen kärki
+519	Ruana
+520	Ensimmäinen etukappale
+521	Toinen etukappale
+522	Scrunchie-hiuslenkki
+523	Kaitale
+524	Lattiarahi
+525	Pohja
+526	Vauvan ruokalappu
+527	Kylpyhuoneen matto
+528	Läppärin suojapussi
+529	Läppä
+530	Joulupallo
+531	Napillinen kaulaliina
+532	Napinlävet
+533	Vetotulppa
+534	Ensimmäinen pää
+535	Toinen pää
+536	Kaulurihuppu
+537	Lippuviiri
+538	Lippu
+539	Tonttulakki
+540	Neulo silmukan etureunasta ja sitten takareunasta ennen kuin pudotat sen puikolta. Lisää 1 silmukan
+541	Pilkkupipo
+542	Siksak-pipo
+543	Aaltopipo
+544	Sienipipo
+545	Mansikkapipo
+546	Raidallinen kauluri
+547	Sydänkauluri
+548	Kukonaskelkauluri
+549	Raidallinen peitto
+550	Värilohkokaulahuivi
+551	Raidalliset sormettomat lapaset
+552	Pohjoismaiskuvioinen pipo
+553	Fair Isle -kuviokauluri
+554	Kukkapipo
+555	Poropipo
+556	Pandapipo
+557	Shakkilautapeitto
+558	Raidalliset sukat
+559	Raidallinen raglan
+560	Raidallinen liivi
+561	Raidallinen pudonneen olkalinjan neule
+562	Raidallinen tyyny

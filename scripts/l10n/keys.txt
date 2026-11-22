@@ -392,3 +392,171 @@ Duplicate stitch
 Sewn-on ears
 Sewn over a finished knit stitch with a tapestry needle, following its two legs, so it looks knitted in
 Count on Lock Screen
+Toe-Up Socks
+Heel
+A cast on for toes: the yarn wraps two needles held side by side, a loop on each in turn, so the toe begins closed with no seam
+Slip 1 stitch purlwise with the yarn in front
+Slip 1 stitch purlwise with the yarn in back
+Knit 1 through the back loop, so the stitch twists
+Purl 1 through the back loop, so the stitch twists
+Slip 1 knitwise, knit 2 together, then pass the slipped stitch over. It takes away 2 stitches
+Cable 4 front: slip 2 stitches to a cable needle and hold it in front, knit 2, then knit the 2 from the cable needle
+Slipped stitches
+Twisted stitches
+Lace knitting
+Cables
+Knit and purl texture
+Fingerless Mitts
+Baby Cardigan
+3 Months
+6 Months
+12 Months
+18 Months
+24 Months
+Double Moss Scarf
+Texture
+Colorwork
+Top-Down Beanie
+Twisted Headband
+Poncho
+Panel %lld
+Christmas Stocking
+Bordered Washcloth
+Waffle Beanie
+See All
+Snowflake Beanie
+Baby Knot Hat
+Asymmetric Shawl
+Broken Rib Cowl
+Feather and Fan Scarf
+Double Moss Blanket
+Basketweave Washcloth
+Bandana Cowl
+Point
+Arm Warmers
+Arm Warmer %lld
+Arm
+Wrist
+Honeycomb Cowl
+Watch Cap
+Chevron Lace Blanket
+Hooded Scarf
+Hood
+Striped Scarf
+Coasters
+Center
+Edge
+Across
+Rope Cable Scarf
+Baby Mittens
+Cat Ear Hat
+Seeded Rib Beanie
+Eyelet Lace Wrap
+Tea Cozy
+Boot Cuffs
+Striped Beanie
+Kids' Cardigan
+Linen Stitch Scarf
+Baby Socks
+Waffle Blanket
+Mug Cozy
+Houndstooth Beanie
+Capelet
+Collar
+Double Moss Cowl
+Placemat
+Mini Stocking Ornament
+Rope Cable Mitts
+Short-Sleeve Raglan Tee
+Honeycomb Beanie
+Waffle Washcloth
+Feather and Fan Wrap
+Drawstring Pouch
+Cord
+Color-Block Beanie
+Color Block
+Twisted Rib Scarf
+Hot Water Bottle Cover
+Shoulders
+Bandana Kerchief
+Snowflake Cowl
+Broken Rib Beanie
+Rope Cable Blanket
+Turtleneck Pullover
+Linen Stitch Washcloth
+Star Beanie
+Waffle Cowl
+Shrug
+Upper Arm
+Cuff to Cuff
+First Cuff
+Second Cuff
+Sleeves
+Gloves
+Glove %lld
+Index Finger
+Middle Finger
+Ring Finger
+Little Finger
+Yoke Sweater
+Tank Top
+First Strap
+Second Strap
+Cropped Cardigan
+Front Band
+Baby Pullover
+Bucket Hat
+Sides
+Tote Bag
+Baby Cocoon
+Tube Socks
+Spiral Rib
+Knit Basket
+Kids' Vest
+Table Runner
+First Point
+Second Point
+Ruana
+First Front
+Second Front
+Scrunchie
+Strip
+Floor Pouf
+Bottom
+Baby Bib
+Bath Mat
+Laptop Sleeve
+Flap
+Bauble Ornament
+Button Neck Warmer
+Buttonholes
+Draft Stopper
+First End
+Second End
+Cowl Hood
+Bunting
+Flag
+Pixie Hat
+Knit into the front of the stitch and then into its back before slipping it off. It adds 1 stitch
+Polka Dot Beanie
+Zigzag Beanie
+Wave Beanie
+Mushroom Beanie
+Strawberry Beanie
+Striped Cowl
+Heart Cowl
+Houndstooth Cowl
+Striped Blanket
+Color-Block Scarf
+Striped Mitts
+Nordic Band Beanie
+Fair Isle Band Cowl
+Flower Beanie
+Reindeer Beanie
+Panda Beanie
+Checkerboard Blanket
+Striped Socks
+Striped Raglan
+Striped Vest
+Striped Drop-Shoulder
+Striped Pillow

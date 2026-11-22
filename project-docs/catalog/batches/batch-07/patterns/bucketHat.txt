@@ -1,0 +1,67 @@
+ok   Bucket Hat: 6 sizes x 8 weights
+
+== Bucket Hat, Child, Worsted, 160 yd
+19.5 in around the band, to fit a 20 in head, with a 2.25 in brim
+  About 160 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, and a 16 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Crown x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Crown x1 [8]: Knit
+Crown x2 [16]: *K1, M1L; repeat from * around / Knit
+Crown x2 [24]: *K2, M1L; repeat from * around / Knit
+Crown x2 [32]: *K3, M1L; repeat from * around / Knit
+Crown x2 [40]: *K4, M1L; repeat from * around / Knit
+Crown x2 [48]: *K5, M1L; repeat from * around / Knit
+Crown x2 [56]: *K6, M1L; repeat from * around / Knit
+Crown x2 [64]: *K7, M1L; repeat from * around / Knit
+Crown x2 [72]: *K8, M1L; repeat from * around / Knit
+Crown x2 [80]: *K9, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Crown x2 [88]: *K10, M1L; repeat from * around / Knit
+Crown x1 [88]: Purl. The ridge turns the crown down into the sides
+Sides x20 [88]: Knit
+Sides x1 [88]: Purl. The ridge turns the sides out into the brim
+Brim x1 [102]: Knit, increasing 14 evenly: work (k7, M1) 4 times, then (k6, M1) 10 times
+Brim x3 [102]: Knit
+Brim x1 [118]: Knit, increasing 16 evenly: work (k7, M1) 6 times, then (k6, M1) 10 times
+Brim x3 [118]: Knit
+Brim x1 [132]: Knit, increasing 14 evenly: work (k9, M1) 6 times, then (k8, M1) 8 times
+Brim x4 [132]: Knit
+Edge x3 [132]: Purl / Knit
+Edge x1: Bind off loosely purlwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center of the crown and weave in the ends. Steam the brim flat.
+
+== Bucket Hat, Large, Worsted, 210 yd
+23 in around the band, to fit a 23.5 in head, with a 2.5 in brim
+  About 210 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop, and 16 in and 24 in circular needles
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Crown x1 [8]: Leaving a 6 in tail, cast on 8 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+Crown x1 [8]: Knit
+Crown x2 [16]: *K1, M1L; repeat from * around / Knit
+Crown x2 [24]: *K2, M1L; repeat from * around / Knit
+Crown x2 [32]: *K3, M1L; repeat from * around / Knit
+Crown x2 [40]: *K4, M1L; repeat from * around / Knit
+Crown x2 [48]: *K5, M1L; repeat from * around / Knit
+Crown x2 [56]: *K6, M1L; repeat from * around / Knit
+Crown x2 [64]: *K7, M1L; repeat from * around / Knit
+Crown x2 [72]: *K8, M1L; repeat from * around / Knit
+Crown x2 [80]: *K9, M1L; repeat from * around. Move the stitches to the 16 in needle / Knit
+Crown x2 [88]: *K10, M1L; repeat from * around / Knit
+Crown x2 [96]: *K11, M1L; repeat from * around / Knit
+Crown x2 [104]: *K12, M1L; repeat from * around / Knit
+Crown x1 [104]: Purl. The ridge turns the crown down into the sides
+Sides x23 [104]: Knit
+Sides x1 [104]: Purl. The ridge turns the sides out into the brim
+Brim x1 [122]: Knit, increasing 18 evenly: work (k6, M1) 14 times, then (k5, M1) 4 times
+Brim x4 [122]: Knit
+Brim x1 [138]: Knit, increasing 16 evenly: work (k8, M1) 10 times, then (k7, M1) 6 times. Move the stitches to the 24 in needle
+Brim x4 [138]: Knit
+Brim x1 [156]: Knit, increasing 18 evenly: work (k8, M1) 12 times, then (k7, M1) 6 times
+Brim x4 [156]: Knit
+Edge x3 [156]: Purl / Knit
+Edge x1: Bind off loosely purlwise.
+Finishing x1: Thread the cast-on tail through the first 8 stitches, pull it snug to close the center of the crown and weave in the ends. Steam the brim flat.

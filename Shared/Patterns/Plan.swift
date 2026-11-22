@@ -331,6 +331,8 @@ extension PatternPlan {
         ("k2tog", "Knit 2 stitches together"),
         ("ssk", "Slip 2 stitches knitwise one at a time, then knit them together through the back"),
         ("p2tog", "Purl 2 stitches together"),
+        ("kfb", "Knit into the front of the stitch and then into its back before slipping it off. It adds 1 stitch"),
+        ("ssp", "Slip 2 stitches knitwise one at a time, return them to the left needle, then purl them together through the back"),
         ("yo", "Yarn over"),
         ("duplicate stitch", "Sewn over a finished knit stitch with a tapestry needle, following its two legs, so it looks knitted in"),
         ("M1", "Make 1: lift the bar between the stitches and knit it through the back"),
@@ -338,6 +340,13 @@ extension PatternPlan {
         ("M1R", "Make 1 right: lift the bar from the back and knit it through the front"),
         ("M1P", "Make 1 purlwise: lift the bar between the stitches and purl it through the back"),
         ("C6F", "Cable 6 front: slip 3 stitches to a cable needle and hold it in front, knit 3, then knit the 3 from the cable needle"),
+        ("C4F", "Cable 4 front: slip 2 stitches to a cable needle and hold it in front, knit 2, then knit the 2 from the cable needle"),
+        ("sl1 wyif", "Slip 1 stitch purlwise with the yarn in front"),
+        ("sl1 wyib", "Slip 1 stitch purlwise with the yarn in back"),
+        ("k1 tbl", "Knit 1 through the back loop, so the stitch twists"),
+        ("p1 tbl", "Purl 1 through the back loop, so the stitch twists"),
+        ("sk2p", "Slip 1 knitwise, knit 2 together, then pass the slipped stitch over. It takes away 2 stitches"),
+        ("Judy's magic cast-on", "A cast on for toes: the yarn wraps two needles held side by side, a loop on each in turn, so the toe begins closed with no seam"),
         ("k", "Knit. K2 is knit 2 stitches"),
         ("p", "Purl. P2 is purl 2 stitches"),
         ("repeat from", "Work the stitches after the * again and again, as far as the row says"),
@@ -413,14 +422,32 @@ enum Sizing {
     }
 
     /// Yardage counted from the rows a pattern actually writes: every stitch takes about 4.3 times its
-    /// own width in yarn, and 15 percent is added for the swatch, the ends and a loose hand.
+    /// own width in yarn, and 15 percent is added for the swatch, the ends and a loose hand. A slipped
+    /// stitch is not knitted: it takes only the strand carried past it, about a quarter of a stitch's yarn.
     static func yards(worked steps: [Step], spi: Double) -> Int {
-        var stitches = 0
+        var stitches = 0.0
         for step in steps where !step.isAction {
-            for row in 0..<step.rows { stitches += step.stitches(after: row) ?? 0 }
+            let slipped = step.texts.map(slippedShare)
+            for row in 0..<step.rows {
+                stitches += Double(step.stitches(after: row) ?? 0) * (1 - 0.75 * slipped[row % slipped.count])
+            }
         }
-        let raw = Double(stitches) * 4.3 / spi / 36 * 1.15
+        let raw = stitches * 4.3 / spi / 36 * 1.15
         return max(10, Int((raw / 10).rounded(.up)) * 10)
+    }
+
+    /// The share of a row's repeat ("*K1, sl1 wyif; repeat ...") that is slipped stitches.
+    static func slippedShare(_ text: String) -> Double {
+        guard text.contains("sl1 wy"), let star = text.firstIndex(of: "*"),
+              let end = text[star...].firstIndex(of: ";") else { return 0 }
+        var total = 0, slipped = 0
+        for part in text[text.index(after: star)..<end].lowercased().split(separator: ",") {
+            let token = part.trimmingCharacters(in: .whitespaces)
+            let count = Int(token.drop { !$0.isNumber }.prefix { $0.isNumber }) ?? 1
+            total += count
+            if token.hasPrefix("sl") { slipped += count }
+        }
+        return total > 0 ? Double(slipped) / Double(total) : 0
     }
 
     /// A length, in the units this knitter measures in. Patterns are sized in inches underneath.

@@ -9,6 +9,8 @@ struct Garment: View {
     var progress: Double?
     /// A colorwork pattern draws as its own rows, stripes and motif in place, instead of plain fabric.
     var colorwork: PatternPlan?
+    /// A stitch pattern draws its texture, so a waffle blanket does not look like a plain one.
+    var stitch: Stitch?
     @Environment(\.colorScheme) private var scheme
 
     var body: some View {
@@ -56,6 +58,8 @@ struct Garment: View {
                     .position(x: piece.midX, y: piece.midY)
                     .mask { body }
             }
+        } else if let stitch {
+            Texture(stitch: stitch, tint: yarn.tint, w: max(5, size.width / 16))
         } else {
             Fabric(rows: 80, yarn: yarn, markEvery: 0, stitch: max(6, size.width / 11), showsNeedle: false)
         }
@@ -101,6 +105,33 @@ private struct Knitwork: View {
             for (index, path) in fills.enumerated() { context.fill(path, with: .color(tints[index].color)) }
             // The V of each stitch, so it reads as knitting and not as pixels.
             context.stroke(legs, with: .color(.black.opacity(0.14)), lineWidth: max(0.5, w * 0.12))
+        }
+    }
+}
+
+/// A stitch pattern's right side, tiled from the cast-on edge: knit Vs, purl bumps, slipped strands, holes.
+private struct Texture: View {
+    var stitch: Stitch
+    var tint: Tint
+    var w: CGFloat
+
+    var body: some View {
+        let stitch = stitch, tint = tint, w = w
+        Canvas { context, size in
+            context.fill(Path(CGRect(origin: .zero, size: size)), with: .color(tint.shade))
+            func strand(_ path: CGMutablePath, _ color: Color, _ width: CGFloat) {
+                let path = Path(path)
+                context.stroke(path, with: .color(tint.shade), style: StrokeStyle(lineWidth: width + max(1, w * 0.1), lineCap: .round))
+                context.stroke(path, with: .color(color), style: StrokeStyle(lineWidth: width, lineCap: .round))
+            }
+            for row in StitchTexture.rows(stitch, in: size, stitch: w) {
+                strand(row.left, tint.color, w * StitchTexture.leg)
+                strand(row.right, tint.lowlight, w * StitchTexture.leg)
+                strand(row.bumps, tint.lowlight, w * StitchTexture.bump)
+                context.fill(Path(row.holes), with: .color(.black.opacity(0.45)))
+                strand(row.floats, tint.color, w * StitchTexture.leg * 0.8)
+                strand(row.cables, tint.color, w * StitchTexture.cable)
+            }
         }
     }
 }

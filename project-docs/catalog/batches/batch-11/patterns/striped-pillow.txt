@@ -1,0 +1,61 @@
+ok   striped-pillow: Striped Pillow, 6 sizes x 3 weights
+
+== striped-pillow, Small, Worsted, 300 yd
+13 in square, for a 14 in pillow form
+  Cream, color A: about 200 yd of worsted weight yarn
+  Dusty Blue, color B: about 100 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  US 5 · 3.75 mm circular needle of the same length, for the band
+  3 buttons, about 0.75 in across
+  A 14 in square pillow form
+  Stitch marker, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Body x1 [116]: Cast on 116 stitches in dusty blue. Join in the round without twisting and place a marker. The first 58 stitches are the front.
+Body x9 [116]: Knit / Knit / Knit / Knit / Knit / Purl
+Body x1 [116]: With cream, knit
+Body x8 [116]: Knit / Purl / Knit / Knit / Knit / Knit
+Body x1 [116]: With dusty blue, knit
+Body x8 [116]: Knit / Knit / Knit / Knit / Purl / Knit
+Body x1 [116]: With cream, knit
+Body x8 [116]: Knit / Purl / Knit / Knit / Knit / Knit
+Body x1 [116]: With dusty blue, knit
+Body x8 [116]: Knit / Knit / Knit / Knit / Purl / Knit
+Body x1 [116]: With cream, knit
+Body x23 [116]: Knit / Purl / Knit / Knit / Knit / Knit
+Buttonhole Band x1 [116]: Change to the smaller needle. *K1, p1; repeat from * around
+Buttonhole Band x3 [116]: *K1, p1; repeat from * around
+Buttonhole Band x1 [116]: Work 5 in rib, then work (k2tog, yo, work 21 in rib) 2 times. K2tog, yo, then work in rib to the end of the round
+Buttonhole Band x1 [116]: *K1, p1; repeat from * around, working each yarn over as a stitch
+Buttonhole Band x2 [116]: *K1, p1; repeat from * around
+Finishing x1: Bind off loosely in pattern.
+Finishing x1: Turn the cover inside out and sew the cast-on edge closed. Turn it right side out and slip in the pillow form. Sew 3 buttons inside the back band, opposite the buttonholes, and button it shut. Weave in the ends.
+
+== striped-pillow, Extra Large, Worsted, 600 yd
+18.25 in square, for a 20 in pillow form
+  Cream, color A: about 460 yd of worsted weight yarn
+  Dusty Blue, color B: about 140 yd of worsted weight yarn
+  US 7 · 4.5 mm 32 in circular needle
+  US 5 · 3.75 mm circular needle of the same length, for the band
+  4 buttons, about 0.75 in across
+  A 20 in square pillow form
+  Stitch marker, tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Body x1 [164]: Cast on 164 stitches in dusty blue. Join in the round without twisting and place a marker. The first 82 stitches are the front.
+Body x9 [164]: Knit / Knit / Knit / Knit / Knit / Purl
+Body x1 [164]: With cream, knit
+Body x8 [164]: Knit / Purl / Knit / Knit / Knit / Knit
+Body x1 [164]: With dusty blue, knit
+Body x8 [164]: Knit / Knit / Knit / Knit / Purl / Knit
+Body x1 [164]: With cream, knit
+Body x8 [164]: Knit / Purl / Knit / Knit / Knit / Knit
+Body x1 [164]: With dusty blue, knit
+Body x8 [164]: Knit / Knit / Knit / Knit / Purl / Knit
+Body x1 [164]: With cream, knit
+Body x56 [164]: Knit / Purl / Knit / Knit / Knit / Knit
+Buttonhole Band x1 [164]: Change to the smaller needle. *K1, p1; repeat from * around
+Buttonhole Band x3 [164]: *K1, p1; repeat from * around
+Buttonhole Band x1 [164]: Work 5 in rib, then work (k2tog, yo, work 22 in rib) once, then (k2tog, yo, work 21 in rib) 2 times. K2tog, yo, then work in rib to the end of the round
+Buttonhole Band x1 [164]: *K1, p1; repeat from * around, working each yarn over as a stitch
+Buttonhole Band x2 [164]: *K1, p1; repeat from * around
+Finishing x1: Bind off loosely in pattern.
+Finishing x1: Turn the cover inside out and sew the cast-on edge closed. Turn it right side out and slip in the pillow form. Sew 4 buttons inside the back band, opposite the buttonholes, and button it shut. Weave in the ends.

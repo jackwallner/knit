@@ -1,29 +1,29 @@
 import SwiftData
 import SwiftUI
 
-/// The pattern library: every design drawn as the finished thing.
+/// The pattern library: every design drawn as the finished thing. Each shelf is a row that scrolls
+/// sideways, with the whole shelf one tap away, so the page stays short however large the library grows.
 struct LibraryView: View {
+    /// Where the library is: a shelf's full list, then a design.
+    @State private var path = NavigationPath(Self.opening.map { [$0] } ?? [])
+
     // `-OpenDesign raglanPullover` lands on a design, for screenshots. A topical id works too.
-    @State private var path: [LibraryItem] = UserDefaults.standard.string(forKey: "OpenDesign").flatMap { raw in
-        Design(rawValue: raw).map(LibraryItem.builtIn) ?? TopicalStore.shared.item(raw).map(LibraryItem.topical)
-    }.map { [$0] } ?? []
+    private static var opening: LibraryItem? {
+        UserDefaults.standard.string(forKey: "OpenDesign").flatMap { raw in
+            Design(rawValue: raw).map(LibraryItem.builtIn) ?? TopicalStore.shared.item(raw).map(LibraryItem.topical)
+        }
+    }
 
     /// Posted with a design's raw value or topical id to open its page from another tab.
     static let openDesign = Notification.Name("Ravel.openDesign")
 
+    /// A row shows this many, and See All the rest.
+    private static let rowLength = 10
+
     @Environment(\.dynamicTypeSize) private var typeSize
-    @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var query = ""
     private let trending = Trending.shared
     private let topical = TopicalStore.shared
-
-    /// Two tiles a row on a phone, four to six on an iPad, one at the accessibility text sizes on a phone so names
-    /// never get cut, two on an iPad.
-    private var columns: [GridItem] {
-        let regular = sizeClass == .regular
-        if typeSize.isAccessibilitySize { return Array(repeating: GridItem(.flexible(), spacing: 20), count: regular ? 2 : 1) }
-        return [GridItem(.adaptive(minimum: regular ? 190 : 150, maximum: 240), spacing: regular ? 20 : 16)]
-    }
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -34,17 +34,16 @@ struct LibraryView: View {
                         LazyVStack(alignment: .leading, spacing: 36) {
                             if !shelved.isEmpty { row("Trending", shelved, id: "trending") }
                             // The patterns that need no purchase, together near the top so they are easy to find.
-                            // A row that scrolls sideways, like Trending: set as a grid beside the shelves in this
-                            // lazy stack, it hid every shelf after it from VoiceOver.
                             if !free.isEmpty { row("Free", freeRow.map { Shelved(item: $0, tag: $0.level.rawValue) }, id: "free") }
                             ForEach(Design.Shelf.allCases) { shelf in
-                                self.shelf(shelf.title, items: items(on: shelf))
+                                let all = Self.items(on: shelf, topical: topical.items)
+                                row(LocalizedStringKey(shelf.rawValue), all.prefix(Self.rowLength).map { Shelved(item: $0, note: DesignTile.note($0)) }, id: "design", more: all.count > Self.rowLength ? shelf : nil)
                             }
                         }
                     } else if matches.isEmpty {
                         ContentUnavailableView.search(text: searching)
                     } else {
-                        grid(matches)
+                        DesignGrid(items: matches)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -55,44 +54,20 @@ struct LibraryView: View {
             .navigationTitle("Patterns")
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("Hats, mittens, scarves"))
             .navigationDestination(for: LibraryItem.self) { DesignView(item: $0) }
+            .navigationDestination(for: Design.Shelf.self) { ShelfView(shelf: $0) }
             .onReceive(NotificationCenter.default.publisher(for: Self.openDesign)) { note in
                 guard let raw = note.object as? String, let item = LibraryItem.named(raw) else { return }
-                path = [item]
+                path = NavigationPath([item])
             }
         }
     }
 
     private var searching: String { query.trimmingCharacters(in: .whitespaces) }
 
-    private func shelf(_ title: String, items: [LibraryItem]) -> some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Text(title)
-                .font(Theme.display(22, weight: .semibold))
-                .accessibilityAddTraits(.isHeader)
-            grid(items)
-        }
-    }
-
-    private func grid(_ items: [LibraryItem]) -> some View {
-        LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
-            ForEach(items) { item in
-                NavigationLink(value: item) { tile(item, note: note(item)) }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("design.\(item.designRaw)")
-            }
-        }
-    }
-
-    /// The level, and for a design that needs no purchase, that too: a free tile still says how hard it is.
-    private func note(_ item: LibraryItem) -> String {
-        guard item.isFree else { return item.level.title }
-        return "\(String(localized: "Free", comment: "Label under a design that needs no purchase")) · \(item.level.title)"
-    }
-
     /// Every design in the library, in shelf order, once each.
     private var everything: [LibraryItem] {
         var seen = Set<String>()
-        return Design.Shelf.allCases.flatMap(items(on:)).filter { seen.insert($0.id).inserted }
+        return Design.Shelf.allCases.flatMap { Self.items(on: $0, topical: topical.items) }.filter { seen.insert($0.id).inserted }
     }
 
     private var free: [LibraryItem] { everything.filter(\.isFree) }
@@ -111,16 +86,25 @@ struct LibraryView: View {
         return free.filter { $0.id != lead } + free.filter { $0.id == lead }
     }
 
-    /// A row that scrolls sideways: Trending (new designs and what suits the season) or the free patterns.
-    private func row(_ title: LocalizedStringKey, _ entries: [Shelved], id: String) -> some View {
+    /// A row that scrolls sideways: Trending (new designs and what suits the season), the free patterns, or
+    /// the first of a shelf, with See All for the rest of it.
+    private func row(_ title: LocalizedStringKey, _ entries: [Shelved], id: String, more shelf: Design.Shelf? = nil) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text(title)
-                .font(Theme.display(22, weight: .semibold))
-                .accessibilityAddTraits(.isHeader)
+            HStack(alignment: .firstTextBaseline) {
+                Text(title)
+                    .font(Theme.display(22, weight: .semibold))
+                    .accessibilityAddTraits(.isHeader)
+                Spacer(minLength: 12)
+                if let shelf {
+                    NavigationLink(value: shelf) { Text("See All") }
+                        .font(.body.weight(.medium))
+                        .accessibilityIdentifier("shelf.\(shelf.rawValue)")
+                }
+            }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
                     ForEach(entries) { entry in
-                        NavigationLink(value: entry.item) { tile(entry.item, note: Loc.text(entry.tag)) }
+                        NavigationLink(value: entry.item) { DesignTile(item: entry.item, note: entry.note) }
                             .buttonStyle(.plain)
                             .containerRelativeFrame(.horizontal) { width, _ in
                                 typeSize.isAccessibilitySize ? min((width - 72) / 1.3, 420) : min((width - 72) / 2.3, 220)
@@ -150,22 +134,90 @@ struct LibraryView: View {
 
     private struct Shelved: Identifiable {
         var item: LibraryItem
-        var tag: String
+        var note: String
         var id: String { item.id }
+
+        init(item: LibraryItem, note: String) {
+            self.item = item
+            self.note = note
+        }
+
+        /// A tag from the site or a record, shown in the knitter's language.
+        init(item: LibraryItem, tag: String) {
+            self.init(item: item, note: Loc.text(tag))
+        }
     }
 
-    /// A shelf's designs: the newest first, then the colorwork collection, the rest of the library's own,
-    /// and the topical ones on its shapes, which already lead Trending.
-    private func items(on shelf: Design.Shelf) -> [LibraryItem] {
+    /// Designs added since 1.0, the latest first. They lead their shelves.
+    private static let added: [Design] = Design.allCases.filter { $0.sitePhoto != nil }.reversed()
+
+    /// A shelf's designs: the newest first, then the colorwork and stitch collection, the rest of the
+    /// library's own, and the topical ones on its shapes, which already lead Trending.
+    static func items(on shelf: Design.Shelf, topical: [Topical]) -> [LibraryItem] {
         let own = Design.allCases.filter { $0.shelf == shelf }
-        let newest: Set<Design> = [.dropShoulder, .pompomBonnet, .beret, .keyholeScarf, .slippers, .babyBooties]
-        return own.filter(newest.contains).map(LibraryItem.builtIn)
-            + TopicalStore.collection.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
+        let newest = added.filter { $0.shelf == shelf } + [.dropShoulder, .pompomBonnet, .beret, .keyholeScarf, .slippers, .babyBooties].filter { $0.shelf == shelf }
+        return newest.map(LibraryItem.builtIn)
+            + TopicalStore.collection.filter { $0.base.shelf == shelf }.reversed().map(LibraryItem.topical)
             + own.filter { !newest.contains($0) }.map(LibraryItem.builtIn)
-            + topical.items.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
+            + topical.filter { $0.base.shelf == shelf }.map(LibraryItem.topical)
+    }
+}
+
+/// Every design on one shelf.
+struct ShelfView: View {
+    let shelf: Design.Shelf
+    private let topical = TopicalStore.shared
+
+    var body: some View {
+        ScrollView {
+            DesignGrid(items: LibraryView.items(on: shelf, topical: topical.items))
+                .padding(.horizontal, 20)
+                .padding(.top, 8)
+                .padding(.bottom, 32)
+        }
+        .background(Theme.paper)
+        .navigationTitle(shelf.title)
+    }
+}
+
+/// Designs in a grid: a shelf's full list, or what a search found.
+struct DesignGrid: View {
+    let items: [LibraryItem]
+    @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.horizontalSizeClass) private var sizeClass
+
+    /// Two tiles a row on a phone, four to six on an iPad, one at the accessibility text sizes on a phone so names
+    /// never get cut, two on an iPad.
+    private var columns: [GridItem] {
+        let regular = sizeClass == .regular
+        if typeSize.isAccessibilitySize { return Array(repeating: GridItem(.flexible(), spacing: 20), count: regular ? 2 : 1) }
+        return [GridItem(.adaptive(minimum: regular ? 190 : 150, maximum: 240), spacing: regular ? 20 : 16)]
     }
 
-    private func tile(_ item: LibraryItem, note: String) -> some View {
+    var body: some View {
+        LazyVGrid(columns: columns, alignment: .leading, spacing: 22) {
+            ForEach(items) { item in
+                NavigationLink(value: item) { DesignTile(item: item, note: DesignTile.note(item)) }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("design.\(item.designRaw)")
+            }
+        }
+    }
+}
+
+/// A design's sample photo, or its drawing until the photo arrives, with its name and a note under it.
+struct DesignTile: View {
+    let item: LibraryItem
+    let note: String
+    private let photos = PhotoStore.shared
+
+    /// The level, and for a design that needs no purchase, that too: a free tile still says how hard it is.
+    static func note(_ item: LibraryItem) -> String {
+        guard item.isFree else { return item.level.title }
+        return "\(String(localized: "Free", comment: "Label under a design that needs no purchase")) · \(item.level.title)"
+    }
+
+    var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             // The knitted sample where there is one, so a tile shows what the piece really looks like.
             if let photo = item.photo {
@@ -173,12 +225,18 @@ struct LibraryView: View {
                     .aspectRatio(1, contentMode: .fit)
                     .overlay { Image(decorative: photo).resizable().scaledToFill() }
                     .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+            } else if let image = item.sitePhoto.flatMap(photos.image) {
+                Color.clear
+                    .aspectRatio(1, contentMode: .fit)
+                    .overlay { Image(uiImage: image).resizable().scaledToFill().accessibilityHidden(true) }
+                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
             } else {
-                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview)
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: item.preview, stitch: item.stitch)
                     .padding(14)
                     .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
                     // Decorative like the photo: the title under it names the tile.
                     .accessibilityHidden(true)
+                    .task { if let path = item.sitePhoto { await photos.load(path) } }
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text(item.title)
@@ -299,9 +357,19 @@ struct DesignView: View {
                     .accessibilityElement()
                     .accessibilityLabel(Text(verbatim: item.title))
                     .accessibilityAddTraits(.isImage)
+            } else if let image = item.sitePhoto.flatMap(PhotoStore.shared.image) {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(maxWidth: height * 1.7)
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .accessibilityElement()
+                    .accessibilityLabel(Text(verbatim: item.title))
+                    .accessibilityAddTraits(.isImage)
             } else {
-                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan)
+                Garment(silhouette: item.silhouette, yarn: item.yarn, colorwork: plan.palette == nil ? nil : plan, stitch: item.stitch)
                     .frame(height: height)
+                    .task { if let path = item.sitePhoto { await PhotoStore.shared.load(path) } }
             }
             Text("\(item.level.title) · \(Sizing.yardage(plan.yards))")
                 .font(.subheadline)

@@ -1,0 +1,53 @@
+ok   Draft Stopper: 5 sizes x 8 weights
+
+== Draft Stopper, Small, Worsted, 290 yd
+28 in long and 10.75 in around, stuffed
+  About 290 yd of worsted weight yarn, a hard-wearing wool or acrylic
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Polyester fiberfill, and a small bag of rice or dried beans for weight
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First End x1 [6]: Leaving a 10 in tail, cast on 6 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+First End x2 [12]: *K1, M1L; repeat from * around / Knit
+First End x2 [18]: *K2, M1L; repeat from * around / Knit
+First End x2 [24]: *K3, M1L; repeat from * around / Knit
+First End x2 [30]: *K4, M1L; repeat from * around / Knit
+First End x2 [36]: *K5, M1L; repeat from * around / Knit
+First End x2 [42]: *K6, M1L; repeat from * around / Knit
+First End x2 [48]: *K7, M1L; repeat from * around / Knit
+Body x140 [48]: Knit / Knit / Knit / Knit / Knit / Knit / Purl
+Second End x2 [42]: *K6, k2tog; repeat from * around. Stuff the tube firmly, with a bag of rice or dried beans in the middle to weigh it down, and keep adding stuffing as the end closes / Knit
+Second End x2 [36]: *K5, k2tog; repeat from * around / Knit
+Second End x2 [30]: *K4, k2tog; repeat from * around / Knit
+Second End x2 [24]: *K3, k2tog; repeat from * around / Knit
+Second End x2 [18]: *K2, k2tog; repeat from * around / Knit
+Second End x2 [12]: *K1, k2tog; repeat from * around / Knit
+Second End x1 [6]: K2tog around
+Finishing x1: Cut the yarn, thread it through the last 6 stitches, pull it snug and fasten off. Thread the cast-on tail through the cast-on stitches and pull it snug to close the first end. Weave in the ends.
+
+== Draft Stopper, Large, Worsted, 380 yd
+36.25 in long and 10.75 in around, stuffed
+  About 380 yd of worsted weight yarn, a hard-wearing wool or acrylic
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  Stitch marker
+  Polyester fiberfill, and a small bag of rice or dried beans for weight
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+First End x1 [6]: Leaving a 10 in tail, cast on 6 stitches and divide them over double-pointed needles, or use a long circular for magic loop. Join in the round without twisting and place a marker.
+First End x2 [12]: *K1, M1L; repeat from * around / Knit
+First End x2 [18]: *K2, M1L; repeat from * around / Knit
+First End x2 [24]: *K3, M1L; repeat from * around / Knit
+First End x2 [30]: *K4, M1L; repeat from * around / Knit
+First End x2 [36]: *K5, M1L; repeat from * around / Knit
+First End x2 [42]: *K6, M1L; repeat from * around / Knit
+First End x2 [48]: *K7, M1L; repeat from * around / Knit
+Body x189 [48]: Knit / Knit / Knit / Knit / Knit / Knit / Purl
+Second End x2 [42]: *K6, k2tog; repeat from * around. Stuff the tube firmly, with a bag of rice or dried beans in the middle to weigh it down, and keep adding stuffing as the end closes / Knit
+Second End x2 [36]: *K5, k2tog; repeat from * around / Knit
+Second End x2 [30]: *K4, k2tog; repeat from * around / Knit
+Second End x2 [24]: *K3, k2tog; repeat from * around / Knit
+Second End x2 [18]: *K2, k2tog; repeat from * around / Knit
+Second End x2 [12]: *K1, k2tog; repeat from * around / Knit
+Second End x1 [6]: K2tog around
+Finishing x1: Cut the yarn, thread it through the last 6 stitches, pull it snug and fasten off. Thread the cast-on tail through the cast-on stitches and pull it snug to close the first end. Weave in the ends.

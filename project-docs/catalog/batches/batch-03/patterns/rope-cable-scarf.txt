@@ -1,0 +1,23 @@
+ok   rope-cable-scarf: Rope Cable Scarf, 5 sizes x 7 weights
+
+== rope-cable-scarf, Child, Worsted, 250 yd
+4.75 in wide, 48 in long
+  About 250 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Cable needle
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [26]: Cast on 26 stitches.
+Scarf x288 [26]: *P2, C4F; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2 / *P2, k4; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2 / *P2, k4; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== rope-cable-scarf, Long, Worsted, 660 yd
+8.25 in wide, 76 in long
+  About 660 yd of worsted weight yarn
+  US 7 · 4.5 mm needles
+  Cable needle
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Scarf x1 [44]: Cast on 44 stitches.
+Scarf x456 [44]: *P2, C4F; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2 / *P2, k4; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2 / *P2, k4; repeat from * to the last 2 stitches, p2 / *K2, p4; repeat from * to the last 2 stitches, k2
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

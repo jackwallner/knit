@@ -1,0 +1,25 @@
+ok   waffle-washcloth: Waffle Washcloth, 5 sizes x 3 weights
+
+== waffle-washcloth, Small, Worsted, 60 yd
+7.25 in wide, 7.25 in long
+  About 60 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [34]: Cast on 34 stitches.
+Bottom Border x6 [34]: Knit
+Body x40 [34]: K3, *p1, k2; repeat from * to the last 4 stitches, p1, k3 / K3, *k1, p2; repeat from * to the last 4 stitches, k4 / K3, *p1, k2; repeat from * to the last 4 stitches, p1, k3 / Knit
+Top Border x6 [34]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== waffle-washcloth, Large, Worsted, 110 yd
+9.75 in wide, 10 in long
+  About 110 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [46]: Cast on 46 stitches.
+Bottom Border x6 [46]: Knit
+Body x60 [46]: K3, *p1, k2; repeat from * to the last 4 stitches, p1, k3 / K3, *k1, p2; repeat from * to the last 4 stitches, k4 / K3, *p1, k2; repeat from * to the last 4 stitches, p1, k3 / Knit
+Top Border x6 [46]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

@@ -286,6 +286,1833 @@
         "aran"
       ],
       "tag": "Colorwork"
+    },
+    {
+      "id": "double-moss-scarf",
+      "title": "Double Moss Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "rust",
+          "hex": "#A4532F"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-scarf.jpg"
+    },
+    {
+      "id": "waffle-beanie",
+      "title": "Waffle Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "moss",
+          "hex": "#6B7A3A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-beanie.jpg"
+    },
+    {
+      "id": "snowflake-beanie",
+      "title": "Snowflake Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "...B...B",
+          ".B.B.B..",
+          "..BBB...",
+          "BBB.BBB.",
+          "..BBB...",
+          ".B.B.B..",
+          "...B...B"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/snowflake-beanie.jpg"
+    },
+    {
+      "id": "broken-rib-cowl",
+      "title": "Broken Rib Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "oat",
+          "hex": "#C9B391"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-cowl.jpg"
+    },
+    {
+      "id": "feather-and-fan-scarf",
+      "title": "Feather and Fan Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#2E6E6A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Lace",
+      "photo": "photos/feather-and-fan-scarf.jpg"
+    },
+    {
+      "id": "double-moss-blanket",
+      "title": "Double Moss Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#9AA88A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-blanket.jpg"
+    },
+    {
+      "id": "basketweave-washcloth",
+      "title": "Basketweave Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "basketweave",
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/basketweave-washcloth.jpg"
+    },
+    {
+      "id": "honeycomb-cowl",
+      "title": "Honeycomb Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "mustard",
+          "hex": "#C9962E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-cowl.jpg"
+    },
+    {
+      "id": "chevron-lace-blanket",
+      "title": "Chevron Lace Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "chevronLace",
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#E2B8B0"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Lace",
+      "photo": "photos/chevron-lace-blanket.jpg"
+    },
+    {
+      "id": "striped-scarf",
+      "title": "Striped Scarf",
+      "base": "garterScarf",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 3
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "C",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-scarf.jpg"
+    },
+    {
+      "id": "rope-cable-scarf",
+      "title": "Rope Cable Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#E9DFCB"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-scarf.jpg"
+    },
+    {
+      "id": "seeded-rib-beanie",
+      "title": "Seeded Rib Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "seededRib",
+      "palette": [
+        {
+          "name": "teal",
+          "hex": "#2F6B73"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/seeded-rib-beanie.jpg"
+    },
+    {
+      "id": "eyelet-lace-wrap",
+      "title": "Eyelet Lace Wrap",
+      "base": "rectangularWrap",
+      "requires": 2,
+      "stitch": "eyelet",
+      "palette": [
+        {
+          "name": "dusty blue",
+          "hex": "#8FA3B8"
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Lace",
+      "photo": "photos/eyelet-lace-wrap.jpg"
+    },
+    {
+      "id": "striped-beanie",
+      "title": "Striped Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#B5542F"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        },
+        {
+          "color": "C",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-beanie.jpg"
+    },
+    {
+      "id": "linen-stitch-scarf",
+      "title": "Linen Stitch Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#8A9A7B"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-scarf.jpg"
+    },
+    {
+      "id": "waffle-blanket",
+      "title": "Waffle Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8C9AE"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-blanket.jpg"
+    },
+    {
+      "id": "houndstooth-beanie",
+      "title": "Houndstooth Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "black",
+          "hex": "#2A2A2E"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B."
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/houndstooth-beanie.jpg"
+    },
+    {
+      "id": "double-moss-cowl",
+      "title": "Double Moss Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "doubleMoss",
+      "palette": [
+        {
+          "name": "mustard",
+          "hex": "#C99A2E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/double-moss-cowl.jpg"
+    },
+    {
+      "id": "rope-cable-mitts",
+      "title": "Rope Cable Mitts",
+      "base": "handwarmers",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "heather grey",
+          "hex": "#8E8A86"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-mitts.jpg"
+    },
+    {
+      "id": "honeycomb-beanie",
+      "title": "Honeycomb Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-beanie.jpg"
+    },
+    {
+      "id": "waffle-washcloth",
+      "title": "Waffle Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-washcloth.jpg"
+    },
+    {
+      "id": "feather-and-fan-wrap",
+      "title": "Feather and Fan Wrap",
+      "base": "rectangularWrap",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "coral",
+          "hex": "#D9765F"
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Lace",
+      "photo": "photos/feather-and-fan-wrap.jpg"
+    },
+    {
+      "id": "color-block-beanie",
+      "title": "Color-Block Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "blush",
+          "hex": "#E3B5A4"
+        },
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "C",
+          "inches": 2.5
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Color Block",
+      "photo": "photos/color-block-beanie.jpg"
+    },
+    {
+      "id": "twisted-rib-scarf",
+      "title": "Twisted Rib Scarf",
+      "base": "garterScarf",
+      "requires": 2,
+      "stitch": "twistedRib",
+      "palette": [
+        {
+          "name": "slate",
+          "hex": "#5B6B7A"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/twisted-rib-scarf.jpg"
+    },
+    {
+      "id": "snowflake-cowl",
+      "title": "Snowflake Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cranberry",
+          "hex": "#9B2335"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "...B...B",
+          "...B...B",
+          ".B.B.B..",
+          "..BBB...",
+          "BB.B.BB.",
+          "..BBB...",
+          ".B.B.B..",
+          "...B...B",
+          "...B...B"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/snowflake-cowl.jpg"
+    },
+    {
+      "id": "broken-rib-beanie",
+      "title": "Broken Rib Beanie",
+      "base": "ribbedBeanie",
+      "requires": 2,
+      "stitch": "brokenRib",
+      "palette": [
+        {
+          "name": "heather",
+          "hex": "#8C7A8E"
+        }
+      ],
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/broken-rib-beanie.jpg"
+    },
+    {
+      "id": "rope-cable-blanket",
+      "title": "Rope Cable Blanket",
+      "base": "borderedBlanket",
+      "requires": 2,
+      "stitch": "ropeCable",
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Cables",
+      "photo": "photos/rope-cable-blanket.jpg"
+    },
+    {
+      "id": "linen-stitch-washcloth",
+      "title": "Linen Stitch Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "denim",
+          "hex": "#4F6D8F"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-washcloth.jpg"
+    },
+    {
+      "id": "waffle-cowl",
+      "title": "Waffle Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "waffle",
+      "palette": [
+        {
+          "name": "rose",
+          "hex": "#C98A8E"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/waffle-cowl.jpg"
+    },
+    {
+      "id": "star-beanie",
+      "title": "Star Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "gold",
+          "hex": "#D9A93F"
+        }
+      ],
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "....B....",
+          "....B....",
+          "...BBB...",
+          "...BBB...",
+          "BBBBBBBBB",
+          ".BBBBBBB.",
+          "..BBBBB..",
+          "..BBBBB..",
+          ".BBBBBBB.",
+          ".BBB.BBB.",
+          "BB.....BB",
+          "B.......B"
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/star-beanie.jpg"
+    },
+    {
+      "id": "polka-dot-beanie",
+      "title": "Polka Dot Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "cobalt",
+          "hex": "#2F4E9C"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "BB..",
+          "BB..",
+          "....",
+          "..BB",
+          "..BB",
+          "....",
+          "BB..",
+          "BB..",
+          "....",
+          "..BB",
+          "..BB",
+          "...."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/polka-dot-beanie.jpg"
+    },
+    {
+      "id": "zigzag-beanie",
+      "title": "Zigzag Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "BB..",
+          ".BB.",
+          "..BB",
+          "B..B",
+          "..BB",
+          ".BB.",
+          "BB..",
+          ".BB.",
+          "..BB",
+          "B..B",
+          "..BB",
+          ".BB."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/zigzag-beanie.jpg"
+    },
+    {
+      "id": "wave-beanie",
+      "title": "Wave Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "teal",
+          "hex": "#2F6B73"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........",
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........",
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/wave-beanie.jpg"
+    },
+    {
+      "id": "mushroom-beanie",
+      "title": "Mushroom Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "...BBBBB...",
+          "..BBCBBBB..",
+          ".BBBBBBBCB.",
+          ".BCBBBBBBB.",
+          "BBBBBCBBBBB",
+          "BBBBBBBBBBB",
+          ".BBBBBBBBB.",
+          "....CCC....",
+          "....CCC....",
+          "...CCCCC..."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/mushroom-beanie.jpg"
+    },
+    {
+      "id": "strawberry-beanie",
+      "title": "Strawberry Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        }
+      ],
+      "brim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "..C.C.C..",
+          "...CCC...",
+          ".BBBBBBB.",
+          "BB.BBB.BB",
+          "BBBBBBBBB",
+          "BBB.B.BBB",
+          ".BBBBBBB.",
+          "..BB.BB..",
+          "...BBB...",
+          "....B...."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/strawberry-beanie.jpg"
+    },
+    {
+      "id": "striped-cowl",
+      "title": "Striped Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        },
+        {
+          "color": "C",
+          "inches": 0.75
+        },
+        {
+          "color": "A",
+          "inches": 0.75
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-cowl.jpg"
+    },
+    {
+      "id": "heart-cowl",
+      "title": "Heart Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......",
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......",
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/heart-cowl.jpg"
+    },
+    {
+      "id": "houndstooth-cowl",
+      "title": "Houndstooth Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        },
+        {
+          "name": "brown",
+          "hex": "#7A5536"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B.",
+          "B...",
+          "BBB.",
+          ".BBB",
+          "..B."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/houndstooth-cowl.jpg"
+    },
+    {
+      "id": "striped-blanket",
+      "title": "Striped Blanket",
+      "base": "borderedBlanket",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "dusty blue",
+          "hex": "#8FA3B8"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        },
+        {
+          "color": "C",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        },
+        {
+          "color": "D",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-blanket.jpg"
+    },
+    {
+      "id": "color-block-scarf",
+      "title": "Color-Block Scarf",
+      "base": "garterScarf",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 14
+        },
+        {
+          "color": "C",
+          "inches": 14
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Color Block",
+      "photo": "photos/color-block-scarf.jpg"
+    },
+    {
+      "id": "striped-mitts",
+      "title": "Striped Mitts",
+      "base": "handwarmers",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        },
+        {
+          "color": "C",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-mitts.jpg"
+    },
+    {
+      "id": "nordic-band-beanie",
+      "title": "Nordic Band Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "..BBB...",
+          ".BB.BB..",
+          "BB.C.BBC",
+          ".BB.BB..",
+          "..BBB...",
+          "........"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/nordic-band-beanie.jpg"
+    },
+    {
+      "id": "fair-isle-band-cowl",
+      "title": "Fair Isle Band Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B.B.B.B.",
+          ".C.C.C.C",
+          "B.B.B.B.",
+          "........",
+          "BB..BB..",
+          ".BB..BB.",
+          "BB..BB..",
+          "........"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/fair-isle-band-cowl.jpg"
+    },
+    {
+      "id": "flower-beanie",
+      "title": "Flower Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "pink",
+          "hex": "#E3A1AE"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        }
+      ],
+      "brim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "..BBB..",
+          ".BBCBB.",
+          "BBCCCBB",
+          ".BBCBB.",
+          "..BBB..",
+          "...D...",
+          ".DDDDD.",
+          "..DDD.."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/flower-beanie.jpg"
+    },
+    {
+      "id": "reindeer-beanie",
+      "title": "Reindeer Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "brown",
+          "hex": "#7A5536"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "D.D.....D.D",
+          ".D.D...D.D.",
+          "..DD...DD..",
+          "...BBBBB...",
+          "..BBBBBBB..",
+          ".BBBBBBBBB.",
+          "..B.BBB.B..",
+          "..BBBBBBB..",
+          "...BBBBB...",
+          "....BCB...."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/reindeer-beanie.jpg"
+    },
+    {
+      "id": "panda-beanie",
+      "title": "Panda Beanie",
+      "base": "ribbedBeanie",
+      "requires": 3,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "black",
+          "hex": "#2A2A2E"
+        }
+      ],
+      "crown": "ears",
+      "ear": "B",
+      "rim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "BBBB...BBBB",
+          "BBBBB.BBBBB",
+          "BB.BB.BB.BB",
+          "BBBBB.BBBBB",
+          ".BBB...BBB.",
+          "....BBB....",
+          ".....B....."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/panda-beanie.jpg"
+    },
+    {
+      "id": "checkerboard-blanket",
+      "title": "Checkerboard Blanket",
+      "base": "borderedBlanket",
+      "requires": 3,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "tile": true,
+        "rows": [
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          "BBBBB.....",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB",
+          ".....BBBBB"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/checkerboard-blanket.jpg"
+    },
+    {
+      "id": "striped-socks",
+      "title": "Striped Socks",
+      "base": "cuffDownSocks",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#27374F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 0.5
+        },
+        {
+          "color": "A",
+          "inches": 0.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-socks.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-raglan",
+      "title": "Striped Raglan",
+      "base": "raglanPullover",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#27374F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1
+        },
+        {
+          "color": "A",
+          "inches": 1
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-raglan.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-vest",
+      "title": "Striped Vest",
+      "base": "sweaterVest",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3A3A3F"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D1A03A"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-vest.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-drop-shoulder",
+      "title": "Striped Drop-Shoulder",
+      "base": "dropShoulder",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8C9AE"
+        },
+        {
+          "name": "rust",
+          "hex": "#B5543A"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "C",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-drop-shoulder.jpg",
+      "brim": "A"
+    },
+    {
+      "id": "striped-pillow",
+      "title": "Striped Pillow",
+      "base": "pillowCover",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "dusty blue",
+          "hex": "#7E9BB5"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        },
+        {
+          "color": "A",
+          "inches": 1.5
+        },
+        {
+          "color": "B",
+          "inches": 1.5
+        }
+      ],
+      "repeatStripes": false,
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-pillow.jpg"
     }
   ]
 }

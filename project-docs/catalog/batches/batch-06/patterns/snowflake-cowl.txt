@@ -1,0 +1,51 @@
+ok   snowflake-cowl: Snowflake Cowl, 5 sizes x 5 weights
+
+== snowflake-cowl, Snug, Worsted, 200 yd
+22 in around, 8 in tall
+  Cranberry, color A: about 180 yd of worsted weight yarn
+  Cream, color B: about 20 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [112]: Cast on 112 stitches in cranberry. Join in the round without twisting and place a marker.
+Cowl x18 [112]: *K2, p2; repeat from * around
+Cowl x1 [112]: Knit
+Cowl x1 [112]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [112]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [112]: *K2 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry; repeat from * around
+Cowl x1 [112]: *K3 cranberry, k3 cream, k2 cranberry; repeat from * around
+Cowl x1 [112]: *K1 cranberry, k2 cream, k1 cranberry, k1 cream, k1 cranberry, k2 cream; repeat from * around
+Cowl x1 [112]: *K3 cranberry, k3 cream, k2 cranberry; repeat from * around
+Cowl x1 [112]: *K2 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry; repeat from * around
+Cowl x1 [112]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [112]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [112]: With cranberry, knit
+Cowl x18 [112]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.
+
+== snowflake-cowl, Infinity, Worsted, 520 yd
+52 in around, 9 in tall
+  Cranberry, color A: about 480 yd of worsted weight yarn
+  Cream, color B: about 40 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+  Carry the unused yarn loosely across the back, and catch it every 3 to 4 stitches on longer runs
+Cowl x1 [272]: Cast on 272 stitches in cranberry. Join in the round without twisting and place a marker.
+Cowl x20 [272]: *K2, p2; repeat from * around
+Cowl x1 [272]: Knit
+Cowl x1 [272]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [272]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [272]: *K2 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry; repeat from * around
+Cowl x1 [272]: *K3 cranberry, k3 cream, k2 cranberry; repeat from * around
+Cowl x1 [272]: *K1 cranberry, k2 cream, k1 cranberry, k1 cream, k1 cranberry, k2 cream; repeat from * around
+Cowl x1 [272]: *K3 cranberry, k3 cream, k2 cranberry; repeat from * around
+Cowl x1 [272]: *K2 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry, k1 cream, k1 cranberry; repeat from * around
+Cowl x1 [272]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [272]: *K1 cream, k3 cranberry, k1 cream, k3 cranberry; repeat from * around
+Cowl x1 [272]: With cranberry, knit
+Cowl x20 [272]: *K2, p2; repeat from * around
+Finishing x1: Bind off loosely in pattern. Weave in the ends.

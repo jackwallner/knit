@@ -1,0 +1,77 @@
+ok   Christmas Stocking: 5 sizes x 8 weights
+
+== Christmas Stocking, Small, Worsted, 240 yd
+7 in wide laid flat. The foot is 7.5 in from the back of the heel to the tip of the toe, and the leg 9 in from the cuff to the heel
+  About 240 yd of worsted weight yarn
+  US 7 · 4.5 mm double-pointed needles, or a long circular for magic loop
+  2 stitch markers
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cuff x1 [64]: Cast on 64 stitches. Join in the round without twisting and place a marker.
+Cuff x11 [64]: *K2, p2; repeat from * around
+Leg x43 [64]: Knit
+Heel Flap x1: The heel flap is worked back and forth over the first 32 stitches of the round. Leave the other 32 on their needle for the instep.
+Heel Flap x32 [32]: *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn / Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn
+Heel Turn x1 [31]: Slip 1 purlwise, k17, ssk, k1, turn
+Heel Turn x1 [30]: Slip 1 purlwise, p5, p2tog, p1, turn
+Heel Turn x1 [29]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [28]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [27]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [26]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [25]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [24]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [23]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [22]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [21]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [20]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [19]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Heel Turn x1 [18]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Gusset x1: With the right side facing, knit across the 18 heel stitches, then pick up and knit 17 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Gusset x1 [84]: Place a marker for the new start of the round. Knit the 32 instep stitches and place a marker. Pick up and knit 17 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Gusset x9 [82 to 66]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Gusset x1 [66]: Knit
+Gusset x2 [64]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit
+Toe x15 [60 to 32]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit
+Toe x4 [28 to 16]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Toe x1: Cut the yarn, leaving a 12 in tail. Put the 8 instep stitches on one needle and the 8 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.
+Finishing x1: Cut three strands of yarn, each 16 in long. Knot them together at one end, braid them, and knot the other end. Fold the braid in half and sew both knots inside the cuff at the back of the leg, above the heel, so the loop stands above the edge. Weave in the ends.
+
+== Christmas Stocking, Large, Worsted, 580 yd
+11 in wide laid flat. The foot is 11.25 in from the back of the heel to the tip of the toe, and the leg 15 in from the cuff to the heel
+  About 580 yd of worsted weight yarn
+  US 7 · 4.5 mm 16 in circular needle, with double-pointed needles or a long circular for magic loop for the heel and toe
+  2 stitch markers
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cuff x1 [100]: Cast on 100 stitches. Join in the round without twisting and place a marker.
+Cuff x18 [100]: *K2, p2; repeat from * around
+Leg x72 [100]: Knit
+Heel Flap x1: The heel flap is worked back and forth over the first 50 stitches of the round. Leave the other 50 on their needle for the instep.
+Heel Flap x50 [50]: *Slip 1 purlwise with the yarn in back, k1; repeat from * across the heel, turn / Slip 1 purlwise with the yarn in front, purl to the end of the heel, turn
+Heel Turn x1 [49]: Slip 1 purlwise, k29, ssk, k1, turn
+Heel Turn x1 [48]: Slip 1 purlwise, p11, p2tog, p1, turn
+Heel Turn x1 [47]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [46]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [45]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [44]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [43]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [42]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [41]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [40]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [39]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [38]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [37]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [36]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [35]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [34]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [33]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, k1, turn
+Heel Turn x1 [32]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, p1, turn
+Heel Turn x1 [31]: Slip 1 purlwise, knit to 1 stitch before the gap, ssk, turn
+Heel Turn x1 [30]: Slip 1 purlwise, purl to 1 stitch before the gap, p2tog, turn
+Gusset x1: With the right side facing, knit across the 30 heel stitches, then pick up and knit 26 stitches along the edge of the flap, one in each slipped stitch and one in the corner.
+Gusset x1 [132]: Place a marker for the new start of the round. Knit the 50 instep stitches and place a marker. Pick up and knit 26 stitches along the other edge of the flap the same way, then knit to the start of the round.
+Gusset x16 [130 to 100]: Knit the instep to the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Toe x25 [96 to 48]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1 / Knit
+Toe x6 [44 to 24]: K1, ssk, knit to 3 stitches before the marker, k2tog, k1, slip the marker, k1, ssk, knit to the last 3 stitches, k2tog, k1
+Toe x1: Cut the yarn, leaving a 12 in tail. Put the 12 instep stitches on one needle and the 12 sole stitches on another, and graft them together with Kitchener stitch. Weave in the ends.
+Finishing x1: Cut three strands of yarn, each 16 in long. Knot them together at one end, braid them, and knot the other end. Fold the braid in half and sew both knots inside the cuff at the back of the leg, above the heel, so the loop stands above the edge. Weave in the ends.
