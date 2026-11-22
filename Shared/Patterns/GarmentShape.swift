@@ -358,6 +358,11 @@ enum GarmentShape {
             opening.addLine(to: p(0.492, 0.42))
             opening.closeSubpath()
             path.addPath(GarmentShape.path(.sweater, in: rect).subtracting(opening))
+        case .babyPullover:
+            // The sweater with two buttons on one shoulder, where the neck opens.
+            let holes = CGMutablePath()
+            for y in [0.17, 0.25] { holes.addEllipse(in: box(0.3, y, 0.045, 0.045)) }
+            path.addPath(GarmentShape.path(.sweater, in: rect).subtracting(holes))
         case .cropped:
             // A short, boxy cardigan: three-quarter sleeves, a deep V, and a line over the deep ribbed hem.
             let body = CGMutablePath()
@@ -532,7 +537,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .tee, .turtleneck, .yoke, .cardigan, .cropped, .socks, .crescent, .topDown, .stocking].contains(self) }
+    var knitsDown: Bool { [.sweater, .tee, .turtleneck, .yoke, .cardigan, .cropped, .babyPullover, .socks, .crescent, .topDown, .stocking].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit

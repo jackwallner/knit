@@ -242,7 +242,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 158 | Diamond Brocade Pillow | Home | Anyone, easy | Stitch | planned |
 | 159 | Broken Rib Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
 | 160 | Double Moss Leg Warmers | Accessories | Anyone, beginner | Stitch | planned |
-| 161 | Baby Pullover | Baby | Babies 3 to 24 months, intermediate | New shape: top-down raglan with a buttoned shoulder opening so it passes over a baby's head (replaces #21) | planned |
+| 161 | Baby Pullover | Baby | Babies 3 to 24 months, intermediate | New shape: top-down raglan with a buttoned shoulder opening so it passes over a baby's head (replaces #21) | verified (built ahead of its rank, on the Sweaters shelf with the Baby Cardigan) |
 
 ## Already in the library (45)
 

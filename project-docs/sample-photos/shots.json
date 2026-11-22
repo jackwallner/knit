@@ -448,6 +448,10 @@
   "croppedCardigan": {
    "camera": "overcast",
    "scene": "worn by an adult over a white tee and high-waisted jeans, standing by a brick wall"
+  },
+  "babyPullover": {
+   "camera": "snap",
+   "scene": "on a baby sitting up on a soft blanket on the floor, seen from the front"
   }
  }
 }
