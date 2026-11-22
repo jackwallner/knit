@@ -34,8 +34,7 @@ final class LockCounterUITests: XCTestCase {
         guard app.staticTexts["guide.section"].waitForExistence(timeout: 20) else { return "the project did not open" }
         XCTAssertEqual(app.staticTexts["guide.section"].label.lowercased(), "body · round 6")
 
-        app.buttons["project.menu"].tap()
-        let toggle = app.descendants(matching: .any)["counter.lockScreen"]
+        let toggle = app.buttons["counter.lockScreen"]
         guard toggle.waitForExistence(timeout: 5) else { return "Live Activities are off on this simulator" }
         toggle.tap()
 

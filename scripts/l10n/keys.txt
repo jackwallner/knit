@@ -586,3 +586,8 @@ Linen Stitch Cowl
 Honeycomb Washcloth
 Diamond Brocade Washcloth
 Garter Ridge Washcloth
+What do you want to knit first?
+How long have you been knitting?
+I'm new to knitting
+A few projects
+Years

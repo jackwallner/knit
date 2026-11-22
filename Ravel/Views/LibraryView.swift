@@ -35,8 +35,9 @@ struct LibraryView: View {
                             if !shelved.isEmpty { row("Trending", shelved, id: "trending") }
                             // The patterns that need no purchase, together near the top so they are easy to find.
                             if !free.isEmpty { row("Free", freeRow.map { Shelved(item: $0, tag: $0.level.rawValue) }, id: "free") }
-                            ForEach(Design.Shelf.allCases) { shelf in
-                                let all = Self.items(on: shelf, topical: topical.items)
+                            // The shelf the knitter asked for at first launch comes first (`Taste`).
+                            ForEach(Taste.shelves()) { shelf in
+                                let all = Taste.ordered(Self.items(on: shelf, topical: topical.items))
                                 row(LocalizedStringKey(shelf.rawValue), all.prefix(Self.rowLength).map { Shelved(item: $0, note: DesignTile.note($0)) }, id: "design", more: all.count > Self.rowLength ? shelf : nil)
                             }
                         }
@@ -170,7 +171,7 @@ struct ShelfView: View {
 
     var body: some View {
         ScrollView {
-            DesignGrid(items: LibraryView.items(on: shelf, topical: topical.items))
+            DesignGrid(items: Taste.ordered(LibraryView.items(on: shelf, topical: topical.items)))
                 .padding(.horizontal, 20)
                 .padding(.top, 8)
                 .padding(.bottom, 32)

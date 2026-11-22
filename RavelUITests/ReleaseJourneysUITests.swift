@@ -177,6 +177,13 @@ final class ReleaseJourneysUITests: XCTestCase {
         next.tap()
         QA.checkpoint(app, "onboarding-patterns")
         next.tap()
+        // The two questions. Hats and "A few projects" leave the library in its own order for the journeys after.
+        tap(app.buttons["onboarding.shelf.0"], "the first answer")
+        QA.checkpoint(app, "onboarding-shelf")
+        next.tap()
+        tap(app.buttons["onboarding.experience.1"], "the second answer")
+        QA.checkpoint(app, "onboarding-experience")
+        next.tap()
         let skip = app.buttons["onboarding.skip"]
         XCTAssertTrue(skip.waitForExistence(timeout: 10))
         QA.checkpoint(app, "onboarding-trial")

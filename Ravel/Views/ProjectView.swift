@@ -91,6 +91,10 @@ struct ProjectView: View {
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
             }
+            // Beside the menu, not inside it, where nobody found it.
+            if LockCounter.allowed, !project.isFinished {
+                ToolbarItem(placement: .primaryAction) { lockButton }
+            }
             ToolbarItem(placement: .primaryAction) { menu }
         }
         .sensoryFeedback(.impact(weight: .light), trigger: project.rows)
@@ -741,16 +745,6 @@ struct ProjectView: View {
                     settingRepeat = true
                 }
             }
-            if LockCounter.allowed, !project.isFinished {
-                Toggle("Count on Lock Screen", systemImage: "lock", isOn: Binding(get: { onLockScreen }, set: { on in
-                    onLockScreen = on
-                    Task {
-                        if on { await LockCounter.start(project) } else { await LockCounter.stop(project) }
-                        onLockScreen = LockCounter.isOn(project)
-                    }
-                }))
-                .accessibilityIdentifier("counter.lockScreen")
-            }
             if project.tallyOn {
                 Menu("Counter", systemImage: "plusminus.circle") {
                     Button("Rename", systemImage: "pencil") {
@@ -787,6 +781,23 @@ struct ProjectView: View {
         }
         .accessibilityLabel("Project options")
         .accessibilityIdentifier("project.menu")
+    }
+
+    /// Puts this project's counter on the Lock Screen, or takes it off. The lock fills while it is there.
+    private var lockButton: some View {
+        Button {
+            let on = !onLockScreen
+            onLockScreen = on
+            Task {
+                if on { await LockCounter.start(project) } else { await LockCounter.stop(project) }
+                onLockScreen = LockCounter.isOn(project)
+            }
+        } label: {
+            Image(systemName: onLockScreen ? "lock.fill" : "lock")
+        }
+        .accessibilityLabel("Count on Lock Screen")
+        .accessibilityAddTraits(onLockScreen ? .isSelected : [])
+        .accessibilityIdentifier("counter.lockScreen")
     }
 
     private func attach(_ result: Result<URL, Error>) {

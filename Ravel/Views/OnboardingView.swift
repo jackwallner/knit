@@ -1,7 +1,8 @@
 import SwiftUI
 
-/// First launch: two pages of what Ravel does, then the trial. One button in one place advances every page and,
-/// on the last, starts the trial; "Get Started" keeps the free app. The tracker never waits on this.
+/// First launch: two pages of what Ravel does, two questions that order the library (`Taste`), then the trial.
+/// One button in one place advances every page and, on the last, starts the trial; "Get Started" keeps the
+/// free app. The tracker never waits on this.
 struct OnboardingView: View {
     let finish: () -> Void
     @Environment(\.openURL) private var openURL
@@ -13,6 +14,9 @@ struct OnboardingView: View {
     @State private var working = false
     @State private var message: String?
     @State private var buying: Task<Void, Never>?
+    @State private var shelf: Design.Shelf?
+    @State private var experience: Taste.Experience?
+    private static let trialPage = 4
     private let subscription = SubscriptionService.shared
 
     /// The plan the trial button buys. The price line and terms above it always name this same plan.
@@ -20,7 +24,9 @@ struct OnboardingView: View {
         subscription.offers.first { $0.term == subscription.onboardingTerm }
             ?? subscription.offers.first { $0.term != .lifetime }
     }
-    private var onTrial: Bool { page == 2 }
+    private var onTrial: Bool { page == Self.trialPage }
+    /// On a question with no answer picked yet: the button waits for one, as on Mahj.
+    private var unanswered: Bool { (page == 2 && shelf == nil) || (page == 3 && experience == nil) }
     /// On the trial page while the offer is still on its way: the button waits rather than skip the trial.
     private var waitingForOffer: Bool { onTrial && plan == nil && subscription.isLoading }
     /// The free way out, on the trial page while there is an offer to turn down. Offline, the main button
@@ -55,7 +61,7 @@ struct OnboardingView: View {
         .onDisappear { buying?.cancel() }
         // Reaching the trial with no offer (offline at launch): ask the store again rather than end the pitch.
         .onChange(of: page) { _, page in
-            if page == 2, plan == nil, !subscription.isLoading { Task { await subscription.loadOffers() } }
+            if page == Self.trialPage, plan == nil, !subscription.isLoading { Task { await subscription.loadOffers() } }
         }
         .onChange(of: subscription.isPro) { _, isPro in if isPro { finish() } }
     }
@@ -102,9 +108,13 @@ struct OnboardingView: View {
                     .motion(.linear(duration: 0.6), value: knitted)
                     .onAppear { knitted = 1 }
             }
+        case 2:
+            question("What do you want to knit first?", Design.Shelf.allCases.map { ($0, $0.title) }, picked: $shelf, id: "onboarding.shelf")
+        case 3:
+            question("How long have you been knitting?", Taste.Experience.allCases.map { ($0, $0.title) }, picked: $experience, id: "onboarding.experience")
         default:
             screen(trialTitleKey) {
-                shelf
+                pieceGrid
             } below: {
                 points.padding(.horizontal, 36)
             }
@@ -132,20 +142,79 @@ struct OnboardingView: View {
         }
     }
 
-    private var shelf: some View {
-        VStack(spacing: 4) {
-            HStack(spacing: 4) {
-                Garment(silhouette: .hat, yarn: .spruce)
-                Garment(silhouette: .sweater, yarn: .madder)
-                Garment(silhouette: .shawl, yarn: .indigo)
+    /// A question: its line, then the answers as rows. Picking one marks it; the button moves on.
+    private func question<Answer: Hashable>(_ title: LocalizedStringKey, _ answers: [(Answer, String)],
+                                            picked: Binding<Answer?>, id: String) -> some View {
+        VStack(spacing: 24) {
+            Spacer(minLength: 16)
+            Text(title)
+                .font(Theme.display(30, weight: .semibold))
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 28)
+                .accessibilityAddTraits(.isHeader)
+            VStack(spacing: 10) {
+                ForEach(Array(answers.enumerated()), id: \.offset) { index, answer in
+                    let on = picked.wrappedValue == answer.0
+                    Button { picked.wrappedValue = answer.0 } label: {
+                        HStack(spacing: 12) {
+                            Text(answer.1)
+                                .font(.body.weight(.medium))
+                                .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Spacer(minLength: 0)
+                            Image(systemName: on ? "checkmark.circle.fill" : "circle")
+                                .font(.title3)
+                                .foregroundStyle(on ? Color.accentColor : Theme.secondary)
+                                .accessibilityHidden(true)
+                        }
+                        .padding(.horizontal, 18)
+                        .padding(.vertical, 8)
+                        .frame(maxWidth: .infinity, minHeight: 54)
+                        .background(Color.primary.opacity(on ? 0.08 : 0.04), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).strokeBorder(Color.accentColor.opacity(on ? 1 : 0), lineWidth: 2))
+                        .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(on ? .isSelected : [])
+                    .accessibilityIdentifier("\(id).\(index)")
+                }
             }
-            HStack(spacing: 4) {
-                Garment(silhouette: .mittens, yarn: .marigold)
-                Garment(silhouette: .scarf, yarn: .plum)
-                Garment(silhouette: .cowl, yarn: .moss)
+            .padding(.horizontal, 24)
+            Spacer(minLength: 8)
+        }
+    }
+
+    /// Six pieces from the library, the kind the knitter asked for in the top row.
+    private var pieceGrid: some View {
+        let yarns: [YarnColor] = [.spruce, .madder, .indigo, .marigold, .plum, .moss]
+        let pieces = Self.pieces(leading: shelf)
+        return VStack(spacing: 4) {
+            ForEach(0..<2, id: \.self) { row in
+                HStack(spacing: 4) {
+                    ForEach(0..<3, id: \.self) { column in
+                        Garment(silhouette: pieces[row * 3 + column], yarn: yarns[row * 3 + column])
+                    }
+                }
             }
         }
         .padding(.horizontal, 24)
+    }
+
+    /// The trial page's six pieces: three of the shelf asked for, then the first three of the usual six
+    /// that are not already there. With no answer, the usual six.
+    static func pieces(leading shelf: Design.Shelf?) -> [Design.Silhouette] {
+        let usual: [Design.Silhouette] = [.hat, .sweater, .shawl, .mittens, .scarf, .cowl]
+        let lead: [Design.Silhouette]
+        switch shelf {
+        case .hats: lead = [.hat, .beret, .earflap]
+        case .scarves: lead = [.scarf, .cowl, .shawl]
+        case .home: lead = [.blanket, .pillow, .cloth]
+        case .accessories: lead = [.mittens, .socks, .bag]
+        case .sweaters: lead = [.sweater, .cardigan, .vest]
+        case nil: return usual
+        }
+        return lead + usual.filter { !lead.contains($0) }.prefix(3)
     }
 
     /// Trial-forward, as on every fleet trial page ("Try Mahj+ free"). An account that already had its free week
@@ -247,7 +316,8 @@ struct OnboardingView: View {
                 .frame(maxWidth: .infinity, minHeight: 54)
                 .background(Color.accentColor, in: Capsule())
             }
-            .disabled(working || waitingForOffer)
+            .disabled(working || waitingForOffer || unanswered)
+            .opacity(unanswered ? 0.4 : 1)
             // The button stands still while the page changes over it: no fade on its label.
             .animation(nil, value: page)
             .padding(.top, 16)
@@ -287,7 +357,7 @@ struct OnboardingView: View {
 
     private var dots: some View {
         HStack(spacing: 8) {
-            ForEach(0..<3, id: \.self) { index in
+            ForEach(0...Self.trialPage, id: \.self) { index in
                 Circle()
                     .fill(.primary.opacity(index == page ? 0.7 : 0.18))
                     .frame(width: 7, height: 7)
@@ -326,6 +396,10 @@ struct OnboardingView: View {
 
     private func primary(_ drawn: Offer?) {
         guard onTrial else {
+            guard !unanswered else { return }
+            // An answer is kept the moment its page is left, so the library has it whichever way onboarding ends.
+            if page == 2 { Taste.shelf = shelf }
+            if page == 3 { Taste.experience = experience }
             withAnimation(reduceMotion ? .easeOut(duration: 0.15) : .smooth(duration: 0.35)) { page += 1 }
             return
         }

@@ -13,13 +13,19 @@ final class OnboardingUITests: XCTestCase {
     }
 
     /// Walks to the trial page and returns the button's frame on each page.
-    private func walkToTrial() -> [CGRect] {
+    /// `shelf` is the answer to the first question, by its place in the list; the second answer is "A few projects".
+    private func walkToTrial(shelf: Int = 0) -> [CGRect] {
         let next = app.buttons["onboarding.next"]
         XCTAssertTrue(next.waitForExistence(timeout: 15))
         var frames: [CGRect] = []
-        for _ in 0..<2 {
+        for page in 0..<4 {
             XCTAssertEqual(next.label, "Continue")
             frames.append(next.frame)
+            // The two questions: the button waits for an answer.
+            if page >= 2 {
+                XCTAssertFalse(next.isEnabled, "page \(page) moves on with no answer")
+                app.buttons[page == 2 ? "onboarding.shelf.\(shelf)" : "onboarding.experience.1"].tap()
+            }
             next.tap()
         }
         XCTAssertTrue(app.buttons["onboarding.skip"].waitForExistence(timeout: 5))
@@ -53,6 +59,18 @@ final class OnboardingUITests: XCTestCase {
         for _ in 0..<12 where !design.isHittable { app.swipeUp() }
         design.tap()
         XCTAssertEqual(app.buttons["design.castOn"].label, "Cast On")
+    }
+
+    /// The shelf asked for leads the library: Blankets & Home sits under Free, where Hats would be.
+    func testTheShelfAskedForComesFirst() {
+        _ = walkToTrial(shelf: 2)
+        app.buttons["onboarding.skip"].tap()
+        XCTAssertTrue(app.buttons["free.garterScarf"].waitForExistence(timeout: 10))
+        let home = app.buttons["shelf.Blankets & Home"]
+        for _ in 0..<3 where !home.exists { app.swipeUp() }
+        XCTAssertTrue(home.exists)
+        let hats = app.buttons["shelf.Hats"]
+        if hats.exists { XCTAssertLessThan(home.frame.minY, hats.frame.minY, "Hats still comes before the shelf asked for") }
     }
 
     func testGetStartedKeepsTheFreeApp() {
