@@ -183,7 +183,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 99 | Rope Cable Pillow | Home | Anyone, intermediate | Stitch | planned |
 | 100 | Striped Raglan | Sweaters | Adults, intermediate | Colorwork: stripes on the raglan | planned |
 | 101 | Garter Ridge Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
-| 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | planned |
+| 102 | Nordic Band Beanie | Hats | Adults, intermediate | Colorwork | verified |
 | 103 | Laptop Sleeve | Home | Anyone, easy | New shape | verified |
 | 104 | Chevron Lace Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 105 | Rope Cable Leg Warmers | Accessories | Adults, intermediate | Stitch | planned |

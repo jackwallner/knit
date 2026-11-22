@@ -1650,6 +1650,52 @@
       ],
       "tag": "Stripes",
       "photo": "photos/striped-mitts.jpg"
+    },
+    {
+      "id": "nordic-band-beanie",
+      "title": "Nordic Band Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "charcoal",
+          "hex": "#3E4048"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "..BBB...",
+          ".BB.BB..",
+          "BB.C.BBC",
+          ".BB.BB..",
+          "..BBB...",
+          "........"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/nordic-band-beanie.jpg"
     }
   ]
 }

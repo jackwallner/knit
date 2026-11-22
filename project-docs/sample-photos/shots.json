@@ -572,6 +572,10 @@
   "striped-mitts": {
    "camera": "overcast",
    "scene": "worn holding a cup of tea at a table"
+  },
+  "nordic-band-beanie": {
+   "camera": "outdoor",
+   "scene": "held up against a dusk sky on a frosty evening"
   }
  }
 }
