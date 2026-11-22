@@ -488,6 +488,10 @@
   "scrunchie": {
    "camera": "snap",
    "scene": "on a bathroom shelf beside a hairbrush and a small mirror"
+  },
+  "floorPouf": {
+   "camera": "lamp",
+   "scene": "a living room floor beside a sofa, warm evening lamp light"
   }
  }
 }
