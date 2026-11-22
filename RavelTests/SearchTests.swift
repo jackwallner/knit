@@ -56,6 +56,16 @@ final class SearchTests: XCTestCase {
         }
     }
 
+    /// A colorwork design is found by the thing it shows, and by its tag.
+    func testColorworkDesignsAreFoundByTheirMotif() {
+        let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }
+        for (words, id) in [("mushroom", "mushroom-beanie"), ("polka dot", "polka-dot-beanie"), ("strawberry", "strawberry-beanie"),
+                            ("reindeer", "reindeer-beanie"), ("flower", "flower-beanie"), ("heart cowl", "heart-cowl"),
+                            ("striped blanket", "striped-blanket"), ("zigzag", "zigzag-beanie"), ("wave", "wave-beanie")] {
+            XCTAssertTrue(LibrarySearch.find(words, in: collection).contains { $0.id == "topical.\(id)" }, words)
+        }
+    }
+
     /// A stitch design is found by its stitch, even when the name leaves it out.
     func testStitchDesignsAreFoundByTheirStitch() {
         let collection = TopicalStore.collection.map { Ravel.LibraryItem.topical($0) }

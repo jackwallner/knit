@@ -575,7 +575,7 @@ final class PatternTests: XCTestCase {
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
         XCTAssertEqual(Design.allCases.count, 93)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 130)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 145)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
