@@ -1,0 +1,27 @@
+ok   feather-and-fan-cowl: Feather and Fan Cowl, 5 sizes x 5 weights
+
+== feather-and-fan-cowl, Snug, Worsted, 150 yd
+22.5 in around, 8 in tall
+  About 150 yd of worsted weight yarn
+  US 7 · 4.5 mm 24 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [96]: Cast on 96 stitches. Join in the round without twisting and place a marker.
+Cowl x4 [96]: Purl / Knit
+Cowl x40 [96]: Knit / Knit / *K2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * around / Purl
+Cowl x4 [96]: Purl / Knit
+Finishing x1: Bind off loosely purlwise. Weave in the ends. Block the cowl to open up the lace.
+
+== feather-and-fan-cowl, Infinity, Worsted, 420 yd
+53.25 in around, 9.25 in tall
+  About 420 yd of worsted weight yarn
+  US 7 · 4.5 mm 40 in circular needle
+  Stitch marker
+  Tapestry needle
+  Gauge: 18 stitches and 24 rounds over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Cowl x1 [228]: Cast on 228 stitches. Join in the round without twisting and place a marker.
+Cowl x4 [228]: Purl / Knit
+Cowl x48 [228]: Knit / Knit / *K2tog twice, (yo, k1) 4 times, k2tog twice; repeat from * around / Purl
+Cowl x4 [228]: Purl / Knit
+Finishing x1: Bind off loosely purlwise. Weave in the ends. Block the cowl to open up the lace.

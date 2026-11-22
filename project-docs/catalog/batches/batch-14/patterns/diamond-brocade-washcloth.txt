@@ -1,0 +1,25 @@
+ok   diamond-brocade-washcloth: Diamond Brocade Washcloth, 5 sizes x 3 weights
+
+== diamond-brocade-washcloth, Small, Worsted, 50 yd
+7 in wide, 6.75 in long
+  About 50 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [31]: Cast on 31 stitches.
+Bottom Border x6 [31]: Knit
+Body x32 [31]: K7, *p1, k7; repeat from * to the last 8 stitches, p1, k7 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K3, *p1, k7; repeat from * to the last 4 stitches, p1, k3 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3
+Top Border x6 [31]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.
+
+== diamond-brocade-washcloth, Large, Worsted, 100 yd
+10.5 in wide, 10.75 in long
+  About 100 yd of worsted weight yarn, cotton for a cloth that scrubs
+  US 7 · 4.5 mm needles
+  Tapestry needle
+  Gauge: 18 stitches and 24 rows over 4 in of stockinette, after blocking. Use the needle that gives you this gauge
+Bottom Border x1 [47]: Cast on 47 stitches.
+Bottom Border x6 [47]: Knit
+Body x56 [47]: K7, *p1, k7; repeat from * to the last 8 stitches, p1, k7 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K3, *p1, k7; repeat from * to the last 4 stitches, p1, k3 / K3, p1, *k1, p5, k1, p1; repeat from * to the last 3 stitches, k3 / K5, *p1, k3; repeat from * to the last 6 stitches, p1, k5 / K3, p3, *k1, p1, k1, p5; repeat from * to the last 9 stitches, k1, p1, k1, p3, k3
+Top Border x6 [47]: Knit
+Finishing x1: Bind off loosely. Weave in the ends.

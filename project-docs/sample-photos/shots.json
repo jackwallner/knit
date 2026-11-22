@@ -696,6 +696,30 @@
   "chevron-lace-cowl": {
    "camera": "sun",
    "scene": "draped over the back of a wooden chair in a sunny room"
+  },
+  "basketweave-cowl": {
+   "camera": "lamp",
+   "scene": "worn around the neck of a person in a flannel shirt, cropped at the chest, indoors in the evening"
+  },
+  "feather-and-fan-cowl": {
+   "camera": "overcast",
+   "scene": "lying on a white duvet, soft grey window light"
+  },
+  "linen-stitch-cowl": {
+   "camera": "snap",
+   "scene": "worn by a person in a rain jacket, cropped at the chest, a bus stop blurred behind"
+  },
+  "honeycomb-washcloth": {
+   "camera": "sun",
+   "scene": "folded on a wooden bath tray beside a sprig of eucalyptus"
+  },
+  "diamond-brocade-washcloth": {
+   "camera": "oldphone",
+   "scene": "on the edge of a white enamel kitchen sink"
+  },
+  "garter-ridge-washcloth": {
+   "camera": "lamp",
+   "scene": "folded on the edge of a white bathroom sink beside a bar of soap"
   }
  }
 }

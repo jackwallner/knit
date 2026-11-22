@@ -182,7 +182,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 91 | Baby Bib | Baby | Babies, beginner | New shape | verified |
 | 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
 | 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | verified |
-| 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | planned |
+| 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | verified, photographed (batch 14) |
 | 95 | Gloves | Hands | Adults, intermediate | New shape: mitt gusset, then five fingers split from the hand | verified (built ahead of its rank: new shapes first while the colorwork and stitch rows wait for Jack) |
 | 96 | Twisted Rib Beanie | Hats | Adults, easy | Stitch | planned |
 | 97 | Bath Mat | Home | Anyone, beginner | New shape | verified |
@@ -205,7 +205,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 114 | Draft Stopper | Home | Anyone, beginner | New shape | verified |
 | 115 | Seed Stitch Beanie | Hats | Anyone, beginner | Stitch | planned |
 | 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
-| 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | planned |
+| 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | verified, photographed (batch 14) |
 | 118 | Hood | Accessories | Adults, easy | New shape | verified (built as Cowl Hood) |
 | 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 120 | Honeycomb Scarf | Scarves & Cowls | Adults, easy | Stitch | verified, photographed (batch 13) |
@@ -213,9 +213,9 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 122 | Reindeer Beanie | Holiday | Gift, intermediate | Colorwork | verified |
 | 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | verified |
 | 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | verified, photographed (batch 12) |
-| 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
+| 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | verified, photographed (batch 14) |
 | 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | verified |
-| 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
+| 127 | Linen Stitch Cowl | Scarves & Cowls | Adults, easy | Stitch | verified, photographed (batch 14) |
 | 128 | Bunting | Holiday | Parties and nurseries, beginner | New shape | verified |
 | 129 | Houndstooth Cowl | Scarves & Cowls | Adults, intermediate | Colorwork | verified |
 | 130 | Chevron Lace Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
@@ -224,7 +224,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 133 | Broken Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | verified, photographed (batch 13) |
 | 134 | Waffle Scarf | Scarves & Cowls | Anyone, beginner | Stitch | verified, photographed (batch 13) |
 | 135 | Striped Pillow | Home | Anyone, beginner | Colorwork | verified |
-| 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | planned |
+| 136 | Diamond Brocade Washcloth | Home | Anyone, easy | Stitch | verified, photographed (batch 14) |
 | 137 | Seeded Rib Blanket | Blankets | Throw, easy | Stitch | verified, photographed (batch 12) |
 | 138 | Striped Mitts | Hands | Anyone, easy | Colorwork | verified |
 | 139 | Basketweave Pillow | Home | Anyone, easy | Stitch | held: not approved (ear warmers, pillows, leg warmers), not dropped |
@@ -233,7 +233,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 142 | Chevron Lace Wrap | Shawls & Wraps | Adults, easy lace | Stitch | planned |
 | 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | verified |
 | 144 | Seeded Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | verified, photographed (batch 13) |
-| 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | planned |
+| 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | verified, photographed (batch 14) |
 | 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape: top-down V-neck raglan, boxy, deep ribbed hem, three-quarter sleeves, one band with buttons below the V | verified (built ahead of its rank) |
 | 147 | Yoke Sweater | Sweaters | Adults, intermediate | New shape: circular yoke in four rings, each marked by a purl ridge, on the raglan pullover's fit | verified (built ahead of its rank) |
 | 148 | Tank Top | Sweaters | Adults, intermediate | New shape: in the round to the underarms, then front and back flat with scoop necks and narrow straps | verified (built ahead of its rank) |

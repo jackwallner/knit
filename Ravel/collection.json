@@ -2559,6 +2559,132 @@
       ],
       "tag": "Texture",
       "photo": "photos/chevron-lace-cowl.jpg"
+    },
+    {
+      "id": "basketweave-cowl",
+      "title": "Basketweave Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "basketweave",
+      "palette": [
+        {
+          "name": "cocoa",
+          "hex": "#6B4A3A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/basketweave-cowl.jpg"
+    },
+    {
+      "id": "feather-and-fan-cowl",
+      "title": "Feather and Fan Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "featherFan",
+      "palette": [
+        {
+          "name": "coral",
+          "hex": "#E0806A"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/feather-and-fan-cowl.jpg"
+    },
+    {
+      "id": "linen-stitch-cowl",
+      "title": "Linen Stitch Cowl",
+      "base": "ribbedCowl",
+      "requires": 2,
+      "stitch": "linen",
+      "palette": [
+        {
+          "name": "olive",
+          "hex": "#6B7040"
+        }
+      ],
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky"
+      ],
+      "tag": "Texture",
+      "photo": "photos/linen-stitch-cowl.jpg"
+    },
+    {
+      "id": "honeycomb-washcloth",
+      "title": "Honeycomb Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "honeycomb",
+      "palette": [
+        {
+          "name": "butter",
+          "hex": "#E8D28A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/honeycomb-washcloth.jpg"
+    },
+    {
+      "id": "diamond-brocade-washcloth",
+      "title": "Diamond Brocade Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "diamondBrocade",
+      "palette": [
+        {
+          "name": "seafoam",
+          "hex": "#9CC9BF"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/diamond-brocade-washcloth.jpg"
+    },
+    {
+      "id": "garter-ridge-washcloth",
+      "title": "Garter Ridge Washcloth",
+      "base": "washcloth",
+      "requires": 2,
+      "stitch": "garterRidge",
+      "palette": [
+        {
+          "name": "terracotta",
+          "hex": "#C0694A"
+        }
+      ],
+      "weights": [
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Texture",
+      "photo": "photos/garter-ridge-washcloth.jpg"
     }
   ]
 }
