@@ -337,7 +337,7 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
 
     /// The gauge this design is knit at in a yarn weight. Socks are knit firmer than the label so they wear well.
     func gauge(for weight: YarnWeight) -> Gauge {
-        if [.cuffDownSocks, .toeUpSocks, .babySocks].contains(self), weight == .fingering { return Gauge(stitches: 32, rows: 44) }
+        if [.cuffDownSocks, .toeUpSocks, .babySocks].contains(self), weight == .fingering { return .firmSock }
         return weight.gauge
     }
 

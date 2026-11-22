@@ -36,7 +36,8 @@ enum Engines {
 
     /// The yarn weight a knitter would shop for at this gauge.
     static func weight(_ g: Gauge) -> YarnWeight {
-        YarnWeight.allCases.min { abs($0.gauge.stitches - g.stitches) < abs($1.gauge.stitches - g.stitches) } ?? .worsted
+        if g == .firmSock { return .fingering }
+        return YarnWeight.allCases.min { abs($0.gauge.stitches - g.stitches) < abs($1.gauge.stitches - g.stitches) } ?? .worsted
     }
 
     /// The weight as it reads inside a sentence: "worsted", but "DK" and "Aran" as they are written.
