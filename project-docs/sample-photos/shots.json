@@ -295,11 +295,11 @@
   },
   "babyMittens": {
    "camera": "snap",
-   "scene": "lying on a white cotton crib sheet next to a baby's folded knit hat"
+   "scene": "lying alone on a white cotton crib sheet, nothing else in the frame"
   },
   "catHat": {
    "camera": "sun",
-   "scene": "worn by a smiling child on a sunny playground, seen from the front, cropped at the shoulders"
+   "scene": "worn by a child seen from behind on a sunny playground, only the back of the head and the two ears visible, cropped at the shoulders"
   },
   "seeded-rib-beanie": {
    "camera": "overcast",
@@ -319,7 +319,7 @@
   },
   "striped-beanie": {
    "camera": "snap",
-   "scene": "worn by a person on a ferry deck, grey sea behind, seen from the front, cropped at the shoulders"
+   "scene": "worn by a person on a ferry deck, grey sea behind, seen from behind, the back of the head only, cropped at the shoulders"
   },
   "kidsCardigan": {
    "camera": "overcast",
@@ -343,7 +343,7 @@
   },
   "houndstooth-beanie": {
    "camera": "outdoor",
-   "scene": "worn by a person in a camel wool coat on a snowy city sidewalk, seen from the front, cropped at the shoulders"
+   "scene": "worn by a person in a camel wool coat on a snowy city sidewalk, seen from behind, hair and the back of the head only, cropped at the shoulders"
   },
   "capelet": {
    "camera": "outdoor",
