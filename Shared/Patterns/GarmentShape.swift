@@ -377,6 +377,21 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .neckWarmer:
+            // A band wrapped into a ring, seen from the front, its end overlapping and held by three buttons.
+            let band = CGMutablePath()
+            band.move(to: p(0.12, 0.3))
+            band.addQuadCurve(to: p(0.88, 0.3), control: p(0.5, 0.42))
+            band.addLine(to: p(0.88, 0.66))
+            band.addQuadCurve(to: p(0.12, 0.66), control: p(0.5, 0.8))
+            band.closeSubpath()
+            let edge = CGMutablePath()
+            edge.move(to: p(0.62, 0.36))
+            edge.addLine(to: p(0.62, 0.73))
+            let cuts = CGMutablePath()
+            cuts.addPath(edge.copy(strokingWithWidth: unit * 0.014, lineCap: .butt, lineJoin: .miter, miterLimit: 1))
+            for y in [CGFloat(0.43), 0.53, 0.63] { cuts.addEllipse(in: box(0.67, y - 0.025, 0.05, 0.05)) }
+            path.addPath(band.subtracting(cuts))
         case .bauble:
             // A round bauble hanging from a loop, its wedge lines curving from top to bottom.
             let ball = CGPath(ellipseIn: box(0.2, 0.26, 0.6, 0.6), transform: nil)

@@ -508,6 +508,10 @@
   "bauble": {
    "camera": "flash",
    "scene": "a decorated Christmas tree at night, string lights glowing"
+  },
+  "buttonNeckWarmer": {
+   "camera": "outdoor",
+   "scene": "a snowy park path, cold bright winter morning"
   }
  }
 }

@@ -191,7 +191,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 107 | Linen Stitch Blanket | Blankets | Throw, easy | Stitch | planned |
 | 108 | Tree Ornament | Holiday | Gift, beginner | New shape | verified (built as Bauble Ornament) |
 | 109 | Double Moss Slouch Hat | Hats | Adults, beginner | Stitch | planned |
-| 110 | Button Neck Warmer | Accessories | Adults, easy | New shape | planned |
+| 110 | Button Neck Warmer | Accessories | Adults, easy | New shape | verified |
 | 111 | Wave Beanie | Hats | Anyone, intermediate | Colorwork | planned |
 | 112 | Waffle Ear Warmer | Accessories | Anyone, beginner | Stitch | planned |
 | 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | planned |
