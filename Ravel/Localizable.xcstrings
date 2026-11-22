@@ -77057,6 +77057,287 @@
         }
       }
     },
+    "Knit into the front of the stitch and then into its back before slipping it off. It adds 1 stitch": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احبك في الجزء الأمامي من الغرزة ثم في خلفها قبل إسقاطها عن الإبرة. تضيف غرزة واحدة"
+          }
+        },
+        "bn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ঘরটির সামনের দিকে বুনুন, তারপর খুলে ফেলার আগে পেছনের দিকে বুনুন। এতে ১টি ঘর বাড়ে"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fes un punt del dret pel davant del punt i després pel darrere abans de deixar-lo anar. Afegeix 1 punt"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upleťte očko za přední nit a pak ještě za zadní, než ho shodíte. Přidá 1 očko"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strik i forreste maskeled og derefter i bageste, før masken glider af. Det tager 1 maske ud"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In das vordere und dann in das hintere Maschenglied stricken, bevor die Masche abgleitet. Ergibt 1 Masche mehr"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πλέξτε στο μπροστινό μέρος της θηλιάς και μετά στο πίσω, πριν τη βγάλετε από τη βελόνα. Προσθέτει 1 θηλιά"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teje por la hebra delantera del punto y luego por la trasera antes de soltarlo. Añade 1 punto"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teje por la hebra delantera del punto y luego por la trasera antes de soltarlo. Añade 1 punto"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neulo silmukan etureunasta ja sitten takareunasta ennen kuin pudotat sen puikolta. Lisää 1 silmukan"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotez le brin avant de la maille puis son brin arrière avant de la laisser glisser. Ajoute 1 maille"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotez le brin avant de la maille puis son brin arrière avant de la laisser glisser. Ajoute 1 maille"
+          }
+        },
+        "gu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ટાંકાના આગળના ભાગમાં અને પછી પાછળના ભાગમાં ગૂંથો, પછી તેને સોય પરથી ઉતારો. તેનાથી 1 ટાંકો વધે છે"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סרגו לתוך החלק הקדמי של העין ואז לתוך החלק האחורי שלה לפני שמשחררים אותה. מוסיף עין אחת"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फंदे के आगे वाले हिस्से में और फिर पीछे वाले हिस्से में बुनें, फिर उसे सलाई से उतारें। इससे 1 फंदा बढ़ता है"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pletite u prednju nit petlje, a zatim u stražnju prije nego što je spustite. Dodaje 1 petlju"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Köss a szem elülső szálába, majd a hátsóba, mielőtt leengeded. 1 szemmel szaporít"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rajut ke bagian depan tusukan lalu ke bagian belakangnya sebelum melepasnya. Menambah 1 tusukan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lavora a diritto nel filo anteriore della maglia e poi in quello posteriore prima di lasciarla cadere. Aggiunge 1 maglia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目の手前側に表目を編み、外さずに向こう側にも表目を編んでから外す。1目増える"
+          }
+        },
+        "kn": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ಹೊಲಿಗೆಯ ಮುಂಭಾಗಕ್ಕೆ ಮತ್ತು ನಂತರ ಹಿಂಭಾಗಕ್ಕೆ ಹೆಣೆದು ಅದನ್ನು ಸೂಜಿಯಿಂದ ಇಳಿಸಿ. ಇದರಿಂದ 1 ಹೊಲಿಗೆ ಹೆಚ್ಚುತ್ತದೆ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "코의 앞쪽에 겉뜨기한 뒤 빼지 않고 뒤쪽에도 겉뜨기하고 뺍니다. 1코가 늘어납니다"
+          }
+        },
+        "ml": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "തുന്നലിന്റെ മുൻഭാഗത്തും പിന്നെ പിൻഭാഗത്തും നെയ്തശേഷം അത് സൂചിയിൽനിന്ന് ഇറക്കുക. ഇത് 1 തുന്നൽ കൂട്ടുന്നു"
+          }
+        },
+        "mr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टाक्याच्या पुढच्या भागात आणि मग मागच्या भागात विणा, मग तो सुईवरून उतरवा. यामुळे 1 टाका वाढतो"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kait ke bahagian depan jahitan, kemudian ke bahagian belakangnya sebelum melepaskannya. Menambah 1 jahitan"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strikk i fremre maskeledd og så i bakre før masken slippes av. Det øker med 1 maske"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brei in de voorkant van de steek en daarna in de achterkant voordat je hem van de naald laat glijden. Meerdert 1 steek"
+          }
+        },
+        "or": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ଫାନ୍ଦର ଆଗ ଭାଗରେ ଏବଂ ପରେ ପଛ ଭାଗରେ ବୁଣନ୍ତୁ, ତାପରେ ସୂଚିରୁ କାଢ଼ନ୍ତୁ। ଏହା 1ଟି ଫାନ୍ଦ ବଢ଼ାଏ"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਟਾਂਕੇ ਦੇ ਅਗਲੇ ਹਿੱਸੇ ਵਿੱਚ ਅਤੇ ਫਿਰ ਪਿਛਲੇ ਹਿੱਸੇ ਵਿੱਚ ਬੁਣੋ, ਫਿਰ ਇਸਨੂੰ ਸੂਈ ਤੋਂ ਉਤਾਰੋ। ਇਸ ਨਾਲ 1 ਟਾਂਕਾ ਵਧਦਾ ਹੈ"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przerób oczko na prawo za przednią nitkę, a potem za tylną, zanim je zsuniesz. Dodaje 1 oczko"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricote na alça da frente do ponto e depois na de trás antes de soltá-lo. Acrescenta 1 ponto"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricote na alça da frente do ponto e depois na de trás antes de soltá-lo. Acrescenta 1 ponto"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tricotați prin firul din față al ochiului și apoi prin cel din spate înainte de a-l lăsa să cadă. Adaugă 1 ochi"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провяжите петлю за переднюю стенку, затем за заднюю и только потом снимите её. Прибавляет 1 петлю"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uplette očko za prednú niť a potom za zadnú, kým ho zhodíte. Pridá 1 očko"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pletite v sprednjo nit zanke in nato v zadnjo, preden jo spustite. Doda 1 zanko"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sticka i främre maskbågen och sedan i den bakre innan maskan släpps av. Det ökar 1 maska"
+          }
+        },
+        "ta": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "தையலின் முன்பகுதியிலும் பின்னர் பின்பகுதியிலும் பின்னி, அதை ஊசியிலிருந்து இறக்கவும். இது 1 தையலைக் கூட்டும்"
+          }
+        },
+        "te": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "కుట్టు ముందు భాగంలో, తర్వాత వెనుక భాగంలో అల్లి, దాన్ని సూది నుండి జారవిడవండి. ఇది 1 కుట్టును పెంచుతుంది"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถักเข้าขาหน้าของห่วงแล้วถักเข้าขาหลังก่อนปล่อยห่วงออก เพิ่ม 1 ห่วง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İlmeğin ön kolundan, sonra da düşürmeden arka kolundan örün. 1 ilmek artırır"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Провʼяжіть петлю за передню стінку, потім за задню і тільки тоді скиньте її. Додає 1 петлю"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹانکے کے اگلے حصے میں اور پھر پچھلے حصے میں بُنیں، پھر اسے سلائی سے اتاریں۔ اس سے 1 ٹانکا بڑھتا ہے"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đan vào chân trước của mũi rồi vào chân sau trước khi tuột mũi ra. Tăng 1 mũi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先在线圈前侧织一针，不取下再在后侧织一针，然后取下。加1针"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先在線圈前側織一針，不取下再在後側織一針，然後取下。加1針"
+          }
+        }
+      }
+    },
     "Knit the first cast-on stitch with the working yarn to close the circle, with the cast-on edge lying flat, not spiraled, around the needle": {
       "extractionState": "manual",
       "localizations": {

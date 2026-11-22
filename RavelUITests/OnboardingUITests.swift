@@ -47,7 +47,8 @@ final class OnboardingUITests: XCTestCase {
         }
         next.tap()
         XCTAssertTrue(next.waitForNonExistence(timeout: 15))
-        let design = app.buttons["design.babyCardigan"]
+        // Any paid design will do: each shelf shows its newest designs first, so a named one can scroll off.
+        let design = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'design.'")).firstMatch
         XCTAssertTrue(app.buttons["free.garterScarf"].waitForExistence(timeout: 10))
         for _ in 0..<12 where !design.isHittable { app.swipeUp() }
         design.tap()
