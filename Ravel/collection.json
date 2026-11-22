@@ -1212,6 +1212,54 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/zigzag-beanie.jpg"
+    },
+    {
+      "id": "wave-beanie",
+      "title": "Wave Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "teal",
+          "hex": "#2F6B73"
+        }
+      ],
+      "brim": "B",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.25
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........",
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........",
+          ".BBB....",
+          "B...B...",
+          ".....BBB",
+          "........"
+        ]
+      },
+      "weights": [
+        "fingering",
+        "sport",
+        "dk"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/wave-beanie.jpg"
     }
   ]
 }

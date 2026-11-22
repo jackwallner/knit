@@ -536,6 +536,10 @@
   "zigzag-beanie": {
    "camera": "lamp",
    "scene": "laid on a couch cushion"
+  },
+  "wave-beanie": {
+   "camera": "overcast",
+   "scene": "worn by someone standing at a bus stop"
   }
  }
 }
