@@ -444,6 +444,10 @@
   "tankTop": {
    "camera": "sun",
    "scene": "worn by an adult outdoors on a sunny porch, arms bare, over light linen trousers"
+  },
+  "croppedCardigan": {
+   "camera": "overcast",
+   "scene": "worn by an adult over a white tee and high-waisted jeans, standing by a brick wall"
   }
  }
 }

@@ -227,7 +227,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 143 | Striped Drop-Shoulder | Sweaters | Adults, easy | Colorwork | planned |
 | 144 | Seeded Rib Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 145 | Garter Ridge Washcloth | Home | Anyone, beginner | Stitch | planned |
-| 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape | planned |
+| 146 | Cropped Cardigan | Sweaters | Adults, intermediate | New shape: top-down V-neck raglan, boxy, deep ribbed hem, three-quarter sleeves, one band with buttons below the V | verified (built ahead of its rank) |
 | 147 | Yoke Sweater | Sweaters | Adults, intermediate | New shape: circular yoke in four rings, each marked by a purl ridge, on the raglan pullover's fit | verified (built ahead of its rank) |
 | 148 | Tank Top | Sweaters | Adults, intermediate | New shape: in the round to the underarms, then front and back flat with scoop necks and narrow straps | verified (built ahead of its rank) |
 | 149 | Waffle Leg Warmers | Accessories | Adults, beginner | Stitch | planned |

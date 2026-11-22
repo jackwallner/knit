@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 72)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 109)
+        XCTAssertEqual(Design.allCases.count, 73)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 110)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -1168,6 +1168,27 @@ final class PatternTests: XCTestCase {
                 for step in tank.plan.steps where step.texts[0].hasPrefix("Bind off ") && step.texts[0].contains("stitches, ") {
                     XCTAssertLessThanOrEqual(numbers(step.texts[0])[0], Int((1.5 * gauge.spi).rounded()) + 1, label)
                 }
+            }
+        }
+    }
+
+    /// The cropped cardigan's fronts start narrow and widen at the neck edge through the yoke, ending as wide
+    /// as the crew cardigan's, and every buttonhole sits below the V.
+    func testCroppedCardiganOpensInAV() {
+        for input in inputs(.croppedCardigan) {
+            for gauge in gauges {
+                let chest = input["chest"] ?? 0
+                let c = Engines.croppedCardigan(chest: chest + 5, wearer: chest, body: input["body"] ?? 0, sleeve: input["sleeve"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertGreaterThanOrEqual(c.frontAtNeck, 2, label)
+                let yoke = rows(c.plan, "Yoke")
+                XCTAssertEqual(yoke.filter { $0.text.hasPrefix("K1, M1L, ") }.count, c.neckIncreases, label)
+                XCTAssertEqual(c.band % 2, 1, label)
+                let band = c.plan.steps.filter { $0.section == "Front Band" }
+                let straight = numbers(band[0].texts[0])[0]
+                let holes = band.first { $0.texts[0].contains("K2tog, yo") }?.texts[0] ?? ""
+                // The rib after the last hole runs past the end of the straight right front.
+                XCTAssertGreaterThan(numbers(holes).last ?? 0, c.band - straight, "\(label): \(holes)")
             }
         }
     }

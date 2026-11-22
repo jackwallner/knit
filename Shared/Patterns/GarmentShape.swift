@@ -358,6 +358,32 @@ enum GarmentShape {
             opening.addLine(to: p(0.492, 0.42))
             opening.closeSubpath()
             path.addPath(GarmentShape.path(.sweater, in: rect).subtracting(opening))
+        case .cropped:
+            // A short, boxy cardigan: three-quarter sleeves, a deep V, and a line over the deep ribbed hem.
+            let body = CGMutablePath()
+            body.move(to: p(0.38, 0.14))
+            body.addLine(to: p(0.62, 0.14))
+            body.addLine(to: p(0.79, 0.2))
+            body.addLine(to: p(0.96, 0.54))
+            body.addLine(to: p(0.85, 0.6))
+            body.addLine(to: p(0.79, 0.46))
+            body.addLine(to: p(0.79, 0.74))
+            body.addLine(to: p(0.21, 0.74))
+            body.addLine(to: p(0.21, 0.46))
+            body.addLine(to: p(0.15, 0.6))
+            body.addLine(to: p(0.04, 0.54))
+            body.addLine(to: p(0.21, 0.2))
+            body.closeSubpath()
+            let opening = CGMutablePath()
+            opening.move(to: p(0.4, 0.08))
+            opening.addLine(to: p(0.6, 0.08))
+            opening.addLine(to: p(0.508, 0.48))
+            opening.addLine(to: p(0.508, 0.8))
+            opening.addLine(to: p(0.492, 0.8))
+            opening.addLine(to: p(0.492, 0.48))
+            opening.closeSubpath()
+            let hem = CGPath(rect: box(0.2, 0.63, 0.6, 0.014), transform: nil)
+            path.addPath(body.subtracting(opening).subtracting(hem))
         case .vest:
             path.move(to: p(0.37, 0.1))
             path.addLine(to: p(0.5, 0.44))
@@ -506,7 +532,7 @@ enum GarmentShape {
 extension Design.Silhouette {
     /// A raglan and a cardigan are worked from the neck down, a sock from the cuff to the toe, a crescent
     /// from its top edge; everything else here starts at its lower edge.
-    var knitsDown: Bool { [.sweater, .tee, .turtleneck, .yoke, .cardigan, .socks, .crescent, .topDown, .stocking].contains(self) }
+    var knitsDown: Bool { [.sweater, .tee, .turtleneck, .yoke, .cardigan, .cropped, .socks, .crescent, .topDown, .stocking].contains(self) }
 }
 
 /// A colorwork piece seen from the front: a grid of palette indices, the cast-on row last, sized to fit
