@@ -547,3 +547,4 @@ Striped Cowl
 Heart Cowl
 Houndstooth Cowl
 Striped Blanket
+Color-Block Scarf

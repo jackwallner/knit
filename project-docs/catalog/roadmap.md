@@ -197,7 +197,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 113 | Diamond Brocade Blanket | Blankets | Throw, easy | Stitch | planned |
 | 114 | Draft Stopper | Home | Anyone, beginner | New shape | verified |
 | 115 | Seed Stitch Beanie | Hats | Anyone, beginner | Stitch | planned |
-| 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | planned |
+| 116 | Color-Block Scarf | Scarves & Cowls | Anyone, beginner | Colorwork | verified |
 | 117 | Basketweave Cowl | Scarves & Cowls | Anyone, easy | Stitch | planned |
 | 118 | Hood | Accessories | Adults, easy | New shape | verified (built as Cowl Hood) |
 | 119 | Flower Beanie | Hats | Children, intermediate | Colorwork | planned |

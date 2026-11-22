@@ -564,6 +564,10 @@
   "striped-blanket": {
    "camera": "flash",
    "scene": "folded over the arm of a sofa"
+  },
+  "color-block-scarf": {
+   "camera": "overcast",
+   "scene": "laid out flat on a wooden floor"
   }
  }
 }

@@ -1561,6 +1561,48 @@
       ],
       "tag": "Stripes",
       "photo": "photos/striped-blanket.jpg"
+    },
+    {
+      "id": "color-block-scarf",
+      "title": "Color-Block Scarf",
+      "base": "garterScarf",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "oatmeal",
+          "hex": "#D8CBB0"
+        },
+        {
+          "name": "rust",
+          "hex": "#A4522E"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 14
+        },
+        {
+          "color": "C",
+          "inches": 14
+        }
+      ],
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Color Block",
+      "photo": "photos/color-block-scarf.jpg"
     }
   ]
 }
