@@ -157,7 +157,8 @@ enum Painter {
             // A chart added afterward leaves its rows as the engine wrote them.
             if let filled = cells[at], !embroidered {
                 texts[at] = chartText(filled, row: row, names: names, placement: work.chart?.placement ?? .motif, width: work.chart?.width ?? 1)
-                previous = color[at]
+                // Two yarns were live: the next plain row says which one goes on.
+                previous = Set(filled).count > 1 ? nil : color[at]
                 continue
             }
             guard color[at] != previous else { continue }
@@ -214,7 +215,10 @@ enum Painter {
         }
         var yards = worked.map { max(10, Int(($0 / g.spi / 36 * 1.15 / 10).rounded(.up)) * 10) }
         let spare = plan.yards - yards.reduce(0, +)
-        if spare > 0 { yards[0] += Int((Double(spare) / 10).rounded(.up)) * 10 }
+        // What the plain shape needs beyond the rows counted goes to the yarn that works the most of them.
+        if spare > 0, let most = worked.indices.max(by: { worked[$0] < worked[$1] }) {
+            yards[most] += Int((Double(spare) / 10).rounded(.up)) * 10
+        }
         let lines = work.palette.indices.map { index in
             "\(names[index].capitalized), color \(Colorwork.letter(index)): " + lowerFirst(Engines.yarnLine(yards[index], g))
         }
@@ -436,13 +440,18 @@ enum Painter {
             under += 1
             at -= 1
         }
-        let band = covered.allSatisfy { colors[$0] == ground } ? "the \(names[ground]) stripe" : "the front"
+        // A ground that runs down to the cast on is the piece's own fabric, not a stripe: count from the cast on.
+        let fromStart = at < 0 || rows[at].piece != row.piece
+        let solid = covered.allSatisfy { colors[$0] == ground }
+        let band = !solid ? "the front" : fromStart ? "the \(names[ground]) fabric" : "the \(names[ground]) stripe"
         // A round is worked right to left as it faces, so its first stitch is at the right-hand end.
         let first = row.stitches - right
         let across = row.flat
             ? "It is centered, \(left) stitches in from each edge"
             : "It covers stitches \(first) to \(first + width - 1) of the round, counted from the marker"
-        let below = under > 0 ? ", with \(under) \(under == 1 ? line : line + "s") of \(names[ground]) under it" : ""
+        let below = under == 0 ? "" : fromStart
+            ? ", and starts on \(line) \(under + 1) above the cast on"
+            : ", with \(under) \(under == 1 ? line : line + "s") of \(names[ground]) under it"
         var texts = ["With \(list(yarns.map { names[$0] })) and a tapestry needle, work the chart in duplicate stitch over \(band): \(covered.count) \(covered.count == 1 ? line : line + "s") high and \(width) stitches wide. \(across)\(below)."]
         for (number, at) in covered.enumerated() {
             var parts: [(color: Int?, count: Int)] = []
