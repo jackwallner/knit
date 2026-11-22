@@ -544,6 +544,10 @@
   "mushroom-beanie": {
    "camera": "outdoor",
    "scene": "held up against a mossy garden wall"
+  },
+  "strawberry-beanie": {
+   "camera": "snap",
+   "scene": "on a wooden stool by a window"
   }
  }
 }

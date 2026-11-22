@@ -1305,6 +1305,51 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/mushroom-beanie.jpg"
+    },
+    {
+      "id": "strawberry-beanie",
+      "title": "Strawberry Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        },
+        {
+          "name": "green",
+          "hex": "#4C6B3C"
+        }
+      ],
+      "brim": "B",
+      "chart": {
+        "placement": "motif",
+        "rows": [
+          "..C.C.C..",
+          "...CCC...",
+          ".BBBBBBB.",
+          "BB.BBB.BB",
+          "BBBBBBBBB",
+          "BBB.B.BBB",
+          ".BBBBBBB.",
+          "..BB.BB..",
+          "...BBB...",
+          "....B...."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/strawberry-beanie.jpg"
     }
   ]
 }

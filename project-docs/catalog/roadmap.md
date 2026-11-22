@@ -161,7 +161,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 77 | Polka Dot Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 78 | Seeded Rib Cowl | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 79 | Table Runner | Home | Anyone, beginner | New shape: garter, knit point to point, a tassel at each point | verified |
-| 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | planned |
+| 80 | Strawberry Beanie | Hats | Children, intermediate | Colorwork | verified |
 | 81 | Waffle Mitts | Hands | Adults, easy | Stitch | planned |
 | 82 | Ruana | Shawls & Wraps | Adults, easy | New shape: one seed stitch piece, back then two fronts split by one bound-off stitch (on the Scarves & Cowls shelf) | verified |
 | 83 | Basketweave Beanie | Hats | Anyone, easy | Stitch | planned |
