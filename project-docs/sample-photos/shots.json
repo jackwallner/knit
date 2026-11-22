@@ -492,6 +492,10 @@
   "floorPouf": {
    "camera": "lamp",
    "scene": "a living room floor beside a sofa, warm evening lamp light"
+  },
+  "babyBib": {
+   "camera": "overcast",
+   "scene": "a nursery changing table by a window, soft daylight"
   }
  }
 }

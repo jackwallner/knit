@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks", "knitBasket", "kidsVest", "tableRunner", "ruana", "scrunchie", "floorPouf", "babyBib"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 84)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 121)
+        XCTAssertEqual(Design.allCases.count, 85)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 122)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -1354,6 +1354,23 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(pouf.bottom.filter { $0.text.contains("Stuff") }.count, 1, "\(input)")
                 let tall = Double(pouf.sideRounds + 2) / gauge.rpi
                 XCTAssertEqual(tall, input["height"] ?? 0, accuracy: 1 / gauge.rpi + 0.01, "\(input)")
+            }
+        }
+    }
+
+    func testBibStrapsMatchAndReachAroundTheNeck() {
+        for input in inputs(.babyBib) {
+            for gauge in gauges {
+                let width = input["width"] ?? 0
+                let bib = Engines.babyBib(width: width, length: input["length"] ?? 0, gauge: gauge)
+                let first = rows(bib.plan, "First Strap"), second = rows(bib.plan, "Second Strap")
+                XCTAssertEqual(first.count, second.count, "\(input)")
+                XCTAssertEqual(first.count, bib.strapRows, "\(input)")
+                XCTAssertGreaterThanOrEqual(bib.strap, 4, "\(input)")
+                // Both straps and the front of the neck go at least once around a baby's neck.
+                let garter = gauge.spi * 2
+                let neckFront = Double(bib.width - 2 * bib.strap) / gauge.spi
+                XCTAssertGreaterThanOrEqual(neckFront + 2 * Double(bib.strapRows) / garter, width + 4.5, "\(input)")
             }
         }
     }

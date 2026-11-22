@@ -377,6 +377,30 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .bib:
+            // A bib: a rounded-cornered panel with the neck scooped out, two straps rising to meet at the top.
+            let bib = CGMutablePath()
+            bib.move(to: p(0.22, 0.42))
+            bib.addLine(to: p(0.22, 0.8))
+            bib.addQuadCurve(to: p(0.32, 0.9), control: p(0.22, 0.9))
+            bib.addLine(to: p(0.68, 0.9))
+            bib.addQuadCurve(to: p(0.78, 0.8), control: p(0.78, 0.9))
+            bib.addLine(to: p(0.78, 0.42))
+            bib.addLine(to: p(0.62, 0.42))
+            bib.addQuadCurve(to: p(0.38, 0.42), control: p(0.5, 0.62))
+            bib.closeSubpath()
+            let straps = CGMutablePath()
+            straps.move(to: p(0.22, 0.44))
+            straps.addQuadCurve(to: p(0.47, 0.1), control: p(0.22, 0.12))
+            straps.addLine(to: p(0.47, 0.17))
+            straps.addQuadCurve(to: p(0.3, 0.44), control: p(0.3, 0.18))
+            straps.closeSubpath()
+            straps.move(to: p(0.78, 0.44))
+            straps.addQuadCurve(to: p(0.53, 0.1), control: p(0.78, 0.12))
+            straps.addLine(to: p(0.53, 0.17))
+            straps.addQuadCurve(to: p(0.7, 0.44), control: p(0.7, 0.18))
+            straps.closeSubpath()
+            path.addPath(bib.union(straps))
         case .pouf:
             // A squat round cushion seen from the side: the top's oval, bulging sides and rib lines down them.
             let body = CGMutablePath()

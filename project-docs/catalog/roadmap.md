@@ -172,7 +172,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 88 | Floor Pouf | Home | Anyone, easy | New shape | verified |
 | 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | planned |
 | 90 | Rope Cable Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
-| 91 | Baby Bib | Baby | Babies, beginner | New shape | planned |
+| 91 | Baby Bib | Baby | Babies, beginner | New shape | verified |
 | 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |
 | 93 | Checkerboard Blanket | Blankets | Baby to throw, intermediate | Colorwork | planned |
 | 94 | Honeycomb Washcloth | Home | Anyone, easy | Stitch | planned |
