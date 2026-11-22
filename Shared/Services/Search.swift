@@ -48,7 +48,15 @@ enum LibrarySearch {
         func hits(_ entry: (item: LibraryItem, what: String, size: String), _ list: [String]) -> Int {
             list.filter { entry.what.contains($0) || entry.size.contains($0) }.count
         }
-        let all = read.filter { hits($0, words) == words.count }.map(\.item)
+        // A design with each word whole comes first: "basket" is the basket before the basketweave blanket.
+        func whole(_ entry: (item: LibraryItem, what: String, size: String)) -> Bool {
+            words.allSatisfy { word in
+                let pattern = "\\b" + NSRegularExpression.escapedPattern(for: word) + "(s|es)?\\b"
+                return [entry.what, entry.size].contains { $0.range(of: pattern, options: .regularExpression) != nil }
+            }
+        }
+        let all = read.filter { hits($0, words) == words.count }.enumerated()
+            .sorted { (whole($0.element) ? 0 : 1, $0.offset) < (whole($1.element) ? 0 : 1, $1.offset) }.map(\.element.item)
         guard all.isEmpty else { return all }
         // "Cat ear hat" finds the hat; "cat toy" finds nothing, never a hat.
         guard absent.isDisjoint(with: words) else { return [] }
