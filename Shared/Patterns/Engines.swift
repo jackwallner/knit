@@ -38,13 +38,16 @@ enum Engines {
     }
 
     /// The weight as it reads inside a sentence: "worsted", but "DK" and "Aran" as they are written.
-    static func weightName(_ g: Gauge) -> String {
-        let weight = weight(g)
+    /// `finest` is the finest yarn the piece is ever knit in: socks are knit firmer than the label, so a
+    /// sock gauge that reads as lace is still fingering yarn.
+    static func weightName(_ g: Gauge, finest: YarnWeight = .lace) -> String {
+        let all = YarnWeight.allCases
+        let weight = all[max(all.firstIndex(of: weight(g)) ?? 0, all.firstIndex(of: finest) ?? 0)]
         return weight == .dk || weight == .aran ? weight.label : weight.label.lowercased()
     }
 
-    static func yarnLine(_ yards: Int, _ g: Gauge) -> String {
-        "About \(Sizing.yardage(yards)) of \(weightName(g)) weight yarn"
+    static func yarnLine(_ yards: Int, _ g: Gauge, finest: YarnWeight = .lace) -> String {
+        "About \(Sizing.yardage(yards)) of \(weightName(g, finest: finest)) weight yarn"
     }
 
     /// A circular long enough to hold a flat piece or a wide round: 40 in once the stitches span about 45 in.
@@ -55,9 +58,9 @@ enum Engines {
 
     /// Closes a pattern. The yarn asked for is never less than what the written rows use, plus a reserve.
     /// `round` is true for a piece worked in the round.
-    private static func pattern(_ b: PlanBuilder, estimate: Int, yarnNote: String = "", tools: [String], finished: String, gauge g: Gauge, round: Bool = false) -> PatternPlan {
+    private static func pattern(_ b: PlanBuilder, estimate: Int, yarnNote: String = "", finest: YarnWeight = .lace, tools: [String], finished: String, gauge g: Gauge, round: Bool = false) -> PatternPlan {
         let yards = max(estimate, Sizing.yards(worked: b.steps, spi: g.spi))
-        return PatternPlan(steps: b.steps, materials: [yarnLine(yards, g) + yarnNote] + tools + [gaugeLine(g, round: round)], finished: finished, yards: yards)
+        return PatternPlan(steps: b.steps, materials: [yarnLine(yards, g, finest: finest) + yarnNote] + tools + [gaugeLine(g, round: round)], finished: finished, yards: yards)
     }
 
     /// "19.5 in around, to fit a 22 in head": the number a knitter checks against the swatch, then who it fits.
@@ -966,7 +969,7 @@ enum Engines {
         }
         let length = heelBack + Double(afterPickUp + toe.count) / g.rpi
         let yards = Sizing.yards(squareInches: around * 0.9 * (leg + footLength + 2) * 2, spi: g.spi, factor: 1.1)
-        let plan = pattern(b, estimate: yards, yarnNote: ", wool with a little nylon wears longest", tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "2 stitch markers", "Tapestry needle"], finished: "\(fits(stitches, g, "foot", around)). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(cuff + legRounds) / g.rpi)) from the cuff to the heel", gauge: g, round: true)
+        let plan = pattern(b, estimate: yards, yarnNote: ", wool with a little nylon wears longest", finest: .fingering, tools: ["\(g.needle.label) double-pointed needles, or a long circular for magic loop", "2 stitch markers", "Tapestry needle"], finished: "\(fits(stitches, g, "foot", around)). The foot is \(Sizing.inches(length)) from the back of the heel to the tip of the toe, and the leg \(Sizing.inches(Double(cuff + legRounds) / g.rpi)) from the cuff to the heel", gauge: g, round: true)
         return Sock(plan: plan, stitches: stitches, heel: heel, flapRows: flapRows, turned: turn.left, pickedUp: pickedUp, gussetDecreases: gusset, toe: toeEnd)
     }
 
