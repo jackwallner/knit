@@ -1498,6 +1498,69 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/houndstooth-cowl.jpg"
+    },
+    {
+      "id": "striped-blanket",
+      "title": "Striped Blanket",
+      "base": "borderedBlanket",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "dusty blue",
+          "hex": "#8FA3B8"
+        },
+        {
+          "name": "mustard",
+          "hex": "#D4A23A"
+        },
+        {
+          "name": "sage",
+          "hex": "#9AAE8C"
+        }
+      ],
+      "stripes": [
+        {
+          "color": "B",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        },
+        {
+          "color": "C",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        },
+        {
+          "color": "D",
+          "inches": 2
+        },
+        {
+          "color": "A",
+          "inches": 1
+        }
+      ],
+      "repeatStripes": true,
+      "weights": [
+        "lace",
+        "fingering",
+        "sport",
+        "dk",
+        "worsted",
+        "aran",
+        "bulky",
+        "superBulky"
+      ],
+      "tag": "Stripes",
+      "photo": "photos/striped-blanket.jpg"
     }
   ]
 }

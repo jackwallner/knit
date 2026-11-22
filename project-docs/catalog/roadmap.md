@@ -150,7 +150,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 66 | Diamond Brocade Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 67 | Baby Cocoon | Baby | Newborn, easy | New shape: bottom-up circle base, straight body, deep folded k2, p2 rib (on the Blankets & Home shelf) | verified |
 | 68 | Garter Ridge Beanie | Hats | Anyone, beginner | Stitch | planned |
-| 69 | Striped Blanket | Blankets | Baby to throw, beginner | Colorwork | planned |
+| 69 | Striped Blanket | Blankets | Baby to throw, beginner | Colorwork | verified |
 | 70 | Tube Socks | Socks & Feet | Anyone, easy | New shape: spiral rib, no heel, wedge toe (on the Accessories shelf) | verified |
 | 71 | Honeycomb Blanket | Blankets | Throw, easy | Stitch | planned |
 | 72 | Mushroom Beanie | Hats | Anyone, intermediate | Colorwork | verified |

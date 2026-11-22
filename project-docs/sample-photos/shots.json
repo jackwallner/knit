@@ -560,6 +560,10 @@
   "houndstooth-cowl": {
    "camera": "lamp",
    "scene": "on a coat hook by a door"
+  },
+  "striped-blanket": {
+   "camera": "flash",
+   "scene": "folded over the arm of a sofa"
   }
  }
 }
