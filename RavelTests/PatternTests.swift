@@ -19,7 +19,7 @@ final class PatternTests: XCTestCase {
 
     /// Every built-in design page has its knitted sample photo in the app.
     /// Designs whose photo is not made yet. Each is drawn until its photo is on the site. Empty at a release.
-    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag"]
+    static let awaitingPhoto: Set<String> = ["toeUpSocks", "fingerlessMitts", "babyCardigan", "double-moss-scarf", "topDownBeanie", "twistedHeadband", "poncho", "christmasStocking", "washcloth", "waffle-beanie", "snowflake-beanie", "knotHat", "asymmetricShawl", "broken-rib-cowl", "feather-and-fan-scarf", "double-moss-blanket", "basketweave-washcloth", "bandanaCowl", "armWarmers", "honeycomb-cowl", "watchCap", "chevron-lace-blanket", "hoodedScarf", "striped-scarf", "coasters", "rope-cable-scarf", "babyMittens", "catHat", "seeded-rib-beanie", "eyelet-lace-wrap", "teaCozy", "bootCuffs", "striped-beanie", "kidsCardigan", "linen-stitch-scarf", "babySocks", "waffle-blanket", "mugCozy", "houndstooth-beanie", "capelet", "double-moss-cowl", "placemat", "miniStocking", "rope-cable-mitts", "raglanTee", "honeycomb-beanie", "waffle-washcloth", "feather-and-fan-wrap", "pouch", "color-block-beanie", "twisted-rib-scarf", "bottleCover", "bandanaKerchief", "snowflake-cowl", "broken-rib-beanie", "rope-cable-blanket", "turtleneck", "linen-stitch-washcloth", "star-beanie", "waffle-cowl", "shrug", "gloves", "yokeSweater", "tankTop", "croppedCardigan", "babyPullover", "bucketHat", "toteBag", "babyCocoon", "tubeSocks"]
 
     private static let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
 
@@ -565,8 +565,8 @@ final class PatternTests: XCTestCase {
     /// 38 shapes shipped in 1.0 with 7 colorwork designs bundled on them, the 45 the store listing promises,
     /// and every design added since. Raise both counts with each one.
     @MainActor func testTheLibraryHoldsEveryDesign() {
-        XCTAssertEqual(Design.allCases.count, 76)
-        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 113)
+        XCTAssertEqual(Design.allCases.count, 78)
+        XCTAssertEqual(Design.allCases.count + TopicalStore.collection.count, 115)
         XCTAssertEqual(Design.allCases.filter(\.isFree), [.garterScarf, .dishcloth])
         XCTAssertEqual(Set(Design.allCases.map(\.shelf)).count, Design.Shelf.allCases.count)
     }
@@ -1242,6 +1242,36 @@ final class PatternTests: XCTestCase {
                 XCTAssertEqual(Set(rows(t.plan, "Body").map(\.stitches) + rows(t.plan, "Band").map(\.stitches)), [t.around], label)
                 XCTAssertEqual(rows(t.plan, "First Handle").count, rows(t.plan, "Second Handle").count, label)
                 XCTAssertEqual(rows(t.plan, "First Handle").count, t.strapRows, label)
+            }
+        }
+    }
+
+    /// The cocoon's base circle grows to the body's count, and its rib is in whole k2, p2 repeats.
+    func testCocoonBaseMeetsTheBody() {
+        for input in inputs(.babyCocoon) {
+            for gauge in gauges {
+                let plan = Engines.cocoon(around: input["around"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                let body = rows(plan, "Body").map(\.stitches)
+                XCTAssertEqual(rows(plan, "Base").last?.stitches, body.first, label)
+                XCTAssertEqual(Set(body + rows(plan, "Top").map(\.stitches)).count, 1, label)
+                XCTAssertEqual((body.first ?? 1) % 4, 0, label)
+            }
+        }
+    }
+
+    /// The tube sock's rib is in whole k3, p3 repeats, and its toe narrows evenly to the stitches grafted shut.
+    func testTubeSockToeNarrowsToTheGraft() {
+        for input in inputs(.tubeSocks) {
+            for gauge in gauges {
+                let t = Engines.tubeSocks(foot: input["foot"] ?? 0, length: input["length"] ?? 0, gauge: gauge)
+                let label = "\(input) \(gauge.stitches)"
+                XCTAssertEqual(t.stitches % 6, 0, label)
+                let toe = rows(t.plan, "Toe").map(\.stitches)
+                XCTAssertEqual(toe.count, 1 + t.toeRounds, label)
+                XCTAssertEqual(toe.last, t.left, label)
+                XCTAssertTrue(t.left >= 8 && t.left % 2 == 0, label)
+                XCTAssertTrue(toe.dropLast().allSatisfy { $0 / 2 >= 6 }, label)
             }
         }
     }

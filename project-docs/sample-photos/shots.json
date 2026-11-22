@@ -460,6 +460,14 @@
   "toteBag": {
    "camera": "overcast",
    "scene": "hanging from a wooden chair back in a bright kitchen"
+  },
+  "babyCocoon": {
+   "camera": "lamp",
+   "scene": "on a cream knit blanket in a softly lit nursery, empty, no baby"
+  },
+  "tubeSocks": {
+   "camera": "snap",
+   "scene": "laid flat as a pair on a wooden floor beside slippers"
   }
  }
 }

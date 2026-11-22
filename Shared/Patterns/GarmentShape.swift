@@ -377,6 +377,36 @@ enum GarmentShape {
             for x in [CGFloat(0.27), 0.67] {
                 path.addPath(CGPath(rect: box(x, 0.4, 0.06, 0.16), transform: nil).subtracting(CGPath(rect: box(x + 0.012, 0.412, 0.036, 0.136), transform: nil)))
             }
+        case .cocoon:
+            // A long pod closed in a round at the bottom, the rib folded down over its top a little wider.
+            let pod = CGMutablePath()
+            pod.move(to: p(0.3, 0.2))
+            pod.addLine(to: p(0.7, 0.2))
+            pod.addLine(to: p(0.7, 0.62))
+            pod.addCurve(to: p(0.3, 0.62), control1: p(0.7, 0.98), control2: p(0.3, 0.98))
+            pod.closeSubpath()
+            let fold = CGPath(roundedRect: box(0.26, 0.1, 0.48, 0.18), cornerWidth: unit * 0.02, cornerHeight: unit * 0.02, transform: nil)
+            path.addPath(pod.union(fold))
+        case .tubeSock:
+            // A pair of straight tubes with rounded toes, the rib spiraling around each below a cuff line.
+            for x in [CGFloat(0.2), 0.56] {
+                let tube = CGMutablePath()
+                tube.move(to: p(x, 0.08))
+                tube.addLine(to: p(x + 0.24, 0.08))
+                tube.addLine(to: p(x + 0.24, 0.8))
+                tube.addQuadCurve(to: p(x, 0.8), control: p(x + 0.12, 0.98))
+                tube.closeSubpath()
+                let lines = CGMutablePath()
+                lines.addRect(box(x, 0.2, 0.24, 0.014))
+                for y in [CGFloat(0.3), 0.44, 0.58, 0.72] {
+                    lines.move(to: p(x, y + 0.08))
+                    lines.addLine(to: p(x + 0.24, y))
+                    lines.addLine(to: p(x + 0.24, y + 0.014))
+                    lines.addLine(to: p(x, y + 0.094))
+                    lines.closeSubpath()
+                }
+                path.addPath(tube.subtracting(lines))
+            }
         case .babyPullover:
             // The sweater with two buttons on one shoulder, where the neck opens.
             let holes = CGMutablePath()
