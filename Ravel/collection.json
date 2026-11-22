@@ -1401,6 +1401,50 @@
       ],
       "tag": "Stripes",
       "photo": "photos/striped-cowl.jpg"
+    },
+    {
+      "id": "heart-cowl",
+      "title": "Heart Cowl",
+      "base": "ribbedCowl",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        },
+        {
+          "name": "red",
+          "hex": "#B0383A"
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......",
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......",
+          ".B.B..",
+          "BBBBB.",
+          ".BBB..",
+          "..B...",
+          "......"
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted",
+        "aran"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/heart-cowl.jpg"
     }
   ]
 }

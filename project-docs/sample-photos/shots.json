@@ -552,6 +552,10 @@
   "striped-cowl": {
    "camera": "outdoor",
    "scene": "worn loosely around the neck on a gray morning walk"
+  },
+  "heart-cowl": {
+   "camera": "oldphone",
+   "scene": "draped over a chair back"
   }
  }
 }

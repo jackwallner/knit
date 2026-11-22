@@ -204,7 +204,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 120 | Honeycomb Scarf | Scarves & Cowls | Adults, easy | Stitch | planned |
 | 121 | Double Moss Pillow | Home | Anyone, beginner | Stitch | planned |
 | 122 | Reindeer Beanie | Holiday | Gift, intermediate | Colorwork | planned |
-| 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | planned |
+| 123 | Heart Cowl | Scarves & Cowls | Valentine's, intermediate | Colorwork | verified |
 | 124 | Garter Ridge Blanket | Blankets | Baby to throw, beginner | Stitch | planned |
 | 125 | Feather and Fan Cowl | Scarves & Cowls | Adults, easy lace | Stitch | planned |
 | 126 | Striped Vest | Sweaters | Adults, intermediate | Colorwork | planned |
