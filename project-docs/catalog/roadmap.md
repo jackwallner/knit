@@ -41,9 +41,14 @@ cannot prove, so the four rows planned for it became seeded rib (2026-11-20).
 
 ## Photos
 
-Prompts are queued in `project-docs/sample-photos/subjects.json` and `shots.json`. No image is generated
-until Jack says yes to the image tool. New photos are served from the site (`docs/photos/<id>.jpg`) and
-cached on the phone, so the app does not carry them.
+Prompts are queued in `project-docs/sample-photos/subjects.json` and `shots.json`. Jack said yes
+(2026-11-21) to Codex's image tool under the ChatGPT sign-in, which costs nothing; it stops at any credit
+prompt. Each image is read next to the design's drawing and rejected for a wrong stitch, color count, motif,
+shape or edging, or for an AI tell; three failed tries means no photo. New photos are served from the site
+(`docs/photos/<id>.jpg`, committed on this branch only) and cached on the phone, so the app does not carry
+them. A design whose photo is not accepted stays in `awaitingPhoto` in `PatternTests` and shows its drawing.
+
+Accepted on my read, waiting for the peer's: batch 1 (2026-11-21).
 
 ## The knitter's read (2026-11-21)
 
