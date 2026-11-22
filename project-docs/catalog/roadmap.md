@@ -170,7 +170,7 @@ stockinette gauge), and the Cuff-Down Socks weight name, which main fixes with `
 | 86 | Striped Cowl | Scarves & Cowls | Anyone, beginner | Colorwork | planned |
 | 87 | Mistake Rib Scarf | Scarves & Cowls | Anyone, beginner | Stitch | planned |
 | 88 | Floor Pouf | Home | Anyone, easy | New shape | verified |
-| 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | planned |
+| 89 | Zigzag Beanie | Hats | Anyone, intermediate | Colorwork | verified |
 | 90 | Rope Cable Cowl | Scarves & Cowls | Adults, intermediate | Stitch | planned |
 | 91 | Baby Bib | Baby | Babies, beginner | New shape | verified |
 | 92 | Eyelet Slouch Hat | Hats | Adults, easy lace | Stitch | planned |

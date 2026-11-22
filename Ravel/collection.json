@@ -1164,6 +1164,54 @@
       ],
       "tag": "Colorwork",
       "photo": "photos/polka-dot-beanie.jpg"
+    },
+    {
+      "id": "zigzag-beanie",
+      "title": "Zigzag Beanie",
+      "base": "ribbedBeanie",
+      "requires": 1,
+      "palette": [
+        {
+          "name": "navy",
+          "hex": "#26324F"
+        },
+        {
+          "name": "cream",
+          "hex": "#EEE6D6"
+        }
+      ],
+      "brim": "A",
+      "stripes": [
+        {
+          "color": "A",
+          "inches": 2.5
+        }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "stripe": 0,
+        "rows": [
+          "BB..",
+          ".BB.",
+          "..BB",
+          "B..B",
+          "..BB",
+          ".BB.",
+          "BB..",
+          ".BB.",
+          "..BB",
+          "B..B",
+          "..BB",
+          ".BB."
+        ]
+      },
+      "weights": [
+        "sport",
+        "dk",
+        "worsted"
+      ],
+      "tag": "Colorwork",
+      "photo": "photos/zigzag-beanie.jpg"
     }
   ]
 }

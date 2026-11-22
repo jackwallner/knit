@@ -532,6 +532,10 @@
   "polka-dot-beanie": {
    "camera": "flash",
    "scene": "lying flat on a wooden kitchen table"
+  },
+  "zigzag-beanie": {
+   "camera": "lamp",
+   "scene": "laid on a couch cushion"
   }
  }
 }
