@@ -927,7 +927,7 @@ balaclava head=26 aran ceb219fee504aebe07c155ea3fef51f059da7e140d3b7ba3fb813fc5b
 balaclava head=26 bulky 4c9a220b3cf9169e04f61bda549c1e43256040a4f3df6d2a838e4c15e19815de
 balaclava head=26 superBulky 7d3533e95b004a84ccc93e3d4226717b35813f374e2e0d2ec08f90a5696c9edd
 cuffDownSocks foot=6.5,footLength=7,leg=4 lace c1777901ab5abdad923d171c7734ea63d1b1e59ca68390cb79824dcb0e0318bf
-cuffDownSocks foot=6.5,footLength=7,leg=4 fingering edce9f2ddaa8a7dd34aa568908960e77acd598c763459dee5093b65c233eaaa9
+cuffDownSocks foot=6.5,footLength=7,leg=4 fingering acfc733f738702707de9d2e2cd35ccd430a8b1a4a4695e2fc71511d3fc23d4fa
 cuffDownSocks foot=6.5,footLength=7,leg=4 sport 3ab7dee9f03c3f9a93ca332e41980f38b93f2d5032ac9f15d3570c172e172e1e
 cuffDownSocks foot=6.5,footLength=7,leg=4 dk af0a15e7537ce1cc4a6e53a429ef38e0e712ec8a8248064c53f3435e87d18788
 cuffDownSocks foot=6.5,footLength=7,leg=4 worsted fed5f1f2dd4071a59a72793cf8447ee2aaf473571b8d2cd93892f0c02db898b0
@@ -935,7 +935,7 @@ cuffDownSocks foot=6.5,footLength=7,leg=4 aran 924281c585b80b230aa7f427c9448c64c
 cuffDownSocks foot=6.5,footLength=7,leg=4 bulky 7ab845b5b7829aaa6e9e7bf3a402b2a08bf770d3501b82a73c20bca12781417b
 cuffDownSocks foot=6.5,footLength=7,leg=4 superBulky 9679fd5818e5494305c6c75877ae9696b1225b46589681181a90c8a53e034531
 cuffDownSocks foot=7.5,footLength=9,leg=6 lace 4b7bd144b7f1a959f4790057682b8a99d1a55421e320c3005b4a0f1d9bffcf96
-cuffDownSocks foot=7.5,footLength=9,leg=6 fingering b14def24ee1b328c832c32cff9dab0b940cf972fb3d6942774fe575ece19e402
+cuffDownSocks foot=7.5,footLength=9,leg=6 fingering 96a72d48ed6b4438bfc931a6d46966fc09f29b01264dccb4bb16e3a884e16c85
 cuffDownSocks foot=7.5,footLength=9,leg=6 sport e7741ddabca4a1a65aad688cc5d7901ec69f6b4e58d53e681698d98c17d52d2d
 cuffDownSocks foot=7.5,footLength=9,leg=6 dk 19b8a18a60284cd6166d0f6c5d892f70a0c2581a7121f71e5080d87b9b936c25
 cuffDownSocks foot=7.5,footLength=9,leg=6 worsted 447889ebc7418ad24b9b56e5aabc6386bb88b61fca873032bb78753987063df0
@@ -943,7 +943,7 @@ cuffDownSocks foot=7.5,footLength=9,leg=6 aran dd6920bef4765ba63d3a77fc4a035591c
 cuffDownSocks foot=7.5,footLength=9,leg=6 bulky 81cad22b80f9f454132a1bacce39bfb6c93cca06884b3f7ccfbc187298a4481a
 cuffDownSocks foot=7.5,footLength=9,leg=6 superBulky 4d2d55907d83af3d2b878b8d74dd6a250e7e3ced22f26d3e8f57f72b8a534161
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 lace d720b6b5d9e8c3352b7556ed579f96387389a96be03388c9d2d7d6d51d824dcf
-cuffDownSocks foot=8,footLength=9.5,leg=6.5 fingering d1539fb5ceede0aac3d28d3574adb0dc2fe7430a582c1a0d86a468164e440b18
+cuffDownSocks foot=8,footLength=9.5,leg=6.5 fingering 7ee775de72e3525e3ffb3f7d55f9bba453758f8abb51e81578fa99193cd72fbf
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 sport 9ac41233d493fa8f0028beb37df6a8f0a259ae3dc4f7d74be14976eafde8b339
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 dk 0474f1af4a4b52cb39793b67469735b0f1555a483897a55e8a88cf67995c7b2b
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 worsted 5cb2db3817333124429cd162758310901a67e458b24d2b907732d0225be711aa
@@ -951,7 +951,7 @@ cuffDownSocks foot=8,footLength=9.5,leg=6.5 aran bfc61d0035da9ac11fd10723c2a3f70
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 bulky aa6c44d053378aa4e8184bea80848b0dc2b5024c1648f42070e64007b3acd79c
 cuffDownSocks foot=8,footLength=9.5,leg=6.5 superBulky d1f38ecd9aa93a1512a28ff52d80112ba6c8ea4d1a6ddbd45e1bd273c93f53be
 cuffDownSocks foot=9,footLength=10.5,leg=7 lace 4101c2c99c22b54cb88230e4756aacf7ce40f11752dc3c57c02a7871877264ba
-cuffDownSocks foot=9,footLength=10.5,leg=7 fingering 117cac7b446fb50117fbeb594a889c489216109bbf0ff8164b627ed46b9dcc46
+cuffDownSocks foot=9,footLength=10.5,leg=7 fingering e63f60549bf7a0b910f13997f1c8650857f8b51f96199f38bcbc40d8a4c1af22
 cuffDownSocks foot=9,footLength=10.5,leg=7 sport cba074f01628045dd2a52d979f0ae35e111103bd7e5f76d4beac268f18659d04
 cuffDownSocks foot=9,footLength=10.5,leg=7 dk f107cc0e23d3754f6247d54918776f29a826d7d39a785c9bf50d938e1415e414
 cuffDownSocks foot=9,footLength=10.5,leg=7 worsted 4e4bdced7799ea76502f99a2b202fbe738879ed84ab788a830a2bcf042e06930
@@ -959,7 +959,7 @@ cuffDownSocks foot=9,footLength=10.5,leg=7 aran 6300f4fe88e928b6b0bf774d1923c6f7
 cuffDownSocks foot=9,footLength=10.5,leg=7 bulky 91670a07a96baa9a7ec95896b94c6014ef333b89717d7c3d3fcb7eb0ade2957e
 cuffDownSocks foot=9,footLength=10.5,leg=7 superBulky 7ec4cc52955d6b4b4fa7a0bf32455343e4e723f2a371a6ff6a4a996b07ceff5d
 cuffDownSocks foot=5,footLength=4,leg=2 lace 4a714b8731d04899aad6d27aa596c15971e6477d9baa889c6f560f9ba12ccb57
-cuffDownSocks foot=5,footLength=4,leg=2 fingering fc5e7f6da2c4c1d3999d2c8c570ee9cd7001e0e4908878e84762fa295df760e9
+cuffDownSocks foot=5,footLength=4,leg=2 fingering 5d34964bb7a447b0ec70522e78594ef778c021e3d39f49c8ff38665932b4a876
 cuffDownSocks foot=5,footLength=4,leg=2 sport 3551fcd34310f6e012f90247612c7cf305b58555ce13d9930edac1edc0bd255f
 cuffDownSocks foot=5,footLength=4,leg=2 dk 0e76be3ae4e84a4054546162fb3c98041f2bad00fd04ed796db43ae54c933c50
 cuffDownSocks foot=5,footLength=4,leg=2 worsted ec040276f9d669fc65b1f3365db481ea918c0bc6d1e555111ebba4bd5ed734c4
@@ -967,7 +967,7 @@ cuffDownSocks foot=5,footLength=4,leg=2 aran 48889fd59093306db025f044a2ef32af284
 cuffDownSocks foot=5,footLength=4,leg=2 bulky 2542b6da3a1becc488a36bab222aa5bcfb2e9a3dad00bce92e3a716ac34bc4ac
 cuffDownSocks foot=5,footLength=4,leg=2 superBulky 98bd4efcb842ae64e08f8784452343c8675faccdb7ba7800ebb7746d3ee34844
 cuffDownSocks foot=12,footLength=13,leg=12 lace 831d0a78217924b498ecc4cbdb75a4ed517755a20cb63a4e4e93da1c66393abc
-cuffDownSocks foot=12,footLength=13,leg=12 fingering 68c8e0bd085f6399195a8b94fdf21d392bbaff9e3f4ee6acd239660901c0faf5
+cuffDownSocks foot=12,footLength=13,leg=12 fingering a3844257dfdc0d31633029d0c6e91e4c7a47b5d21a6268877d3639f240613873
 cuffDownSocks foot=12,footLength=13,leg=12 sport a20f891126c0e6e5a6a638657b0a7ed023ff088322f379cf19e3e7766fd01923
 cuffDownSocks foot=12,footLength=13,leg=12 dk 91cebbfb48d0e95d06eec15daad09f356e7ccc1edce68fbf16908b3dc3d2f0fa
 cuffDownSocks foot=12,footLength=13,leg=12 worsted 4bf0736f98c02c69c3ace92284ead018cff0e3c088797546b2305ef338851424

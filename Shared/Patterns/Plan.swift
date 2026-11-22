@@ -7,9 +7,6 @@ struct Gauge: Codable, Equatable, Sendable {
 
     var spi: Double { stitches / 4 }
     var rpi: Double { rows / 4 }
-
-    /// Fingering yarn knit firmer than its label, so socks wear well. Its stitch count is lace weight's.
-    static let firmSock = Gauge(stitches: 32, rows: 44)
 }
 
 /// One instruction in a generated pattern. Either a single action (cast on,
