@@ -241,7 +241,12 @@ enum Design: String, CaseIterable, Identifiable, Codable, Sendable {
 
     /// The designs that shipped in 1.0 carry their photo in the app. Every one added since has it on the
     /// site instead, under this path, so the app does not grow with the library.
-    var sitePhoto: String? { Self.firstRelease.contains(self) ? nil : "photos/\(rawValue).jpg" }
+    /// "photos/floor-pouf.jpg" for `floorPouf`: a site path is lowercase words joined by hyphens (`PhotoStore.isAllowed`).
+    var sitePhoto: String? { Self.firstRelease.contains(self) ? nil : "photos/\(Self.kebab(rawValue)).jpg" }
+
+    static func kebab(_ raw: String) -> String {
+        raw.map { $0.isUppercase ? "-" + $0.lowercased() : String($0) }.joined()
+    }
 
     private static let firstRelease: Set<Design> = [
         .ribbedBeanie, .slouchHat, .rolledBrimHat, .garterScarf, .ribbedScarf, .seedScarf, .ribbedCowl, .seedCowl,

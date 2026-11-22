@@ -36,6 +36,15 @@ final class PatternTests: XCTestCase {
         }
     }
 
+    /// A site photo path has to pass the store's own check, or the photo never loads and the drawing stays.
+    @MainActor func testEverySitePhotoPathIsAllowed() {
+        for design in Design.allCases {
+            guard let path = design.sitePhoto else { continue }
+            XCTAssertTrue(PhotoStore.isAllowed(path), "\(design): \(path)")
+        }
+        XCTAssertEqual(Design.floorPouf.sitePhoto, "photos/floor-pouf.jpg")
+    }
+
     /// The colorwork collection ships inside the app: every record loads, has its photo and a name in every language.
     @MainActor func testTheCollectionLoadsWithPhotosAndNames() throws {
         let collection = TopicalStore.collection
