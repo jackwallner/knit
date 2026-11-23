@@ -89,6 +89,8 @@ struct ProjectView: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.75)
                     .multilineTextAlignment(.center)
+                    // Beside the Lock Screen button a long name wraps before it is cut.
+                    .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
             }
             // Beside the menu, not inside it, where nobody found it.
@@ -783,20 +785,18 @@ struct ProjectView: View {
         .accessibilityIdentifier("project.menu")
     }
 
-    /// Puts this project's counter on the Lock Screen, or takes it off. The lock fills while it is there.
+    /// Puts this project's counter on the Lock Screen, or takes it off. Said in words: a lock alone read as "lock this project".
     private var lockButton: some View {
-        Button {
-            let on = !onLockScreen
+        Toggle("Lock Screen", isOn: Binding(get: { onLockScreen }, set: { on in
             onLockScreen = on
             Task {
                 if on { await LockCounter.start(project) } else { await LockCounter.stop(project) }
                 onLockScreen = LockCounter.isOn(project)
             }
-        } label: {
-            Image(systemName: onLockScreen ? "lock.fill" : "lock")
-        }
+        }))
+        .toggleStyle(.button)
+        .font(.subheadline.weight(.medium))
         .accessibilityLabel("Count on Lock Screen")
-        .accessibilityAddTraits(onLockScreen ? .isSelected : [])
         .accessibilityIdentifier("counter.lockScreen")
     }
 
