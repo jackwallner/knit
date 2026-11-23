@@ -1,0 +1,27 @@
+{
+  "designs": [
+    {
+      "id": "snow-flurry-ear-warmer",
+      "title": "Snow Flurry Ear Warmer",
+      "base": "earWarmer",
+      "requires": 1,
+      "palette": [
+        { "name": "teal", "hex": "#2F6F73" },
+        { "name": "white", "hex": "#F3F1EA" }
+      ],
+      "chart": {
+        "placement": "repeat",
+        "rows": [
+          "B...",
+          "..B.",
+          ".B..",
+          "...B"
+        ]
+      },
+      "weights": ["sport", "dk", "worsted", "aran", "bulky"],
+      "tag": "Cold Snap",
+      "starts": "2026-12-07",
+      "ends": "2027-02-15"
+    }
+  ]
+}
