@@ -39,6 +39,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - Topical designs: records in `docs/designs.json` are published only with Jack's yes, and every record must pass `scripts/topical-check.sh`. Loop, format and rules: `.claude/rules/topical-loop.md`.
 - `docs/trending.json` names `Design` raw values or colorwork ids (collection or published). A design the installed build does not know is skipped, so add a new built-in design to the list only after the build that carries it is live. `TrendingTests.testPublishedListDecodes` reads the file. Edit it, `docs/designs.json` and the onboarding trial plan remotely with `scripts/remote.py` (`.claude/rules/topical-loop.md`).
 - The interface is translated into every listing language (`Ravel/Localizable.xcstrings`, generated from `scripts/l10n`). New UI text needs a key in every language. Generated pattern instructions stay English on purpose. Rules, source files and the build step: `.claude/rules/localization.md`.
+- The first-run onboarding ends on a trial page built to the fleet spec: the trial button in the exact frame of Continue, a "Get Started" soft exit, legal footer space on every page, the monthly plan keeping its free-trial intro. Spec and how Ravel does it: `.claude/rules/onboarding-trial.md`.
 - No em dashes in copy, comments or commits.
 - iPad layouts switch on the space a view has, never on the device: `Ravel/Views/Layout.swift`. Thresholds, per-screen layouts, why iPhone stays portrait, and the capture test: `.claude/rules/ipad-layout.md`.
 
