@@ -1,0 +1,38 @@
+{
+  "designs": [
+    {
+      "id": "little-lamb-beanie",
+      "title": "Little Lamb Beanie",
+      "base": "ribbedBeanie",
+      "requires": 3,
+      "crown": "ears",
+      "palette": [
+        { "name": "cream", "hex": "#EFE8D8" },
+        { "name": "charcoal", "hex": "#4A4744" },
+        { "name": "rose", "hex": "#D8A39B" }
+      ],
+      "brim": "A",
+      "rim": "C",
+      "ear": "B",
+      "stripes": [
+        { "color": "A", "inches": 0.5 },
+        { "color": "C", "inches": 0.4 },
+        { "color": "A", "inches": 1.25 },
+        { "color": "C", "inches": 0.4 }
+      ],
+      "chart": {
+        "placement": "motif",
+        "stripe": 2,
+        "rows": [
+          "..B.B..",
+          "...C..."
+        ],
+        "stitch": "duplicate"
+      },
+      "weights": ["dk", "worsted", "aran", "bulky"],
+      "tag": "Lunar New Year",
+      "starts": "2027-01-18",
+      "ends": "2027-03-01"
+    }
+  ]
+}
