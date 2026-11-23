@@ -20,7 +20,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - `Shared/Patterns`: the library. `Design.swift` lists every design with its sizes and measurements, `Engines.swift` holds the stitch math per design, `Plan.swift` is the row-by-row output (`PatternPlan`, `Step`) plus `Sizing` helpers. `Colorwork.swift` paints stripes and charts over a plan, `Topical.swift` reads topical designs published as data, `PlanCheck.swift` holds the checks every plan must pass, `GarmentShape.swift` the outlines.
 - `Shared/Services`: `Persistence` (container, DEBUG demo seed), `PatternStore` (imported PDFs in Application Support/Patterns), `SubscriptionService` (RevenueCat, `Offer`, `Links`), `ReviewPrompt`, `Trending` (the Trending shelf: a month-aware list bundled in the app, replaced by `docs/trending.json` from the site at most once a day), `TopicalStore` (topical designs from `docs/designs.json`, the bundled colorwork collection in `Ravel/collection.json`, and `LibraryItem`, a built-in or topical design), `Backup` (one `.ravelbackup` file of everything; restoring only adds), `Search` (`LibrarySearch`: how a typed search finds designs), `Taste` (the two onboarding answers, kept in UserDefaults: the shelf asked for leads the library, and a new knitter sees each shelf easiest first; they never hide a design).
 - `Shared/Counting` + `Ravel/LockCounter.swift` + `RavelWidgets`: counting from the Lock Screen. `CountRowIntent` is a `LiveActivityIntent`, so it runs in the app's process and counts through `LockCounter.count` on the app's own container.
-- `Ravel/Views`: `RootView` (Projects, Patterns, Stash tabs), `ProjectsView`, `ProjectView` (three modes: counter, PDF reader with a work strip, guided library pattern), `Fabric` (the knitted canvas), `Garment` (a design cut from fabric), `LibraryView` + `DesignView`, `PaywallView`, `PatternView` (PDFKit), `StashView`.
+- `Ravel/Views`: `RootView` (Projects, Patterns, Stash tabs), `ProjectsView`, `ProjectView` (three modes: counter, PDF reader with a work strip, guided library pattern), `Fabric` (the knitted canvas), `Garment` (a design cut from fabric), `LibraryView` + `DesignView`, `PaywallView`, `PatternView` (PDFKit), `StashView`, `SettingsView` (the gear on Projects: appearance, backups, rate, feedback, help; `Appearance` sets light or dark on the windows).
 
 ## Rules that hold everywhere
 - The tracker stays free: projects, row counter, your own PDFs and stash never go behind the paywall, never need an account and never need a network. The closest competitor (Knit&Note) sank to 3.9 stars by paywalling exactly these.
@@ -49,6 +49,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 - `-UITesting`: empty in-memory store.
 - `-OpenFirst`, `-OpenProject <name>`: land inside a project.
 - `-OpenDetails`: open the project's details sheet. `-OpenYarn`: open the first yarn's editor.
+- `-appearance <0|1|2>`: the device's appearance, light, or dark (the Settings choice; works in Release too).
 - `-Tab <0|1|2>`, `-OpenDesign <Design raw value>`: land on a tab or a design page. `-DesignSize <name>` opens it at a named size.
 - `-OnboardingPlan yearly`: the onboarding trial sells yearly, as RevenueCat's `onboarding_plan` metadata would.
 - `-TopicalFile <path>`: load topical records from a file on disk (drafts) instead of the site.
@@ -56,7 +57,7 @@ Knitting companion: projects, a row counter drawn as growing fabric, a pattern P
 
 ## App-specific notes
 - Store name: "Ravel: Knitting Patterns". Metadata in `fastlane/metadata/en-US`. Site (GitHub Pages, `/docs`): `https://jackwallner.github.io/knit/`.
-- Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, or back at the project list after a visit of 20 or more rows, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in the Projects tab's menu.
+- Rating ask: `ReviewPrompt`, fired 3 seconds after a project is marked finished, or back at the project list after a visit of 20 or more rows, from the second launch on, 30-day cooldown. "Rate Ravel" and "Send Feedback" live in Settings.
 - `scripts/asc-register-identifiers.py`, `asc-pricing-availability.py`, `asc-setup-subscriptions.py`, `asc-setup-lifetime-iap.py` set up App Store Connect and are safe to rerun. `scripts/draw-icon.swift` redraws the app icon (stockinette in mixed oranges). `AppIcon-Ball`, `AppIcon-Beanie` and `AppIcon-Needles` are in the build only so the store can test them against it (Product Page Optimization); they are pictures, not drawn by the script, and nothing in the app switches icons.
 - Non-site docs go in `project-docs/<category>/`, because `docs/` is the published site. The 2026-11-13 pre-release audit and its findings ledger are in `project-docs/audit/`.
 

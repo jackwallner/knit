@@ -167,6 +167,22 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "stash-one-yarn")
     }
 
+    /// Settings is one tap from Projects, and the appearance picked there is the one the app keeps.
+    func testSettingsPicksAnAppearance() {
+        let app = XCUIApplication()
+        QA.launch(app, arguments: ["-SeedDemo"])
+        tap(app.buttons["projects.settings"], "Settings")
+        let appearance = app.segmentedControls["settings.appearance"]
+        XCTAssertTrue(appearance.waitForExistence(timeout: 10))
+        QA.checkpoint(app, "settings")
+        let dark = appearance.buttons.element(boundBy: 2)
+        tap(dark, "Dark")
+        XCTAssertTrue(dark.isSelected)
+        QA.checkpoint(app, "settings-dark")
+        // Back to the device's own, so the journeys after this one look as they did.
+        tap(appearance.buttons.element(boundBy: 0), "Automatic")
+    }
+
     // MARK: - Helpers
 
     /// A fresh install opens on onboarding: through its pages to the trial, then the free way out.

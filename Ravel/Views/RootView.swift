@@ -7,6 +7,7 @@ struct RootView: View {
     @State private var tab = UserDefaults.standard.integer(forKey: "Tab")
     @State private var snapshot = UserDefaults.standard.string(forKey: "PaywallSnapshot") != nil
     @AppStorage("onboarded") private var onboarded = false
+    @AppStorage(Appearance.key) private var appearance = 0
     @State private var onboarding = false
     @State private var saveFailed = false
     /// A PDF or a backup another app opened in Ravel.
@@ -48,6 +49,7 @@ struct RootView: View {
             guard let project = note.object as? Project else { return }
             Task { await LockCounter.refresh(project) }
         }
+        .onChange(of: appearance, initial: true) { _, chosen in Appearance.apply(chosen) }
         .onAppear {
             // In place from the first frame, so the tabs never flash behind it.
             var instant = Transaction()

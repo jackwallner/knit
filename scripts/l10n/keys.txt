@@ -591,3 +591,9 @@ How long have you been knitting?
 I'm new to knitting
 A few projects
 Years
+Settings
+Appearance
+Automatic
+Light
+Dark
+Lock Screen

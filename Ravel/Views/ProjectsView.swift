@@ -18,10 +18,7 @@ struct ProjectsView: View {
     @State private var deleting: Project?
     @State private var importing = false
     @State private var importFailed = false
-    /// What the file picker is open for.
-    @State private var restoring = false
-    /// A backup written and waiting to be put where the knitter picks.
-    @State private var backup: URL?
+    @State private var showingSettings = false
     @State private var backupFailed = false
     /// How many projects the last restore added, while its result is on screen.
     @State private var restored: Int?
@@ -73,31 +70,8 @@ struct ProjectsView: View {
                     .accessibilityIdentifier("projects.add")
                 }
                 ToolbarItem(placement: .topBarLeading) {
-                    Menu {
-                        Button("Rate Ravel", systemImage: "star") {
-                            ReviewPrompt().markOpenedStore()
-                            openURL(Links.writeReview)
-                        }
-                        // With no Mail account the address cannot open; the help page carries it too.
-                        Button("Send Feedback", systemImage: "envelope") {
-                            openURL(Links.feedback) { opened in if !opened { openURL(Links.support) } }
-                        }
-                        Button("Help", systemImage: "questionmark.circle") { openURL(Links.support) }
-                        // Kept by hand, wherever the knitter likes: Files, iCloud Drive, a computer. No account.
-                        Section {
-                            Button("Save a Backup", systemImage: "square.and.arrow.down", action: saveBackup)
-                                .accessibilityIdentifier("projects.backup")
-                            Button("Restore a Backup", systemImage: "arrow.counterclockwise") {
-                                restoring = true
-                                importing = true
-                            }
-                            .accessibilityIdentifier("projects.restore")
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis")
-                    }
-                    .accessibilityLabel("More")
-                    .accessibilityIdentifier("projects.more")
+                    Button("Settings", systemImage: "gearshape") { showingSettings = true }
+                        .accessibilityIdentifier("projects.settings")
                 }
             }
             #if DEBUG
@@ -118,14 +92,10 @@ struct ProjectsView: View {
             ) {
                 Button("Delete Project", role: .destructive) { if let deleting { remove(deleting) } }
             }
-            .fileImporter(isPresented: $importing, allowedContentTypes: restoring ? [.ravelBackup] : [.pdf, .image]) { result in
-                let wasRestoring = restoring
-                restoring = false
-                guard case let .success(url) = result else { return }
-                if wasRestoring { restore(url) } else { start(url) }
+            .sheet(isPresented: $showingSettings) { SettingsView() }
+            .fileImporter(isPresented: $importing, allowedContentTypes: [.pdf, .image]) { result in
+                if case let .success(url) = result { start(url) }
             }
-            .onChange(of: importing) { _, open in if !open { restoring = false } }
-            .fileMover(isPresented: Binding(get: { backup != nil }, set: { if !$0 { backup = nil } }), file: backup) { _ in backup = nil }
             .onChange(of: incoming, initial: true) { _, url in
                 guard let url else { return }
                 incoming = nil
@@ -252,13 +222,6 @@ struct ProjectsView: View {
         Task { await LockCounter.drop(gone) }
         context.delete(project)
         try? context.save()
-    }
-
-    private func saveBackup() {
-        // What is on screen is on disk first, so the backup holds the last row counted.
-        try? context.save()
-        guard let url = try? Backup.write(from: context) else { return backupFailed = true }
-        backup = url
     }
 
     /// Adds what a backup holds that this device does not. Projects already here are never changed.
