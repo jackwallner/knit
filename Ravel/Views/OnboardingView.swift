@@ -36,13 +36,16 @@ struct OnboardingView: View {
     var body: some View {
         VStack(spacing: 0) {
             // At the largest text sizes the page scrolls rather than clip. Below them the picture shrinks to make
-            // room, so nothing scrolls out of sight. (ViewThatFits measured the picture at full size and picked
-            // the scrolling page even where a smaller picture fit.)
+            // room, and only a page whose words alone outgrow the screen (the trial on a 320 point Display Zoom
+            // phone) scrolls, without its picture. The picture's ideal height is 0, so ViewThatFits judges the words.
             Group {
                 if typeSize.isAccessibilitySize {
                     ScrollView { pageWithTerms.padding(.vertical, 16) }
                 } else {
-                    pageWithTerms
+                    ViewThatFits(in: .vertical) {
+                        pageWithTerms
+                        ScrollView { pageWithTerms.padding(.vertical, 16) }
+                    }
                 }
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -52,7 +55,8 @@ struct OnboardingView: View {
                 .id(page)
                 // With Reduce Motion on the next page fades in where it stands; nothing slides.
                 .transition(reduceMotion ? .opacity : .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)).combined(with: .opacity))
-            bar
+            // Sized first, so a page that runs long can never push the button off its frame.
+            bar.layoutPriority(1)
         }
         .frame(maxWidth: 540)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -127,7 +131,7 @@ struct OnboardingView: View {
         VStack(spacing: 24) {
             Spacer(minLength: 16)
             picture()
-                .frame(maxHeight: 360)
+                .frame(idealHeight: 0, maxHeight: 360)
                 // On a short screen the picture gives way first, never the words under it.
                 .layoutPriority(-1)
                 .accessibilityHidden(true)

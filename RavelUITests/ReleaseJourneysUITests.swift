@@ -190,19 +190,28 @@ final class ReleaseJourneysUITests: XCTestCase {
         let next = app.buttons["onboarding.next"]
         guard next.waitForExistence(timeout: 10) else { return }
         QA.checkpoint(app, "onboarding-counter")
+        // The fleet rule: the trial button sits in Continue's exact frame, so the button never moves between pages.
+        let frame = next.frame
+        func samePlace(_ page: String) {
+            XCTAssertEqual(next.frame, frame, "the button moved on \(page)")
+        }
         next.tap()
         QA.checkpoint(app, "onboarding-patterns")
+        samePlace("the patterns page")
         next.tap()
         // The two questions. Hats and "A few projects" leave the library in its own order for the journeys after.
         tap(app.buttons["onboarding.shelf.0"], "the first answer")
         QA.checkpoint(app, "onboarding-shelf")
+        samePlace("the first question")
         next.tap()
         tap(app.buttons["onboarding.experience.1"], "the second answer")
         QA.checkpoint(app, "onboarding-experience")
+        samePlace("the second question")
         next.tap()
         let skip = app.buttons["onboarding.skip"]
         XCTAssertTrue(skip.waitForExistence(timeout: 10))
         QA.checkpoint(app, "onboarding-trial")
+        samePlace("the trial page")
         skip.tap()
         XCTAssertTrue(next.waitForNonExistence(timeout: 10))
     }
