@@ -9,6 +9,9 @@ struct PaywallView: View {
     @State private var working = false
     @State private var message: String?
     @State private var buying: Task<Void, Never>?
+    /// The height the scrolling part shows above the pinned button, and what its content needs without the hero.
+    @State private var room = CGFloat.infinity
+    @State private var needed: CGFloat = 0
     private let subscription = SubscriptionService.shared
 
     init(picked: Offer.Term = .yearly) { _picked = State(initialValue: picked) }
@@ -20,7 +23,7 @@ struct PaywallView: View {
         // indicator, so no text size or language can push the price or the purchase off screen.
         ScrollView {
             VStack(spacing: 20) {
-                hero.frame(height: 72)
+                if showsHero { hero.frame(height: 72) }
                 pitch
                 benefits
                 if subscription.offers.isEmpty { unavailable } else { plans }
@@ -29,7 +32,9 @@ struct PaywallView: View {
             .padding(.bottom, 16)
             .frame(maxWidth: 540)
             .frame(maxWidth: .infinity)
+            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { needed = $0 - (showsHero ? Self.heroHeight : 0) }
         }
+        .onGeometryChange(for: CGFloat.self) { $0.size.height - $0.safeAreaInsets.top - $0.safeAreaInsets.bottom } action: { room = $0 }
         .scrollBounceBehavior(.basedOnSize)
         .safeAreaInset(edge: .top, spacing: 0) {
             HStack {
@@ -74,6 +79,13 @@ struct PaywallView: View {
         .onChange(of: subscription.isPro) { _, isPro in if isPro { dismiss() } }
         .alert(message ?? "", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {}
     }
+
+    /// The hero and the space under it.
+    private static let heroHeight: CGFloat = 92
+
+    /// The garments are decoration: where they would push a plan under the button (an iPad turned sideways, a
+    /// small phone), they go, so every plan and its price is on screen when the paywall opens.
+    private var showsHero: Bool { needed + Self.heroHeight <= room }
 
     private var hero: some View {
         // A shelf of the library: two rows of pieces, each in a different yarn.

@@ -45,6 +45,19 @@ final class PaywallUITests: XCTestCase {
     /// sheet once hid Monthly and Lifetime under it, and App Review could not find them (2.1(b), Nov 2026).
     func testEveryPlanShowsAboveTheButton() {
         openPaywall()
+        expectEveryPlanAboveTheButton()
+    }
+
+    /// An iPad turned sideways has the least height a paywall sheet gets.
+    func testEveryPlanShowsAboveTheButtonSideways() throws {
+        guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("iPhone stays portrait") }
+        XCUIDevice.shared.orientation = .landscapeLeft
+        defer { XCUIDevice.shared.orientation = .portrait }
+        openPaywall()
+        expectEveryPlanAboveTheButton()
+    }
+
+    private func expectEveryPlanAboveTheButton() {
         let buy = app.buttons["paywall.buy"].frame
         for plan in ["paywall.yearly", "paywall.monthly", "paywall.lifetime"] {
             let card = app.buttons[plan]
