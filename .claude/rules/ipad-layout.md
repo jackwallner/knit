@@ -66,8 +66,10 @@ protocol, which `Wrap` adopts.)
   420 pt at the accessibility sizes.
 - Design page: from 900 pt the piece (420 pt tall) on the leading side, the
   settings in a 480 pt column with Cast On under it.
-- Paywall: content capped at 540 by 900 pt and centered; as a sheet it is an
-  iPad form sheet.
+- Paywall: content capped at 540 by 900 pt and centered; as a sheet it is a
+  page sheet (iOS 18+). A form sheet on the 11-inch iPad hid Monthly and Lifetime
+  under the button and App Review could not find them (2.1(b), 2026-11-25);
+  `PaywallUITests.testEveryPlanShowsAboveTheButton` guards it.
 - Sheets (details, materials, yarn, needle) are form sheets on an iPad unchanged.
 - `StoreUnavailableView` names the device (`UIDevice.current.model`).
 

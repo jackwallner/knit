@@ -41,6 +41,18 @@ final class PaywallUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["One payment of $79.99. Every pattern is yours for good."].exists)
     }
 
+    /// Every plan is on screen above the button when the paywall opens, with no scrolling. An 11-inch iPad's form
+    /// sheet once hid Monthly and Lifetime under it, and App Review could not find them (2.1(b), Nov 2026).
+    func testEveryPlanShowsAboveTheButton() {
+        openPaywall()
+        let buy = app.buttons["paywall.buy"].frame
+        for plan in ["paywall.yearly", "paywall.monthly", "paywall.lifetime"] {
+            let card = app.buttons[plan]
+            XCTAssertTrue(card.exists, plan)
+            XCTAssertLessThan(card.frame.maxY, buy.minY - 40, "\(plan) sits under the button")
+        }
+    }
+
     func testBuyingYearlyOpensThePattern() {
         openPaywall()
         app.buttons["paywall.buy"].tap()

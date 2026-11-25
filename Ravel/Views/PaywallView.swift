@@ -63,6 +63,9 @@ struct PaywallView: View {
             }
         }
         .background(Theme.paper)
+        // An iPad form sheet on an 11-inch iPad cut the plans off under the button, hiding Monthly and Lifetime
+        // (App Review 2.1(b), Nov 2026). A page sheet is tall enough for every plan.
+        .modifier(PageSheet())
         .task { await subscription.loadOffers() }
         // While a purchase runs the paywall cannot be closed or swiped away. If it goes away anyway, the checks
         // before Apple's sheet stop.
@@ -307,6 +310,18 @@ struct PaywallView: View {
             case .notFound: message = String(localized: "No purchase found on this Apple Account")
             case .failed: message = String(localized: "The App Store could not be reached. Try again when you are online.")
             }
+        }
+    }
+}
+
+/// Presents the paywall as a page sheet on an iPad, tall enough for every plan above the button.
+/// On a phone a sheet is full height already, so nothing changes there.
+private struct PageSheet: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *) {
+            content.presentationSizing(.page)
+        } else {
+            content
         }
     }
 }

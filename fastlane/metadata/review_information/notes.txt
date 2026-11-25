@@ -1,4 +1,4 @@
-Ravel is a knitting companion for iPhone and iPad. It helps a knitter keep count of rows, keep their place in a pattern, track their yarn, and knit patterns written to their own measurements. There is no account, so no demo account is needed. Everything except the optional design list below works with no network.
+Ravel is a knitting companion for iPhone and iPad. It helps a knitter keep count of rows, keep their place in a pattern, track their yarn, and knit patterns written to their own measurements. No account or demo account is needed. Everything except the optional design list below works with no network.
 
 WHAT A FRESH INSTALL SHOWS
 First launch shows five onboarding pages: two about the app, two questions (what to knit first, how long they have knitted; the answers stay on the device and only order the library), and a last page that offers the yearly plan's free week ("Try Free for 7 Days", price and renewal terms above the button, Restore, Terms and Privacy below). "Get Started" skips it and opens the free app. Then three tabs: Projects, Patterns and Stash. The gear there opens Settings.
@@ -14,7 +14,7 @@ Unlocks every other pattern. Three ways to buy, all unlocking the same thing:
 - com.jackwallner.knit.yearly, auto-renewing, one-week free trial
 - com.jackwallner.knit.monthly, auto-renewing, one-week free trial
 - com.jackwallner.knit.lifetime, non-consumable, paid once
-To reach the paywall: Patterns tab, open any pattern not marked Free (for example Raglan Pullover), tap "Unlock Patterns". The paywall shows each price before the purchase button, with Restore, Terms and Privacy at the bottom. A pattern someone has already cast on stays in their projects if a subscription ends.
+To reach the paywall: Patterns tab, open any pattern not marked Free (for example Pixie Hat under Hats), tap the button at the bottom ("Try Free for 7 Days"). The paywall lists Yearly, Monthly and Lifetime with their prices above the purchase button, with Restore, Terms and Privacy below it. A pattern someone has already cast on stays in their projects if a subscription ends.
 
 WHERE THE PATTERNS COME FROM
 Every pattern is written by the app's own sizing code, on the device, from the measurements and gauge the knitter enters. No third-party patterns or content are included.
@@ -26,7 +26,7 @@ LANGUAGES AND REGIONS
 The interface is translated into every language the store listing uses. Generated pattern instructions stay in English, the standard language of written knitting abbreviations. Outside the United States, lengths read in centimeters and meters.
 
 IPAD
-Ravel runs on iPad in every orientation; wide screens show the project and its pattern side by side.
+Ravel runs on iPad in every orientation.
 
 EXTERNAL SERVICES
 RevenueCat manages the purchase state (an anonymous app user id and purchase state only). GitHub Pages hosts the data files and photos above. No analytics, no tracking, no ads, no AI services.
