@@ -796,6 +796,9 @@ struct ProjectView: View {
         }))
         .toggleStyle(.button)
         .font(.subheadline.weight(.medium))
+        // Capped, so at the accessibility sizes the button leaves the project's name room for its words
+        // ("Garter Scarf, Classic" was cut to "Scarf, Cla..." at AX3).
+        .dynamicTypeSize(...DynamicTypeSize.xxLarge)
         .accessibilityLabel("Count on Lock Screen")
         .accessibilityIdentifier("counter.lockScreen")
     }
